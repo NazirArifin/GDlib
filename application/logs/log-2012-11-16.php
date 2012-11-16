@@ -34,3 +34,23 @@ DEBUG - 2012-11-16 03:11:31 --> UTF-8 Support Enabled
 DEBUG - 2012-11-16 03:11:31 --> URI Class Initialized
 DEBUG - 2012-11-16 03:11:31 --> Router Class Initialized
 ERROR - 2012-11-16 03:11:31 --> 404 Page Not Found --> tests
+DEBUG - 2012-11-16 17:33:54 --> Config Class Initialized
+DEBUG - 2012-11-16 17:33:54 --> Hooks Class Initialized
+DEBUG - 2012-11-16 17:33:54 --> Utf8 Class Initialized
+DEBUG - 2012-11-16 17:33:54 --> UTF-8 Support Enabled
+DEBUG - 2012-11-16 17:33:54 --> URI Class Initialized
+DEBUG - 2012-11-16 17:33:54 --> Router Class Initialized
+DEBUG - 2012-11-16 17:33:54 --> No URI present. Default controller set.
+DEBUG - 2012-11-16 17:33:54 --> Output Class Initialized
+DEBUG - 2012-11-16 17:33:54 --> Security Class Initialized
+DEBUG - 2012-11-16 17:33:54 --> Input Class Initialized
+DEBUG - 2012-11-16 17:33:54 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-11-16 17:33:54 --> Language Class Initialized
+DEBUG - 2012-11-16 17:33:54 --> Loader Class Initialized
+DEBUG - 2012-11-16 17:33:54 --> Helper loaded: date_helper
+DEBUG - 2012-11-16 17:33:54 --> Helper loaded: url_helper
+DEBUG - 2012-11-16 17:33:54 --> Helper loaded: date_custom_helper
+DEBUG - 2012-11-16 17:33:54 --> Controller Class Initialized
+DEBUG - 2012-11-16 17:33:54 --> File loaded: application/views/welcome_message.php
+DEBUG - 2012-11-16 17:33:54 --> Final output sent to browser
+DEBUG - 2012-11-16 17:33:54 --> Total execution time: 0.0416
