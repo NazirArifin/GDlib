@@ -1,3 +1,7 @@
 /*
 MAIN CSS
 */
+body {
+	background-color: white;
+	/*VENDOR*/border-radius: 4px;
+}
