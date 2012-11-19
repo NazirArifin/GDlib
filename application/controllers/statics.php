@@ -26,60 +26,26 @@ class Statics extends CI_Controller {
 	 * Fungsi untuk menampilkan file javascript
 	 */
 	public function js() {
-		/*
-		if (func_num_args() != 1)
-			return;
-			
+		if (func_num_args() != 1) return;
+		
 		$arg	= func_get_arg(0);
-		$path 	= BASEPATH . 'static/javascript/' . $arg;
-		$uri	= implode('/', $this->router->fetch_segments());
+		$path	= APPPATH . 'static/js/' . $arg;
 		$file	= basename($path);
 		
-		// Apakah file javascript ada
 		if ( ! file_exists($path)) {
 			log_message('error', 'URI passed seems invalid and manually typed');
-			show_404($uri);
+			show_404($arg);
 		}
 		
-		// Set Header
-		if (@stripos($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip') !== FALSE)
-			ob_start("ob_gzhandler");
-		else
-			ob_start();
 		header('Content-Type: application/x-javascript');
 		header('Charset: UTF-8');
 		header(date(DATE_COOKIE, time()+18144000));
 		
-		if ($this->config->get_item('cache_js')) {
-			$this->load->library('iofiles');
+		if ( ! class_exists('jsloc'))
+			include(APPPATH . 'libraries/jsloc.php');
 			
-			// Cache
-			$cpath	= 'static/cache/' . $file . '.gz';
-			
-			if (file_exists(BASEPATH . $cpath)) {
-				echo $this->iofiles->read($cpath);
-				
-			} else {
-				if ( ! class_exists('jsloc')) {
-					include(BASEPATH . 'libraries/jsloc.php');
-				}
-				// Minify JS
-				$minify	 = jsloc::minJS(@file_get_contents($path));
-				
-				// Write to file and then echo it
-				
-				$this->iofiles->write($cpath, $minify, 'wb');
-				echo $minify;
-			}
-		} else {
-			if ( ! class_exists('jsloc')) {
-				include(BASEPATH . 'libraries/jsloc.php');
-			}
-			// Minify JS
-			$minify	 = jsloc::minJS(@file_get_contents($path));
-			echo $minify;
-		}
-		*/
+		$minify	 = jsloc::minJS(@file_get_contents($path));
+		echo $minify;
 	}
 	
 	// --------------------------------------------------------------------
@@ -88,14 +54,12 @@ class Statics extends CI_Controller {
 	 * Fungsi untuk menampilkan file CSS
 	 */
 	public function css() {
-		if (func_num_args() != 1)
-			return;
+		if (func_num_args() != 1) return;
 			
 		$arg	= func_get_arg(0);
 		$path 	= APPPATH . 'static/css/' . $arg;
 		$file	= basename($path);
 		
-		// Apakah file css ada
 		if ( ! file_exists($path)) {
 			log_message('error', 'URI passed seems invalid and manually typed');
 			show_404($arg);
@@ -119,23 +83,18 @@ class Statics extends CI_Controller {
 	 * Fungsi untuk menampilkan file gambar
 	 */
 	public function images() {
-		/*
 		$args	= func_get_args();
-		$path 	= BASEPATH . 'static/images/' . implode('/', $args);
+		$path	= APPPATH . 'static/images/' . implode('/', $args);
 		$file	= basename($path);
 		
-		$this->load->library('iofiles');
-		
-		$ext	= strtolower($this->iofiles->get_type($file));
-		
-		if ( ! in_array($ext, array('jpg', 'gif', 'png'))) {
+		$fparts	= explode('.', $file);
+		$ext	= strtolower(end($fparts));
+		if ( ! in_array($ext, array('jpg', 'gif', 'png', 'wbem'))) {
 			log_message('error', 'Invalid extension ' . $ext . ' for image');
 			show_404();
 		}
 		
-		if ( ! file_exists($path)) {
-			show_404('', FALSE);
-		} else {
+		if (file_exists($path)) {
 			$size	= getimagesize($path);
 			if ($size) {
 				header("Content-Type: {$size['mime']}");
@@ -152,12 +111,9 @@ class Statics extends CI_Controller {
 					echo fread($file, 1024);
 				}
 				@fclose($file);
-				//@fpassthru($path);
-				//@fclose($path);
-				//@readfile($path);
 			}
-		}
-		*/
+		} else
+			show_404();
 	}
 }
 

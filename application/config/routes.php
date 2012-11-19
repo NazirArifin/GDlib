@@ -40,6 +40,8 @@
 
 $route['default_controller'] = "welcome";
 $route['css/([a-z\.\-]+\.css)'] = "statics/css/$1";
+$route['js/([a-z\.\-]+\.js)'] = "statics/js/$1";
+$route['images/(.+)'] = "statics/images/$1";
 $route['404_override'] = '';
 
 
