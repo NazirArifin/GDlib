@@ -35,9 +35,9 @@
 # enable-cors.org
 # code.google.com/p/html5security/wiki/CrossOriginRequestSecurity
 
-#  <IfModule mod_headers.c>
-#    Header set Access-Control-Allow-Origin "*"
-#  </IfModule>
+<IfModule mod_headers.c>
+   Header set Access-Control-Allow-Origin "*"
+</IfModule>
 
 
 # ----------------------------------------------------------------------
@@ -256,9 +256,9 @@ AddType text/vtt                            vtt
 # European providers.
 # This is the official 'bypass' suggested by O2 in the UK.
 
-# <IfModule mod_headers.c>
-# Header set Cache-Control "no-transform"
-# </IfModule>
+<IfModule mod_headers.c>
+ Header set Cache-Control "no-transform"
+</IfModule>
 
 
 # ----------------------------------------------------------------------
@@ -434,7 +434,7 @@ Options -MultiViews
 # You can add custom pages to handle 500 or 403 pretty easily, if you like.
 # If you are hosting your site in subdirectory, adjust this accordingly
 #    e.g. ErrorDocument 404 /subdir/404.html
-ErrorDocument 404 /views/errors/error_404.php
+ErrorDocument 404 /application/errors/error_404.php
 
 
 # ----------------------------------------------------------------------
