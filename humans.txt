@@ -3,6 +3,11 @@ Project Manager, Programmer: Nazir Arifin
 Facebook: nazzir.arifin
 Location: Pamekasan, Indonesia
 
+Programmer: Deki Irawan
+Facebook: Dekidangersline
+Location: Pamekasan, Indonesia
+
+
 /* SITE */
 Standards: HTML5, CSS3...
 Components: jQuery, Modernizr, HTML5Boilerplate, Bootstrap
