@@ -39,6 +39,7 @@
 */
 
 $route['default_controller'] = "welcome";
+$route['admin'] = "home/home";
 $route['css/([a-z\.\-]+\.css)'] = "statics/css/$1";
 $route['js/([a-z\.\-]+\.js)'] = "statics/js/$1";
 $route['images/(.+)'] = "statics/images/$1";
