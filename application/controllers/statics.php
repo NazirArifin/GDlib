@@ -115,6 +115,50 @@ class Statics extends CI_Controller {
 		} else
 			show_404();
 	}
+	
+	/**
+	 * Untuk thirdparty
+	 */
+	public function thirdparty() {
+		$args 	= func_get_args();
+		$path	= APPPATH . 'third_party/' . implode('/', $args);
+		$file	= basename($path);
+		$efile	= explode('.', $file);
+		$ext	= strtolower(end($efile));
+		
+		switch ($ext) {
+			case 'css':
+				header('Content-Type: text/css');
+				header('Charset: UTF-8');
+				break;
+			case 'js':
+				header('Content-Type: application/x-javascript');
+				header('Charset: UTF-8');
+				break;
+			case 'jpg': case 'png': case 'gif':
+				$size	= getimagesize($path);
+				if ($size) {
+					header("Content-Type: {$size['mime']}");
+					$fsize = filesize($path);
+					header("Content-Length: " . $fsize);
+					
+					if ($fsize < 1024) {
+						echo file_get_contents($path);
+						return;
+					}
+					
+					$file = fopen($path, 'rb');
+					while ( ! feof($file) ) {
+						echo fread($file, 1024);
+					}
+					@fclose($file);
+				}
+				return;
+				break;
+		}
+		
+		echo file_get_contents($path);
+	}
 }
 
 /* End of file statics.php */

@@ -39,10 +39,21 @@
 */
 
 $route['default_controller'] = "welcome";
-$route['admin'] = "home/home";
+
+// static
+
 $route['css/([a-z\.\-]+\.css)'] = "statics/css/$1";
 $route['js/([a-z\.\-]+\.js)'] = "statics/js/$1";
 $route['images/(.+)'] = "statics/images/$1";
+
+$route['third_party/(.+)$'] = 'statics/thirdparty/$1';
+
+//======================= ROUTES UNTUK ADMIN ==== 
+$route['admin'] = "home/home";
+
+
+
+// ==================== error
 $route['404_override'] = '';
 
 

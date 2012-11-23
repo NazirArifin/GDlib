@@ -5,14 +5,14 @@
     <title>GDlib | Admin</title>
     <link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
     <link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap.responsive.min.css" />
-    <script src="/third_party/js/jquery-1.8.2.js"></script>
-    <script src="/third_party/js/jquery-ui-1.9.1.custom.min.js"></script>
+    <link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
+    <script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
+    <script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
     <script src="/third_party/bootstrap/js/bootstrap.min.js"></script>
     
     <style type="text/css">
 	body {
-		background-image:url('images/ogo.png');
+		background-image:url('/images/ogo.png');
 	}
 	#logo{
 	position:absolute;
@@ -49,7 +49,7 @@
 			  </ul>
 			</div>
 		<!--button group-->
-		<a href="#"><img src="images/ogo.png" class="brand" width="35" height="30" id="logo"/></a>
+		<a href="#"><img src="/images/ogo.png" class="brand" width="35" height="30" id="logo"/></a>
 			<div class="navbar-search input-append" >
 			  <input class="span2" id="appendedInputButton" type="text" >
 			  <button class="btn" type="button"><i class="icon-search"></i></button>
@@ -120,42 +120,42 @@
 	<input type="text" class="input-medium search-query" >
      <button class="btn btn-large btn-success pull-right" id="tombol"><i class="icon-plus icon-white"></i>Tambah</button><br><br><br>
 	 <div class="well span5">
-	 <img src="Images/animal1.png" width="100px" height="100px"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
+	 <img src="/images/animal1.png" width="100px" height="100px"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
 	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
 	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
 	 </div>
 	 <div class="well span5">
-	 <img src="Images/animal2.png" width="100px" height="100px"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
+	 <img src="/images/animal2.png" width="100px" height="100px"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
 	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
 	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
 	 </div>
 	 <div class="well span5">
-	 <img src="Images/animal3.png" width="100px" height="100px"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
+	 <img src="/images/animal3.png" width="100px" height="100px"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
 	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
 	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
 	 </div>
 	 <div class="well span5">
-	 <img src="Images/animal4.png" width="100px" height="100px"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
+	 <img src="/images/animal4.png" width="100px" height="100px"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
 	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
 	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
 	 </div>
 	 <div class="well span5">
-	 <img src="Images/animal5.png" width="100px" height="100px"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
+	 <img src="/images/animal5.png" width="100px" height="100px"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
 	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
 	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
 	 </div>
 	 <div class="well span5">
-	 <img src="Images/animal6.png" width="100px" height="100px"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
+	 <img src="/images/animal6.png" width="100px" height="100px"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
 	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
 	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
 	 </div>
 	 <div class="well span5">
-	 <img src="Images/animal7.png" width="100px" height="100px"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
+	 <img src="/images/animal7.png" width="100px" height="100px"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
 	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
 	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
 	 </div>
 	 <div class="well span5">
-	 <img src="Images/animal8.png" width="100px" height="100px"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
+	 <img src="/images/animal8.png" width="100px" height="100px"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
 	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
 	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
 	 </div>
