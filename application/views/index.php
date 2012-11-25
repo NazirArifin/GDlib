@@ -160,28 +160,28 @@
 						<div>
 							<h3>JURNAL</h3>
 							<p>Advanced cross-browser ellipsis for multiple line content.</p>
-							<a href="#" target="_blank">Visit site &raquo;</a>
+							<a href="#" target="_blank">Read More &raquo;</a>
 						</div>
 					</div>
 					<div>
 						<div>
 							<h3>MODUL</h3>
 							<p>Circular, responsive jQuery carousel.</p>
-							<a href="#" target="_blank">Visit site &raquo;</a>
+							<a href="#" target="_blank">Read More &raquo;</a>
 						</div>
 					</div>
 					<div>
 						<div>
 							<h3>BULETIN</h3>
 							<p>Highly customizable and feature rich jQuery form validator that embraces the power of HTML5.</p>
-							<a href="#" target="_blank">Visit site &raquo;</a>
+							<a href="#" target="_blank">Read More &raquo;</a>
 						</div>
 					</div>
 					<div>
 						<div>
 							<h3>E-BOOK</h3>
 							<p>Highly customizable and feature rich jQuery form validator that embraces the power of HTML5.</p>
-							<a href="#" target="_blank">Visit site &raquo;</a>
+							<a href="#" target="_blank">Read More &raquo;</a>
 						</div>
 					</div>
 				</div>
