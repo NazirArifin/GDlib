@@ -18,8 +18,8 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		//$this->load->view('welcome_message');
-		$this->load->database();
+		$this->load->view('index');
+		//$this->load->database();
 		$this->load->model('Admin_model');
 		//$this->Admin_model->tampilkanBuku();
 		//$this->db->query("test");
