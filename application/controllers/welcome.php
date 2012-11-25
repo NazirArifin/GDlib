@@ -20,7 +20,7 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('index');
 		//$this->load->database();
-		$this->load->model('Admin_model');
+		//$this->load->model('Admin_model');
 		//$this->Admin_model->tampilkanBuku();
 		//$this->db->query("test");
 	}
