@@ -9,10 +9,10 @@
 			<link rel="stylesheet" href="third_party/bootstrap/css/bootstrap.min.css" />
 			<link rel="stylesheet" href="third_party/bootstrap/css/bootstrap-responsive.min.css" />
 			<link rel="stylesheet" href="third_party/bootstrap/css/bootstrap-responsive.min.css" />
-			<script src="third_party/js/jquery-1.8.2.min.js"></script>
-			<script src="third_party/js/jquery-ui-1.9.1.custom.min.js"></script>
-			<script src="third_party/bootstrap/js/bootstrap.min.js"></script>
-			<script src="third_party/js/jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
+			<script src="third_party/jquery/jquery-1.8.2.min.js"></script>
+			<script src="third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
+			<script src="third_party/bootstrap/bootstrap.min.js"></script>
+			<script src="third_party/jquery.ui/jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
    
     <style type="text/css">
 
