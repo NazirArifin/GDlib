@@ -52,7 +52,10 @@ $route['third_party/(.+)$'] = 'statics/thirdparty/$1';
 $route['admin'] = "admin";
 
 //======================= ROUTES UNTUK USER ==== 
-$route['user'] = "user";
+$route['mahasiswa'] = "mahasiswa";
+
+//======================= ROUTES UNTUK USER ==== 
+$route['dosen'] = "dosen";
 
 
 // ==================== error
