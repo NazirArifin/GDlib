@@ -16,7 +16,9 @@
     
     <style type="text/css">
 	body {
+		/* norak ah, backgroundnya ini
 		background-image:url('/images/ogo.png');
+		*/
 	}
 	#logo{
 	position:absolute;
