@@ -51,6 +51,8 @@ $route['third_party/(.+)$'] = 'statics/thirdparty/$1';
 //======================= ROUTES UNTUK ADMIN ==== 
 $route['admin'] = "admin";
 
+//======================= ROUTES UNTUK USER ==== 
+$route['user'] = "user";
 
 
 // ==================== error
