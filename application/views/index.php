@@ -19,7 +19,8 @@
 		 *
 		 * 1. 	Nazir Arifin
 		 *		26-11-2012
-		 *		Kenapa tidak pake file css eksternal?
+		 *		Kenapa tidak pake file css eksternal? Tolong untuk image jangan pake width="" di HTMLnya! udah dibilangin
+		 *		susah ngeditnya nanti tau!
 		 * 2.	Nazir Arifin
 		 *		26-11-2012
 		 *		Untuk vendor prefix gak usah ditulis lengkap jika pakai jsloc, cukup ketik VENDOR
@@ -116,7 +117,13 @@
 				background-image: /*VENDOR*/linear-gradient(bottom, #666 25%, #888 75%);
 			}
 			#logo {
-				position:absolute;left:10px;top:-9px;
+				height: 25px;
+				margin-left: 50px;
+			}
+			.slider-images {
+				width: 500px;
+				height: 400px;
+				border: 0;
 			}
     </style>
 	
@@ -133,6 +140,7 @@
 <body>
 	<div class="navbar navbar-fixed-top">
 	  <div class="navbar-inner ">
+	  <div class="container">
 	  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -153,7 +161,7 @@
 			  </ul>
 			</div>
 		<!--button group-->
-		<a href="#"><img src="images/logo.png" class="brand" width="150" height="70" id="logo"/></a>
+		<a href="#"><img src="images/logo.png" class="brand" id="logo"/></a>
 			<div class="navbar-search input-append pull-right" >
 			  <input class="span2" id="appendedInputButton" type="text" >
 			  <button class="btn" type="button"><i class="icon-search"></i></button>
@@ -163,12 +171,14 @@
 		  <li><a href="#"><i class="icon-user"></i> Profile</a></li>
 		  
 		</ul>
+		</div>
 	  </div>
 	</div>
  <div id="wrapper">
 			<div id="images-wrapper">
 				<div id="images">
-					<img src="images/jurnal.jpg" width="500" height="400" border="0" />
+					<!-- jangan pake width di HTMLnya! -->
+					<img src="images/jurnal.jpg" width="500" class="slider-images" />
 					<img src="images/modul.jpg" width="500" height="400" border="0" />
 					<img src="images/buletin.jpg" width="500" height="400" border="0" />
 					<img src="images/ebook.gif" width="500" height="400" border="0" />

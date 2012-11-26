@@ -21,11 +21,18 @@
 		*/
 	}
 	#logo{
-	position:absolute;
-	left:300px;
-	top:-9px;
+		/*
+		position:absolute;
+		left:300px;
+		top:-9px;
+		*/
+		width: 25px;
+		margin-left: 20px;
+		margin-top: -1px;
 	}
-	#sidebar{position:fixed;}
+	#sidebar{
+		position:fixed;
+	}
 
     </style>
 	
@@ -55,7 +62,7 @@
 			  </ul>
 			</div>
 		<!--button group-->
-		<a href="#"><img src="/images/ogo.png" class="brand" width="35" height="30" id="logo"/></a>
+		<a href="#"><img src="/images/favicon.png" class="brand" id="logo"/></a>
 			<div class="navbar-search input-append" >
 			  <input class="span2" id="appendedInputButton" type="text" >
 			  <button class="btn" type="button"><i class="icon-search"></i></button>
