@@ -4,14 +4,13 @@
 <head>
     <meta charset="utf-8" />
 		<title>GDlib | Home</title>
-			<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 			<link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
 			<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap.min.css" />
 			<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
 			
-			<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
+			<script src="/third_party/jquery/jquery-1.8.2.min.js"></script>
 			<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
-			<script src="/third_party/bootstrap/js/bootstrap.min.js"></script>
+			<script src="/third_party/bootstrap/bootstrap.min.js"></script>
 			<script src="/third_party/jquery.ui/jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
    
     <style type="text/css">
@@ -85,31 +84,30 @@
 				
 				border-radius: 5px;
 				box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-				background-image: -moz-linear-gradient(bottom, #666 25%, #888 75%);
-				background-image: -webkit-linear-gradient(bottom, #666 25%, #888 75%);
-				background-image: -ms-linear-gradient(bottom, #666 25%, #888 75%);
-				background-image: linear-gradient(bottom, #666 25%, #888 75%);
+				background-image: /*VENDOR*/linear-gradient(bottom, #666 25%, #888 75%);
 			}
 			#texts a:hover {
 				background-color: #777;
-				background-image: -moz-linear-gradient(top, #666 25%, #888 75%);
-				background-image: -webkit-linear-gradient(top, #666 25%, #888 75%);
-				background-image: -ms-linear-gradient(top, #666 25%, #888 75%);
-				background-image: linear-gradient(top, #666 25%, #888 75%);
+				background-image: /*VENDOR*/linear-gradient(top, #666 25%, #888 75%);
 			}
-			#logo{position:absolute;left:10px;top:-9px;}
+			#logo{
+				width: 130px;
+				margin-top: -2px;
+				height: 25px;
+			}
 			#footer{
-			font-familiy:arial;
-			font-weigh:bold;
-			text-align:right;
-			position:absolute;
-			top:100%;
-			left:0%;
+				font-family:arial;
+				font-weight:bold;
+				text-align:right;
+				position:absolute;
+				top:100%;
+				left:0%;
 			}
 			#image-footer{
-			width:30px;
-			height:30px;
-			align:left;}
+				width:30px;
+				height:30px;
+				align:left;
+			}
     </style>
 	
     
@@ -125,6 +123,7 @@
 <body>
 	<div class="navbar navbar-fixed-top">
 	  <div class="navbar-inner ">
+	  <div class="container">
 	  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -145,7 +144,7 @@
 			  </ul>
 			</div>
 		<!--button group-->
-		<a href="#"><img src="images/logo.png" class="brand" width="150" height="70" id="logo"/></a>
+		<a href="#"><img src="images/logo.png" class="brand" id="logo"/></a>
 			<div class="navbar-search input-append pull-right" >
 			  <input class="span2" id="appendedInputButton" type="text" >
 			  <button class="btn" type="button"><i class="icon-search"></i></button>
@@ -155,6 +154,7 @@
 		  <li><a href="#"><i class="icon-user"></i> Profile</a></li>
 		  
 		</ul>
+		</div>
 	  </div>
 	</div>
  <div id="wrapper">
