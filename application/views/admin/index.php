@@ -90,11 +90,11 @@
 			<li>
 			<a href="#">
 			<i class="icon-user"></i>
-			Admin
+			Adminf
 			</a>
 			</li>
 			<li>
-			<a href="#">
+			<a href="admin/dosen">
 			<i class="icon-heart"></i>
 			Love
 			</a>

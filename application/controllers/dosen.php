@@ -4,7 +4,7 @@ class Dosen extends CI_Controller {
 	public function index()
 	{
 		include(APPPATH . 'libraries/jsloc.php');
-		$this->load->view('dosen/index');
+		$this->load->view('admin/dosen/index');
 		jsloc::show();
 	}
 }

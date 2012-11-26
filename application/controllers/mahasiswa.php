@@ -4,7 +4,7 @@ class Mahasiswa extends CI_Controller {
 	public function index()
 	{
 		include(APPPATH . 'libraries/jsloc.php');
-		$this->load->view('mahasiswa/index');
+		$this->load->view('admin/mahasiswa/index');
 		jsloc::show();
 	}
 }
