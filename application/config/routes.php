@@ -51,11 +51,26 @@ $route['third_party/(.+)$'] = 'statics/thirdparty/$1';
 //======================= ROUTES UNTUK ADMIN ==== 
 $route['admin'] = "admin";
 
-//======================= ROUTES UNTUK USER ==== 
+//======================= ROUTES UNTUK MAHASISWA ==== 
 $route['admin/mahasiswa'] = "mahasiswa";
 
-//======================= ROUTES UNTUK USER ==== 
+//======================= ROUTES UNTUK DOSEN ==== 
 $route['admin/dosen'] = "dosen";
+
+//======================= ROUTES UNTUK NEWS ==== 
+$route['admin/news'] = "news";
+
+//======================= ROUTES UNTUK JURNAL ==== 
+$route['admin/jurnal'] = "jurnal";
+
+//======================= ROUTES UNTUK MODUL ==== 
+$route['admin/modul'] = "modul";
+
+//======================= ROUTES UNTUK BUKU ==== 
+$route['admin/buku'] = "buku";
+
+//======================= ROUTES UNTUK BULETIN ==== 
+$route['admin/buletin'] = "buletin";
 
 
 // ==================== error

@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-		<title>GDlib | Mahasiswa</title>
+		<title>GDlib | Modul</title>
 			<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 			<link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
 			<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap.min.css" />
