@@ -49,7 +49,7 @@ $route['images/(.+)'] = "statics/images/$1";
 $route['third_party/(.+)$'] = 'statics/thirdparty/$1';
 
 //======================= ROUTES UNTUK ADMIN ==== 
-$route['admin'] = "home/home";
+$route['admin'] = "admin";
 
 
 
