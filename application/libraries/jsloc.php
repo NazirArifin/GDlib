@@ -281,7 +281,7 @@ class jsloc {
 	}
 	
 	private function css_prefix($css) {
-		$pr_callback = create_function('$match', '$p = array(\'webkit\', \'moz\', \'o\', \'\');
+		$pr_callback = create_function('$match', '$p = array(\'webkit\', \'moz\', \'o\', \'ms\', \'\');
 			$r = \'\';
 			
 			foreach ($p as $v) {
@@ -294,7 +294,7 @@ class jsloc {
 		
 		$css = preg_replace_callback('/\/\*BEGIN\*\/(.+)\/\*END\*\//misU', $pr_callback, $css);
 		
-		$pr_callback = create_function('$match', '$p = array(\'webkit\', \'moz\', \'o\', \'\');
+		$pr_callback = create_function('$match', '$p = array(\'webkit\', \'moz\', \'o\', \'ms\', \'\');
 			$r = \'\';
 			
 			foreach ($p as $v)

@@ -4,18 +4,27 @@
 <head>
     <meta charset="utf-8" />
 		<title>GDlib | Home</title>
-			<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 			<link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
 			<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap.min.css" />
 			<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
 			
-			<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
+			<script src="/third_party/jquery/jquery-1.8.2.min.js"></script>
 			<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
-			<script src="/third_party/bootstrap/js/bootstrap.min.js"></script>
+			<script src="/third_party/bootstrap/bootstrap.min.js"></script>
 			<script src="/third_party/jquery.ui/jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
    
     <style type="text/css">
-
+		/**
+		 * Edit
+		 *
+		 * 1. 	Nazir Arifin
+		 *		26-11-2012
+		 *		Kenapa tidak pake file css eksternal?
+		 * 2.	Nazir Arifin
+		 *		26-11-2012
+		 *		Untuk vendor prefix gak usah ditulis lengkap jika pakai jsloc, cukup ketik VENDOR
+		 *		seperti contoh dibawah
+		 */
 			body * {
 				font-family: Arial, Geneva, SunSans-Regular, sans-serif;
 				font-size: 14px;
@@ -85,19 +94,30 @@
 				
 				border-radius: 5px;
 				box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+				/*
+				 * KODE LAMA
 				background-image: -moz-linear-gradient(bottom, #666 25%, #888 75%);
 				background-image: -webkit-linear-gradient(bottom, #666 25%, #888 75%);
 				background-image: -ms-linear-gradient(bottom, #666 25%, #888 75%);
 				background-image: linear-gradient(bottom, #666 25%, #888 75%);
+				 * 
+				 * diubah menjadi:
+				 */
+				background-image: /*VENDOR*/linear-gradient(bottom, #666 25%, #888 75%);
 			}
 			#texts a:hover {
 				background-color: #777;
+				/*
 				background-image: -moz-linear-gradient(top, #666 25%, #888 75%);
 				background-image: -webkit-linear-gradient(top, #666 25%, #888 75%);
 				background-image: -ms-linear-gradient(top, #666 25%, #888 75%);
 				background-image: linear-gradient(top, #666 25%, #888 75%);
+				*/
+				background-image: /*VENDOR*/linear-gradient(bottom, #666 25%, #888 75%);
 			}
-	#logo{position:absolute;left:10px;top:-9px;}
+			#logo {
+				position:absolute;left:10px;top:-9px;
+			}
     </style>
 	
     
