@@ -16,7 +16,7 @@
    
     <style type="text/css">
 
-			body * {
+			body{
 				font-family: Arial, Geneva, SunSans-Regular, sans-serif;
 				font-size: 14px;
 				color: #333;
