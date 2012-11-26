@@ -6,11 +6,7 @@
     <link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
     <link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
-	<!-- 
-		edited by nazir
-		path untuk jquery dan bootstrap.min.js diubah
-	-->
-    <script src="/third_party/jquery/jquery-1.8.2.min.js"></script>
+	<script src="/third_party/jquery/jquery-1.8.2.min.js"></script>
     <script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
     <script src="/third_party/bootstrap/bootstrap.min.js"></script>
     
