@@ -20,5 +20,16 @@ class Dosen extends CI_Controller {
 		if ($dosen==0){
 			printf("Data Dosen tidak ada");
 		}
+		else {
+			echo "<table border='1'>";
+			echo "<tr><td>NAMA</td><td>AKTIVITAS</td><td>ID Facebook</td></tr>";
+			foreach ($dosen as $row){
+				echo "<tr>";
+				echo "<td>{$row->NAMA_USER}</td>";
+				echo "<td>{$row->AKTIVITAS_USER}</td>";
+				echo "<td>{$row->ID_FACEBOOK_USER}</td>";
+				echo "</tr>";
+			}
+		}
 	}
 }
