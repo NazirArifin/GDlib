@@ -84,7 +84,7 @@
     </div>
     
 	</div>
-        <?php echo anchor ('dosen/tampil_user_dosen');
+        <?php echo anchor ('dosen/tampil_user_dosen','lihat Data');
 			echo "<p>Page rendered in {elapsed_time} seconds</p>";
 		?>
 </div>
