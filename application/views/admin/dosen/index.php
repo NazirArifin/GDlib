@@ -84,7 +84,9 @@
     </div>
     
 	</div>
-        
+        <?php echo anchor ('dosen/tampil_user_dosen');
+			echo "<p>Page rendered in {elapsed_time} seconds</p>";
+		?>
 </div>
     <div class="well span9 pull-right">
 	<input type="text" class="input-medium search-query" >

@@ -3,7 +3,7 @@
 class Dosen extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
-		
+			$this->load->helper(array('url','form'));
 	}
 	public function index()
 	{
@@ -30,6 +30,8 @@ class Dosen extends CI_Controller {
 				echo "<td>{$row->ID_FACEBOOK_USER}</td>";
 				echo "</tr>";
 			}
+			echo "</table>";
+			
 		}
 	}
 }
