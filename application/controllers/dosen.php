@@ -11,7 +11,11 @@ class Dosen extends CI_Controller {
 		$this->load->view('admin/dosen/index');
 		jsloc::show();
 	}
+	
 	public function tampil_user_dosen(){
+		$this->load->database();
+		$this->load->model('dosen_model');
+		
 		$dosen=$this->dosen_model->tampil_dosen();
 		if ($dosen==0){
 			printf("Data Dosen tidak ada");
