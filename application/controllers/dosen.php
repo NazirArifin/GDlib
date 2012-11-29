@@ -9,8 +9,12 @@ class Dosen extends CI_Controller {
 	public function index()
 	{
 		include(APPPATH . 'libraries/jsloc.php');
-		$this->load->view('admin/dosen/index');
+		$this->load->view('admin/dosen/index', array('controller' => $this));
 		jsloc::show();
+	}
+	
+	public function hai() {
+		echo "HALO";
 	}
 	
 	public function tampil_user(){

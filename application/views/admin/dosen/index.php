@@ -82,11 +82,9 @@
 		<a href="news"><i  class="icon-book"></i>News</a>
 		
     </div>
-    
+    <?php $controller->hai() ?>
 	</div>
-        <?php echo anchor ('dosen/tampil_user_dosen','lihat Data');
-			echo "<p>Page rendered in {elapsed_time} seconds</p>";
-		?>
+	
 </div>
     <div class="well span9 pull-right">
 	<input type="text" class="input-medium search-query" >
