@@ -12,7 +12,7 @@ class Dosen extends CI_Controller {
 		jsloc::show();
 	}
 	
-	public function tampil_user_dosen(){
+	public function tampil_user(){
 		$this->load->database();
 		$this->load->model('dosen_model');
 		
