@@ -15,7 +15,8 @@ class Admin extends CI_Controller {
 	
 	public function dosen()
 	{
-		
+		$this->load->view('admin/dosen/index', array('controller' => $this));
+		jsloc::show();
 	}
 	
 	public function mahasiswa()

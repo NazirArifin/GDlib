@@ -90,7 +90,7 @@
      <button class="btn btn-large btn-success pull-right" id="tombol"><i class="icon-plus icon-white"></i>Tambah</button><br><br><br>
 	 <div class="well span8">
 	 <img src="Images/animal1.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	 <?php $controller->tampil_user();?>
+	
 	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
 	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
 	 </div>
