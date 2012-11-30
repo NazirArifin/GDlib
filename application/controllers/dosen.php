@@ -13,10 +13,6 @@ class Dosen extends CI_Controller {
 		jsloc::show();
 	}
 	
-	public function hai() {
-		echo "HALO";
-	}
-	
 	public function tampil_user(){
 		$this->load->database();
 		$dosen=$this->dosen_model->tampil_dosen();

@@ -67,19 +67,19 @@
 	<div id="menu">
 	<h3><i  class="icon-user"></i>User</h3>
     <div>
-		<a href="dosen"><i  class="icon-user"></i>Dosen</a><br>
-		<a href="mahasiswa"><i  class="icon-user"></i>Mahasiswa</a>
+		<a href="/admin/dosen"><i  class="icon-user"></i>Dosen</a><br>
+		<a href="/admin/mahasiswa"><i  class="icon-user"></i>Mahasiswa</a>
     </div>
 	<h3><i  class="icon-file"></i>Dokumen</h3>
     <div>
-		<a href="jurnal"><i  class="icon-book"></i>Jurnal</a><br>
-		<a href="buku"><i  class="icon-book"></i>Buku</a><br>
-		<a href="modul"><i  class="icon-book"></i>Modul</a><br>
-		<a class="disabled" href="buletin"><i  class="icon-book"></i>Bulletin</a>
+		<a href="/admin/jurnal"><i  class="icon-book"></i>Jurnal</a><br>
+		<a href="/admin/buku"><i  class="icon-book"></i>Buku</a><br>
+		<a href="/admin/modul"><i  class="icon-book"></i>Modul</a><br>
+		<a class="disabled" href="/admin/buletin"><i  class="icon-book"></i>Bulletin</a>
     </div>
 	<h3><i  class="icon-refresh"></i>Other</h3>
     <div>
-		<a href="news"><i  class="icon-book"></i>News</a>
+		<a href="/admin/news"><i  class="icon-book"></i>News</a>
 		
     </div>
     

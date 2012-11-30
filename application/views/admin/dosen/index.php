@@ -82,7 +82,6 @@
 		<a href="news"><i  class="icon-book"></i>News</a>
 		
     </div>
-    <?php $controller->hai() ?>
 	</div>
 	
 </div>
