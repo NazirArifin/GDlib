@@ -52,25 +52,31 @@ $route['third_party/(.+)$'] = 'statics/thirdparty/$1';
 $route['admin'] = "admin";
 
 //======================= ROUTES UNTUK MAHASISWA ==== 
-$route['admin/mahasiswa'] = "mahasiswa";
+$route['admin/mahasiswa'] = "admin/mahasiswa";
 
 //======================= ROUTES UNTUK DOSEN ==== 
-$route['admin/dosen'] = "dosen";
+$route['admin/dosen'] = "admin/dosen";
 
 //======================= ROUTES UNTUK NEWS ==== 
-$route['admin/news'] = "news";
+$route['admin/news'] = "admin/news";
 
 //======================= ROUTES UNTUK JURNAL ==== 
-$route['admin/jurnal'] = "jurnal";
+$route['admin/jurnal'] = "admin/jurnal";
 
 //======================= ROUTES UNTUK MODUL ==== 
-$route['admin/modul'] = "modul";
+$route['admin/modul'] = "admin/modul";
 
 //======================= ROUTES UNTUK BUKU ==== 
-$route['admin/buku'] = "buku";
+$route['admin/buku'] = "admin/buku";
 
 //======================= ROUTES UNTUK BULETIN ==== 
-$route['admin/buletin'] = "buletin";
+$route['admin/buletin'] = "admin/buletin";
+
+//======================= ROUTES UNTUK BULETIN ==== 
+$route['dosen'] = "dosen";
+
+//======================= ROUTES UNTUK BULETIN ==== 
+$route['mahasiswa'] = "mahasiswa";
 
 
 // ==================== error
