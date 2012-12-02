@@ -21,26 +21,37 @@ class Admin extends CI_Controller {
 	
 	public function mahasiswa()
 	{
-		
+		$this->load->view('admin/mahasiswa/index');
+		jsloc::show();
 	}
 	
 	public function modul()
 	{
-		
+		$this->load->view('admin/modul/index');
+		jsloc::show();
 	}
 	
 	public function jurnal()
 	{
-		
+		$this->load->view('admin/jurnal/index');
+		jsloc::show();
 	}
 	
 	public function buletin()
 	{
-		
+		$this->load->view('admin/buletin/index');
+		jsloc::show();
 	}
 	
 	public function buku()
 	{
-		
+		$this->load->view('admin/buku/index');
+		jsloc::show();
+	}
+	
+	public function news()
+	{
+		$this->load->view('admin/news/index');
+		jsloc::show();
 	}
 }
