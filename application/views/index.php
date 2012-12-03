@@ -6,24 +6,24 @@
 		<title>GDlib | Home</title>
 			<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 
-			<link rel="stylesheet" type="text/css" href="third_party/bootmetro/content/css/bootstrap.css">
-			<link rel="stylesheet" type="text/css" href="third_party/bootmetro/content/css/bootstrap-responsive.css">
-			<link rel="stylesheet" type="text/css" href="third_party/bootmetro/content/css/bootmetro.css">
-			<link rel="stylesheet" type="text/css" href="third_party/bootmetro/content/css/bootmetro-tiles.css">
-			<link rel="stylesheet" type="text/css" href="third_party/bootmetro/content/css/bootmetro-charms.css">
-			<link rel="stylesheet" type="text/css" href="third_party/bootmetro/content/css/metro-ui-light.css">
-			<link rel="stylesheet" type="text/css" href="third_party/bootmetro/content/css/icomoon.css">
+			<link rel="stylesheet" type="text/css" href="/third_party/bootmetro/content/css/bootstrap.css">
+			<link rel="stylesheet" type="text/css" href="/third_party/bootmetro/content/css/bootstrap-responsive.css">
+			<link rel="stylesheet" type="text/css" href="/third_party/bootmetro/content/css/bootmetro.css">
+			<link rel="stylesheet" type="text/css" href="/third_party/bootmetro/content/css/bootmetro-tiles.css">
+			<link rel="stylesheet" type="text/css" href="/third_party/bootmetro/content/css/bootmetro-charms.css">
+			<link rel="stylesheet" type="text/css" href="/third_party/bootmetro/content/css/metro-ui-light.css">
+			<link rel="stylesheet" type="text/css" href="/third_party/bootmetro/content/css/icomoon.css">
 			
-			<script src="third_party/jquery/jquery-1.8.2.min.js"></script>
-			<script src="third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
-			<script src="third_party/bootstrap/bootstrap.min.js"></script>
+			<script src="/third_party/jquery/jquery-1.8.2.min.js"></script>
+			<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
+			<script src="/third_party/bootstrap/bootstrap.min.js"></script>
 			
-			<link href="third_party/slider/generic.css" rel="stylesheet" type="text/css" />
-			<link href="third_party/slider/2/js-image-slider.css" rel="stylesheet" type="text/css" />
-			<link href="third_party/slider/2/slider.css" rel="stylesheet" type="text/css" />
-			<script src="third_party/slider/jquery-1.7.1.min.js" type="text/javascript"></script>
-			<script src="third_party/slider/2/js-image-slider.js" type="text/javascript"></script>
-			<script src="third_party/slider/2/jquery-slider.js" type="text/javascript"></script>
+			<link href="/third_party/slider/generic.css" rel="stylesheet" type="text/css" />
+			<link href="/third_party/slider/2/js-image-slider.css" rel="stylesheet" type="text/css" />
+			<link href="/third_party/slider/2/slider.css" rel="stylesheet" type="text/css" />
+			<script src="/third_party/slider/jquery-1.7.1.min.js" type="text/javascript"></script>
+			<script src="/third_party/slider/2/js-image-slider.js" type="text/javascript"></script>
+			<script src="/third_party/slider/2/jquery-slider.js" type="text/javascript"></script>
    
        <style type="text/css">
 
@@ -100,35 +100,35 @@
 			<div class="div2" style="background-color:white;padding:40px 0 50px 20px;border:1px solid #E3E3E3;">
         <div class="floatLeft">
             <div id="mcts1">
-                <img src="images/slideshow-1s.jpg" />
-                <img src="images/slideshow-2s.jpg" />
-                <img src="images/slideshow-3s.jpg" />
-                <img src="images/slideshow-4s.jpg" />
-                <img src="images/slideshow-5s.jpg" />
-                <img src="images/slideshow-6s.jpg" />
-                <img src="images/slideshow-7s.jpg" />
-                <img src="images/slideshow-8s.jpg" />
-                <img src="images/slideshow-9s.jpg" />
-                <img src="images/slideshow-10s.jpg" />
-                <img src="images/slideshow-11s.jpg" />
-                <img src="images/slideshow-12s.jpg" />
+                <img src="/images/slideshow-1s.jpg" />
+                <img src="/images/slideshow-2s.jpg" />
+                <img src="/images/slideshow-3s.jpg" />
+                <img src="/images/slideshow-4s.jpg" />
+                <img src="/images/slideshow-5s.jpg" />
+                <img src="/images/slideshow-6s.jpg" />
+                <img src="/images/slideshow-7s.jpg" />
+                <img src="/images/slideshow-8s.jpg" />
+                <img src="/images/slideshow-9s.jpg" />
+                <img src="/images/slideshow-10s.jpg" />
+                <img src="/images/slideshow-11s.jpg" />
+                <img src="/images/slideshow-12s.jpg" />
             </div>
         </div>
         <div class="floatLeft">
             <div id="sliderFrame">
                 <div id="slider">
-                    <img src="images/slider-1.jpg" alt="#slideshow-1" title="Welcome to Menucool jQuery Slideshow" />
-                    <img src="images/slider-2.jpg" alt="#slideshow-2" />
-                    <a href="http://www.menucool.com"><img src="images/slider-3.jpg" alt="#slideshow-3" /></a>
-                    <img src="images/slider-4.jpg" alt="#slideshow-4" />
-                    <img src="images/slider-5.jpg" alt="#slideshow-5" />
-                    <img src="images/slider-6.jpg" alt="#slideshow-6" />
-                    <img src="images/slider-7.jpg" alt="#slideshow-7" />
-                    <img src="images/slider-8.jpg" alt="#slideshow-8" />
-                    <img src="images/slider-9.jpg" alt="#slideshow-9" />
-                    <img src="images/slider-10.jpg"  alt="#slideshow-10"/>
-                    <img src="images/slider-11.jpg"  alt="#slideshow-11"/>
-                    <img src="images/slider-12.jpg"  alt="#slideshow-12"/>
+                    <img src="/images/slider-1.jpg" alt="#slideshow-1" title="Welcome to Menucool jQuery Slideshow" />
+                    <img src="/images/slider-2.jpg" alt="#slideshow-2" />
+                    <a href="http://www.menucool.com"><img src="/images/slider-3.jpg" alt="#slideshow-3" /></a>
+                    <img src="/images/slider-4.jpg" alt="#slideshow-4" />
+                    <img src="/images/slider-5.jpg" alt="#slideshow-5" />
+                    <img src="/images/slider-6.jpg" alt="#slideshow-6" />
+                    <img src="/images/slider-7.jpg" alt="#slideshow-7" />
+                    <img src="/images/slider-8.jpg" alt="#slideshow-8" />
+                    <img src="/images/slider-9.jpg" alt="#slideshow-9" />
+                    <img src="/images/slider-10.jpg"  alt="#slideshow-10"/>
+                    <img src="/images/slider-11.jpg"  alt="#slideshow-11"/>
+                    <img src="/images/slider-12.jpg"  alt="#slideshow-12"/>
                 </div>
             </div>
         </div>
