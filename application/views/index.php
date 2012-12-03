@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
 		<title>GDlib | Home</title>
 			<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
-			<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+
 			<link rel="stylesheet" type="text/css" href="third_party/bootmetro/content/css/bootstrap.css">
 			<link rel="stylesheet" type="text/css" href="third_party/bootmetro/content/css/bootstrap-responsive.css">
 			<link rel="stylesheet" type="text/css" href="third_party/bootmetro/content/css/bootmetro.css">
