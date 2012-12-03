@@ -5,6 +5,7 @@ class Admin extends CI_Controller {
 	{
 		parent::__construct();
 		include(APPPATH . 'libraries/jsloc.php');
+		$this->load->model('admin_model');
 	}
 
 	public function index()
@@ -15,8 +16,6 @@ class Admin extends CI_Controller {
 	
 	public function dosen()
 	{
-		$this->load->model('admin_model');
-		//$this->load->view('admin/dosen/index', array('controller' => $this));
 		$this->load->database();
 		$dosen=$this->admin_model->tampilUserDosen();
 		if ($dosen==0){
@@ -36,6 +35,7 @@ class Admin extends CI_Controller {
 			
 		}
 		jsloc::show();
+		$this->load->view('admin/dosen/index', array('controller' => $this));
 	}
 	
 	public function mahasiswa()
