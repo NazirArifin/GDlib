@@ -62,87 +62,57 @@
 	<br>
 	<br>
 <div class="container-fluid" id="container">
-  <div class="row-fluid" id="form">
-    <div class="well span3" id="sidebar">
-	<div id="menu">
-	<h3><i  class="icon-user"></i>User</h3>
-    <div>
-		<a href="dosen"><i  class="icon-user"></i>Dosen</a><br>
-		<a href="mahasiswa"><i  class="icon-user"></i>Mahasiswa</a>
-    </div>
-	<h3><i  class="icon-file"></i>Dokumen</h3>
-    <div>
-		<a href="jurnal"><i  class="icon-book"></i>Jurnal</a><br>
-		<a href="buku"><i  class="icon-book"></i>Buku</a><br>
-		<a href="modul"><i  class="icon-book"></i>Modul</a><br>
-		<a href="buletin"><i  class="icon-book"></i>Bulletin</a>
-    </div>
-	<h3><i  class="icon-refresh"></i>Other</h3>
-    <div>
-		<a href="news"><i  class="icon-book"></i>News</a>
-		
-    </div>
-	</div>
-	
-</div>
-    <div class="well span9 pull-right">
-	<input type="text" class="input-medium search-query" >
-     <button class="btn btn-large btn-success pull-right" id="tombol"><i class="icon-plus icon-white"></i>Tambah</button><br><br><br>
-	 <div class="well span8">
-	 <img src="Images/animal1.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	
-	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
-	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
-	 </div>
-	 <div class="well span8">
-	 <img src="Images/animal2.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
-	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
-	 </div>
-	 <div class="well span8">
-	 <img src="Images/animal3.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
-	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
-	 </div>
-	 <div class="well span8">
-	 <img src="Images/animal4.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
-	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
-	 </div>
-	 <div class="well span8">
-	 <img src="Images/animal5.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
-	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
-	 </div>
-	 <div class="well span8">
-	 <img src="Images/animal6.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
-	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
-	 </div>
-	 <div class="well span8">
-	 <img src="Images/animal7.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
-	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
-	 </div>
-	 <div class="well span8">
-	 <img src="Images/animal8.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
-	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
-	 </div>
-	<div class="pagination" align="center">
-		<ul>
-			<li><a href="#">Prev</a></li>
-			<li class="active">
-			<a href="#">1</a>
-			</li>
-			<li><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">Next</a></li>
-			</ul>
+	<div class="row-fluid" id="form">
+		<div class="well span3" id="sidebar">
+			<div id="menu">
+				<h3><i  class="icon-user"></i>User</h3>
+				<div>
+					<a href="dosen"><i  class="icon-user"></i>Dosen</a><br>
+					<a href="mahasiswa"><i  class="icon-user"></i>Mahasiswa</a>
+				</div>
+				<h3><i  class="icon-file"></i>Dokumen</h3>
+				<div>
+					<a href="jurnal"><i  class="icon-book"></i>Jurnal</a><br>
+					<a href="buku"><i  class="icon-book"></i>Buku</a><br>
+					<a href="modul"><i  class="icon-book"></i>Modul</a><br>
+					<a href="buletin"><i  class="icon-book"></i>Bulletin</a>
+				</div>
+				<h3><i  class="icon-refresh"></i>Other</h3>
+				<div>
+					<a href="news"><i  class="icon-book"></i>News</a>	
+				</div>
+			</div>
 		</div>
-    </div>
-  </div>
+		<div class="well span9 pull-right">
+			<input type="text" class="input-medium search-query" >
+			<button class="btn btn-medium btn-success pull-right" id="tombol"><i class="icon-plus icon-white"></i>Tambah</button><br><br><br>
+			<div class="container-fluid">
+				<div class="row-fluid">
+					<div class="span4">
+									<img src="/images/animal1.png" alt=""/>
+					</div>
+					<div class="span8">
+					<h5>Habieb BreakHouse Gombal Gambel</h5><p>Medelan - Lenteng - Sumenep - Madura - Jawa Timur - Indonesia - Asia - Bumi - Dunia - Akhirat</p><br>
+						<button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i> Edit</button>
+						<button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i> Delete</button>
+						<button class="btn btn-mini btn-danger"><i class="icon-map-marker icon-white"></i> Detail</button>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<hr>
+					<div class="pagination" align="center">
+						<ul>
+							<li><a href="#">Prev</a></li>
+							<li class="active"><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">Next</a></li>
+						</ul>
+					</div>
+		</div>
+	</div>
 </div>
  <div class="modal fade" id="modal1">
     <div class="modal-header">

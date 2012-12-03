@@ -4,11 +4,14 @@ class Admin_model extends CI_Model {
 	public function __construct() {
 		parent::__construct();
 		
-		echo 'test model';
 	}
 	
-	public function tampilkanBuku() {
-		// 
-		echo 'test model 2';
+	public function tampilUserDosen() {
+		$query=$this->db->get('tb_user');
+		if($query->num_rows()==0){
+			return false;
+		} else {
+			return $query->result();
+		}
 	}
 }

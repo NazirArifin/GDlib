@@ -3,16 +3,16 @@
 class Mahasiswa extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
-			$this->load->helper(array('url','form'));
-			$this->load->model('mahasiswa_model');
+		include(APPPATH . 'libraries/jsloc.php');
 	}
+	
 	public function index()
 	{
-		include(APPPATH . 'libraries/jsloc.php');
 		$this->load->view('admin/mahasiswa/index',array('controller' => $this));
 		jsloc::show();
 		
 	}
+	
 	public function tampil_user(){	
 		$this->load->database();
 		$mahasiswa=$this->mahasiswa_model->tampil_mahasiswa();

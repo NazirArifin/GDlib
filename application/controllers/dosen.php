@@ -1,14 +1,14 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Dosen extends CI_Controller {
+
 	public function __construct() {
 		parent::__construct();
-			$this->load->helper(array('url','form'));
-			$this->load->model('dosen_model');
+		include(APPPATH . 'libraries/jsloc.php');
 	}
+	
 	public function index()
 	{
-		include(APPPATH . 'libraries/jsloc.php');
 		$this->load->view('dosen/index', array('controller' => $this));
 		
 		jsloc::show();
