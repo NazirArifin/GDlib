@@ -8,106 +8,19 @@
 			<link rel="stylesheet" href="third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
 			<link rel="stylesheet" href="third_party/bootstrap/css/bootstrap.min.css" />
 			<link rel="stylesheet" href="third_party/bootstrap/css/bootstrap-responsive.min.css" />
-			<link rel="stylesheet" href="third_party/bootstrap/css/bootstrap-responsive.min.css" />
-			<script src="third_party/jquery/jquery-1.8.2.min.js"></script>
-			<script src="third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
-			<script src="third_party/bootstrap/bootstrap.min.js"></script>
-			<script src="third_party/jquery.ui/jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
+			
+			<script src="third_party/js/jquery-1.8.2.js"></script>
+			<script src="third_party/js/jquery-ui-1.9.1.custom.min.js"></script>
+			<script src="third_party/bootstrap/js/bootstrap.min.js"></script>
+			<script src="third_party/js/jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
    
     <style type="text/css">
 
-			body {
-				font-family: Arial, Geneva, SunSans-Regular, sans-serif;
-				font-size: 14px;
-				color: #333;
-				line-height: 22px;
-			}
-			body h3 {
-				font-size: 20px;
-				font-weight: bold;
-				color: #666;
-			}
 			
-			#wrapper {
-				background-color: #fff;
-				border: 1px solid #ccc;
-				padding: 10px;
-				width: 800px;
-				height: 400px;
-				margin: -210px 0 0 -410px;
-				position: absolute;
-				top: 50%;
-				left: 50%;
-			}
-			#images-wrapper {
-				width: 500px;
-				height: 400px;
-				float: left;
-			}
-			#texts-wrapper {
-				width: 300px;
-				height: 400px;
-				float: right;
-			}
-			
-			#images img {
-				display: block;
-			}
-			
-			#texts > div {
-				width: 300px;
-				height: 400px;
-				position: relative;
-			}
-			#texts > div > div {
-				width: 240px;
-				position: absolute;
-				left: 30px;
-				bottom: 125px;
-			}
-			
-			#texts a {
-				color: #fff;
-				font-size: 18px;
-				text-shadow: 0 1px 2px rgba(0,0,0,0.5);
-				text-decoration: none;
-				text-align: center;
-				line-height: 40px;
-				outline: none;
-				display: block;
-				background-color: #888;
-				border: 1px solid #666;
-				width: 175px;
-				height: 40px;
-				left: 700px;
-				top: 260px;
-				
-				border-radius: 5px;
-				box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-				background-image: -moz-linear-gradient(bottom, #666 25%, #888 75%);
-				background-image: -webkit-linear-gradient(bottom, #666 25%, #888 75%);
-				background-image: -ms-linear-gradient(bottom, #666 25%, #888 75%);
-				background-image: linear-gradient(bottom, #666 25%, #888 75%);
-			}
-			#texts a:hover {
-				background-color: #777;
-				background-image: -moz-linear-gradient(top, #666 25%, #888 75%);
-				background-image: -webkit-linear-gradient(top, #666 25%, #888 75%);
-				background-image: -ms-linear-gradient(top, #666 25%, #888 75%);
-				background-image: linear-gradient(top, #666 25%, #888 75%);
-			}
 			#logo{
 			position:absolute;left:10px;top:-9px;
 			}
 			
-			#header-text{
-			font-family: Arial, Geneva, SunSans-Regular, sans-serif;
-			color:#333;
-			position:absolute;
-			top:70px;
-			left:0px;
-			text-align:center;
-			}
 			#footer{
 			font-familiy:arial;
 			font-weigh:bold;
@@ -120,6 +33,10 @@
 			width:30px;
 			height:30px;
 			align:left;}
+			.image-content{
+			width:770px;
+			height:450px;
+			}
     </style>
 	
     
@@ -167,46 +84,83 @@
 		</ul>
 	  </div>
 	</div>
-
- <div class="well span12" id="wrapper">
- 
-			<div id="images-wrapper">
-				<div id="images">
-					<img src="images/dot.jpg" width="500" height="400" border="0" />
-					<img src="images/cfs.jpg" width="500" height="400" border="0" />
-					<img src="images/val.jpg" width="500" height="400" border="0" />
-				</div>
-			</div>
-			<div id="texts-wrapper">
-				<div id="texts">
-					<div>
-						<div>
-							<h3>jQuery.dotdotdot</h3>
-							<p>Advanced cross-browser ellipsis for multiple line content.</p>
-							<a href="http://dotdotdot.frebsite.nl" target="_blank">Read More &raquo;</a>
-						</div>
-					</div>
-					<div>
-						<div>
-							<h3>jQuery.carouFredSel</h3>
-							<p>Circular, responsive jQuery carousel.</p>
-							<a href="http://caroufredsel.frebsite.nl" target="_blank">Read More &raquo;</a>
-						</div>
-					</div>
-					<div>
-						<div>
-							<h3>jQuery.validVal</h3>
-							<p>Highly customizable and feature rich jQuery form validator that embraces the power of HTML5.</p>
-							<a href="http://validval.frebsite.nl" target="_blank">Read More &raquo;</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			
-		</div>
+	<br>
+	<br>
+	<br>
+	<br>
+<div class="container-fluid">
+	<div class=" span12" id="wrapper">
+			<!--slider-->
+			<div id="myCarousel" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <img src="images/animal1.png" alt="" class="image-content">
+                    <div class="carousel-caption">
+                      <h4>First Thumbnail label</h4>
+                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit....<a class="label label-warning">Read More</a></p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="images/animal2.png" alt="" class="image-content">
+                    <div class="carousel-caption">
+                      <h4>Second Thumbnail label</h4>
+                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit...<a class="label label-warning">Read More</a></p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="images/animal3.png" alt="" class="image-content">
+                    <div class="carousel-caption">
+                      <h4>Third Thumbnail label</h4>
+                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit...<a class="label label-warning">Read More</a></p>
+                    </div>
+                  </div>
+                </div>
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+              </div>
+            </div>
+          </div>
+		  <!--end slider-->
 		
-<div class="well span12 " id="footer">
+	<!--thumbnail-->	
+	<div class="container-fluid">
+		<div class="row-fluid">
+            <ul class="thumbnails">
+              <li class="span3">
+                <div class="thumbnail">
+                  <img src="http://placehold.it/300x200" alt="">
+				  <p><a href="#" class="btn btn-primary btn-block btn-large"><i class="icon-file icon-white"></i> JURNAL</a> </p>
+                  
+                </div>
+              </li>
+              <li class="span3">
+                <div class="thumbnail">
+                  <img src="http://placehold.it/300x200" alt="">
+				  <p><a href="#" class="btn btn-primary btn-block btn-large"><i class="icon-book icon-white"></i> MODUL</a> </p>
+                  
+                </div>
+              </li>
+              <li class="span3">
+                <div class="thumbnail">
+                  <img src="http://placehold.it/300x200" alt="">
+				  <p><a href="#" class="btn btn-primary btn-block btn-large"><i class="icon-book icon-white"></i> BUKU</a> </p>
+                  
+                </div>
+              </li>
+			  <li class="span3">
+                <div class="thumbnail">
+                  <img src="http://placehold.it/300x200" alt="">
+				  <p><a href="#" class="btn btn-primary btn-block btn-large"><i class="icon-file icon-white"></i> BULETIN</a> </p>
+                  
+                </div>
+              </li>
+            </ul>
+          </div>
+         </div>
+	<!--end thumbnail-->
+	
+	<!--footer-->
+<div class="well span12 fixed-bottom">
 	<a href="#"><img src="images/ogo.png" id="image-footer"></a>
 	&copy; 2012 Gedung {D} Library All rights reserved
 </div>
@@ -214,38 +168,8 @@
  
 
  <script type="text/javascript">
- 	$(function() {
-				 $('#images').carouFredSel({
-				 	items: 1,
-					direction: 'up',
-					auto: {
-						duration: 750,
-						timeoutDuration: 2000,
-						easing: 'quadratic',
-						onBefore: function() {
-							var index = $(this).triggerHandler( 'currentPosition' );
-							if ( index == 0 ) {
-								index = $(this).children().length;
-							}
-							$('#texts').trigger('slideTo', [ index, {
-								fx: 'directscroll'
-							}, 'prev' ]);
-						}
-					}
-				 });
-				 $('#texts').carouFredSel({
-					items: 1,
-					direction: 'up',
-					auto: {
-						play: false,
-						duration: 750,
-						easing: 'quadratic'
-					}
-				 });
-			});
-    $(function() {
-        $( "#menu" ).menu();
-    });
+ 
+	$('#myCarousel').carousel({ interval: 2000})
   </script> 
 </body>
 </html>
