@@ -40,6 +40,9 @@
 
 $route['default_controller'] = "welcome";
 
+$route['test'] = "test";
+$route['test/ajax'] = "test/ajax";
+
 // static
 
 $route['css/([a-z\.\-]+\.css)'] = "statics/css/$1";

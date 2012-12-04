@@ -92,6 +92,31 @@
 									<img src="/images/animal1.png" alt=""/>
 					</div>
 					<div class="span8">
+					<?php
+					
+		$dosen=$controller->admin_model->tampilUserDosen();
+		if ($dosen==0):
+			printf("Data Dosen tidak ada");
+		else: ?>
+			<table border='1'>
+			<tr><td>NAMA</td><td>AKTIVITAS</td><td>ID Facebook</td></tr>
+			<?php
+			foreach ($dosen as $row):
+			?>
+				<tr>
+				<td><?php echo $row->NAMA_USER ?></td>
+				<td><?php echo $row->AKTIVITAS_USER ?></td>
+				<td><?php echo $row->ID_FACEBOOK_USER ?></td>
+				</tr>
+			<?php
+			endforeach;
+			?>
+			</table>
+		<?php
+		endif;
+		?>
+		
+					
 					<h5>Habieb BreakHouse Gombal Gambel</h5><p>Medelan - Lenteng - Sumenep - Madura - Jawa Timur - Indonesia - Asia - Bumi - Dunia - Akhirat</p><br>
 						<button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i> Edit</button>
 						<button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i> Delete</button>
