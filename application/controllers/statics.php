@@ -135,6 +135,9 @@ class Statics extends CI_Controller {
 				header('Content-Type: application/x-javascript');
 				header('Charset: UTF-8');
 				break;
+			case 'svg':
+				header('Content-Type: image/svg+xml');
+				break;
 			case 'jpg': case 'png': case 'gif':
 				$size	= getimagesize($path);
 				if ($size) {
