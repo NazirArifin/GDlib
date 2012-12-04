@@ -1,30 +1,28 @@
 <!DOCTYPE html>
- 
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="utf-8" />
-		<title>GDlib | Home</title>
-			<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
-
-			<link rel="stylesheet" type="text/css" href="/third_party/bootmetro/content/css/bootstrap.css">
-			<link rel="stylesheet" type="text/css" href="/third_party/bootmetro/content/css/bootstrap-responsive.css">
-			<link rel="stylesheet" type="text/css" href="/third_party/bootmetro/content/css/bootmetro.css">
-			<link rel="stylesheet" type="text/css" href="/third_party/bootmetro/content/css/bootmetro-tiles.css">
-			<link rel="stylesheet" type="text/css" href="/third_party/bootmetro/content/css/bootmetro-charms.css">
-			<link rel="stylesheet" type="text/css" href="/third_party/bootmetro/content/css/metro-ui-light.css">
-			<link rel="stylesheet" type="text/css" href="/third_party/bootmetro/content/css/icomoon.css">
-			
-			<script src="/third_party/jquery/jquery-1.8.2.min.js"></script>
-			<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
-			<script src="/third_party/bootstrap/bootstrap.min.js"></script>
-			
-			<link href="/third_party/slider/generic.css" rel="stylesheet" type="text/css" />
-			<link href="/third_party/slider/2/js-image-slider.css" rel="stylesheet" type="text/css" />
-			<link href="/third_party/slider/2/slider.css" rel="stylesheet" type="text/css" />
-			<script src="/third_party/slider/jquery-1.7.1.min.js" type="text/javascript"></script>
-			<script src="/third_party/slider/2/js-image-slider.js" type="text/javascript"></script>
-			<script src="/third_party/slider/2/jquery-slider.js" type="text/javascript"></script>
-   
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	<title>GDLib :: G{edung}D Library</title>
+	
+	<link rel="stylesheet" type="text/css" href="/third_party/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="/third_party/bootstrap/css/bootstrap-responsive.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="/third_party/bootmetro/css/bootmetro.css">
+	<link rel="stylesheet" type="text/css" href="/third_party/bootmetro/css/metro-ui-light.css">
+	
+	<link href="/third_party/slider/generic.css" rel="stylesheet" type="text/css" />
+	<link href="/third_party/slider/2/js-image-slider.css" rel="stylesheet" type="text/css" />
+	<link href="/third_party/slider/2/slider.css" rel="stylesheet" type="text/css" />
+	
+	<style type="text/css">
+	
+	</style>
+	<!--
        <style type="text/css">
 
 			
@@ -50,18 +48,12 @@
 			}
 			
     </style>
-	
+	-->
     
 </head>
 <body>
- 
 
-    <script>
-  
-       
-    </script>
-</head>
-<body>
+
 	<div class="navbar navbar-fixed-top">
 	  <div class="navbar-inner navbar-inverse ">
 	  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -236,15 +228,9 @@
  
  
 
- <script type="text/javascript">
-
-  </script> 
-</body>
-</html>
-
- <script type="text/javascript">
- 
-	$('#myCarousel').carousel({ interval: 2000})
-  </script> 
+	<script src="/third_party/jquery/jquery-1.8.2.min.js"></script>
+	<script src="/third_party/bootstrap/bootstrap.min.js"></script>
+	<script src="/third_party/slider/2/js-image-slider.js" type="text/javascript"></script>
+	<script src="/third_party/slider/2/jquery-slider.js" type="text/javascript"></script>
 </body>
 </html>
