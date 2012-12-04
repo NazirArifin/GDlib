@@ -1,1 +1,0 @@
-INSERT INTO `gdlib`.`tb_level_user` (`ID_LEVEL_USER`, `NAMA_LEVEL_USER`) VALUES ('2', 'Mahasiswa');
