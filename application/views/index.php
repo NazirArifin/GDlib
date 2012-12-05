@@ -20,7 +20,9 @@
 	<link href="/third_party/slider/2/slider.css" rel="stylesheet" type="text/css" />
 	
 	<style type="text/css">
+#logo {
 	
+}
 	</style>
 	<!--
        <style type="text/css">
@@ -52,8 +54,9 @@
     
 </head>
 <body>
-
-
+	
+	
+	<!--
 	<div class="navbar navbar-fixed-top">
 	  <div class="navbar-inner navbar-inverse ">
 	  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -61,7 +64,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
 	  </a>
-	  <!--button group-->
+	 
 			<div class="btn-group pull-right">
 			  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-cog"></i> 
 				
@@ -75,7 +78,7 @@
 				
 			  </ul>
 			</div>
-		<!--button group-->
+		
 		<a href="#"><img src="images/logo.png" class="brand" width="150" height="70" id="logo"/></a>
 			
 		<ul class="nav pull-right nav-pills">
@@ -85,6 +88,7 @@
 		</ul>
 	  </div>
 	</div>
+	-->
 	
 <div class="container-fluid">
 	
@@ -220,12 +224,12 @@
          </div>
 	<!--end thumbnail-->
 	
-	<!--footer-->
+	<!--footer
 <div class="well span12 fixed-bottom">
 	<a href="#"><img src="images/ogo.png" id="image-footer"></a>
 	&copy; 2012 Gedung {D} Library All rights reserved
 </div>
- 
+	-->
  
 
 	<script src="/third_party/jquery/jquery-1.8.2.min.js"></script>
