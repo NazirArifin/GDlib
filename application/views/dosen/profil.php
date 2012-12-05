@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
 	<meta charset="utf-8">
-	<title>Dosen | Beranda</title>
+	<title>Dosen | Profil</title>
 	<link href="/third_party/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 	<link href="/third_party/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
 	<style type="text/css">
@@ -14,8 +14,8 @@
 			<div class="container">
 				<ul class="nav">
 					<li class="active"><a href="#">Beranda</a></li>
-					<li><a href="#">Profil</a></li>
-					<li><a href="#Document">Dokumen</a></li>
+					<li><a href="profil.php">Profil</a></li>
+					<li><a href="#Document">Document</a></li>
 					<li><a href="#Aktivitas">Aktivitas</a></li>
 				</ul>
 			</div>
