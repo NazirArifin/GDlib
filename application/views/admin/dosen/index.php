@@ -98,7 +98,7 @@
 		if ($dosen==0):
 			printf("Data Dosen tidak ada");
 		else: ?>
-			<table border='1'>
+			<table class="table">
 			<tr><td>NAMA</td><td>AKTIVITAS</td><td>ID Facebook</td></tr>
 			<?php
 			foreach ($dosen as $row):
