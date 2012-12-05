@@ -10,7 +10,11 @@ class Dosen extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('dosen/index', array('controller' => $this));
-		
+		jsloc::show();
+	}
+	
+	public function profil() {
+		$this->load->view('dosen/profil', array('controller' => $this));
 		jsloc::show();
 	}
 	

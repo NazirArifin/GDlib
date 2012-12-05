@@ -13,8 +13,8 @@
 		<div class="navbar-inner">
 			<div class="container">
 				<ul class="nav">
-					<li class="active"><a href="#">Beranda</a></li>
-					<li><a href="profil.php">Profil</a></li>
+					<li><a href="/dosen">Beranda</a></li>
+					<li class="active"><a href="profil.php">Profil</a></li>
 					<li><a href="#Document">Document</a></li>
 					<li><a href="#Aktivitas">Aktivitas</a></li>
 				</ul>

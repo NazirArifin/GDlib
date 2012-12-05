@@ -14,7 +14,7 @@
 			<div class="container">
 				<ul class="nav">
 					<li class="active"><a href="#">Beranda</a></li>
-					<li><a href="#">Profil</a></li>
+					<li><a href="/dosen/profil">Profil</a></li>
 					<li><a href="#Document">Dokumen</a></li>
 					<li><a href="#Aktivitas">Aktivitas</a></li>
 				</ul>
