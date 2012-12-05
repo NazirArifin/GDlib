@@ -15,17 +15,28 @@
 	<link rel="stylesheet" type="text/css" href="/third_party/bootmetro/css/bootmetro.css">
 	<link rel="stylesheet" type="text/css" href="/third_party/bootmetro/css/metro-ui-light.css">
 	
-	<link href="/third_party/slider/generic.css" rel="stylesheet" type="text/css" />
 	<link href="/third_party/slider/2/js-image-slider.css" rel="stylesheet" type="text/css" />
 	<link href="/third_party/slider/2/slider.css" rel="stylesheet" type="text/css" />
-	
 	<style type="text/css">
-#logo {
-	
+body {
+	padding-bottom: 10px;
+}
+
+.slider-frame {
+	padding: 0px 30px;
 }
 	</style>
 	<!--
        <style type="text/css">
+body {background:#F6F6F6;font:normal 0.9em Arial; margin:0; padding:0; padding-bottom:60px;}
+h2 {display:inline;}
+.div1, .div2 {width:800px;margin:0 auto;}
+.div1 {margin-top:30px;margin-bottom:60px;text-align:center;line-height:20px;}
+.div1 P {font-size:18px;}
+.div1 a, .div2 a {color:#07C;}
+.div2 {margin-top:70px;}
+.div2 li {padding-top:6px;padding-bottom:6px;}
+.floatLeft {float:left;}
 
 			
 			#logo{
@@ -90,136 +101,82 @@
 	</div>
 	-->
 	
-<div class="container-fluid">
-	
-			<!--slider-->
-			<div class="div2" style="background-color:white;padding:40px 0 50px 20px;border:1px solid #E3E3E3;">
-        <div class="floatLeft">
-            <div id="mcts1">
-                <img src="/images/slideshow-1s.jpg" />
-                <img src="/images/slideshow-2s.jpg" />
-                <img src="/images/slideshow-3s.jpg" />
-                <img src="/images/slideshow-4s.jpg" />
-                <img src="/images/slideshow-5s.jpg" />
-                <img src="/images/slideshow-6s.jpg" />
-                <img src="/images/slideshow-7s.jpg" />
-                <img src="/images/slideshow-8s.jpg" />
-                <img src="/images/slideshow-9s.jpg" />
-                <img src="/images/slideshow-10s.jpg" />
-                <img src="/images/slideshow-11s.jpg" />
-                <img src="/images/slideshow-12s.jpg" />
-            </div>
-        </div>
-        <div class="floatLeft">
-            <div id="sliderFrame">
-                <div id="slider">
-                    <img src="/images/slider-1.jpg" alt="#slideshow-1" title="Welcome to Menucool jQuery Slideshow" />
-                    <img src="/images/slider-2.jpg" alt="#slideshow-2" />
-                    <a href="http://www.menucool.com"><img src="/images/slider-3.jpg" alt="#slideshow-3" /></a>
-                    <img src="/images/slider-4.jpg" alt="#slideshow-4" />
-                    <img src="/images/slider-5.jpg" alt="#slideshow-5" />
-                    <img src="/images/slider-6.jpg" alt="#slideshow-6" />
-                    <img src="/images/slider-7.jpg" alt="#slideshow-7" />
-                    <img src="/images/slider-8.jpg" alt="#slideshow-8" />
-                    <img src="/images/slider-9.jpg" alt="#slideshow-9" />
-                    <img src="/images/slider-10.jpg"  alt="#slideshow-10"/>
-                    <img src="/images/slider-11.jpg"  alt="#slideshow-11"/>
-                    <img src="/images/slider-12.jpg"  alt="#slideshow-12"/>
-                </div>
-            </div>
-        </div>
-        <div style="clear:both;"></div>  
-        <div style="display:none;">
-            <div id="slideshow-1">
-                <h3>Welcome to Menucool jQuery Slideshow</h3>
-                This demo shows how the jQuery slideshow (or Thumbnail Slider if using the pure JavaScript) can work together with the JavaScript Image Slider.
-            </div>
-            <div id="slideshow-2">
-                <h3>Enhanced Slideshow Effect</h3>
-                The jQuery Slideshow/thumbnail slider works nicely together with the JavaScript Image Slider which greatly enhanced the slideshow with an added aesthetic appeal.
-            </div>
-            <div id="slideshow-3">
-                <h3>SEO Friendly</h3>                    
-                The markup is valid HTML5 and SEO optimzied, with all content always being available to search engines. 
-            </div>
-            <div id="slideshow-4">
-                <h3>A Tool for Web Designer</h3>
-                Its goal is to simplify the process of creating professional image/content slideshow for the web and mobile devices. This jQuery Slideshow will entertain your audience while scrolling what feature your website has.
-            </div>
-            <div id="slideshow-5">
-                <h3>JavaScript Image Slider is driven by the jQuery/Thumbnail Slideshow</h3>                    
-                Each slide of the JavaScript Image Slider is triggered by the thumbnail scrolling.
-            </div>
-            <div id="slideshow-6">
-                <h3>Rich HTML</h3>                    
-                Rich HTML content can be added to the thumbnails, or to the description of each JavaScript Image Slider slide. 
-            </div>
-            <div id="slideshow-7">
-                <h3>Fully Customizable</h3>                    
-                The jQuery Slideshow, or Thumbnail Slider if using the pure JavaScript, can be horizontal or vertical, and its styles and behaviors are fully customizable by tweaking the CSS and the JavaScipt. 
-            </div>
-            <div id="slideshow-8">
-                <h3>Varying Width, or Varying Height</h3>                    
-                The varying size (either varying width for the horizontal jQuery slideshow, or varying height for the vertical slider) is allowed for the thumbnails. 
-            </div>
-            <div id="slideshow-9">
-                <h3>A Great Way to Showcase Your Products</h3>                    
-                    It is a perfect way to showcase your products. This script allows you to easily animate any series of elements, by sequentially scrolling them.
-            </div>
-            <div id="slideshow-11">
-                <h3>Wide Browsers and Devices Support</h3>                    
-                The carousel is completely configurable and compatible with all major browsers (including ie6+, Firefox Chrome, Opera, Safari) and mobile platforms like iphone / ipad. 
-            </div>
-            <div id="slideshow-12">
-                <h3>A Great Carousel</h3>  
-                Use this stunning carousel to entertain your readers while scrolling what feature your website has. It has a very smooth user interface that gives your slider an added aesthetic appeal. 
-            </div>
-            <div id="slideshow-10">
-                <h3>Easy to Use</h3>                    
-                Enhance your website by adding a unique and attractive slider! And it is easy: download, copy & paster, tweak the styles to your desires. Well, that's it.
-            </div>
-        </div> 
-    </div>
-    
-    </div>
-    
-		  <!--end slider-->
+	<div class="container">
+		<div class="row">
+			<div class="span10 offset1">
+				<div class="row-fluid">
+					<div id="mcts1" class="pull-left">
+						<img src="/images/slider-1.jpg" />
+						<img src="/images/slider-2.jpg" />
+						<img src="/images/slider-3.jpg" />
+					</div>
+					<div id="sliderFrame" class="pull-right">
+						<div id="slider">
+							<img src="/images/slider-1.jpg" alt="#slideshow-1" title="Welcome to Menucool jQuery Slideshow" />
+							<img src="/images/slider-11.jpg"  alt="#slideshow-2"/>
+							<img src="/images/slider-12.jpg"  alt="#slideshow-3"/>
+						</div>
+					</div>
+					<div id="slideshow-1" class="hide">
+						<h3>Welcome to Menucool jQuery Slideshow</h3>
+						This demo shows how the jQuery slideshow (or Thumbnail Slider if using the pure JavaScript) can work together with the JavaScript Image Slider.
+					</div>
+					<div id="slideshow-2" class="hide">
+						<h3>Enhanced Slideshow Effect</h3>
+						The jQuery Slideshow/thumbnail slider works nicely together with the JavaScript Image Slider which greatly enhanced the slideshow with an added aesthetic appeal.
+					</div>
+					<div id="slideshow-3" class="hide">
+						<h3>SEO Friendly</h3>                    
+						The markup is valid HTML5 and SEO optimzied, with all content always being available to search engines. 
+					</div>
+				</div>
+			</div>
+		</div>
+		<br />
+		<div class="row">
+			<div class="span10 offset1">
+				<div class="row-fluid">
+				<ul class="thumbnails">
+				  <li class="span3">
+					<div class="thumbnail">
+					  <img src="images/1.jpg" alt="">
+					  <p><a href="#" class="btn btn-primary btn-block btn-large"><i class="icon-file icon-white"></i> JURNAL</a> </p>
+					  
+					</div>
+				  </li>
+				  <li class="span3">
+					<div class="thumbnail">
+					  <img src="images/2.jpg" alt="">
+					  <p><a href="#" class="btn btn-primary btn-block btn-large"><i class="icon-book icon-white"></i> MODUL</a> </p>
+					  
+					</div>
+				  </li>
+				  <li class="span3">
+					<div class="thumbnail">
+					  <img src="images/3.jpg" alt="">
+					  <p><a href="#" class="btn btn-primary btn-block btn-large"><i class="icon-book icon-white"></i> BUKU</a> </p>
+					  
+					</div>
+				  </li>
+				  <li class="span3">
+					<div class="thumbnail">
+					  <img src="images/4.jpg" alt="">
+					  <p><a href="#" class="btn btn-primary btn-block btn-large"><i class="icon-file icon-white"></i> BULETIN</a> </p>
+					  
+					</div>
+				  </li>
+				</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--
 		 <br> 
 		 <br> 
 		 <br> 
-	<!--thumbnail-->	
 	<div class="container-fluid">
 		<div class="row-fluid">
-            <ul class="thumbnails">
-              <li class="span3">
-                <div class="thumbnail">
-                  <img src="images/1.jpg" alt="">
-				  <p><a href="#" class="btn btn-primary btn-block btn-large"><i class="icon-file icon-white"></i> JURNAL</a> </p>
-                  
-                </div>
-              </li>
-              <li class="span3">
-                <div class="thumbnail">
-                  <img src="images/2.jpg" alt="">
-				  <p><a href="#" class="btn btn-primary btn-block btn-large"><i class="icon-book icon-white"></i> MODUL</a> </p>
-                  
-                </div>
-              </li>
-              <li class="span3">
-                <div class="thumbnail">
-                  <img src="images/3.jpg" alt="">
-				  <p><a href="#" class="btn btn-primary btn-block btn-large"><i class="icon-book icon-white"></i> BUKU</a> </p>
-                  
-                </div>
-              </li>
-			  <li class="span3">
-                <div class="thumbnail">
-                  <img src="images/4.jpg" alt="">
-				  <p><a href="#" class="btn btn-primary btn-block btn-large"><i class="icon-file icon-white"></i> BULETIN</a> </p>
-                  
-                </div>
-              </li>
-            </ul>
+            
           </div>
          </div>
 	<!--end thumbnail-->
