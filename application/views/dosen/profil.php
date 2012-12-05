@@ -15,7 +15,7 @@
 				<ul class="nav">
 					<li><a href="/dosen">Beranda</a></li>
 					<li class="active"><a href="profil.php">Profil</a></li>
-					<li><a href="#Document">Document</a></li>
+					<li><a href="#Document">Dokumen</a></li>
 					<li><a href="#Aktivitas">Aktivitas</a></li>
 				</ul>
 			</div>
