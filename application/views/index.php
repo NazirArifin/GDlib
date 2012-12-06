@@ -18,27 +18,74 @@
 	<link href="/third_party/slider/2/js-image-slider.css" rel="stylesheet" type="text/css" />
 	<link href="/third_party/slider/2/slider.css" rel="stylesheet" type="text/css" />
 	<style type="text/css">
+@font-face {
+	font-family: 'Open Sans';
+	src: url('/third_party/bootmetro/font/opensans-regular-webfont.eot');
+	src: local('Open Sans'), local('Open Sans'), url('/third_party/bootmetro/font/opensans-regular-webfont.ttf') format('truetype');
+}
+	
 body {
+	font-family: 'Open Sans', Arial, sans-serif;
+	padding-top: 50px;
+	
 	padding-bottom: 10px;
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(bottom,  rgba(255,255,255,1) 0%, rgba(243,243,243,1) 50%, rgba(237,237,237,1) 51%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+	background: -webkit-linear-gradient(bottom,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(bottom,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(bottom,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* IE10+ */
+	background: linear-gradient(to top,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 }
 
 .slider-frame {
-	padding: 0px 30px;
+	background-color: #FFF;
+	border: 1px solid #e3e3e3;
+}
+
+#mcts1 {
+	background-color: #FFF;
+	box-shadow: 0px 0px 0px #FFF;
+	border: 0;
+}
+
+#sliderFrame {
+	margin-top: 8px;
+	margin-bottom: 0;
+}
+
+div.mc-caption-bg, div.mc-caption-bg2 {
+	top: 240px;
+}
+
+div.mc-caption {
+	font-family: 'Open Sans', arial, sans-serif;
+}
+
+#logo {
+	height: 31px;
+	margin-top: 2px;
+}
+
+footer {
+	font-size: 85%;
+	line-height: 1.2em;
+}
+
+footer img {
+	margin-right: 10px;
+	width: 27px;
+}
+
+@media (min-width: 1000px) { 
+	#sliderFrame {
+		margin-left: 70px;
+	}
 }
 	</style>
 	<!--
        <style type="text/css">
-body {background:#F6F6F6;font:normal 0.9em Arial; margin:0; padding:0; padding-bottom:60px;}
-h2 {display:inline;}
-.div1, .div2 {width:800px;margin:0 auto;}
-.div1 {margin-top:30px;margin-bottom:60px;text-align:center;line-height:20px;}
-.div1 P {font-size:18px;}
-.div1 a, .div2 a {color:#07C;}
-.div2 {margin-top:70px;}
-.div2 li {padding-top:6px;padding-bottom:6px;}
-.floatLeft {float:left;}
-
-			
+		
 			#logo{
 			position:absolute;left:10px;top:-9px;
 			}
@@ -65,58 +112,40 @@ h2 {display:inline;}
     
 </head>
 <body>
-	
-	
-	<!--
 	<div class="navbar navbar-fixed-top">
-	  <div class="navbar-inner navbar-inverse ">
-	  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-	  </a>
-	 
-			<div class="btn-group pull-right">
-			  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-cog"></i> 
-				
-				<span class="caret"></span>
-			  </a>
-			  <ul class="dropdown-menu">
-				<li><a href="#"><i class="icon-wrench"></i> Pengaturan Akun</a></li>
-				<li><a href="#"><i class="icon-lock"></i> Pengaturan Privasi</a></li>
-				<li class="divider"></li>
-				<li><a href="#"><i class="icon-off"></i> Keluar</a></li>
-				
-			  </ul>
+		<div class="navbar-inner">
+			<div class="container">
+				<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#"><img src="images/gd.png" id="logo" /></a>
+				<ul class="nav pull-right nav-pills">
+					<li><a href="#"><i class="icon-home"></i> Dashboard</a></li>
+					<li><a href="#"><i class="icon-user"></i> Profil</a></li>
+				  
+				</ul>
 			</div>
-		
-		<a href="#"><img src="images/logo.png" class="brand" width="150" height="70" id="logo"/></a>
-			
-		<ul class="nav pull-right nav-pills">
-		  <li class="active"><a href="#"><i class="icon-home"></i> Home</a></li>
-		  <li><a href="#"><i class="icon-user"></i> Profile</a></li>
-		  
-		</ul>
-	  </div>
+		</div>
 	</div>
-	-->
-	
 	<div class="container">
 		<div class="row">
 			<div class="span10 offset1">
-				<div class="row-fluid">
+				<div class="row-fluid slider-frame">
 					<div id="mcts1" class="pull-left">
 						<img src="/images/slider-1.jpg" />
 						<img src="/images/slider-2.jpg" />
 						<img src="/images/slider-3.jpg" />
 					</div>
-					<div id="sliderFrame" class="pull-right">
+					<div id="sliderFrame" class="pull-left">
 						<div id="slider">
 							<img src="/images/slider-1.jpg" alt="#slideshow-1" title="Welcome to Menucool jQuery Slideshow" />
 							<img src="/images/slider-11.jpg"  alt="#slideshow-2"/>
 							<img src="/images/slider-12.jpg"  alt="#slideshow-3"/>
 						</div>
 					</div>
+					<div style="clear:both;"></div>
 					<div id="slideshow-1" class="hide">
 						<h3>Welcome to Menucool jQuery Slideshow</h3>
 						This demo shows how the jQuery slideshow (or Thumbnail Slider if using the pure JavaScript) can work together with the JavaScript Image Slider.
@@ -169,27 +198,15 @@ h2 {display:inline;}
 				</div>
 			</div>
 		</div>
+		<footer class="row">
+			<div class="span12">
+				<img src="/images/favicon.png" class="pull-left" />
+				<span>Created by: Lab Crew. <br />Copyright &copy; 2012. All rights reserved</span>
+			</div>
+		</footer>
 	</div>
-	<!--
-		 <br> 
-		 <br> 
-		 <br> 
-	<div class="container-fluid">
-		<div class="row-fluid">
-            
-          </div>
-         </div>
-	<!--end thumbnail-->
-	
-	<!--footer
-<div class="well span12 fixed-bottom">
-	<a href="#"><img src="images/ogo.png" id="image-footer"></a>
-	&copy; 2012 Gedung {D} Library All rights reserved
-</div>
-	-->
- 
 
-	<script src="/third_party/jquery/jquery-1.8.2.min.js"></script>
+	<script src="/third_party/jquery/jquery-1.7.2.min.js"></script>
 	<script src="/third_party/bootstrap/bootstrap.min.js"></script>
 	<script src="/third_party/slider/2/js-image-slider.js" type="text/javascript"></script>
 	<script src="/third_party/slider/2/jquery-slider.js" type="text/javascript"></script>
