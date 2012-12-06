@@ -70,41 +70,30 @@
 			<input type="text" class="input-medium search-query" >
 			<button class="btn btn-medium btn-success pull-right" id="tombol"><i class="icon-plus icon-white"></i>Tambah</button><br><br><br>
 			<div class="container-fluid">
+			<?php
+				$dosen=$controller->admin_model->tampilUserDosen();
+					if ($dosen==0):
+						printf("Data Dosen tidak ada");
+					else: 
+					foreach ($dosen as $row):
+				?>
 				<div class="row-fluid">
-				<?php
-								$dosen=$controller->admin_model->tampilUserDosen();
-								if ($dosen==0):
-									printf("Data Dosen tidak ada");
-								else: ?>
-					<div class="span4">
-									<img src="/images/animal1.png" alt=""/>
-					</div>
-					<div class="span8">
-									<table border='1'>
-									<tr><td>NAMA</td><td>AKTIVITAS</td><td>ID Facebook</td></tr>
-									<?php
-									foreach ($dosen as $row):
-									?>
-										<tr>
-										<td><?php echo $row->NAMA_USER ?></td>
-										<td><?php echo $row->AKTIVITAS_USER ?></td>
-										<td><?php echo $row->ID_FACEBOOK_USER ?></td>
-										</tr>
-								
-											
-					<h5>Habieb BreakHouse Gombal Gambel</h5><p>Medelan - Lenteng - Sumenep - Madura - Jawa Timur - Indonesia - Asia - Bumi - Dunia - Akhirat</p><br>
-						<button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i> Edit</button>
-						<button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i> Delete</button>
-						<button class="btn btn-mini btn-danger"><i class="icon-map-marker icon-white"></i> Detail</button>
-					</div>
-									<?php
-									endforeach;
-									?>
-									</table>
-								<?php
-								endif;
-								?>
+						<div class="span4">
+							<img src="/images/animal1.png" alt=""/>
+						</div>
+						<div class="span8">
+										<h2><?php echo $row->NAMA_USER ?> </h2>
+										<h4><?php echo $row->AKTIVITAS_USER ?> </h4>
+										<h5><?php echo $row->ID_FACEBOOK_USER ?> </h5>
+							<button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i> Edit</button>
+							<button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i> Delete</button>
+							<button class="btn btn-mini btn-danger"><i class="icon-map-marker icon-white"></i> Detail</button>
+						</div>
 				</div>
+					<?php
+					endforeach;
+					endif;
+					?>
 			</div>
 			<hr>
 			<hr>
