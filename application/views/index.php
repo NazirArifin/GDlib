@@ -17,99 +17,8 @@
 	
 	<link href="/third_party/slider/2/js-image-slider.css" rel="stylesheet" type="text/css" />
 	<link href="/third_party/slider/2/slider.css" rel="stylesheet" type="text/css" />
-	<style type="text/css">
-@font-face {
-	font-family: 'Open Sans';
-	src: url('/third_party/bootmetro/font/opensans-regular-webfont.eot');
-	src: local('Open Sans'), local('Open Sans'), url('/third_party/bootmetro/font/opensans-regular-webfont.ttf') format('truetype');
-}
 	
-body {
-	font-family: 'Open Sans', Arial, sans-serif;
-	padding-top: 50px;
-	
-	padding-bottom: 10px;
-	background: rgb(255,255,255); /* Old browsers */
-	background: -moz-linear-gradient(bottom,  rgba(255,255,255,1) 0%, rgba(243,243,243,1) 50%, rgba(237,237,237,1) 51%, rgba(255,255,255,1) 100%); /* FF3.6+ */
-	background: -webkit-linear-gradient(bottom,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(bottom,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(bottom,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* IE10+ */
-	background: linear-gradient(to top,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
-}
-
-.slider-frame {
-	background-color: #FFF;
-	border: 1px solid #e3e3e3;
-}
-
-#mcts1 {
-	background-color: #FFF;
-	box-shadow: 0px 0px 0px #FFF;
-	border: 0;
-}
-
-#sliderFrame {
-	margin-top: 8px;
-	margin-bottom: 0;
-}
-
-div.mc-caption-bg, div.mc-caption-bg2 {
-	top: 240px;
-}
-
-div.mc-caption {
-	font-family: 'Open Sans', arial, sans-serif;
-}
-
-#logo {
-	height: 31px;
-	margin-top: 2px;
-}
-
-footer {
-	font-size: 85%;
-	line-height: 1.2em;
-}
-
-footer img {
-	margin-right: 10px;
-	width: 27px;
-}
-
-@media (min-width: 1000px) { 
-	#sliderFrame {
-		margin-left: 70px;
-	}
-}
-	</style>
-	<!--
-       <style type="text/css">
-		
-			#logo{
-			position:absolute;left:10px;top:-9px;
-			}
-			
-			#footer{
-			font-familiy:arial;
-			font-weigh:bold;
-			text-align:right;
-			position:absolute;
-			top:100%;
-			left:0%;
-			}
-			#image-footer{
-			width:30px;
-			height:30px;
-			align:left;}
-			.image-content{
-			width:770px;
-			height:450px;
-			}
-			
-    </style>
-	-->
-    
+	<link href="/css/home.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<div class="navbar navbar-fixed-top">
@@ -165,6 +74,29 @@ footer img {
 		<div class="row">
 			<div class="span10 offset1">
 				<div class="row-fluid">
+					<div class="span3 boxes well">
+						<a href="#" class="btn btn-info btn-block btn-large"><i class="icon-file"></i> JURNAL</a>
+						<ul class="unstyled">
+							<li><img src="/images/animal1.png" /> <a href="">Pengaruh Makan Kenyang..</a></li>
+							<li><img src="/images/animal2.png" /> <a href="">Pengaruh Makan Kenyang..</a></li>
+						</ul>
+					</div>
+					<div class="span3 boxes well">
+						<a href="#" class="btn btn-warning btn-block btn-large"><i class="icon-book"></i> MODUL</a>
+						
+						
+					</div>
+					<div class="span3 boxes well">
+						<a href="#" class="btn btn-block btn-large"><i class="icon-book"></i> BUKU</a>
+						
+						
+					</div>
+					<div class="span3 boxes well">
+						<a href="#" class="btn btn-success btn-block btn-large"><i class="icon-file"></i> BULETIN</a>
+						
+						
+					</div>
+				<!--
 				<ul class="thumbnails">
 				  <li class="span3">
 					<div class="thumbnail">
@@ -195,10 +127,13 @@ footer img {
 					</div>
 				  </li>
 				</ul>
+				-->
+				
 				</div>
+				<hr />
 			</div>
 		</div>
-		<footer class="row">
+		<footer class="row-fluid">
 			<div class="span12">
 				<img src="/images/favicon.png" class="pull-left" />
 				<span>Created by: Lab Crew. <br />Copyright &copy; 2012. All rights reserved</span>

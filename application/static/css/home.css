@@ -1,0 +1,89 @@
+@font-face {
+	font-family: 'Open Sans';
+	src: url('/third_party/bootmetro/font/opensans-regular-webfont.eot');
+	src: local('Open Sans'), local('Open Sans'), url('/third_party/bootmetro/font/opensans-regular-webfont.ttf') format('truetype');
+}
+	
+body {
+	font-family: 'Open Sans', Arial, sans-serif;
+	padding-top: 50px;
+	
+	padding-bottom: 10px;
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(bottom,  rgba(255,255,255,1) 0%, rgba(243,243,243,1) 50%, rgba(237,237,237,1) 51%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+	background: -webkit-linear-gradient(bottom,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(bottom,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(bottom,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* IE10+ */
+	background: linear-gradient(to top,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+.slider-frame {
+	background-color: #FFF;
+	border: 1px solid #e3e3e3;
+}
+
+#mcts1 {
+	background-color: #FFF;
+	box-shadow: 0px 0px 0px #FFF;
+	border: 0;
+}
+
+#sliderFrame {
+	margin-top: 8px;
+	margin-bottom: 0;
+}
+
+div.mc-caption-bg, div.mc-caption-bg2 {
+	top: 240px;
+}
+
+div.mc-caption {
+	font-family: 'Open Sans', arial, sans-serif;
+}
+
+#logo {
+	height: 31px;
+	margin-top: 2px;
+}
+
+footer {
+	font-size: 85%;
+	line-height: 1.2em;
+}
+
+.boxes {
+	height: 200px;
+	padding: 3px;
+	font-size: 85%;
+	overflow: auto;
+}
+
+.boxes img {
+	width: 16px;
+	margin-right: 5px;
+}
+
+.boxes li {
+	padding: 1px 0px;
+	font-family: arial, sans-serif;
+}
+
+.boxes li:first-child {
+	margin-top: 10px;
+}
+
+.boxes li a {
+	color: #183F4C;
+}
+
+footer img {
+	margin-right: 10px;
+	width: 27px;
+}
+
+@media (min-width: 1000px) { 
+	#sliderFrame {
+		margin-left: 70px;
+	}
+}

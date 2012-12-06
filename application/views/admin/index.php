@@ -34,7 +34,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="#"><img src="/images/gd.png" id="logo" /></a>
+				<a href="/"><img src="/images/gd.png" id="logo" /></a>
 				<ul class="nav pull-right nav-pills">
 					<li><a href="/admin"><i class="icon-home"></i> Dashboard</a></li>
 					<li><a href="#"><i class="icon-user"></i> Profil</a></li>
