@@ -11,11 +11,6 @@ Designer: Fajrul Iman Al Amini
 Facebook: fajrul.imanalamini
 Location: Pamekasan, Indonesia
 
-
-Programmer: Habibullah
-Facebook: habib.line
-Location: Pamekasan, Indonesia
-
 Programmer: Fawait
 Facebook: fawait
 Location: Pamekasan, Indonesia
@@ -28,8 +23,7 @@ Programmer: Habibullah
 Facebook: habib.line
 Location: Pamekasan, Indonesia
 
-
 /* SITE */
 Standards: HTML5, CSS3...
-Components: jQuery, Modernizr, HTML5Boilerplate, Bootstrap
+Components: jQuery, Modernizr, HTML5Boilerplate, Bootstrap, CodeIgniter
 Software: Notepad++, Photoshop

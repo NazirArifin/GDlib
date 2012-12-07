@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 	<title>GDLib :: G{edung}D Library</title>
+	
+	<link rel="stylesheet" type="text/css" href="/third_party/bootmetro/css/icomoon.css">
 	
 	<link rel="stylesheet" type="text/css" href="/third_party/bootstrap/css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="/third_party/bootstrap/css/bootstrap-responsive.min.css">
@@ -31,7 +33,7 @@
 				<a href="/" id="logo"><img src="/images/gd.png" /></a>
 				<ul class="nav pull-right nav-pills">
 					<li><a href="#"><i class="icon-home"></i> Dashboard</a></li>
-					<li><a href="#"><i class="icon-user"></i> Profil</a></li>
+					<li><a href="#" data-toggle="modal" data-target="#modal-info"><i class="icon-user"></i> Profil</a></li>
 				</ul>
 			</div>
 		</div>
@@ -75,8 +77,9 @@
 					<div class="span3 boxes well">
 						<a href="#" class="btn btn-info btn-block btn-large"><i class="icon-file"></i> JURNAL</a>
 						<ul class="unstyled">
-							<li><img src="/images/animal1.png" /> <a href="">Pengaruh Makan Kenyang..</a></li>
-							<li><img src="/images/animal2.png" /> <a href="">Pengaruh Makan Kenyang..</a></li>
+							<li><img src="/images/animal1.png" /> <a href="#" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="Popover on top" data-trigger="hover">Popover on top</a></li>
+							<li><img src="/images/animal1.png" /> <a href="#" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="Popover on top" data-trigger="hover">Popover on top</a></li>
+							
 						</ul>
 					</div>
 					<div class="span3 boxes well">
@@ -93,40 +96,7 @@
 						<a href="#" class="btn btn-success btn-block btn-large"><i class="icon-file"></i> BULETIN</a>
 						
 						
-					</div>
-				<!--
-				<ul class="thumbnails">
-				  <li class="span3">
-					<div class="thumbnail">
-					  <img src="images/1.jpg" alt="">
-					  <p><a href="#" class="btn btn-primary btn-block btn-large"><i class="icon-file icon-white"></i> JURNAL</a> </p>
-					  
-					</div>
-				  </li>
-				  <li class="span3">
-					<div class="thumbnail">
-					  <img src="images/2.jpg" alt="">
-					  <p><a href="#" class="btn btn-primary btn-block btn-large"><i class="icon-book icon-white"></i> MODUL</a> </p>
-					  
-					</div>
-				  </li>
-				  <li class="span3">
-					<div class="thumbnail">
-					  <img src="images/3.jpg" alt="">
-					  <p><a href="#" class="btn btn-primary btn-block btn-large"><i class="icon-book icon-white"></i> BUKU</a> </p>
-					  
-					</div>
-				  </li>
-				  <li class="span3">
-					<div class="thumbnail">
-					  <img src="images/4.jpg" alt="">
-					  <p><a href="#" class="btn btn-primary btn-block btn-large"><i class="icon-file icon-white"></i> BULETIN</a> </p>
-					  
-					</div>
-				  </li>
-				</ul>
-				-->
-				
+					</div>	
 				</div>
 				<hr />
 			</div>
@@ -134,14 +104,34 @@
 		<footer class="row-fluid">
 			<div class="span12">
 				<img src="/images/favicon.png" class="pull-left" />
-				<span>Created by: Lab Crew. <br />Copyright &copy; 2012. All rights reserved</span>
+				<span>Created by: Lab <a href="/humans.txt">Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span>
 			</div>
 		</footer>
 	</div>
+	
+	<!-- modal info -->
+	<div id="modal-info" class="modal message hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+            <h3>Modal Heading</h3>
+        </div>
+        <div class="modal-body">
+            <h4>Text in a modal</h4>
+            <p>Do you want to turn on location services so Microsoft can use your location ?</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal">Close</button>
+            <button class="btn btn-primary">Save changes</button>
+        </div>
+    </div>
 
-	<script src="/third_party/jquery/jquery-1.7.2.min.js"></script>
-	<script src="/third_party/bootstrap/bootstrap.min.js"></script>
+	<script src="/third_party/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
+	<script src="/third_party/bootstrap/bootstrap.min.js" type="text/javascript"></script>
 	<script src="/third_party/slider/2/js-image-slider.js" type="text/javascript"></script>
 	<script src="/third_party/slider/2/jquery-slider.js" type="text/javascript"></script>
+	
+	<script type="text/javascript">
+$('a[rel="popover"]').popover();
+	</script>
 </body>
 </html>
