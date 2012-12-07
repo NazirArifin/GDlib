@@ -14,4 +14,12 @@ class Admin_model extends CI_Model {
 			return $query->result();
 		}
 	}
+	public function tampilUserMahasiswa() {
+		$query=$this->db->get('tb_user');
+		if($query->num_rows()==0){
+			return false;
+		} else {
+			return $query->result();
+		}
+	}
 }

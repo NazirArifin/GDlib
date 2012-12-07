@@ -23,6 +23,7 @@ class Admin extends CI_Controller {
 	
 	public function mahasiswa()
 	{
+		$this->load->database();
 		$this->load->view('admin/mahasiswa/index', array('controller' => $this));
 		jsloc::show();
 	}

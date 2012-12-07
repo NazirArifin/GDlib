@@ -49,7 +49,7 @@
 <div class="container-fluid" id="container">
 	<div class="row-fluid" id="form">
 		<div class="well span3" id="sidebar">
-			<ul class="nav nav-list">
+		<ul class="nav nav-list">
 		<li class="nav-header">Pengguna</li>
 		<li><a href="/admin/dosen"><i class="icon-user"></i> Dosen</a></li>
 		<li><a href="/admin/mahasiswa"><i class="icon-user"></i> Mahasiswa</a></li>
