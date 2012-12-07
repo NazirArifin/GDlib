@@ -18,16 +18,21 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		/**
-		 * Edit
-		 *
-		 * 1. 	Nazir Arifin
-		 *		26-11-2012
-		 *		Contoh penggunaan jsloc untuk optimasi kode
-		 */
-		
 		include(APPPATH . 'libraries/jsloc.php');
-		$this->load->view('index');
+		$this->load->library('session');
+		
+		$this->load->database();
+		$this->load->model('front_model');
+		
+		// cari dokumen terbaru
+		$type = array('jurnal', 'buku', 'modul', 'bulletin');
+		foreach ($type as $v)	
+			$data[$v] = $this->front_model->cariDokumenTerbaru($v);
+		
+		// cari news
+		$data['news'] = $this->front_model->cariNews();
+		
+		$this->load->view('index', $data);
 		jsloc::show();
 	}
 }

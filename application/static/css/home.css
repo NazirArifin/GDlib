@@ -3,6 +3,12 @@
 	src: url('/third_party/bootmetro/font/opensans-regular-webfont.eot');
 	src: local('Open Sans'), local('Open Sans'), url('/third_party/bootmetro/font/opensans-regular-webfont.ttf') format('truetype');
 }
+
+@font-face {
+	font-family: 'IcoMoon';
+	src: url('/third_party/bootmetro/font/IcoMoon.eot');
+	src: local('IcoMoon'), local('IcoMoon'), url('/third_party/bootmetro/font/IcoMoon.ttf') format('truetype');
+}
 	
 body {
 	font-family: 'Open Sans', Arial, sans-serif;

@@ -9,13 +9,12 @@
     <![endif]-->
 	<title>GDLib :: G{edung}D Library</title>
 	
-	<link rel="stylesheet" type="text/css" href="/third_party/bootmetro/css/icomoon.css">
-	
 	<link rel="stylesheet" type="text/css" href="/third_party/bootstrap/css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="/third_party/bootstrap/css/bootstrap-responsive.min.css">
 	
 	<link rel="stylesheet" type="text/css" href="/third_party/bootmetro/css/bootmetro.css">
 	<link rel="stylesheet" type="text/css" href="/third_party/bootmetro/css/metro-ui-light.css">
+	<link rel="stylesheet" type="text/css" href="/third_party/bootmetro/css/icomoon.css">
 	
 	<link href="/third_party/slider/2/js-image-slider.css" rel="stylesheet" type="text/css" />
 	<link href="/third_party/slider/2/slider.css" rel="stylesheet" type="text/css" />
@@ -32,7 +31,7 @@
 				</div>
 				<a href="/" id="logo"><img src="/images/gd.png" /></a>
 				<ul class="nav pull-right nav-pills">
-					<li><a href="#"><i class="icon-home"></i> Dashboard</a></li>
+					<li><a href="#"><i class="icon-dashboard"></i> Dashboard</a></li>
 					<li><a href="#" data-toggle="modal" data-target="#modal-info"><i class="icon-user"></i> Profil</a></li>
 				</ul>
 			</div>
@@ -43,15 +42,15 @@
 			<div class="span10 offset1">
 				<div class="row-fluid slider-frame">
 					<div id="mcts1" class="pull-left">
-						<img src="/images/slider-1.jpg" />
-						<img src="/images/slider-2.jpg" />
-						<img src="/images/slider-3.jpg" />
+						<img src="/upload/news/slider-1.jpg" />
+						<img src="/upload/news/slider-2.jpg" />
+						<img src="/upload/news/slider-3.jpg" />
 					</div>
 					<div id="sliderFrame" class="pull-left">
 						<div id="slider">
-							<img src="/images/slider-1.jpg" alt="#slideshow-1" title="Welcome to Menucool jQuery Slideshow" />
-							<img src="/images/slider-11.jpg"  alt="#slideshow-2"/>
-							<img src="/images/slider-12.jpg"  alt="#slideshow-3"/>
+							<img src="/upload/news/slider-1.jpg" alt="#slideshow-1" title="Welcome to Menucool jQuery Slideshow" />
+							<img src="/upload/news/slider-11.jpg"  alt="#slideshow-2"/>
+							<img src="/upload/news/slider-12.jpg"  alt="#slideshow-3"/>
 						</div>
 					</div>
 					<div style="clear:both;"></div>
@@ -75,11 +74,10 @@
 			<div class="span10 offset1">
 				<div class="row-fluid">
 					<div class="span3 boxes well">
-						<a href="#" class="btn btn-info btn-block btn-large"><i class="icon-file"></i> JURNAL</a>
+						<a href="#" class="btn btn-info btn-block btn-large"><i class="icon-newspaper"></i> JURNAL</a>
 						<ul class="unstyled">
 							<li><img src="/images/animal1.png" /> <a href="#" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="Popover on top" data-trigger="hover">Popover on top</a></li>
 							<li><img src="/images/animal1.png" /> <a href="#" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="Popover on top" data-trigger="hover">Popover on top</a></li>
-							
 						</ul>
 					</div>
 					<div class="span3 boxes well">
@@ -93,7 +91,7 @@
 						
 					</div>
 					<div class="span3 boxes well">
-						<a href="#" class="btn btn-success btn-block btn-large"><i class="icon-file"></i> BULETIN</a>
+						<a href="#" class="btn btn-success btn-block btn-large"><i class="icon-newspaper"></i> BULETIN</a>
 						
 						
 					</div>	
@@ -104,7 +102,7 @@
 		<footer class="row-fluid">
 			<div class="span12">
 				<img src="/images/favicon.png" class="pull-left" />
-				<span>Created by: Lab <a href="/humans.txt">Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span>
+				<span>Created by: Lab <a href="/humans.txt" rel="tooltip" title="view creators">Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span>
 			</div>
 		</footer>
 	</div>
@@ -132,6 +130,7 @@
 	
 	<script type="text/javascript">
 $('a[rel="popover"]').popover();
+$('a[rel="tooltip"]').tooltip();
 	</script>
 </body>
 </html>
