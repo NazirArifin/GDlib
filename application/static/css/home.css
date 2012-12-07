@@ -13,7 +13,7 @@
 body {
 	font-family: 'Open Sans', Arial, sans-serif;
 	padding-top: 50px;
-	padding-bottom: 10px;
+	padding-bottom: 0px;
 	background-image: url('/images/body-noise.png');
 }
 
@@ -48,7 +48,6 @@ div.mc-caption {
 
 #logo {
 	margin-top: 5px;
-	margin-left: 15px;
 	margin-right: auto;
 }
 
@@ -58,6 +57,7 @@ div.mc-caption {
 
 .navbar .input-append {
 	margin-top: 5px;
+	margin-right: 25px;
 }
 
 footer {

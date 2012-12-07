@@ -4,9 +4,7 @@
     <meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<title>GDLib :: G{edung}D Library</title>
 	
 	<link rel="stylesheet" type="text/css" href="/third_party/bootstrap/css/bootstrap.min.css" />
@@ -25,15 +23,15 @@
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<div class="input-append pull-left">
-					<input class="span2" id="search-top" type="text" name="q" />
-					<button class="btn btn-medium" type="button"><i class="icon-search"></i></button>
-				</div>
-				<a href="/" id="logo"><img src="/images/gd.png" /></a>
+				<a href="/" id="logo" class="pull-left"><img src="/images/gd.png" /></a>
 				<ul class="nav pull-right nav-pills">
 					<li><a href="#"><i class="icon-dashboard"></i> Dashboard</a></li>
 					<li><a href="#" data-toggle="modal" data-target="#modal-info"><i class="icon-user"></i> Profil</a></li>
 				</ul>
+				<div class="input-append pull-right">
+					<input class="input-medium" id="search-top" type="text" name="q" />
+					<button class="btn btn-medium" type="button"><i class="icon-search"></i></button>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -49,8 +47,8 @@
 					<div id="sliderFrame" class="pull-left">
 						<div id="slider">
 							<img src="/upload/news/slider-1.jpg" alt="#slideshow-1" title="Welcome to Menucool jQuery Slideshow" />
-							<img src="/upload/news/slider-11.jpg"  alt="#slideshow-2"/>
-							<img src="/upload/news/slider-12.jpg"  alt="#slideshow-3"/>
+							<img src="/upload/news/slider-11.jpg" alt="#slideshow-2"/>
+							<img src="/upload/news/slider-12.jpg" alt="#slideshow-3"/>
 						</div>
 					</div>
 					<div style="clear:both;"></div>
@@ -100,9 +98,9 @@
 			</div>
 		</div>
 		<footer class="row-fluid">
-			<div class="span12">
+			<div class="span12 well">
 				<img src="/images/favicon.png" class="pull-left" />
-				<span>Created by: Lab <a href="/humans.txt" rel="tooltip" title="view creators">Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span>
+				<span>Created by: <a href="/humans.txt" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span>
 			</div>
 		</footer>
 	</div>
