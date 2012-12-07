@@ -70,22 +70,6 @@
 			<input type="text" class="input-medium search-query" >
 			<button class="btn btn-medium btn-success pull-right" id="tombol"><i class="icon-plus icon-white"></i>Tambah</button><br><br><br>
 			<div class="container-fluid">
-<<<<<<< HEAD
-				<div class="row-fluid">
-					<div class="span4">
-									<img src="/images/animal1.png" alt=""/>
-					</div>
-					<div class="span8">
-					<?php
-					
-		$dosen=$controller->admin_model->tampilUserDosen();
-		if ($dosen==0):
-			printf("Data Dosen tidak ada");
-		else: ?>
-			<table class="table">
-			<tr><td>NAMA</td><td>AKTIVITAS</td><td>ID Facebook</td></tr>
-=======
->>>>>>> 0ef5c80f9923a16d9e63f8cb6222c276b69f63b0
 			<?php
 				$dosen=$controller->admin_model->tampilUserDosen();
 					if ($dosen==0):

@@ -1,1 +1,0 @@
-ALTER TABLE `tb_user` DROP `LEVEL_USER`
