@@ -74,8 +74,9 @@
 					<div class="span3 boxes well">
 						<a href="#" class="btn btn-info btn-block btn-large"><i class="icon-newspaper"></i> JURNAL</a>
 						<ul class="unstyled">
-							<li><img src="/images/animal1.png" /> <a href="#" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="Popover on top" data-trigger="hover">Popover on top</a></li>
-							<li><img src="/images/animal1.png" /> <a href="#" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="Popover on top" data-trigger="hover">Popover on top</a></li>
+							<li><img src="/images/animal1.png" /> <a href="test" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="Popover on top" data-trigger="hover" class="doc-list">The markup is valid HTML5 and SEO optimzied</a></li>
+							<li><img src="/images/animal1.png" /> <a href="test" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="Popover on top" data-trigger="hover" class="doc-list">The jQuery Slideshow/thumbnail slider works nicely</a></li>
+							<li><img src="/images/animal1.png" /> <a href="test" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="Popover on top" data-trigger="hover" class="doc-list">This demo shows how the jQuery slideshow (or Thumbnail Slider if using the pure JavaScript)</a></li>
 						</ul>
 					</div>
 					<div class="span3 boxes well">
@@ -122,6 +123,7 @@
     </div>
 
 	<script src="/third_party/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
+	<script src="/third_party/jquery/jquery-plugins.js" type="text/javascript"></script>
 	<script src="/third_party/bootstrap/bootstrap.min.js" type="text/javascript"></script>
 	<script src="/third_party/slider/2/js-image-slider.js" type="text/javascript"></script>
 	<script src="/third_party/slider/2/jquery-slider.js" type="text/javascript"></script>
@@ -129,6 +131,9 @@
 	<script type="text/javascript">
 $('a[rel="popover"]').popover();
 $('a[rel="tooltip"]').tooltip();
+$('.doc-list').readmore({
+  substr_len: $('.doc-list').text().substr(0, 25).lastIndexOf(" ")
+}).textOverflow();
 	</script>
 </body>
 </html>

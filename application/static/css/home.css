@@ -69,7 +69,8 @@ footer {
 	height: 200px;
 	padding: 3px;
 	font-size: 85%;
-	overflow: auto;
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 .boxes img {
@@ -80,6 +81,7 @@ footer {
 .boxes li {
 	padding: 1px 0px;
 	font-family: arial, sans-serif;
+	text-overflow: ellipsis;
 }
 
 .boxes li:first-child {
