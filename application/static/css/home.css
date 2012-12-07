@@ -43,8 +43,17 @@ div.mc-caption {
 }
 
 #logo {
+	margin-top: 5px;
+	margin-left: 15px;
+	margin-right: auto;
+}
+
+#logo img {
 	height: 31px;
-	margin-top: 2px;
+}
+
+.navbar .input-append {
+	margin-top: 5px;
 }
 
 footer {

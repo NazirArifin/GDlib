@@ -24,16 +24,14 @@
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a href="/"><img src="/images/gd.png" id="logo" /></a>
+				<div class="input-append pull-left">
+					<input class="span2" id="search-top" type="text" name="q" />
+					<button class="btn btn-medium" type="button"><i class="icon-search"></i></button>
+				</div>
+				<a href="/" id="logo"><img src="/images/gd.png" /></a>
 				<ul class="nav pull-right nav-pills">
 					<li><a href="#"><i class="icon-home"></i> Dashboard</a></li>
 					<li><a href="#"><i class="icon-user"></i> Profil</a></li>
-				  
 				</ul>
 			</div>
 		</div>
