@@ -75,8 +75,9 @@ $route['admin/buku'] = "admin/buku";
 //======================= ROUTES UNTUK BULETIN ==== 
 $route['admin/buletin'] = "admin/buletin";
 
-//======================= ROUTES UNTUK BULETIN ==== 
+//======================= ROUTES UNTUK DOSEN ==== 
 $route['dosen'] = "dosen";
+$route['dosen/profil'] = "dosen/profil";
 
 //======================= ROUTES UNTUK BULETIN ==== 
 $route['mahasiswa'] = "mahasiswa";

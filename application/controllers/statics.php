@@ -138,6 +138,18 @@ class Statics extends CI_Controller {
 			case 'svg':
 				header('Content-Type: image/svg+xml');
 				break;
+			case 'ttf':
+				header('Content-Type: application/x-font-ttf');
+				break;
+			case 'eot':
+				header('Content-Type: application/vnd.ms-fontobject');
+				break;
+			case 'woff':
+				header('Content-Type: application/x-font-woff');
+				break;
+			case 'otf':
+				header('Content-Type: font/opentype');
+				break;
 			case 'jpg': case 'png': case 'gif':
 				$size	= getimagesize($path);
 				if ($size) {

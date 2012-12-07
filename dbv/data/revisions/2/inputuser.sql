@@ -1,0 +1,1 @@
+INSERT INTO `gdlib`.`tb_user` (`ID_USER`, `ID_LEVEL_USER`, `NAMA_USER`, `AKTIVITAS_USER`, `NO_INDUK_USER`, `ID_FACEBOOK_USER`) VALUES (NULL, '1', 'Habibullah', 'innput data', '0955201556', 'www.facebook.com/habib.line'), (NULL, '2', 'Deki Andi Irawan', 'Upload, View dan Download', '0955201588', 'www.faceboo.com/dekidangersline');
