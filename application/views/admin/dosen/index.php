@@ -49,7 +49,7 @@
 <div class="container-fluid" id="container">
 	<div class="row-fluid" id="form">
 		<div class="well span3" id="sidebar">
-		<ul class="nav nav-list">
+			<ul class="nav nav-list">
 		<li class="nav-header">Pengguna</li>
 		<li><a href="/admin/dosen"><i class="icon-user"></i> Dosen</a></li>
 		<li><a href="/admin/mahasiswa"><i class="icon-user"></i> Mahasiswa</a></li>
@@ -82,21 +82,21 @@
 							<img src="/images/animal1.png" alt=""/>
 						</div>
 						<div class="span8">
-										<h2><?php echo $row->NAMA_USER ?> </h2>
-										<h4><?php echo $row->AKTIVITAS_USER ?> </h4>
-										<h5><?php echo $row->ID_FACEBOOK_USER ?> </h5>
+										<h2><?php echo $row->NAMA_PROFIL ?> </h2>
+										<h4><?php echo $row->EMAIL_PROFIL ?> </h4>
+										<h4><?php echo $row->NO_HP_PROFIL ?> </h4>
+										<h5><?php echo $row->ALAMAT_PROFIL ?> </h5>
 							<button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i> Edit</button>
 							<button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i> Delete</button>
 							<button class="btn btn-mini btn-danger"><i class="icon-map-marker icon-white"></i> Detail</button>
 						</div>
 				</div>
+				<hr>
 					<?php
 					endforeach;
 					endif;
 					?>
 			</div>
-			<hr>
-			<hr>
 					<div class="pagination" align="center">
 						<ul>
 							<li><a href="#">Prev</a></li>
@@ -112,123 +112,213 @@
 </div>
  <div class="modal fade" id="modal1">
     <div class="modal-header">
-    <button class="close" data-dismiss="modal">X</button>
-    <h3>Edit Profil</h3>
+		<button class="close" data-dismiss="modal">X</button>
+		<h3>Tambah Profil</h3>
     </div>
     <div class="modal-body">
-    <form class="form-horizontal">
-
-		<table class="table ">
-		<thead>
-		<tr>
-		<th>Nama</th>
-		<td>
-			<div class="input-prepend">
-              <span class="add-on"><i class="icon-tasks"></i></span><input class="span3" id="inputIcon" type="text" required="" placeholder="Your title">
-            </div>
-		</td>		
-		</tr>
-		</thead>
-		<tbody>
-		
-		<tr>
-		<th>Isi News</th>
-		<td>
-			<div class="input-prepend">
-              <textarea rows="6"></textarea>
-            </div>
-			</td>
-		</tr>
-		<tr>
-		<th>Foto</th>
-		<td>
-		<div class="input-prepend">
-              <span class="add-on"><i class="icon-picture"></i></span><input class="span4" id="inputIcon" type="file" required="" placeholder="your photo">
-            </div></td>
-		</tr>
-		<tr>
-		<th>Status</th>
-		<td>
-		
-            <div class="input-prepend">
-              
-            </div>
-			<input type="radio" class="radio" name="mail">&nbsp;<span class="label label-info">show</span> <input type="radio" class="radio" name="mail">&nbsp; <span class="label label-important">dont show</span>
-			</td>
-		</tr>
-		
-		
-		
-		</tbody>
-		</table>
-		
+		<form class="form-horizontal" action="<?php = base_url()?>index.php/admin_model/insertUserDosen" method="POST">
+			<table class="table">
+			<?php
+			if ($this->session->flashdata('message')){
+				echo "<i>".$this->session->flashdata('message')."</i>";
+			}
+			?>
+			<tr>
+				<th>ID User</th>
+				<td>
+						<select class="user" name="id-user">
+						<?php
+							$id_user = $controller->admin_model->tampil_ID_user();
+								foreach ($id_user as $row):
+						?>
+							<option value="<?php echo $row->ID_USER ?>"><?php echo $row->ID_USER ?></option>
+						<?php
+						endforeach;
+						?>
+						</select>
+				</td>		
+			</tr>
+			<tr>
+				<th>Nama</th>
+				<td>
+					<div class="input-prepend">
+					<input class="nama" name="nama-profil" id="inputIcon" type="text" required="" placeholder="Your Name">
+					</div>
+				</td>		
+			</tr>
+			<tr>
+				<th>Jenis Kelamin</th>
+				<td>
+					<label><input type="radio" class="jk" name="jk">Laki-Laki</label><label><input type="radio" class="jk" name="jk">Perempuan</label>
+				</td>
+			</tr>	
+			<tr>
+				<th>Tempat Lahir</th>
+				<td>
+					<div class="input-prepend">
+						<input name="tempat" id="inputIcon" type="text" required="" placeholder="Tempat Lahir">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>Tanggal Lahir</th>
+				<td>
+					<div class="input-prepend">
+						<input name="tanggal" id="inputIcon" type="date" required="" placeholder="Tanggal Lahir">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>Alamat</th>
+				<td>
+					<div class="input-prepend">
+						<textarea name="alamat" rows="6"></textarea>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>Email</th>
+				<td>
+					<div class="input-prepend">
+						<input name="email" id="inputIcon" type="text" required="" placeholder="Your Email">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>Tampil Email</th>
+				<td>				
+					<input type="radio" name="tampil-email">&nbsp;<span class="label label-info">show</span> <input type="radio" name="tampil-email">&nbsp; <span class="label label-important">dont show</span>
+				</td>
+			</tr>
+			<tr>
+				<th>No. HP</th>
+				<td>
+					<div class="input-prepend">
+						<input name="no-hp" id="inputIcon" type="text" required="" placeholder="No. HP">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>Tampil NO. HP</th>
+				<td>				
+					<input type="radio" name="tampil-hp">&nbsp;<span class="label label-info">show</span> <input type="radio" name="tampil-hp">&nbsp; <span class="label label-important">dont show</span>
+				</td>
+			</tr>
+			<tr>
+				<th>Foto</th>
+				<td>
+					<div class="input-prepend">
+						<input name="foto" id="inputIcon" type="file" required="" placeholder="your photo">
+					</div>
+				</td>
+			</tr>
+		</table>	
     </div>
-		<div class="modal-footer">
+	<div class="modal-footer">
 		<button href="#" class="btn btn-danger btn-large" data-dismiss="modal" id="close"><i class="icon-remove icon-white"></i> Close</button>
-    <button  href="#" class="btn btn-primary btn-large"  type="submit"><i class="icon-ok icon-white"></i> Simpan</button>
+		<button  href="#" class="btn btn-primary btn-large"  type="submit"><i class="icon-ok icon-white"></i> Simpan</button>
 		</div>
+		</form>
     </div>
-	</form>
 <!--modal2-->
 <div class="modal fade" id="modal2">
     <div class="modal-header">
-    <button class="close" data-dismiss="modal">X</button>
-    <h3>Edit Profil</h3>
+		<button class="close" data-dismiss="modal">X</button>
+		<h3>Edit Profil</h3>
     </div>
     <div class="modal-body">
-    <form class="form-horizontal">
-
-		<table class="table ">
-		<thead>
-		<tr>
-		<th>Nama</th>
-		<td>
-			<div class="input-prepend">
-              <span class="add-on"><i class="icon-tasks"></i></span><input class="span3" id="inputIcon" type="text" required="" placeholder="Your title">
-            </div>
-		</td>		
-		</tr>
-		</thead>
-		<tbody>
-		
-		<tr>
-		<th>Isi News</th>
-		<td>
-			<div class="input-prepend">
-              <textarea rows="6"></textarea>
-            </div>
-			</td>
-		</tr>
-		<tr>
-		<th>Foto</th>
-		<td>
-		<div class="input-prepend">
-              <span class="add-on"><i class="icon-picture"></i></span><input class="span4" id="inputIcon" type="file" required="" placeholder="your photo">
-            </div></td>
-		</tr>
-		<tr>
-		<th>Status</th>
-		<td>
-		
-            <div class="input-prepend">
-              
-            </div>
-			<input type="radio" class="radio" name="mail">&nbsp;<span class="label label-info">show</span> <input type="radio" class="radio" name="mail">&nbsp; <span class="label label-important">dont show</span>
-			</td>
-		</tr>
-		
-		
-		
-		</tbody>
-		</table>
-		
+		<form class="form-horizontal">
+			<table class="table">
+			<tr>
+				<th>ID User</th>
+				<td>
+					<div class="input-prepend">
+						<span class="add-on"><i class="icon-tasks"></i></span><input class="span3" id="inputIcon" type="text" required="" placeholder="Your title">
+					</div>
+				</td>		
+			</tr>
+			<tr>
+				<th>Nama</th>
+				<td>
+					<div class="input-prepend">
+						<span class="add-on"><i class="icon-tasks"></i></span><input class="span3" id="inputIcon" type="text" required="" placeholder="Your title">
+					</div>
+				</td>		
+			</tr>
+			<tr>
+				<th>Jenis Kelamin</th>
+				<td>
+					<label><input type="radio" class="radio" name="mail">Laki-Laki</label><label><input type="radio" class="radio" name="mail">Perempuan</label>
+				</td>
+			</tr>	
+			<tr>
+				<th>Tempat Lahir</th>
+				<td>
+					<div class="input-prepend">
+						<span class="add-on"><i class="icon-tasks"></i></span><input class="span3" id="inputIcon" type="text" required="" placeholder="Your title">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>Tanggal Lahir</th>
+				<td>
+					<div class="input-prepend">
+						<span class="add-on"><i class="icon-tasks"></i></span><input class="span3" id="inputIcon" type="text" required="" placeholder="Your title">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>Alamat</th>
+				<td>
+					<div class="input-prepend">
+						<textarea rows="6"></textarea>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>Email</th>
+				<td>
+					<div class="input-prepend">
+						<span class="add-on"><i class="icon-tasks"></i></span><input class="span3" id="inputIcon" type="text" required="" placeholder="Your title">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>Tampil Email</th>
+				<td>				
+					<input type="radio" class="radio" name="mail">&nbsp;<span class="label label-info">show</span> <input type="radio" class="radio" name="mail">&nbsp; <span class="label label-important">dont show</span>
+				</td>
+			</tr>
+			<tr>
+				<th>No. HP</th>
+				<td>
+					<div class="input-prepend">
+						<span class="add-on"><i class="icon-tasks"></i></span><input class="span3" id="inputIcon" type="text" required="" placeholder="Your title">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>Tampil NO. HP</th>
+				<td>				
+					<input type="radio" class="radio" name="mail">&nbsp;<span class="label label-info">show</span> <input type="radio" class="radio" name="mail">&nbsp; <span class="label label-important">dont show</span>
+				</td>
+			</tr>
+			<tr>
+				<th>Foto</th>
+				<td>
+					<div class="input-prepend">
+						<span class="add-on"><i class="icon-picture"></i></span><input class="span4" id="inputIcon" type="file" required="" placeholder="your photo">
+					</div>
+				</td>
+			</tr>
+		</table>	
     </div>
-		<div class="modal-footer">
+	<div class="modal-footer">
 		<button href="#" class="btn btn-danger btn-large" data-dismiss="modal" id="close"><i class="icon-remove icon-white"></i> Close</button>
-    <button  href="#" class="btn btn-primary btn-large"  type="submit"><i class="icon-ok icon-white"></i> Simpan</button>
+		<button  href="#" class="btn btn-primary btn-large"  type="submit"><i class="icon-ok icon-white"></i> Simpan</button>
 		</div>
-    </div>
-	</form>	
+		</form>
+    </div>	
 <script type="text/javascript">
 	$('#tombol').click(function(){
 	$('#modal1').modal('show');
@@ -236,9 +326,6 @@
 	$('.tombol2').click(function(){
 	$('#modal2').modal('show');
 	});
- $(function() {
-       
-    });
 </script>
 
 </body>

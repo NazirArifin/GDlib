@@ -17,13 +17,21 @@ class Admin extends CI_Controller {
 	public function dosen()
 	{
 		$this->load->database();
+		if ($this->input->post('id-user')){
+			$this->admin_model->insertUserDosen();
+			$this->session->set_flashdata('message','Data sudah tersimpan');
+			redirect('admin','refresh');
+		}
+		else {
+			$this->load->vars($insert);
+			$this->session->set_flashdata('message','Data gagal disimpan');
+		}
 		$this->load->view('admin/dosen/index', array('controller' => $this));
 		jsloc::show();
 	}
 	
 	public function mahasiswa()
 	{
-		$this->load->database();
 		$this->load->view('admin/mahasiswa/index', array('controller' => $this));
 		jsloc::show();
 	}
