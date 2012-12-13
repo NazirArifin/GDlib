@@ -24,10 +24,12 @@ class Admin extends CI_Controller {
 			$this->session->set_flashdata('message','Data sudah tersimpan');
 			redirect('admin','refresh');
 		}
+		/*
 		else {
 			$this->load->vars($this->admin_model->insert);
 			$this->session->set_flashdata('message','Data gagal disimpan');
 		}
+		*/
 		$this->load->view('admin/dosen/index', array('controller' => $this));
 		jsloc::show();
 	}
