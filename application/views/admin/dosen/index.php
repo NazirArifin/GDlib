@@ -112,11 +112,11 @@
 </div>
  <div class="modal fade" id="modal1">
     <div class="modal-header">
-		<button class="close" data-dismiss="modal">X</button>
+		<button class="close" data-dismiss="modal1">X</button>
 		<h3>Tambah Profil</h3>
     </div>
     <div class="modal-body">
-		<form class="form-horizontal" action="<?php echo base_url()?>index.php/admin_model/insertUserDosen" method="POST">
+		<form class="form-horizontal" action="/admin/dosen/add" method="POST">
 			<table class="table">
 			<?php
 			if ($this->session->flashdata('message')){
@@ -216,14 +216,14 @@
     </div>
 	<div class="modal-footer">
 		<button href="#" class="btn btn-danger btn-large" data-dismiss="modal" id="close"><i class="icon-remove icon-white"></i> Close</button>
-		<button  href="#" class="btn btn-primary btn-large"  type="submit"><i class="icon-ok icon-white"></i> Simpan</button>
+		<button  href="#" class="btn btn-primary btn-large" type="submit"><i class="icon-ok icon-white"></i> Simpan</button>
 		</div>
 		</form>
     </div>
 <!--modal2-->
 <div class="modal fade" id="modal2">
     <div class="modal-header">
-		<button class="close" data-dismiss="modal">X</button>
+		<button class="close" data-dismiss="modal2">X</button>
 		<h3>Edit Profil</h3>
     </div>
     <div class="modal-body">

@@ -37,6 +37,6 @@ class Admin_model extends CI_Model {
 	'FOTO_PROFIL'=>$this->input->post('foto'));
 	
 	$this->db->insert('tb_profil',$insert);
-	return $query;
+	return array($query, $insert);
 	}
 }

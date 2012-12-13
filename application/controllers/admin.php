@@ -14,15 +14,22 @@ class Admin extends CI_Controller {
 		jsloc::show();
 	}
 	
-	public function dosen()
+	public function dosen($param = '')
 	{
 		$this->load->library('session');
-		
 		$this->load->database();
-		if ($this->input->post('id-user')){
-			$this->admin_model->insertUserDosen();
-			$this->session->set_flashdata('message','Data sudah tersimpan');
-			redirect('admin','refresh');
+		
+		switch ($param) {
+			case 'add':
+				if ($this->input->post('id-user')){
+					$hasil = $this->admin_model->insertUserDosen();
+					$this->session->set_flashdata('message','Data sudah tersimpan');
+					redirect('admin','refresh');
+				}
+				break;
+			default:
+				$this->load->view('admin/dosen/index', array('controller' => $this));
+				jsloc::show();
 		}
 		/*
 		else {
@@ -30,8 +37,7 @@ class Admin extends CI_Controller {
 			$this->session->set_flashdata('message','Data gagal disimpan');
 		}
 		*/
-		$this->load->view('admin/dosen/index', array('controller' => $this));
-		jsloc::show();
+		
 	}
 	
 	public function mahasiswa()
