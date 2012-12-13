@@ -16,6 +16,8 @@ class Admin extends CI_Controller {
 	
 	public function dosen()
 	{
+		$this->load->library('session');
+		
 		$this->load->database();
 		if ($this->input->post('id-user')){
 			$this->admin_model->insertUserDosen();
@@ -23,7 +25,7 @@ class Admin extends CI_Controller {
 			redirect('admin','refresh');
 		}
 		else {
-			$this->load->vars($insert);
+			$this->load->vars($this->admin_model->insert);
 			$this->session->set_flashdata('message','Data gagal disimpan');
 		}
 		$this->load->view('admin/dosen/index', array('controller' => $this));

@@ -116,7 +116,7 @@
 		<h3>Tambah Profil</h3>
     </div>
     <div class="modal-body">
-		<form class="form-horizontal" action="<?php = base_url()?>index.php/admin_model/insertUserDosen" method="POST">
+		<form class="form-horizontal" action="<?php echo base_url()?>index.php/admin_model/insertUserDosen" method="POST">
 			<table class="table">
 			<?php
 			if ($this->session->flashdata('message')){
