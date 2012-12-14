@@ -21,10 +21,10 @@ class Admin extends CI_Controller {
 		
 		switch ($param) {
 			case 'add':
-				if ($this->input->post('id-user')){
+				if ($this->input->post('id_user')){
 					$hasil = $this->admin_model->insertUserDosen();
 					$this->session->set_flashdata('message','Data sudah tersimpan');
-					redirect('admin','refresh');
+					header('location: /admin/dosen');
 				}
 				break;
 			default:
