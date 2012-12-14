@@ -70,49 +70,61 @@
         
 </div>
     <div class="well span9 pull-right">
-	<input type="text" class="input-medium search-query" >
-     <button class="btn btn-large btn-success pull-right" id="tombol"><i class="icon-plus icon-white"></i>Tambah</button><br><br><br>
-	 <div class="well span8">
-	 <img src="Images/animal1.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
-	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
-	 </div>
-	 <div class="well span8">
-	 <img src="Images/animal2.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
-	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
-	 </div>
-	 <div class="well span8">
-	 <img src="Images/animal3.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
-	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
-	 </div>
-	 <div class="well span8">
-	 <img src="Images/animal4.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
-	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
-	 </div>
-	 <div class="well span8">
-	 <img src="Images/animal5.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
-	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
-	 </div>
-	 <div class="well span8">
-	 <img src="Images/animal6.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
-	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
-	 </div>
-	 <div class="well span8">
-	 <img src="Images/animal7.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
-	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
-	 </div>
-	 <div class="well span8">
-	 <img src="Images/animal8.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
-	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
-	 </div>
-	<div class="pagination" align="center">
+     
+	 <!--menu tab dokument-->
+	 <div class="">
+	 <h2>Dokument</h2>
+	 <input type="text" class="input-medium search-query" placeholder="Cari Dokument" ><br><br>
+	 <ul class="nav nav-tabs" id="tab-dok">
+	  <li class="active"><a href="#jurnal">Jurnal</a></li>
+	  <li><a href="#buku">Buku</a></li>
+	  <li><a href="#modul">Modul</a></li>
+	  <li><a href="#buletin">Buletin</a></li>
+	</ul>
+	 
+	<div class="tab-content">
+	<!--tab untuk jurnal-->
+	  <div class="tab-pane active" id="jurnal">
+		<table class="table">
+		  
+		  <thead>
+			<tr>
+			  <th>Judul</th>
+			  <th>Taggal</th>
+			</tr>
+		  </thead>
+		  <tbody>
+			<tr>
+			  <td>Revolution</td>
+			  <td>12/12/12</td>
+			  <td>
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>&nbsp;
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>&nbsp;
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
+			  </td>
+			</tr>
+			<tr>
+			  <td>RIP</td>
+			  <td>12/12/12</td>
+			  <td>
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>&nbsp;
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>&nbsp;
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
+			  </td>
+			</tr>
+			<tr>
+			  <td>Kroncong Protol</td>
+			  <td>12/12/12</td>
+			  <td>
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>&nbsp;
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>&nbsp;
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
+			  </td>
+			</tr>
+		  </tbody>
+		</table>
+		
+		<div class="pagination pagination-centered">
 		<ul>
 			<li><a href="#">Prev</a></li>
 			<li class="active">
@@ -124,135 +136,336 @@
 			<li><a href="#">Next</a></li>
 			</ul>
 		</div>
+		
+	  </div>
+	  <!--tab buku-->
+	  <div class="tab-pane" id="buku">
+	  <table class="table">
+		  
+		  <thead>
+			<tr>
+			  <th>Judul</th>
+			  <th>Taggal</th>
+			</tr>
+		  </thead>
+		  <tbody>
+			<tr>
+			  <td>Harry Potter</td>
+			  <td>12/12/12</td>
+			  <td>
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>&nbsp;
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>&nbsp;
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
+			  </td>
+			</tr>
+			<tr>
+			  <td>Twilight</td>
+			  <td>12/12/12</td>
+			  <td>
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>&nbsp;
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>&nbsp;
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
+			  </td>
+			</tr>
+			<tr>
+			  <td>Janc#k</td>
+			  <td>12/12/12</td>
+			  <td>
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>&nbsp;
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>&nbsp;
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
+			  </td>
+			</tr>
+		  </tbody>
+		</table>
+		
+		<div class="pagination pagination-centered">
+		<ul>
+			<li><a href="#">Prev</a></li>
+			<li class="active">
+			<a href="#">1</a>
+			</li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">Next</a></li>
+			</ul>
+		</div>
+		
+	  </div>
+	  <!--tab modul-->
+	  <div class="tab-pane" id="modul">
+	  <table class="table">
+		  
+		  <thead>
+			<tr>
+			  <th>Judul</th>
+			  <th>Taggal</th>
+			</tr>
+		  </thead>
+		  <tbody>
+			<tr>
+			  <td>Algoritma</td>
+			  <td>12/12/12</td>
+			  <td>
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>&nbsp;
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>&nbsp;
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
+			  </td>
+			</tr>
+			<tr>
+			  <td>Aljabar</td>
+			  <td>12/12/12</td>
+			  <td>
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>&nbsp;
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>&nbsp;
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
+			  </td>
+			</tr>
+			<tr>
+			  <td>Teknik Digital</td>
+			  <td>12/12/12</td>
+			  <td>
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>&nbsp;
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>&nbsp;
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
+			  </td>
+			</tr>
+		  </tbody>
+		</table>
+		
+		<div class="pagination pagination-centered">
+		<ul>
+			<li><a href="#">Prev</a></li>
+			<li class="active">
+			<a href="#">1</a>
+			</li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">Next</a></li>
+			</ul>
+		</div>
+		
+	  </div>
+	  <!--tab bulletin-->
+	  <div class="tab-pane" id="buletin">
+	  <table class="table">
+		  
+		  <thead>
+			<tr>
+			  <th>Judul</th>
+			  <th>Taggal</th>
+			</tr>
+		  </thead>
+		  <tbody>
+			<tr>
+			  <td>Buletin Siang</td>
+			  <td>12/12/12</td>
+			  <td>
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>&nbsp;
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>&nbsp;
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
+			  </td>
+			</tr>
+			<tr>
+			  <td>Liputan 6</td>
+			  <td>12/12/12</td>
+			  <td>
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>&nbsp;
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>&nbsp;
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
+			  </td>
+			</tr>
+			<tr>
+			  <td>Silet</td>
+			  <td>12/12/12</td>
+			  <td>
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>&nbsp;
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>&nbsp;
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
+			  </td>
+			</tr>
+		  </tbody>
+		</table>
+		
+		<div class="pagination pagination-centered">
+		<ul>
+			<li><a href="#">Prev</a></li>
+			<li class="active">
+			<a href="#">1</a>
+			</li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">Next</a></li>
+			</ul>
+		</div>
+	  </div>
+	</div>
+	</div> 
+	
+	<div class="">
+	 
+	 <h2>Member</h2>
+	 <input type="text" class="input-medium search-query" placeholder="Cari Member" ><br><br>
+	 <ul class="nav nav-tabs" id="tab-member">
+	  <li class="active"><a href="#dosen">Dosen</a></li>
+	  <li><a href="#maha">Mahasiswa</a></li>
+	  
+	</ul>
+	 
+	<div class="tab-content">
+	<!--tab untuk dosen-->
+	  <div class="tab-pane active" id="dosen">
+		<table class="table">
+		  
+		  <thead>
+			<tr>
+			  <th>Judul</th>
+			  <th>Taggal</th>
+			</tr>
+		  </thead>
+		  <tbody>
+			<tr>
+			  <td>Revolution</td>
+			  <td>12/12/12</td>
+			  <td>
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>&nbsp;
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>&nbsp;
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
+			  </td>
+			</tr>
+			<tr>
+			  <td>RIP</td>
+			  <td>12/12/12</td>
+			  <td>
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>&nbsp;
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>&nbsp;
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
+			  </td>
+			</tr>
+			<tr>
+			  <td>Kroncong Protol</td>
+			  <td>12/12/12</td>
+			  <td>
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>&nbsp;
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>&nbsp;
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
+			  </td>
+			</tr>
+		  </tbody>
+		  <div class="pagination pagination-centered">
+			<ul>
+				<li><a href="#">Prev</a></li>
+				<li class="active">
+				<a href="#">1</a>
+				</li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">Next</a></li>
+				</ul>
+			</div>
+		</table>
+		
+		
+		
+	  </div>
+	  <!--tab mahasiswa-->
+	  <div class="tab-pane" id="maha">
+	  <table class="table">
+		  
+		  <thead>
+			<tr>
+			  <th>Judul</th>
+			  <th>Taggal</th>
+			</tr>
+		  </thead>
+		  <tbody>
+			<tr>
+			  <td>Harry Potter</td>
+			  <td>12/12/12</td>
+			  <td>
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>&nbsp;
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>&nbsp;
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
+			  </td>
+			</tr>
+			<tr>
+			  <td>Twilight</td>
+			  <td>12/12/12</td>
+			  <td>
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>&nbsp;
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>&nbsp;
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
+			  </td>
+			</tr>
+			<tr>
+			  <td>Janc#k</td>
+			  <td>12/12/12</td>
+			  <td>
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>&nbsp;
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>&nbsp;
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
+			  </td>
+			</tr>
+		  </tbody>
+		</table>
+		
+		<div class="pagination pagination-centered">
+		<ul>
+			<li><a href="#">Prev</a></li>
+			<li class="active">
+			<a href="#">1</a>
+			</li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">Next</a></li>
+			</ul>
+		</div>
+		
+	  </div>
+
+	</div>
+	</div> 
+	<div class="">
+	<h2>News</h2>
+	<input type="text" class="input-medium search-query" placeholder="Cari Member" ><br><br>
+    <table class="table">
+	  <thead>
+		<tr>
+		  <th>Foto</th>
+		  <th>Judul</th>
+		  <th>Cuplikan</th>
+		  <th>Status</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr>
+		  <td><img src="./static/images/ogo.png" class="image-admin"></td>
+		  <td>WTF</td>
+		  <td>Lorem ipsum dolor sit amet</td>
+		  <td><label class="label label-important">Banned</label></td>
+		</tr>
+	  </tbody>
+	</table>
+	</div>
+	
     </div>
   </div>
 </div>
- <div class="modal fade" id="modal1">
-    <div class="modal-header">
-    <button class="close" data-dismiss="modal">X</button>
-    <h3>Edit Profil</h3>
-    </div>
-    <div class="modal-body">
-    <form class="form-horizontal">
-
-		<table class="table ">
-		<thead>
-		<tr>
-		<th>Nama</th>
-		<td>
-			<div class="input-prepend">
-              <span class="add-on"><i class="icon-tasks"></i></span><input class="span3" id="inputIcon" type="text" required="" placeholder="Your title">
-            </div>
-		</td>		
-		</tr>
-		</thead>
-		<tbody>
-		
-		<tr>
-		<th>Isi News</th>
-		<td>
-			<div class="input-prepend">
-              <textarea rows="6"></textarea>
-            </div>
-			</td>
-		</tr>
-		<tr>
-		<th>Foto</th>
-		<td>
-		<div class="input-prepend">
-              <span class="add-on"><i class="icon-picture"></i></span><input class="span4" id="inputIcon" type="file" required="" placeholder="your photo">
-            </div></td>
-		</tr>
-		<tr>
-		<th>Status</th>
-		<td>
-		
-            <div class="input-prepend">
-              
-            </div>
-			<input type="radio" class="radio" name="mail">&nbsp;<span class="label label-info">show</span> <input type="radio" class="radio" name="mail">&nbsp; <span class="label label-important">dont show</span>
-			</td>
-		</tr>
-		
-		
-		
-		</tbody>
-		</table>
-		
-    </div>
-		<div class="modal-footer">
-		<button href="#" class="btn btn-danger btn-large" data-dismiss="modal" id="close"><i class="icon-remove icon-white"></i> Close</button>
-    <button  href="#" class="btn btn-primary btn-large"  type="submit"><i class="icon-ok icon-white"></i> Simpan</button>
-		</div>
-    </div>
-	</form>
-<!--modal2-->
-<div class="modal fade" id="modal2">
-    <div class="modal-header">
-    <button class="close" data-dismiss="modal">X</button>
-    <h3>Edit Profil</h3>
-    </div>
-    <div class="modal-body">
-    <form class="form-horizontal">
-
-		<table class="table ">
-		<thead>
-		<tr>
-		<th>Nama</th>
-		<td>
-			<div class="input-prepend">
-              <span class="add-on"><i class="icon-tasks"></i></span><input class="span3" id="inputIcon" type="text" required="" placeholder="Your title">
-            </div>
-		</td>		
-		</tr>
-		</thead>
-		<tbody>
-		
-		<tr>
-		<th>Isi News</th>
-		<td>
-			<div class="input-prepend">
-              <textarea rows="6"></textarea>
-            </div>
-			</td>
-		</tr>
-		<tr>
-		<th>Foto</th>
-		<td>
-		<div class="input-prepend">
-              <span class="add-on"><i class="icon-picture"></i></span><input class="span4" id="inputIcon" type="file" required="" placeholder="your photo">
-            </div></td>
-		</tr>
-		<tr>
-		<th>Status</th>
-		<td>
-		
-            <div class="input-prepend">
-              
-            </div>
-			<input type="radio" class="radio" name="mail">&nbsp;<span class="label label-info">show</span> <input type="radio" class="radio" name="mail">&nbsp; <span class="label label-important">dont show</span>
-			</td>
-		</tr>
-		
-		
-		
-		</tbody>
-		</table>
-		
-    </div>
-		<div class="modal-footer">
-		<button href="#" class="btn btn-danger btn-large" data-dismiss="modal" id="close"><i class="icon-remove icon-white"></i> Close</button>
-    <button  href="#" class="btn btn-primary btn-large"  type="submit"><i class="icon-ok icon-white"></i> Simpan</button>
-		</div>
-    </div>
-	</form>	
+ 
 <script type="text/javascript">
-	$('#tombol').click(function(){
-	$('#modal1').modal('show');
-	});
-	$('.tombol2').click(function(){
-	$('#modal2').modal('show');
-	});
+	$('#tab-dok a').click(function (e) {
+	  e.preventDefault();
+	  $(this).tab('show');
+	})
+	$('#tab-member a').click(function (e) {
+	  e.preventDefault();
+	  $(this).tab('show');
+	})
 </script>
 
 </body>

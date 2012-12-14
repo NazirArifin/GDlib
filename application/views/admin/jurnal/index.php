@@ -45,7 +45,7 @@
 			  </ul>
 			</div>
 		<!--button group-->
-		<a href="#"><img src="/images/logo.png" class="brand" width="150" height="70" id="logo"/></a>
+		<a href="#"><img src="/images/logo.png" class="nav" width="150" height="70" id="logo"/></a>
 			<div class="navbar-search input-append pull-right" >
 			  <input class="span2" id="appendedInputButton" type="text" >
 			  <button class="btn" type="button"><i class="icon-search"></i></button>
