@@ -68,8 +68,8 @@
 	</ul>
 		</div>
 		<div class="well span9 pull-right">
-		<legend>Tambah User Dosen</legend>
 			<form class="form-horizontal hide" action="/admin/dosen/add" method="POST">
+			<legend>Tambah User Dosen</legend>
 				<div class="control-group">
 					<?php
 					if ($this->session->flashdata('message')){
@@ -157,8 +157,8 @@
 					<button href="#" class="btn btn-danger btn-mini" data-dismiss="modal" id="close"><i class="icon-remove icon-white"></i> Close</button>
 					<button  href="#" class="btn btn-primary btn-mini" type="submit"><i class="icon-ok icon-white"></i> Simpan</button>
 				</div>
+				<hr>
 				</form>
-			<hr>
 			<input type="text" class="input-medium search-query" >
 			<button class="btn btn-medium btn-success pull-right" id="tombol"><i class="icon-plus icon-white"></i>Tambah</button><br><br><br>
 			<div class="container-fluid">
