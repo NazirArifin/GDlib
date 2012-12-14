@@ -8,7 +8,7 @@
 			<link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
 			<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap.min.css" />
 			<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
-			<link rel="stylesheet" href="/static/css/main.css" />
+			<link rel="stylesheet" href="/static/css/style.css" />
 			
 			<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
 			<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
@@ -68,6 +68,97 @@
 	</ul>
 		</div>
 		<div class="well span9 pull-right">
+		<legend>Tambah User Dosen</legend>
+			<form class="form-horizontal hide" action="/admin/dosen/add" method="POST">
+				<div class="control-group">
+					<?php
+					if ($this->session->flashdata('message')){
+						echo "<i>".$this->session->flashdata('message')."</i>";
+					}
+					?>
+					<label class="control-label control-label-min" for="id-user">ID User</label>
+					<div class="controls controls-min">
+						<select class="user" name="id-user">
+							<?php
+								$id_user = $controller->admin_model->tampil_ID_user();
+								foreach ($id_user as $row):
+							?>
+								<option value="<?php echo $row->ID_USER ?>"><?php echo $row->ID_USER ?></option>
+							<?php
+								endforeach;
+							?>
+						</select>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label control-label-min" for="nama-profil">Nama</label>
+					<div class="controls controls-min">
+						<input id="nama-profil" name="nama-profil" type="text" required="" placeholder="Your Name">
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label control-label-min" for="jk">Jenis Kelamin</label>
+					<div class="controls controls-min">
+							<label for="jk1"><input type="radio" id="jk1" name="jk"/>Laki-Laki</label>
+							<label for="jk2"><input type="radio" id="jk2" name="jk"/>Perempuan</label>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label control-label-min" for="tempat">Tempat Lahir</label>
+					<div class="controls controls-min">
+						<input name="tempat" id="tempat" type="text" required="" placeholder="Tempat Lahir">
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label control-label-min" for="tanggal">Tanggal Lahir</label>
+					<div class="controls controls-min">
+						<input name="tanggal" id="tanggal" type="date" required="" placeholder="Tanggal Lahir">
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label control-label-min" for="alamat">Alamat</label>
+					<div class="controls controls-min">				
+						<textarea name="alamat" id="alamat"></textarea>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label control-label-min" for="email">Email</label>
+					<div class="controls controls-min">			
+						<input name="email" id="email" type="text" required="" placeholder="Your Email">
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label control-label-min" for="tampil-email">Tampil Email</label>
+					<div class="controls controls-min">							
+						<label for="tampil-email1"><input type="radio" name="tampil-email" id="tampil-email1"> Show</label>
+						<label for="tampil-email2"><input type="radio" name="tampil-email" id="tampil-email2"> Dont show</label>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label control-label-min" for="no-hp">No. HP</label>
+					<div class="controls controls-min">	
+						<input name="no-hp" id="no-hp" type="text" required="" placeholder="No. HP">
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label control-label-min" for="tampil-no-hp">Tampil No. HP</label>
+					<div class="controls controls-min">							
+						<label for="tampil-no-hp1"><input type="radio" name="tampil-email" id="tampil-no-hp1"> Show</label>
+						<label for="tampil-no-hp2"><input type="radio" name="tampil-email" id="tampil-no-hp2"> Dont show</label>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label control-label-min" for="foto">Tampil No. HP</label>
+					<div class="controls controls-min">							
+						<input name="foto" id="foto" type="file" required="" placeholder="your photo">
+					</div>
+				</div>
+				<div class="form-actions">
+					<button href="#" class="btn btn-danger btn-mini" data-dismiss="modal" id="close"><i class="icon-remove icon-white"></i> Close</button>
+					<button  href="#" class="btn btn-primary btn-mini" type="submit"><i class="icon-ok icon-white"></i> Simpan</button>
+				</div>
+				</form>
+			<hr>
 			<input type="text" class="input-medium search-query" >
 			<button class="btn btn-medium btn-success pull-right" id="tombol"><i class="icon-plus icon-white"></i>Tambah</button><br><br><br>
 			<div class="container-fluid">
@@ -111,223 +202,5 @@
 		</div>
 	</div>
 </div>
- <div class="modal fade" id="modal1">
-    <div class="modal-header">
-		<button class="close" data-dismiss="modal1">X</button>
-		<h3>Tambah Profil</h3>
-    </div>
-    <div class="modal-body">
-		<form class="form-horizontal" action="/admin/dosen/add" method="POST">
-			<table class="table">
-			<?php
-			if ($this->session->flashdata('message')){
-				echo "<i>".$this->session->flashdata('message')."</i>";
-			}
-			?>
-			<tr>
-				<th>ID User</th>
-				<td>
-						<select class="user" name="id-user">
-						<?php
-							$id_user = $controller->admin_model->tampil_ID_user();
-								foreach ($id_user as $row):
-						?>
-							<option value="<?php echo $row->ID_USER ?>"><?php echo $row->ID_USER ?></option>
-						<?php
-						endforeach;
-						?>
-						</select>
-				</td>		
-			</tr>
-			<tr>
-				<th>Nama</th>
-				<td>
-					<div class="input-prepend">
-					<input class="nama" name="nama-profil" id="inputIcon" type="text" required="" placeholder="Your Name">
-					</div>
-				</td>		
-			</tr>
-			<tr>
-				<th>Jenis Kelamin</th>
-				<td>
-					<label><input type="radio" class="jk" name="jk">Laki-Laki</label><label><input type="radio" class="jk" name="jk">Perempuan</label>
-				</td>
-			</tr>	
-			<tr>
-				<th>Tempat Lahir</th>
-				<td>
-					<div class="input-prepend">
-						<input name="tempat" id="inputIcon" type="text" required="" placeholder="Tempat Lahir">
-					</div>
-				</td>
-			</tr>
-			<tr>
-				<th>Tanggal Lahir</th>
-				<td>
-					<div class="input-prepend">
-						<input name="tanggal" id="inputIcon" type="date" required="" placeholder="Tanggal Lahir">
-					</div>
-				</td>
-			</tr>
-			<tr>
-				<th>Alamat</th>
-				<td>
-					<div class="input-prepend">
-						<textarea name="alamat" rows="6"></textarea>
-					</div>
-				</td>
-			</tr>
-			<tr>
-				<th>Email</th>
-				<td>
-					<div class="input-prepend">
-						<input name="email" id="inputIcon" type="text" required="" placeholder="Your Email">
-					</div>
-				</td>
-			</tr>
-			<tr>
-				<th>Tampil Email</th>
-				<td>				
-					<input type="radio" name="tampil-email">&nbsp;<span class="label label-info">show</span> <input type="radio" name="tampil-email">&nbsp; <span class="label label-important">dont show</span>
-				</td>
-			</tr>
-			<tr>
-				<th>No. HP</th>
-				<td>
-					<div class="input-prepend">
-						<input name="no-hp" id="inputIcon" type="text" required="" placeholder="No. HP">
-					</div>
-				</td>
-			</tr>
-			<tr>
-				<th>Tampil NO. HP</th>
-				<td>				
-					<input type="radio" name="tampil-hp">&nbsp;<span class="label label-info">show</span> <input type="radio" name="tampil-hp">&nbsp; <span class="label label-important">dont show</span>
-				</td>
-			</tr>
-			<tr>
-				<th>Foto</th>
-				<td>
-					<div class="input-prepend">
-						<input name="foto" id="inputIcon" type="file" required="" placeholder="your photo">
-					</div>
-				</td>
-			</tr>
-		</table>	
-    </div>
-	<div class="modal-footer">
-		<button href="#" class="btn btn-danger btn-large" data-dismiss="modal" id="close"><i class="icon-remove icon-white"></i> Close</button>
-		<button  href="#" class="btn btn-primary btn-large" type="submit"><i class="icon-ok icon-white"></i> Simpan</button>
-		</div>
-		</form>
-    </div>
-<!--modal2-->
-<div class="modal fade" id="modal2">
-    <div class="modal-header">
-		<button class="close" data-dismiss="modal2">X</button>
-		<h3>Edit Profil</h3>
-    </div>
-    <div class="modal-body">
-		<form class="form-horizontal">
-			<table class="table">
-			<tr>
-				<th>ID User</th>
-				<td>
-					<div class="input-prepend">
-						<span class="add-on"><i class="icon-tasks"></i></span><input class="span3" id="inputIcon" type="text" required="" placeholder="Your title">
-					</div>
-				</td>		
-			</tr>
-			<tr>
-				<th>Nama</th>
-				<td>
-					<div class="input-prepend">
-						<span class="add-on"><i class="icon-tasks"></i></span><input class="span3" id="inputIcon" type="text" required="" placeholder="Your title">
-					</div>
-				</td>		
-			</tr>
-			<tr>
-				<th>Jenis Kelamin</th>
-				<td>
-					<label><input type="radio" class="radio" name="mail">Laki-Laki</label><label><input type="radio" class="radio" name="mail">Perempuan</label>
-				</td>
-			</tr>	
-			<tr>
-				<th>Tempat Lahir</th>
-				<td>
-					<div class="input-prepend">
-						<span class="add-on"><i class="icon-tasks"></i></span><input class="span3" id="inputIcon" type="text" required="" placeholder="Your title">
-					</div>
-				</td>
-			</tr>
-			<tr>
-				<th>Tanggal Lahir</th>
-				<td>
-					<div class="input-prepend">
-						<span class="add-on"><i class="icon-tasks"></i></span><input class="span3" id="inputIcon" type="text" required="" placeholder="Your title">
-					</div>
-				</td>
-			</tr>
-			<tr>
-				<th>Alamat</th>
-				<td>
-					<div class="input-prepend">
-						<textarea rows="6"></textarea>
-					</div>
-				</td>
-			</tr>
-			<tr>
-				<th>Email</th>
-				<td>
-					<div class="input-prepend">
-						<span class="add-on"><i class="icon-tasks"></i></span><input class="span3" id="inputIcon" type="text" required="" placeholder="Your title">
-					</div>
-				</td>
-			</tr>
-			<tr>
-				<th>Tampil Email</th>
-				<td>				
-					<input type="radio" class="radio" name="mail">&nbsp;<span class="label label-info">show</span> <input type="radio" class="radio" name="mail">&nbsp; <span class="label label-important">dont show</span>
-				</td>
-			</tr>
-			<tr>
-				<th>No. HP</th>
-				<td>
-					<div class="input-prepend">
-						<span class="add-on"><i class="icon-tasks"></i></span><input class="span3" id="inputIcon" type="text" required="" placeholder="Your title">
-					</div>
-				</td>
-			</tr>
-			<tr>
-				<th>Tampil NO. HP</th>
-				<td>				
-					<input type="radio" class="radio" name="mail">&nbsp;<span class="label label-info">show</span> <input type="radio" class="radio" name="mail">&nbsp; <span class="label label-important">dont show</span>
-				</td>
-			</tr>
-			<tr>
-				<th>Foto</th>
-				<td>
-					<div class="input-prepend">
-						<span class="add-on"><i class="icon-picture"></i></span><input class="span4" id="inputIcon" type="file" required="" placeholder="your photo">
-					</div>
-				</td>
-			</tr>
-		</table>	
-    </div>
-	<div class="modal-footer">
-		<button href="#" class="btn btn-danger btn-large" data-dismiss="modal" id="close"><i class="icon-remove icon-white"></i> Close</button>
-		<button  href="#" class="btn btn-primary btn-large"  type="submit"><i class="icon-ok icon-white"></i> Simpan</button>
-		</div>
-		</form>
-    </div>	
-<script type="text/javascript">
-	$('#tombol').click(function(){
-	$('#modal1').modal('show');
-	});
-	$('.tombol2').click(function(){
-	$('#modal2').modal('show');
-	});
-</script>
-
 </body>
 </html>

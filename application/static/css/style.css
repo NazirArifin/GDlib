@@ -1,0 +1,100 @@
+body {
+background:url(gambar/main_bg.gif)repeat-x top left;}
+
+.content {
+background:url(gambar/layout_02.jpg);}
+
+h2, h3, h4, h5, h6, form legend {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.justified {
+	text-align: justify;
+}
+
+.title h1 {
+	font-size: 30px;
+	color: #FFF;
+	margin-top: 35px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	text-shadow: 1px 2px 1px rgba(0,0,0,.1), 0 0 30px rgba(0,0,0,.125);
+	letter-spacing: -3px;
+}
+
+.title p {
+	font-size: 11px;
+	font-weight: 600;
+	line-height: 1em;
+}
+
+
+.form-horizontal .control-label-min { 
+	width: 160px;
+}
+.form-horizontal .controls-min {
+	margin-left: 190px; 
+}
+
+.footer p {
+	margin-top: 10px;
+	font-size: 10px;
+	font-weight: bold;
+	color: #622F2F;
+}
+
+form legend {
+	font-size: 14px;
+}
+
+span.help-inline {
+	font-size: 12px;
+	color: #7E7E7E;
+	font-style: bold;
+}
+span.help-inlineq {
+	font-size: 9px;
+	color: #7E7E7E;
+	font-style: italic;
+}
+
+p.help-block {
+	font-size: 11px;
+	color: #7E7E7E;
+}
+span.help-inline strong {
+	color: red;
+}
+span.help-inlineq strong {
+	color: red;
+}
+
+
+table.small, table.small label, button small, .small, button.small, p.small {
+	font-size: 11px;
+}
+
+table td.title {
+	font-weight: bold;
+	font-size: 16px;
+	padding-top: 20px;
+	height: 30px;
+	letter-spacing: -1px;
+}
+table.table-data th {
+	cursor: pointer;
+    color: #FFFFFF;
+	font-size: 11px;
+	text-align: center;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #ccd2d2;
+	background-color: #7D7D7D;
+}
+input,textarea,select{
+font-family: Comic Sans MS;
+font-size: 9pt;
+}
+label{
+font-size: 12pt;
+font-weight: bold;
+}
