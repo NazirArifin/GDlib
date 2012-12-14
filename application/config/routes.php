@@ -50,6 +50,7 @@ $route['js/([a-z\.\-]+\.js)'] = "statics/js/$1";
 $route['images/(.+)'] = "statics/images/$1";
 
 $route['third_party/(.+)$'] = 'statics/thirdparty/$1';
+$route['static/(.+)$'] = 'statics/statick/$1';
 
 //======================= ROUTES UNTUK ADMIN ==== 
 $route['admin'] = "admin";

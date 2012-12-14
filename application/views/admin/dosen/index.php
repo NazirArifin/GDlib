@@ -13,6 +13,7 @@
 			<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
 			<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
 			<script src="/third_party/bootstrap/bootstrap.min.js"></script>
+			<script src="/static/js/admin.js"></script>
 
     <style type="text/css">
 #logo {

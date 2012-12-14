@@ -174,6 +174,66 @@ class Statics extends CI_Controller {
 		
 		echo file_get_contents($path);
 	}
+	
+	/**
+	 * Untuk static
+	 */
+	
+	public function statick() {
+		$args 	= func_get_args();
+		$path	= APPPATH . 'static/' . implode('/', $args);
+		$file	= basename($path);
+		$efile	= explode('.', $file);
+		$ext	= strtolower(end($efile));
+		
+		switch ($ext) {
+			case 'css':
+				header('Content-Type: text/css');
+				header('Charset: UTF-8');
+				break;
+			case 'js':
+				header('Content-Type: application/x-javascript');
+				header('Charset: UTF-8');
+				break;
+			case 'svg':
+				header('Content-Type: image/svg+xml');
+				break;
+			case 'ttf':
+				header('Content-Type: application/x-font-ttf');
+				break;
+			case 'eot':
+				header('Content-Type: application/vnd.ms-fontobject');
+				break;
+			case 'woff':
+				header('Content-Type: application/x-font-woff');
+				break;
+			case 'otf':
+				header('Content-Type: font/opentype');
+				break;
+			case 'jpg': case 'png': case 'gif':
+				$size	= getimagesize($path);
+				if ($size) {
+					header("Content-Type: {$size['mime']}");
+					$fsize = filesize($path);
+					header("Content-Length: " . $fsize);
+					
+					if ($fsize < 1024) {
+						echo file_get_contents($path);
+						return;
+					}
+					
+					$file = fopen($path, 'rb');
+					while ( ! feof($file) ) {
+						echo fread($file, 1024);
+					}
+					@fclose($file);
+				}
+				return;
+				break;
+		}
+		
+		echo file_get_contents($path);
+	}
 }
 
 /* End of file statics.php */
