@@ -13,7 +13,7 @@
 			<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
 			<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
 			<script src="/third_party/bootstrap/bootstrap.min.js"></script>
-			<script src="/static/js/admin.js"></script>
+			<script src="/js/admin.js"></script>
 
     <style type="text/css">
 #logo {
@@ -68,7 +68,7 @@
 	</ul>
 		</div>
 		<div class="well span9 pull-right">
-			<form class="form-horizontal hide" action="/admin/dosen/add" method="POST">
+			<form class="form-horizontal hide" id="form-tambah" action="/admin/dosen/add" method="POST">
 			<legend>Tambah User Dosen</legend>
 				<div class="control-group">
 					<?php
@@ -160,7 +160,7 @@
 				<hr>
 				</form>
 			<input type="text" class="input-medium search-query" >
-			<button class="btn btn-medium btn-success pull-right" id="tombol"><i class="icon-plus icon-white"></i>Tambah</button><br><br><br>
+			<button class="btn btn-medium btn-success pull-right" id="tombol" onClick="return tambahDosen()"><i class="icon-plus icon-white"></i>Tambah</button><br><br><br>
 			<div class="container-fluid">
 			<?php
 				$dosen=$controller->admin_model->tampilUserDosen();
