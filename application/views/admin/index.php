@@ -355,7 +355,10 @@
 			  </td>
 			</tr>
 		  </tbody>
-		  <div class="pagination pagination-centered">
+		  
+		</table>
+		
+		<div class="pagination pagination-centered">
 			<ul>
 				<li><a href="#">Prev</a></li>
 				<li class="active">
@@ -367,8 +370,6 @@
 				<li><a href="#">Next</a></li>
 				</ul>
 			</div>
-		</table>
-		
 		
 		
 	  </div>
