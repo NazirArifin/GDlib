@@ -1,3 +1,3 @@
 function tambahDosen(){
-	$('#form-tambah').show('drop', {} , 2500);
+	$('#form-tambah').show('blind', {} , 3500);
 }
