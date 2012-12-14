@@ -68,19 +68,18 @@
 	</ul>
 		</div>
 		<div class="well span9 pull-right">
-			
-			<form class="form-horizontal hide" id="form-tambah" action="/admin/dosen/add" method="POST">
+			<?php
+					if ($this->session->flashdata('message')){
+						echo "<div class='alert'>".$this->session->flashdata('message')."</div>";
+					}
+			?>
+			<form class="form-horizontal hide" id="form-tambah" action="/admin/dosen/add" method="POST" enctype="multipart/form-data">
 			<a href="#" class="btn btn-inverse btn-mini pull-right" onClick="return sclose()"><i class="icon-remove icon-white"></i></a>
 			<legend>Tambah User Dosen</legend>
 				<div class="control-group">
-					<?php
-					if ($this->session->flashdata('message')){
-						echo "<i>".$this->session->flashdata('message')."</i>";
-					}
-					?>
 					<label class="control-label control-label-min" for="id-user">ID User</label>
 					<div class="controls controls-min">
-						<select class="user" name="id-user">
+						<select class="user" name="id_user">
 							<?php
 								$id_user = $controller->admin_model->tampil_ID_user();
 								foreach ($id_user as $row):
@@ -95,14 +94,14 @@
 				<div class="control-group">
 					<label class="control-label control-label-min" for="nama-profil">Nama</label>
 					<div class="controls controls-min">
-						<input id="nama-profil" name="nama-profil" type="text" required="" placeholder="Your Name">
+						<input id="nama-profil" name="nama_profil" type="text" required="" placeholder="Your Name">
 					</div>
 				</div>
 				<div class="control-group">
 					<label class="control-label control-label-min" for="jk">Jenis Kelamin</label>
 					<div class="controls controls-min">
-							<label for="jk1"><input type="radio" id="jk1" name="jk"/>Laki-Laki</label>
-							<label for="jk2"><input type="radio" id="jk2" name="jk"/>Perempuan</label>
+							<label for="jk1"><input type="radio" id="jk1" name="jk" value="L" checked>Laki-Laki</label>
+							<label for="jk2"><input type="radio" id="jk2" name="jk" value="P"/>Perempuan</label>
 					</div>
 				</div>
 				<div class="control-group">
@@ -130,29 +129,29 @@
 					</div>
 				</div>
 				<div class="control-group">
-					<label class="control-label control-label-min" for="tampil-email">Tampil Email</label>
+					<label class="control-label control-label-min" for="tampil_email">Tampil Email</label>
 					<div class="controls controls-min">							
-						<label for="tampil-email1"><input type="radio" name="tampil-email" id="tampil-email1"> Show</label>
-						<label for="tampil-email2"><input type="radio" name="tampil-email" id="tampil-email2"> Dont show</label>
+						<label for="tampil-email1"><input type="radio" name="tampil_email" id="tampil-email1" value="y" checked> Show</label>
+						<label for="tampil-email2"><input type="radio" name="tampil_email" id="tampil-email2" value="t"> Dont show</label>
 					</div>
 				</div>
 				<div class="control-group">
 					<label class="control-label control-label-min" for="no-hp">No. HP</label>
 					<div class="controls controls-min">	
-						<input name="no-hp" id="no-hp" type="text" required="" placeholder="No. HP">
+						<input name="no_hp" id="no-hp" type="text" required="" placeholder="No. HP">
 					</div>
 				</div>
 				<div class="control-group">
 					<label class="control-label control-label-min" for="tampil-no-hp">Tampil No. HP</label>
 					<div class="controls controls-min">							
-						<label for="tampil-no-hp1"><input type="radio" name="tampil-email" id="tampil-no-hp1"> Show</label>
-						<label for="tampil-no-hp2"><input type="radio" name="tampil-email" id="tampil-no-hp2"> Dont show</label>
+						<label for="tampil-no-hp1"><input type="radio" name="tampil_no_hp" id="tampil-no-hp1" value="y" checked> Show</label>
+						<label for="tampil-no-hp2"><input type="radio" name="tampil_no_hp" id="tampil-no-hp2" value="t"> Dont show</label>
 					</div>
 				</div>
 				<div class="control-group">
 					<label class="control-label control-label-min" for="foto">Tampil No. HP</label>
 					<div class="controls controls-min">							
-						<input name="foto" id="foto" type="file" required="" placeholder="your photo">
+						<input name="foto_profil" id="foto" type="file" required="" placeholder="your photo">
 					</div>
 				</div>
 				<div class="form-actions">
