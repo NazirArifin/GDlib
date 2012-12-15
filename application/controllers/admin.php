@@ -21,7 +21,7 @@ class Admin extends CI_Controller {
 		
 		switch ($param) {
 			case 'add':
-				if ($this->input->post('id_user')){
+				if ($this->input->post('id_level_user')){
 					$hasil = $this->admin_model->insertUserDosen();
 					$this->session->set_flashdata('message','Data sudah tersimpan');
 					header('location: /admin/dosen');

@@ -77,14 +77,14 @@
 			<a href="#" class="btn btn-info btn-mini pull-right" onClick="return sclose()"><i class="icon-remove icon-white"></i></a>
 			<legend>Tambah User Dosen</legend>
 				<div class="control-group">
-					<label class="control-label control-label-min" for="id-user">ID User</label>
+					<label class="control-label control-label-min" for="id-user">Level User</label>
 					<div class="controls controls-min">
-						<select class="user" name="id_user">
+						<select class="user" name="id_level_user">
 							<?php
-								$id_user = $controller->admin_model->tampil_ID_user();
+								$id_user = $controller->admin_model->tampil_level_user();
 								foreach ($id_user as $row):
 							?>
-								<option value="<?php echo $row->ID_USER ?>"><?php echo $row->ID_USER ?></option>
+								<option value="<?php echo $row->ID_LEVEL_USER ?>"><?php echo $row->NAMA_LEVEL_USER ?></option>
 							<?php
 								endforeach;
 							?>
@@ -94,64 +94,25 @@
 				<div class="control-group">
 					<label class="control-label control-label-min" for="nama-profil">Nama</label>
 					<div class="controls controls-min">
-						<input id="nama-profil" name="nama_profil" type="text" required="" placeholder="Your Name">
+						<input id="nama-user" name="nama_user" type="text" required="" placeholder="Your Name">
 					</div>
 				</div>
 				<div class="control-group">
-					<label class="control-label control-label-min" for="jk">Jenis Kelamin</label>
-					<div class="controls controls-min">
-							<label for="jk1"><input type="radio" id="jk1" name="jk" value="L" checked>Laki-Laki</label>
-							<label for="jk2"><input type="radio" id="jk2" name="jk" value="P"/>Perempuan</label>
-					</div>
-				</div>
-				<div class="control-group">
-					<label class="control-label control-label-min" for="tempat">Tempat Lahir</label>
-					<div class="controls controls-min">
-						<input name="tempat" id="tempat" type="text" required="" placeholder="Tempat Lahir">
-					</div>
-				</div>
-				<div class="control-group">
-					<label class="control-label control-label-min" for="tanggal">Tanggal Lahir</label>
-					<div class="controls controls-min">
-						<input name="tanggal" id="tanggal" type="date" required="" placeholder="Tanggal Lahir">
-					</div>
-				</div>
-				<div class="control-group">
-					<label class="control-label control-label-min" for="alamat">Alamat</label>
+					<label class="control-label control-label-min" for="aktivitas">Aktivitas User</label>
 					<div class="controls controls-min">				
-						<textarea name="alamat" id="alamat"></textarea>
+						<textarea name="aktivitas" id="aktivitas"></textarea>
 					</div>
 				</div>
 				<div class="control-group">
-					<label class="control-label control-label-min" for="email">Email</label>
-					<div class="controls controls-min">			
-						<input name="email" id="email" type="text" required="" placeholder="Your Email">
-					</div>
-				</div>
-				<div class="control-group">
-					<label class="control-label control-label-min" for="tampil_email">Tampil Email</label>
-					<div class="controls controls-min">							
-						<label for="tampil-email1"><input type="radio" name="tampil_email" id="tampil-email1" value="y" checked> Show</label>
-						<label for="tampil-email2"><input type="radio" name="tampil_email" id="tampil-email2" value="t"> Dont show</label>
-					</div>
-				</div>
-				<div class="control-group">
-					<label class="control-label control-label-min" for="no-hp">No. HP</label>
+					<label class="control-label control-label-min" for="no-induk-user">No. Induk User</label>
 					<div class="controls controls-min">	
-						<input name="no_hp" id="no-hp" type="text" required="" placeholder="No. HP">
+						<input name="no_induk_user" id="no-induk-user" type="text" required="" placeholder="No. Induk User">
 					</div>
 				</div>
 				<div class="control-group">
-					<label class="control-label control-label-min" for="tampil-no-hp">Tampil No. HP</label>
-					<div class="controls controls-min">							
-						<label for="tampil-no-hp1"><input type="radio" name="tampil_no_hp" id="tampil-no-hp1" value="y" checked> Show</label>
-						<label for="tampil-no-hp2"><input type="radio" name="tampil_no_hp" id="tampil-no-hp2" value="t"> Dont show</label>
-					</div>
-				</div>
-				<div class="control-group">
-					<label class="control-label control-label-min" for="foto">Tampil No. HP</label>
-					<div class="controls controls-min">							
-						<input name="foto_profil" id="foto" type="file" required="" placeholder="your photo">
+					<label class="control-label control-label-min" for="id-facebook">ID Facebook User</label>
+					<div class="controls controls-min">	
+						<input name="id_facebook" id="id-facebook" type="text" required="" placeholder="ID Facebook">
 					</div>
 				</div>
 				<div class="form-actions">
@@ -175,10 +136,10 @@
 							<img src="/images/animal1.png" alt=""/>
 						</div>
 						<div class="span8">
-										<h2><?php echo $row->NAMA_PROFIL ?> </h2>
-										<h4><?php echo $row->EMAIL_PROFIL ?> </h4>
-										<h4><?php echo $row->NO_HP_PROFIL ?> </h4>
-										<h5><?php echo $row->ALAMAT_PROFIL ?> </h5>
+										<h2><?php echo $row->NAMA_USER ?> </h2>
+										<h4><?php echo $row->AKTIVITAS_USER ?> </h4>
+										<h4><?php echo $row->NO_INDUK_USER ?> </h4>
+										<h5><?php echo $row->ID_FACEBOOK_USER ?> </h5>
 							<button class="btn btn-mini btn-info tombol2"><i class="icon-wrench icon-white"></i> Edit</button>
 							<button class="btn btn-mini btn-info"><i class="icon-trash icon-white"></i> Delete</button>
 							<button class="btn btn-mini btn-info"><i class="icon-map-marker icon-white"></i> Detail</button>
