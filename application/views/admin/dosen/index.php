@@ -74,7 +74,7 @@
 					}
 			?>
 			<form class="form-horizontal hide" id="form-tambah" action="/admin/dosen/add" method="POST" enctype="multipart/form-data">
-			<a href="#" class="btn btn-inverse btn-mini pull-right" onClick="return sclose()"><i class="icon-remove icon-white"></i></a>
+			<a href="#" class="btn btn-info btn-mini pull-right" onClick="return sclose()"><i class="icon-remove icon-white"></i></a>
 			<legend>Tambah User Dosen</legend>
 				<div class="control-group">
 					<label class="control-label control-label-min" for="id-user">ID User</label>
@@ -155,13 +155,13 @@
 					</div>
 				</div>
 				<div class="form-actions">
-					<button href="#" class="btn btn-danger btn-mini" data-dismiss="modal" id="close"><i class="icon-remove icon-white"></i> Close</button>
-					<button  href="#" class="btn btn-primary btn-mini" type="submit"><i class="icon-ok icon-white"></i> Simpan</button>
+					<button href="#" class="btn btn-info btn-mini" data-dismiss="modal" id="close"><i class="icon-remove icon-white"></i> Close</button>
+					<button  href="#" class="btn btn-info btn-mini" type="submit"><i class="icon-ok icon-white"></i> Simpan</button>
 				</div>
 				<hr>
 				</form>
 			<input type="text" class="input-medium search-query" >
-			<button class="btn btn-mini btn-success pull-right" id="tombol" onClick="return tambahDosen()"><i class="icon-plus icon-white"></i></button><br><br><br>
+			<button class="btn btn-mini btn-info pull-right" id="tombol" onClick="return tambahDosen()"><i class="icon-plus icon-white"></i></button><br><br><br>
 			<div class="container-fluid">
 			<?php
 				$dosen=$controller->admin_model->tampilUserDosen();
@@ -179,9 +179,9 @@
 										<h4><?php echo $row->EMAIL_PROFIL ?> </h4>
 										<h4><?php echo $row->NO_HP_PROFIL ?> </h4>
 										<h5><?php echo $row->ALAMAT_PROFIL ?> </h5>
-							<button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i> Edit</button>
-							<button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i> Delete</button>
-							<button class="btn btn-mini btn-danger"><i class="icon-map-marker icon-white"></i> Detail</button>
+							<button class="btn btn-mini btn-info tombol2"><i class="icon-wrench icon-white"></i> Edit</button>
+							<button class="btn btn-mini btn-info"><i class="icon-trash icon-white"></i> Delete</button>
+							<button class="btn btn-mini btn-info"><i class="icon-map-marker icon-white"></i> Detail</button>
 						</div>
 				</div>
 				<hr>
