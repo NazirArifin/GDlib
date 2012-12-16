@@ -27,6 +27,8 @@ class Admin extends CI_Controller {
 					header('location: /admin/dosen');
 				}
 				break;
+			case 'update':
+				break;
 			default:
 				$this->load->view('admin/dosen/index', array('controller' => $this));
 				jsloc::show();

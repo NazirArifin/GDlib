@@ -123,7 +123,7 @@
 				</form>
 			<input type="text" class="input-medium search-query" >
 			<button class="btn btn-mini btn-info pull-right" id="tombol" onClick="return tambahDosen()"><i class="icon-plus icon-white"></i></button><br><br><br>
-			<div class="container-fluid">
+			<div class="container-fluid" id="view">
 			<?php
 				$dosen=$controller->admin_model->tampilUserDosen();
 					if ($dosen==0):
@@ -133,14 +133,14 @@
 				?>
 				<div class="row-fluid">
 						<div class="span4">
-							<img src="/images/animal1.png" alt=""/>
+							<img src="/images/ogo.png" alt=""/>
 						</div>
 						<div class="span8">
 										<h2><?php echo $row->NAMA_USER ?> </h2>
 										<h4><?php echo $row->AKTIVITAS_USER ?> </h4>
 										<h4><?php echo $row->NO_INDUK_USER ?> </h4>
 										<h5><?php echo $row->ID_FACEBOOK_USER ?> </h5>
-							<button class="btn btn-mini btn-info tombol2"><i class="icon-wrench icon-white"></i> Edit</button>
+							<button class="btn btn-mini btn-info"><i class="icon-wrench icon-white"></i> Edit</button>
 							<button class="btn btn-mini btn-info"><i class="icon-trash icon-white"></i> Delete</button>
 							<button class="btn btn-mini btn-info"><i class="icon-map-marker icon-white"></i> Detail</button>
 						</div>
