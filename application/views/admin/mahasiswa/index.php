@@ -8,11 +8,11 @@
 			<link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
 			<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap.min.css" />
 			<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
-			<link rel="stylesheet" href="/static/css/main.css" />
+			<link rel="stylesheet" href="/third_party/alertify/alertify.core.css" />
+			<link rel="stylesheet" href="/third_party/alertify/alertify.default.css" />
+			<link rel="stylesheet" href="/css/main.css" />
 			
-			<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
-			<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
-			<script src="/third_party/bootstrap/bootstrap.min.js"></script>
+			
 
     <style type="text/css">
 	#logo{
@@ -66,10 +66,41 @@
 			</ul>
 		</div>
 		<div class="well span9 pull-right">
-			<input type="text" class="input-medium search-query" >
-			<button class="btn btn-mini btn-info pull-right" id="tombol"><i class="icon-plus icon-white"></i></button><br><br><br>
-			<div class="container-fluid">
+			<form class="form-horizontal hide" id="form-tambah" action="" method="POST">
+					<a href="#" class="btn btn-info btn-mini pull-right" onClick="return sclose()"><i class="icon-remove icon-white"></i></a>
+				<fieldset>
+					<legend>Tambah User Mahasiswa</legend>	
+				<div class="control-group">
+					<label class="control-label control-label-min" for="nama-user">Nama</label>
+					<div class="controls controls-min">
+						<input id="nama-user" name="nama_user" type="text" required="" placeholder="Your Name">
+					</div>
+				</div>
 				
+				<div class="control-group">
+					<label class="control-label control-label-min" for="no-induk-user">No. Induk Dosen</label>
+					<div class="controls controls-min">	
+						<input name="no_induk_user" id="no-induk-user" type="text" required="" placeholder="No. Induk User">
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label control-label-min" for="id-facebook">ID Facebook</label>
+					<div class="controls controls-min">	
+						<input name="id_facebook" id="id-facebook" type="text" required="" placeholder="ID Facebook">
+					</div>
+				</div>
+				<div class="form-actions">
+					<button href="#" class="btn btn-info btn-mini" type="button" onClick="return cancel()"><i class="icon-remove icon-white"></i> Cancel</button>
+					<button  href="#" class="btn btn-info btn-mini" type="button" onClick="return simpanUserMahasiswa()"><i class="icon-ok icon-white" ></i> Simpan</button>
+				</div>
+				<hr>
+				</fieldset>
+			</form>
+			<div class="container-fluid" id="view">
+				<div class="row-fluid">
+					<input type="text" class="input-medium search-query"/>
+					<button class="btn btn-mini btn-info pull-right" id="tombol" onClick="return tambahMahasiswa()"><i class="icon-plus icon-white"></i></button><br><br><br>
+				</div>
 				<?php
 					$mahasiswa=$controller->admin_model->tampilUserMahasiswa();
 					if($mahasiswa==0):
@@ -85,9 +116,9 @@
 										<h2><?php echo $row->NAMA_USER ?> </h2>
 										<h4><?php echo $row->NO_INDUK_USER ?> </h4>
 										<h5><?php echo $row->ID_FACEBOOK_USER ?> </h5>
-							<button class="btn btn-mini btn-info" onClick="editUserDosen(this, <?php echo $row->ID_USER ?>)"><i class="icon-wrench icon-white"></i> Edit</button>
-							<button class="btn btn-mini btn-info" onClick="deleteUserDosen(this, <?php echo $row->ID_USER ?>)"><i class="icon-trash icon-white"></i> Delete</button>
-							<button class="btn btn-mini btn-info" onClick="detailUserDosen(this, <?php echo $row->ID_USER ?>)"><i class="icon-map-marker icon-white"></i> Detail</button>
+							<button class="btn btn-mini btn-info" onClick="editUserMahasiswa(this, <?php echo $row->ID_USER ?>)"><i class="icon-wrench icon-white"></i> Edit</button>
+							<button class="btn btn-mini btn-info" onClick="deleteUserMahasiswa(this, <?php echo $row->ID_USER ?>)"><i class="icon-trash icon-white"></i> Delete</button>
+							<button class="btn btn-mini btn-info" onClick="detailUserMahasiswa(this, <?php echo $row->ID_USER ?>)"><i class="icon-map-marker icon-white"></i> Detail</button>
 						</div>
 				<hr>
 				</div>
@@ -95,23 +126,26 @@
 					endforeach;
 					endif;
 					?>
-			</div>
-			<hr>
-			<hr>
-			<div class="pagination" align="center">
-				<ul>
-					<li><a href="#">Prev</a></li>
-					<li class="active">
-					<a href="#">1</a>
-					</li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">Next</a></li>
-				</ul>
+				<div class="pagination" align="center">
+					<ul>
+						<li><a href="#">Prev</a></li>
+						<li class="active">
+						<a href="#">1</a>
+						</li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">Next</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
   </div>
 </div>
+			<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
+			<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
+			<script src="/third_party/bootstrap/bootstrap.min.js"></script>
+			<script src="/third_party/alertify/alertify.min.js"></script>
+			<script src="/js/admin.js"></script>
 </body>
 </html>

@@ -56,12 +56,12 @@ class Admin extends CI_Controller {
 		
 	}
 	
-	public function mahasiswa()
+	public function mahasiswa($param='', $extra='')
 	{
 		$this->load->library('session');
 		$this->load->database();
 		
-		/*switch ($param) {
+		switch ($param) {
 			case 'add':
 				$nama = $this->input->post('nama_user');
 				if ( ! empty($nama)){
@@ -85,14 +85,10 @@ class Admin extends CI_Controller {
 					header('location:/admin/mahasiswa');
 				}
 				break;
-			default:*/
+			default:
 				$this->load->view('admin/mahasiswa/index', array('controller' => $this));
 				jsloc::show();
-		
-		/*
-		$this->load->view('admin/mahasiswa/index', array('controller' => $this));
-		jsloc::show();
-		*/
+		}
 	}
 	
 	public function modul()
