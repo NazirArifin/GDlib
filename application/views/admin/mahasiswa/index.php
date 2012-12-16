@@ -10,7 +10,7 @@
 			<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
 			<link rel="stylesheet" href="/third_party/alertify/alertify.core.css" />
 			<link rel="stylesheet" href="/third_party/alertify/alertify.default.css" />
-			<link rel="stylesheet" href="/css/main.css" />
+			<link rel="stylesheet" href="/css/style.css" />
 			
 			
 
