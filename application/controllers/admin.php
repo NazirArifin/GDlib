@@ -14,20 +14,34 @@ class Admin extends CI_Controller {
 		jsloc::show();
 	}
 	
-	public function dosen($param = '')
+	public function dosen($param = '', $extra = '')
 	{
 		$this->load->library('session');
 		$this->load->database();
 		
 		switch ($param) {
 			case 'add':
-				if ($this->input->post('id_level_user')){
+				$nama = $this->input->post('nama_user');
+				if ( ! empty($nama)){
 					$hasil = $this->admin_model->insertUserDosen();
-					$this->session->set_flashdata('message','Data sudah tersimpan');
-					header('location: /admin/dosen');
-				}
+					$pesan = array(
+						'success' => ($hasil ? 1 : 0),
+						'error' => ($hasil ? 0 : 1)
+					);
+					echo json_encode($pesan);
+				} else
+					echo '{ "success": 0, "error": 1 }';
+				break;
+			case 'data':
+				$pilih = $this->admin_model->pilihIdUser($extra);
+				echo json_encode($pilih);
 				break;
 			case 'update':
+				if ($this->input->post('id_level_user')){
+					$hasil = $this->admin_model->insertUserDosen();
+					$this->session->set_flashdata('message','Data Sudah TerEdit');
+					header('location:/admin/dosen');
+				}
 				break;
 			default:
 				$this->load->view('admin/dosen/index', array('controller' => $this));
