@@ -53,14 +53,12 @@ class Admin_model extends CI_Model {
 		}
 	}
 	
-	public function editUserDosen(){
+	public function editUserDosen($id){
 		$update = array(
-		'ID_LEVEL_USER'=>'2',
 		'NAMA_USER'=>$this->input->post('nama_user'),
 		'NO_INDUK_USER'=>$this->input->post('no_induk_user'),
 		'ID_FACEBOOK_USER'=>$this->input->post('id_facebook'));
 		
-		$this->db->where('id',$this->input->post('id'));
 		$this->db->update('tb_user',$update);
 	}
 	

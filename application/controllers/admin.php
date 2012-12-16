@@ -37,10 +37,14 @@ class Admin extends CI_Controller {
 				echo json_encode($pilih);
 				break;
 			case 'update':
-				if ($this->input->post('id_level_user')){
-					$hasil = $this->admin_model->insertUserDosen();
-					$this->session->set_flashdata('message','Data Sudah TerEdit');
-					header('location:/admin/dosen');
+				if ($this->input->post('id_user')){
+					$this->admin_model->editUserDosen($extra);
+					$pesan = array(
+						'NAMA_USER' => $this->input->post('nama_user'),
+						'NO_INDUK_USER' => $this->input->post('no_induk_user'),
+						'ID_FACBOOK_USER' =>$this->input->post('id_facebook')
+					);
+					echo json_encode($pesan);
 				}
 				break;
 			default:

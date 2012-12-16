@@ -71,6 +71,7 @@
 					<label class="control-label control-label-min" for="nama-user">Nama</label>
 					<div class="controls controls-min">
 						<input id="nama-user" name="nama_user" type="text" required="" placeholder="Your Name">
+						<input id="id-user" name="id_user" type="hidden" value="">
 					</div>
 				</div>
 				
@@ -107,7 +108,7 @@
 				?>
 				<div class="row-fluid data-user">
 						<div class="span4">
-							<img src="/images/ogo.png" alt=""/>
+							<a href="#image" class="thumbnail"><img src="/images/ct.jpg" alt=""/></a>
 						</div>
 						<div class="span8">
 										<h2><?php echo $row->NAMA_USER ?> </h2>
@@ -117,8 +118,8 @@
 							<button class="btn btn-mini btn-info" onClick="deleteUserDosen(this, <?php echo $row->ID_USER ?>)"><i class="icon-trash icon-white"></i> Delete</button>
 							<button class="btn btn-mini btn-info" onClick="detailUserDosen(this, <?php echo $row->ID_USER ?>)"><i class="icon-map-marker icon-white"></i> Detail</button>
 						</div>
-				<hr>
 				</div>
+				<hr>
 					<?php
 					endforeach;
 					endif;

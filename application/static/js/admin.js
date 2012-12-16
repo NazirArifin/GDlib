@@ -33,8 +33,10 @@ function editUserDosen(object, id){
 			
 		},
 		success: function(o){
+			$('#form-tambah').attr('action', '/admin/dosen/update');
 			$('#view').hide('blind', {} , 500);
 			$('#form-tambah').show('blind', {} , 1500);
+			$('#id-user').val(o[0].ID_USER);
 			$('#nama-user').val(o[0].NAMA_USER);
 			$('#no-induk-user').val(o[0].NO_INDUK_USER);
 			$('#id-facebook').val(o[0].ID_FACEBOOK_USER);
@@ -58,6 +60,7 @@ function simpanUSerDosen(){
 			if (data.success==1){
 				$form.find('input').val('');
 				alertify.success('Data Sudah Tersimpan');
+				$('#form-tambah').hide('blind', {} , 1500);
 			}
 			else {
 				alertify.error('Data Gagal disimpan');
