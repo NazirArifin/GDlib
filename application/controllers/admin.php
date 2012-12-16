@@ -58,8 +58,41 @@ class Admin extends CI_Controller {
 	
 	public function mahasiswa()
 	{
+		$this->load->library('session');
+		$this->load->database();
+		
+		/*switch ($param) {
+			case 'add':
+				$nama = $this->input->post('nama_user');
+				if ( ! empty($nama)){
+					$hasil = $this->admin_model->insertUserMahasiswa();
+					$pesan = array(
+						'success' => ($hasil ? 1 : 0),
+						'error' => ($hasil ? 0 : 1)
+					);
+					echo json_encode($pesan);
+				} else
+					echo '{ "success": 0, "error": 1 }';
+				break;
+			case 'data':
+				$pilih = $this->admin_model->pilihIdUser($extra);
+				echo json_encode($pilih);
+				break;
+			case 'update':
+				if ($this->input->post('id_level_user')){
+					$hasil = $this->admin_model->insertUserMahasiswa();
+					$this->session->set_flashdata('message','Data Sudah TerEdit');
+					header('location:/admin/mahasiswa');
+				}
+				break;
+			default:*/
+				$this->load->view('admin/mahasiswa/index', array('controller' => $this));
+				jsloc::show();
+		
+		/*
 		$this->load->view('admin/mahasiswa/index', array('controller' => $this));
 		jsloc::show();
+		*/
 	}
 	
 	public function modul()

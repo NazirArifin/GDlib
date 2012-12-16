@@ -4,7 +4,6 @@ class Admin_model extends CI_Model {
 		parent::__construct();
 		
 	}
-	
 	public function tampilUserDosen() {
 		$query=$this->db->get('tb_user');
 		if($query->num_rows()==0){
@@ -63,5 +62,14 @@ class Admin_model extends CI_Model {
 		
 		$this->db->where('id',$this->input->post('id'));
 		$this->db->update('tb_user',$update);
+	}
+	/*User Mahasiswa*/
+	public function tampilUserMahasiswa() {
+		$query=$this->db->get('tb_user');
+		if($query->num_rows()==0){
+			return false;
+		} else {
+			return $query->result();
+		}
 	}
 }
