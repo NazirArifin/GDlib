@@ -86,7 +86,6 @@
 	<!--tab untuk jurnal-->
 	  <div class="tab-pane active" id="jurnal">
 		<table class="table">
-		  
 		  <thead>
 			<tr>
 			  <th>Judul</th>
