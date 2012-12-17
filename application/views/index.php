@@ -7,13 +7,9 @@
 	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<title>GDLib :: G{edung}D Library</title>
 	
-	<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-no-icon.min.css" />
 	<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
-	<link rel="stylesheet" href="/css/main.css" />
-			
-	<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
-	<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
-	<script src="/third_party/bootstrap/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="/third_party/awesome/css/font-awesome.css" />
 	
 	<link href="/third_party/slider/2/js-image-slider.css" rel="stylesheet" type="text/css" />
 	<link href="/third_party/slider/2/slider.css" rel="stylesheet" type="text/css" />
@@ -26,8 +22,8 @@
 			<div class="container">
 				<a href="/" id="logo" class="pull-left"><img src="/images/gd.png" /></a>
 				<ul class="nav pull-right nav-pills">
-					<li><a href="#"><i class="icon-dashboard"></i> Dashboard</a></li>
-					<li><a href="#" data-toggle="modal" data-target="#modal-info"><i class="icon-user"></i> Profil</a></li>
+					<li><a href="#"><i class="icon-dashboard icon-large"></i> Dashboard</a></li>
+					<li><a href="#" data-toggle="modal" data-target="#modal-info"><i class="icon-user icon-large"></i> Profil</a></li>
 				</ul>
 				<div class="input-append pull-right">
 					<input class="input-medium" id="search-top" type="text" name="q" />
@@ -121,12 +117,11 @@
         </div>
     </div>
 
-	<script src="/third_party/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
+	<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
 	<script src="/third_party/jquery/jquery-plugins.js" type="text/javascript"></script>
 	<script src="/third_party/bootstrap/bootstrap.min.js" type="text/javascript"></script>
 	<script src="/third_party/slider/2/js-image-slider.js" type="text/javascript"></script>
 	<script src="/third_party/slider/2/jquery-slider.js" type="text/javascript"></script>
-	
 	<script type="text/javascript">
 $('a[rel="popover"]').popover();
 $('a[rel="tooltip"]').tooltip();
