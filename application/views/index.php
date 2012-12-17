@@ -7,11 +7,9 @@
 	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<title>GDLib :: G{edung}D Library</title>
 	
-	<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
-	<link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
 	<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
-	<link rel="stylesheet" href="/static/css/main.css" />
+	<link rel="stylesheet" href="/css/main.css" />
 			
 	<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
 	<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
@@ -39,7 +37,7 @@
 		</div>
 	</div>
 	<div class="container">
-		<div class="row">
+		<div class="row-fluid">
 			<div class="span10 offset1">
 				<div class="row-fluid slider-frame">
 					<div id="mcts1" class="pull-left">
@@ -70,8 +68,7 @@
 				</div>
 			</div>
 		</div>
-		<br />
-		<div class="row">
+		<div class="row-fluid">
 			<div class="span10 offset1">
 				<div class="row-fluid">
 					<div class="span3 boxes well">
@@ -96,9 +93,8 @@
 						<a href="#" class="btn btn-success btn-block btn-large"><i class="icon-newspaper"></i> BULETIN</a>
 						
 						
-					</div>	
+					</div>
 				</div>
-				<hr />
 			</div>
 		</div>
 		<footer class="row-fluid">

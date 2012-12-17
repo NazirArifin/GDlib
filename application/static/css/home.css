@@ -1,20 +1,8 @@
-@font-face {
-	font-family: 'Open Sans';
-	src: url('/third_party/bootmetro/font/opensans-regular-webfont.eot');
-	src: local('Open Sans'), local('Open Sans'), url('/third_party/bootmetro/font/opensans-regular-webfont.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'IcoMoon';
-	src: url('/third_party/bootmetro/font/IcoMoon.eot');
-	src: local('IcoMoon'), local('IcoMoon'), url('/third_party/bootmetro/font/IcoMoon.ttf') format('truetype');
-}
-	
 body {
-	font-family: 'Open Sans', Arial, sans-serif;
 	padding-top: 50px;
 	padding-bottom: 0px;
 	background-image: url('/images/body-noise.png');
+	font-size: 80%;
 }
 
 .slider-frame {
@@ -25,6 +13,7 @@ body {
 	background: linear-gradient(to bottom,  rgba(245,246,246,1) 0%,rgba(219,220,226,0.71) 21%,rgba(184,186,198,0.31) 49%,rgba(185,187,199,0.3) 50%,rgba(221,223,227,0.72) 80%,rgba(245,246,246,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=0 );
 	border: 1px solid #e3e3e3;
+	margin-bottom: 10px;
 }
 
 #mcts1 {
