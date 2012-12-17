@@ -8,7 +8,7 @@
 			<link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
 			<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap.min.css" />
 			<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
-			<link rel="stylesheet" href="/css/main.css" />
+			<link rel="stylesheet" href="/static/css/main.css" />
 			
 			<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
 			<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
@@ -481,19 +481,19 @@
 	  </thead>
 	  <tbody>
 		<tr>
-		  <td><img src="/images/ogo.png" class="image-admin"></td>
+		  <td><img src="./static/images/ogo.png" class="image-admin"></td>
 		  <td>WTF</td>
 		  <td>Lorem ipsum dolor sit amet</td>
 		  <td><label class="label label-important">Banned</label></td>
 		</tr>
 		<tr>
-		  <td><img src="/images/ogo.png" class="image-admin"></td>
+		  <td><img src="./static/images/ogo.png" class="image-admin"></td>
 		  <td>Accident</td>
 		  <td>Lorem ipsum dolor sit amet</td>
 		  <td><label class="label label-success">active</label></td>
 		</tr>
 		<tr>
-		  <td><img src="/images/ogo.png" class="image-admin"></td>
+		  <td><img src="./static/images/ogo.png" class="image-admin"></td>
 		  <td>LOL</td>
 		  <td>Lorem ipsum dolor sit amet</td>
 		  <td><label class="label label-warning">g jelas</label></td>
