@@ -71,6 +71,8 @@ function simpanUSerDosen(){
 }
 
 function deleteUserDosen(object, id){
+//var konfirmasi = confirm("Apakah Anda yakin ingin menghapus Data ini ?");
+	//if (konfirmasi == true){
 	$('#form-tambah').attr('action', '/admin/dosen/delete');
 	var $form = $('#form-tambah');
 	
@@ -84,7 +86,6 @@ function deleteUserDosen(object, id){
 		},
 		success: function(o){
 		//console.log(o); ! perhatikan kamu pake var o bkan data
-		alertify.success('Data Sudah Terhapus');
 			if (o.success==1){
 				$form.find('input').val('');
 				alertify.success('Data Sudah Terhapus');
@@ -95,6 +96,7 @@ function deleteUserDosen(object, id){
 			}
 		}
 	});
+	//}
 	return false;
 }
 
