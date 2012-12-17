@@ -7,12 +7,15 @@
 	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<title>GDLib :: G{edung}D Library</title>
 	
-	<link rel="stylesheet" type="text/css" href="/third_party/bootstrap/css/bootstrap.min.css" />
-	<link rel="stylesheet" type="text/css" href="/third_party/bootstrap/css/bootstrap-responsive.min.css">
-	
-	<link rel="stylesheet" type="text/css" href="/third_party/bootmetro/css/bootmetro.css">
-	<link rel="stylesheet" type="text/css" href="/third_party/bootmetro/css/metro-ui-light.css">
-	<link rel="stylesheet" type="text/css" href="/third_party/bootmetro/css/icomoon.css">
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
+	<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
+	<link rel="stylesheet" href="/static/css/main.css" />
+			
+	<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
+	<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
+	<script src="/third_party/bootstrap/bootstrap.min.js"></script>
 	
 	<link href="/third_party/slider/2/js-image-slider.css" rel="stylesheet" type="text/css" />
 	<link href="/third_party/slider/2/slider.css" rel="stylesheet" type="text/css" />
