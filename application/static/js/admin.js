@@ -46,7 +46,6 @@ function editUserDosen(object, id){
 
 function simpanUSerDosen(){
 	var $form = $('#form-tambah');
-	
 	$.ajax({
 		url: $form.attr('action'),
 		dataType: 'json',
@@ -56,7 +55,7 @@ function simpanUSerDosen(){
 			
 		},
 		success: function(data){
-			//console.log(data);
+			//console.log(data); return;
 			if (data.success==1){
 				$form.find('input').val('');
 				alertify.success('Data Sudah Tersimpan');
@@ -70,6 +69,39 @@ function simpanUSerDosen(){
 	
 	return false;
 }
+
+function deleteUserDosen(object, id){
+//var konfirmasi = confirm("Apakah Anda yakin ingin menghapus Data ini ?");
+	//if (konfirmasi == true){
+	$('#form-tambah').attr('action', '/admin/dosen/delete');
+	var $form = $('#form-tambah');
+	
+	$.ajax({
+		url: '/admin/dosen/delete/' + id,
+		dataType: 'json',
+		//type: $form.attr('method'),
+		//data: $form.serialize(),
+		beforeSend: function(){
+			
+		},
+		success: function(o){
+		//console.log(o); ! perhatikan kamu pake var o bkan data
+			if (o.success==1){
+				$form.find('input').val('');
+				alertify.success('Data Sudah Terhapus');
+				$('#form-tambah').hide('blind', {} , 1500);
+			}
+			else {
+				alertify.error('Data Gagal dihapus');
+			}
+		}
+	});
+	//}
+	return false;
+}
+
+
+
 
 //admin mahasiswa
 function tambahMahasiswa(){

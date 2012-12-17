@@ -59,8 +59,16 @@ class Admin_model extends CI_Model {
 		'NO_INDUK_USER'=>$this->input->post('no_induk_user'),
 		'ID_FACEBOOK_USER'=>$this->input->post('id_facebook'));
 		
+		$this->db->where('ID_USER', $id);
 		$this->db->update('tb_user',$update);
 	}
+	
+	public function deleteUserDosen($id){
+		$this->db->delete('tb_user', array('ID_USER'=>$id));
+	}
+	
+	
+	
 	
 	//User Mahasiswa
 	public function tampilUserMahasiswa() {
