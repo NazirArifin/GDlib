@@ -62,6 +62,13 @@ class Admin_model extends CI_Model {
 		$this->db->update('tb_user',$update);
 	}
 	
+	public function deleteUserDosen($id){
+		$this->db->delete('tb_user', array('ID_USER'=>$id));
+	}
+	
+	
+	
+	
 	//User Mahasiswa
 	public function tampilUserMahasiswa() {
 		$query=$this->db->get('tb_user');

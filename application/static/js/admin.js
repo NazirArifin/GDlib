@@ -71,6 +71,38 @@ function simpanUSerDosen(){
 	return false;
 }
 
+function deleteUserDosen(object, id){
+	$('#form-tambah').attr('action', '/admin/dosen/delete');
+	alert(id);
+	var $form = $('#form-tambah');
+	
+	$.ajax({
+		url: '/admin/dosen/delete/' + id,
+		//dataType: 'json',
+		//type: $form.attr('method'),
+		//data: $form.serialize(),
+		beforeSend: function(){
+			
+		},
+		success: function(o){
+		console.log(data);
+		alertify.success('Data Sudah Terhapus');
+			if (data.success==1){
+				$form.find('input').val('');
+				alertify.success('Data Sudah Terhapus');
+				$('#form-tambah').hide('blind', {} , 1500);
+			}
+			else {
+				alertify.error('Data Gagal dihapus');
+			}
+		}
+	});
+	return false;
+}
+
+
+
+
 //admin mahasiswa
 function tambahMahasiswa(){
 	$('#form-tambah').attr('action', '/admin/mahasiswa/add').show('blind', {} , 2500);

@@ -47,6 +47,10 @@ class Admin extends CI_Controller {
 					echo json_encode($pesan);
 				}
 				break;
+			case 'delete':
+				$hapus = $this->admin_model->deleteUserDosen($extra);
+				echo json_encode($hapus);
+				break;
 			default:
 				$this->load->view('admin/dosen/index', array('controller' => $this));
 				jsloc::show();
