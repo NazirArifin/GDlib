@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-		<title>GDlib | Admin</title>
+		<title>GDlib | Mahasiswa</title>
 		<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
 		<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap.min.css" />
@@ -106,9 +106,9 @@
 			  <td>12/12/12</td>
 			  <td>
 			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+			  <button class="btn btn-primary btn-mini"><i class="icon-download icon-white"></i> download</button>
+			  <button class="btn btn-warning btn-mini"><i class="icon-eye-open icon-white"></i> lihat</button>
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> detail</button>
 			  </div>
 			  </td>
 			</tr>
@@ -117,9 +117,9 @@
 			  <td>12/12/12</td>
 			  <td>
 			 <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+			  <button class="btn btn-primary btn-mini"><i class="icon-download icon-white"></i> download</button>
+			  <button class="btn btn-warning btn-mini"><i class="icon-eye-open icon-white"></i> lihat</button>
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> detail</button>
 			  </div>
 			  </td>
 			</tr>
@@ -128,9 +128,9 @@
 			  <td>12/12/12</td>
 			  <td>
 			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+			  <button class="btn btn-primary btn-mini"><i class="icon-download icon-white"></i> download</button>
+			  <button class="btn btn-warning btn-mini"><i class="icon-eye-open icon-white"></i> lihat</button>
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> detail</button>
 			  </div>
 			  </td>
 			</tr>
@@ -167,9 +167,9 @@
 			  <td>12/12/12</td>
 			  <td>
 			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+			  <button class="btn btn-primary btn-mini"><i class="icon-download icon-white"></i> download</button>
+			  <button class="btn btn-warning btn-mini"><i class="icon-eye-open icon-white"></i> lihat</button>
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> detail</button>
 			  </div>
 			  </td>
 			</tr>
@@ -178,9 +178,9 @@
 			  <td>12/12/12</td>
 			  <td>
 			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+			  <button class="btn btn-primary btn-mini"><i class="icon-download icon-white"></i> download</button>
+			  <button class="btn btn-warning btn-mini"><i class="icon-eye-open icon-white"></i> lihat</button>
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> detail</button>
 			  </div>
 			  </td>
 			</tr>
@@ -189,9 +189,9 @@
 			  <td>12/12/12</td>
 			  <td>
 			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+			  <button class="btn btn-primary btn-mini"><i class="icon-download icon-white"></i> download</button>
+			  <button class="btn btn-warning btn-mini"><i class="icon-eye-open icon-white"></i> lihat</button>
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> detail</button>
 			  </div>
 			  </td>
 			</tr>
@@ -228,9 +228,9 @@
 			  <td>12/12/12</td>
 			  <td>
 			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+			  <button class="btn btn-primary btn-mini"><i class="icon-download icon-white"></i> download</button>
+			  <button class="btn btn-warning btn-mini"><i class="icon-eye-open icon-white"></i> lihat</button>
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> detail</button>
 			  </div>
 			  </td>
 			</tr>
@@ -239,9 +239,9 @@
 			  <td>12/12/12</td>
 			  <td>
 			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+			  <button class="btn btn-primary btn-mini"><i class="icon-download icon-white"></i> download</button>
+			  <button class="btn btn-warning btn-mini"><i class="icon-eye-open icon-white"></i> lihat</button>
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> detail</button>
 			  </div>
 			  </td>
 			</tr>
@@ -250,9 +250,9 @@
 			  <td>12/12/12</td>
 			  <td>
 			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+			  <button class="btn btn-primary btn-mini"><i class="icon-download icon-white"></i> download</button>
+			  <button class="btn btn-warning btn-mini"><i class="icon-eye-open icon-white"></i> lihat</button>
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> detail</button>
 			  </div>
 			  </td>
 			</tr>
@@ -289,9 +289,9 @@
 			  <td>12/12/12</td>
 			  <td>
 			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+			  <button class="btn btn-primary btn-mini"><i class="icon-download icon-white"></i> download</button>
+			  <button class="btn btn-warning btn-mini"><i class="icon-eye-open icon-white"></i> lihat</button>
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> detail</button>
 			  </div>
 			  </td>
 			</tr>
@@ -300,9 +300,9 @@
 			  <td>12/12/12</td>
 			  <td>
 			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+			  <button class="btn btn-primary btn-mini"><i class="icon-download icon-white"></i> download</button>
+			  <button class="btn btn-warning btn-mini"><i class="icon-eye-open icon-white"></i> lihat</button>
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> detail</button>
 			  </div>
 			  </td>
 			</tr>
@@ -311,9 +311,9 @@
 			  <td>12/12/12</td>
 			  <td>
 			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+			  <button class="btn btn-primary btn-mini"><i class="icon-download icon-white"></i> download</button>
+			  <button class="btn btn-warning btn-mini"><i class="icon-eye-open icon-white"></i> lihat</button>
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> detail</button>
 			  </div>
 			  </td>
 			</tr>
