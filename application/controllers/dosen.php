@@ -9,33 +9,34 @@ class Dosen extends CI_Controller {
 	
 	public function index()
 	{
-		$this->load->view('dosen/index', array('controller' => $this));
+		$this->load->view('dosen/index');
 		jsloc::show();
 	}
 	
-	public function profil() {
-		$this->load->view('dosen/profil', array('controller' => $this));
-		jsloc::show();
-	}
-	
-	public function tampil_user(){
+	public function jurnal($param= '',$extra= '')
+	{
+		$this->load->library('session');
 		$this->load->database();
-		$dosen=$this->dosen_model->tampil_dosen();
-		if ($dosen==0){
-			printf("Data Dosen tidak ada");
-		}
-		else {
-			echo "<table border='1'>";
-			echo "<tr><td>NAMA</td><td>AKTIVITAS</td><td>ID Facebook</td></tr>";
-			foreach ($dosen as $row){
-				echo "<tr>";
-				echo "<td>{$row->NAMA_USER}</td>";
-				echo "<td>{$row->AKTIVITAS_USER}</td>";
-				echo "<td>{$row->ID_FACEBOOK_USER}</td>";
-				echo "</tr>";
-			}
-			echo "</table>";
-			
+		
+		switch ($param){
+		
+			case 'add':
+				$judul=$this->input->post('judul_dokumen');
+				if(!empty($judul)){
+					$hasil = $this->dosen_model->insertJurnal();
+					$pesan = array(
+						'success' => ($hasil ? 1 : 0),
+						'error' => ($hasil ? 0 : 1)
+					);
+					echo json_encode($pesan);
+				}else
+					echo '{ "success": 0, "error": 1 }';
+				break;	
+			case 'view':	
+			default:
+			$this->load->view('/dosen/index', array('controller' => $this));
+			jsloc::show();
 		}
 	}
+	
 }

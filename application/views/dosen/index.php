@@ -5,6 +5,8 @@
 	<title>Dosen | Beranda</title>
 	<link href="/third_party/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 	<link href="/third_party/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
+	<link href="/third_party/alertify/alertify.core.css" rel="stylesheet" type="text/css">
+	<link href="/third_party/alertify/alertify.default.css" rel="stylesheet" type="text/css">
 	<style type="text/css">
 		#logo {
 			height: 31px;
@@ -77,6 +79,7 @@
 				</ul>
 			</div>
 			<div class="row-fluid">
+				<form class="form-horizontal" id="form-view-jurnal" action="" method="POST">
 				<div class="span10">
 					<div class="tabbable">
 						<ul class="nav nav-tabs">
@@ -90,7 +93,7 @@
 								<form class="navbar-search pull-left">
 								<input type="text" class="search-query" placeholder="Search">
 								</form>
-								<button class="btn pull-right" type="button" ><i class="icon-plus"></i></button>
+								<button class="btn pull-right" type="button" OnClick="tambahjurnal()"><i class="icon-plus"></i></button>
 								<table class="table">
 									<thead>
 										<tr>
@@ -377,7 +380,67 @@
 						</div>
 					</div>
 				</div>
+				</form>
 			</div>
+			<!--ini bagian tambah jurnal-->
+			<div class="row-fluid">
+				<form class="form-horizontal hide" id="form-tambah" action="" method="POST">
+					<div class="well span12">
+						<a href="#" class="btn btn-info btn-mini pull-right" onClick="return closejurnal()"><i class="icon-remove icon-white"></i></a>
+						<fieldset>
+								<legend>Upload Jurnal</legend>	
+							<div class="control-group">
+								<label class="control-label control-label-min" for="judul-dokumen">Judul Dokumen</label>
+								<div class="controls controls-min">
+									<input id="judul-dokumen" name="judul_dokumen" type="text" required="" placeholder="Judul Dokumen">
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label control-label-min" for="pengarang-dokumen">Pengarang Dokumen</label>
+								<div class="controls controls-min">	
+									<input name="pengarang_dokumen" id="pengarang-dokumen" type="text" required="" placeholder="Pengarang Dokumen">
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label control-label-min" for="prolog-dokumen">Prolog Dokumen</label>
+								<div class="controls controls-min">	
+									<textarea rows="3" name="prolog_dokumen" id="prolog-dokumen"></textarea>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label control-label-min" for="tahun-penerbitan-dokumen">Tahun Penerbitan</label>
+								<div class="controls controls-min">	
+									<input name="tahun_penerbitan_dokumen" id="tahun-penerbitan-dokumen" type="text" required="" placeholder="Tahun Penerbitan">
+								</div>
+							</div>
+							
+							<div class="control-group">
+								<label class="control-label control-label-min" for="tahun-penerbitan-dokumen">File Dokumen</label>
+								<div class="controls controls-min">	
+									<input name="file_dokumen" id="file-dokumen" type="file" required="" placeholder="Tahun Penerbitan">
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label control-label-min" for="foto-dokumen">Foto Dokumen</label>
+								<div class="controls controls-min">	
+									<input name="foto_dokumen" id="foto-dokumen" type="text" required="" placeholder="Foto Dokumen">
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label control-label-min" for="kata-kunci-dokumen">Kata Kunci Dokumen</label>
+								<div class="controls controls-min">	
+									<input name="kata_kunci_dokumen" id="kata-kunci-dokumen" type="text" required="" placeholder="Kata Kunci Dokumen">
+								</div>
+							</div>
+							<div class="form-actions">
+								<button href="#" class="btn btn-info btn-mini" type="button" onClick="return closejurnal()"><i class="icon-remove icon-white"></i> Cancel</button>
+								<button  href="#" class="btn btn-info btn-mini" type="button" onClick="return simpanJurnal()"><i class="icon-ok icon-white" ></i> Simpan</button>
+							</div>
+							<hr>
+						</fieldset>
+					</div>	
+				</form>	
+			</div>	
 			<!--ini bagian kontent-->
 				<div class="row-fluid">
 					<div class="span12">
@@ -406,9 +469,10 @@
 		</div>
 	</div>
 </div>
-
 </body>
 	<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
 	<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
 	<script src="/third_party/bootstrap/bootstrap.min.js"></script>
+	<script src="/third_party/alertify/alertify.min.js"></script>
+	<script src="/js/dosen.js"></script>
 </html>
