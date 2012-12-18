@@ -11,46 +11,7 @@
 	<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
 	<link rel="stylesheet" href="/third_party/awesome/css/font-awesome.css" />
 	
-	<!--
-	<link href="/third_party/slider/2/js-image-slider.css" rel="stylesheet" type="text/css" />
-	<link href="/third_party/slider/2/slider.css" rel="stylesheet" type="text/css" />
-	-->
-	
 	<link href="/css/home.css" rel="stylesheet" type="text/css" />
-	<style>
-.rslides {
-	position: relative;
-	list-style: none;
-	overflow: hidden;
-	width: 600px;
-	padding: 0;
-	margin: 0;
-}
-
-#slider {
-	box-shadow: none;
-	-moz-box-shadow: none;
-	-webkit-box-shadow: none;
-	margin: 0 auto;
-}
-
-#slider .caption {
-	display: block;
-	position: absolute;
-	z-index: 2;
-	font-size: 14px;
-	text-shadow: none;
-	color: #FFF;
-	background: #000;
-	background: rgba(0, 0, 0, .8);
-	left: 0;
-	right: 0;
-	bottom: 0;
-	padding: 10px 20px;
-	margin: 0;
-	max-width: none;
-}
-	</style>
 </head>
 <body>
 	<div class="navbar navbar-fixed-top">
@@ -86,34 +47,6 @@
 							<p class="caption">Ini teks 3</p>
 						</li>
 					</ul>
-					
-					<!--
-					<div id="mcts1" class="pull-left">
-						<img src="/upload/news/slider-1.jpg" />
-						<img src="/upload/news/slider-2.jpg" />
-						<img src="/upload/news/slider-3.jpg" />
-					</div>
-					<div id="sliderFrame" class="pull-left">
-						<div id="slider">
-							<img src="/upload/news/slider-1.jpg" alt="#slideshow-1" title="Welcome to Menucool jQuery Slideshow" />
-							<img src="/upload/news/slider-11.jpg" alt="#slideshow-2"/>
-							<img src="/upload/news/slider-12.jpg" alt="#slideshow-3"/>
-						</div>
-					</div>
-					<div style="clear:both;"></div>
-					<div id="slideshow-1" class="hide">
-						<h3>Welcome to Menucool jQuery Slideshow</h3>
-						This demo shows how the jQuery slideshow (or Thumbnail Slider if using the pure JavaScript) can work together with the JavaScript Image Slider.
-					</div>
-					<div id="slideshow-2" class="hide">
-						<h3>Enhanced Slideshow Effect</h3>
-						The jQuery Slideshow/thumbnail slider works nicely together with the JavaScript Image Slider which greatly enhanced the slideshow with an added aesthetic appeal.
-					</div>
-					<div id="slideshow-3" class="hide">
-						<h3>SEO Friendly</h3>                    
-						The markup is valid HTML5 and SEO optimzied, with all content always being available to search engines. 
-					</div>
-					-->
 				</div>
 			</div>
 		</div>
@@ -174,9 +107,6 @@
 	<script src="/third_party/jquery/jquery-plugins.js" type="text/javascript"></script>
 	<script src="/third_party/bootstrap/bootstrap.min.js" type="text/javascript"></script>
 	<script src="/third_party/js/responsiveslides.min.js" type="text/javascript"></script>
-	<!--
-	<script src="/third_party/slider/2/js-image-slider.js" type="text/javascript"></script>
-	<script src="/third_party/slider/2/jquery-slider.js" type="text/javascript"></script>-->
 	<script type="text/javascript">
 $('a[rel="popover"]').popover();
 $('a[rel="tooltip"]').tooltip();

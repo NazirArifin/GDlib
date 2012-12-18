@@ -87,9 +87,49 @@ footer img {
 	width: 27px;
 }
 
+/*
+ * SLIDER
+ */
+.rslides {
+	position: relative;
+	list-style: none;
+	overflow: hidden;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+#slider {
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	margin: 0 auto;
+}
+
+#slider .caption {
+	display: block;
+	position: absolute;
+	z-index: 2;
+	font-size: 14px;
+	text-shadow: none;
+	color: #FFF;
+	background: #000;
+	background: rgba(0, 0, 0, .8);
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 10px 20px;
+	margin: 0;
+	max-width: none;
+}
+
 @media (min-width: 1000px) { 
 	body {
 		padding-top: 60px;
+	}
+	
+	.rslides {
+		width: 600px;
 	}
 	
 	#sliderFrame {
