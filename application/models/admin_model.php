@@ -22,6 +22,15 @@ class Admin_model extends CI_Model {
 		}
 	}
 	
+	public function tampil_where_level_mahasiswa() {
+		$query=$this->db->get_where('tb_user', array('ID_LEVEL_USER'=>3));
+		if($query->num_rows()==0){
+			return false;
+		} else {
+			return $query->result();
+		}
+	}
+	
 	public function insertUserDosen(){
 		
 		// validasi;

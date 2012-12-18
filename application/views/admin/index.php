@@ -68,10 +68,16 @@
      <!-- menu tab untuk member -->
 		<div class="">
 	 <h2>Member</h2>
+	 <?php
+		$userDosen=$controller->admin_model->tampil_where_level_dosen();
+		$banyakDosen = count($userDosen);
+		$userMahasiswa=$controller->admin_model->tampil_where_level_mahasiswa();
+		$banyakMahasiswa = count($userMahasiswa);
+	 ?>
 	 <input type="text" class="input-medium search-query" placeholder="Cari Member" ><br><br>
 	 <ul class="nav nav-tabs" id="tab-member">
-	  <li class="active"><a href="#dosen" onClick="return tabAdminDosen()">Dosen</a></li>
-	  <li><a href="#maha" onClick="return tabAdminMahasiswa()">Mahasiswa</a></li>
+	  <li class="active"><a href="#dosen" onClick="return tabAdminDosen()">Dosen <span class="badge badge-info"><?php echo $banyakDosen ?></span></a></li>
+	  <li><a href="#maha" onClick="return tabAdminMahasiswa()">Mahasiswa <span class="badge badge-info"><?php echo $banyakMahasiswa ?></span></a></li>
 	  
 	</ul>
 	 
@@ -131,18 +137,27 @@
 	  </div>
 	  <!--tab mahasiswa-->
 	  <div class="tab-pane" id="maha">
-	  <table class="table">
-		  
+	  <table class="table table-striped">
 		  <thead>
 			<tr>
 			  <th>Judul</th>
-			  <th>Taggal</th>
+			  <th>No. Induk</th>
+			  <th>ID Facebook</th>
+			  <th>Aksi</th>
 			</tr>
 		  </thead>
 		  <tbody>
+		  <?php
+				$userMahasiswa=$controller->admin_model->tampil_where_level_mahasiswa();
+				if ($userMahasiswa == 0):
+					echo '<tr><td colspan="4"><div class="alert-info" style="text-align:center;">Data Mahasiswa Tidak Ada</div></td></tr>';
+				else :
+					foreach ($userMahasiswa as $row):
+		  ?>
 			<tr>
-			  <td>Harry Potter</td>
-			  <td>12/12/12</td>
+			  <td><?php echo $row->NAMA_USER ?></td>
+			  <td><?php echo $row->NO_INDUK_USER ?></td>
+			  <td><?php echo $row->ID_FACEBOOK_USER ?></td>
 			  <td>
 			  <div class="btn-group">
 			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
@@ -151,28 +166,10 @@
 			  </div>
 			  </td>
 			</tr>
-			<tr>
-			  <td>Twilight</td>
-			  <td>12/12/12</td>
-			  <td>
-			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
-			  </div>
-			  </td>
-			</tr>
-			<tr>
-			  <td>Janc#k</td>
-			  <td>12/12/12</td>
-			  <td>
-			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
-			  </div>
-			  </td>
-			</tr>
+			<?php
+				endforeach;
+			endif;
+			?>
 		  </tbody>
 		</table>
 		
