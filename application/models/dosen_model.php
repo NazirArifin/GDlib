@@ -18,12 +18,13 @@ class Dosen_model extends CI_Model {
 			'PENGARANG_DOKUMEN'=>$this->input->post('pengarang_dokumen'),
 			'PROLOG_DOKUMEN'=>$this->input->post('prolog_dokumen'),
 			'TAHUN_PENERBITAN_DOKUMEN'=>$this->input->post('tahun_penerbitan_dokumen'),
-			'FOTO_DOKUMEN'=>$this->input->post('foto_dokumen'),
-			'FILE_DOKUMEN'=>$this->input->post('file_dokumen'),
 			'KATA_KUNCI_DOKUMEN'=>$this->input->post('kata_kunci_dokumen'),
 			'UKURAN_FILE_DOKUMEN'=>'100','RATE_DOKUMEN'=>'10',
 			'JUMLAH_DOWNLOAD_DOKUMEN'=>'9','JUMLAH_BACA_DOKUMEN'=>'10');
-		
-		$this->db->insert('tb_dokumen',$insert);
+		$file['file']=array(
+			'FOTO_DOKUMEN'=>$this->input->file('foto_dokumen'),
+			'FILE_DOKUMEN'=>$this->input->file('file_dokumen')
+		);
+		$this->db->insert('tb_dokumen',$insert,$file['file']);
 	}
 }

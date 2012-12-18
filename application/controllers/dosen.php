@@ -18,12 +18,16 @@ class Dosen extends CI_Controller {
 	{
 		$this->load->library('session');
 		$this->load->database();
-		
 		switch ($param){
 			case 'add':
-				if ($this->input->post('judul_dokumen')){
-					$this->dosen_model->insertJurnal();
-					header('location:/dosen');
+				$config['upload_path'] = './upload/';
+				$config['allowed_types'] = 'pdf';
+				
+				$this->load->library('upload', $config);
+				
+				if ($this->input->post('judul_dokumen') & $this->input->file('file_dokumen')){
+						$this->dosen_model->insertJurnal();
+						header('location:/dosen');
 				}
 				break;	
 			case 'view':
