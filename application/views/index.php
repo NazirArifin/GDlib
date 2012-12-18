@@ -38,7 +38,7 @@
 	display: block;
 	position: absolute;
 	z-index: 2;
-	font-size: 16px;
+	font-size: 14px;
 	text-shadow: none;
 	color: #FFF;
 	background: #000;
