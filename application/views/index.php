@@ -11,10 +11,46 @@
 	<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
 	<link rel="stylesheet" href="/third_party/awesome/css/font-awesome.css" />
 	
+	<!--
 	<link href="/third_party/slider/2/js-image-slider.css" rel="stylesheet" type="text/css" />
 	<link href="/third_party/slider/2/slider.css" rel="stylesheet" type="text/css" />
+	-->
 	
 	<link href="/css/home.css" rel="stylesheet" type="text/css" />
+	<style>
+.rslides {
+	position: relative;
+	list-style: none;
+	overflow: hidden;
+	width: 600px;
+	padding: 0;
+	margin: 0;
+}
+
+#slider {
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	margin: 0 auto;
+}
+
+#slider .caption {
+	display: block;
+	position: absolute;
+	z-index: 2;
+	font-size: 16px;
+	text-shadow: none;
+	color: #FFF;
+	background: #000;
+	background: rgba(0, 0, 0, .8);
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 10px 20px;
+	margin: 0;
+	max-width: none;
+}
+	</style>
 </head>
 <body>
 	<div class="navbar navbar-fixed-top">
@@ -36,6 +72,22 @@
 		<div class="row-fluid">
 			<div class="span10 offset1">
 				<div class="row-fluid slider-frame">
+					<ul class="rslides" id="slider">
+						<li>
+							<img src="/upload/news/slider-1.jpg" alt="">
+							<p class="caption">Ini teks 1</p>
+						</li>
+						<li>
+							<img src="/upload/news/slider-2.jpg" alt="">
+							<p class="caption">Ini teks 2</p>
+						</li>
+						<li>
+							<img src="/upload/news/slider-3.jpg" alt="">
+							<p class="caption">Ini teks 3</p>
+						</li>
+					</ul>
+					
+					<!--
 					<div id="mcts1" class="pull-left">
 						<img src="/upload/news/slider-1.jpg" />
 						<img src="/upload/news/slider-2.jpg" />
@@ -61,6 +113,7 @@
 						<h3>SEO Friendly</h3>                    
 						The markup is valid HTML5 and SEO optimzied, with all content always being available to search engines. 
 					</div>
+					-->
 				</div>
 			</div>
 		</div>
@@ -120,14 +173,19 @@
 	<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
 	<script src="/third_party/jquery/jquery-plugins.js" type="text/javascript"></script>
 	<script src="/third_party/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+	<script src="/third_party/js/responsiveslides.min.js" type="text/javascript"></script>
+	<!--
 	<script src="/third_party/slider/2/js-image-slider.js" type="text/javascript"></script>
-	<script src="/third_party/slider/2/jquery-slider.js" type="text/javascript"></script>
+	<script src="/third_party/slider/2/jquery-slider.js" type="text/javascript"></script>-->
 	<script type="text/javascript">
 $('a[rel="popover"]').popover();
 $('a[rel="tooltip"]').tooltip();
 $('.doc-list').readmore({
   substr_len: $('.doc-list').text().substr(0, 25).lastIndexOf(" ")
 }).textOverflow();
+$('#slider').responsiveSlides({
+	speed: 800,
+});
 	</script>
 </body>
 </html>
