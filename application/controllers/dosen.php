@@ -5,6 +5,7 @@ class Dosen extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		include(APPPATH . 'libraries/jsloc.php');
+		$this->load->model('dosen_model');
 	}
 	
 	public function index()
@@ -19,20 +20,14 @@ class Dosen extends CI_Controller {
 		$this->load->database();
 		
 		switch ($param){
-		
 			case 'add':
-				$judul=$this->input->post('judul_dokumen');
-				if(!empty($judul)){
-					$hasil = $this->dosen_model->insertJurnal();
-					$pesan = array(
-						'success' => ($hasil ? 1 : 0),
-						'error' => ($hasil ? 0 : 1)
-					);
-					echo json_encode($pesan);
-				}else
-					echo '{ "success": 0, "error": 1 }';
+				if ($this->input->post('judul_dokumen')){
+					$this->dosen_model->insertJurnal();
+					header('location:/dosen');
+				}
 				break;	
-			case 'view':	
+			case 'view':
+				break;
 			default:
 			$this->load->view('/dosen/index', array('controller' => $this));
 			jsloc::show();

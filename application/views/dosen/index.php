@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>Dosen | Beranda</title>
 	<link href="/third_party/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
 	<link href="/third_party/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
 	<link href="/third_party/alertify/alertify.core.css" rel="stylesheet" type="text/css">
 	<link href="/third_party/alertify/alertify.default.css" rel="stylesheet" type="text/css">
@@ -93,7 +94,7 @@
 								<form class="navbar-search pull-left">
 								<input type="text" class="search-query" placeholder="Search">
 								</form>
-								<button class="btn pull-right" type="button" OnClick="tambahjurnal()"><i class="icon-plus"></i></button>
+								<button class="btn pull-right" type="button" onClick="tambahjurnal()"><i class="icon-plus"></i></button>
 								<table class="table">
 									<thead>
 										<tr>
@@ -384,7 +385,7 @@
 			</div>
 			<!--ini bagian tambah jurnal-->
 			<div class="row-fluid">
-				<form class="form-horizontal hide" id="form-tambah" action="" method="POST">
+				<form class="form-horizontal hide" id="form-tambah" action="" method="POST" enctype="multipart/form-data">
 					<div class="well span12">
 						<a href="#" class="btn btn-info btn-mini pull-right" onClick="return closejurnal()"><i class="icon-remove icon-white"></i></a>
 						<fieldset>
@@ -423,7 +424,7 @@
 							<div class="control-group">
 								<label class="control-label control-label-min" for="foto-dokumen">Foto Dokumen</label>
 								<div class="controls controls-min">	
-									<input name="foto_dokumen" id="foto-dokumen" type="text" required="" placeholder="Foto Dokumen">
+									<input name="foto_dokumen" id="foto-dokumen" type="file" required="" placeholder="Foto Dokumen">
 								</div>
 							</div>
 							<div class="control-group">
@@ -433,8 +434,8 @@
 								</div>
 							</div>
 							<div class="form-actions">
-								<button href="#" class="btn btn-info btn-mini" type="button" onClick="return closejurnal()"><i class="icon-remove icon-white"></i> Cancel</button>
-								<button  href="#" class="btn btn-info btn-mini" type="button" onClick="return simpanJurnal()"><i class="icon-ok icon-white" ></i> Simpan</button>
+								<button class="btn btn-info btn-mini" type="button" onClick="return closejurnal()"><i class="icon-remove icon-white"></i> Cancel</button>
+								<button class="btn btn-info btn-mini" type="submit" ><i class="icon-ok icon-white" ></i> Simpan</button>
 							</div>
 							<hr>
 						</fieldset>
