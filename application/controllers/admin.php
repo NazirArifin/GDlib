@@ -5,19 +5,21 @@ class Admin extends CI_Controller {
 	{
 		parent::__construct();
 		include(APPPATH . 'libraries/jsloc.php');
+		$this->load->database();
 		$this->load->model('admin_model');
 	}
 
 	public function index()
 	{
-		$this->load->view('admin/index');
+		
+		$this->load->view('admin/index', array('controller' => $this));
 		jsloc::show();
 	}
 	
 	public function dosen($param = '', $extra = '')
 	{
 		$this->load->library('session');
-		$this->load->database();
+		//$this->load->database();
 		
 		switch ($param) {
 			case 'add':
@@ -37,8 +39,6 @@ class Admin extends CI_Controller {
 				echo json_encode($pilih);
 				break;
 			case 'update':
-				
-				
 				$id = $this->input->post('id_user');
 				if ( ! empty($id)){
 					$this->admin_model->editUserDosen($id);

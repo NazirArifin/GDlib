@@ -8,12 +8,7 @@
 			<link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
 			<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap.min.css" />
 			<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
-			<link rel="stylesheet" href="/static/css/main.css" />
-			
-			<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
-			<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
-			<script src="/third_party/bootstrap/bootstrap.min.js"></script>
-
+			<link rel="stylesheet" href="/css/main.css" />
     <style type="text/css">
 	#logo {
 	height: 31px;
@@ -70,7 +65,134 @@
         
 </div>
     <div class="well span9 pull-right">
-     
+     <!-- menu tab untuk member -->
+		<div class="">
+	 <h2>Member</h2>
+	 <input type="text" class="input-medium search-query" placeholder="Cari Member" ><br><br>
+	 <ul class="nav nav-tabs" id="tab-member">
+	  <li class="active"><a href="#dosen" onClick="return tabAdminDosen()">Dosen</a></li>
+	  <li><a href="#maha" onClick="return tabAdminMahasiswa()">Mahasiswa</a></li>
+	  
+	</ul>
+	 
+	<div class="tab-content">
+	<!--tab untuk dosen-->
+	  <div class="tab-pane active" id="dosen">
+		<table class="table table-striped">
+		  <thead>
+			<tr>
+			  <th>Judul</th>
+			  <th>No. Induk</th>
+			  <th>ID Facebook</th>
+			  <th>Aksi</th>
+			</tr>
+		  </thead>
+		  <tbody>
+		  <?php
+				$userDosen=$controller->admin_model->tampil_where_level_dosen();
+				if ($userDosen == 0):
+					echo 'habib';
+				else :
+					foreach ($userDosen as $row):
+		  ?>
+			<tr>
+			  <td><?php echo $row->NAMA_USER ?></td>
+			  <td><?php echo $row->NO_INDUK_USER ?></td>
+			  <td><?php echo $row->ID_FACEBOOK_USER ?></td>
+			  <td>
+			  <div class="btn-group">
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+			  </div>
+			  </td>
+			</tr>
+			<?php
+				endforeach;
+			endif;
+			?>
+		  </tbody>
+		</table>
+		
+		<div class="pagination pagination-centered">
+			<ul>
+				<li><a href="#">Prev</a></li>
+				<li class="active">
+				<a href="#">1</a>
+				</li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">Next</a></li>
+				</ul>
+			</div>
+		
+		
+	  </div>
+	  <!--tab mahasiswa-->
+	  <div class="tab-pane" id="maha">
+	  <table class="table">
+		  
+		  <thead>
+			<tr>
+			  <th>Judul</th>
+			  <th>Taggal</th>
+			</tr>
+		  </thead>
+		  <tbody>
+			<tr>
+			  <td>Harry Potter</td>
+			  <td>12/12/12</td>
+			  <td>
+			  <div class="btn-group">
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+			  </div>
+			  </td>
+			</tr>
+			<tr>
+			  <td>Twilight</td>
+			  <td>12/12/12</td>
+			  <td>
+			  <div class="btn-group">
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+			  </div>
+			  </td>
+			</tr>
+			<tr>
+			  <td>Janc#k</td>
+			  <td>12/12/12</td>
+			  <td>
+			  <div class="btn-group">
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+			  </div>
+			  </td>
+			</tr>
+		  </tbody>
+		</table>
+		
+		<div class="pagination pagination-centered">
+		<ul>
+			<li><a href="#">Prev</a></li>
+			<li class="active">
+			<a href="#">1</a>
+			</li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">Next</a></li>
+			</ul>
+		</div>
+		
+	  </div>
+
+	</div>
+	</div> 
 	 <!--menu tab dokument-->
 	 <div class="">
 	 <h2>Dokument</h2>
@@ -327,145 +449,7 @@
 	  </div>
 	</div>
 	</div> 
-	
-	<div class="">
-	 
-	 <h2>Member</h2>
-	 <input type="text" class="input-medium search-query" placeholder="Cari Member" ><br><br>
-	 <ul class="nav nav-tabs" id="tab-member">
-	  <li class="active"><a href="#dosen">Dosen</a></li>
-	  <li><a href="#maha">Mahasiswa</a></li>
-	  
-	</ul>
-	 
-	<div class="tab-content">
-	<!--tab untuk dosen-->
-	  <div class="tab-pane active" id="dosen">
-		<table class="table">
-		  
-		  <thead>
-			<tr>
-			  <th>Judul</th>
-			  <th>Taggal</th>
-			</tr>
-		  </thead>
-		  <tbody>
-			<tr>
-			  <td>Revolution</td>
-			  <td>12/12/12</td>
-			  <td>
-			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
-			  </div>
-			  </td>
-			</tr>
-			<tr>
-			  <td>RIP</td>
-			  <td>12/12/12</td>
-			  <td>
-			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
-			  </div>
-			  </td>
-			</tr>
-			<tr>
-			  <td>Kroncong Protol</td>
-			  <td>12/12/12</td>
-			  <td>
-			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
-			  </div>
-			  </td>
-			</tr>
-		  </tbody>
-		  
-		</table>
-		
-		<div class="pagination pagination-centered">
-			<ul>
-				<li><a href="#">Prev</a></li>
-				<li class="active">
-				<a href="#">1</a>
-				</li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">Next</a></li>
-				</ul>
-			</div>
-		
-		
-	  </div>
-	  <!--tab mahasiswa-->
-	  <div class="tab-pane" id="maha">
-	  <table class="table">
-		  
-		  <thead>
-			<tr>
-			  <th>Judul</th>
-			  <th>Taggal</th>
-			</tr>
-		  </thead>
-		  <tbody>
-			<tr>
-			  <td>Harry Potter</td>
-			  <td>12/12/12</td>
-			  <td>
-			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
-			  </div>
-			  </td>
-			</tr>
-			<tr>
-			  <td>Twilight</td>
-			  <td>12/12/12</td>
-			  <td>
-			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
-			  </div>
-			  </td>
-			</tr>
-			<tr>
-			  <td>Janc#k</td>
-			  <td>12/12/12</td>
-			  <td>
-			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
-			  </div>
-			  </td>
-			</tr>
-		  </tbody>
-		</table>
-		
-		<div class="pagination pagination-centered">
-		<ul>
-			<li><a href="#">Prev</a></li>
-			<li class="active">
-			<a href="#">1</a>
-			</li>
-			<li><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">Next</a></li>
-			</ul>
-		</div>
-		
-	  </div>
-
-	</div>
-	</div> 
+	<!-- halaman News -->
 	<div class="">
 	<h2>News</h2>
 	<input type="text" class="input-medium search-query" placeholder="Cari Member" ><br><br>
@@ -517,7 +501,10 @@
     </div>
   </div>
 </div>
- 
+			<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
+			<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
+			<script src="/third_party/bootstrap/bootstrap.min.js"></script>
+			<script src="/js/admin.js"></script>
 <script type="text/javascript">
 	$('#tab-dok a').click(function (e) {
 	  e.preventDefault();

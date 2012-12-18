@@ -151,3 +151,25 @@ function simpanUserMahasiswa(){
 	});
 	return false;
 }
+
+//halaman admin index - tab
+/*
+function tabAdminDosen(){
+	$.ajax({
+		url: '/admin/dosen/tab',
+		beforeSend: function(){
+			
+		},
+		success: function(o){
+			$('#view').hide('blind', {} , 500);
+			$('#form-tambah').show('blind', {} , 1500);
+			$('#nama-user').val(o[0].NAMA_USER);
+			$('#no-induk-user').val(o[0].NO_INDUK_USER);
+			$('#id-facebook').val(o[0].ID_FACEBOOK_USER);
+		}
+	});
+}
+
+function tabAdminMahasiswa(){
+
+}*/

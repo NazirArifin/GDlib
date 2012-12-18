@@ -13,8 +13,8 @@ class Admin_model extends CI_Model {
 		}
 	}
 	
-	public function tampil_level_user() {
-		$query=$this->db->get('tb_level_user');
+	public function tampil_where_level_dosen() {
+		$query=$this->db->get_where('tb_user', array('ID_LEVEL_USER'=>2));
 		if($query->num_rows()==0){
 			return false;
 		} else {
