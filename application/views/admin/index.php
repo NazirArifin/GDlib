@@ -78,9 +78,9 @@
 	 <h2>Member</h2>
 	 <?php
 		$userDosen=$controller->admin_model->tampil_where_level_dosen();
-		$banyakDosen = count($userDosen);
+		($userDosen == false ? $banyakDosen=0 : $banyakDosen = count($userDosen));
 		$userMahasiswa=$controller->admin_model->tampil_where_level_mahasiswa();
-		$banyakMahasiswa = count($userMahasiswa);
+		($userMahasiswa == false ? $banyakMahasiswa=0 : $banyakMahasiswa = count($userMahasiswa));
 	 ?>
 	 <input type="text" class="input-medium search-query" placeholder="Cari Member" ><br><br>
 	 <ul class="nav nav-tabs" id="tab-member">
