@@ -100,7 +100,7 @@
 					<button class="btn btn-mini btn-info pull-right" id="tombol" onClick="return tambahDosen()"><i class="icon-plus icon-white"></i></button><br><br><br>
 				</div>
 			<?php
-				$dosen=$controller->admin_model->tampilUserDosen();
+				$dosen=$controller->admin_model->tampil_where_level_dosen();
 					if ($dosen==0):
 						printf("Data Dosen tidak ada");
 					else: 

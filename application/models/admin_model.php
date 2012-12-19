@@ -4,26 +4,9 @@ class Admin_model extends CI_Model {
 		parent::__construct();
 		
 	}
-	public function tampilUserDosen() {
-		$query=$this->db->get('tb_user');
-		if($query->num_rows()==0){
-			return false;
-		} else {
-			return $query->result();
-		}
-	}
 	
 	public function tampil_where_level_dosen() {
 		$query=$this->db->get_where('tb_user', array('ID_LEVEL_USER'=>2));
-		if($query->num_rows()==0){
-			return false;
-		} else {
-			return $query->result();
-		}
-	}
-	
-	public function tampil_where_level_mahasiswa() {
-		$query=$this->db->get_where('tb_user', array('ID_LEVEL_USER'=>3));
 		if($query->num_rows()==0){
 			return false;
 		} else {
@@ -80,16 +63,16 @@ class Admin_model extends CI_Model {
 	
 	
 	//User Mahasiswa
-	public function tampilUserMahasiswa() {
-		$query=$this->db->get('tb_user');
+	public function tampil_where_level_mahasiswa() {
+		$query=$this->db->get_where('tb_user', array('ID_LEVEL_USER'=>3));
 		if($query->num_rows()==0){
 			return false;
 		} else {
 			return $query->result();
 		}
 	}
-	public function insertUserMahasiswa(){
-		
+	
+		public function insertUserMahasiswa(){
 		// validasi;
 		$nama = $this->input->post('nama_user');
 		$induk = $this->input->post('no_induk_user');

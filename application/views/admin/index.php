@@ -13,14 +13,25 @@
 	#logo {
 	height: 31px;
 	margin-top: 2px;
-	}	
-
+	}
+	a {
+		text-decoration:none;
+	}
+	#screenshot{
+	position:absolute;
+	border:1px solid #ccc;
+	background:#333;
+	padding:5px;
+	display:none;
+	color:#fff;
+	height:150px;
+	width:200px;
+	}
     </style>
 	
     
 </head>
 <body>
-	
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
@@ -102,7 +113,7 @@
 					foreach ($userDosen as $row):
 		  ?>
 			<tr>
-			  <td><?php echo $row->NAMA_USER ?></td>
+			  <td><a href="#" class="screenshot" rel="images/ct.jpg"><?php echo $row->NAMA_USER ?></a></td>
 			  <td><?php echo $row->NO_INDUK_USER ?></td>
 			  <td><?php echo $row->ID_FACEBOOK_USER ?></td>
 			  <td>
@@ -461,19 +472,19 @@
 	  </thead>
 	  <tbody>
 		<tr>
-		  <td><img src="./static/images/ogo.png" class="image-admin"></td>
+		  <td><img src="/images/ogo.png" class="image-admin"></td>
 		  <td>WTF</td>
 		  <td>Lorem ipsum dolor sit amet</td>
 		  <td><label class="label label-important">Banned</label></td>
 		</tr>
 		<tr>
-		  <td><img src="./static/images/ogo.png" class="image-admin"></td>
+		  <td><img src="/images/ogo.png" class="image-admin"></td>
 		  <td>Accident</td>
 		  <td>Lorem ipsum dolor sit amet</td>
 		  <td><label class="label label-success">active</label></td>
 		</tr>
 		<tr>
-		  <td><img src="./static/images/ogo.png" class="image-admin"></td>
+		  <td><img src="/images/ogo.png" class="image-admin"></td>
 		  <td>LOL</td>
 		  <td>Lorem ipsum dolor sit amet</td>
 		  <td><label class="label label-warning">g jelas</label></td>
@@ -501,6 +512,7 @@
 			<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
 			<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
 			<script src="/third_party/bootstrap/bootstrap.min.js"></script>
+			<script src="/third_party/jquery/tooltip/main-tooltip.js"></script>
 			<script src="/js/admin.js"></script>
 <script type="text/javascript">
 	$('#tab-dok a').click(function (e) {
@@ -511,6 +523,9 @@
 	  e.preventDefault();
 	  $(this).tab('show');
 	})
+	$('.btn-danger').attr('title', 'klik untuk menghapus').tooltip();
+	$('.btn-warning').attr('title', 'klik untuk mengedit').tooltip();
+	$('.btn-success').attr('title', 'klik untuk melihat').tooltip();
 </script>
 
 </body>

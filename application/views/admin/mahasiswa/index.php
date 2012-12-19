@@ -102,7 +102,7 @@
 					<button class="btn btn-mini btn-info pull-right" id="tombol" onClick="return tambahMahasiswa()"><i class="icon-plus icon-white"></i></button><br><br><br>
 				</div>
 				<?php
-					$mahasiswa=$controller->admin_model->tampilUserMahasiswa();
+					$mahasiswa=$controller->admin_model->tampil_where_level_mahasiswa();
 					if($mahasiswa==0):
 						printf("Data Mahasiswa tidak ada");
 					else:
