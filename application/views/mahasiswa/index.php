@@ -367,7 +367,9 @@ $('#tab-dok a').click(function (e) {
 	  e.preventDefault();
 	  $(this).tab('show');
 	})
-	
+$('.btn-primary').attr('title', 'klik untuk mengunduh dokumen').tooltip();
+$('.btn-warning').attr('title', 'klik untuk membaca dokumen').tooltip();
+$('.btn-success').attr('title', 'klik untuk melihat detail  dokumen').tooltip();
 </script>
 </body>
 	
