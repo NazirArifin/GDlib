@@ -17,7 +17,42 @@
 			float: left;
 			margin: 0px 15px 10px 0px;
 		}
-
+		
+		.member-box {
+			background-color: #fbfbfb;
+			background-image: -moz-linear-gradient(top, #ffffff, #f5f5f5);
+			background-image: -ms-linear-gradient(top, #ffffff, #f5f5f5);
+			background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f5f5f5));
+			background-image: -webkit-linear-gradient(top, #ffffff, #f5f5f5);
+			background-image: -o-linear-gradient(top, #ffffff, #f5f5f5);
+			background-image: linear-gradient(top, #ffffff, #f5f5f5);
+			background-repeat: repeat-x;
+			border: 1px solid #ddd;
+			filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffff', endColorstr='#f5f5f5', GradientType=0);
+			  -webkit-box-shadow: inset 0 1px 0 #ffffff;
+				 -moz-box-shadow: inset 0 1px 0 #ffffff;
+					  box-shadow: inset 0 1px 0 #ffffff;
+			margin-bottom: 10px;
+			padding: 10px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+		}
+		.condensed {
+			padding: 5px;
+		}
+		.condensed li {
+			font-size: 12px;
+		}
+		footer {
+			font-size: 85%;
+			line-height: 1.2em;
+			margin-bottom: 15px;
+		}
+		footer img {
+			margin-right: 10px;
+			width: 27px;
+		}
 	</style>
 </head>
 <body>
@@ -44,7 +79,7 @@
 <div class="container-fluid">
 	<div class="row-fluid">
 		<div class="span2">
-			<div class="well">
+			<div class="member-box">
 				<ul class="thumbnails">
 					<li class="span12">
 						<a href="#" class="thumbnail"><img src="/images/D_oS.png" alt=""></a>
@@ -56,19 +91,28 @@
 					<a href="#Setting">Settings</a> | <a href="#">Keluar</a>
 				</span>
 			</div>
-			<div class="well">
-			<div class="sidebar-nav">
-				<div>
-					<ul class="nav nav-tabs nav-stacked">
-						<li class="nav-header"><h3>Dokumen</h3></li>
-						<li><a href="#"><i class="icon-file"></i> JURNAL</a></li>
-						<li><a href="#"><i class="icon-file"></i> BUKU</a></li>
-						<li><a href="#"><i class="icon-file"></i> MODUL</a></li>
-						<li><a href="#"><i class="icon-file"></i> BULETIN</a></li>
-						<li class="divider"></li>
-					</ul>
-				</div>
-			</div>
+			<div class="well condensed">
+				<ul class="nav nav-list">
+					<li class="nav-header">DOKUMEN</li>
+					<li><a href="#"><i class="icon-file"></i> JURNAL</a></li>
+					<li><a href="#"><i class="icon-file"></i> BUKU</a></li>
+					<li><a href="#"><i class="icon-file"></i> MODUL</a></li>
+					<li><a href="#"><i class="icon-file"></i> BULETIN</a></li>
+				</ul>
+				
+				
+				<!-- <div class="sidebar-nav">
+					<div>
+						<ul class="nav nav-tabs nav-stacked">
+							<li class="nav-header"><h5>Dokumen</h5></li>
+							<li><a href="#"><i class="icon-file"></i> JURNAL</a></li>
+							<li><a href="#"><i class="icon-file"></i> BUKU</a></li>
+							<li><a href="#"><i class="icon-file"></i> MODUL</a></li>
+							<li><a href="#"><i class="icon-file"></i> BULETIN</a></li>
+							<li class="divider"></li>
+						</ul>
+					</div>
+				</div> -->
 			</div>
 		</div>
 		<div class="span10">
@@ -466,6 +510,15 @@
 					</div>
 				</div>
 		</div>
+	</div>
+	<div class="row-fluid">
+		<footer class="row-fluid">
+			<div class="span12">
+				<hr>
+				<img src="/images/favicon.png" class="pull-left" />
+				<span>Created by: <a href="/humans.txt" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span>
+			</div>
+		</footer>
 	</div>
 </div>
 </body>
