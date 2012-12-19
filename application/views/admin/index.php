@@ -14,9 +14,6 @@
 	height: 31px;
 	margin-top: 2px;
 	}
-	a {
-		text-decoration:none;
-	}
 	#screenshot{
 	position:absolute;
 	border:1px solid #ccc;
@@ -66,7 +63,7 @@
 		<li class="nav-header">Dokumen</li>
 		<li><a href="/admin/jurnal"><i class="icon-file"></i> Jurnal</a></li>
 		<li><a href="/admin/buku"><i class="icon-file"></i> Buku</a></li>
-		<li><a href="/admin/model"><i class="icon-file"></i> Model</a></li>
+		<li><a href="/admin/modul"><i class="icon-file"></i> Model</a></li>
 		<li><a href="/admin/buletin"><i class="icon-file"></i> Buletin</a></li>
 		<li class="divider"></li>
 		

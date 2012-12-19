@@ -4,16 +4,12 @@
 <head>
     <meta charset="utf-8" />
 		<title>GDlib | Mahasiswa</title>
-			<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 			<link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
 			<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap.min.css" />
 			<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
 			<link rel="stylesheet" href="/third_party/alertify/alertify.core.css" />
 			<link rel="stylesheet" href="/third_party/alertify/alertify.default.css" />
 			<link rel="stylesheet" href="/css/style.css" />
-			
-			
-
     <style type="text/css">
 	#logo{
 		height: 31px;
@@ -57,7 +53,7 @@
 				<li class="nav-header">Dokumen</li>
 				<li><a href="/admin/jurnal"><i class="icon-file"></i> Jurnal</a></li>
 				<li><a href="/admin/buku"><i class="icon-file"></i> Buku</a></li>
-				<li><a href="/admin/model"><i class="icon-file"></i> Model</a></li>
+				<li><a href="/admin/modul"><i class="icon-file"></i> Model</a></li>
 				<li><a href="/admin/buletin"><i class="icon-file"></i> Buletin</a></li>
 				<li class="divider"></li>
 				

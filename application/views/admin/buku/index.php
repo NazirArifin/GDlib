@@ -4,19 +4,17 @@
 <head>
     <meta charset="utf-8" />
 		<title>GDlib | Buku</title>
-			<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 			<link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
 			<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap.min.css" />
 			<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
-			<link rel="stylesheet" href="/static/css/main.css" />
-			
-			<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
-			<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
-			<script src="/third_party/bootstrap/bootstrap.min.js"></script>
-
+			<link rel="stylesheet" href="/third_party/alertify/alertify.core.css" />
+			<link rel="stylesheet" href="/third_party/alertify/alertify.default.css" />
+			<link rel="stylesheet" href="/css/style.css" />
     <style type="text/css">
-	
-
+	#logo {
+		height: 31px;
+		margin-top: 2px;
+	}
     </style>
 	
     
@@ -24,69 +22,45 @@
 <body>
 	
 <div class="navbar navbar-fixed-top">
-	  <div class="navbar-inner ">
-	  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-	  </a>
-	  <!--button group-->
-			<div class="btn-group pull-right">
-			  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-cog"></i> 
-				
-				<span class="caret"></span>
-			  </a>
-			  <ul class="dropdown-menu">
-				<li><a href="#"><i class="icon-wrench"></i> Pengaturan Akun</a></li>
-				<li><a href="#"><i class="icon-lock"></i> Pengaturan Privasi</a></li>
-				<li class="divider"></li>
-				<li><a href="#"><i class="icon-off"></i> Keluar</a></li>
-				
-			  </ul>
+		<div class="navbar-inner">
+			<div class="container">
+				<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="/"><img src="/images/gd.png" id="logo" /></a>
+				<ul class="nav pull-right nav-pills">
+					<li><a href="/admin"><i class="icon-home"></i> Dashboard</a></li>
+					<li><a href="#"><i class="icon-user"></i> Profil</a></li>
+				  
+				</ul>
 			</div>
-		<!--button group-->
-		<a href="#"><img src="/images/logo.png" class="brand" width="150" height="70" id="logo"/></a>
-			<div class="navbar-search input-append pull-right" >
-			  <input class="span2" id="appendedInputButton" type="text" >
-			  <button class="btn" type="button"><i class="icon-search"></i></button>
-			</div>
-			
-		<ul class="nav pull-right nav-pills">
-		  <li class="active"><a href="#"><i class="icon-home"></i> Home</a></li>
-		  <li><a href="#"><i class="icon-user"></i> Profile</a></li>
-		  
-		</ul>
-	  </div>
+		</div>
 	</div>
 	<br>
 	<br>
 	<br>
 <div class="container-fluid" id="container">
-  <div class="row-fluid" id="form">
-    <div class="well span3" id="sidebar">
-	<div id="menu">
-	<h3><i  class="icon-file"></i>Dokumen</h3>
-    <div>
-		<a href="jurnal"><i  class="icon-book"></i>Jurnal</a><br>
-		<a href="buku"><i  class="icon-book"></i>Buku</a><br>
-		<a href="modul"><i  class="icon-book"></i>Modul</a><br>
-		<a href="buletin"><i  class="icon-book"></i>Bulletin</a>
-    </div>
-	<h3><i  class="icon-user"></i>User</h3>
-    <div>
-		<a href="dosen"><i  class="icon-user"></i>Dosen</a><br>
-		<a href="mahasiswa"><i  class="icon-user"></i>Mahasiswa</a>
-    </div>
-	
-	<h3><i  class="icon-refresh"></i>Other</h3>
-    <div>
-		<a href="news"><i  class="icon-book"></i>News</a>
+	<div class="row-fluid" id="form">
+		<div class="well span3" id="sidebar">
+			<ul class="nav nav-list">
+		<li class="nav-header">Pengguna</li>
+		<li><a href="/admin/dosen"><i class="icon-user"></i> Dosen</a></li>
+		<li><a href="/admin/mahasiswa"><i class="icon-user"></i> Mahasiswa</a></li>
+		<li class="divider"></li>
 		
-    </div>
-    
-	</div>
-        
-</div>
+		<li class="nav-header">Dokumen</li>
+		<li><a href="/admin/jurnal"><i class="icon-file"></i> Jurnal</a></li>
+		<li><a href="/admin/buku"><i class="icon-file"></i> Buku</a></li>
+		<li><a href="/admin/modul"><i class="icon-file"></i> Model</a></li>
+		<li><a href="/admin/buletin"><i class="icon-file"></i> Buletin</a></li>
+		<li class="divider"></li>
+		
+		<li class="nav-header">Lainnya</li>
+		<li><a href="/admin/news"><i class="icon-warning-sign"></i> Berita</a></li>
+	</ul>
+		</div>
     <div class="well span9 pull-right">
 	<input type="text" class="input-medium search-query" >
      <button class="btn btn-large btn-success pull-right" id="tombol"><i class="icon-plus icon-white"></i>Tambah</button><br><br><br>
@@ -264,17 +238,10 @@
 		</div>
     </div>
 	</form>	
-<script type="text/javascript">
-	$('#tombol').click(function(){
-	$('#modal1').modal('show');
-	});
-	$('.tombol2').click(function(){
-	$('#modal2').modal('show');
-	});
- $(function() {
-        $( "#menu" ).accordion();
-    });
-</script>
-
+<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
+			<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
+			<script src="/third_party/bootstrap/bootstrap.min.js"></script>
+			<script src="/third_party/alertify/alertify.min.js"></script>
+			<script src="/js/admin.js"></script>
 </body>
 </html>
