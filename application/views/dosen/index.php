@@ -45,7 +45,7 @@
 			font-size: 12px;
 		}
 		footer {
-			font-size: 85%;
+			font-size: 75%;
 			line-height: 1.2em;
 			margin-bottom: 15px;
 		}
