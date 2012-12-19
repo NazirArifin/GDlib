@@ -29,7 +29,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="container-fluid">
+	<div class="container">
 		<div class="row-fluid">
 			<div class="span10 offset1">
 				<div class="row-fluid slider-frame">
