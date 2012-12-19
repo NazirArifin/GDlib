@@ -99,20 +99,6 @@
 					<li><a href="#"><i class="icon-file"></i> MODUL</a></li>
 					<li><a href="#"><i class="icon-file"></i> BULETIN</a></li>
 				</ul>
-				
-				
-				<!-- <div class="sidebar-nav">
-					<div>
-						<ul class="nav nav-tabs nav-stacked">
-							<li class="nav-header"><h5>Dokumen</h5></li>
-							<li><a href="#"><i class="icon-file"></i> JURNAL</a></li>
-							<li><a href="#"><i class="icon-file"></i> BUKU</a></li>
-							<li><a href="#"><i class="icon-file"></i> MODUL</a></li>
-							<li><a href="#"><i class="icon-file"></i> BULETIN</a></li>
-							<li class="divider"></li>
-						</ul>
-					</div>
-				</div> -->
 			</div>
 		</div>
 		<div class="span10">
