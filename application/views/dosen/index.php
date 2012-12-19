@@ -511,20 +511,19 @@
 				</div>
 		</div>
 	</div>
-	<div class="row-fluid">
-		<footer class="row-fluid">
-			<div class="span12">
-				<hr>
-				<img src="/images/favicon.png" class="pull-left" />
-				<span>Created by: <a href="/humans.txt" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span>
-			</div>
-		</footer>
-	</div>
+	<footer class="row-fluid">
+		<div class="span12">
+			<hr>
+			<img src="/images/favicon.png" class="pull-left" />
+			<span>Created by: <a href="/humans.txt" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span>
+		</div>
+	</footer>
 </div>
-</body>
+	
 	<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
 	<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
 	<script src="/third_party/bootstrap/bootstrap.min.js"></script>
 	<script src="/third_party/alertify/alertify.min.js"></script>
 	<script src="/js/dosen.js"></script>
+</body>
 </html>
