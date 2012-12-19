@@ -81,8 +81,7 @@
 			</div>
 			<div class="row-fluid">
 				<form class="form-horizontal" id="form-view-jurnal" action="" method="POST">
-				<div class="span10">
-					<div class="tabbable">
+					<div class="tabbable span12">
 						<ul class="nav nav-tabs">
 							<li class="active"><a href="#jurnal" data-toggle="tab">JURNAL</a></li>
 							<li><a href="#buku" data-toggle="tab">BUKU</a></li>
@@ -380,7 +379,6 @@
 							</div>
 						</div>
 					</div>
-				</div>
 				</form>
 			</div>
 			<!--ini bagian tambah jurnal-->
