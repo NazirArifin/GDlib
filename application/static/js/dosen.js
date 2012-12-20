@@ -1,8 +1,19 @@
-function tambahjurnal(){
-	$('#form-tambah').attr('action', '/dosen/jurnal/add').show('blind', {} , 500);
-	$('#form-view-jurnal').hide('blind', {} , 500);	
+$('a[data-toggle="tab"]').on('shown', function (e) {
+	var type = $(e.target).text().toLowerCase();
+	$('#jenis-dokumen').val(type);
+})
+
+function tambahDokumen(){
+	$('#data-section').hide('blind', {}, 500, function() {
+		$('#form-tambah').attr('action', '/dosen/dokumen/add');
+		$('#form-legend').text($('#jenis-dokumen').val().toUpperCase());
+		$('#form-section').show('blind', {}, 500);
+	});	
 }
-function closejurnal(){
+
+function closeForm(){
+	$('#form-tambah input, #form-tambah textarea').val('');
+	/*
 	$('#judul-dokumen').val('');
 	$('#pengarang-dokumen').val('');
 	$('#prolog-dokumen').val('');
@@ -11,7 +22,8 @@ function closejurnal(){
 	$('#foto-dokumen').val('');
 	$('#kata-kunci-dokumen').val('');
 	$('#pengarang-dokumen').val('');
-	
-	$('#form-tambah').hide('blind', {} , 500);
-	$('#form-view-jurnal').show('blind', {} , 500);	
+	*/
+	$('#form-section').hide('blind', {}, 500, function() {
+		$('#data-section').show('blind', {}, 500);
+	});	
 }

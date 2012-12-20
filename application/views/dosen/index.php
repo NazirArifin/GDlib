@@ -109,21 +109,20 @@
 				<li class="active">Data</li>
 				</ul>
 			</div>
-			<div class="row-fluid">
-				<form class="form-horizontal" id="form-view-jurnal" action="" method="POST">
+			<div class="row-fluid" id="data-section">
+				<!--<form class="form-horizontal" id="form-view-jurnal" action="" method="POST">-->
 					<div class="tabbable span12">
-						<ul class="nav nav-tabs">
+						<ul class="nav nav-tabs" id="tab-dokumen">
 							<li class="active"><a href="#jurnal" data-toggle="tab">JURNAL</a></li>
 							<li><a href="#buku" data-toggle="tab">BUKU</a></li>
 							<li><a href="#modul" data-toggle="tab">MODUL</a></li>
-							<li><a href="#buletin" data-toggle="tab">BULETIN</a></li>
 						</ul>
 						<div class="tab-content">
 							<div class="tab-pane active" id="jurnal">
 								<form class="navbar-search pull-left">
-								<input type="text" class="search-query" placeholder="Search">
+									<input type="text" class="search-query" placeholder="Search">
 								</form>
-								<button class="btn pull-right" type="button" onClick="tambahjurnal()"><i class="icon-plus"></i></button>
+								<button class="btn pull-right" type="button" onClick="tambahDokumen()"><i class="icon-plus"></i></button>
 								<table class="table">
 									<thead>
 										<tr>
@@ -195,7 +194,7 @@
 								<form class="navbar-search pull-left">
 								<input type="text" class="search-query" placeholder="Search">
 								</form>
-								<button class="btn pull-right" type="button" ><i class="icon-plus"></i></button>
+								<button class="btn pull-right" type="button" onClick="tambahDokumen()"><i class="icon-plus"></i></button>
 								<table class="table">
 									<thead>
 										<tr>
@@ -267,7 +266,7 @@
 								<form class="navbar-search pull-left">
 								<input type="text" class="search-query" placeholder="Search">
 								</form>
-								<button class="btn pull-right" type="button" ><i class="icon-plus"></i></button>
+								<button class="btn pull-right" type="button" onClick="tambahDokumen()"><i class="icon-plus"></i></button>
 								<table class="table">
 									<thead>
 										<tr>
@@ -335,89 +334,18 @@
 									</ul>
 								</div>
 							</div>
-							<div class="tab-pane" id="buletin">
-								<form class="navbar-search pull-left">
-								<input type="text" class="search-query" placeholder="Search">
-								</form>
-								<button class="btn pull-right" type="button" ><i class="icon-plus"></i></button>
-								<table class="table">
-									<thead>
-										<tr>
-											<th>JUDUL</th>
-											<th>TANGGAL</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Buletin_1</td>
-											<td>12/12/12</td>
-											<td>
-											<div class="btn-group">
-											<button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button> 
-											<button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button> 
-											<button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
-											</div>
-											</td>
-										</tr>
-										<tr>
-											<td>Buletin_2</td>
-											<td>12/12/12</td>
-											<td>
-											<div class="btn-group">
-											<button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button> 
-											<button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button> 
-											<button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
-											</div>
-											</td>
-										</tr>
-										<tr>
-											<td>Buletin_3</td>
-											<td>12/12/12</td>
-											<td>
-											<div class="btn-group">
-											<button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button> 
-											<button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button> 
-											<button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
-											</div>
-											</td>
-										</tr>
-										<tr>
-											<td>Buletin_4</td>
-											<td>12/12/12</td>
-											<td>
-											<div class="btn-group">
-											<button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button> 
-											<button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button> 
-											<button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
-											</div>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-								<div class="pagination pagination-centered">
-									<ul>
-										<li><a href="#">Prev</a></li>
-										<li class="active">
-										<a href="#">1</a>
-										</li>
-										<li><a href="#">2</a></li>
-										<li><a href="#">3</a></li>
-										<li><a href="#">4</a></li>
-										<li><a href="#">Next</a></li>
-									</ul>
-								</div>
-							</div>
 						</div>
 					</div>
-				</form>
+				<!--</form>-->
 			</div>
 			<!--ini bagian tambah jurnal-->
-			<div class="row-fluid">
-				<form class="form-horizontal hide" id="form-tambah" action="" method="POST" enctype="multipart/form-data">
+			<div class="row-fluid hide" id="form-section">
+				<form class="form-horizontal" id="form-tambah" action="" method="POST" enctype="multipart/form-data">
 					<div class="well span12">
-						<a href="#" class="btn btn-info btn-mini pull-right" onClick="return closejurnal()"><i class="icon-remove icon-white"></i></a>
+						<a href="#" class="btn btn-info btn-mini pull-right" onClick="return closeForm()"><i class="icon-remove icon-white"></i></a>
 						<fieldset>
-								<legend>Upload Jurnal</legend>	
+							<input type="hidden" name="jenis_dokumen" id="jenis-dokumen" value="jurnal">
+							<legend id="form-legend"></legend>	
 							<div class="control-group">
 								<label class="control-label control-label-min" for="judul-dokumen">Judul Dokumen</label>
 								<div class="controls controls-min">
@@ -462,7 +390,7 @@
 								</div>
 							</div>
 							<div class="form-actions">
-								<button class="btn btn-info btn-mini" type="button" onClick="return closejurnal()"><i class="icon-remove icon-white"></i> Cancel</button>
+								<button class="btn btn-info btn-mini" type="button" onClick="return closeForm()"><i class="icon-remove icon-white"></i> Cancel</button>
 								<button class="btn btn-info btn-mini" type="submit" value="upload" ><i class="icon-ok icon-white" ></i> Simpan</button>
 							</div>
 							<hr>

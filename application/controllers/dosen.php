@@ -14,21 +14,42 @@ class Dosen extends CI_Controller {
 		jsloc::show();
 	}
 	
+	public function dokumen($param = '', $extra = '') {
+		
+		
+		switch ($param) {
+			case 'add':
+				
+		}
+	}
+	
 	public function jurnal($param= '',$extra= '')
 	{
 		$this->load->library('session');
 		$this->load->database();
 		switch ($param){
 			case 'add':
-				$config['upload_path'] = './upload/';
+				
+				
+				$config['upload_path'] = './upload/' . $this->input->post('jenis_dokumen');
 				$config['allowed_types'] = 'pdf';
+				$config['encrypt_name'] = TRUE;
 				
 				$this->load->library('upload', $config);
+				$this->upload->do_upload('');
+				$error = $this->upload->display_errors();
+				$data = $this->upload->data();
 				
-				if ($this->input->post('judul_dokumen') & $this->input->file('file_dokumen')){
+				$namafile = '/upload/'. $this->input->post('jenis_dokumen') . '/' . $data['file_name'];
+				
+				/*
+				if ($this->input->post('judul_dokumen')){
 						$this->dosen_model->insertJurnal();
 						header('location:/dosen');
 				}
+				*/
+				//img src="/upload/folder/file.jpg"
+				
 				break;	
 			case 'view':
 				break;
