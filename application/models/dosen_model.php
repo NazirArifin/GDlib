@@ -13,7 +13,7 @@ class Dosen_model extends CI_Model {
 		
 		$insert=array(
 			'ID_KATEGORI_DOKUMEN'=>$this->input->post('jenis_dokumen'),
-			'ID_JENIS_DOKUMEN'=>,
+			'ID_JENIS_DOKUMEN'=>1,
 			'ID_STATUS_DOKUMEN'=>'1',
 			'ID_USER'=>'9',
 			'JUDUL_DOKUMEN'=>$this->input->post('judul_dokumen'),
