@@ -115,9 +115,9 @@
 			  <td><?php echo $row->ID_FACEBOOK_USER ?></td>
 			  <td>
 			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
 			  </div>
 			  </td>
 			</tr>
@@ -168,9 +168,9 @@
 			  <td><?php echo $row->ID_FACEBOOK_USER ?></td>
 			  <td>
 			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
 			  </div>
 			  </td>
 			</tr>
@@ -225,9 +225,9 @@
 			  <td>12/12/12</td>
 			  <td>
 			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
 			  </div>
 			  </td>
 			</tr>
@@ -236,9 +236,9 @@
 			  <td>12/12/12</td>
 			  <td>
 			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
 			  </div>
 			  </td>
 			</tr>
@@ -247,9 +247,9 @@
 			  <td>12/12/12</td>
 			  <td>
 			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
 			  </div>
 			  </td>
 			</tr>
@@ -286,9 +286,9 @@
 			  <td>12/12/12</td>
 			  <td>
 			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
 			  </div>
 			  </td>
 			</tr>
@@ -297,9 +297,9 @@
 			  <td>12/12/12</td>
 			  <td>
 			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
 			  </div>
 			  </td>
 			</tr>
@@ -308,9 +308,9 @@
 			  <td>12/12/12</td>
 			  <td>
 			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
 			  </div>
 			  </td>
 			</tr>
@@ -347,9 +347,9 @@
 			  <td>12/12/12</td>
 			  <td>
 			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
 			  </div>
 			  </td>
 			</tr>
@@ -358,9 +358,9 @@
 			  <td>12/12/12</td>
 			  <td>
 			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
 			  </div>
 			  </td>
 			</tr>
@@ -369,9 +369,9 @@
 			  <td>12/12/12</td>
 			  <td>
 			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
 			  </div>
 			  </td>
 			</tr>
@@ -408,9 +408,9 @@
 			  <td>12/12/12</td>
 			  <td>
 			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
 			  </div>
 			  </td>
 			</tr>
@@ -419,9 +419,9 @@
 			  <td>12/12/12</td>
 			  <td>
 			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
 			  </div>
 			  </td>
 			</tr>
@@ -430,9 +430,9 @@
 			  <td>12/12/12</td>
 			  <td>
 			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>
+			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>
+			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
 			  </div>
 			  </td>
 			</tr>
