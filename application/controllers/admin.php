@@ -6,6 +6,7 @@ class Admin extends CI_Controller {
 		parent::__construct();
 		include(APPPATH . 'libraries/jsloc.php');
 		$this->load->database();
+		$this->load->helper();
 		$this->load->model('admin_model');
 	}
 
@@ -107,9 +108,27 @@ class Admin extends CI_Controller {
 	}
 	
 	public function jurnal()
-	{
-		$this->load->view('admin/jurnal/index');
-		jsloc::show();
+	{	
+		$config['upload_path'] = 'upload/jurnal';
+		$config['allowed_types'] = 'pdf';
+		//$config['max_size'] = '1000'; 
+
+		$this->load->library('upload', $config);
+		if ( !$this->upload->do_upload('userfile'))
+		{
+		$data['error']= $this->upload->display_errors();
+		$this->load->view('admin/jurnal/index', $data);
+		}
+		else
+		{
+		$dok = $this->upload->data();
+		$data['upload_data']= $dok;
+		if ($dok['file_name']){
+		$filedok=$dok['file_name'];
+		}
+		$this->db->query("insert into tb_dokumen values('','1','1','1','2','1','1','1','1','$filedok','1','1','1','1','1','1')"); 
+		$this->load->view('admin/jurnal/index', $data);
+		}
 	}
 	
 	public function buletin()

@@ -105,7 +105,7 @@
 		  <?php
 				$userDosen=$controller->admin_model->tampil_where_level_dosen();
 				if ($userDosen == 0):
-					echo 'habib';
+					echo '<tr><td colspan="4"><div class="alert-info" style="text-align:center;">Data Dosen Tidak Ada</div></td></tr>';
 				else :
 					foreach ($userDosen as $row):
 		  ?>
