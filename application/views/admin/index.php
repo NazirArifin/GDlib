@@ -85,7 +85,7 @@
 	 <input type="text" class="input-medium search-query" placeholder="Cari Member" ><br><br>
 	 <ul class="nav nav-tabs" id="tab-member">
 	  <li class="active"><a href="#dosen" onClick="return tabAdminDosen()">Dosen <span class="badge badge-info"><?php echo $banyakDosen ?></span></a></li>
-	  <li><a href="#maha" onClick="return tabAdminMahasiswa()">Mahasiswa <span class="badge badge-info"> 0 </span></a></li>
+	  <li><a href="#maha" onClick="return tabAdminMahasiswa()">Mahasiswa <span class="badge badge-info"> <?php echo $banyakMahasiswa ?> </span></a></li>
 	  
 	</ul>
 	 
