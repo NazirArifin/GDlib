@@ -6,9 +6,14 @@ class Dosen_model extends CI_Model {
 		
 	}
 	
-	public function insertJurnal($namafile,$namafoto,$ekstensi)
+	public function insertJurnal($namafile='',$namafoto='',$ekstensi='')
 	{
 		// cek 
+		switch ($namafile){
+			case '':
+				break;
+			default:
+		}
 		$insert=array(
 			'ID_KATEGORI_DOKUMEN'=>$this->input->post('kategori_dokumen'),
 			'ID_JENIS_DOKUMEN'=>$ekstensi,
