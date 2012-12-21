@@ -1,12 +1,12 @@
 $('a[data-toggle="tab"]').on('shown', function (e) {
 	var type = $(e.target).text().toLowerCase();
-	$('#jenis-dokumen').val(type);
+	$('#kategori-dokumen').val(type);
 })
 
 function tambahDokumen(){
 	$('#data-section').hide('blind', {}, 500, function() {
 		$('#form-tambah').attr('action', '/dosen/dokumen/add');
-		$('#form-legend').text($('#jenis-dokumen').val().toUpperCase());
+		$('#form-legend').text($('#kategori-dokumen').val().toUpperCase());
 		$('#form-section').show('blind', {}, 500);
 	});	
 }

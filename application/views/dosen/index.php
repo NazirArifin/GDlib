@@ -344,7 +344,7 @@
 					<div class="well span12">
 						<a href="#" class="btn btn-info btn-mini pull-right" onClick="return closeForm()"><i class="icon-remove icon-white"></i></a>
 						<fieldset>
-							<input type="hidden" name="jenis_dokumen" id="jenis-dokumen" value="jurnal">
+							<input type="hidden" name="kategori_dokumen" id="kategori-dokumen" value="jurnal">
 							<legend id="form-legend"></legend>	
 							<div class="control-group">
 								<label class="control-label control-label-min" for="judul-dokumen">Judul Dokumen</label>
@@ -374,13 +374,13 @@
 							<div class="control-group">
 								<label class="control-label control-label-min" for="tahun-penerbitan-dokumen">File Dokumen</label>
 								<div class="controls controls-min">	
-									<input name="file_dokumen" id="file-dokumen" type="file" required="" placeholder="Tahun Penerbitan">
+									<input name="file_dokumen" id="file-dokumen" type="file" required="" >
 								</div>
 							</div>
 							<div class="control-group">
 								<label class="control-label control-label-min" for="foto-dokumen">Foto Dokumen</label>
 								<div class="controls controls-min">	
-									<input name="foto_dokumen" id="foto-dokumen" type="file" required="" placeholder="Foto Dokumen">
+									<input name="foto_dokumen" id="foto-dokumen" type="file" required="" >
 								</div>
 							</div>
 							<div class="control-group">

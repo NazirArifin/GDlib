@@ -6,57 +6,62 @@ class Dosen extends CI_Controller {
 		parent::__construct();
 		include(APPPATH . 'libraries/jsloc.php');
 		$this->load->model('dosen_model');
+		$this->load->helper();
 	}
 	
 	public function index()
 	{
-		$this->load->view('dosen/index');
+		$this->load->view('dosen/index',array ('error'=>' '));
 		jsloc::show();
 	}
 	
 	public function dokumen($param = '', $extra = '') {
 		
-		
-		switch ($param) {
-			case 'add':
-				
-		}
-	}
-	
-	public function jurnal($param= '',$extra= '')
-	{
 		$this->load->library('session');
 		$this->load->database();
-		switch ($param){
+		switch ($param) {
 			case 'add':
-				
-				
-				$config['upload_path'] = './upload/' . $this->input->post('jenis_dokumen');
-				$config['allowed_types'] = 'pdf';
-				$config['encrypt_name'] = TRUE;
-				
-				$this->load->library('upload', $config);
-				$this->upload->do_upload('');
-				$error = $this->upload->display_errors();
-				$data = $this->upload->data();
-				
-				$namafile = '/upload/'. $this->input->post('jenis_dokumen') . '/' . $data['file_name'];
-				
-				/*
-				if ($this->input->post('judul_dokumen')){
-						$this->dosen_model->insertJurnal();
-						header('location:/dosen');
-				}
-				*/
-				//img src="/upload/folder/file.jpg"
-				
-				break;	
-			case 'view':
-				break;
-			default:
-			$this->load->view('/dosen/index', array('controller' => $this));
-			jsloc::show();
+					//upload jurnal file pdf
+					$this->load->library('upload');
+					$config['upload_path'] = './upload/' . $this->input->post('kategori_dokumen');
+					$config['allowed_types'] = 'pdf';
+					$config['encrypt_name'] = TRUE;
+					//$config['max_width']  = '1024';
+					//$config['max_height']  = '768';       
+
+					$this->upload->initialize($config);
+		 
+					if ($this->upload->do_upload('file_dokumen'))
+					{
+						//--unngah file
+						$data = $this->upload->data();
+						//simpan db	
+						$namafile = './upload/'. $this->input->post('kategori_dokumen') . '/' . $data['file_name'];
+						$ekstensi= $this->input->post('kategori_dokumen').$data['file_ext'];
+						
+						
+					}
+					else
+					{
+						echo $this->upload->display_errors();
+					}
+					
+					//upload jurnal file foto
+					$this->load->library('upload');
+					$config['upload_path']='./upload/' . $this->input->post('kategori_dokumen');
+					$config['allowed_types']='jpg';
+					$config['encrypt_name']=TRUE;
+					$this->upload->initialize($config);
+					if($this->upload->do_upload('foto_dokumen'))
+					{
+						$data=$this->upload->data();
+						$namafoto='./upload/'. $this->input->post('kategori_dokumen') . '/' . $data['file_name'];
+					}
+					else
+					{
+						echo $this->upload->display_errors();
+					}
+					$this->dosen_model->insertJurnal();
 		}
 	}
-	
 }
