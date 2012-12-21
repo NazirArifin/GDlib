@@ -61,7 +61,8 @@ class Dosen extends CI_Controller {
 					{
 						echo $this->upload->display_errors();
 					}
-					$this->dosen_model->insertJurnal();
+					$this->dosen_model->insertJurnal($namafile,$namafoto,$ekstensi);
+					var_dump($config['upload_path']);
 		}
 	}
 }
