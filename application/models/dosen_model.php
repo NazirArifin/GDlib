@@ -6,16 +6,25 @@ class Dosen_model extends CI_Model {
 		
 	}
 	
-	public function insertJurnal($namafile='',$namafoto='',$ekstensi='')
+	public function insertJurnal($namafile,$namafoto,$ekstensi)
 	{
 		// cek 
-		switch ($namafile){
-			case '':
+		$kategori=$this->input->post('kategori_dokumen');
+		switch ($kategori){
+			case 'jurnal':
+				$kategori='1';
 				break;
-			default:
+			case 'buku':
+				$kategori='2';
+				break;
+			case 'modul':
+				$kategori='3';
+				break;
+			default:	
+				$kategori=$this->input->post('kategori_dokumen');
 		}
 		$insert=array(
-			'ID_KATEGORI_DOKUMEN'=>$this->input->post('kategori_dokumen'),
+			'ID_KATEGORI_DOKUMEN'=>$kategori,
 			'ID_JENIS_DOKUMEN'=>$ekstensi,
 			'ID_STATUS_DOKUMEN'=>'1',
 			'ID_USER'=>'9',

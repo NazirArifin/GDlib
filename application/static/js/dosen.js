@@ -1,7 +1,6 @@
 $('a[data-toggle="tab"]').on('shown', function (e) {
 	var type = $(e.target).text().toLowerCase();
 	$('#kategori-dokumen').val(type);
-	alert('$('#kategori-dokumen')'.'val(type)');
 })
 
 function tambahDokumen(){
