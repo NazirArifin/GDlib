@@ -110,8 +110,7 @@
 				</ul>
 			</div>
 			<div class="row-fluid" id="data-section">
-				<form class="form-horizontal" id="form-view" action="" method="POST" enctype="multipart/form-data">	
-				<legend id="form-legend"></legend>	
+				
 				<div class="tabbable span12">
 						<ul class="nav nav-tabs" id="tab-dokumen">
 							<li class="active"><a href="#jurnal" data-toggle="tab">JURNAL</a></li>
@@ -337,8 +336,7 @@
 							</div>
 						</div>
 					</div>
-				</form>
-			</div>
+				</div>
 			<!--ini bagian tambah jurnal-->
 			<div class="row-fluid hide" id="form-section">
 				<form class="form-horizontal" id="form-tambah" action="" method="POST" enctype="multipart/form-data">

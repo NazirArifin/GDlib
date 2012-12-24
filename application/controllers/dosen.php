@@ -7,6 +7,7 @@ class Dosen extends CI_Controller {
 		include(APPPATH . 'libraries/jsloc.php');
 		$this->load->model('dosen_model');
 		$this->load->helper();
+		$this->load->database();
 	}
 	
 	public function index()
@@ -18,7 +19,6 @@ class Dosen extends CI_Controller {
 	public function dokumen($param = '', $extra = '') {
 		
 		$this->load->library('session');
-		$this->load->database();
 		switch ($param) {
 			case 'add':
 					//upload jurnal file pdf
@@ -44,14 +44,17 @@ class Dosen extends CI_Controller {
 										$ekstensi='1';
 									break;
 									case '.doc':
+										$ekstensi='2';
 									case '.docx':
 										$ekstensi='2';
 									break;	
 									case '.xls':
+										$ekstensi='3';
 									case '.xlsx':
 										$ekstensi='3';
 									break;	
 									case '.ppt':
+										$ekstensi='4';
 									case '.pptx':
 										$ekstensi='4';
 									break;	
@@ -81,7 +84,9 @@ class Dosen extends CI_Controller {
 						$ekstensi= $data['file_ext'];
 						switch ($ekstensi){
 									case '.jpg':
+										$ekstensi='6';
 									case '.jpeg':
+										$ekstensi='6';
 									case '.png':
 										$ekstensi='6';
 									break;	
@@ -95,15 +100,11 @@ class Dosen extends CI_Controller {
 					}
 					$this->dosen_model->insertJurnal($namafile,$namafoto,$ekstensi);
 				break;
-				case 'view:
-				
-				break;
 			default:
 			$this->load->view('dosen/index',array ('error'=>' '));
 			jsloc::show();
 		}
-		
-			$this->load->view('dosen/index');
-			jsloc::show();
+		$this->load->view('dosen/index');
+		jsloc::show();
 	}
 }
