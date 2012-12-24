@@ -81,8 +81,12 @@ $route['admin/buletin'] = "admin/buletin";
 $route['dosen'] = "dosen";
 $route['dosen/profil'] = "dosen/profil";
 
-//======================= ROUTES UNTUK BULETIN ==== 
+//======================= ROUTES UNTUK MAHASISWA ==== 
 $route['mahasiswa'] = "mahasiswa";
+$route['mahasiswa/jurnal'] = "mahasiswa/jurnal";
+$route['mahasiswa/buku'] = "mahasiswa/buku";
+$route['mahasiswa/modul'] = "mahasiswa/modul";
+$route['mahasiswa/buletin'] = "mahasiswa/buletin";
 
 
 // ==================== error
