@@ -51,6 +51,8 @@ $route['images/(.+)'] = "statics/images/$1";
 
 $route['third_party/(.+)$'] = 'statics/thirdparty/$1';
 
+$route['jurnal'] = 'jurnal';
+
 //======================= ROUTES UNTUK ADMIN ==== 
 $route['admin'] = "admin";
 
@@ -87,7 +89,6 @@ $route['mahasiswa/jurnal'] = "mahasiswa/jurnal";
 $route['mahasiswa/buku'] = "mahasiswa/buku";
 $route['mahasiswa/modul'] = "mahasiswa/modul";
 $route['mahasiswa/buletin'] = "mahasiswa/buletin";
-
 
 // ==================== error
 $route['404_override'] = '';
