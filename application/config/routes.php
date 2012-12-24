@@ -66,6 +66,8 @@ $route['admin/news'] = "admin/news";
 //======================= ROUTES UNTUK JURNAL ==== 
 $route['admin/jurnal'] = "admin/jurnal";
 
+$route['mahasiswa/jurnal'] = "mahasiswa/jurnal";
+
 //======================= ROUTES UNTUK MODUL ==== 
 $route['admin/modul'] = "admin/modul";
 

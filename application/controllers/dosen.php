@@ -95,6 +95,9 @@ class Dosen extends CI_Controller {
 					}
 					$this->dosen_model->insertJurnal($namafile,$namafoto,$ekstensi);
 				break;
+				case 'view:
+				
+				break;
 			default:
 			$this->load->view('dosen/index',array ('error'=>' '));
 			jsloc::show();

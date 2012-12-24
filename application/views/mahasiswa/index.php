@@ -66,7 +66,7 @@
 				<div>
 					<ul class="nav nav-tabs nav-stacked">
 						<li class="nav-header"><h3>Dokumen</h3></li>
-						<li><a href="#"><i class="icon-chevron-right"></i> JURNAL</a></li>
+						<li><a href="mahasiswa/jurnal"><i class="icon-chevron-right"></i> JURNAL</a></li>
 						<li><a href="#"><i class="icon-chevron-right"></i> BUKU</a></li>
 						<li><a href="#"><i class="icon-chevron-right"></i> MODUL</a></li>
 						<li><a href="#"><i class="icon-chevron-right"></i> BULETIN</a></li>

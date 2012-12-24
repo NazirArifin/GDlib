@@ -110,8 +110,9 @@
 				</ul>
 			</div>
 			<div class="row-fluid" id="data-section">
-				<!--<form class="form-horizontal" id="form-view-jurnal" action="" method="POST">-->
-					<div class="tabbable span12">
+				<form class="form-horizontal" id="form-view" action="" method="POST" enctype="multipart/form-data">	
+				<legend id="form-legend"></legend>	
+				<div class="tabbable span12">
 						<ul class="nav nav-tabs" id="tab-dokumen">
 							<li class="active"><a href="#jurnal" data-toggle="tab">JURNAL</a></li>
 							<li><a href="#buku" data-toggle="tab">BUKU</a></li>
@@ -336,13 +337,14 @@
 							</div>
 						</div>
 					</div>
-				<!--</form>-->
+				</form>
 			</div>
 			<!--ini bagian tambah jurnal-->
 			<div class="row-fluid hide" id="form-section">
 				<form class="form-horizontal" id="form-tambah" action="" method="POST" enctype="multipart/form-data">
 					<div class="well span12">
 						<a href="#" class="btn btn-info btn-mini pull-right" onClick="return closeForm()"><i class="icon-remove icon-white"></i></a>
+						<legend id="form-legend"></legend>	
 						<fieldset>
 							<input type="hidden" name="kategori_dokumen" id="kategori-dokumen" value="jurnal">
 							<legend id="form-legend"></legend>	
