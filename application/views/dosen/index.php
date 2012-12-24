@@ -177,13 +177,21 @@
 									<thead>
 										<tr>
 											<th>JUDUL</th>
-											<th>TANGGAL</th>
+											<th>PENGARANG</th>
 										</tr>
 									</thead>
 									<tbody>
+										<?php
+											$buku=$controller->dosen_model->tampilBuku();
+											if($buku==0):
+												echo '<tr><td colspan="4"><div class="alert-info" style="text-align:center;">Data Buku Tidak Ada</div></td></tr>';
+											else:
+												foreach($buku as $row):
+											
+										?>
 										<tr>
-											<td>Buku_1</td>
-											<td>12/12/12</td>
+											<td><?php echo $row->JUDUL_DOKUMEN?></td>
+											<td><?php echo $row->PENGARANG_DOKUMEN?></td>
 											<td>
 											<div class="btn-group">
 											<button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button> 
@@ -192,39 +200,10 @@
 											</div>
 											</td>
 										</tr>
-										<tr>
-											<td>Buku_2</td>
-											<td>12/12/12</td>
-											<td>
-											<div class="btn-group">
-											<button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button> 
-											<button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button> 
-											<button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
-											</div>
-											</td>
-										</tr>
-										<tr>
-											<td>Buku_3</td>
-											<td>12/12/12</td>
-											<td>
-											<div class="btn-group">
-											<button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button> 
-											<button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button> 
-											<button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
-											</div>
-											</td>
-										</tr>
-										<tr>
-											<td>Buku_4</td>
-											<td>12/12/12</td>
-											<td>
-											<div class="btn-group">
-											<button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button> 
-											<button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button> 
-											<button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
-											</div>
-											</td>
-										</tr>
+										<?
+												endforeach;
+											endif;
+										?>
 									</tbody>
 								</table>
 								<div class="pagination pagination-centered">
@@ -249,13 +228,20 @@
 									<thead>
 										<tr>
 											<th>JUDUL</th>
-											<th>TANGGAL</th>
+											<th>PENGARANG</th>
 										</tr>
 									</thead>
 									<tbody>
+										<?php
+											$modul=$controller->dosen_model->tampilModul();
+											if($modul==0):
+												echo '<tr><td colspan="4"><div class="alert-info" style="text-align:center;">Data Modul Tidak Ada</div></td></tr>';
+											else:
+												foreach($modul as $row):
+										?>
 										<tr>
-											<td>Modul_1</td>
-											<td>12/12/12</td>
+											<td><?php echo $row->JUDUL_DOKUMEN?></td>
+											<td><?php echo $row->PENGARANG_DOKUMEN?></td>
 											<td>
 											<div class="btn-group">
 											<button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button> 
@@ -264,39 +250,10 @@
 											</div>
 											</td>
 										</tr>
-										<tr>
-											<td>Modul_2</td>
-											<td>12/12/12</td>
-											<td>
-											<div class="btn-group">
-											<button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button> 
-											<button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button> 
-											<button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
-											</div>
-											</td>
-										</tr>
-										<tr>
-											<td>Modul_3</td>
-											<td>12/12/12</td>
-											<td>
-											<div class="btn-group">
-											<button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button> 
-											<button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button> 
-											<button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
-											</div>
-											</td>
-										</tr>
-										<tr>
-											<td>Modul_4</td>
-											<td>12/12/12</td>
-											<td>
-											<div class="btn-group">
-											<button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button> 
-											<button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button> 
-											<button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
-											</div>
-											</td>
-										</tr>
+										<?php
+												endforeach;
+											endif;
+										?>
 									</tbody>
 								</table>
 								<div class="pagination pagination-centered">

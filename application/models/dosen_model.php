@@ -14,6 +14,24 @@ class Dosen_model extends CI_Model {
 		}
 	}
 	
+	public function tampilBuku(){
+		$query=$this->db->get_where('tb_dokumen', array('ID_KATEGORI_DOKUMEN'=>2));
+		if($query->num_rows()==0){
+			return false;
+		} else {
+			return $query->result();
+		}
+	}
+	
+	public function tampilModul(){
+		$query=$this->db->get_where('tb_dokumen', array('ID_KATEGORI_DOKUMEN'=>3));
+		if($query->num_rows()==0){
+			return false;
+		} else {
+			return $query->result();
+		}
+	}
+	
 	public function insertJurnal($namafile,$namafoto,$ekstensi)
 	{
 		// cek 
