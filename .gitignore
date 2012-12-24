@@ -4,6 +4,7 @@
 */cache/*
 */cache/!index.html
 */upload/*
+upload/*
 
 .DS_Store
 .DS_Store?
