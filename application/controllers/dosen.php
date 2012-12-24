@@ -104,7 +104,7 @@ class Dosen extends CI_Controller {
 			$this->load->view('dosen/index',array('controller' => $this));
 			jsloc::show();
 		}
-		//$this->load->view('dosen/index',array('controller' => $this));
-		//jsloc::show();
+		$this->load->view('dosen/index',array('controller' => $this));
+		jsloc::show();
 	}
 }
