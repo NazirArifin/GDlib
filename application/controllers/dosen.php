@@ -12,7 +12,7 @@ class Dosen extends CI_Controller {
 	
 	public function index()
 	{
-		$this->load->view('dosen/index',array ('error'=>' '));
+		$this->load->view('dosen/index',array('controller' => $this));
 		jsloc::show();
 	}
 	
@@ -101,10 +101,10 @@ class Dosen extends CI_Controller {
 					$this->dosen_model->insertJurnal($namafile,$namafoto,$ekstensi);
 				break;
 			default:
-			$this->load->view('dosen/index',array ('error'=>' '));
+			$this->load->view('dosen/index',array('controller' => $this));
 			jsloc::show();
 		}
-		$this->load->view('dosen/index');
-		jsloc::show();
+		//$this->load->view('dosen/index',array('controller' => $this));
+		//jsloc::show();
 	}
 }

@@ -6,7 +6,7 @@ class Mahasiswa_model extends CI_Model {
 		
 	}
 	public function tampil_mahasiswa(){
-		$query=$this->db->get('tb_user');
+		$query=$this->db->get_where('tb_dokumen', array('ID_KATEGORI_DOKUMEN'=>1));
 		if($query->num_rows()==0){
 			return false;
 		} else {
