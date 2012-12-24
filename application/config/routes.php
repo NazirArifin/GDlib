@@ -51,36 +51,23 @@ $route['images/(.+)'] = "statics/images/$1";
 
 $route['third_party/(.+)$'] = 'statics/thirdparty/$1';
 
-$route['jurnal'] = 'jurnal';
 
 //======================= ROUTES UNTUK ADMIN ==== 
 $route['admin'] = "admin";
-
-//======================= ROUTES UNTUK MAHASISWA ==== 
 $route['admin/mahasiswa'] = "admin/mahasiswa";
-
-//======================= ROUTES UNTUK DOSEN ==== 
 $route['admin/dosen'] = "admin/dosen";
-
-//======================= ROUTES UNTUK NEWS ==== 
 $route['admin/news'] = "admin/news";
-
-//======================= ROUTES UNTUK JURNAL ==== 
 $route['admin/jurnal'] = "admin/jurnal";
-
-$route['mahasiswa/jurnal'] = "mahasiswa/jurnal";
-
-//======================= ROUTES UNTUK MODUL ==== 
 $route['admin/modul'] = "admin/modul";
-
-//======================= ROUTES UNTUK BUKU ==== 
 $route['admin/buku'] = "admin/buku";
-
-//======================= ROUTES UNTUK BULETIN ==== 
 $route['admin/buletin'] = "admin/buletin";
 
 //======================= ROUTES UNTUK DOSEN ==== 
 $route['dosen'] = "dosen";
+$route['dosen/jurnal'] = "dosen/jurnal";
+$route['dosen/modul'] = "dosen/modul";
+$route['dosen/buku'] = "dosen/buku";
+$route['dosen/buletin'] = "dosen/buletin";
 $route['dosen/profil'] = "dosen/profil";
 
 //======================= ROUTES UNTUK MAHASISWA ==== 

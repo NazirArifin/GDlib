@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
 		<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
-		<link rel="stylesheet" href="/static/css/main.css" />
+		<link rel="stylesheet" href="/css/style.css" />
 			
 		<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
 		<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
