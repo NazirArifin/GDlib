@@ -13,11 +13,10 @@ class Mahasiswa extends CI_Controller {
 		jsloc::show();
 		
 	}
-	public function mahasiswa_modul()
+	public function jurnal()
 	{
-		$this->load->view('mahasiswa/mahasiswa_modul',array('controller=>$this'));
+		$this->load->view('mahasiswa/jurnal/index',array('controller' => $this));
 		jsloc::show();
 	}
 	
-}	
-				
+}

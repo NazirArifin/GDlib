@@ -119,6 +119,7 @@ function editUserMahasiswa(object, id){
 			
 		},
 		success: function(o){
+			$('#form-tambah').attr('action', '/admin/mahasiswa/update');
 			$('#view').hide('blind', {} , 500);
 			$('#form-tambah').show('blind', {} , 1500);
 			$('#nama-user').val(o[0].NAMA_USER);
@@ -139,7 +140,7 @@ function simpanUserMahasiswa(){
 			
 		},
 		success: function(data){
-			//console.log(data);
+			console.log(data);
 			if (data.success==1){
 				$form.find('input').val('');
 				alertify.success('Data Sudah Tersimpan');

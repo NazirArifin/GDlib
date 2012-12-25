@@ -35,7 +35,7 @@ class Admin_model extends CI_Model {
 		return TRUE;
 	}
 	
-	public function pilihIdUser($id){
+	public function pilihIdUserDosen($id){
 		$this->db->select('ID_USER,NAMA_USER,NO_INDUK_USER,ID_FACEBOOK_USER');
 		$query=$this->db->get_where('tb_user',array('ID_USER' => $id));
 		if($query->num_rows()==0){
@@ -91,6 +91,17 @@ class Admin_model extends CI_Model {
 		$this->db->insert('tb_user',$insert);
 		return TRUE;
 	}
+	
+	public function pilihIdUserMahasiswa($id){
+		$this->db->select('ID_USER,NAMA_USER,NO_INDUK_USER,ID_FACEBOOK_USER');
+		$query=$this->db->get_where('tb_user',array('ID_USER' => $id));
+		if($query->num_rows()==0){
+			return false;
+		} else {
+			return $query->result();
+		}
+	}
+	
 	public function editUserMahasiswa(){
 		$update = array(
 		'ID_LEVEL_USER'=>'2',
@@ -98,7 +109,7 @@ class Admin_model extends CI_Model {
 		'NO_INDUK_USER'=>$this->input->post('no_induk_user'),
 		'ID_FACEBOOK_USER'=>$this->input->post('id_facebook'));
 		
-		$this->db->where('id',$this->input->post('id'));
+		$this->db->where('ID_USER', $id);
 		$this->db->update('tb_user',$update);
 	}
 }

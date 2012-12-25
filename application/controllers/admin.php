@@ -35,7 +35,7 @@ class Admin extends CI_Controller {
 					echo '{ "success": 0, "error": 1 }';
 				break;
 			case 'data':
-				$pilih = $this->admin_model->pilihIdUser($extra);
+				$pilih = $this->admin_model->pilihIdUserDosen($extra);
 				echo json_encode($pilih);
 				break;
 			case 'update':
@@ -85,18 +85,22 @@ class Admin extends CI_Controller {
 					echo '{ "success": 0, "error": 1 }';
 				break;
 			case 'data':
-				$pilih = $this->admin_model->pilihIdUser($extra);
+				$pilih = $this->admin_model->pilihIdUserMahasiswa($extra);
 				echo json_encode($pilih);
 				break;
 			case 'update':
-				if ($this->input->post('id_level_user')){
-					$hasil = $this->admin_model->insertUserMahasiswa();
-					$this->session->set_flashdata('message','Data Sudah TerEdit');
-					header('location:/admin/mahasiswa');
+				$id = $this->input->post('id_user');
+				if ( ! empty($id)){
+					$this->admin_model->editUserMahasiswa($id);
+					echo '{ "error": 0, "success": 1 }';
 				}
 				break;
+			case 'delete':
+				$this->admin_model->deleteUserMahasiswa($extra);
+				echo '{ "error": 0, "success": 1 }';
+				break;
 			default:
-				$this->load->view('admin/mahasiswa/index', array('controller' => $this));
+				$this->load->view('admin/dosen/index', array('controller' => $this));
 				jsloc::show();
 		}
 	}
