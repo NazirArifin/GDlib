@@ -53,7 +53,7 @@
 		<li class="nav-header">Dokumen</li>
 		<li><a href="/admin/jurnal"><i class="icon-file"></i> Jurnal</a></li>
 		<li><a href="/admin/buku"><i class="icon-file"></i> Buku</a></li>
-		<li><a href="/admin/modul"><i class="icon-file"></i> Model</a></li>
+		<li><a href="/admin/modul"><i class="icon-file"></i> Modul</a></li>
 		<li><a href="/admin/buletin"><i class="icon-file"></i> Buletin</a></li>
 		<li class="divider"></li>
 		
@@ -62,182 +62,67 @@
 	</ul>
 		</div>
     <div class="well span9 pull-right">
-	<input type="text" class="input-medium search-query" >
-     <button class="btn btn-large btn-success pull-right" id="tombol"><i class="icon-plus icon-white"></i>Tambah</button><br><br><br>
-	 <div class="well span8">
-	 <img src="Images/animal1.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
-	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
-	 </div>
-	 <div class="well span8">
-	 <img src="Images/animal2.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
-	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
-	 </div>
-	 <div class="well span8">
-	 <img src="Images/animal3.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
-	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
-	 </div>
-	 <div class="well span8">
-	 <img src="Images/animal4.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
-	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
-	 </div>
-	 <div class="well span8">
-	 <img src="Images/animal5.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
-	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
-	 </div>
-	 <div class="well span8">
-	 <img src="Images/animal6.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
-	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
-	 </div>
-	 <div class="well span8">
-	 <img src="Images/animal7.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
-	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
-	 </div>
-	 <div class="well span8">
-	 <img src="Images/animal8.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
-	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
-	 </div>
-	<div class="pagination" align="center">
-		<ul>
-			<li><a href="#">Prev</a></li>
-			<li class="active">
-			<a href="#">1</a>
-			</li>
-			<li><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">Next</a></li>
-			</ul>
+			<input type="text" class="input-medium search-query" >
+			<button class="btn btn-mini btn-info pull-right" id="tombol" onClick="return tambahJurnal()"><i class="icon-plus icon-white"></i></button><br><br><br>
+				<div class="row-fluid">
+				<form class="form-horizontal" id="form-tambah" action="" method="POST" enctype="multipart/form-data">
+						<a href="#" class="btn btn-info btn-mini pull-right" onClick="return closeForm()"><i class="icon-remove icon-white"></i></a>
+					<fieldset>
+					<legend>Tambah Modul</legend>	
+							<input type="hidden" name="kategori_modul" id="kategori-modul" value="modul">
+							<div class="control-group">
+								<label class="control-label control-label-min" for="judul-Modul">Judul</label>
+								<div class="controls controls-min">
+									<input id="judul-modul" name="judul_modul" type="text" required="" placeholder="Judul Modul">
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label control-label-min" for="pengarang-modul">Pengarang</label>
+								<div class="controls controls-min">	
+									<input name="pengarang_modul" id="pengarang-modul" type="text" required="" placeholder="Pengarang Modul">
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label control-label-min" for="prolog-modul">Prolog Modul</label>
+								<div class="controls controls-min">	
+									<textarea rows="3" name="prolog_modul" id="prolog-modul"></textarea>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label control-label-min" for="tahun-penerbitan-modul">Tahun Penerbitan</label>
+								<div class="controls controls-min">	
+									<input name="tahun_penerbitan_modul" id="tahun-penerbitan-modul" type="text" required="" placeholder="Tahun Penerbitan">
+								</div>
+							</div>
+							
+							<div class="control-group">
+								<label class="control-label control-label-min" for="tahun-penerbitan-modul">File Modul</label>
+								<div class="controls controls-min">	
+									<input name="file_modul" id="file-modul" type="file" required="" >
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label control-label-min" for="foto-modul">Foto Modul</label>
+								<div class="controls controls-min">	
+									<input name="foto_modul" id="foto-modul" type="file" required="" >
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label control-label-min" for="kata-kunci-modul">Kata Kunci Modul</label>
+								<div class="controls controls-min">	
+									<input name="kata_kunci_modul" id="kata-kunci-modul" type="text" required="" placeholder="Kata Kunci M">
+								</div>
+							</div>
+							<div class="form-actions">
+								<button class="btn btn-info btn-mini" type="button" onClick="return closeForm()"><i class="icon-remove icon-white"></i> Cancel</button>
+								<button class="btn btn-info btn-mini" type="submit" value="upload" ><i class="icon-ok icon-white" ></i> Simpan</button>
+							</div>	
+						</fieldset>
+				</form>	
+			</div>
 		</div>
-    </div>
   </div>
 </div>
- <div class="modal fade" id="modal1">
-    <div class="modal-header">
-    <button class="close" data-dismiss="modal">X</button>
-    <h3>Edit Profil</h3>
-    </div>
-    <div class="modal-body">
-    <form class="form-horizontal">
-
-		<table class="table ">
-		<thead>
-		<tr>
-		<th>Nama</th>
-		<td>
-			<div class="input-prepend">
-              <span class="add-on"><i class="icon-tasks"></i></span><input class="span3" id="inputIcon" type="text" required="" placeholder="Your title">
-            </div>
-		</td>		
-		</tr>
-		</thead>
-		<tbody>
-		
-		<tr>
-		<th>Isi News</th>
-		<td>
-			<div class="input-prepend">
-              <textarea rows="6"></textarea>
-            </div>
-			</td>
-		</tr>
-		<tr>
-		<th>Foto</th>
-		<td>
-		<div class="input-prepend">
-              <span class="add-on"><i class="icon-picture"></i></span><input class="span4" id="inputIcon" type="file" required="" placeholder="your photo">
-            </div></td>
-		</tr>
-		<tr>
-		<th>Status</th>
-		<td>
-		
-            <div class="input-prepend">
-              
-            </div>
-			<input type="radio" class="radio" name="mail">&nbsp;<span class="label label-info">show</span> <input type="radio" class="radio" name="mail">&nbsp; <span class="label label-important">dont show</span>
-			</td>
-		</tr>
-		
-		
-		
-		</tbody>
-		</table>
-		
-    </div>
-		<div class="modal-footer">
-		<button href="#" class="btn btn-danger btn-large" data-dismiss="modal" id="close"><i class="icon-remove icon-white"></i> Close</button>
-    <button  href="#" class="btn btn-primary btn-large"  type="submit"><i class="icon-ok icon-white"></i> Simpan</button>
-		</div>
-    </div>
-	</form>
-<!--modal2-->
-<div class="modal fade" id="modal2">
-    <div class="modal-header">
-    <button class="close" data-dismiss="modal">X</button>
-    <h3>Edit Profil</h3>
-    </div>
-    <div class="modal-body">
-    <form class="form-horizontal">
-
-		<table class="table ">
-		<thead>
-		<tr>
-		<th>Nama</th>
-		<td>
-			<div class="input-prepend">
-              <span class="add-on"><i class="icon-tasks"></i></span><input class="span3" id="inputIcon" type="text" required="" placeholder="Your title">
-            </div>
-		</td>		
-		</tr>
-		</thead>
-		<tbody>
-		
-		<tr>
-		<th>Isi News</th>
-		<td>
-			<div class="input-prepend">
-              <textarea rows="6"></textarea>
-            </div>
-			</td>
-		</tr>
-		<tr>
-		<th>Foto</th>
-		<td>
-		<div class="input-prepend">
-              <span class="add-on"><i class="icon-picture"></i></span><input class="span4" id="inputIcon" type="file" required="" placeholder="your photo">
-            </div></td>
-		</tr>
-		<tr>
-		<th>Status</th>
-		<td>
-		
-            <div class="input-prepend">
-              
-            </div>
-			<input type="radio" class="radio" name="mail">&nbsp;<span class="label label-info">show</span> <input type="radio" class="radio" name="mail">&nbsp; <span class="label label-important">dont show</span>
-			</td>
-		</tr>
-		
-		
-		
-		</tbody>
-		</table>
-		
-    </div>
-		<div class="modal-footer">
-		<button href="#" class="btn btn-danger btn-large" data-dismiss="modal" id="close"><i class="icon-remove icon-white"></i> Close</button>
-    <button  href="#" class="btn btn-primary btn-large"  type="submit"><i class="icon-ok icon-white"></i> Simpan</button>
-		</div>
-    </div>
-	</form>	
 <script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
 			<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
 			<script src="/third_party/bootstrap/bootstrap.min.js"></script>

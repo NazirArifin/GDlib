@@ -37,41 +37,90 @@
 				</ul>
 			</div>
 		</div>
-	</div>
+</div>
 	<br>
 	<br>
 	<br>
 <div class="container-fluid" id="container">
-	<div class="row-fluid" id="form">
+	<div class="row-fluid">
 		<div class="well span3" id="sidebar">
 			<ul class="nav nav-list">
-		<li class="nav-header">Pengguna</li>
-		<li><a href="/admin/dosen"><i class="icon-user"></i> Dosen</a></li>
-		<li><a href="/admin/mahasiswa"><i class="icon-user"></i> Mahasiswa</a></li>
-		<li class="divider"></li>
-		
-		<li class="nav-header">Dokumen</li>
-		<li><a href="/admin/jurnal"><i class="icon-file"></i> Jurnal</a></li>
-		<li><a href="/admin/buku"><i class="icon-file"></i> Buku</a></li>
-		<li><a href="/admin/modul"><i class="icon-file"></i> Model</a></li>
-		<li><a href="/admin/buletin"><i class="icon-file"></i> Buletin</a></li>
-		<li class="divider"></li>
-		
-		<li class="nav-header">Lainnya</li>
-		<li><a href="/admin/news"><i class="icon-warning-sign"></i> Berita</a></li>
-	</ul>
+				<li class="nav-header">Pengguna</li>
+				<li><a href="/admin/dosen"><i class="icon-user"></i> Dosen</a></li>
+				<li><a href="/admin/mahasiswa"><i class="icon-user"></i> Mahasiswa</a></li>
+				<li class="divider"></li>
+				
+				<li class="nav-header">Dokumen</li>
+				<li><a href="/admin/jurnal"><i class="icon-file"></i> Jurnal</a></li>
+				<li><a href="/admin/buku"><i class="icon-file"></i> Buku</a></li>
+				<li><a href="/admin/modul"><i class="icon-file"></i> Modul</a></li>
+				<li><a href="/admin/buletin"><i class="icon-file"></i> Buletin</a></li>
+				<li class="divider"></li>
+				
+				<li class="nav-header">Lainnya</li>
+				<li><a href="/admin/news"><i class="icon-warning-sign"></i> Berita</a></li>
+			</ul>
 		</div>
-    <div class="well span9 pull-right">
-	<input type="text" class="input-medium search-query" >
-     <button class="btn btn-mini btn-info pull-right" id="tombol" onClick="return tambahJurnal()"><i class="icon-plus icon-white"></i></button><br><br><br>
-	 <div class="well span8">
-		<form name="form_jurnal" id="form-jurnal" action="" method="POST" enctype="multipart/form-data">
-		<input type="file" name="userfile" size="20" />
-		<input type="submit" value="upload" />
-		</form>
-	 
-	 
-	
+		<div class="well span9 pull-right">
+			<input type="text" class="input-medium search-query" >
+			<button class="btn btn-mini btn-info pull-right" id="tombol" onClick="return tambahJurnal()"><i class="icon-plus icon-white"></i></button><br><br><br>
+				<div class="row-fluid">
+				<form class="form-horizontal" id="form-tambah" action="" method="POST" enctype="multipart/form-data">
+						<a href="#" class="btn btn-info btn-mini pull-right" onClick="return closeForm()"><i class="icon-remove icon-white"></i></a>
+					<fieldset>
+					<legend>Tambah Jurnal</legend>	
+							<input type="hidden" name="kategori_jurnal" id="kategori-jurnal" value="jurnal">
+							<div class="control-group">
+								<label class="control-label control-label-min" for="judul-jurnal">Judul</label>
+								<div class="controls controls-min">
+									<input id="judul-jurnal" name="judul_jurnal" type="text" required="" placeholder="Judul Jurnal">
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label control-label-min" for="pengarang-jurnal">Pengarang</label>
+								<div class="controls controls-min">	
+									<input name="pengarang_jurnal" id="pengarang-jurnal" type="text" required="" placeholder="Pengarang Jurnal">
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label control-label-min" for="prolog-jurnal">Prolog Jurnal</label>
+								<div class="controls controls-min">	
+									<textarea rows="3" name="prolog_jurnal" id="prolog-jurnal"></textarea>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label control-label-min" for="tahun-penerbitan-jurnal">Tahun Penerbitan</label>
+								<div class="controls controls-min">	
+									<input name="tahun_penerbitan_jurnal" id="tahun-penerbitan-jurnal" type="text" required="" placeholder="Tahun Penerbitan">
+								</div>
+							</div>
+							
+							<div class="control-group">
+								<label class="control-label control-label-min" for="tahun-penerbitan-jurnal">File Jurnal</label>
+								<div class="controls controls-min">	
+									<input name="file_jurnal" id="file-jurnal" type="file" required="" >
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label control-label-min" for="foto-jurnal">Foto Jurnal</label>
+								<div class="controls controls-min">	
+									<input name="foto_jurnal" id="foto-jurnal" type="file" required="" >
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label control-label-min" for="kata-kunci-jurnal">Kata Kunci Jurnal</label>
+								<div class="controls controls-min">	
+									<input name="kata_kunci_jurnal" id="kata-kunci-jurnal" type="text" required="" placeholder="Kata Kunci Jurnal">
+								</div>
+							</div>
+							<div class="form-actions">
+								<button class="btn btn-info btn-mini" type="button" onClick="return closeForm()"><i class="icon-remove icon-white"></i> Cancel</button>
+								<button class="btn btn-info btn-mini" type="submit" value="upload" ><i class="icon-ok icon-white" ></i> Simpan</button>
+							</div>	
+						</fieldset>
+				</form>	
+			</div>
+		</div>
 	</div>
 </div>
 <script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
