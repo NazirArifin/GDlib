@@ -112,4 +112,145 @@ class Admin_model extends CI_Model {
 		$this->db->where('ID_USER', $id);
 		$this->db->update('tb_user',$update);
 	}
+	
+	public function deleteUserMahasiswa($id){
+		$this->db->delete('tb_user', array('ID_USER'=>$id));
+	}
+	
+//DOKUMEN
+//jurnal
+
+	public function insertJurnal($namafile,$namafoto,$ekstensi)
+	{
+		// cek 
+		$kategori=$this->input->post('kategori_jurnal');
+		switch ($kategori){
+			case 'jurnal':
+				$kategori='1';
+				break;
+			case 'buku':
+				$kategori='2';
+				break;
+			case 'modul':
+				$kategori='3';
+				break;
+			default:	
+				$kategori=$this->input->post('kategori_jurnal');
+		}
+		$insert=array(
+			'ID_KATEGORI_DOKUMEN'=>$kategori,
+			'ID_JENIS_DOKUMEN'=>$ekstensi,
+			'ID_STATUS_DOKUMEN'=>'1',
+			'ID_USER'=>'9',
+			'JUDUL_DOKUMEN'=>$this->input->post('judul_jurnal'),
+			'PENGARANG_DOKUMEN'=>$this->input->post('pengarang_jurnal'),
+			'PROLOG_DOKUMEN'=>$this->input->post('prolog_jurnal'),
+			'TAHUN_PENERBITAN_DOKUMEN'=>$this->input->post('tahun_penerbitan_jurnal'),
+			'KATA_KUNCI_DOKUMEN'=>$this->input->post('kata_kunci_jurnal'),
+			'UKURAN_FILE_DOKUMEN'=>'100','RATE_DOKUMEN'=>'10',
+			'JUMLAH_DOWNLOAD_DOKUMEN'=>'9','JUMLAH_BACA_DOKUMEN'=>'10',
+			'FOTO_DOKUMEN'=>$namafoto,
+			'FILE_DOKUMEN'=>$namafile);
+	
+		$this->db->insert('tb_dokumen',$insert);
+	}
+	
+	public function tampil_where_kategori_jurnal() {
+		$query=$this->db->get_where('tb_dokumen', array('ID_KATEGORI_DOKUMEN'=>1));
+		if($query->num_rows()==0){
+			return false;
+		} else {
+			return $query->result();
+		}
+	}
+	
+// buku
+	public function insertBuku($namafile,$namafoto,$ekstensi)
+	{
+		// cek 
+		$kategori=$this->input->post('kategori_buku');
+		switch ($kategori){
+			case 'jurnal':
+				$kategori='1';
+				break;
+			case 'buku':
+				$kategori='2';
+				break;
+			case 'modul':
+				$kategori='3';
+				break;
+			default:	
+				$kategori=$this->input->post('kategori_buku');
+		}
+		$insert=array(
+			'ID_KATEGORI_DOKUMEN'=>$kategori,
+			'ID_JENIS_DOKUMEN'=>$ekstensi,
+			'ID_STATUS_DOKUMEN'=>'1',
+			'ID_USER'=>'9',
+			'JUDUL_DOKUMEN'=>$this->input->post('judul_buku'),
+			'PENGARANG_DOKUMEN'=>$this->input->post('pengarang_buku'),
+			'PROLOG_DOKUMEN'=>$this->input->post('prolog_buku'),
+			'TAHUN_PENERBITAN_DOKUMEN'=>$this->input->post('tahun_penerbitan_buku'),
+			'KATA_KUNCI_DOKUMEN'=>$this->input->post('kata_kunci_buku'),
+			'UKURAN_FILE_DOKUMEN'=>'100','RATE_DOKUMEN'=>'10',
+			'JUMLAH_DOWNLOAD_DOKUMEN'=>'9','JUMLAH_BACA_DOKUMEN'=>'10',
+			'FOTO_DOKUMEN'=>$namafoto,
+			'FILE_DOKUMEN'=>$namafile);
+	
+		$this->db->insert('tb_dokumen',$insert);
+	}
+	
+	public function tampil_where_kategori_buku() {
+		$query=$this->db->get_where('tb_dokumen', array('ID_KATEGORI_DOKUMEN'=>2));
+		if($query->num_rows()==0){
+			return false;
+		} else {
+			return $query->result();
+		}
+	}
+
+// Modul
+	public function insertModul($namafile,$namafoto,$ekstensi)
+	{
+		// cek 
+		$kategori=$this->input->post('kategori_modul');
+		switch ($kategori){
+			case 'jurnal':
+				$kategori='1';
+				break;
+			case 'buku':
+				$kategori='2';
+				break;
+			case 'modul':
+				$kategori='3';
+				break;
+			default:	
+				$kategori=$this->input->post('kategori_modul');
+		}
+		$insert=array(
+			'ID_KATEGORI_DOKUMEN'=>$kategori,
+			'ID_JENIS_DOKUMEN'=>$ekstensi,
+			'ID_STATUS_DOKUMEN'=>'1',
+			'ID_USER'=>'9',
+			'JUDUL_DOKUMEN'=>$this->input->post('judul_modul'),
+			'PENGARANG_DOKUMEN'=>$this->input->post('pengarang_modul'),
+			'PROLOG_DOKUMEN'=>$this->input->post('prolog_modul'),
+			'TAHUN_PENERBITAN_DOKUMEN'=>$this->input->post('tahun_penerbitan_modul'),
+			'KATA_KUNCI_DOKUMEN'=>$this->input->post('kata_kunci_modul'),
+			'UKURAN_FILE_DOKUMEN'=>'100','RATE_DOKUMEN'=>'10',
+			'JUMLAH_DOWNLOAD_DOKUMEN'=>'9','JUMLAH_BACA_DOKUMEN'=>'10',
+			'FOTO_DOKUMEN'=>$namafoto,
+			'FILE_DOKUMEN'=>$namafile);
+	
+		$this->db->insert('tb_dokumen',$insert);
+	}
+	
+	public function tampil_where_kategori_modul() {
+		$query=$this->db->get_where('tb_dokumen', array('ID_KATEGORI_DOKUMEN'=>3));
+		if($query->num_rows()==0){
+			return false;
+		} else {
+			return $query->result();
+		}
+	}
 }

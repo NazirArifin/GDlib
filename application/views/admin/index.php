@@ -84,7 +84,7 @@
 	 ?>
 	 <input type="text" class="input-medium search-query" placeholder="Cari Member" ><br><br>
 	 <ul class="nav nav-tabs" id="tab-member">
-	  <li class="active"><a href="#dosen" onClick="return tabAdminDosen()">Dosen <span class="badge badge-info"><?php echo $banyakDosen ?></span></a></li>
+	  <li class="active"><a href="#dosen" onClick="return tabAdminDosen()">Dosen <span class="badge badge-info"> <?php echo $banyakDosen ?> </span></a></li>
 	  <li><a href="#maha" onClick="return tabAdminMahasiswa()">Mahasiswa <span class="badge badge-info"> <?php echo $banyakMahasiswa ?> </span></a></li>
 	  
 	</ul>
@@ -95,7 +95,7 @@
 		<table class="table table-striped">
 		  <thead>
 			<tr>
-			  <th>Judul</th>
+			  <th>Nama</th>
 			  <th>No. Induk</th>
 			  <th>ID Facebook</th>
 			  <th>Aksi</th>
@@ -148,7 +148,7 @@
 	  <table class="table table-striped">
 		  <thead>
 			<tr>
-			  <th>Judul</th>
+			  <th>Nama</th>
 			  <th>No. Induk</th>
 			  <th>ID Facebook</th>
 			  <th>Aksi</th>
@@ -201,11 +201,19 @@
 	 <!--menu tab dokument-->
 	 <div class="">
 	 <h2>Dokument</h2>
+	 <?php
+	/* jurnal */	$jumlahJurnal=$controller->admin_model->tampil_where_kategori_jurnal();
+	/* jurnal */	($jumlahJurnal == false ? $banyakJurnal=0 : $banyakJurnal = count($jumlahJurnal));
+	/* buku */	$jumlahBuku=$controller->admin_model->tampil_where_kategori_buku();
+	/* buku */	($jumlahBuku == false ? $banyakBuku=0 : $banyakBuku = count($jumlahBuku));
+	/* modul */	$jumlahModul=$controller->admin_model->tampil_where_kategori_modul();
+	/* modul */	($jumlahModul == false ? $banyakModul=0 : $banyakModul = count($jumlahModul));
+	 ?>
 	 <input type="text" class="input-medium search-query" placeholder="Cari Dokument" ><br><br>
 	 <ul class="nav nav-tabs" id="tab-dok">
-	  <li class="active"><a href="#jurnal">Jurnal</a></li>
-	  <li><a href="#buku">Buku</a></li>
-	  <li><a href="#modul">Modul</a></li>
+	  <li class="active"><a href="#jurnal">Jurnal <span class="badge badge-info"> <?php echo $banyakJurnal ?> </span></a></li>
+	  <li><a href="#buku">Buku <span class="badge badge-info"> <?php echo $banyakBuku ?> </span></a></li>
+	  <li><a href="#modul">Modul <span class="badge badge-info"> <?php echo $banyakModul ?> </span></a></li>
 	  <li><a href="#buletin">Buletin</a></li>
 	</ul>
 	 
@@ -216,13 +224,23 @@
 		  <thead>
 			<tr>
 			  <th>Judul</th>
-			  <th>Taggal</th>
+			  <th>Pengarang</th>
+			  <th>Tahun Penerbitan</th>
+			  <th>Aksi</th>
 			</tr>
 		  </thead>
 		  <tbody>
+		  <?php
+				$dokumenJurnal=$controller->admin_model->tampil_where_kategori_jurnal();
+				if ($dokumenJurnal == 0):
+					echo '<tr><td colspan="4"><div class="alert-info" style="text-align:center;">Dokumen Jurnal Tidak Ada</div></td></tr>';
+				else :
+					foreach ($dokumenJurnal as $row):
+		  ?>
 			<tr>
-			  <td>Revolution</td>
-			  <td>12/12/12</td>
+			  <td><a href="#" class="screenshot" rel="<?php echo $row->FOTO_DOKUMEN ?>"><?php echo $row->JUDUL_DOKUMEN ?></a></td>
+			  <td><?php echo $row->PENGARANG_DOKUMEN ?></td>
+			  <td><?php echo $row->TAHUN_PENERBITAN_DOKUMEN ?></td>
 			  <td>
 			  <div class="btn-group">
 			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>
@@ -231,28 +249,10 @@
 			  </div>
 			  </td>
 			</tr>
-			<tr>
-			  <td>RIP</td>
-			  <td>12/12/12</td>
-			  <td>
-			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
-			  </div>
-			  </td>
-			</tr>
-			<tr>
-			  <td>Kroncong Protol</td>
-			  <td>12/12/12</td>
-			  <td>
-			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
-			  </div>
-			  </td>
-			</tr>
+			<?php
+				endforeach;
+			endif;
+			?>
 		  </tbody>
 		</table>
 		
@@ -273,17 +273,26 @@
 	  <!--tab buku-->
 	  <div class="tab-pane" id="buku">
 	  <table class="table">
-		  
 		  <thead>
 			<tr>
 			  <th>Judul</th>
-			  <th>Taggal</th>
+			  <th>Pengarang</th>
+			  <th>Tahun Penerbitan</th>
+			  <th>Aksi</th>
 			</tr>
 		  </thead>
 		  <tbody>
+		  <?php
+				$dokumenBuku=$controller->admin_model->tampil_where_kategori_buku();
+				if ($dokumenBuku == 0):
+					echo '<tr><td colspan="4"><div class="alert-info" style="text-align:center;">Dokumen Buku Tidak Ada</div></td></tr>';
+				else :
+					foreach ($dokumenBuku as $row):
+		  ?>
 			<tr>
-			  <td>Harry Potter</td>
-			  <td>12/12/12</td>
+			  <td><a href="#" class="screenshot" rel="<?php echo $row->FOTO_DOKUMEN ?>"><?php echo $row->JUDUL_DOKUMEN ?></a></td>
+			  <td><?php echo $row->PENGARANG_DOKUMEN ?></td>
+			  <td><?php echo $row->TAHUN_PENERBITAN_DOKUMEN ?></td>
 			  <td>
 			  <div class="btn-group">
 			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>
@@ -292,28 +301,10 @@
 			  </div>
 			  </td>
 			</tr>
-			<tr>
-			  <td>Twilight</td>
-			  <td>12/12/12</td>
-			  <td>
-			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
-			  </div>
-			  </td>
-			</tr>
-			<tr>
-			  <td>Janc#k</td>
-			  <td>12/12/12</td>
-			  <td>
-			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
-			  </div>
-			  </td>
-			</tr>
+			<?php
+				endforeach;
+			endif;
+			?>
 		  </tbody>
 		</table>
 		
@@ -334,17 +325,26 @@
 	  <!--tab modul-->
 	  <div class="tab-pane" id="modul">
 	  <table class="table">
-		  
 		  <thead>
 			<tr>
 			  <th>Judul</th>
-			  <th>Taggal</th>
+			  <th>Pengarang</th>
+			  <th>Tahun Penerbitan</th>
+			  <th>Aksi</th>
 			</tr>
 		  </thead>
 		  <tbody>
+		  <?php
+				$dokumenModul=$controller->admin_model->tampil_where_kategori_modul();
+				if ($dokumenModul == 0):
+					echo '<tr><td colspan="4"><div class="alert-info" style="text-align:center;">Dokumen Modul Tidak Ada</div></td></tr>';
+				else :
+					foreach ($dokumenModul as $row):
+		  ?>
 			<tr>
-			  <td>Algoritma</td>
-			  <td>12/12/12</td>
+			  <td><a href="#" class="screenshot" rel="<?php echo $row->FOTO_DOKUMEN ?>"><?php echo $row->JUDUL_DOKUMEN ?></a></td>
+			  <td><?php echo $row->PENGARANG_DOKUMEN ?></td>
+			  <td><?php echo $row->TAHUN_PENERBITAN_DOKUMEN ?></td>
 			  <td>
 			  <div class="btn-group">
 			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>
@@ -353,28 +353,10 @@
 			  </div>
 			  </td>
 			</tr>
-			<tr>
-			  <td>Aljabar</td>
-			  <td>12/12/12</td>
-			  <td>
-			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
-			  </div>
-			  </td>
-			</tr>
-			<tr>
-			  <td>Teknik Digital</td>
-			  <td>12/12/12</td>
-			  <td>
-			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
-			  </div>
-			  </td>
-			</tr>
+			<?php
+				endforeach;
+			endif;
+			?>
 		  </tbody>
 		</table>
 		

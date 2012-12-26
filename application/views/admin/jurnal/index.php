@@ -65,7 +65,7 @@
 			<input type="text" class="input-medium search-query" >
 			<button class="btn btn-mini btn-info pull-right" id="tombol" onClick="return tambahJurnal()"><i class="icon-plus icon-white"></i></button><br><br><br>
 				<div class="row-fluid">
-				<form class="form-horizontal" id="form-tambah" action="" method="POST" enctype="multipart/form-data">
+				<form class="form-horizontal hide" id="form-tambah" action="" method="POST" enctype="multipart/form-data">
 						<a href="#" class="btn btn-info btn-mini pull-right" onClick="return closeForm()"><i class="icon-remove icon-white"></i></a>
 					<fieldset>
 					<legend>Tambah Jurnal</legend>	

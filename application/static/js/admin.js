@@ -153,24 +153,52 @@ function simpanUserMahasiswa(){
 	return false;
 }
 
-//halaman admin index - tab
-/*
-function tabAdminDosen(){
+function deleteUserMahasiswa(object, id){
+//var konfirmasi = confirm("Apakah Anda yakin ingin menghapus Data ini ?");
+	//if (konfirmasi == true){
+	$('#form-tambah').attr('action', '/admin/mahasiswa/delete');
+	var $form = $('#form-tambah');
+	
 	$.ajax({
-		url: '/admin/dosen/tab',
+		url: '/admin/mahasiswa/delete/' + id,
+		dataType: 'json',
+		//type: $form.attr('method'),
+		//data: $form.serialize(),
 		beforeSend: function(){
 			
 		},
 		success: function(o){
-			$('#view').hide('blind', {} , 500);
-			$('#form-tambah').show('blind', {} , 1500);
-			$('#nama-user').val(o[0].NAMA_USER);
-			$('#no-induk-user').val(o[0].NO_INDUK_USER);
-			$('#id-facebook').val(o[0].ID_FACEBOOK_USER);
+		//console.log(o); ! perhatikan kamu pake var o bkan data
+			if (o.success==1){
+				$form.find('input').val('');
+				alertify.success('Data Sudah Terhapus');
+				$('#form-tambah').hide('blind', {} , 1500);
+			}
+			else {
+				alertify.error('Data Gagal dihapus');
+			}
 		}
 	});
+	//}
+	return false;
 }
 
-function tabAdminMahasiswa(){
+// DOKUMEN
 
-}*/
+//jurnal
+function tambahJurnal(){
+	$('#form-tambah').attr('action', '/admin/jurnal/add').show('blind', {} , 2500);
+	
+}
+
+//buku
+function tambahBuku(){
+	$('#form-tambah').attr('action', '/admin/buku/add').show('blind', {} , 2500);
+	
+}
+
+//Modul
+function tambahModul(){
+	$('#form-tambah').attr('action', '/admin/modul/add').show('blind', {} , 2500);
+	
+}

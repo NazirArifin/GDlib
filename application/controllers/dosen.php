@@ -8,6 +8,7 @@ class Dosen extends CI_Controller {
 		$this->load->model('dosen_model');
 		$this->load->helper();
 		$this->load->database();
+		$this->load->library();
 	}
 	
 	public function index()
@@ -17,8 +18,6 @@ class Dosen extends CI_Controller {
 	}
 	
 	public function dokumen($param = '', $extra = '') {
-		
-		$this->load->library('session');
 		switch ($param) {
 			case 'add':
 					//upload jurnal file pdf
