@@ -106,4 +106,21 @@ class Dosen extends CI_Controller {
 		$this->load->view('dosen/index',array('controller' => $this));
 		jsloc::show();
 	}
+	public function jurnal()
+	{
+		$this->load->view('dosen/jurnal/index',array('controller' => $this));
+		jsloc::show();
+	}
+	
+	public function buku()
+	{
+		$this->load->view('dosen/jurnal/index',array('controller' => $this));
+		jsloc::show();
+	}
+	
+	public function modul()
+	{
+		$this->load->view('dosen/modul/index',array('controller' => $this));
+		jsloc::show();
+	}
 }

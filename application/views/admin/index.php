@@ -454,19 +454,19 @@
 		  <td><img src="/images/ogo.png" class="image-admin"></td>
 		  <td>WTF</td>
 		  <td>Lorem ipsum dolor sit amet</td>
-		  <td><label class="label label-important">Banned</label></td>
+		  <td><label class="label label-important"><i class="icon-off icon-white"></i></label></td>
 		</tr>
 		<tr>
 		  <td><img src="/images/ogo.png" class="image-admin"></td>
 		  <td>Accident</td>
 		  <td>Lorem ipsum dolor sit amet</td>
-		  <td><label class="label label-success">active</label></td>
+		  <td><label class="label label-success"><i class="icon-repeat icon-white"></i></label></td>
 		</tr>
 		<tr>
 		  <td><img src="/images/ogo.png" class="image-admin"></td>
 		  <td>LOL</td>
 		  <td>Lorem ipsum dolor sit amet</td>
-		  <td><label class="label label-warning">g jelas</label></td>
+		  <td><label class="label label-warning"><i class="icon-warning-sign icon-white"></i></label></td>
 		</tr>
 	  </tbody>
 	</table>

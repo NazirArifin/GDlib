@@ -48,7 +48,7 @@
 <br />
 <br />
 <div class="span12">
-	<h1 style="text-align:center;">Jurnal</h1>
+	<h1 style="text-align:center;">Buku</h1>
 </div>
 <div class="container-fluid">
   <div class="row-fluid">
@@ -61,10 +61,10 @@
 		
 			<div class="media">
 				<a class="pull-left">
-					<img src="/images/rud.jpg" class="media-object jurnal-image thumbnail" >
+					<img src="/images/doc.jpg" class="media-object jurnal-image thumbnail" >
 				</a>
 					<div class="media-body">
-						<h4 class="media-heading">Jurnal</h4>
+						<h4 class="media-heading">Harry Potter</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus magni explicabo perspiciatis harum distinctio debitis id quos quis aspernatur nemo labore voluptatem magnam totam minus culpa quasi dolor iure quaerat... <a href="#" class="badge badge-info">read more</a></p>
 
 					</div>
@@ -72,10 +72,10 @@
 
 			<div class="media">
 				<a class="pull-left" >
-					<img src="/images/rud.jpg" class="media-object jurnal-image thumbnail" >
+					<img src="/images/doc.jpg" class="media-object jurnal-image thumbnail" >
 				</a>
 					<div class="media-body">
-						<h4 class="media-heading">Jurnal</h4>
+						<h4 class="media-heading">buku</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus magni explicabo perspiciatis harum distinctio debitis id quos quis aspernatur nemo labore voluptatem magnam totam minus culpa quasi dolor iure quaerat... <a href="#" class="badge badge-info">read more</a></p>
 
 					</div>
@@ -83,56 +83,58 @@
 
 			<div class="media">
 				<a class="pull-left">
-					<img src="/images/rud.jpg" class="media-object jurnal-image thumbnail" >
+					<img src="/images/doc.jpg" class="media-object jurnal-image thumbnail" >
 				</a>
 					<div class="media-body">
-						<h4 class="media-heading">Jurnal</h4>
+						<h4 class="media-heading">buku</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus magni explicabo perspiciatis harum distinctio debitis id quos quis aspernatur nemo labore voluptatem magnam totam minus culpa quasi dolor iure quaerat... <a href="#" class="badge badge-info">read more</a></p>
 
 					</div>
 			</div>
-			<div class="pagination pagination-centered pagination-large">
-				<ul>
-					<li><a href="#">Prev</a></li>
-					<li><a href="#">1</a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">Next</a></li>
-				</ul>
-			</div>
+			
+		<div class="pagination pagination-centered pagination-large">
+			<ul>
+				<li><a href="#">Prev</a></li>
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">Next</a></li>
+			</ul>
+		</div>
+		
     </div>
     <div class="well span3">
-      <div class="well">
-		<div class="alert alert-info">
-			<h3 class="media-heading">Populer</h3>
-		</div>
+		<div class="well">
+			<div class="alert alert-info">
+				<h3 class="media-heading">Populer</h3>
+			</div>
 			<div class="media">
 				<a class="pull-left" href="#">
-					<img src="/images/rud.jpg" class="media-object populer-image thumbnail" >
+					<img src="/images/doc.jpg" class="media-object populer-image thumbnail" >
 				</a>
 					<div class="media-body">
-						<h5 class="media-heading">Jurnal</h5>
+						<h5 class="media-heading">buku</h5>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... <a href="#" class="badge badge-info">read more</a></p>
 
 					</div>
 			</div>
 			<div class="media">
 				<a class="pull-left" href="#">
-					<img src="/images/rud.jpg" class="media-object populer-image thumbnail" >
+					<img src="/images/doc.jpg" class="media-object populer-image thumbnail" >
 				</a>
 					<div class="media-body">
-						<h5 class="media-heading">Jurnal</h5>
+						<h5 class="media-heading">buku</h5>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... <a href="#" class="badge badge-info">read more</a></p>
 
 					</div>
 			</div>
 			<div class="media">
 				<a class="pull-left" href="#">
-					<img src="/images/rud.jpg" class="media-object populer-image thumbnail" >
+					<img src="/images/doc.jpg" class="media-object populer-image thumbnail" >
 				</a>
 					<div class="media-body">
-						<h5 class="media-heading">Jurnal</h5>
+						<h5 class="media-heading">buku</h5>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... <a href="#" class="badge badge-info">read more</a></p>
 
 					</div>
@@ -146,36 +148,36 @@
 				</div>
 				<div class="media">
 					<a class="pull-left" href="#">
-						<img src="/images/rud.jpg" class="media-object populer-image thumbnail" >
+						<img src="/images/doc.jpg" class="media-object populer-image thumbnail" >
 					</a>
 						<div class="media-body">
-							<h5 class="media-heading">Jurnal</h5>
+							<h5 class="media-heading">buku</h5>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... <a href="#" class="badge badge-info">read more</a></p>
 
 						</div>
 				</div>
-			<div class="media">
-				<a class="pull-left" href="#">
-					<img src="/images/rud.jpg" class="media-object populer-image thumbnail" >
-				</a>
-					<div class="media-body">
-						<h5 class="media-heading">Jurnal</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... <a href="#" class="badge badge-info">read more</a></p>
+				<div class="media">
+					<a class="pull-left" href="#">
+						<img src="/images/doc.jpg" class="media-object populer-image thumbnail" >
+					</a>
+						<div class="media-body">
+							<h5 class="media-heading">buku</h5>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... <a href="#" class="badge badge-info">read more</a></p>
 
-					</div>
-			</div>
-			<div class="media">
-				<a class="pull-left" href="#">
-					<img src="/images/rud.jpg" class="media-object populer-image thumbnail" >
-				</a>
-					<div class="media-body">
-						<h5 class="media-heading">Jurnal</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... <a href="#" class="badge badge-info">read more</a></p>
+						</div>
+				</div>
+				<div class="media">
+					<a class="pull-left" href="#">
+						<img src="/images/doc.jpg" class="media-object populer-image thumbnail" >
+					</a>
+						<div class="media-body">
+							<h5 class="media-heading">buku</h5>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... <a href="#" class="badge badge-info">read more</a></p>
 
-					</div>
-			</div>
+						</div>
+				</div>
 			
-      </div>
+		</div>
     </div>
   </div>
   
