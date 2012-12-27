@@ -10,6 +10,7 @@
 			<link rel="stylesheet" href="/third_party/alertify/alertify.core.css" />
 			<link rel="stylesheet" href="/third_party/alertify/alertify.default.css" />
 			<link rel="stylesheet" href="/css/style.css" />
+			<link rel="stylesheet" href="/css/main.css" />
     <style type="text/css">
 	#logo {
 		height: 31px;

@@ -10,6 +10,7 @@
 			<link rel="stylesheet" href="/third_party/alertify/alertify.core.css" />
 			<link rel="stylesheet" href="/third_party/alertify/alertify.default.css" />
 			<link rel="stylesheet" href="/css/style.css" />
+			<link rel="stylesheet" href="/css/main.css" />
     <style type="text/css">
 	#logo{
 		height: 31px;
@@ -115,7 +116,7 @@
 				?>
 				<div class="row-fluid data-user">
 						<div class="span4">
-							<img src="/images/ogo.png" alt=""/>
+						<a href="#image" class="thumbnail jurnal-image"><img src="/images/ogo.png" alt=""/></a>
 						</div>
 						<div class="span8">
 										<h2><?php echo $row->NAMA_USER ?> </h2>
