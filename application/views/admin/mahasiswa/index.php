@@ -72,7 +72,7 @@
 				<form class="navbar-search pull-left">
 					  <input type="text" class="search-query" placeholder="Cari mahasiswa">
 				</form>
-				<button class="btn btn-mini btn-info pull-right" id="tombol" onClick="return tambahModul()"><i class="icon-plus icon-white"></i></button>
+				<button class="btn btn-mini btn-info pull-right" id="tombol" onClick="return tambahMahasiswa()"><i class="icon-plus icon-white"></i></button>
 			</div>
 			<form class="form-horizontal hide" id="form-tambah" action="" method="POST">
 				<fieldset>
