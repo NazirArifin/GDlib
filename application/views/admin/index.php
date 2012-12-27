@@ -173,7 +173,7 @@
 					foreach ($userMahasiswa as $row):
 		  ?>
 			<tr>
-			  <td><?php echo $row->NAMA_USER ?></td>
+			  <td><a href="#" class="screenshot" rel="images/ct.jpg"><?php echo $row->NAMA_USER ?></a></td>
 			  <td><?php echo $row->NO_INDUK_USER ?></td>
 			  <td><?php echo $row->ID_FACEBOOK_USER ?></td>
 			  <td>
