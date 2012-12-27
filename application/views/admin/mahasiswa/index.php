@@ -45,25 +45,37 @@
   <div class="row-fluid" id="form">
 		<div class="well span3" id="sidebar">
 			<ul class="nav nav-list">
-				<li class="nav-header">Pengguna</li>
-				<li><a href="/admin/dosen"><i class="icon-user"></i> Dosen</a></li>
-				<li><a href="/admin/mahasiswa"><i class="icon-user"></i> Mahasiswa</a></li>
-				<li class="divider"></li>
-				
-				<li class="nav-header">Dokumen</li>
-				<li><a href="/admin/jurnal"><i class="icon-file"></i> Jurnal</a></li>
-				<li><a href="/admin/buku"><i class="icon-file"></i> Buku</a></li>
-				<li><a href="/admin/modul"><i class="icon-file"></i> Model</a></li>
-				<li><a href="/admin/buletin"><i class="icon-file"></i> Buletin</a></li>
-				<li class="divider"></li>
-				
-				<li class="nav-header">Lainnya</li>
-				<li><a href="/admin/news"><i class="icon-warning-sign"></i> Berita</a></li>
+				<div class="alert alert-info">
+					<li class="nav-header">Pengguna</li>
+					<li><a href="/admin/dosen" class="btn btn-block btn-success"><i class="icon-user icon-white"></i> Dosen</a></li>
+					<li class="divider"></li>
+					<li><a href="/admin/mahasiswa" class="btn btn-block btn-success"><i class="icon-user icon-white"></i> Mahasiswa</a></li>
+				</div>
+				<div class="alert alert-info">
+					<li class="nav-header">Dokumen</li>
+					<li><a href="/admin/jurnal" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Jurnal</a></li>
+					<li class="divider"></li>
+					<li><a href="/admin/buku" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Buku</a></li>
+					<li class="divider"></li>
+					<li><a href="/admin/modul" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Modul</a></li>
+					<li class="divider"></li>
+					<li><a href="/admin/buletin" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Buletin</a></li>
+					<li class="divider"></li>
+				</div>
+				<div class="alert alert-info">
+					<li class="nav-header">Lainnya</li>
+					<li><a href="/admin/news" class="btn btn-block btn-warning"><i class="icon-warning-sign icon-white"></i> Berita</a></li>
+				</div>
 			</ul>
 		</div>
 		<div class="well span9 pull-right">
+			<div class="navbar navbar-inner">
+			<form class="navbar-search pull-left">
+				  <input type="text" class="search-query" placeholder="Search">
+			</form>
+			<button class="btn btn-mini btn-info pull-right" id="tombol" onClick="return tambahModul()"><i class="icon-plus icon-white"></i></button>
+		</div>
 			<form class="form-horizontal hide" id="form-tambah" action="" method="POST">
-					<a href="#" class="btn btn-info btn-mini pull-right" onClick="return sclose()"><i class="icon-remove icon-white"></i></a>
 				<fieldset>
 					<legend>Tambah User Mahasiswa</legend>	
 				<div class="control-group">
@@ -85,17 +97,15 @@
 						<input name="id_facebook" id="id-facebook" type="text" required="" placeholder="ID Facebook">
 					</div>
 				</div>
-				<div class="form-actions">
-					<button href="#" class="btn btn-info btn-mini" type="button" onClick="return cancel()"><i class="icon-remove icon-white"></i> Cancel</button>
-					<button  href="#" class="btn btn-info btn-mini" type="button" onClick="return simpanUserMahasiswa()"><i class="icon-ok icon-white" ></i> Simpan</button>
+				<div class="form-actions btn-group">
+					<button href="#" class="btn btn-warning btn-mini" type="button" onClick="return cancel()"><i class="icon-remove icon-white"></i> Cancel</button>
+					<button  href="#" class="btn btn-success btn-mini" type="button" onClick="return simpanUserMahasiswa()"><i class="icon-ok icon-white" ></i> Simpan</button>
 				</div>
 				<hr>
 				</fieldset>
 			</form>
 			<div class="container-fluid" id="view">
 				<div class="row-fluid">
-					<input type="text" class="input-medium search-query"/>
-					<button class="btn btn-mini btn-info pull-right" id="tombol" onClick="return tambahMahasiswa()"><i class="icon-plus icon-white"></i></button><br><br><br>
 				</div>
 				<?php
 					$mahasiswa=$controller->admin_model->tampil_where_level_mahasiswa();

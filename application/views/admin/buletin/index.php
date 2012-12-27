@@ -10,6 +10,7 @@
 			<link rel="stylesheet" href="/third_party/alertify/alertify.core.css" />
 			<link rel="stylesheet" href="/third_party/alertify/alertify.default.css" />
 			<link rel="stylesheet" href="/css/style.css" />
+			<link rel="stylesheet" href="/css/main.css" />
      <style type="text/css">
 	#logo {
 		height: 31px;
@@ -45,75 +46,60 @@
 	<div class="row-fluid" id="form">
 		<div class="well span3" id="sidebar">
 			<ul class="nav nav-list">
-		<li class="nav-header">Pengguna</li>
-		<li><a href="/admin/dosen"><i class="icon-user"></i> Dosen</a></li>
-		<li><a href="/admin/mahasiswa"><i class="icon-user"></i> Mahasiswa</a></li>
-		<li class="divider"></li>
-		
-		<li class="nav-header">Dokumen</li>
-		<li><a href="/admin/jurnal"><i class="icon-file"></i> Jurnal</a></li>
-		<li><a href="/admin/buku"><i class="icon-file"></i> Buku</a></li>
-		<li><a href="/admin/modul"><i class="icon-file"></i> Modul</a></li>
-		<li><a href="/admin/buletin"><i class="icon-file"></i> Buletin</a></li>
-		<li class="divider"></li>
-		
-		<li class="nav-header">Lainnya</li>
-		<li><a href="/admin/news"><i class="icon-warning-sign"></i> Berita</a></li>
-	</ul>
+				<div class="alert alert-info">
+					<li class="nav-header">Pengguna</li>
+					<li><a href="/admin/dosen" class="btn btn-block btn-success"><i class="icon-user icon-white"></i> Dosen</a></li>
+					<li class="divider"></li>
+					<li><a href="/admin/mahasiswa" class="btn btn-block btn-success"><i class="icon-user icon-white"></i> Mahasiswa</a></li>
+				</div>
+				<div class="alert alert-info">
+					<li class="nav-header">Dokumen</li>
+					<li><a href="/admin/jurnal" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Jurnal</a></li>
+					<li class="divider"></li>
+					<li><a href="/admin/buku" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Buku</a></li>
+					<li class="divider"></li>
+					<li><a href="/admin/modul" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Modul</a></li>
+					<li class="divider"></li>
+					<li><a href="/admin/buletin" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Buletin</a></li>
+					<li class="divider"></li>
+				</div>
+				<div class="alert alert-info">
+					<li class="nav-header">Lainnya</li>
+					<li><a href="/admin/news" class="btn btn-block btn-warning"><i class="icon-warning-sign icon-white"></i> Berita</a></li>
+				</div>
+			</ul>
 		</div>
-    <div class="well span9 pull-right">
-	<input type="text" class="input-medium search-query" >
-     <button class="btn btn-large btn-success pull-right" id="tombol"><i class="icon-plus icon-white"></i>Tambah</button><br><br><br>
-	 <div class="well span8">
-	 <img src="Images/animal1.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
-	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
-	 </div>
-	 <div class="well span8">
-	 <img src="Images/animal2.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
-	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
-	 </div>
-	 <div class="well span8">
-	 <img src="Images/animal3.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
-	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
-	 </div>
-	 <div class="well span8">
-	 <img src="Images/animal4.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
-	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
-	 </div>
-	 <div class="well span8">
-	 <img src="Images/animal5.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
-	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
-	 </div>
-	 <div class="well span8">
-	 <img src="Images/animal6.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
-	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
-	 </div>
-	 <div class="well span8">
-	 <img src="Images/animal7.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
-	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
-	 </div>
-	 <div class="well span8">
-	 <img src="Images/animal8.png" class="image_content"><h5>Lorem ipsum</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<a href="#" class="label label-info" >read more</a></p><br>
-	 <button class="btn btn-mini btn-success tombol2"><i class="icon-wrench icon-white"></i>Edit</button>
-	 <button class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i>Delete</button>
-	 </div>
-	<div class="pagination" align="center">
-		<ul>
-			<li><a href="#">Prev</a></li>
-			<li class="active">
-			<a href="#">1</a>
-			</li>
-			<li><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">Next</a></li>
+    <div class="well span9">
+		<div class="navbar navbar-inner">
+				<form class="navbar-search pull-left">
+				  <input type="text" class="search-query" placeholder="Search">
+				</form>
+				<button class="btn btn-success pull-right"><i class="icon-plus icon-white"></i></button>
+		</div>
+		 <div class="media">
+				<a class="pull-left" >
+					<img src="/images/doc.jpg" class="media-object jurnal-image thumbnail" >
+				</a>
+					<div class="media-body">
+						<h4 class="media-heading">buku</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus magni explicabo perspiciatis harum distinctio debitis id quos quis aspernatur nemo labore voluptatem magnam totam minus culpa quasi dolor iure quaerat... <a href="#" class="badge badge-info">read more</a></p>
+							<div class="btn-group">
+								<button class="btn btn-warning"><i class="icon-edit icon-white"></i></button>
+								<button class="btn btn-danger"><i class="icon-trash icon-white"></i></button>
+							</div>
+					</div>
+			</div>
+	
+	<div class="pagination pagination-centered" >
+			<ul>
+				<li><a href="#">Prev</a></li>
+				<li class="active">
+				<a href="#">1</a>
+				</li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">Next</a></li>
 			</ul>
 		</div>
     </div>

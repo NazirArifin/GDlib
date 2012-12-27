@@ -460,7 +460,7 @@
 		  <td><img src="/images/ogo.png" class="image-admin"></td>
 		  <td>Accident</td>
 		  <td>Lorem ipsum dolor sit amet</td>
-		  <td><label class="label label-success"><i class="icon-repeat icon-white"></i></label></td>
+		  <td><label class="label label-success"><i class="icon-play icon-white"></i></label></td>
 		</tr>
 		<tr>
 		  <td><img src="/images/ogo.png" class="image-admin"></td>
@@ -505,6 +505,10 @@
 	$('.btn-danger').attr('title', 'klik untuk menghapus').tooltip();
 	$('.btn-warning').attr('title', 'klik untuk mengedit').tooltip();
 	$('.btn-success').attr('title', 'klik untuk melihat').tooltip();
+	
+	$('.label-important').attr('title', 'akun sudah tidak aktif').tooltip();
+	$('.label-success').attr('title', 'akun aktif').tooltip();
+	$('.label-warning').attr('title', 'akun ini tidak di kenal').tooltip();
 </script>
 
 </body>

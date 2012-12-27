@@ -45,25 +45,36 @@
 	<div class="row-fluid">
 		<div class="well span3" id="sidebar">
 			<ul class="nav nav-list">
-				<li class="nav-header">Pengguna</li>
-				<li><a href="/admin/dosen"><i class="icon-user"></i> Dosen</a></li>
-				<li><a href="/admin/mahasiswa"><i class="icon-user"></i> Mahasiswa</a></li>
-				<li class="divider"></li>
-				
-				<li class="nav-header">Dokumen</li>
-				<li><a href="/admin/jurnal"><i class="icon-file"></i> Jurnal</a></li>
-				<li><a href="/admin/buku"><i class="icon-file"></i> Buku</a></li>
-				<li><a href="/admin/modul"><i class="icon-file"></i> Modul</a></li>
-				<li><a href="/admin/buletin"><i class="icon-file"></i> Buletin</a></li>
-				<li class="divider"></li>
-				
-				<li class="nav-header">Lainnya</li>
-				<li><a href="/admin/news"><i class="icon-warning-sign"></i> Berita</a></li>
+				<div class="alert alert-info">
+					<li class="nav-header">Pengguna</li>
+					<li><a href="/admin/dosen" class="btn btn-block btn-success"><i class="icon-user icon-white"></i> Dosen</a></li>
+					<li class="divider"></li>
+					<li><a href="/admin/mahasiswa" class="btn btn-block btn-success"><i class="icon-user icon-white"></i> Mahasiswa</a></li>
+				</div>
+				<div class="alert alert-info">
+					<li class="nav-header">Dokumen</li>
+					<li><a href="/admin/jurnal" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Jurnal</a></li>
+					<li class="divider"></li>
+					<li><a href="/admin/buku" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Buku</a></li>
+					<li class="divider"></li>
+					<li><a href="/admin/modul" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Modul</a></li>
+					<li class="divider"></li>
+					<li><a href="/admin/buletin" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Buletin</a></li>
+					<li class="divider"></li>
+				</div>
+				<div class="alert alert-info">
+					<li class="nav-header">Lainnya</li>
+					<li><a href="/admin/news" class="btn btn-block btn-warning"><i class="icon-warning-sign icon-white"></i> Berita</a></li>
+				</div>
 			</ul>
 		</div>
 		<div class="well span9 pull-right">
-			<input type="text" class="input-medium search-query" >
-			<button class="btn btn-mini btn-info pull-right" id="tombol" onClick="return tambahJurnal()"><i class="icon-plus icon-white"></i></button><br><br><br>
+			<div class="navbar navbar-inner">
+				<form class="navbar-search pull-left">
+					  <input type="text" class="search-query" placeholder="Search">
+				</form>
+				<button class="btn btn-mini btn-info pull-right" id="tombol" onClick="return tambahModul()"><i class="icon-plus icon-white"></i></button>
+			</div>
 				<div class="row-fluid">
 				<form class="form-horizontal hide" id="form-tambah" action="" method="POST" enctype="multipart/form-data">
 						<a href="#" class="btn btn-info btn-mini pull-right" onClick="return closeForm()"><i class="icon-remove icon-white"></i></a>

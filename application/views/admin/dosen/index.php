@@ -46,21 +46,28 @@
 	<div class="row-fluid" id="form">
 		<div class="well span3" id="sidebar">
 			<ul class="nav nav-list">
-		<li class="nav-header">Pengguna</li>
-		<li><a href="/admin/dosen"><i class="icon-user"></i> Dosen</a></li>
-		<li><a href="/admin/mahasiswa"><i class="icon-user"></i> Mahasiswa</a></li>
-		<li class="divider"></li>
-		
-		<li class="nav-header">Dokumen</li>
-		<li><a href="/admin/jurnal"><i class="icon-file"></i> Jurnal</a></li>
-		<li><a href="/admin/buku"><i class="icon-file"></i> Buku</a></li>
-		<li><a href="/admin/modul"><i class="icon-file"></i> Modul</a></li>
-		<li><a href="/admin/buletin"><i class="icon-file"></i> Buletin</a></li>
-		<li class="divider"></li>
-		
-		<li class="nav-header">Lainnya</li>
-		<li><a href="/admin/news"><i class="icon-warning-sign"></i> Berita</a></li>
-	</ul>
+				<div class="alert alert-info">
+					<li class="nav-header">Pengguna</li>
+					<li><a href="/admin/dosen" class="btn btn-block btn-success"><i class="icon-user icon-white"></i> Dosen</a></li>
+					<li class="divider"></li>
+					<li><a href="/admin/mahasiswa" class="btn btn-block btn-success"><i class="icon-user icon-white"></i> Mahasiswa</a></li>
+				</div>
+				<div class="alert alert-info">
+					<li class="nav-header">Dokumen</li>
+					<li><a href="/admin/jurnal" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Jurnal</a></li>
+					<li class="divider"></li>
+					<li><a href="/admin/buku" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Buku</a></li>
+					<li class="divider"></li>
+					<li><a href="/admin/modul" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Modul</a></li>
+					<li class="divider"></li>
+					<li><a href="/admin/buletin" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Buletin</a></li>
+					<li class="divider"></li>
+				</div>
+				<div class="alert alert-info">
+					<li class="nav-header">Lainnya</li>
+					<li><a href="/admin/news" class="btn btn-block btn-warning"><i class="icon-warning-sign icon-white"></i> Berita</a></li>
+				</div>
+			</ul>
 		</div>
 		<div class="well span9 pull-right">
 			<form class="form-horizontal hide" id="form-tambah" action="" method="POST">
@@ -87,9 +94,9 @@
 						<input name="id_facebook" id="id-facebook" type="text" required="" placeholder="ID Facebook">
 					</div>
 				</div>
-				<div class="form-actions">
-					<button href="#" class="btn btn-info btn-mini" type="button" onClick="return cancel()"><i class="icon-remove icon-white"></i> Cancel</button>
-					<button  href="#" class="btn btn-info btn-mini" type="button" onClick="return simpanUSerDosen()"><i class="icon-ok icon-white" ></i> Simpan</button>
+				<div class="form-actions btn-group">
+					<button href="#" class="btn btn-warning btn-mini" type="button" onClick="return cancel()"><i class="icon-remove icon-white"></i> Cancel</button>
+					<button  href="#" class="btn btn-success btn-mini" type="button" onClick="return simpanUSerDosen()"><i class="icon-ok icon-white" ></i> Simpan</button>
 				</div>
 				<hr>
 				</fieldset>
@@ -110,12 +117,12 @@
 						<div class="span4">
 							<a href="#image" class="thumbnail"><img src="/images/ct.jpg" alt=""/></a>
 						</div>
-						<div class="span8">
+						<div class="span8 btn-group">
 										<h2><?php echo $row->NAMA_USER ?> </h2>
 										<h4><?php echo $row->NO_INDUK_USER ?> </h4>
 										<h5><?php echo $row->ID_FACEBOOK_USER ?> </h5>
-							<button class="btn btn-mini btn-info" onClick="editUserDosen(this, <?php echo $row->ID_USER ?>)"><i class="icon-wrench icon-white"></i> Edit</button>
-							<button class="btn btn-mini btn-info" onClick="deleteUserDosen(this, <?php echo $row->ID_USER ?>)"><i class="icon-trash icon-white"></i> Delete</button>
+							<button class="btn btn-mini btn-warning" onClick="editUserDosen(this, <?php echo $row->ID_USER ?>)"><i class="icon-wrench icon-white"></i> Edit</button>
+							<button class="btn btn-mini btn-danger" onClick="deleteUserDosen(this, <?php echo $row->ID_USER ?>)"><i class="icon-trash icon-white"></i> Delete</button>
 							<button class="btn btn-mini btn-info" onClick="detailUserDosen(this, <?php echo $row->ID_USER ?>)"><i class="icon-map-marker icon-white"></i> Detail</button>
 						</div>
 				</div>
