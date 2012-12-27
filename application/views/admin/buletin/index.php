@@ -72,11 +72,24 @@
     <div class="well span9">
 		<div class="navbar navbar-inner">
 				<form class="navbar-search pull-left">
-				  <input type="text" class="search-query" placeholder="Search">
+				  <input type="text" class="search-query" placeholder="Cari buletin">
 				</form>
 				<button class="btn btn-success pull-right"><i class="icon-plus icon-white"></i></button>
 		</div>
-		 <div class="media">
+		 <div class="media well">
+				<a class="pull-left" >
+					<img src="/images/doc.jpg" class="media-object jurnal-image thumbnail" >
+				</a>
+					<div class="media-body">
+						<h4 class="media-heading">buku</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus magni explicabo perspiciatis harum distinctio debitis id quos quis aspernatur nemo labore voluptatem magnam totam minus culpa quasi dolor iure quaerat... <a href="#" class="badge badge-info">read more</a></p>
+							<div class="btn-group">
+								<button class="btn btn-warning"><i class="icon-edit icon-white"></i></button>
+								<button class="btn btn-danger"><i class="icon-trash icon-white"></i></button>
+							</div>
+					</div>
+			</div>
+			 <div class="media well">
 				<a class="pull-left" >
 					<img src="/images/doc.jpg" class="media-object jurnal-image thumbnail" >
 				</a>
@@ -105,129 +118,23 @@
     </div>
   </div>
 </div>
- <div class="modal fade" id="modal1">
-    <div class="modal-header">
-    <button class="close" data-dismiss="modal">X</button>
-    <h3>Edit Profil</h3>
-    </div>
-    <div class="modal-body">
-    <form class="form-horizontal">
-
-		<table class="table ">
-		<thead>
-		<tr>
-		<th>Nama</th>
-		<td>
-			<div class="input-prepend">
-              <span class="add-on"><i class="icon-tasks"></i></span><input class="span3" id="inputIcon" type="text" required="" placeholder="Your title">
-            </div>
-		</td>		
-		</tr>
-		</thead>
-		<tbody>
-		
-		<tr>
-		<th>Isi News</th>
-		<td>
-			<div class="input-prepend">
-              <textarea rows="6"></textarea>
-            </div>
-			</td>
-		</tr>
-		<tr>
-		<th>Foto</th>
-		<td>
-		<div class="input-prepend">
-              <span class="add-on"><i class="icon-picture"></i></span><input class="span4" id="inputIcon" type="file" required="" placeholder="your photo">
-            </div></td>
-		</tr>
-		<tr>
-		<th>Status</th>
-		<td>
-		
-            <div class="input-prepend">
-              
-            </div>
-			<input type="radio" class="radio" name="mail">&nbsp;<span class="label label-info">show</span> <input type="radio" class="radio" name="mail">&nbsp; <span class="label label-important">dont show</span>
-			</td>
-		</tr>
-		
-		
-		
-		</tbody>
-		</table>
-		
-    </div>
-		<div class="modal-footer">
-		<button href="#" class="btn btn-danger btn-large" data-dismiss="modal" id="close"><i class="icon-remove icon-white"></i> Close</button>
-    <button  href="#" class="btn btn-primary btn-large"  type="submit"><i class="icon-ok icon-white"></i> Simpan</button>
+	<!--bagian footer-->
+	<footer class="row-fluid">
+		<div class="span12">
+			<hr>
+			<img src="/images/favicon.png" class="pull-left" />
+			<span>Created by: <a href="/humans.txt" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span>
 		</div>
-    </div>
-	</form>
-<!--modal2-->
-<div class="modal fade" id="modal2">
-    <div class="modal-header">
-    <button class="close" data-dismiss="modal">X</button>
-    <h3>Edit Profil</h3>
-    </div>
-    <div class="modal-body">
-    <form class="form-horizontal">
-
-		<table class="table ">
-		<thead>
-		<tr>
-		<th>Nama</th>
-		<td>
-			<div class="input-prepend">
-              <span class="add-on"><i class="icon-tasks"></i></span><input class="span3" id="inputIcon" type="text" required="" placeholder="Your title">
-            </div>
-		</td>		
-		</tr>
-		</thead>
-		<tbody>
-		
-		<tr>
-		<th>Isi News</th>
-		<td>
-			<div class="input-prepend">
-              <textarea rows="6"></textarea>
-            </div>
-			</td>
-		</tr>
-		<tr>
-		<th>Foto</th>
-		<td>
-		<div class="input-prepend">
-              <span class="add-on"><i class="icon-picture"></i></span><input class="span4" id="inputIcon" type="file" required="" placeholder="your photo">
-            </div></td>
-		</tr>
-		<tr>
-		<th>Status</th>
-		<td>
-		
-            <div class="input-prepend">
-              
-            </div>
-			<input type="radio" class="radio" name="mail">&nbsp;<span class="label label-info">show</span> <input type="radio" class="radio" name="mail">&nbsp; <span class="label label-important">dont show</span>
-			</td>
-		</tr>
-		
-		
-		
-		</tbody>
-		</table>
-		
-    </div>
-		<div class="modal-footer">
-		<button href="#" class="btn btn-danger btn-large" data-dismiss="modal" id="close"><i class="icon-remove icon-white"></i> Close</button>
-    <button  href="#" class="btn btn-primary btn-large"  type="submit"><i class="icon-ok icon-white"></i> Simpan</button>
-		</div>
-    </div>
-	</form>	
-<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
+	</footer>
+	<script type="text/javascript">
+	$('.btn-danger').attr('title' , 'klik untuk menghapus').tooltip();
+	$('#tombol').attr('title', 'Tambah Jurnal').tooltip();
+	</script>
+		<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
 			<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
 			<script src="/third_party/bootstrap/bootstrap.min.js"></script>
-			<script src="/third_party/alertify/alertify.min.js"></script>
+			<script src="/third_party/jquery/tooltip/main-tooltip.js"></script>
 			<script src="/js/admin.js"></script>
+			
 </body>
 </html>

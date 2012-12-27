@@ -8,6 +8,7 @@
 			<link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
 			<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap.min.css" />
 			<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
+			<link rel="stylesheet" href="/css/style.css" />
 			<link rel="stylesheet" href="/css/main.css" />
     <style type="text/css">
 	#logo {
@@ -50,39 +51,48 @@
 	<br>
 	<br>
 <div class="container-fluid" id="container">
-  <div class="row-fluid" id="form">
-    <div class="well span3" id="sidebar">
-	
-	
-	<ul class="nav nav-list">
-		<li class="nav-header">Pengguna</li>
-		<li><a href="/admin/dosen"><i class="icon-user"></i> Dosen</a></li>
-		<li><a href="/admin/mahasiswa"><i class="icon-user"></i> Mahasiswa</a></li>
-		<li class="divider"></li>
-		
-		<li class="nav-header">Dokumen</li>
-		<li><a href="/admin/jurnal"><i class="icon-file"></i> Jurnal</a></li>
-		<li><a href="/admin/buku"><i class="icon-file"></i> Buku</a></li>
-		<li><a href="/admin/modul"><i class="icon-file"></i> Modul</a></li>
-		<li><a href="/admin/buletin"><i class="icon-file"></i> Buletin</a></li>
-		<li class="divider"></li>
-		
-		<li class="nav-header">Lainnya</li>
-		<li><a href="/admin/news"><i class="icon-warning-sign"></i> Berita</a></li>
-	</ul>
+	<div class="row-fluid" id="form">
+		<div class="well span3" id="sidebar">
+			<ul class="nav nav-list">
+				<div class="alert alert-info">
+					<li class="nav-header">Pengguna</li>
+					<li><a href="/admin/dosen" class="btn btn-block btn-success"><i class="icon-user icon-white"></i> Dosen</a></li>
+					<li class="divider"></li>
+					<li><a href="/admin/mahasiswa" class="btn btn-block btn-success"><i class="icon-user icon-white"></i> Mahasiswa</a></li>
+				</div>
+				<div class="alert alert-info">
+					<li class="nav-header">Dokumen</li>
+					<li><a href="/admin/jurnal" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Jurnal</a></li>
+					<li class="divider"></li>
+					<li><a href="/admin/buku" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Buku</a></li>
+					<li class="divider"></li>
+					<li><a href="/admin/modul" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Modul</a></li>
+					<li class="divider"></li>
+					<li><a href="/admin/buletin" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Buletin</a></li>
+					<li class="divider"></li>
+				</div>
+				<div class="alert alert-info">
+					<li class="nav-header">Lainnya</li>
+					<li><a href="/admin/news" class="btn btn-block btn-warning"><i class="icon-warning-sign icon-white"></i> Berita</a></li>
+				</div>
+			</ul>
         
 </div>
     <div class="well span9 pull-right">
      <!-- menu tab untuk member -->
 		<div class="">
-	 <h2>Member</h2>
-	 <?php
-		$userDosen=$controller->admin_model->tampil_where_level_dosen();
-		($userDosen == false ? $banyakDosen=0 : $banyakDosen = count($userDosen));
-		$userMahasiswa=$controller->admin_model->tampil_where_level_mahasiswa();
-		($userMahasiswa == false ? $banyakMahasiswa=0 : $banyakMahasiswa = count($userMahasiswa));
-	 ?>
-	 <input type="text" class="input-medium search-query" placeholder="Cari Member" ><br><br>
+			<div class="navbar navbar-inner">
+			<a class="brand">Member</a>
+				<form class="navbar-search pull-right">
+					  <input type="text" class="search-query" placeholder="Cari Member">
+				</form>
+			</div>
+				 <?php
+					$userDosen=$controller->admin_model->tampil_where_level_dosen();
+					($userDosen == false ? $banyakDosen=0 : $banyakDosen = count($userDosen));
+					$userMahasiswa=$controller->admin_model->tampil_where_level_mahasiswa();
+					($userMahasiswa == false ? $banyakMahasiswa=0 : $banyakMahasiswa = count($userMahasiswa));
+				 ?>
 	 <ul class="nav nav-tabs" id="tab-member">
 	  <li class="active"><a href="#dosen" onClick="return tabAdminDosen()">Dosen <span class="badge badge-info"> <?php echo $banyakDosen ?> </span></a></li>
 	  <li><a href="#maha" onClick="return tabAdminMahasiswa()">Mahasiswa <span class="badge badge-info"> <?php echo $banyakMahasiswa ?> </span></a></li>
@@ -200,22 +210,26 @@
 	</div> 
 	 <!--menu tab dokument-->
 	 <div class="">
-	 <h2>Dokument</h2>
-	 <?php
-	/* jurnal */	$jumlahJurnal=$controller->admin_model->tampil_where_kategori_jurnal();
-	/* jurnal */	($jumlahJurnal == false ? $banyakJurnal=0 : $banyakJurnal = count($jumlahJurnal));
-	/* buku */	$jumlahBuku=$controller->admin_model->tampil_where_kategori_buku();
-	/* buku */	($jumlahBuku == false ? $banyakBuku=0 : $banyakBuku = count($jumlahBuku));
-	/* modul */	$jumlahModul=$controller->admin_model->tampil_where_kategori_modul();
-	/* modul */	($jumlahModul == false ? $banyakModul=0 : $banyakModul = count($jumlahModul));
-	 ?>
-	 <input type="text" class="input-medium search-query" placeholder="Cari Dokument" ><br><br>
-	 <ul class="nav nav-tabs" id="tab-dok">
-	  <li class="active"><a href="#jurnal">Jurnal <span class="badge badge-info"> <?php echo $banyakJurnal ?> </span></a></li>
-	  <li><a href="#buku">Buku <span class="badge badge-info"> <?php echo $banyakBuku ?> </span></a></li>
-	  <li><a href="#modul">Modul <span class="badge badge-info"> <?php echo $banyakModul ?> </span></a></li>
-	  <li><a href="#buletin">Buletin</a></li>
-	</ul>
+	 <div class="navbar navbar-inner">
+			<a class="brand">Dokumen</a>
+				<form class="navbar-search pull-right">
+					  <input type="text" class="search-query" placeholder="Cari Dokumen">
+				</form>
+			</div>
+		 <?php
+		/* jurnal */	$jumlahJurnal=$controller->admin_model->tampil_where_kategori_jurnal();
+		/* jurnal */	($jumlahJurnal == false ? $banyakJurnal=0 : $banyakJurnal = count($jumlahJurnal));
+		/* buku */	$jumlahBuku=$controller->admin_model->tampil_where_kategori_buku();
+		/* buku */	($jumlahBuku == false ? $banyakBuku=0 : $banyakBuku = count($jumlahBuku));
+		/* modul */	$jumlahModul=$controller->admin_model->tampil_where_kategori_modul();
+		/* modul */	($jumlahModul == false ? $banyakModul=0 : $banyakModul = count($jumlahModul));
+		 ?>
+		<ul class="nav nav-tabs" id="tab-dok">
+			<li class="active"><a href="#jurnal">Jurnal <span class="badge badge-info"> <?php echo $banyakJurnal ?> </span></a></li>
+			<li><a href="#buku">Buku <span class="badge badge-info"> <?php echo $banyakBuku ?> </span></a></li>
+			<li><a href="#modul">Modul <span class="badge badge-info"> <?php echo $banyakModul ?> </span></a></li>
+			<li><a href="#buletin">Buletin</a></li>
+		</ul>
 	 
 	<div class="tab-content">
 	<!--tab untuk jurnal-->
@@ -438,8 +452,12 @@
 	</div> 
 	<!-- halaman News -->
 	<div class="">
-	<h2>News</h2>
-	<input type="text" class="input-medium search-query" placeholder="Cari Member" ><br><br>
+		<div class="navbar navbar-inner">
+			<a class="brand">Buletin</a>
+				<form class="navbar-search pull-right">
+					  <input type="text" class="search-query" placeholder="Cari Buletin">
+				</form>
+		</div>
     <table class="table">
 	  <thead>
 		<tr>
@@ -488,6 +506,14 @@
     </div>
   </div>
 </div>
+	<footer class="row-fluid">
+		<div class="span12">
+			<hr>
+			<img src="/images/favicon.png" class="pull-left" />
+			<span>Created by: <a href="/humans.txt" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span>
+		</div>
+	</footer>
+	
 			<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
 			<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
 			<script src="/third_party/bootstrap/bootstrap.min.js"></script>
@@ -502,9 +528,9 @@
 	  e.preventDefault();
 	  $(this).tab('show');
 	})
-	$('.btn-danger').attr('title', 'klik untuk menghapus').tooltip();
-	$('.btn-warning').attr('title', 'klik untuk mengedit').tooltip();
-	$('.btn-success').attr('title', 'klik untuk melihat').tooltip();
+	$('.icon-trash').attr('title', 'klik untuk menghapus').tooltip();
+	$('.icon-edit').attr('title', 'klik untuk mengedit').tooltip();
+	$('.icon-share-alt').attr('title', 'klik untuk melihat').tooltip();
 	
 	$('.label-important').attr('title', 'akun sudah tidak aktif').tooltip();
 	$('.label-success').attr('title', 'akun aktif').tooltip();

@@ -72,7 +72,7 @@
     <div class="well span9">
 		<div class="navbar navbar-inner">
 				<form class="navbar-search pull-left">
-					  <input type="text" class="search-query" placeholder="Search">
+					  <input type="text" class="search-query" placeholder="Cari berita">
 				</form>
 				<button class="btn btn-mini btn-info pull-right" id="tombol" onClick="return tambahModul()"><i class="icon-plus icon-white"></i></button>
 		</div>
@@ -91,125 +91,15 @@
     </div>
   </div>
 </div>
- <div class="modal fade" id="modal1">
-    <div class="modal-header">
-    <button class="close" data-dismiss="modal">X</button>
-    <h3>Edit Profil</h3>
-    </div>
-    <div class="modal-body">
-    <form class="form-horizontal">
 
-		<table class="table ">
-		<thead>
-		<tr>
-		<th>Nama</th>
-		<td>
-			<div class="input-prepend">
-              <span class="add-on"><i class="icon-tasks"></i></span><input class="span3" id="inputIcon" type="text" required="" placeholder="Your title">
-            </div>
-		</td>		
-		</tr>
-		</thead>
-		<tbody>
-		
-		<tr>
-		<th>Isi News</th>
-		<td>
-			<div class="input-prepend">
-              <textarea rows="6"></textarea>
-            </div>
-			</td>
-		</tr>
-		<tr>
-		<th>Foto</th>
-		<td>
-		<div class="input-prepend">
-              <span class="add-on"><i class="icon-picture"></i></span><input class="span4" id="inputIcon" type="file" required="" placeholder="your photo">
-            </div></td>
-		</tr>
-		<tr>
-		<th>Status</th>
-		<td>
-		
-            <div class="input-prepend">
-              
-            </div>
-			<input type="radio" class="radio" name="mail">&nbsp;<span class="label label-info">show</span> <input type="radio" class="radio" name="mail">&nbsp; <span class="label label-important">dont show</span>
-			</td>
-		</tr>
-		
-		
-		
-		</tbody>
-		</table>
-		
-    </div>
-		<div class="modal-footer">
-		<button href="#" class="btn btn-danger btn-large" data-dismiss="modal" id="close"><i class="icon-remove icon-white"></i> Close</button>
-    <button  href="#" class="btn btn-primary btn-large"  type="submit"><i class="icon-ok icon-white"></i> Simpan</button>
+	<footer class="row-fluid">
+		<div class="span12">
+			<hr>
+			<img src="/images/favicon.png" class="pull-left" />
+			<span>Created by: <a href="/humans.txt" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span>
 		</div>
-    </div>
-	</form>
-<!--modal2-->
-<div class="modal fade" id="modal2">
-    <div class="modal-header">
-    <button class="close" data-dismiss="modal">X</button>
-    <h3>Edit Profil</h3>
-    </div>
-    <div class="modal-body">
-    <form class="form-horizontal">
-
-		<table class="table ">
-		<thead>
-		<tr>
-		<th>Nama</th>
-		<td>
-			<div class="input-prepend">
-              <span class="add-on"><i class="icon-tasks"></i></span><input class="span3" id="inputIcon" type="text" required="" placeholder="Your title">
-            </div>
-		</td>		
-		</tr>
-		</thead>
-		<tbody>
-		
-		<tr>
-		<th>Isi News</th>
-		<td>
-			<div class="input-prepend">
-              <textarea rows="6"></textarea>
-            </div>
-			</td>
-		</tr>
-		<tr>
-		<th>Foto</th>
-		<td>
-		<div class="input-prepend">
-              <span class="add-on"><i class="icon-picture"></i></span><input class="span4" id="inputIcon" type="file" required="" placeholder="your photo">
-            </div></td>
-		</tr>
-		<tr>
-		<th>Status</th>
-		<td>
-		
-            <div class="input-prepend">
-              
-            </div>
-			<input type="radio" class="radio" name="mail">&nbsp;<span class="label label-info">show</span> <input type="radio" class="radio" name="mail">&nbsp; <span class="label label-important">dont show</span>
-			</td>
-		</tr>
-		
-		
-		
-		</tbody>
-		</table>
-		
-    </div>
-		<div class="modal-footer">
-		<button href="#" class="btn btn-danger btn-large" data-dismiss="modal" id="close"><i class="icon-remove icon-white"></i> Close</button>
-    <button  href="#" class="btn btn-primary btn-large"  type="submit"><i class="icon-ok icon-white"></i> Simpan</button>
-		</div>
-    </div>
-	</form>	
+	</footer>
+	
 <script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
 			<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
 			<script src="/third_party/bootstrap/bootstrap.min.js"></script>

@@ -15,7 +15,6 @@
 		height: 31px;
 		margin-top: 2px;
 	}
-
     </style>
 	
     
@@ -42,7 +41,7 @@
 	<br>
 	
 <div class="container-fluid" id="container">
-  <div class="row-fluid" id="form">
+	<div class="row-fluid" id="form">
 		<div class="well span3" id="sidebar">
 			<ul class="nav nav-list">
 				<div class="alert alert-info">
@@ -68,13 +67,13 @@
 				</div>
 			</ul>
 		</div>
-		<div class="well span9 pull-right">
+		<div class="well span9">
 			<div class="navbar navbar-inner">
-			<form class="navbar-search pull-left">
-				  <input type="text" class="search-query" placeholder="Search">
-			</form>
-			<button class="btn btn-mini btn-info pull-right" id="tombol" onClick="return tambahModul()"><i class="icon-plus icon-white"></i></button>
-		</div>
+				<form class="navbar-search pull-left">
+					  <input type="text" class="search-query" placeholder="Cari mahasiswa">
+				</form>
+				<button class="btn btn-mini btn-info pull-right" id="tombol" onClick="return tambahModul()"><i class="icon-plus icon-white"></i></button>
+			</div>
 			<form class="form-horizontal hide" id="form-tambah" action="" method="POST">
 				<fieldset>
 					<legend>Tambah User Mahasiswa</legend>	
@@ -148,6 +147,14 @@
 		</div>
   </div>
 </div>
+	<footer class="row-fluid">
+		<div class="span12">
+			<hr>
+			<img src="/images/favicon.png" class="pull-left" />
+			<span>Created by: <a href="/humans.txt" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span>
+		</div>
+	</footer>
+	
 			<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
 			<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
 			<script src="/third_party/bootstrap/bootstrap.min.js"></script>
