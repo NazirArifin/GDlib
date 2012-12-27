@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
 		<link rel="stylesheet" href="/css/style.css" />
+		<link rel="stylesheet" href="/css/main.css" />
 			
 		<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
 		<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
@@ -46,42 +47,137 @@
 <br />
 <br />
 <br />
+<div class="span12">
+	<h1 style="text-align:center;">Jurnal</h1>
+</div>
 <div class="container-fluid">
-	<div class="row-fluid">
-		<div class=" well span3">
-			<div class="well">
-				<ul class="thumbnails">
-					<li class="span12">
-						<a href="#" class="thumbnail"><img src="/images/rud.jpg" alt=""></a>
-					</li>
-				</ul>
-				<span>
-					<strong>Administrator</strong><br>
-					<a href="#Profil"> Dosen </a><br>
-					<a href="#Setting">Settings</a> | <a href="#">Keluar</a>
-				</span>
-			</div>
-			<div class="well">
-			<div class="sidebar-nav">
-				<div>
-					<ul class="nav nav-tabs nav-stacked">
-						<li class="nav-header"><h3>Dokumen</h3></li>
-						<li><a href="#"><i class="icon-chevron-right"></i> JURNAL</a></li>
-						<li><a href="#"><i class="icon-chevron-right"></i> BUKU</a></li>
-						<li><a href="#"><i class="icon-chevron-right"></i> MODUL</a></li>
-						<li><a href="#"><i class="icon-chevron-right"></i> BULETIN</a></li>
-						<li class="divider"></li>
-					</ul>
-				</div>
-			</div>
-			</div>
+  <div class="row-fluid">
+    <div class="well span9">
+		<div class="navbar navbar-inner">
+				<form class="navbar-search pull-left">
+				  <input type="text" class="search-query" placeholder="Search">
+				</form>
 		</div>
+		
+			<div class="media">
+				<a class="pull-left">
+					<img src="/images/rud.jpg" class="media-object jurnal-image thumbnail" >
+				</a>
+					<div class="media-body">
+						<h4 class="media-heading">Jurnal</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus magni explicabo perspiciatis harum distinctio debitis id quos quis aspernatur nemo labore voluptatem magnam totam minus culpa quasi dolor iure quaerat... <a href="#" class="badge badge-info">read more</a></p>
+
+					</div>
+			</div>
+
+			<div class="media">
+				<a class="pull-left" >
+					<img src="/images/rud.jpg" class="media-object jurnal-image thumbnail" >
+				</a>
+					<div class="media-body">
+						<h4 class="media-heading">Jurnal</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus magni explicabo perspiciatis harum distinctio debitis id quos quis aspernatur nemo labore voluptatem magnam totam minus culpa quasi dolor iure quaerat... <a href="#" class="badge badge-info">read more</a></p>
+
+					</div>
+			</div>
+
+			<div class="media">
+				<a class="pull-left">
+					<img src="/images/rud.jpg" class="media-object jurnal-image thumbnail" >
+				</a>
+					<div class="media-body">
+						<h4 class="media-heading">Jurnal</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus magni explicabo perspiciatis harum distinctio debitis id quos quis aspernatur nemo labore voluptatem magnam totam minus culpa quasi dolor iure quaerat... <a href="#" class="badge badge-info">read more</a></p>
+
+					</div>
+			</div>
+
+    </div>
+    <div class="well span3">
+      <div class="well">
+      	<h3 class="media-heading">Populer</h3>
+		
+			<div class="media">
+				<a class="pull-left" href="#">
+					<img src="/images/rud.jpg" class="media-object populer-image thumbnail" >
+				</a>
+					<div class="media-body">
+						<h5 class="media-heading">Jurnal</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... <a href="#" class="badge badge-info">read more</a></p>
+
+					</div>
+			</div>
+			<div class="media">
+				<a class="pull-left" href="#">
+					<img src="/images/rud.jpg" class="media-object populer-image thumbnail" >
+				</a>
+					<div class="media-body">
+						<h5 class="media-heading">Jurnal</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... <a href="#" class="badge badge-info">read more</a></p>
+
+					</div>
+			</div>
+			<div class="media">
+				<a class="pull-left" href="#">
+					<img src="/images/rud.jpg" class="media-object populer-image thumbnail" >
+				</a>
+					<div class="media-body">
+						<h5 class="media-heading">Jurnal</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... <a href="#" class="badge badge-info">read more</a></p>
+
+					</div>
+			</div>
+			
+      </div>
+	  
+	       <div class="well">
+      	<h3 class="media-heading">Terbaru</h3>
+		
+			<div class="media">
+				<a class="pull-left" href="#">
+					<img src="/images/rud.jpg" class="media-object populer-image thumbnail" >
+				</a>
+					<div class="media-body">
+						<h5 class="media-heading">Jurnal</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... <a href="#" class="badge badge-info">read more</a></p>
+
+					</div>
+			</div>
+			<div class="media">
+				<a class="pull-left" href="#">
+					<img src="/images/rud.jpg" class="media-object populer-image thumbnail" >
+				</a>
+					<div class="media-body">
+						<h5 class="media-heading">Jurnal</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... <a href="#" class="badge badge-info">read more</a></p>
+
+					</div>
+			</div>
+			<div class="media">
+				<a class="pull-left" href="#">
+					<img src="/images/rud.jpg" class="media-object populer-image thumbnail" >
+				</a>
+					<div class="media-body">
+						<h5 class="media-heading">Jurnal</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... <a href="#" class="badge badge-info">read more</a></p>
+
+					</div>
+			</div>
+			
+      </div>
+    </div>
+  </div>
+  
+  	<footer class="row-fluid">
+		<div class="span12">
+			<hr>
+			<img src="/images/favicon.png" class="pull-left" />
+			<span>Created by: <a href="/humans.txt" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span>
+		</div>
+	</footer>
+</div>
 
 <script type="text/javascript">
-$('#tab-dok a').click(function (e) {
-	  e.preventDefault();
-	  $(this).tab('show');
-	})
 
 </script>
 </body>
