@@ -22,6 +22,18 @@ function cancel(){
 	});
 }
 
+function dclose(){
+	$('#form-tambah').hide('blind', {} , 1500, function(){
+		$('#view').show('blind', {} , 5500);
+	});
+}
+
+function dcancel(){
+	$('#form-tambah').hide('blind', {} , 1500, function(){
+		$('#view').show('blind', {} , 5500);
+	});
+}
+
 function editUserDosen(object, id){
 	//alert(id);
 	var $form = $('#form-tambah');

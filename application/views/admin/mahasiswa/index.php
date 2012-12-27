@@ -68,14 +68,9 @@
 				</div>
 			</ul>
 		</div>
-		<div class="well span9">
-			<div class="navbar navbar-inner">
-				<form class="navbar-search pull-left">
-					  <input type="text" class="search-query" placeholder="Cari mahasiswa">
-				</form>
-				<button class="btn btn-mini btn-info pull-right" id="tombol" onClick="return tambahMahasiswa()"><i class="icon-plus icon-white"></i></button>
-			</div>
+		<div class="well span9 pull-right">
 			<form class="form-horizontal hide" id="form-tambah" action="" method="POST">
+				<a href="#" class="btn btn-info btn-mini pull-right" onClick="return sclose()"><i class="icon-remove icon-white"></i></a>
 				<fieldset>
 					<legend>Tambah User Mahasiswa</legend>	
 				<div class="control-group">
@@ -106,26 +101,32 @@
 			</form>
 			<div class="container-fluid" id="view">
 				<div class="row-fluid">
+					<div class="navbar navbar-inner">
+						<form class="navbar-search pull-left">
+						  <input type="text" class="search-query" placeholder="Cari mahasiswa">
+						</form>
+						<button class="btn btn-info pull-right" id="tombol" onClick="return tambahMahasiswa()"><i class="icon-plus icon-white"></i></button>
+					</div>
 				</div>
 				<?php
 					$mahasiswa=$controller->admin_model->tampil_where_level_mahasiswa();
 					if($mahasiswa==0):
-						printf("Data Mahasiswa tidak ada");
+						echo '<div class="alert-info" style="text-align:center;">Data Mahasiswa Tidak Ada</div>';
 					else:
 						foreach($mahasiswa as $row):
 				?>
 				<div class="row-fluid data-user">
-						<div class="span4">
+					<div class="span4">
 						<a href="#image" class="thumbnail jurnal-image"><img src="/images/ogo.png" alt=""/></a>
-						</div>
-						<div class="span8">
-										<h2><?php echo $row->NAMA_USER ?> </h2>
-										<h4><?php echo $row->NO_INDUK_USER ?> </h4>
-										<h5><?php echo $row->ID_FACEBOOK_USER ?> </h5>
-							<button class="btn btn-mini btn-info" onClick="editUserMahasiswa(this, <?php echo $row->ID_USER ?>)"><i class="icon-wrench icon-white"></i> Edit</button>
-							<button class="btn btn-mini btn-info" onClick="deleteUserMahasiswa(this, <?php echo $row->ID_USER ?>)"><i class="icon-trash icon-white"></i> Delete</button>
-							<button class="btn btn-mini btn-info" onClick="detailUserMahasiswa(this, <?php echo $row->ID_USER ?>)"><i class="icon-map-marker icon-white"></i> Detail</button>
-						</div>
+					</div>
+					<div class="span8">
+								<h2><?php echo $row->NAMA_USER ?> </h2>
+								<h4><?php echo $row->NO_INDUK_USER ?> </h4>
+								<h5><?php echo $row->ID_FACEBOOK_USER ?> </h5>
+						<button class="btn btn-mini btn-info" onClick="editUserMahasiswa(this, <?php echo $row->ID_USER ?>)"><i class="icon-wrench icon-white"></i> Edit</button>
+						<button class="btn btn-mini btn-info" onClick="deleteUserMahasiswa(this, <?php echo $row->ID_USER ?>)"><i class="icon-trash icon-white"></i> Delete</button>
+						<button class="btn btn-mini btn-info" onClick="detailUserMahasiswa(this, <?php echo $row->ID_USER ?>)"><i class="icon-map-marker icon-white"></i> Detail</button>
+					</div>
 				<hr>
 				</div>
 					<?php

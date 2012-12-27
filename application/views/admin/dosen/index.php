@@ -104,13 +104,17 @@
 			</form>
 			<div class="container-fluid" id="view">
 				<div class="row-fluid">
-					<input type="text" class="input-medium search-query"/>
-					<button class="btn btn-mini btn-info pull-right" id="tombol" onClick="return tambahDosen()"><i class="icon-plus icon-white"></i></button><br><br><br>
+					<div class="navbar navbar-inner">
+						<form class="navbar-search pull-left">
+							<input type="text" class="input-medium search-query"/>
+						</form>
+						<button class="btn btn-info pull-right" id="tombol" onClick="return tambahDosen()"><i class="icon-plus icon-white"></i></button>
+					</div>
 				</div>
 			<?php
 				$dosen=$controller->admin_model->tampil_where_level_dosen();
 					if ($dosen==0):
-						printf("Data Dosen tidak ada");
+						echo '<div class="alert-info" style="text-align:center;">Data Dosen Tidak Ada</div>';
 					else: 
 					foreach ($dosen as $row):
 				?>
