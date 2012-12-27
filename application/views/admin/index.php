@@ -82,7 +82,7 @@
      <!-- menu tab untuk member -->
 		<div class="">
 			<div class="navbar navbar-inner">
-			<a class="brand">Member</a>
+				<a class="brand">Member</a>
 				<form class="navbar-search pull-right">
 					  <input type="text" class="search-query" placeholder="Cari Member">
 				</form>
