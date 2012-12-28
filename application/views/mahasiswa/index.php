@@ -58,6 +58,7 @@
 				</ul>
 				<span>
 					<strong>Administrator</strong><br>
+<<<<<<< HEAD
 					<a href="#Setting">Settings</a> | <a href="#">Keluar</a>
 				</span>
 			</div>
@@ -78,10 +79,29 @@
 						</div>
 					</ul>
 				</div>
+=======
+				</span>
+			</div>
+			<div class="sidebar-nav">
+					<ul class="nav nav-list">
+						<div class="alert alert-info">
+							<li class="nav-header">Dokumen</li>
+							<li><a href="/mahasiswa/jurnal" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Jurnal</a></li>
+							<li class="divider"></li>
+							<li><a href="/mahasiswa/buku" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Buku</a></li>
+							<li class="divider"></li>
+							<li><a href="/mahasiswa/modul" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Modul</a></li>
+							<li class="divider"></li>
+							<li><a href="/mahasiswa/buletin" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Buletin</a></li>
+							<li class="divider"></li>
+						</div>
+					</ul>
+>>>>>>> renovasi admin lagi deh
 			</div>
 		</div>
 <div class="well span9">
 	<div class="row-fluid">
+<<<<<<< HEAD
 		<div class="span10">
 	 <div class="">
 		<div class="navbar navbar-inner">
@@ -97,6 +117,22 @@
 		  <li><a href="#buletin">Buletin</a></li>
 		</ul>
 		 
+=======
+			<div class="">
+				<div class="navbar navbar-inner navbar-inverse">
+					<a class="brand">Dokumen</a>
+						<form class="navbar-search pull-right">
+							<input type="text" class="search-query" placeholder="Cari Dokumen">
+						</form>
+				</div>
+			<ul class="nav nav-tabs" id="tab-dok">
+				<li class="active"><a href="#jurnal">Jurnal</a></li>
+				<li><a href="#buku">Buku</a></li>
+				<li><a href="#modul">Modul</a></li>
+				<li><a href="#buletin">Buletin</a></li>
+			</ul>
+	 
+>>>>>>> renovasi admin lagi deh
 	<div class="tab-content">
 	<!--tab untuk jurnal-->
 	  <div class="tab-pane active" id="jurnal">
@@ -367,7 +403,6 @@
 						</div>
 					</div>
 				</div>
-			</div>
 		</div>
 </div>
 	<footer class="row-fluid">

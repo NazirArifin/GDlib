@@ -210,12 +210,12 @@
 	</div> 
 	 <!--menu tab dokument-->
 	 <div class="">
-	 <div class="navbar navbar-inner">
+		<div class="navbar navbar-inner">
 			<a class="brand">Dokumen</a>
 				<form class="navbar-search pull-right">
 					  <input type="text" class="search-query" placeholder="Cari Dokumen">
 				</form>
-			</div>
+		</div>
 		 <?php
 		/* jurnal */	$jumlahJurnal=$controller->admin_model->tampil_where_kategori_jurnal();
 		/* jurnal */	($jumlahJurnal == false ? $banyakJurnal=0 : $banyakJurnal = count($jumlahJurnal));

@@ -78,7 +78,7 @@
 <br />
 <div class="container-fluid">
 	<div class="row-fluid">
-		<div class="span2">
+		<div class="span3">
 			<div class="member-box">
 				<ul class="thumbnails">
 					<li class="span12">
@@ -93,15 +93,21 @@
 			</div>
 			<div class="well condensed">
 				<ul class="nav nav-list">
-					<li class="nav-header">DOKUMEN</li>
-					<li><a href="#"><i class="icon-file"></i> JURNAL</a></li>
-					<li><a href="#"><i class="icon-file"></i> BUKU</a></li>
-					<li><a href="#"><i class="icon-file"></i> MODUL</a></li>
-					<li><a href="#"><i class="icon-file"></i> BULETIN</a></li>
+					<div class="alert alert-info">
+						<li class="nav-header">Dokumen</li>
+						<li><a href="/dosen/jurnal" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Jurnal</a></li>
+						<li class="divider"></li>
+						<li><a href="/dosen/buku" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Buku</a></li>
+						<li class="divider"></li>
+						<li><a href="/dosen/modul" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Modul</a></li>
+						<li class="divider"></li>
+						<li><a href="/dosen/buletin" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Buletin</a></li>
+						<li class="divider"></li>
+					</div>
 				</ul>
 			</div>
 		</div>
-		<div class="span10">
+		<div class="span9">
 			<div>
 				<ul class="breadcrumb">
 				<li><a href="/">Home</a> <span class="divider">/</span></li>

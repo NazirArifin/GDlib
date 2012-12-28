@@ -73,6 +73,7 @@ $route['dosen/profil'] = "dosen/profil";
 //======================= ROUTES UNTUK MAHASISWA ==== 
 $route['mahasiswa'] = "mahasiswa";
 $route['mahasiswa/jurnal'] = "mahasiswa/jurnal";
+$route['mahasiswa/jurnal/detail'] = "mahasiswa/jurnal/detail";
 $route['mahasiswa/buku'] = "mahasiswa/buku";
 $route['mahasiswa/modul'] = "mahasiswa/modul";
 $route['mahasiswa/buletin'] = "mahasiswa/buletin";

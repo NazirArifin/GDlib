@@ -65,7 +65,7 @@
 				</a>
 					<div class="media-body">
 						<h4 class="media-heading">Jurnal</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus magni explicabo perspiciatis harum distinctio debitis id quos quis aspernatur nemo labore voluptatem magnam totam minus culpa quasi dolor iure quaerat... <a href="#" class="badge badge-info">read more</a></p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus magni explicabo perspiciatis harum distinctio debitis id quos quis aspernatur nemo labore voluptatem magnam totam minus culpa quasi dolor iure quaerat... <a href="/mahasiswa/jurnal/detail" class="badge badge-info">read more</a></p>
 
 					</div>
 			</div>
