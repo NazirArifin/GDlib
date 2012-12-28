@@ -19,6 +19,10 @@
 			margin-top: 0px;
 		}
 		#image {
+		}
+		.image-list{
+			width:105px;
+			height:97px;
 			float: left;
 			margin: 0px 15px 10px 0px;
 		}
@@ -55,8 +59,8 @@
 						<a href="#" class="thumbnail"><img src="/images/rud.jpg" alt=""></a>
 					</li>
 				</ul>
-				<span>
-					<strong>Administrator</strong><br>
+				<span class="label label-inverse">			
+				Username | 0955201554
 				</span>
 			</div>
 			<div class="sidebar-nav">
@@ -93,53 +97,46 @@
 	 
 	<div class="tab-content">
 	<!--tab untuk jurnal-->
-	  <div class="tab-pane active" id="jurnal">
-		<table class="table">
-		  
-		  <thead>
-			<tr>
-			  <th>Juduli</th>
-			  <th>Taggal</th>
-			</tr>
-		  </thead>
-		  <tbody>
-			<tr>
-			  <td>Revolution</td>
-			  <td>12/12/12</td>
-			  <td>
-			  <div class="btn-group">
-			  <button class="btn btn-primary btn-mini"><i class="icon-download icon-white"></i> download</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-eye-open icon-white"></i> lihat</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> detail</button>
-			  </div>
-			  </td>
-			</tr>
-			<tr>
-			  <td>RIP</td>
-			  <td>12/12/12</td>
-			  <td>
-			 <div class="btn-group">
-			  <button class="btn btn-primary btn-mini"><i class="icon-download icon-white"></i> download</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-eye-open icon-white"></i> lihat</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> detail</button>
-			  </div>
-			  </td>
-			</tr>
-			<tr>
-			  <td>Kroncong Protol</td>
-			  <td>12/12/12</td>
-			  <td>
-			  <div class="btn-group">
-			  <button class="btn btn-primary btn-mini"><i class="icon-download icon-white"></i> download</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-eye-open icon-white"></i> lihat</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> detail</button>
-			  </div>
-			  </td>
-			</tr>
-		  </tbody>
-		</table>
-		
-		<div class="pagination pagination-centered">
+		<div class="tab-pane active" id="jurnal">
+		<div class="divider"></div>
+			<div class="well span5">
+				<a href="#Doc"><img src="/images/doc.jpg" class="thumbnail image-list"></a>
+				<h5>Jurnal</h5>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
+				<div class="btn-group">
+					<button class="btn btn-mini btn-primary"><i class="icon-download icon-white"></i> Download</button>
+					<button class="btn btn-mini btn-warning"><i class="icon-share-alt icon-white"></i> Baca</button>
+				</div>
+			</div>
+			<div class="well span5">
+				<a href="#Doc"><img src="/images/doc.jpg" class="thumbnail image-list"></a>
+				<h5>Jurnal</h5>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
+				<div class="btn-group">
+					<button class="btn btn-mini btn-primary"><i class="icon-download icon-white"></i> Download</button>
+					<button class="btn btn-mini btn-warning"><i class="icon-share-alt icon-white"></i> Baca</button>
+				</div>
+			</div>
+			<div class="well span5">
+				<a href="#Doc"><img src="/images/doc.jpg" class="thumbnail image-list"></a>
+				<h5>Jurnal</h5>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
+				<div class="btn-group">
+					<button class="btn btn-mini btn-primary"><i class="icon-download icon-white"></i> Download</button>
+					<button class="btn btn-mini btn-warning"><i class="icon-share-alt icon-white"></i> Baca</button>
+				</div>
+			</div>
+			<div class="well span5">
+				<a href="#Doc"><img src="/images/doc.jpg" class="thumbnail image-list"></a>
+				<h5>Jurnal</h5>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
+				<div class="btn-group">
+					<button class="btn btn-mini btn-primary"><i class="icon-download icon-white"></i> Download</button>
+					<button class="btn btn-mini btn-warning"><i class="icon-share-alt icon-white"></i> Baca</button>
+				</div>
+			</div>
+		<br>
+		<div class="pagination pagination-centered pagination-large">
 		<ul>
 			<li><a href="#">Prev</a></li>
 			<li class="active">
@@ -155,50 +152,44 @@
 	  </div>
 	  <!--tab buku-->
 	  <div class="tab-pane" id="buku">
-	  <table class="table">
-		  
-		  <thead>
-			<tr>
-			  <th>Judul</th>
-			  <th>Taggal</th>
-			</tr>
-		  </thead>
-		  <tbody>
-			<tr>
-			  <td>Harry Potter</td>
-			  <td>12/12/12</td>
-			  <td>
-			  <div class="btn-group">
-			  <button class="btn btn-primary btn-mini"><i class="icon-download icon-white"></i> download</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-eye-open icon-white"></i> lihat</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> detail</button>
-			  </div>
-			  </td>
-			</tr>
-			<tr>
-			  <td>Twilight</td>
-			  <td>12/12/12</td>
-			  <td>
-			  <div class="btn-group">
-			  <button class="btn btn-primary btn-mini"><i class="icon-download icon-white"></i> download</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-eye-open icon-white"></i> lihat</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> detail</button>
-			  </div>
-			  </td>
-			</tr>
-			<tr>
-			  <td>Janc#k</td>
-			  <td>12/12/12</td>
-			  <td>
-			  <div class="btn-group">
-			  <button class="btn btn-primary btn-mini"><i class="icon-download icon-white"></i> download</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-eye-open icon-white"></i> lihat</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> detail</button>
-			  </div>
-			  </td>
-			</tr>
-		  </tbody>
-		</table>
+		<div class="divider"></div>
+			<div class="well span5">
+				<a href="#Doc"><img src="/images/2.jpg" class="thumbnail image-list"></a>
+				<h5>Buku </h5>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
+				<div class="btn-group">
+					<button class="btn btn-mini btn-primary"><i class="icon-download icon-white"></i> Download</button>
+					<button class="btn btn-mini btn-warning"><i class="icon-share-alt icon-white"></i> Baca</button>
+				</div>
+			</div>
+			<div class="well span5">
+				<a href="#Doc"><img src="/images/2.jpg" class="thumbnail image-list"></a>
+				<h5>Buku</h5>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
+				<div class="btn-group">
+					<button class="btn btn-mini btn-primary"><i class="icon-download icon-white"></i> Download</button>
+					<button class="btn btn-mini btn-warning"><i class="icon-share-alt icon-white"></i> Baca</button>
+				</div>
+			</div>
+			<div class="well span5">
+				<a href="#Doc"><img src="/images/2.jpg" class="thumbnail image-list"></a>
+				<h5>Buku</h5>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
+				<div class="btn-group">
+					<button class="btn btn-mini btn-primary"><i class="icon-download icon-white"></i> Download</button>
+					<button class="btn btn-mini btn-warning"><i class="icon-share-alt icon-white"></i> Baca</button>
+				</div>
+			</div>
+			<div class="well span5">
+				<a href="#Doc"><img src="/images/2.jpg" class="thumbnail image-list"></a>
+				<h5>Buku</h5>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
+				<div class="btn-group">
+					<button class="btn btn-mini btn-primary"><i class="icon-download icon-white"></i> Download</button>
+					<button class="btn btn-mini btn-warning"><i class="icon-share-alt icon-white"></i> Baca</button>
+				</div>
+			</div>
+		<br>
 		
 		<div class="pagination pagination-centered">
 		<ul>
@@ -216,111 +207,99 @@
 	  </div>
 	  <!--tab modul-->
 	  <div class="tab-pane" id="modul">
-	  <table class="table">
-		  
-		  <thead>
-			<tr>
-			  <th>Judul</th>
-			  <th>Taggal</th>
-			</tr>
-		  </thead>
-		  <tbody>
-			<tr>
-			  <td>Algoritma</td>
-			  <td>12/12/12</td>
-			  <td>
-			  <div class="btn-group">
-			  <button class="btn btn-primary btn-mini"><i class="icon-download icon-white"></i> download</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-eye-open icon-white"></i> lihat</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> detail</button>
-			  </div>
-			  </td>
-			</tr>
-			<tr>
-			  <td>Aljabar</td>
-			  <td>12/12/12</td>
-			  <td>
-			  <div class="btn-group">
-			  <button class="btn btn-primary btn-mini"><i class="icon-download icon-white"></i> download</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-eye-open icon-white"></i> lihat</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> detail</button>
-			  </div>
-			  </td>
-			</tr>
-			<tr>
-			  <td>Teknik Digital</td>
-			  <td>12/12/12</td>
-			  <td>
-			  <div class="btn-group">
-			  <button class="btn btn-primary btn-mini"><i class="icon-download icon-white"></i> download</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-eye-open icon-white"></i> lihat</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> detail</button>
-			  </div>
-			  </td>
-			</tr>
-		  </tbody>
-		</table>
+		<div class="divider"></div>
+			<div class="well span5">
+				<a href="#Doc"><img src="/images/4.jpg" class="thumbnail image-list"></a>
+				<h5>Modul </h5>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
+				<div class="btn-group">
+					<button class="btn btn-mini btn-primary"><i class="icon-download icon-white"></i> Download</button>
+					<button class="btn btn-mini btn-warning"><i class="icon-share-alt icon-white"></i> Baca</button>
+				</div>
+			</div>
+			<div class="well span5">
+				<a href="#Doc"><img src="/images/4.jpg" class="thumbnail image-list"></a>
+				<h5>Modul</h5>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
+				<div class="btn-group">
+					<button class="btn btn-mini btn-primary"><i class="icon-download icon-white"></i> Download</button>
+					<button class="btn btn-mini btn-warning"><i class="icon-share-alt icon-white"></i> Baca</button>
+				</div>
+			</div>
+			<div class="well span5">
+				<a href="#Doc"><img src="/images/4.jpg" class="thumbnail image-list"></a>
+				<h5>Modul</h5>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
+				<div class="btn-group">
+					<button class="btn btn-mini btn-primary"><i class="icon-download icon-white"></i> Download</button>
+					<button class="btn btn-mini btn-warning"><i class="icon-share-alt icon-white"></i> Baca</button>
+				</div>
+			</div>
+			<div class="well span5">
+				<a href="#Doc"><img src="/images/4.jpg" class="thumbnail image-list"></a>
+				<h5>Modul</h5>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
+				<div class="btn-group">
+					<button class="btn btn-mini btn-primary"><i class="icon-download icon-white"></i> Download</button>
+					<button class="btn btn-mini btn-warning"><i class="icon-share-alt icon-white"></i> Baca</button>
+				</div>
+			</div>
+		<br>
 		
 		<div class="pagination pagination-centered">
-		<ul>
-			<li><a href="#">Prev</a></li>
-			<li class="active">
-			<a href="#">1</a>
-			</li>
-			<li><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">Next</a></li>
+			<ul>
+				<li><a href="#">Prev</a></li>
+				<li class="active">
+				<a href="#">1</a>
+				</li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">Next</a></li>
 			</ul>
 		</div>
 		
 	  </div>
 	  <!--tab bulletin-->
 	  <div class="tab-pane" id="buletin">
-	  <table class="table">
-		  
-		  <thead>
-			<tr>
-			  <th>Judul</th>
-			  <th>Taggal</th>
-			</tr>
-		  </thead>
-		  <tbody>
-			<tr>
-			  <td>Buletin Siang</td>
-			  <td>12/12/12</td>
-			  <td>
-			  <div class="btn-group">
-			  <button class="btn btn-primary btn-mini"><i class="icon-download icon-white"></i> download</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-eye-open icon-white"></i> lihat</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> detail</button>
-			  </div>
-			  </td>
-			</tr>
-			<tr>
-			  <td>Liputan 6</td>
-			  <td>12/12/12</td>
-			  <td>
-			  <div class="btn-group">
-			  <button class="btn btn-primary btn-mini"><i class="icon-download icon-white"></i> download</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-eye-open icon-white"></i> lihat</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> detail</button>
-			  </div>
-			  </td>
-			</tr>
-			<tr>
-			  <td>Silet</td>
-			  <td>12/12/12</td>
-			  <td>
-			  <div class="btn-group">
-			  <button class="btn btn-primary btn-mini"><i class="icon-download icon-white"></i> download</button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-eye-open icon-white"></i> lihat</button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> detail</button>
-			  </div>
-			  </td>
-			</tr>
-		  </tbody>
-		</table>
+		<div class="divider"></div>
+			<div class="well span5">
+				<a href="#Doc"><img src="/images/3.jpg" class="thumbnail image-list"></a>
+				<h5>Buletin </h5>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
+				<div class="btn-group">
+					<button class="btn btn-mini btn-primary"><i class="icon-download icon-white"></i> Download</button>
+					<button class="btn btn-mini btn-warning"><i class="icon-share-alt icon-white"></i> Baca</button>
+				</div>
+			</div>
+			<div class="well span5">
+				<a href="#Doc"><img src="/images/3.jpg" class="thumbnail image-list"></a>
+				<h5>Buletin</h5>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
+				<div class="btn-group">
+					<button class="btn btn-mini btn-primary"><i class="icon-download icon-white"></i> Download</button>
+					<button class="btn btn-mini btn-warning"><i class="icon-share-alt icon-white"></i> Baca</button>
+				</div>
+			</div>
+			<div class="well span5">
+				<a href="#Doc"><img src="/images/3.jpg" class="thumbnail image-list"></a>
+				<h5>Buletin</h5>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
+				<div class="btn-group">
+					<button class="btn btn-mini btn-primary"><i class="icon-download icon-white"></i> Download</button>
+					<button class="btn btn-mini btn-warning"><i class="icon-share-alt icon-white"></i> Baca</button>
+				</div>
+			</div>
+			<div class="well span5">
+				<a href="#Doc"><img src="/images/3.jpg" class="thumbnail image-list"></a>
+				<h5>Buletin</h5>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
+				<div class="btn-group">
+					<button class="btn btn-mini btn-primary"><i class="icon-download icon-white"></i> Download</button>
+					<button class="btn btn-mini btn-warning"><i class="icon-share-alt icon-white"></i> Baca</button>
+				</div>
+			</div>
+		<br>
 		
 		<div class="pagination pagination-centered">
 		<ul>
@@ -337,30 +316,6 @@
 	  </div>
 	</div>
 	</div> 
-				<div class="row-fluid">
-					<div class="span12">
-						<div class="well span6">
-							<a href="#Doc"><img src="/images/doc.jpg" width="105" height="97" id="image" /><a/><h5>JUDUL DOKUMEN</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
-							<a href="#Lihat_Doc"><i class="icon-eye-open"></i>Lihat</a> | <a href="#Edit_Doc"><i class="icon-edit"></i>Edit</a> | <a href="#"><i class="icon-trash"></i>Delete</a>
-						</div>
-						<div class="well span6">
-							<a href="#Doc"><img src="/images/doc.jpg" width="105" height="97" id="image" /><a/><h5>JUDUL DOKUMEN</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
-							<a href="#Lihat_Doc"><i class="icon-eye-open"></i>Lihat</a> | <a href="#Edit_Doc"><i class="icon-edit"></i>Edit</a> | <a href="#"><i class="icon-trash"></i>Delete</a>
-						</div>
-					</div>
-				</div>
-				<div class="row-fluid">
-					<div class="span12">
-						<div class="well span6">
-							<a href="#Doc"><img src="/images/doc.jpg" width="105" height="97" id="image" /><a/><h5>JUDUL DOKUMEN</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
-							<a href="#Lihat_Doc"><i class="icon-eye-open"></i>Lihat</a> | <a href="#Edit_Doc"><i class="icon-edit"></i>Edit</a> | <a href="#"><i class="icon-trash"></i>Delete</a>
-						</div>
-						<div class="well span6">
-							<a href="#Doc"><img src="/images/doc.jpg" width="105" height="97" id="image" /><a/><h5>JUDUL DOKUMEN</h5><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
-							<a href="#Lihat_Doc"><i class="icon-eye-open"></i>Lihat</a> | <a href="#Edit_Doc"><i class="icon-edit"></i>Edit</a> | <a href="#"><i class="icon-trash"></i>Delete</a>
-						</div>
-					</div>
-				</div>
 		</div>
 </div>
 <script type="text/javascript">
