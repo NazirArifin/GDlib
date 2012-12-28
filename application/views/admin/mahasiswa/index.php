@@ -70,30 +70,39 @@
 		</div>
 		<div class="well span9 pull-right">
 			<form class="form-horizontal hide" id="form-tambah" action="" method="POST">
-				<a href="#" class="btn btn-info btn-mini pull-right" onClick="return sclose()"><i class="icon-remove icon-white"></i></a>
+				<a href="#" class="btn btn-inverse btn-mini pull-right" onClick="return sclose()"><i class="icon-remove icon-white"></i></a>
 				<fieldset>
 					<legend>Tambah User Mahasiswa</legend>	
-				<div class="control-group">
-					<label class="control-label control-label-min" for="nama-user">Nama</label>
-					<div class="controls controls-min">
-						<input id="nama-user" name="nama_user" type="text" required="" placeholder="Your Name">
+					<div class="control-group">
+						<label class="control-label control-label-min" for="nama-user">Nama</label>
+							<div class="controls controls-min">
+								<div class="input-prepend">
+									<span class="add-on"><i class="icon-user"></i></span>
+										<input id="nama-user" name="nama_user" type="text" required="" placeholder="Nama kamu">
+								</div>
+							</div>
 					</div>
-				</div>
 				
 				<div class="control-group">
-					<label class="control-label control-label-min" for="no-induk-user">No. Induk Dosen</label>
+					<label class="control-label control-label-min" for="no-induk-user">No. Induk Mahasiswa</label>
 					<div class="controls controls-min">	
-						<input name="no_induk_user" id="no-induk-user" type="text" required="" placeholder="No. Induk User">
+						<div class="input-prepend">
+							<span class="add-on"><i class="icon-tags"></i></span>
+								<input name="no_induk_user" id="no-induk-user" type="text" required="" placeholder="No. Induk User">
+						</div>
 					</div>
 				</div>
 				<div class="control-group">
 					<label class="control-label control-label-min" for="id-facebook">ID Facebook</label>
-					<div class="controls controls-min">	
-						<input name="id_facebook" id="id-facebook" type="text" required="" placeholder="ID Facebook">
-					</div>
+						<div class="controls controls-min">	
+							<div class="input-prepend">
+								<span class="add-on"><i class="icon-globe"></i></span>	
+									<input name="id_facebook" id="id-facebook" type="text" required="" placeholder="ID Facebook" value="https://www.facebook.com/">
+							</div>
+						</div>
 				</div>
 				<div class="form-actions btn-group">
-					<button href="#" class="btn btn-warning btn-mini" type="button" onClick="return cancel()"><i class="icon-remove icon-white"></i> Cancel</button>
+					<button href="#" class="btn btn-inverse btn-mini" type="button" onClick="return cancel()"><i class="icon-arrow-left icon-white"></i> Cancel</button>
 					<button  href="#" class="btn btn-success btn-mini" type="button" onClick="return simpanUserMahasiswa()"><i class="icon-ok icon-white" ></i> Simpan</button>
 				</div>
 				<hr>
@@ -115,7 +124,7 @@
 					else:
 						foreach($mahasiswa as $row):
 				?>
-				<div class="row-fluid data-user">
+				<div class="row-fluid data-user alert alert-success">
 					<div class="span4">
 						<a href="#image" class="thumbnail jurnal-image"><img src="/images/ogo.png" alt=""/></a>
 					</div>
@@ -123,9 +132,11 @@
 								<h2><?php echo $row->NAMA_USER ?> </h2>
 								<h4><?php echo $row->NO_INDUK_USER ?> </h4>
 								<h5><?php echo $row->ID_FACEBOOK_USER ?> </h5>
-						<button class="btn btn-mini btn-info" onClick="editUserMahasiswa(this, <?php echo $row->ID_USER ?>)"><i class="icon-wrench icon-white"></i> Edit</button>
-						<button class="btn btn-mini btn-info" onClick="deleteUserMahasiswa(this, <?php echo $row->ID_USER ?>)"><i class="icon-trash icon-white"></i> Delete</button>
-						<button class="btn btn-mini btn-info" onClick="detailUserMahasiswa(this, <?php echo $row->ID_USER ?>)"><i class="icon-map-marker icon-white"></i> Detail</button>
+						<div class="btn-group">
+							<button class="btn btn-mini btn-warning" onClick="editUserMahasiswa(this, <?php echo $row->ID_USER ?>)"><i class="icon-edit icon-white"></i> Edit</button>
+							<button class="btn btn-mini btn-danger" onClick="deleteUserMahasiswa(this, <?php echo $row->ID_USER ?>)"><i class="icon-trash icon-white"></i> Delete</button>
+							<button class="btn btn-mini btn-success" onClick="detailUserMahasiswa(this, <?php echo $row->ID_USER ?>)"><i class="icon-share-alt icon-white"></i> Detail</button>
+						</div>
 					</div>
 				<hr>
 				</div>
@@ -157,6 +168,10 @@
 		</div>
 	</footer>
 	
+	<script type="text/javascript">
+	$('.icon-plus').attr('title','Klik untuk menambah mahasiswa').tooltip();
+	$('.icon-remove').attr('title','tutup').tooltip();
+	</script>
 			<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
 			<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
 			<script src="/third_party/bootstrap/bootstrap.min.js"></script>

@@ -16,13 +16,10 @@
 		height: 31px;
 		margin-top: 2px;
 	}
-
     </style>
 	
-    
 </head>
 <body>
-	
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
@@ -127,7 +124,7 @@
 					else: 
 					foreach ($dosen as $row):
 				?>
-				<div class="row-fluid data-user alert-info">
+				<div class="row-fluid data-user alert-success">
 						<div class="span4">
 							<a href="#image" class="thumbnail"><img src="/images/ct.jpg" alt=""/></a>
 						</div>
