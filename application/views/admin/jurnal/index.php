@@ -9,6 +9,7 @@
 			<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
 			<link rel="stylesheet" href="/third_party/alertify/alertify.core.css" />
 			<link rel="stylesheet" href="/third_party/alertify/alertify.default.css" />
+			<link rel="stylesheet" href="/css/main.css" />
 			<link rel="stylesheet" href="/css/style.css" />
     <style type="text/css">
 	#logo {
@@ -140,16 +141,18 @@
 					else :
 						foreach ($dokumenJurnal as $row):
 				?>
-				<div class="row-fluid data-user">
+				<div class="row-fluid data-user alert-info">
 					<div class="span4">
-						<a href="#image" class="thumbnail jurnal-image"><img src="/<?php echo $row->FOTO_DOKUMEN ?>" alt=""/></a>
+						<a href="#image" class="thumbnail"><img src="/<?php echo $row->FOTO_DOKUMEN ?>" alt=""/></a>
 					</div>
 					<div class="span8">
 								<h2><?php echo $row->PENGARANG_DOKUMEN ?> </h2>
 								<h4><?php echo $row->TAHUN_PENERBITAN_DOKUMEN ?> </h4>
-						<button class="btn btn-mini btn-info" onClick="editDokumenJurnal(this, <?php echo $row->ID_DOKUMEN ?>)"><i class="icon-wrench icon-white"></i> Edit</button>
-						<button class="btn btn-mini btn-info" onClick="deleteDokumenJurnal(this, <?php echo $row->ID_DOKUMEN ?>)"><i class="icon-trash icon-white"></i> Delete</button>
-						<button class="btn btn-mini btn-info" onClick="detailDokumenJurnal(this, <?php echo $row->ID_DOKUMEN ?>)"><i class="icon-map-marker icon-white"></i> Detail</button>
+						<div class="btn-group">
+							<button class="btn btn-mini btn-info" onClick="editDokumenJurnal(this, <?php echo $row->ID_DOKUMEN ?>)"><i class="icon-wrench icon-white"></i> Edit</button>
+							<button class="btn btn-mini btn-info" onClick="deleteDokumenJurnal(this, <?php echo $row->ID_DOKUMEN ?>)"><i class="icon-trash icon-white"></i> Delete</button>
+							<button class="btn btn-mini btn-info" onClick="detailDokumenJurnal(this, <?php echo $row->ID_DOKUMEN ?>)"><i class="icon-map-marker icon-white"></i> Detail</button>
+						</div>
 					</div>
 				</div>
 				<hr>

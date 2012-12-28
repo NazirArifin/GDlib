@@ -318,6 +318,14 @@
 		</div>
 </div>
 </div>
+	<footer class="row-fluid">
+		<div class="span12">
+			<hr>
+			<img src="/images/favicon.png" class="pull-left" />
+			<span>Created by: <a href="/humans.txt" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span>
+		</div>
+	</footer>
+
 <script type="text/javascript">
 $('#tab-dok a').click(function (e) {
 	  e.preventDefault();
