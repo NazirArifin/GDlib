@@ -74,26 +74,35 @@
 			<form class="form-horizontal hide" id="form-tambah" action="" method="POST">
 					<a href="#" class="btn btn-info btn-mini pull-right" onClick="return sclose()"><i class="icon-remove icon-white"></i></a>
 				<fieldset>
-					<legend>Tambah User Dosen</legend>	
+					<legend>Tambah User Dosen</legend>
 				<div class="control-group">
 					<label class="control-label control-label-min" for="nama-user">Nama</label>
-					<div class="controls controls-min">
-						<input id="nama-user" name="nama_user" type="text" required="" placeholder="Your Name">
-						<input id="id-user" name="id_user" type="hidden" value="">
-					</div>
+						<div class="controls controls-min">
+							<div class="input-prepend">
+								<span class="add-on"><i class="icon-user"></i></span>
+									<input id="nama-user" name="nama_user" type="text" required="" placeholder="Your Name">
+									<input id="id-user" name="id_user" type="hidden" value="">
+							</div>
+						</div>
 				</div>
 				
 				<div class="control-group">
 					<label class="control-label control-label-min" for="no-induk-user">No. Induk Dosen</label>
-					<div class="controls controls-min">	
-						<input name="no_induk_user" id="no-induk-user" type="text" required="" placeholder="No. Induk User">
+						<div class="controls controls-min">	
+							<div class="input-prepend">
+								<span class="add-on"><i class="icon-tags"></i></span>
+									<input name="no_induk_user" id="no-induk-user" type="text" required="" placeholder="No. Induk User">
+							</div>
 					</div>
 				</div>
 				<div class="control-group">
 					<label class="control-label control-label-min" for="id-facebook">ID Facebook</label>
-					<div class="controls controls-min">	
-						<input name="id_facebook" id="id-facebook" type="text" required="" placeholder="ID Facebook">
-					</div>
+						<div class="controls controls-min">	
+							<div class="input-prepend">
+								<span class="add-on"><i class="icon-globe"></i></span>
+									<input name="id_facebook" id="id-facebook" type="text" required="" placeholder="ID Facebook" value="https://www.facebook.com/">
+							</div>
+						</div>
 				</div>
 				<div class="form-actions btn-group">
 					<button href="#" class="btn btn-warning btn-mini" type="button" onClick="return cancel()"><i class="icon-remove icon-white"></i> Cancel</button>
@@ -104,17 +113,21 @@
 			</form>
 			<div class="container-fluid" id="view">
 				<div class="row-fluid">
-					<input type="text" class="input-medium search-query"/>
-					<button class="btn btn-mini btn-info pull-right" id="tombol" onClick="return tambahDosen()"><i class="icon-plus icon-white"></i></button><br><br><br>
+					<div class="navbar navbar-inner">
+						<form class="navbar-search pull-left">
+							<input type="text" class="input-medium search-query"/>
+						</form>
+						<button class="btn btn-info pull-right" id="tombol" onClick="return tambahDosen()"><i class="icon-plus icon-white"></i></button>
+					</div>
 				</div>
 			<?php
 				$dosen=$controller->admin_model->tampil_where_level_dosen();
 					if ($dosen==0):
-						printf("Data Dosen tidak ada");
+						echo '<div class="alert-info" style="text-align:center;">Data Dosen Tidak Ada</div>';
 					else: 
 					foreach ($dosen as $row):
 				?>
-				<div class="row-fluid data-user">
+				<div class="row-fluid data-user alert-info">
 						<div class="span4">
 							<a href="#image" class="thumbnail"><img src="/images/ct.jpg" alt=""/></a>
 						</div>
@@ -132,7 +145,7 @@
 					endforeach;
 					endif;
 					?>
-				<div class="pagination row-fluid" id="paging">
+				<div class="pagination row-fluid pagination-centered" id="paging">
 						<ul>
 							<li><a href="#">Prev</a></li>
 							<li class="active"><a href="#">1</a></li>

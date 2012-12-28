@@ -69,15 +69,8 @@
 			</ul>
 		</div>
 		<div class="well span9 pull-right">
-			<div class="navbar navbar-inner">
-				<form class="navbar-search pull-left">
-					  <input type="text" class="search-query" placeholder="Search">
-				</form>
-				<button class="btn btn-mini btn-info pull-right" id="tombol" onClick="return tambahModul()"><i class="icon-plus icon-white"></i></button>
-			</div>
-				<div class="row-fluid">
 				<form class="form-horizontal hide" id="form-tambah" action="" method="POST" enctype="multipart/form-data">
-						<a href="#" class="btn btn-info btn-mini pull-right" onClick="return closeForm()"><i class="icon-remove icon-white"></i></a>
+						<a href="#" class="btn btn-info btn-mini pull-right" onClick="return dclose()"><i class="icon-remove icon-white"></i></a>
 					<fieldset>
 					<legend>Tambah Jurnal</legend>	
 							<input type="hidden" name="kategori_jurnal" id="kategori-jurnal" value="jurnal">
@@ -125,11 +118,57 @@
 								</div>
 							</div>
 							<div class="form-actions">
-								<button class="btn btn-info btn-mini" type="button" onClick="return closeForm()"><i class="icon-remove icon-white"></i> Cancel</button>
+								<button class="btn btn-info btn-mini" type="button" onClick="return dcancel()"><i class="icon-remove icon-white"></i> Cancel</button>
 								<button class="btn btn-info btn-mini" type="submit" value="upload" ><i class="icon-ok icon-white" ></i> Simpan</button>
 							</div>	
 						</fieldset>
-				</form>	
+				</form>
+			<div class="container-fluid" id="view">
+				<div class="row-fluid">
+					<div class="navbar navbar-inner">
+						<form class="navbar-search pull-left">
+							  <input type="text" class="search-query" placeholder="Search">
+						</form>
+						<button class="btn btn-info pull-right" id="tombol" onClick="return tambahJurnal()"><i class="icon-plus icon-white"></i></button>
+					</div>
+				</div>
+				<!-- dari controller -->
+				<?php
+					$dokumenJurnal=$controller->admin_model->tampil_where_kategori_jurnal();
+					if ($dokumenJurnal == 0):
+						echo '<div class="alert-info" style="text-align:center;">Dokumen Jurnal Tidak Ada</div>';
+					else :
+						foreach ($dokumenJurnal as $row):
+				?>
+				<div class="row-fluid data-user">
+					<div class="span4">
+						<a href="#image" class="thumbnail jurnal-image"><img src="/<?php echo $row->FOTO_DOKUMEN ?>" alt=""/></a>
+					</div>
+					<div class="span8">
+								<h2><?php echo $row->PENGARANG_DOKUMEN ?> </h2>
+								<h4><?php echo $row->TAHUN_PENERBITAN_DOKUMEN ?> </h4>
+						<button class="btn btn-mini btn-info" onClick="editDokumenJurnal(this, <?php echo $row->ID_DOKUMEN ?>)"><i class="icon-wrench icon-white"></i> Edit</button>
+						<button class="btn btn-mini btn-info" onClick="deleteDokumenJurnal(this, <?php echo $row->ID_DOKUMEN ?>)"><i class="icon-trash icon-white"></i> Delete</button>
+						<button class="btn btn-mini btn-info" onClick="detailDokumenJurnal(this, <?php echo $row->ID_DOKUMEN ?>)"><i class="icon-map-marker icon-white"></i> Detail</button>
+					</div>
+				</div>
+				<hr>
+				<?php
+					endforeach;
+					endif;
+				?>
+				<div class="pagination" align="center">
+					<ul>
+						<li><a href="#">Prev</a></li>
+						<li class="active">
+						<a href="#">1</a>
+						</li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">Next</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
