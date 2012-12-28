@@ -8,7 +8,6 @@
 		<link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
 		<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
-		<link rel="stylesheet" href="/static/css/style.css" />
 		<link rel="stylesheet" href="/static/css/main.css" />
 			
 		<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
@@ -58,28 +57,6 @@
 				</ul>
 				<span>
 					<strong>Administrator</strong><br>
-<<<<<<< HEAD
-					<a href="#Setting">Settings</a> | <a href="#">Keluar</a>
-				</span>
-			</div>
-			<div class="sidebar-nav">
-				<div>
-					<ul class="nav nav-list">
-						
-						<div class="alert alert-success">
-							<li class="nav-header">Dokumen</li>
-							<li><a href="/mahasiswa/jurnal" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Jurnal</a></li>
-							<li class="divider"></li>
-							<li><a href="#" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Buku</a></li>
-							<li class="divider"></li>
-							<li><a href="#" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Modul</a></li>
-							<li class="divider"></li>
-							<li><a href="#" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Buletin</a></li>
-							<li class="divider"></li>
-						</div>
-					</ul>
-				</div>
-=======
 				</span>
 			</div>
 			<div class="sidebar-nav">
@@ -96,28 +73,10 @@
 							<li class="divider"></li>
 						</div>
 					</ul>
->>>>>>> renovasi admin lagi deh
 			</div>
 		</div>
 <div class="well span9">
 	<div class="row-fluid">
-<<<<<<< HEAD
-		<div class="span10">
-	 <div class="">
-		<div class="navbar navbar-inner">
-				<a class="brand">Dokumen</a>
-				<form class="navbar-search pull-right">
-					  <input type="text" class="search-query" placeholder="Cari dokumen">
-				</form>
-			</div>
-		<ul class="nav nav-tabs" id="tab-dok">
-		  <li class="active"><a href="#jurnal">Jurnal</a></li>
-		  <li><a href="#buku">Buku</a></li>
-		  <li><a href="#modul">Modul</a></li>
-		  <li><a href="#buletin">Buletin</a></li>
-		</ul>
-		 
-=======
 			<div class="">
 				<div class="navbar navbar-inner navbar-inverse">
 					<a class="brand">Dokumen</a>
@@ -132,7 +91,6 @@
 				<li><a href="#buletin">Buletin</a></li>
 			</ul>
 	 
->>>>>>> renovasi admin lagi deh
 	<div class="tab-content">
 	<!--tab untuk jurnal-->
 	  <div class="tab-pane active" id="jurnal">
@@ -140,7 +98,7 @@
 		  
 		  <thead>
 			<tr>
-			  <th>Judul</th>
+			  <th>Juduli</th>
 			  <th>Taggal</th>
 			</tr>
 		  </thead>
@@ -405,14 +363,6 @@
 				</div>
 		</div>
 </div>
-	<footer class="row-fluid">
-		<div class="span12">
-			<hr>
-			<img src="/images/favicon.png" class="pull-left" />
-			<span>Created by: <a href="/humans.txt" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span>
-		</div>
-	</footer>
-	
 <script type="text/javascript">
 $('#tab-dok a').click(function (e) {
 	  e.preventDefault();
