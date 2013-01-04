@@ -149,8 +149,8 @@
 											<td><?php echo $row->PENGARANG_DOKUMEN?></td>
 											<td>
 											<div class="btn-group">
-											<button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button> 
-											<button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button> 
+											<button class="btn btn-danger btn-mini" ><i class="icon-trash icon-white"></i> Hapus</button> 
+											<button class="btn btn-warning btn-mini" onClick="editDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)" ><i class="icon-edit icon-white"></i> Edit</button> 
 											<button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
 											</div>
 											</td>
@@ -278,7 +278,8 @@
 						</div>
 					</div>
 				</div>
-			<!--ini bagian tambah jurnal-->
+				
+			<!--ini bagian tambah dokumen-->
 			<div class="row-fluid hide" id="form-section">
 				<form class="form-horizontal" id="form-tambah" action="" method="POST" enctype="multipart/form-data">
 					<div class="well span12">

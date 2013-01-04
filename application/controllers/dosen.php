@@ -20,13 +20,11 @@ class Dosen extends CI_Controller {
 	public function dokumen($param = '', $extra = '') {
 		switch ($param) {
 			case 'add':
-					//upload jurnal file pdf
+					//upload dokumen
 					$this->load->library('upload');
 					$config['upload_path'] = './upload/' . $this->input->post('kategori_dokumen');
 					$config['allowed_types'] = 'pdf|doc|docx|xls|xlsx|ppt|pptx|txt';
 					$config['encrypt_name'] = TRUE;
-					//$config['max_width']  = '1024';
-					//$config['max_height']  = '768';       
 
 					$this->upload->initialize($config);
 		 
@@ -76,22 +74,12 @@ class Dosen extends CI_Controller {
 					$config['allowed_types']='jpg|jpeg|png';
 					$config['encrypt_name']=TRUE;
 					$this->upload->initialize($config);
+					
 					if($this->upload->do_upload('foto_dokumen'))
 					{
 						$data=$this->upload->data();
 						$namafoto='./upload/'. $this->input->post('kategori_dokumen') . '/' . $data['file_name'];
-						$ekstensi= $data['file_ext'];
-						switch ($ekstensi){
-									case '.jpg':
-										$ekstensi='6';
-									case '.jpeg':
-										$ekstensi='6';
-									case '.png':
-										$ekstensi='6';
-									break;	
-								default:	
-								$ekstensi= $data['file_ext'];
-								}
+						
 					}
 					else
 					{
@@ -99,28 +87,17 @@ class Dosen extends CI_Controller {
 					}
 					$this->dosen_model->insertJurnal($namafile,$namafoto,$ekstensi);
 				break;
+			case 'data':
+				$pilih = $this->dosen_model->idDokumen($extra);
+				echo json_encode($pilih);
+				break;
 			default:
 			$this->load->view('dosen/index',array('controller' => $this));
 			jsloc::show();
 		}
+		
 		$this->load->view('dosen/index',array('controller' => $this));
 		jsloc::show();
 	}
-	public function jurnal()
-	{
-		$this->load->view('dosen/jurnal/index',array('controller' => $this));
-		jsloc::show();
-	}
 	
-	public function buku()
-	{
-		$this->load->view('dosen/jurnal/index',array('controller' => $this));
-		jsloc::show();
-	}
-	
-	public function modul()
-	{
-		$this->load->view('dosen/modul/index',array('controller' => $this));
-		jsloc::show();
-	}
 }
