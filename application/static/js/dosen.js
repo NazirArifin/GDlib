@@ -29,21 +29,36 @@ function closeForm(){
 }
 
 function editDokumen(object,id){
-alert(id);
-	var $form = $ ('#form-tambah');
-
+var $form = $('#form-tambah');
+	
 	$.ajax({
-		url:'/dosen/dokumen/data/' +id,
-		dataType:'json',		
+		url: '/admin/dosen/data/' + id,
+		dataType: 'json',
+		beforeSend: function(){
+			
+		},
+		success: function(o){
+			$('#form-tambah').attr('action', '/admin/dosen/update');
+			$('#view').hide('blind', {} , 500);
+			$('#form-tambah').show('blind', {} , 1500);
+			$('#id-user').val(o[0].ID_USER);
+			$('#nama-user').val(o[0].NAMA_USER);
+			$('#no-induk-user').val(o[0].NO_INDUK_USER);
+			$('#id-facebook').val(o[0].ID_FACEBOOK_USER);
+		}
+	});
+var $form=$('#form-tambah');
+	$.ajax({
+		url:'dosen/data/' + id,
+		dataType:'json',
 		beforeSend: function(){
 		
 		},
 		success: function(o){
-		$('#data-section').hide('blind', {}, 500, function() {
-		$('#form-section').show('blind', {}, 500);
-		$('#form-tambah').show('blind', {} , 1500);
-		});
+			$('#form-tambah').attr('action','/dosen/')
 		}
-	});
-	
+		
+		
+		
+	});	
 }
