@@ -14,7 +14,9 @@
 		<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
 		<script src="/third_party/bootstrap/bootstrap.min.js"></script>
 		<style type="text/css">
-		
+		body{
+		background-image:url('/images/bg.gif') ;
+		}
 		#logo {
 			height: 31px;
 			margin-top: 0px;

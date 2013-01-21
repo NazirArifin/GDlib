@@ -61,6 +61,7 @@ $route['admin/jurnal'] = "admin/jurnal";
 $route['admin/modul'] = "admin/modul";
 $route['admin/buku'] = "admin/buku";
 $route['admin/buletin'] = "admin/buletin";
+$route['admin/edit_dokumen'] = "admin/edit_dokumen";
 
 //======================= ROUTES UNTUK DOSEN ==== 
 $route['dosen'] = "dosen";

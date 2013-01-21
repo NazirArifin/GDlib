@@ -374,4 +374,10 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/news/index');
 		jsloc::show();
 	}
+	
+	public function edit_dokumen()
+	{
+		$this->load->view('admin/edit_dokumen');
+		jsloc::show();
+	}
 }
