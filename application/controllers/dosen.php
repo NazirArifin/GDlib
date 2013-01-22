@@ -33,7 +33,7 @@ class Dosen extends CI_Controller {
 						//--unngah file
 						$data = $this->upload->data();
 						//simpan db	
-						$namafile = './upload/'. $this->input->post('kategori_dokumen') . '/' . $data['file_name'];
+						$namafile =$data['file_name'];
 						//tipe file
 						$ekstensi= $data['file_ext'];
 								switch ($ekstensi){
@@ -78,7 +78,7 @@ class Dosen extends CI_Controller {
 					if($this->upload->do_upload('foto_dokumen'))
 					{
 						$data=$this->upload->data();
-						$namafoto='./upload/'. $this->input->post('kategori_dokumen') . '/' . $data['file_name'];
+						$namafoto= $data['file_name'];
 						
 					}
 					else
@@ -97,6 +97,11 @@ class Dosen extends CI_Controller {
 		}
 		
 		$this->load->view('dosen/index',array('controller' => $this));
+		jsloc::show();
+	}
+	
+	public function jurnal(){
+		$this->load->view('dosen/jurnal/index',array('controller'=>$this));
 		jsloc::show();
 	}
 	

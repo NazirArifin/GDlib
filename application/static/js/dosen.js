@@ -28,13 +28,14 @@ function closeForm(){
 	});	
 }
 
-function editDokumen(){
+function editDokumen(object,id){
+	//alert(id);
+	$.ajax({
+	url: '/dosen/dokumen/data' + id,
+	dataType: 'json',
+		succes:function(o){
+			alert(o);
+		}
 
-$('#data-section').hide('blind', {}, 500, function(object,id) {
-		$('#form-tambah').attr('action', '/dosen/dokumen/data');
-		$('#form-legend').text($('#kategori-dokumen').val().toUpperCase());
-		$('#form-section').show('blind', {}, 500);
-		$('#judul-dokumen').val([0].JUDUL_DOKUMEN);
-		//$('#id-facebook').val(o[0].ID_FACEBOOK_USER);
-	});	
+	});
 }
