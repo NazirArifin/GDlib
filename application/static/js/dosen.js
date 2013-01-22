@@ -28,37 +28,13 @@ function closeForm(){
 	});	
 }
 
-function editDokumen(object,id){
-var $form = $('#form-tambah');
-	
-	$.ajax({
-		url: '/admin/dosen/data/' + id,
-		dataType: 'json',
-		beforeSend: function(){
-			
-		},
-		success: function(o){
-			$('#form-tambah').attr('action', '/admin/dosen/update');
-			$('#view').hide('blind', {} , 500);
-			$('#form-tambah').show('blind', {} , 1500);
-			$('#id-user').val(o[0].ID_USER);
-			$('#nama-user').val(o[0].NAMA_USER);
-			$('#no-induk-user').val(o[0].NO_INDUK_USER);
-			$('#id-facebook').val(o[0].ID_FACEBOOK_USER);
-		}
-	});
-var $form=$('#form-tambah');
-	$.ajax({
-		url:'dosen/data/' + id,
-		dataType:'json',
-		beforeSend: function(){
-		
-		},
-		success: function(o){
-			$('#form-tambah').attr('action','/dosen/')
-		}
-		
-		
-		
+function editDokumen(){
+
+$('#data-section').hide('blind', {}, 500, function(object,id) {
+		$('#form-tambah').attr('action', '/dosen/dokumen/data');
+		$('#form-legend').text($('#kategori-dokumen').val().toUpperCase());
+		$('#form-section').show('blind', {}, 500);
+		$('#judul-dokumen').val([0].JUDUL_DOKUMEN);
+		//$('#id-facebook').val(o[0].ID_FACEBOOK_USER);
 	});	
 }
