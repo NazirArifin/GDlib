@@ -28,14 +28,31 @@ function closeForm(){
 	});	
 }
 
-function editDokumen(object,id){
-	//alert(id);
+function editJurnal(object,id){
+alert(id);
+	var $form = $('#form-tambah');
 	$.ajax({
-	url: '/dosen/dokumen/data' + id,
-	dataType: 'json',
-		succes:function(o){
-			alert(o);
+		url: '/dosen/dokumen/data/' + id,
+		dataType: 'json',
+		beforeSend: function(){
+			
+		},
+		success: function(o){
+			$('#form-tambah').attr('action', '/dosen/dokumen/update');
+			$('#view').hide('blind', {} , 500);
+			$('#form-tambah').show('blind', {} , 1500);
+			$('#judul-dokumen').val(o[0].JUDUL_DOKUMEN);
+			$('#pengarang-dokumen').val(o[0].PENGARANG_DOKUMEN);
+			$('#prolog-dokumen').val(o[0].PROLOG_DOKUMEN);
 		}
-
+	});
+}
+function tambahJurnal(){
+		$('#view').hide('blind', {} , 500);
+		$('#form-tambah').show('blind', {} , 500);
+}
+function tutupJurnal (){
+	$('#form-tambah').hide('blind', {} , 500, function(){
+		$('#view').show('blind', {} , 500);
 	});
 }
