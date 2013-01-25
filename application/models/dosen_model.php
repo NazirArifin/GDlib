@@ -69,7 +69,7 @@ class Dosen_model extends CI_Model {
 	}
 	
 	public function idDokumen($id){
-		$this->db->select('ID_DOKUMEN,JUDUL_DOKUMEN,PENGARANG_DOKUMEN,PROLOG_DOKUMEN,TAHUN_PENERBITAN_DOKUMEN,FILE_DOKUMEN,FOTO_DOKUMEN,KATA_KUNCI_DOKUMEN');
+		$this->db->select('ID_DOKUMEN,JUDUL_DOKUMEN,PENGARANG_DOKUMEN,PROLOG_DOKUMEN,TAHUN_PENERBITAN_DOKUMEN,KATA_KUNCI_DOKUMEN');
 		$query=$this->db->get_where('tb_dokumen',array('ID_DOKUMEN' => $id));
 		if ($query->num_rows()==0){
 			return false;

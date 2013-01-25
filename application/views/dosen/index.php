@@ -116,7 +116,6 @@
 				</ul>
 			</div>
 			<div class="row-fluid" id="data-section">
-				
 				<div class="tabbable span12">
 						<ul class="nav nav-tabs" id="tab-dokumen">
 							<li class="active"><a href="#jurnal" data-toggle="tab">JURNAL</a></li>
@@ -316,7 +315,7 @@
 							<div class="control-group">
 								<label class="control-label control-label-min" for="tahun-penerbitan-dokumen">File Dokumen</label>
 								<div class="controls controls-min">	
-									<input name="file_dokumen" id="file-dokumen" type="file" required="" >
+									<input name="file_dokumen" id="tahun-penerbitan-dokumen" type="file" required="" >
 								</div>
 							</div>
 							<div class="control-group">

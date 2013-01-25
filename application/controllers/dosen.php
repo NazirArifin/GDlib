@@ -90,7 +90,7 @@ class Dosen extends CI_Controller {
 			case 'data':
 				$pilih = $this->dosen_model->idDokumen($extra);
 				echo json_encode($pilih);
-				break;
+				return;
 			default:
 			$this->load->view('dosen/index',array('controller' => $this));
 			jsloc::show();
@@ -100,7 +100,17 @@ class Dosen extends CI_Controller {
 		jsloc::show();
 	}
 	
-	public function jurnal(){
+	public function jurnal($param='',$ekstra=''){
+		switch ($param){
+			case 'data':
+			$pilih = $this->dosen_model->idDokumen($ekstra);
+				echo json_encode($pilih);
+				return;
+			default:
+			$this->load->view('dosen/jurnal/index',array('controller' => $this));
+			jsloc::show();	
+		}
+		
 		$this->load->view('dosen/jurnal/index',array('controller'=>$this));
 		jsloc::show();
 	}
