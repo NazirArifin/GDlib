@@ -148,7 +148,7 @@
 											<td><?php echo $row->PENGARANG_DOKUMEN?></td>
 											<td>
 											<div class="btn-group">
-											<button class="btn btn-danger btn-mini" ><i class="icon-trash icon-white"></i> Hapus</button> 
+											<button class="btn btn-danger btn-mini" onClick="deleteDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)" ><i class="icon-trash icon-white"></i> Hapus</button> 
 											<button class="btn btn-warning btn-mini" onClick="editDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)" ><i class="icon-edit icon-white"></i> Edit</button> 
 											<button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
 											</div>
@@ -199,8 +199,8 @@
 											<td><?php echo $row->PENGARANG_DOKUMEN?></td>
 											<td>
 											<div class="btn-group">
-											<button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button> 
-											<button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button> 
+											<button class="btn btn-danger btn-mini" onClick="deleteDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)"><i class="icon-trash icon-white"></i> Hapus</button> 
+											<button class="btn btn-warning btn-mini" onClick="editDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)"><i class="icon-edit icon-white"></i> Edit</button> 
 											<button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
 											</div>
 											</td>
@@ -249,8 +249,8 @@
 											<td><?php echo $row->PENGARANG_DOKUMEN?></td>
 											<td>
 											<div class="btn-group">
-											<button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i> Hapus</button> 
-											<button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i> Edit</button> 
+											<button class="btn btn-danger btn-mini" onClick="deleteDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)"><i class="icon-trash icon-white"></i> Hapus</button> 
+											<button class="btn btn-warning btn-mini" onClick="editDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)"><i class="icon-edit icon-white"></i> Edit</button> 
 											<button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
 											</div>
 											</td>
@@ -313,9 +313,9 @@
 							</div>
 							
 							<div class="control-group">
-								<label class="control-label control-label-min" for="tahun-penerbitan-dokumen">File Dokumen</label>
+								<label class="control-label control-label-min" for="file-dokumen">File Dokumen</label>
 								<div class="controls controls-min">	
-									<input name="file_dokumen" id="tahun-penerbitan-dokumen" type="file" required="" >
+									<input name="file_dokumen" id="file-dokumen" type="file" required="" >
 								</div>
 							</div>
 							<div class="control-group">
@@ -332,7 +332,7 @@
 							</div>
 							<div class="form-actions">
 								<button class="btn btn-info btn-mini" type="button" onClick="return closeForm()"><i class="icon-remove icon-white"></i> Cancel</button>
-								<button class="btn btn-info btn-mini" type="submit" value="upload" ><i class="icon-ok icon-white" ></i> Simpan</button>
+								<button class="btn btn-info btn-mini" type="button" onClick="return simpanDokumen()" ><i class="icon-ok icon-white" ></i> Simpan</button>
 							</div>
 							<hr>
 						</fieldset>

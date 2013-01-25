@@ -30,6 +30,7 @@ function closeForm(){
 
 function editDokumen(object,id){
 	//console.log('ha');
+	
 	var $form = $('#form-tambah');
 	$.ajax({
 		url: '/dosen/dokumen/data/' + id,
@@ -38,7 +39,7 @@ function editDokumen(object,id){
 			//alert(id);
 		},
 		success: function(o){
-			console.log(o);
+			//console.log(o);
 			$('#form-tambah').attr('action', '/dosen/dokumen/update');
 			$('#data-section').hide('blind', {} , 500);
 			$('#form-section').show('blind',{},500);
@@ -47,12 +48,67 @@ function editDokumen(object,id){
 			$('#pengarang-dokumen').val(o[0].PENGARANG_DOKUMEN);
 			$('#prolog-dokumen').val(o[0].PROLOG_DOKUMEN);
 			$('#tahun-penerbitan-dokumen').val(o[0].TAHUN_PENERBITAN_DOKUMEN);
-			$('#kata-kunci-dokumen').val(o[0].KATA_KUNCI_DOKUMEN);
-			
+			$('#kata-kunci-dokumen').val(o[0].KATA_KUNCI_DOKUMEN);		
 		}
 	});
 
 }
+
+function simpanDokumen(object){
+$('#form-tambah').attr('action', '/dosen/dokumen/add');
+	var $form = $('#form-tambah');
+	$.ajax({
+		url:'/dosen/dokumen/add/',
+		//dataType: 'json',
+		type:'POST',
+		//data: $form.serialize(),
+		beforeSend: function(){
+			
+		},
+		success: function(o){
+			console.log(o); 
+			if (data.success==1){
+				$form.find('input').val('');
+				alertify.success('Data Sudah Tersimpan');
+				$('#form-tambah').hide('blind', {} , 1500);
+				$('#data-section').show('blind', {} , 1500);
+			}
+			else {
+				alertify.error('Data Gagal disimpan');
+			}
+		}
+	});
+	
+	return false;
+}
+function deleteDokumen(object, id){
+//	$('#form-tambah').attr('action', '/dosen/dokumen/delete');
+	var $form = $('#form-tambah');
+	
+	$.ajax({
+		url: '/dosen/dokumen/delete/' + id,
+		dataType: 'json',
+		
+		beforeSend: function(){
+			
+		},
+		success: function(o){
+		//console.log(o); 
+			if (o.success==1){
+				$form.find('input').val('');
+				alertify.success('Data Sudah Terhapus');
+				$('#data-section').show('blind', {} , 1500);
+			}
+			else {
+				alertify.error('Data Gagal dihapus');
+			}
+		}
+	});
+	//}
+	return false;
+}
+
+
 function tambahJurnal(){
 		$('#view').hide('blind', {} , 500);
 		$('#form-tambah').show('blind', {} , 500);

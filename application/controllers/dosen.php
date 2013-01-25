@@ -68,7 +68,7 @@ class Dosen extends CI_Controller {
 						echo $this->upload->display_errors();
 					}
 					
-					//upload jurnal file foto
+					//upload dokumen file foto
 					$this->load->library('upload');
 					$config['upload_path']='./upload/' . $this->input->post('kategori_dokumen');
 					$config['allowed_types']='jpg|jpeg|png';
@@ -85,11 +85,24 @@ class Dosen extends CI_Controller {
 					{
 						echo $this->upload->display_errors();
 					}
-					$this->dosen_model->insertJurnal($namafile,$namafoto,$ekstensi);
+					$this->dosen_model->insertDokumen($namafile,$namafoto,$ekstensi);
 				break;
+				
 			case 'data':
 				$pilih = $this->dosen_model->idDokumen($extra);
 				echo json_encode($pilih);
+				return;
+			case 'update':
+				
+				$id_dokumen=$this->input->post('id_dokumen');
+				if( ! empty($id_dokumen)){
+					$this->dosen_model->editDokumen($id_dokumen);
+					echo '{"error":0,"success":1}';
+				}
+				break;
+			case 'delete';
+				$this->dosen_model->deleteDokumen($extra);
+				echo '{ "error": 0, "success": 1 }';	
 				return;
 			default:
 			$this->load->view('dosen/index',array('controller' => $this));

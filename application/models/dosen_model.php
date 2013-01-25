@@ -32,7 +32,7 @@ class Dosen_model extends CI_Model {
 		}
 	}
 	
-	public function insertJurnal($namafile,$namafoto,$ekstensi)
+	public function insertDokumen($namafile,$namafoto,$ekstensi)
 	{
 		// cek 
 		$kategori=$this->input->post('kategori_dokumen');
@@ -63,13 +63,12 @@ class Dosen_model extends CI_Model {
 			'JUMLAH_DOWNLOAD_DOKUMEN'=>'9','JUMLAH_BACA_DOKUMEN'=>'10',
 			'FOTO_DOKUMEN'=>$namafoto,
 			'FILE_DOKUMEN'=>$namafile);
-	
 		$this->db->insert('tb_dokumen',$insert);
 		return TRUE;
 	}
 	
 	public function idDokumen($id){
-		$this->db->select('ID_DOKUMEN,JUDUL_DOKUMEN,PENGARANG_DOKUMEN,PROLOG_DOKUMEN,TAHUN_PENERBITAN_DOKUMEN,KATA_KUNCI_DOKUMEN');
+		$this->db->select('ID_DOKUMEN,JUDUL_DOKUMEN,PENGARANG_DOKUMEN,PROLOG_DOKUMEN,TAHUN_PENERBITAN_DOKUMEN,FILE_DOKUMEN,KATA_KUNCI_DOKUMEN');
 		$query=$this->db->get_where('tb_dokumen',array('ID_DOKUMEN' => $id));
 		if ($query->num_rows()==0){
 			return false;
@@ -79,11 +78,11 @@ class Dosen_model extends CI_Model {
 		}
 	}
 	
-	public function editDokumen($id){
-		$update =array(
-			'JUDUL_DOKUMEN'=>$this->input->post('judul_dokumen'));
-		$this->db->where('ID_DOKUMEN',$id);
-		$this->db->update('tb_dokumen',$update);
+	public function editDokumen($id_dokumen){
 		
+		
+	}
+	public function deleteDokumen($id){
+		$this->db->delete('tb_dokumen', array('ID_DOKUMEN'=>$id));
 	}
 }
