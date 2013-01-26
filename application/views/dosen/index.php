@@ -285,6 +285,7 @@
 						<a href="#" class="btn btn-info btn-mini pull-right" onClick="return closeForm()"><i class="icon-remove icon-white"></i></a>
 						<legend id="form-legend"></legend>	
 						<fieldset>
+							
 							<input type="hidden" name="kategori_dokumen" id="kategori-dokumen" value="jurnal">
 							<legend id="form-legend"></legend>	
 							<div class="control-group">
@@ -332,7 +333,7 @@
 							</div>
 							<div class="form-actions">
 								<button class="btn btn-info btn-mini" type="button" onClick="return closeForm()"><i class="icon-remove icon-white"></i> Cancel</button>
-								<button class="btn btn-info btn-mini" type="button" onClick="return simpanDokumen()" ><i class="icon-ok icon-white" ></i> Simpan</button>
+								<button class="btn btn-info btn-mini" type="submit" ><i class="icon-ok icon-white" ></i> Simpan</button>
 							</div>
 							<hr>
 						</fieldset>

@@ -55,13 +55,13 @@ function editDokumen(object,id){
 }
 
 function simpanDokumen(object){
-$('#form-tambah').attr('action', '/dosen/dokumen/add');
+	console.log('ha');
 	var $form = $('#form-tambah');
 	$.ajax({
 		url:'/dosen/dokumen/add/',
-		//dataType: 'json',
-		type:'POST',
-		//data: $form.serialize(),
+		dataType: 'json',
+		//type:'POST',
+		data: $form.serialize(),
 		beforeSend: function(){
 			
 		},
@@ -72,6 +72,7 @@ $('#form-tambah').attr('action', '/dosen/dokumen/add');
 				alertify.success('Data Sudah Tersimpan');
 				$('#form-tambah').hide('blind', {} , 1500);
 				$('#data-section').show('blind', {} , 1500);
+				
 			}
 			else {
 				alertify.error('Data Gagal disimpan');
@@ -81,6 +82,7 @@ $('#form-tambah').attr('action', '/dosen/dokumen/add');
 	
 	return false;
 }
+
 function deleteDokumen(object, id){
 //	$('#form-tambah').attr('action', '/dosen/dokumen/delete');
 	var $form = $('#form-tambah');
