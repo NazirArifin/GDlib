@@ -5,12 +5,19 @@ class Mahasiswa extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		include(APPPATH . 'libraries/jsloc.php');
+		$this->load->model('mahasiswa_model');
+		$this->load->helper();
+		$this->load->database();
+		$this->load->library();
 	}
 	
 	public function index()
 	{
 		$this->load->view('mahasiswa/index',array('controller' => $this));
 		jsloc::show();
+		
+	}
+	public function dokumen(){
 		
 	}
 	

@@ -304,9 +304,10 @@
 				<form class="form-horizontal" id="form-tambah" action="" method="POST" enctype="multipart/form-data">
 					<div class="well span12">
 						<a href="/dosen" class="btn btn-info btn-mini pull-right" onClick="return closeForm()"><i class="icon-remove icon-white"></i></a>
-						<legend id="form-legend">
-							<input type="hidden" name="kategori_dokumen" id="kategori-dokumen" value="jurnal">
+						<input type="hidden" name="kategori_dokumen" id="kategori-dokumen" value="jurnal">
 							<input type="hidden" id="id-dokumen" name="id_dokumen" value="">
+						<legend id="form-legend">
+							
 						</legend>	
 							
 						<fieldset>
