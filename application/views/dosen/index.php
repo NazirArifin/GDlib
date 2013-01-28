@@ -66,7 +66,7 @@
 				</button>
 				<a href="/"><img src="/images/gd.png" id="logo" /></a>
 				<ul class="nav pull-right nav-pills">
-					<li><a href="/admin"><i class="icon-home"></i> Dashboard</a></li>
+					<li><a href="/dosen"><i class="icon-home"></i> Dashboard</a></li>
 					<li><a href="#"><i class="icon-user"></i> Profil</a></li>
 				  
 				</ul>
@@ -133,25 +133,32 @@
 										<tr>
 											<th>JUDUL</th>
 											<th>PENGARANG</th>
+											<th>PPROLOG</th>
+											<th>TAHUN TERBIT</th>
+											<th>KATA KUNCI DOKUMEN</th>
+											<th>AKSI</th>
 										</tr>
 									</thead>
 									<tbody>
 									<?php
 											$jurnal=$controller->dosen_model->tampilJurnal();
 											if ($jurnal == 0):
-												echo '<tr><td colspan="4"><div class="alert-info" style="text-align:center;">Data Jurnal Tidak Ada</div></td></tr>';
+												echo '<tr><td colspan="6"><div class="alert-info" style="text-align:center;">Data Jurnal Tidak Ada</div></td></tr>';
 											else :
 												foreach ($jurnal as $row):
 									 ?>
 										<tr>
-											<td><?php echo $row->JUDUL_DOKUMEN ?></td>
+											<td><?php echo $row->JUDUL_DOKUMEN?></td>
 											<td><?php echo $row->PENGARANG_DOKUMEN?></td>
+											<td><?php echo $row->PROLOG_DOKUMEN?></td>
+											<td><?php echo $row->TAHUN_PENERBITAN_DOKUMEN?></td>
+											<td><?php echo $row->KATA_KUNCI_DOKUMEN?></td>
 											<td>
-											<div class="btn-group">
-											<button class="btn btn-danger btn-mini" onClick="deleteDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)" ><i class="icon-trash icon-white"></i> Hapus</button> 
-											<button class="btn btn-warning btn-mini" onClick="editDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)" ><i class="icon-edit icon-white"></i> Edit</button> 
-											<button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
-											</div>
+												<div class="btn-group">
+													<button class="btn btn-danger btn-mini" onClick="deleteDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)" ><i class="icon-trash icon-white"></i> Hapus</button> 
+													<button class="btn btn-warning btn-mini" onClick="editDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)" ><i class="icon-edit icon-white"></i> Edit</button> 
+													<button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+												</div>
 											</td>
 										</tr>
 										<?php
@@ -183,6 +190,10 @@
 										<tr>
 											<th>JUDUL</th>
 											<th>PENGARANG</th>
+											<th>PPROLOG</th>
+											<th>TAHUN TERBIT</th>
+											<th>KATA KUNCI DOKUMEN</th>
+											<th>AKSI</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -197,12 +208,15 @@
 										<tr>
 											<td><?php echo $row->JUDUL_DOKUMEN?></td>
 											<td><?php echo $row->PENGARANG_DOKUMEN?></td>
+											<td><?php echo $row->PROLOG_DOKUMEN?></td>
+											<td><?php echo $row->TAHUN_PENERBITAN_DOKUMEN?></td>
+											<td><?php echo $row->KATA_KUNCI_DOKUMEN?></td>
 											<td>
-											<div class="btn-group">
-											<button class="btn btn-danger btn-mini" onClick="deleteDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)"><i class="icon-trash icon-white"></i> Hapus</button> 
-											<button class="btn btn-warning btn-mini" onClick="editDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)"><i class="icon-edit icon-white"></i> Edit</button> 
-											<button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
-											</div>
+												<div class="btn-group">
+													<button class="btn btn-danger btn-mini" onClick="deleteDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)"><i class="icon-trash icon-white"></i> Hapus</button> 
+													<button class="btn btn-warning btn-mini" onClick="editDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)"><i class="icon-edit icon-white"></i> Edit</button> 
+													<button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+												</div>
 											</td>
 										</tr>
 										<?
@@ -234,25 +248,32 @@
 										<tr>
 											<th>JUDUL</th>
 											<th>PENGARANG</th>
+											<th>PPROLOG</th>
+											<th>TAHUN TERBIT</th>
+											<th>KATA KUNCI DOKUMEN</th>
+											<th>AKSI</th>
 										</tr>
 									</thead>
 									<tbody>
 										<?php
 											$modul=$controller->dosen_model->tampilModul();
 											if($modul==0):
-												echo '<tr><td colspan="4"><div class="alert-info" style="text-align:center;">Data Modul Tidak Ada</div></td></tr>';
+												echo '<tr><td colspan="6"><div class="alert-info" style="text-align:center;">Data Modul Tidak Ada</div></td></tr>';
 											else:
 												foreach($modul as $row):
 										?>
 										<tr>
 											<td><?php echo $row->JUDUL_DOKUMEN?></td>
 											<td><?php echo $row->PENGARANG_DOKUMEN?></td>
+											<td><?php echo $row->PROLOG_DOKUMEN?></td>
+											<td><?php echo $row->TAHUN_PENERBITAN_DOKUMEN?></td>
+											<td><?php echo $row->KATA_KUNCI_DOKUMEN?></td>
 											<td>
-											<div class="btn-group">
-											<button class="btn btn-danger btn-mini" onClick="deleteDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)"><i class="icon-trash icon-white"></i> Hapus</button> 
-											<button class="btn btn-warning btn-mini" onClick="editDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)"><i class="icon-edit icon-white"></i> Edit</button> 
-											<button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
-											</div>
+												<div class="btn-group">
+													<button class="btn btn-danger btn-mini" onClick="deleteDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)"><i class="icon-trash icon-white"></i> Hapus</button> 
+													<button class="btn btn-warning btn-mini" onClick="editDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)"><i class="icon-edit icon-white"></i> Edit</button> 
+													<button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+												</div>
 											</td>
 										</tr>
 										<?php
@@ -282,13 +303,13 @@
 			<div class="row-fluid hide" id="form-section">
 				<form class="form-horizontal" id="form-tambah" action="" method="POST" enctype="multipart/form-data">
 					<div class="well span12">
-						<a href="#" class="btn btn-info btn-mini pull-right" onClick="return closeForm()"><i class="icon-remove icon-white"></i></a>
-						<legend id="form-legend"></legend>	
-						<fieldset>
-							
+						<a href="/dosen" class="btn btn-info btn-mini pull-right" onClick="return closeForm()"><i class="icon-remove icon-white"></i></a>
+						<legend id="form-legend">
 							<input type="hidden" name="kategori_dokumen" id="kategori-dokumen" value="jurnal">
-							<input id="id-dokumen" name="id_dokumen" type="hidden" value="">
-							<legend id="form-legend"></legend>	
+							<input type="hidden" id="id-dokumen" name="id_dokumen" value="">
+						</legend>	
+							
+						<fieldset>
 							<div class="control-group">
 								<label class="control-label control-label-min" for="judul-dokumen">Judul Dokumen</label>
 								<div class="controls controls-min">

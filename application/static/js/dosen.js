@@ -13,7 +13,6 @@ function tambahDokumen(){
 
 function closeForm(){
 	$('#form-tambah input, #form-tambah textarea').val('');
-	
 	$('#id-dokumen').val('');
 	$('#judul-dokumen').val('');
 	$('#pengarang-dokumen').val('');
