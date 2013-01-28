@@ -75,7 +75,7 @@
 					<fieldset>
 					<legend>Tambah Jurnal</legend>	
 							<input type="hidden" name="kategori_jurnal" id="kategori-jurnal" value="jurnal">
-							<input type="text" id="id-dokumen" name="id_dokumen" value="">
+							<input type="hidden" id="id-dokumen" name="id_dokumen" value="">
 							<div class="control-group">
 								<label class="control-label control-label-min" for="judul-jurnal">Judul</label>
 								<div class="controls controls-min">

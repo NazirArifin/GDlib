@@ -74,6 +74,7 @@
 					<fieldset>
 					<legend>Tambah Modul</legend>	
 							<input type="hidden" name="kategori_modul" id="kategori-modul" value="modul">
+							<input type="hidden" id="id-dokumen" name="id_dokumen" value="">
 							<div class="control-group">
 								<label class="control-label control-label-min" for="judul-Modul">Judul</label>
 								<div class="controls controls-min">

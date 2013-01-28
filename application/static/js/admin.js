@@ -237,8 +237,52 @@ function tambahBuku(){
 	
 }
 
+function editDokumenBuku(object,id){
+	var $form = $('#form-tambah');
+	$.ajax({
+		url: '/admin/buku/data/' + id,
+		dataType: 'json',
+		beforeSend: function(){
+		},
+		success: function(o){
+			$('#form-tambah').attr('action', '/admin/buku/update');
+			$('#form-tambah').show('blind', {} , 1500);
+			$('#id-dokumen').val(o[0].ID_DOKUMEN);
+			$('#judul-buku').val(o[0].JUDUL_DOKUMEN);
+			$('#pengarang-buku').val(o[0].PENGARANG_DOKUMEN);
+			$('#prolog-buku').val(o[0].PROLOG_DOKUMEN);
+			$('#tahun-penerbitan-buku').val(o[0].TAHUN_PENERBITAN_DOKUMEN);
+			$('#kata-kunci-buku').val(o[0].KATA_KUNCI_DOKUMEN);
+			//window.location = "/admin/edit_dokumen";
+	}
+	});
+
+}
+
 //Modul
 function tambahModul(){
 	$('#form-tambah').attr('action', '/admin/modul/add').show('blind', {} , 2500);
 	
+}
+
+function editDokumenModul(object,id){
+	var $form = $('#form-tambah');
+	$.ajax({
+		url: '/admin/modul/data/' + id,
+		dataType: 'json',
+		beforeSend: function(){
+		},
+		success: function(o){
+			$('#form-tambah').attr('action', '/admin/modul/update');
+			$('#form-tambah').show('blind', {} , 1500);
+			$('#id-dokumen').val(o[0].ID_DOKUMEN);
+			$('#judul-modul').val(o[0].JUDUL_DOKUMEN);
+			$('#pengarang-modul').val(o[0].PENGARANG_DOKUMEN);
+			$('#prolog-modul').val(o[0].PROLOG_DOKUMEN);
+			$('#tahun-penerbitan-modul').val(o[0].TAHUN_PENERBITAN_DOKUMEN);
+			$('#kata-kunci-modul').val(o[0].KATA_KUNCI_DOKUMEN);
+			//window.location = "/admin/edit_dokumen";
+		}
+	});
+
 }

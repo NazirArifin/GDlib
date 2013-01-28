@@ -279,6 +279,18 @@ class Admin extends CI_Controller {
 					$this->admin_model->insertBuku($namafile,$namafoto,$ekstensi);
 					header('location:/admin/buku');
 				break;
+			case 'data':
+					$pilih = $this->admin_model->pilihIdDokumen($extra);
+					echo json_encode($pilih);
+					return;
+				break;
+			case 'update':
+				$id = $this->input->post('id_dokumen');
+				if ( ! empty($id)){
+					$this->admin_model->editDokumenBuku($id);
+					echo '{ "error": 0, "success": 1 }';
+				}
+				break;
 			default:
 			$this->load->view('admin/buku/index',array('controller' => $this));
 			jsloc::show();
@@ -368,6 +380,18 @@ class Admin extends CI_Controller {
 					}
 					$this->admin_model->insertModul($namafile,$namafoto,$ekstensi);
 					header('location:/admin/modul');
+				break;
+			case 'data':
+					$pilih = $this->admin_model->pilihIdDokumen($extra);
+					echo json_encode($pilih);
+					return;
+				break;
+			case 'update':
+				$id = $this->input->post('id_dokumen');
+				if ( ! empty($id)){
+					$this->admin_model->editDokumenModul($id);
+					echo '{ "error": 0, "success": 1 }';
+				}
 				break;
 			default:
 			$this->load->view('admin/modul/index',array('controller' => $this));

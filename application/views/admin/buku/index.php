@@ -75,6 +75,7 @@
 					<fieldset>
 					<legend>Tambah Buku</legend>	
 							<input type="hidden" name="kategori_buku" id="kategori-buku" value="buku">
+							<input type="hidden" id="id-dokumen" name="id_dokumen" value="">
 							<div class="control-group">
 								<label class="control-label control-label-min" for="judul-buku">Judul</label>
 								<div class="controls controls-min">

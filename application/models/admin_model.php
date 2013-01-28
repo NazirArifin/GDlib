@@ -334,6 +334,118 @@ class Admin_model extends CI_Model {
 		}
 	}
 
+	
+	public function editDokumenBuku($id){
+		$kategori=$this->input->post('kategori_buku');
+		switch ($kategori){
+			case 'jurnal':
+				$kategori='1';
+				break;
+			case 'buku':
+				$kategori='2';
+				break;
+			case 'modul':
+				$kategori='3';
+				break;
+			default:	
+				$kategori=$this->input->post('kategori_buku');
+		}
+		//upload buku file pdf
+					$this->load->library('upload');
+					$config['upload_path'] = './upload/' . $this->input->post('kategori_buku');
+					$config['allowed_types'] = 'pdf|doc|docx|xls|xlsx|ppt|pptx|txt';
+					$config['encrypt_name'] = TRUE;
+					//$config['max_width']  = '1024';
+					//$config['max_height']  = '768';       
+
+					$this->upload->initialize($config);
+		 
+					if ($this->upload->do_upload('file_buku'))
+					{
+						//--unngah file
+						$data = $this->upload->data();
+						//simpan db	
+						$namafile = './upload/'. $this->input->post('kategori_buku') . '/' . $data['file_name'];
+						//tipe file
+						$ekstensi= $data['file_ext'];
+								switch ($ekstensi){
+									case '.pdf':
+										$ekstensi='1';
+									break;
+									case '.doc':
+										$ekstensi='2';
+									case '.docx':
+										$ekstensi='2';
+									break;	
+									case '.xls':
+										$ekstensi='3';
+									case '.xlsx':
+										$ekstensi='3';
+									break;	
+									case '.ppt':
+										$ekstensi='4';
+									case '.pptx':
+										$ekstensi='4';
+									break;	
+									case '.txt':
+										$ekstensi='5';
+									break;	
+								default:	
+								$ekstensi= $data['file_ext'];
+								}
+										
+					}
+					else
+					{
+						echo $this->upload->display_errors();
+					}
+					
+					//upload buku file foto
+					$this->load->library('upload');
+					$config['upload_path']='./upload/' . $this->input->post('kategori_buku');
+					$config['allowed_types']='jpg|jpeg|png';
+					$config['encrypt_name']=TRUE;
+					$this->upload->initialize($config);
+					if($this->upload->do_upload('foto_buku'))
+					{
+						$data=$this->upload->data();
+						$namafoto='./upload/'. $this->input->post('kategori_buku') . '/' . $data['file_name'];
+						$ekstensi= $data['file_ext'];
+						switch ($ekstensi){
+									case '.jpg':
+										$ekstensi='6';
+									case '.jpeg':
+										$ekstensi='6';
+									case '.png':
+										$ekstensi='6';
+									break;	
+								default:	
+								$ekstensi= $data['file_ext'];
+								}
+					}
+					else
+					{
+						echo $this->upload->display_errors();
+					}
+		$update=array(
+			'ID_KATEGORI_DOKUMEN'=>$kategori,
+			'ID_JENIS_DOKUMEN'=>$ekstensi,
+			'ID_STATUS_DOKUMEN'=>'1',
+			'ID_USER'=>'9',
+			'JUDUL_DOKUMEN'=>$this->input->post('judul_buku'),
+			'PENGARANG_DOKUMEN'=>$this->input->post('pengarang_buku'),
+			'PROLOG_DOKUMEN'=>$this->input->post('prolog_buku'),
+			'TAHUN_PENERBITAN_DOKUMEN'=>$this->input->post('tahun_penerbitan_buku'),
+			'KATA_KUNCI_DOKUMEN'=>$this->input->post('kata_kunci_buku'),
+			'UKURAN_FILE_DOKUMEN'=>'100','RATE_DOKUMEN'=>'10',
+			'JUMLAH_DOWNLOAD_DOKUMEN'=>'9','JUMLAH_BACA_DOKUMEN'=>'10',
+			'FOTO_DOKUMEN'=>$namafoto,
+			'FILE_DOKUMEN'=>$namafile);
+			
+		$this->db->where('ID_DOKUMEN',$id);
+		$this->db->update('tb_dokumen',$update);
+		return true;
+	}
 // Modul
 	public function insertModul($namafile,$namafoto,$ekstensi)
 	{
@@ -377,5 +489,117 @@ class Admin_model extends CI_Model {
 		} else {
 			return $query->result();
 		}
+	}
+	
+	public function editDokumenModul($id){
+		$kategori=$this->input->post('kategori_modul');
+		switch ($kategori){
+			case 'jurnal':
+				$kategori='1';
+				break;
+			case 'buku':
+				$kategori='2';
+				break;
+			case 'modul':
+				$kategori='3';
+				break;
+			default:	
+				$kategori=$this->input->post('kategori_modul');
+		}
+		//upload buku file pdf
+					$this->load->library('upload');
+					$config['upload_path'] = './upload/' . $this->input->post('kategori_modul');
+					$config['allowed_types'] = 'pdf|doc|docx|xls|xlsx|ppt|pptx|txt';
+					$config['encrypt_name'] = TRUE;
+					//$config['max_width']  = '1024';
+					//$config['max_height']  = '768';       
+
+					$this->upload->initialize($config);
+		 
+					if ($this->upload->do_upload('file_modul'))
+					{
+						//--unngah file
+						$data = $this->upload->data();
+						//simpan db	
+						$namafile = './upload/'. $this->input->post('kategori_modul') . '/' . $data['file_name'];
+						//tipe file
+						$ekstensi= $data['file_ext'];
+								switch ($ekstensi){
+									case '.pdf':
+										$ekstensi='1';
+									break;
+									case '.doc':
+										$ekstensi='2';
+									case '.docx':
+										$ekstensi='2';
+									break;	
+									case '.xls':
+										$ekstensi='3';
+									case '.xlsx':
+										$ekstensi='3';
+									break;	
+									case '.ppt':
+										$ekstensi='4';
+									case '.pptx':
+										$ekstensi='4';
+									break;	
+									case '.txt':
+										$ekstensi='5';
+									break;	
+								default:	
+								$ekstensi= $data['file_ext'];
+								}
+										
+					}
+					else
+					{
+						echo $this->upload->display_errors();
+					}
+					
+					//upload modul file foto
+					$this->load->library('upload');
+					$config['upload_path']='./upload/' . $this->input->post('kategori_modul');
+					$config['allowed_types']='jpg|jpeg|png';
+					$config['encrypt_name']=TRUE;
+					$this->upload->initialize($config);
+					if($this->upload->do_upload('foto_modul'))
+					{
+						$data=$this->upload->data();
+						$namafoto='./upload/'. $this->input->post('kategori_modul') . '/' . $data['file_name'];
+						$ekstensi= $data['file_ext'];
+						switch ($ekstensi){
+									case '.jpg':
+										$ekstensi='6';
+									case '.jpeg':
+										$ekstensi='6';
+									case '.png':
+										$ekstensi='6';
+									break;	
+								default:	
+								$ekstensi= $data['file_ext'];
+								}
+					}
+					else
+					{
+						echo $this->upload->display_errors();
+					}
+		$update=array(
+			'ID_KATEGORI_DOKUMEN'=>$kategori,
+			'ID_JENIS_DOKUMEN'=>$ekstensi,
+			'ID_STATUS_DOKUMEN'=>'1',
+			'ID_USER'=>'9',
+			'JUDUL_DOKUMEN'=>$this->input->post('judul_modul'),
+			'PENGARANG_DOKUMEN'=>$this->input->post('pengarang_modul'),
+			'PROLOG_DOKUMEN'=>$this->input->post('prolog_modul'),
+			'TAHUN_PENERBITAN_DOKUMEN'=>$this->input->post('tahun_penerbitan_modul'),
+			'KATA_KUNCI_DOKUMEN'=>$this->input->post('kata_kunci_modul'),
+			'UKURAN_FILE_DOKUMEN'=>'100','RATE_DOKUMEN'=>'10',
+			'JUMLAH_DOWNLOAD_DOKUMEN'=>'9','JUMLAH_BACA_DOKUMEN'=>'10',
+			'FOTO_DOKUMEN'=>$namafoto,
+			'FILE_DOKUMEN'=>$namafile);
+			
+		$this->db->where('ID_DOKUMEN',$id);
+		$this->db->update('tb_dokumen',$update);
+		return true;
 	}
 }
