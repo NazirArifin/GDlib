@@ -198,9 +198,37 @@ function deleteUserMahasiswa(object, id){
 // DOKUMEN
 
 //jurnal
+//tambah
 function tambahJurnal(){
 	$('#form-tambah').attr('action', '/admin/jurnal/add').show('blind', {} , 2500);
 	
+}
+
+// edit jurnal
+
+function editDokumenJurnal(object,id){
+	var $form = $('#form-tambah');
+	$.ajax({
+		url: '/admin/jurnal/data/' + id,
+		dataType: 'json',
+		beforeSend: function(){
+			//alert(id);
+		},
+		success: function(o){
+		//alert(o);
+			//window.location = ("edit_dokumen");
+			$('#form-tambah').attr('action', '/admin/jurnal/update');
+			$('#form-tambah').show('blind', {} , 1500);
+			$('#id-dokumen').val(o[0].ID_DOKUMEN);
+			$('#judul-jurnal').val(o[0].JUDUL_DOKUMEN);
+			$('#pengarang-jurnal').val(o[0].PENGARANG_DOKUMEN);
+			$('#prolog-jurnal').val(o[0].PROLOG_DOKUMEN);
+			$('#tahun-penerbitan-jurnal').val(o[0].TAHUN_PENERBITAN_DOKUMEN);
+			$('#kata-kunci-jurnal').val(o[0].KATA_KUNCI_DOKUMEN);
+			//window.location = "/admin/edit_dokumen";
+	}
+	});
+
 }
 
 //buku

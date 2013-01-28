@@ -75,6 +75,7 @@
 					<fieldset>
 					<legend>Tambah Jurnal</legend>	
 							<input type="hidden" name="kategori_jurnal" id="kategori-jurnal" value="jurnal">
+							<input type="text" id="id-dokumen" name="id_dokumen" value="">
 							<div class="control-group">
 								<label class="control-label control-label-min" for="judul-jurnal">Judul</label>
 								<div class="controls controls-min">
@@ -143,7 +144,7 @@
 				?>
 				<div class="row-fluid data-user alert-info">
 					<div class="span4">
-						<a href="#image" class="thumbnail"><img src="/<?php echo $row->FOTO_DOKUMEN ?>" alt=""/></a>
+						<a href="#image" class="thumbnail"><img src="<?php echo $row->FOTO_DOKUMEN ?>" alt=""/></a>
 					</div>
 					<div class="span8">
 								<h2><?php echo $row->PENGARANG_DOKUMEN ?> </h2>

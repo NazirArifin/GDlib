@@ -44,55 +44,55 @@
 	<br>
 <div class="container-fluid" id="container">
 	<div class="row-fluid">
-		<div class="span6">
+		<div class="span6" id="cek">
 		</div>
 		<div class="span6">
 			<form class="form-horizontal" id="form-tambah" action="" method="POST" enctype="multipart/form-data">
 						<a href="#" class="btn btn-info btn-mini pull-right" onClick="return dclose()"><i class="icon-remove icon-white"></i></a>
 					<fieldset>
 					<legend>Tambah Jurnal</legend>	
-							<input type="hidden" name="kategori_jurnal" id="kategori-jurnal" value="jurnal">
+							<input type="hidden" name="kategori_dokumen" id="kategori-dokumen" value="jurnal">
 							<div class="control-group">
-								<label class="control-label control-label-min" for="judul-jurnal">Judul</label>
+								<label class="control-label control-label-min" for="judul-dokumen">Judul</label>
 								<div class="controls controls-min">
-									<input id="judul-jurnal" name="judul_jurnal" type="text" required="" placeholder="Judul Jurnal">
+									<input id="judul-dokumeni" name="judul_dokumen" type="text" required="" placeholder="Judul dokumen">
 								</div>
 							</div>
 							<div class="control-group">
-								<label class="control-label control-label-min" for="pengarang-jurnal">Pengarang</label>
+								<label class="control-label control-label-min" for="pengarang-dokumen">Pengarang</label>
 								<div class="controls controls-min">	
-									<input name="pengarang_jurnal" id="pengarang-jurnal" type="text" required="" placeholder="Pengarang Jurnal">
+									<input name="pengarang_dokumen" id="pengarang-dokumen" type="text" required="" placeholder="Pengarang dokumen">
 								</div>
 							</div>
 							<div class="control-group">
-								<label class="control-label control-label-min" for="prolog-jurnal">Prolog Jurnal</label>
+								<label class="control-label control-label-min" for="prolog-dokumen">Prolog Dokumen</label>
 								<div class="controls controls-min">	
-									<textarea rows="3" name="prolog_jurnal" id="prolog-jurnal"></textarea>
+									<textarea rows="3" name="prolog_dokumen" id="prolog-dokumen"></textarea>
 								</div>
 							</div>
 							<div class="control-group">
-								<label class="control-label control-label-min" for="tahun-penerbitan-jurnal">Tahun Penerbitan</label>
+								<label class="control-label control-label-min" for="tahun-penerbitan-dokumen">Tahun Penerbitan</label>
 								<div class="controls controls-min">	
-									<input name="tahun_penerbitan_jurnal" id="tahun-penerbitan-jurnal" type="text" required="" placeholder="Tahun Penerbitan">
+									<input name="tahun_penerbitan_dokumen" id="tahun-penerbitan-dokumen" type="text" required="" placeholder="Tahun Penerbitan">
 								</div>
 							</div>
 							
 							<div class="control-group">
-								<label class="control-label control-label-min" for="tahun-penerbitan-jurnal">File Jurnal</label>
+								<label class="control-label control-label-min" for="tahun-penerbitan-dokumen">File dokumen</label>
 								<div class="controls controls-min">	
-									<input name="file_jurnal" id="file-jurnal" type="file" required="" >
+									<input name="file_dokumen" id="file-dokumen" type="file" required="" >
 								</div>
 							</div>
 							<div class="control-group">
-								<label class="control-label control-label-min" for="foto-jurnal">Foto Jurnal</label>
+								<label class="control-label control-label-min" for="foto-dokumen">Foto dokumen</label>
 								<div class="controls controls-min">	
-									<input name="foto_jurnal" id="foto-jurnal" type="file" required="" >
+									<input name="foto_dokumen" id="foto-dokumen" type="file" required="" >
 								</div>
 							</div>
 							<div class="control-group">
-								<label class="control-label control-label-min" for="kata-kunci-jurnal">Kata Kunci Jurnal</label>
+								<label class="control-label control-label-min" for="kata-kunci-dokumen">Kata Kunci dokumen</label>
 								<div class="controls controls-min">	
-									<input name="kata_kunci_jurnal" id="kata-kunci-jurnal" type="text" required="" placeholder="Kata Kunci Jurnal">
+									<input name="kata_kunci_dokumen" id="kata-kunci-dokumen" type="text" required="" placeholder="Kata Kunci dokumen">
 								</div>
 							</div>
 							<div class="form-actions">

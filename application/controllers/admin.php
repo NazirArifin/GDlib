@@ -156,7 +156,7 @@ class Admin extends CI_Controller {
 					if($this->upload->do_upload('foto_jurnal'))
 					{
 						$data=$this->upload->data();
-						$namafoto='./upload/'. $this->input->post('kategori_jurnal') . '/' . $data['file_name'];
+						$namafoto='/upload/'. $this->input->post('kategori_jurnal') . '/' . $data['file_name'];
 						$ekstensi= $data['file_ext'];
 						switch ($ekstensi){
 									case '.jpg':
@@ -176,6 +176,18 @@ class Admin extends CI_Controller {
 					}
 					$this->admin_model->insertJurnal($namafile,$namafoto,$ekstensi);
 					header('location:/admin/jurnal');
+				break;
+			case 'data':
+					$pilih = $this->admin_model->pilihIdDokumen($extra);
+					echo json_encode($pilih);
+					return;
+				break;
+			case 'update':
+				$id = $this->input->post('id_dokumen');
+				if ( ! empty($id)){
+					$this->admin_model->editDokumenJurnal($id);
+					echo '{ "error": 0, "success": 1 }';
+				}
 				break;
 			default:
 			$this->load->view('admin/jurnal/index',array('controller' => $this));
