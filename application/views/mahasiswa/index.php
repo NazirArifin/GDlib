@@ -101,7 +101,6 @@
 		<div class="tab-pane active" id="jurnal">
 		<div class="divider"></div>
 			<?php
-				
 				$jurnal=$this->mahasiswa_model->tampilJurnal();
 				if($jurnal==0):
 				
@@ -109,11 +108,18 @@
 				foreach($jurnal as $row ):
 			?>
 			<div class="well span5">
-				
 				<a href="#Doc"><img src="/upload/jurnal/<?php echo $row->FOTO_DOKUMEN ?>" class="thumbnail image-list"></a>
 				<h5><?php echo $row->JUDUL_DOKUMEN ?></h5>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
 				<div class="btn-group">
+					<?php 
+						
+						$data = file_get_contents(base_url() ."/upload/jurnal/.<?php echo $row->FILE_DOKUMEN ?>");
+						//$a=  $row->FILE_DOKUMEN ;
+						force_download($a,$data);
+						var_dump($data);
+						?>
+						<a href=""<?php echo base_url()?>" class="btn btn-mini btn-danger"><i class="icon-download icon-white"></i></a>
 					<button class="btn btn-mini btn-primary"><i class="icon-download icon-white"></i> Download</button>
 					<button class="btn btn-mini btn-warning"><i class="icon-share-alt icon-white"></i> Baca</button>
 				</div>
