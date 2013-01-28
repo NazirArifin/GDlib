@@ -287,6 +287,7 @@
 						<fieldset>
 							
 							<input type="hidden" name="kategori_dokumen" id="kategori-dokumen" value="jurnal">
+							<input id="id-dokumen" name="id_dokumen" type="hidden" value="">
 							<legend id="form-legend"></legend>	
 							<div class="control-group">
 								<label class="control-label control-label-min" for="judul-dokumen">Judul Dokumen</label>

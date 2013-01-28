@@ -13,7 +13,8 @@ function tambahDokumen(){
 
 function closeForm(){
 	$('#form-tambah input, #form-tambah textarea').val('');
-	/*
+	
+	$('#id-dokumen').val('');
 	$('#judul-dokumen').val('');
 	$('#pengarang-dokumen').val('');
 	$('#prolog-dokumen').val('');
@@ -22,7 +23,7 @@ function closeForm(){
 	$('#foto-dokumen').val('');
 	$('#kata-kunci-dokumen').val('');
 	$('#pengarang-dokumen').val('');
-	*/
+	
 	$('#form-section').hide('blind', {}, 500, function() {
 		$('#data-section').show('blind', {}, 500);
 	});	
@@ -30,13 +31,12 @@ function closeForm(){
 
 function editDokumen(object,id){
 	//console.log('ha');
-	
+	$('#form-legend').text($('#kategori-dokumen').val().toUpperCase());
 	var $form = $('#form-tambah');
 	$.ajax({
 		url: '/dosen/dokumen/data/' + id,
 		dataType: 'json',
 		beforeSend: function(){
-			//alert(id);
 		},
 		success: function(o){
 			//console.log(o);
@@ -44,6 +44,7 @@ function editDokumen(object,id){
 			$('#data-section').hide('blind', {} , 500);
 			$('#form-section').show('blind',{},500);
 			$('#form-tambah').show('blind', {} , 1500);
+			$('#id-dokumen').val(o[0].ID_DOKUMEN);
 			$('#judul-dokumen').val(o[0].JUDUL_DOKUMEN);
 			$('#pengarang-dokumen').val(o[0].PENGARANG_DOKUMEN);
 			$('#prolog-dokumen').val(o[0].PROLOG_DOKUMEN);
@@ -100,6 +101,7 @@ function deleteDokumen(object, id){
 				$form.find('input').val('');
 				alertify.success('Data Sudah Terhapus');
 				$('#data-section').show('blind', {} , 1500);
+				header('location:/dosen');	
 			}
 			else {
 				alertify.error('Data Gagal dihapus');

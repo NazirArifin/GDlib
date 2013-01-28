@@ -93,12 +93,8 @@ class Dosen extends CI_Controller {
 				echo json_encode($pilih);
 				return;
 			case 'update':
-				$id_dokumen=$this->input->post('id_dokumen');
-				if( ! empty($id_dokumen)){
-					$this->dosen_model->editDokumen($extra);
-					echo '{"error":0,"success":1}';
-				}
-				$this->load->library('upload');
+				//upload dokumen
+					$this->load->library('upload');
 					$config['upload_path'] = './upload/' . $this->input->post('kategori_dokumen');
 					$config['allowed_types'] = 'pdf|doc|docx|xls|xlsx|ppt|pptx|txt';
 					$config['encrypt_name'] = TRUE;
@@ -109,7 +105,7 @@ class Dosen extends CI_Controller {
 					{
 						//--unngah file
 						$data = $this->upload->data();
-						//simpan db	
+						//simpan nama file
 						$namafile =$data['file_name'];
 						//tipe file
 						$ekstensi= $data['file_ext'];
@@ -162,12 +158,18 @@ class Dosen extends CI_Controller {
 					{
 						echo $this->upload->display_errors();
 					}
-					$this->dosen_model->editDokumen($namafile,$namafoto,$ekstensi);
+				//	$this->dosen_model->editDokumen($namafile,$namafoto,$ekstensi);
+				$id = $this->input->post('id_dokumen');
+				if ( ! empty($id)){
+					$this->dosen_model->editDokumen($id);
+					echo '{ "error": 0, "success": 1 }';
+				}
 				break;
 			case 'delete';
 				$this->dosen_model->deleteDokumen($extra);
-				echo '{ "error": 0, "success": 1 }';	
+				echo '{ "error": 0, "success": 1 }';
 				return;
+				
 			default:
 			$this->load->view('dosen/index',array('controller' => $this));
 			jsloc::show();
