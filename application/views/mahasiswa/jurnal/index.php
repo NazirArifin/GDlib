@@ -38,7 +38,7 @@
 				<a href="/"><img src="/images/gd.png" id="logo" /></a>
 				<ul class="nav pull-right nav-pills">
 					<li><a href="/admin"><img src="/images/glyphicons/png/glyphicons_020_home.png" alt=""> Dashboard</a>
-					<li><a href="#">Profil</a>
+					<li><a href="#"><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Profil</a>
 				  
 				</ul>
 			</div>
@@ -71,12 +71,8 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.. <a href="http://geedmo.com.ar/codecanyon/elemento/blog-single.html">Read more ? </a></p>
               </div>
               <ul class="post-meta">
-                <li>
-                  <i class="icon-user"></i> <a href="">Dohn Joe</a>
-                </li>
-                <li>
-                  <i class="icon-comment"></i> <a href="">2 Comments</a>
-                </li>
+                <li><a href=""><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Dohn Joe</a></li>
+                <li><a href=""> <img src="/images/glyphicons/png/glyphicons_245_chat.png" alt=""> 2 Comments</a></li>
               </ul>
             </article>
     
@@ -91,13 +87,9 @@
 					<img class="media-object pull-left" alt="100x100" style="width: 100px; height: 100px;" src="/images/rud.jpg">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.. <a href="">Read more ? </a></p>
 				</div>
-              <ul class="post-meta">
-                <li>
-                  <i class="icon-user"></i> <a href="">Dohn Joe</a>
-                </li>
-                <li>
-                  <i class="icon-comment"></i> <a href="">2 Comments</a>
-                </li>
+             <ul class="post-meta">
+                <li><a href=""><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Dohn Joe</a></li>
+                <li><a href=""> <img src="/images/glyphicons/png/glyphicons_245_chat.png" alt=""> 2 Comments</a></li>
               </ul>
             </article>
 			<article class="post">
@@ -112,12 +104,8 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.. <a href="">Read more ? </a></p>
 				</div>
               <ul class="post-meta">
-                <li>
-                  <i class="icon-user"></i> <a href="">Dohn Joe</a>
-                </li>
-                <li>
-                  <i class="icon-comment"></i> <a href="">2 Comments</a>
-                </li>
+                <li><a href=""><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Dohn Joe</a></li>
+                <li><a href=""> <img src="/images/glyphicons/png/glyphicons_245_chat.png" alt=""> 2 Comments</a></li>
               </ul>
             </article>
 
@@ -138,89 +126,69 @@
 			<h3 class="media-heading">Populer</h3>
 		</div>
 			<div class='testimonial'>
+				<h4>Judul</h4>
 				<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... </blockquote>
 				<p class='testimonial-footer'>
 					<img style="width:32px; height:32px;" src="/images/rud.jpg" >
 					<b>John Doe</b> — designer
 				</p>
 			</div>
-			<div class="media">
-				<a class="pull-left" href="#">
-					<img src="/images/rud.jpg" class="media-object populer-image thumbnail" >
-				</a>
-					<div class="media-body">
-						<h5 class="media-heading">Jurnal</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... <a href="#" class="badge badge-info">read more</a></p>
-
-					</div>
+			<hr>
+			<div class='testimonial'>
+				<h4>Judul</h4>
+				<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... </blockquote>
+				<p class='testimonial-footer'>
+					<img style="width:32px; height:32px;" src="/images/rud.jpg" >
+					<b>John Doe</b> — designer
+				</p>
 			</div>
-			<div class="media">
-				<a class="pull-left" href="#">
-					<img src="/images/rud.jpg" class="media-object populer-image thumbnail" >
-				</a>
-					<div class="media-body">
-						<h5 class="media-heading">Jurnal</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... <a href="#" class="badge badge-info">read more</a></p>
-
-					</div>
-			</div>
-			<div class="media">
-				<a class="pull-left" href="#">
-					<img src="/images/rud.jpg" class="media-object populer-image thumbnail" >
-				</a>
-					<div class="media-body">
-						<h5 class="media-heading">Jurnal</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... <a href="#" class="badge badge-info">read more</a></p>
-
-					</div>
-			</div>
-			
+			<div class='testimonial'>
+				<h4>Judul</h4>
+				<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... </blockquote>
+				<p class='testimonial-footer'>
+					<img style="width:32px; height:32px;" src="/images/rud.jpg" >
+					<b>John Doe</b> — designer
+				</p>
+			</div>					
       </div>
 	  
-			<div class="well">
-				<div class="alert alert-success">
-					<h3 class="media-heading">Terbaru</h3>
-				</div>
-				<div class="media">
-					<a class="pull-left" href="#">
-						<img src="/images/rud.jpg" class="media-object populer-image thumbnail" >
-					</a>
-						<div class="media-body">
-							<h5 class="media-heading">Jurnal</h5>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... <a href="#" class="badge badge-info">read more</a></p>
-
-						</div>
-				</div>
-			<div class="media">
-				<a class="pull-left" href="#">
-					<img src="/images/rud.jpg" class="media-object populer-image thumbnail" >
-				</a>
-					<div class="media-body">
-						<h5 class="media-heading">Jurnal</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... <a href="#" class="badge badge-info">read more</a></p>
-
-					</div>
+		<div class="well">
+			<div class="alert alert-success">
+				<h3 class="media-heading">Terbaru</h3>
 			</div>
-			<div class="media">
-				<a class="pull-left" href="#">
-					<img src="/images/rud.jpg" class="media-object populer-image thumbnail" >
-				</a>
-					<div class="media-body">
-						<h5 class="media-heading">Jurnal</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... <a href="#" class="badge badge-info">read more</a></p>
-
-					</div>
+			<div class='testimonial'>
+				<h4>Judul</h4>
+				<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... </blockquote>
+				<p class='testimonial-footer'>
+					<img style="width:32px; height:32px;" src="/images/rud.jpg" >
+					<b>John Doe</b> — designer
+				</p>
 			</div>
-			
-      </div>
+			<div class='testimonial'>
+				<h4>Judul</h4>
+				<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... </blockquote>
+				<p class='testimonial-footer'>
+					<img style="width:32px; height:32px;" src="/images/rud.jpg" >
+					<b>John Doe</b> — designer
+				</p>
+			</div>
+			<div class='testimonial'>
+				<h4>Judul</h4>
+				<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... </blockquote>
+				<p class='testimonial-footer'>
+					<img style="width:32px; height:32px;" src="/images/rud.jpg" >
+					<b>John Doe</b> — designer
+				</p>
+			</div>				
+		</div>
     </div>
   </div>
-  
+
   	<footer class="row-fluid footer">
-		<div class="span12">
+		<div class="well span12">
 			<hr>
-			<img src="/images/favicon.png" class="pull-left" />
-			<span>Created by: <a href="/humans.txt" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span>
+			<center><img src="/images/favicon.png" ><br>
+			<span>Created by: <a href="/humans.txt" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span></center>
 		</div>
 	</footer>
 </div>

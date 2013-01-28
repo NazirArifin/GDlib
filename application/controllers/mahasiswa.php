@@ -19,10 +19,17 @@ class Mahasiswa extends CI_Controller {
 	}
 	
 	
-	public function jurnal()
+	public function jurnal($param = '', $extra = '')
 	{
-		$this->load->view('mahasiswa/jurnal/index',array('controller' => $this));
-		jsloc::show();
+		switch ($param) {
+			case 'detail':
+				$this->load->view('mahasiswa/jurnal/detail',array('controller' => $this));
+				jsloc::show();
+			break;
+			default:
+				$this->load->view('mahasiswa/jurnal/index',array('controller' => $this));
+				jsloc::show();
+		}
 	}
 
 	public function buku()

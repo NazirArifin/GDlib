@@ -114,10 +114,10 @@
 				<div class="btn-group">
 					<?php 
 						
-						$data = file_get_contents(base_url() ."/upload/jurnal/.<?php echo $row->FILE_DOKUMEN ?>");
-						//$a=  $row->FILE_DOKUMEN ;
+						$data = file_get_contents(base_url() ./upload/jurnal/.<?php echo $row->FILE_DOKUMEN ?>);
+						$a=  $row->FILE_DOKUMEN ;
 						force_download($a,$data);
-						var_dump($data);
+						var_dump(a);
 						?>
 						<a href=""<?php echo base_url()?>" class="btn btn-mini btn-danger"><i class="icon-download icon-white"></i></a>
 					<button class="btn btn-mini btn-primary"><i class="icon-download icon-white"></i> Download</button>
