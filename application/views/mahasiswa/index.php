@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="/third_party/bootstrap/css/elemento.css" />
 		<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
 		<link rel="stylesheet" href="/static/css/main.css" />
+		<link rel="stylesheet" href="/static/css/style.css" />
 			
 		<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
 		<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
@@ -21,27 +22,7 @@
 			height: 31px;
 			margin-top: 0px;
 		}
-		#cari{
-			width:100px;
-			transition:All 1s ease-in;
-			-webkit-transition:All 1s ease-in;
-			-moz-transition:All 1s ease-in;
-			-o-transition:All 1s ease-in;
-		}
-		#cari:focus{
-			width:500px;
-			transition:All 0.5s ease-in;
-			-webkit-transition:All 0.5s ease-in;
-			-moz-transition:All 0.5s ease-in;
-			-o-transition:All 0.5s ease-in;
-			}
-
-		.image-list{
-			width:105px;
-			height:97px;
-			float: left;
-			margin: 0px 15px 10px 0px;
-		}
+		
 
 	</style>
 </head>
@@ -337,7 +318,7 @@
   	<footer class="row-fluid footer">
 		<div class="well span12">
 			<hr>
-			<center><img src="/images/favicon.png" ><br>
+			<center><a href="#"><img src="/images/favicon.png" id="gd"></a><br>
 			<span>Created by: <a href="/humans.txt" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span></center>
 		</div>
 	</footer>

@@ -121,7 +121,7 @@
   	<footer class="row-fluid footer">
 		<div class="well span12">
 			<hr>
-			<center><img src="/images/favicon.png" ><br>
+			<center><a href="#"><img src="/images/favicon.png" id="gd"></a><br>
 			<span>Created by: <a href="/humans.txt" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span></center>
 		</div>
 	</footer>

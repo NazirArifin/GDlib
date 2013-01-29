@@ -23,20 +23,6 @@
 			float: left;
 			margin: 0px 15px 10px 0px;
 		}
-		#cari{
-			width:100px;
-			transition:All 1s ease-in;
-			-webkit-transition:All 1s ease-in;
-			-moz-transition:All 1s ease-in;
-			-o-transition:All 1s ease-in;
-		}
-		#cari:focus{
-			width:500px;
-			transition:All 0.5s ease-in;
-			-webkit-transition:All 0.5s ease-in;
-			-moz-transition:All 0.5s ease-in;
-			-o-transition:All 0.5s ease-in;
-			}
 	</style>
 </head>
 <body>
@@ -74,7 +60,7 @@
 			<div class="navbar navbar-inner">
 				<a class="brand">Jurnal</a>
 				<form class="navbar-search pull-right">
-				  <input type="text" class="search-query" placeholder="Search" id="cari">
+				  <input type="text" class="search-query" placeholder="Cari jurnal disini" id="cari">
 				</form>
 			</div>
 		<br>
@@ -87,7 +73,7 @@
               </div>
               <div class="post-entry clearfix">
                 <img class="media-object pull-left" data-src="holder.js/100x100" alt="100x100" style="width: 100px; height: 100px;" src="/images/rud.jpg">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.. <a href="http://geedmo.com.ar/codecanyon/elemento/blog-single.html">Read more ? </a></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.. <a href="http://gdlib.com/mahasiswa/jurnal/detail">Read more ? </a></p>
               </div>
               <ul class="post-meta">
                 <li><a href=""><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Rudiec Nuada</a></li>
@@ -104,7 +90,7 @@
 				</div>
 				<div class="post-entry clearfix">
 					<img class="media-object pull-left" alt="100x100" style="width: 100px; height: 100px;" src="/images/rud.jpg">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.. <a href="">Read more ? </a></p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.. <a href="http://gdlib.com/mahasiswa/jurnal/detail">Read more ? </a></p>
 				</div>
              <ul class="post-meta">
                 <li><a href=""><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Rudiec Nuada</a></li>
@@ -120,7 +106,7 @@
 				</div>
 				<div class="post-entry clearfix">
 					<img class="media-object pull-left" alt="100x100" style="width: 100px; height: 100px;" src="/images/rud.jpg">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.. <a href="">Read more ? </a></p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.. <a href="http://gdlib.com/mahasiswa/jurnal/detail">Read more ? </a></p>
 				</div>
               <ul class="post-meta">
                 <li><a href=""><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Rudiec Nuada</a></li>
@@ -220,7 +206,7 @@
   	<footer class="row-fluid footer">
 		<div class="well span12">
 			<hr>
-			<center><img src="/images/favicon.png" ><br>
+			<center><a href="#"><img src="/images/favicon.png" id="gd"></a><br>
 			<span>Created by: <a href="/humans.txt" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span></center>
 		</div>
 	</footer>
