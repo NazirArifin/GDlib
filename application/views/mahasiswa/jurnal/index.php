@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-		<title>GDlib | Mahasiswa</title>
+		<title>Mahasiswa | Jurnal</title>
 		<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
 		<link rel="stylesheet" href="/third_party/bootstrap/css/elemento.css" />
@@ -64,16 +64,21 @@
 	<h1 style="text-align:center;" class="bolder big">Jurnal</h1>
 </div>
 <div class="container-fluid">
-  <div class="row-fluid">
-    <div class="well span9">
-		<div class="navbar navbar-inner">
+	
+	<div class="row-fluid">
+		<div class="well span8">
+			<ul class="breadcrumb">
+				<li><a href="http://gdlib.com/mahasiswa">Mahasiswa</a> <span class="divider">/</span></li>
+				<li class="active">Jurnal</li>
+			</ul>   
+			<div class="navbar navbar-inner">
 				<a class="brand">Jurnal</a>
 				<form class="navbar-search pull-right">
 				  <input type="text" class="search-query" placeholder="Search" id="cari">
 				</form>
-		</div>
+			</div>
 		<br>
-		<article class="post">
+			<article class="post">
               <div class="post-header">
                 <h2 class="post-title"><a href="">Jurnalku yg pertama</a></h2>
                 <div class="post-date">
@@ -85,7 +90,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.. <a href="http://geedmo.com.ar/codecanyon/elemento/blog-single.html">Read more ? </a></p>
               </div>
               <ul class="post-meta">
-                <li><a href=""><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Dohn Joe</a></li>
+                <li><a href=""><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Rudiec Nuada</a></li>
                 <li><a href=""> <img src="/images/glyphicons/png/glyphicons_245_chat.png" alt=""> 2 Comments</a></li>
               </ul>
             </article>
@@ -102,7 +107,7 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.. <a href="">Read more ? </a></p>
 				</div>
              <ul class="post-meta">
-                <li><a href=""><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Dohn Joe</a></li>
+                <li><a href=""><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Rudiec Nuada</a></li>
                 <li><a href=""> <img src="/images/glyphicons/png/glyphicons_245_chat.png" alt=""> 2 Comments</a></li>
               </ul>
             </article>
@@ -118,7 +123,7 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.. <a href="">Read more ? </a></p>
 				</div>
               <ul class="post-meta">
-                <li><a href=""><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Dohn Joe</a></li>
+                <li><a href=""><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Rudiec Nuada</a></li>
                 <li><a href=""> <img src="/images/glyphicons/png/glyphicons_245_chat.png" alt=""> 2 Comments</a></li>
               </ul>
             </article>
@@ -134,70 +139,84 @@
 				</ul>
 			</div>
     </div>
-    <div class="well span3">
-      <div class="well">
-		<div class="alert alert-info">
-			<h3 class="media-heading">Populer</h3>
-		</div>
-			<div class='testimonial'>
-				<h4>Judul</h4>
-				<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... </blockquote>
-				<p class='testimonial-footer'>
-					<img style="width:32px; height:32px;" src="/images/rud.jpg" >
-					<b>John Doe</b> — designer
-				</p>
-			</div>
-			<hr>
-			<div class='testimonial'>
-				<h4>Judul</h4>
-				<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... </blockquote>
-				<p class='testimonial-footer'>
-					<img style="width:32px; height:32px;" src="/images/rud.jpg" >
-					<b>John Doe</b> — designer
-				</p>
-			</div>
-			<div class='testimonial'>
-				<h4>Judul</h4>
-				<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... </blockquote>
-				<p class='testimonial-footer'>
-					<img style="width:32px; height:32px;" src="/images/rud.jpg" >
-					<b>John Doe</b> — designer
-				</p>
-			</div>					
-      </div>
-	  
-		<div class="well">
-			<div class="alert alert-success">
-				<h3 class="media-heading">Terbaru</h3>
-			</div>
-			<div class='testimonial'>
-				<h4>Judul</h4>
-				<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... </blockquote>
-				<p class='testimonial-footer'>
-					<img style="width:32px; height:32px;" src="/images/rud.jpg" >
-					<b>John Doe</b> — designer
-				</p>
-			</div>
-			<div class='testimonial'>
-				<h4>Judul</h4>
-				<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... </blockquote>
-				<p class='testimonial-footer'>
-					<img style="width:32px; height:32px;" src="/images/rud.jpg" >
-					<b>John Doe</b> — designer
-				</p>
-			</div>
-			<div class='testimonial'>
-				<h4>Judul</h4>
-				<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... </blockquote>
-				<p class='testimonial-footer'>
-					<img style="width:32px; height:32px;" src="/images/rud.jpg" >
-					<b>John Doe</b> — designer
-				</p>
-			</div>				
-		</div>
-    </div>
-  </div>
-
+	
+    <div class="well span4">
+		<section class="blog-widget">
+              <div class="tabbable">
+				<!--NAVIGASI TAB-->
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#tabpopuler" data-toggle="tab">Pos Populer</a></li>
+                  <li><a href="#tabterbaru" data-toggle="tab">Post Terbaru</a></li>
+                </ul><!--END NAVIGASI TAB-->
+				<!--TAB CONTENT-->
+                <div class="tab-content">
+					<!--TAB CONTENT YG PERTAMA-->
+					<div class="tab-pane active" id="tabpopuler">
+                      <div class="alert alert-info">
+						<h2 class="media-heading">Populer</h2>
+					</div>
+						<div class='testimonial'>
+							<h4>Judul</h4>
+							<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... </blockquote>
+							<p class='testimonial-footer'>
+								<img style="width:32px; height:32px;" src="/images/rud.jpg" >
+								<b>John Doe</b> — designer
+							</p>
+						</div>
+						<hr>
+						<div class='testimonial'>
+							<h4>Judul</h4>
+							<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... </blockquote>
+							<p class='testimonial-footer'>
+								<img style="width:32px; height:32px;" src="/images/rud.jpg" >
+								<b>John Doe</b> — designer
+							</p>
+						</div>
+						<div class='testimonial'>
+							<h4>Judul</h4>
+							<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... </blockquote>
+							<p class='testimonial-footer'>
+								<img style="width:32px; height:32px;" src="/images/rud.jpg" >
+								<b>John Doe</b> — designer
+							</p>
+						</div>					
+                  </div><!--KONTENT PERTAMA-->
+				  <!--TAB CONTENT YG KEDUA-->
+                  <div class="tab-pane" id="tabterbaru">
+						<div class="alert alert-info">
+							<h2 class="media-heading">Terbaru</h2>
+							</div>
+								<div class='testimonial'>
+									<h4>Judul</h4>
+									<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... </blockquote>
+									<p class='testimonial-footer'>
+										<img style="width:32px; height:32px;" src="/images/rud.jpg" >
+										<b>John Doe</b> — designer
+									</p>
+								</div>
+								<div class='testimonial'>
+									<h4>Judul</h4>
+									<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... </blockquote>
+									<p class='testimonial-footer'>
+										<img style="width:32px; height:32px;" src="/images/rud.jpg" >
+										<b>John Doe</b> — designer
+									</p>
+								</div>
+								<div class='testimonial'>
+									<h4>Judul</h4>
+									<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... </blockquote>
+									<p class='testimonial-footer'>
+										<img style="width:32px; height:32px;" src="/images/rud.jpg" >
+										<b>John Doe</b> — designer
+									</p>
+								</div>				
+							</div>
+						</div>
+					</div>
+                </div>
+            </div>
+         </section>
+		 <!--BAGIAN FOOTER-->
   	<footer class="row-fluid footer">
 		<div class="well span12">
 			<hr>

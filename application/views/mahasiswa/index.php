@@ -6,7 +6,7 @@
 		<title>GDlib | Mahasiswa</title>
 		<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
-		<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="/third_party/bootstrap/css/elemento.css" />
 		<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
 		<link rel="stylesheet" href="/static/css/main.css" />
 			
@@ -21,6 +21,21 @@
 			height: 31px;
 			margin-top: 0px;
 		}
+		#cari{
+			width:100px;
+			transition:All 1s ease-in;
+			-webkit-transition:All 1s ease-in;
+			-moz-transition:All 1s ease-in;
+			-o-transition:All 1s ease-in;
+		}
+		#cari:focus{
+			width:500px;
+			transition:All 0.5s ease-in;
+			-webkit-transition:All 0.5s ease-in;
+			-moz-transition:All 0.5s ease-in;
+			-o-transition:All 0.5s ease-in;
+			}
+
 		.image-list{
 			width:105px;
 			height:97px;
@@ -41,16 +56,17 @@
 				</button>
 				<a href="/"><img src="/images/gd.png" id="logo" /></a>
 				<ul class="nav pull-right nav-pills">
-					<li><a href="/admin"><i class="icon-home"></i> Dashboard</a></li>
-					<li><a href="#"><i class="icon-user"></i> Profil</a></li>
+					<li><a href="/admin"><img src="/images/glyphicons/png/glyphicons_020_home.png" alt=""> Dashboard</a>
+					<li><a href="/userprofile"><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Profil</a>
 				  
 				</ul>
 			</div>
 		</div>
 </div>
-<br />
-<br />
-<br />
+<br>
+<br>
+<br>
+<br>
 <div class="container-fluid">
 	<div class="row-fluid">
 		<div class=" well span3">
@@ -65,30 +81,33 @@
 				</span>
 			</div>
 			<div class="sidebar-nav">
-					<ul class="nav nav-list">
-						<div class="alert alert-info">
-							<li class="nav-header">Dokumen</li>
-							<li><a href="/mahasiswa/jurnal" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Jurnal</a></li>
+			<div class="well">
+				<section class="blog-widget">
+					<ul class="nav nav-pills nav-stacked">
+					  <li><a href="/mahasiswa/jurnal">Jurnal</a></li>
 							<li class="divider"></li>
-							<li><a href="/mahasiswa/buku" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Buku</a></li>
+							<li><a href="/mahasiswa/buku"> Buku</a></li>
 							<li class="divider"></li>
-							<li><a href="/mahasiswa/modul" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Modul</a></li>
+							<li><a href="/mahasiswa/modul"> Modul</a></li>
 							<li class="divider"></li>
-							<li><a href="/mahasiswa/buletin" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Buletin</a></li>
+							<li><a href="/mahasiswa/buletin"> Buletin</a></li>
 							<li class="divider"></li>
-						</div>
 					</ul>
+				</section>
+			</div>
 			</div>
 		</div>
 <div class="well span9">
 	<div class="row-fluid">
-			<div class="">
-				<div class="navbar navbar-inner navbar-inverse">
-					<a class="brand">Dokumen</a>
-						<form class="navbar-search pull-right">
-							<input type="text" class="search-query" placeholder="Cari Dokumen">
-						</form>
-				</div>
+		<ul class="breadcrumb">
+			<li class="active">Mahasiswa </li>
+		</ul>   
+			<div class="navbar navbar-inner">
+				<a class="brand">Dokumen</a>
+					<form class="navbar-search pull-right">
+						<input type="text" class="search-query" placeholder="Cari Dokumen" id="cari">
+					</form>
+			</div>
 			<ul class="nav nav-tabs" id="tab-dok">
 				<li class="active"><a href="#jurnal">Jurnal</a></li>
 				<li><a href="#buku">Buku</a></li>
@@ -112,16 +131,9 @@
 				<h5><?php echo $row->JUDUL_DOKUMEN ?></h5>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
 				<div class="btn-group">
-					<?php 
-						
-						$data = file_get_contents(base_url() ./upload/jurnal/.<?php echo $row->FILE_DOKUMEN ?>);
-						$a=  $row->FILE_DOKUMEN ;
-						force_download($a,$data);
-						var_dump(a);
-						?>
-						<a href=""<?php echo base_url()?>" class="btn btn-mini btn-danger"><i class="icon-download icon-white"></i></a>
-					<button class="btn btn-mini btn-primary"><i class="icon-download icon-white"></i> Download</button>
-					<button class="btn btn-mini btn-warning"><i class="icon-share-alt icon-white"></i> Baca</button>
+					
+					<button class="btn btn-mini  download-mahasiswa"><img src="/images/glyphicons/png/glyphicons_200_download.png" alt=""></button>
+					<button class="btn btn-mini  baca-mahasiswa"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>
 				</div>
 			</div>
 			<?php
@@ -151,8 +163,8 @@
 				<h5>Buku </h5>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
 				<div class="btn-group">
-					<button class="btn btn-mini btn-primary"><i class="icon-download icon-white"></i> Download</button>
-					<button class="btn btn-mini btn-warning"><i class="icon-share-alt icon-white"></i> Baca</button>
+					<button class="btn btn-mini  download-mahasiswa"><img src="/images/glyphicons/png/glyphicons_200_download.png" alt=""></button>
+					<button class="btn btn-mini  baca-mahasiswa"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>
 				</div>
 			</div>
 			<div class="well span5">
@@ -160,8 +172,8 @@
 				<h5>Buku</h5>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
 				<div class="btn-group">
-					<button class="btn btn-mini btn-primary"><i class="icon-download icon-white"></i> Download</button>
-					<button class="btn btn-mini btn-warning"><i class="icon-share-alt icon-white"></i> Baca</button>
+					<button class="btn btn-mini  download-mahasiswa"><img src="/images/glyphicons/png/glyphicons_200_download.png" alt=""></button>
+					<button class="btn btn-mini  baca-mahasiswa"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>
 				</div>
 			</div>
 			<div class="well span5">
@@ -169,17 +181,22 @@
 				<h5>Buku</h5>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
 				<div class="btn-group">
-					<button class="btn btn-mini btn-primary"><i class="icon-download icon-white"></i> Download</button>
-					<button class="btn btn-mini btn-warning"><i class="icon-share-alt icon-white"></i> Baca</button>
+					<button class="btn btn-mini  download-mahasiswa"><img src="/images/glyphicons/png/glyphicons_200_download.png" alt=""></button>
+					<button class="btn btn-mini  baca-mahasiswa"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>
 				</div>
 			</div>
 			<div class="well span5">
-				<a href="#Doc"><img src="/images/2.jpg" class="thumbnail image-list"></a>
+				<ul class="thumbnails">
+				  <li class="thumbnail">
+					<img src="/images/2.jpg" class="image-list">
+					<a href="#" class="ribbon ribbon-left">New Item</a>
+				  </li>
+				</ul>
 				<h5>Buku</h5>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...</p><br />
 				<div class="btn-group">
-					<button class="btn btn-mini btn-primary"><i class="icon-download icon-white"></i> Download</button>
-					<button class="btn btn-mini btn-warning"><i class="icon-share-alt icon-white"></i> Baca</button>
+					<button class="btn btn-mini  download-mahasiswa"><img src="/images/glyphicons/png/glyphicons_200_download.png" alt=""></button>
+					<button class="btn btn-mini  baca-mahasiswa"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>
 				</div>
 			</div>
 		<br>
@@ -206,8 +223,22 @@
 				<h5>Modul </h5>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
 				<div class="btn-group">
-					<button class="btn btn-mini btn-primary"><i class="icon-download icon-white"></i> Download</button>
-					<button class="btn btn-mini btn-warning"><i class="icon-share-alt icon-white"></i> Baca</button>
+					<button class="btn btn-mini  download-mahasiswa"><img src="/images/glyphicons/png/glyphicons_200_download.png" alt=""></button>
+					<button class="btn btn-mini  baca-mahasiswa"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>
+				</div>
+			</div>
+			<div class="well span5">
+				<ul class="thumbnails">
+				  <li class="thumbnail">
+					<img src="/images/4.jpg" class="image-list">
+					<a href="#" class="ribbon ribbon-left">New Item</a>
+				  </li>
+				</ul>
+				<h5>Buku</h5>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...</p><br />
+				<div class="btn-group">
+					<button class="btn btn-mini  download-mahasiswa"><img src="/images/glyphicons/png/glyphicons_200_download.png" alt=""></button>
+					<button class="btn btn-mini  baca-mahasiswa"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>
 				</div>
 			</div>
 			<div class="well span5">
@@ -215,8 +246,8 @@
 				<h5>Modul</h5>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
 				<div class="btn-group">
-					<button class="btn btn-mini btn-primary"><i class="icon-download icon-white"></i> Download</button>
-					<button class="btn btn-mini btn-warning"><i class="icon-share-alt icon-white"></i> Baca</button>
+					<button class="btn btn-mini  download-mahasiswa"><img src="/images/glyphicons/png/glyphicons_200_download.png" alt=""></button>
+					<button class="btn btn-mini  baca-mahasiswa"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>
 				</div>
 			</div>
 			<div class="well span5">
@@ -224,17 +255,8 @@
 				<h5>Modul</h5>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
 				<div class="btn-group">
-					<button class="btn btn-mini btn-primary"><i class="icon-download icon-white"></i> Download</button>
-					<button class="btn btn-mini btn-warning"><i class="icon-share-alt icon-white"></i> Baca</button>
-				</div>
-			</div>
-			<div class="well span5">
-				<a href="#Doc"><img src="/images/4.jpg" class="thumbnail image-list"></a>
-				<h5>Modul</h5>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
-				<div class="btn-group">
-					<button class="btn btn-mini btn-primary"><i class="icon-download icon-white"></i> Download</button>
-					<button class="btn btn-mini btn-warning"><i class="icon-share-alt icon-white"></i> Baca</button>
+					<button class="btn btn-mini  download-mahasiswa"><img src="/images/glyphicons/png/glyphicons_200_download.png" alt=""></button>
+					<button class="btn btn-mini  baca-mahasiswa"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>
 				</div>
 			</div>
 		<br>
@@ -261,8 +283,8 @@
 				<h5>Buletin </h5>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
 				<div class="btn-group">
-					<button class="btn btn-mini btn-primary"><i class="icon-download icon-white"></i> Download</button>
-					<button class="btn btn-mini btn-warning"><i class="icon-share-alt icon-white"></i> Baca</button>
+					<button class="btn btn-mini  download-mahasiswa"><img src="/images/glyphicons/png/glyphicons_200_download.png" alt=""></button>
+					<button class="btn btn-mini  baca-mahasiswa"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>
 				</div>
 			</div>
 			<div class="well span5">
@@ -270,8 +292,8 @@
 				<h5>Buletin</h5>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
 				<div class="btn-group">
-					<button class="btn btn-mini btn-primary"><i class="icon-download icon-white"></i> Download</button>
-					<button class="btn btn-mini btn-warning"><i class="icon-share-alt icon-white"></i> Baca</button>
+					<button class="btn btn-mini  download-mahasiswa"><img src="/images/glyphicons/png/glyphicons_200_download.png" alt=""></button>
+					<button class="btn btn-mini  baca-mahasiswa"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>
 				</div>
 			</div>
 			<div class="well span5">
@@ -279,8 +301,8 @@
 				<h5>Buletin</h5>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
 				<div class="btn-group">
-					<button class="btn btn-mini btn-primary"><i class="icon-download icon-white"></i> Download</button>
-					<button class="btn btn-mini btn-warning"><i class="icon-share-alt icon-white"></i> Baca</button>
+					<button class="btn btn-mini  download-mahasiswa"><img src="/images/glyphicons/png/glyphicons_200_download.png" alt=""></button>
+					<button class="btn btn-mini  baca-mahasiswa"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>
 				</div>
 			</div>
 			<div class="well span5">
@@ -288,8 +310,8 @@
 				<h5>Buletin</h5>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
 				<div class="btn-group">
-					<button class="btn btn-mini btn-primary"><i class="icon-download icon-white"></i> Download</button>
-					<button class="btn btn-mini btn-warning"><i class="icon-share-alt icon-white"></i> Baca</button>
+					<button class="btn btn-mini  download-mahasiswa"><img src="/images/glyphicons/png/glyphicons_200_download.png" alt=""></button>
+					<button class="btn btn-mini  baca-mahasiswa"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>
 				</div>
 			</div>
 		<br>
@@ -308,15 +330,15 @@
 		</div>
 	  </div>
 	</div>
-	</div> 
-		</div>
+	</div>
 </div>
 </div>
-	<footer class="row-fluid">
-		<div class="span12">
+	 <!--BAGIAN FOOTER-->
+  	<footer class="row-fluid footer">
+		<div class="well span12">
 			<hr>
-			<img src="/images/favicon.png" class="pull-left" />
-			<span>Created by: <a href="/humans.txt" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span>
+			<center><img src="/images/favicon.png" ><br>
+			<span>Created by: <a href="/humans.txt" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span></center>
 		</div>
 	</footer>
 
@@ -325,9 +347,9 @@ $('#tab-dok a').click(function (e) {
 	  e.preventDefault();
 	  $(this).tab('show');
 	})
-$('.btn-primary').attr('title', 'klik untuk mengunduh dokumen').tooltip();
+$('.download-mahasiswa').attr('title', 'klik untuk mengunduh dokumen').tooltip();
 $('.btn-warning').attr('title', 'klik untuk membaca dokumen').tooltip();
-$('.btn-success').attr('title', 'klik untuk melihat detail  dokumen').tooltip();
+$('.baca-mahasiswa').attr('title', 'klik untuk melihat detail  dokumen').tooltip();
 </script>
 </body>
 	
