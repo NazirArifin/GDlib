@@ -160,7 +160,7 @@
 							<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... </blockquote>
 							<p class='testimonial-footer'>
 								<img style="width:32px; height:32px;" src="/images/rud.jpg" >
-								<b>John Doe</b> — designer
+								<b>Rudiec Nuada</b> — designer
 							</p>
 						</div>
 						<hr>
@@ -169,7 +169,7 @@
 							<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... </blockquote>
 							<p class='testimonial-footer'>
 								<img style="width:32px; height:32px;" src="/images/rud.jpg" >
-								<b>John Doe</b> — designer
+								<b>Rudiec Nuada</b> — designer
 							</p>
 						</div>
 						<div class='testimonial'>
@@ -177,7 +177,7 @@
 							<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... </blockquote>
 							<p class='testimonial-footer'>
 								<img style="width:32px; height:32px;" src="/images/rud.jpg" >
-								<b>John Doe</b> — designer
+								<b>Rudiec Nuada</b> — designer
 							</p>
 						</div>					
                   </div><!--KONTENT PERTAMA-->
@@ -191,7 +191,7 @@
 									<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... </blockquote>
 									<p class='testimonial-footer'>
 										<img style="width:32px; height:32px;" src="/images/rud.jpg" >
-										<b>John Doe</b> — designer
+										<b>Rudiec Nuada</b> — designer
 									</p>
 								</div>
 								<div class='testimonial'>
@@ -199,7 +199,7 @@
 									<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... </blockquote>
 									<p class='testimonial-footer'>
 										<img style="width:32px; height:32px;" src="/images/rud.jpg" >
-										<b>John Doe</b> — designer
+										<b>Rudiec Nuada</b> — designer
 									</p>
 								</div>
 								<div class='testimonial'>
@@ -207,7 +207,7 @@
 									<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... </blockquote>
 									<p class='testimonial-footer'>
 										<img style="width:32px; height:32px;" src="/images/rud.jpg" >
-										<b>John Doe</b> — designer
+										<b>Rudiec Nuada</b> — designer
 									</p>
 								</div>				
 							</div>
