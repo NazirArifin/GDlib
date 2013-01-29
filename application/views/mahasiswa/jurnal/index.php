@@ -23,7 +23,20 @@
 			float: left;
 			margin: 0px 15px 10px 0px;
 		}
-
+		#cari{
+			width:100px;
+			transition:All 1s ease-in;
+			-webkit-transition:All 1s ease-in;
+			-moz-transition:All 1s ease-in;
+			-o-transition:All 1s ease-in;
+		}
+		#cari:focus{
+			width:500px;
+			transition:All 0.5s ease-in;
+			-webkit-transition:All 0.5s ease-in;
+			-moz-transition:All 0.5s ease-in;
+			-o-transition:All 0.5s ease-in;
+			}
 	</style>
 </head>
 <body>
@@ -38,7 +51,7 @@
 				<a href="/"><img src="/images/gd.png" id="logo" /></a>
 				<ul class="nav pull-right nav-pills">
 					<li><a href="/admin"><img src="/images/glyphicons/png/glyphicons_020_home.png" alt=""> Dashboard</a>
-					<li><a href="#"><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Profil</a>
+					<li><a href="/userprofile"><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Profil</a>
 				  
 				</ul>
 			</div>
@@ -54,8 +67,9 @@
   <div class="row-fluid">
     <div class="well span9">
 		<div class="navbar navbar-inner">
-				<form class="navbar-search pull-left">
-				  <input type="text" class="search-query" placeholder="Search">
+				<a class="brand">Jurnal</a>
+				<form class="navbar-search pull-right">
+				  <input type="text" class="search-query" placeholder="Search" id="cari">
 				</form>
 		</div>
 		<br>

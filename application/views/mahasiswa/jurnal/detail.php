@@ -100,6 +100,19 @@
 				<h4>Jenis Dokumente</h>
 				<span class="label label-warning">Excel</span> <span class="label label-important">PDF</span> <span class="label label-success">Word</span>
 			</section>
+			<section class="blog-widget">
+				<h4>Last Up to Dead</h>
+				<button class="btn btn-large"><img src="/images/glyphicons/png/glyphicons_045_calendar.png">13/05/1992</button>
+			</section>
+			<section class="blog-widget">
+				<h4>Rating me:</h4>
+			</section>
+			<section class="blog-widget">
+				<h4>Pembaca:</h4>
+				<button class="btn btn-danger"><img src="/images/glyphicons/png/glyphicons_004_girl.png"> Cewek</button> &nbsp;&nbsp;&nbsp;
+				<button class="btn btn-danger"><img src="/images/glyphicons/png/glyphicons_035_woman.png"> Wanita</button> 
+				<button class="btn btn-info"><img src="/images/glyphicons/png/glyphicons_034_old_man.png"> Pak Dekan</button>
+			</section>
             </article>
 			
 	</div>
