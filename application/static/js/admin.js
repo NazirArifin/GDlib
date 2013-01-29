@@ -71,7 +71,7 @@ function simpanUSerDosen(){
 			if (data.success==1){
 				$form.find('input').val('');
 				alertify.success('Data Sudah Tersimpan');
-				$('#form-tambah').hide('blind', {} , 1500);
+				header('location:/admin/dosen');
 			}
 			else {
 				alertify.error('Data Gagal disimpan');
@@ -101,7 +101,7 @@ function deleteUserDosen(object, id){
 			if (o.success==1){
 				$form.find('input').val('');
 				alertify.success('Data Sudah Terhapus');
-				$('#form-tambah').hide('blind', {} , 1500);
+				window.location = "/admin/dosen";
 			}
 			else {
 				alertify.error('Data Gagal dihapus');
@@ -152,10 +152,11 @@ function simpanUserMahasiswa(){
 			
 		},
 		success: function(data){
-			console.log(data);
+			//console.log(data);
 			if (data.success==1){
 				$form.find('input').val('');
 				alertify.success('Data Sudah Tersimpan');
+				window.location = "/admin/dosen";
 			}
 			else {
 				alertify.error('Data Gagal disimpan');
@@ -185,6 +186,7 @@ function deleteUserMahasiswa(object, id){
 				$form.find('input').val('');
 				alertify.success('Data Sudah Terhapus');
 				$('#form-tambah').hide('blind', {} , 1500);
+				window.location = "/admin/dosen";
 			}
 			else {
 				alertify.error('Data Gagal dihapus');
@@ -228,7 +230,6 @@ function editDokumenJurnal(object,id){
 			//window.location = "/admin/edit_dokumen";
 	}
 	});
-
 }
 
 //buku

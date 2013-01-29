@@ -250,19 +250,19 @@ class Admin_model extends CI_Model {
 					if($this->upload->do_upload('foto_jurnal'))
 					{
 						$data=$this->upload->data();
-						$namafoto='/upload/'. $this->input->post('kategori_jurnal') . '/' . $data['file_name'];
+						$namafoto='./upload/'. $this->input->post('kategori_jurnal') . '/' . $data['file_name'];
 						$ekstensi= $data['file_ext'];
-						switch ($ekstensi){
-									case '.jpg':
-										$ekstensi='6';
-									case '.jpeg':
-										$ekstensi='6';
-									case '.png':
-										$ekstensi='6';
-									break;	
-								default:	
+					switch ($ekstensi){
+							case '.jpg':
+								$ekstensi='6';
+							case '.jpeg':
+								$ekstensi='6';
+							case '.png':
+								$ekstensi='6';
+							break;	
+							default:	
 								$ekstensi= $data['file_ext'];
-								}
+							}
 					}
 					else
 					{

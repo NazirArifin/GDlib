@@ -156,7 +156,7 @@ class Admin extends CI_Controller {
 					if($this->upload->do_upload('foto_jurnal'))
 					{
 						$data=$this->upload->data();
-						$namafoto='/upload/'. $this->input->post('kategori_jurnal') . '/' . $data['file_name'];
+						$namafoto='./upload/'. $this->input->post('kategori_jurnal') . '/' . $data['file_name'];
 						$ekstensi= $data['file_ext'];
 						switch ($ekstensi){
 									case '.jpg':
@@ -189,6 +189,10 @@ class Admin extends CI_Controller {
 					echo '{ "error": 0, "success": 1 }';
 				}
 				break;
+			case 'delete';
+				$this->admin_model->deleteDokumenJurnal($extra);
+				echo '{ "error": 0, "success": 1 }';
+				return;
 			default:
 			$this->load->view('admin/jurnal/index',array('controller' => $this));
 			jsloc::show();
@@ -291,6 +295,10 @@ class Admin extends CI_Controller {
 					echo '{ "error": 0, "success": 1 }';
 				}
 				break;
+			case 'delete';
+				$this->admin_model->deleteDokumenBuku($extra);
+				echo '{ "error": 0, "success": 1 }';
+				return;
 			default:
 			$this->load->view('admin/buku/index',array('controller' => $this));
 			jsloc::show();
@@ -393,6 +401,10 @@ class Admin extends CI_Controller {
 					echo '{ "error": 0, "success": 1 }';
 				}
 				break;
+			case 'delete';
+				$this->admin_model->deleteDokumenModul($extra);
+				echo '{ "error": 0, "success": 1 }';
+				return;
 			default:
 			$this->load->view('admin/modul/index',array('controller' => $this));
 			jsloc::show();
