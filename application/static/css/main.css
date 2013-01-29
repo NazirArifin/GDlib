@@ -2,7 +2,7 @@
 MAIN CSS
 */
 body{
-	background-image:url('/images/bg.gif') ;
+	background-image:url('/images/bg-1.jpg') ;
 	}
 .image-admin{
 	height:100px;
@@ -24,7 +24,7 @@ body{
 	-o-transition:All 1s ease-in;
 	}
 #cari:focus{
-	width:500px;
+	width:400px;
 	transition:All 0.5s ease-in;
 	-webkit-transition:All 0.5s ease-in;
 	-moz-transition:All 0.5s ease-in;

@@ -16,13 +16,26 @@
 		<script src="/third_party/bootstrap/bootstrap.min.js"></script>
 		<style type="text/css">
 		body{
-		background-image:url('/images/bg.gif') ;
+		background-image:url('/images/bg-1.jpg') ;
 		}
 		#logo {
 			height: 31px;
 			margin-top: 0px;
 		}
-		
+		#cari{
+			width:100px;
+			transition:All 1s ease-in;
+			-webkit-transition:All 1s ease-in;
+			-moz-transition:All 1s ease-in;
+			-o-transition:All 1s ease-in;
+			}
+		#cari:focus{
+			width:400px;
+			transition:All 0.5s ease-in;
+			-webkit-transition:All 0.5s ease-in;
+			-moz-transition:All 0.5s ease-in;
+			-o-transition:All 0.5s ease-in;
+			}
 
 	</style>
 </head>
