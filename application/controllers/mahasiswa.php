@@ -43,5 +43,10 @@ class Mahasiswa extends CI_Controller {
 		$this->load->view('mahasiswa/modul/index',array('controller' => $this));
 		jsloc::show();
 	}
+	public function buletin()
+	{
+		$this->load->view('mahasiswa/buletin/index',array('controller' => $this));
+		jsloc::show();
+	}
 	
 }

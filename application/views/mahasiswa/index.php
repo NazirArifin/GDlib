@@ -18,10 +18,6 @@
 		body{
 		background-image:url('/images/bg-1.jpg') ;
 		}
-		#logo {
-			height: 31px;
-			margin-top: 0px;
-		}
 		#cari{
 			width:100px;
 			transition:All 1s ease-in;
@@ -36,6 +32,12 @@
 			-moz-transition:All 0.5s ease-in;
 			-o-transition:All 0.5s ease-in;
 			}
+		#logo-baru {
+			position:absolute;
+			height: 50px;
+			width:255px;
+			margin-top: 15px;
+		}
 
 	</style>
 </head>
@@ -48,7 +50,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="/"><img src="/images/gd.png" id="logo" /></a>
+				<a href="/"><img src="/images/logo-gd.png" id="logo-baru" /></a>
 				<ul class="nav pull-right nav-pills">
 					<li><a href="/admin"><img src="/images/glyphicons/png/glyphicons_020_home.png" alt=""> Dashboard</a>
 					<li><a href="/userprofile"><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Profil</a>
@@ -76,6 +78,9 @@
 			</div>
 			<div class="sidebar-nav">
 			<div class="well">
+				<div class="alert alert-info"><h4>Dokumen</h4></div>
+					
+				<hr>
 				<section class="blog-widget">
 					<ul class="nav nav-pills nav-stacked">
 					  <li><a href="/mahasiswa/jurnal">Jurnal</a></li>
@@ -85,7 +90,6 @@
 							<li><a href="/mahasiswa/modul"> Modul</a></li>
 							<li class="divider"></li>
 							<li><a href="/mahasiswa/buletin"> Buletin</a></li>
-							<li class="divider"></li>
 					</ul>
 				</section>
 			</div>

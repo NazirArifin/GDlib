@@ -15,9 +15,6 @@
 		<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
 		<script src="/third_party/bootstrap/bootstrap.min.js"></script>
 		<style type="text/css">
-		#logo {
-			height: 31px;
-			margin-top: 0px;
 		}
 		#image {
 			float: left;
@@ -34,7 +31,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="/"><img src="/images/gd.png" id="logo" /></a>
+				<a href="/"><img src="/images/logo-gd.png" id="logo-baru" /></a>
 				<ul class="nav pull-right nav-pills">
 					<li><a href="/admin"><img src="/images/glyphicons/png/glyphicons_020_home.png" alt=""> Dashboard</a>
 					<li><a href="/userprofile"><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Profil</a>
@@ -47,7 +44,7 @@
 <br />
 <br />
 <div class="span12">
-	<h1 style="text-align:center;" class="bolder big">Buku</h1>
+	<h1 style="text-align:center;" class="three">Buku Mahasiswa</h1>
 </div>
 <div class="container-fluid">
 	

@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-		<title>Mahasiswa | Jurnal</title>
+		<title>Mahasiswa | Modul</title>
 		<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
 		<link rel="stylesheet" href="/third_party/bootstrap/css/elemento.css" />
@@ -43,7 +43,7 @@
 <br />
 <br />
 <div class="span12">
-	<h1 style="text-align:center;" class="three">Jurnal Mahasiswa</h1>
+	<h1 style="text-align:center;" class="three">Modul Mahasiswa</h1>
 </div>
 <div class="container-fluid">
 	
@@ -51,25 +51,25 @@
 		<div class="well span8">
 			<ul class="breadcrumb">
 				<li><a href="http://gdlib.com/mahasiswa">Mahasiswa</a> <span class="divider">/</span></li>
-				<li class="active">Jurnal</li>
+				<li class="active">Modul</li>
 			</ul>   
 			<div class="navbar navbar-inner">
-				<a class="brand">Jurnal</a>
+				<a class="brand">Modul</a>
 				<form class="navbar-search pull-right">
-				  <input type="text" class="search-query" placeholder="Cari jurnal disini" id="cari">
+				  <input type="text" class="search-query" placeholder="Cari Modul disini" id="cari">
 				</form>
 			</div>
 		<br>
 			<article class="post">
               <div class="post-header">
-                <h2 class="post-title"><a href="">Jurnalku yg pertama</a></h2>
+                <h2 class="post-title"><a href="">Modulku yg pertama</a></h2>
                 <div class="post-date">
                   <h4>1-Jan-13</h4>
                 </div>
               </div>
               <div class="post-entry clearfix">
                 <img class="media-object pull-left" data-src="holder.js/100x100" alt="100x100" style="width: 100px; height: 100px;" src="/images/rud.jpg">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.. <a href="http://gdlib.com/mahasiswa/jurnal/detail">Read more ? </a></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.. <a href="http://gdlib.com/mahasiswa/Modul/detail">Read more ? </a></p>
               </div>
               <ul class="post-meta">
                 <li><a href=""><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Rudiec Nuada</a></li>
@@ -79,14 +79,14 @@
     
             <article class="post">
 				<div class="post-header">
-					<h2 class="post-title"><a href="">Jurnalku yg kedua</a></h2>
+					<h2 class="post-title"><a href="">Modulku yg kedua</a></h2>
 					<div class="post-date">
 					  <h4>1-Jan-13</h4>
 					</div>
 				</div>
 				<div class="post-entry clearfix">
 					<img class="media-object pull-left" alt="100x100" style="width: 100px; height: 100px;" src="/images/rud.jpg">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.. <a href="http://gdlib.com/mahasiswa/jurnal/detail">Read more ? </a></p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.. <a href="http://gdlib.com/mahasiswa/Modul/detail">Read more ? </a></p>
 				</div>
              <ul class="post-meta">
                 <li><a href=""><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Rudiec Nuada</a></li>
@@ -95,14 +95,14 @@
             </article>
 			<article class="post">
 				<div class="post-header">
-					<h2 class="post-title"><a href="">Jurnalku yg ketiga</a></h2>
+					<h2 class="post-title"><a href="">Modulku yg ketiga</a></h2>
 					<div class="post-date">
 					  <h4>1-Jan-13</h4>
 					</div>
 				</div>
 				<div class="post-entry clearfix">
 					<img class="media-object pull-left" alt="100x100" style="width: 100px; height: 100px;" src="/images/rud.jpg">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.. <a href="http://gdlib.com/mahasiswa/jurnal/detail">Read more ? </a></p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.. <a href="http://gdlib.com/mahasiswa/Modul/detail">Read more ? </a></p>
 				</div>
               <ul class="post-meta">
                 <li><a href=""><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Rudiec Nuada</a></li>
