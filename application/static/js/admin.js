@@ -217,8 +217,6 @@ function editDokumenJurnal(object,id){
 			//alert(id);
 		},
 		success: function(o){
-		//alert(o);
-			//window.location = ("edit_dokumen");
 			$('#form-tambah').attr('action', '/admin/jurnal/update');
 			$('#form-tambah').show('blind', {} , 1500);
 			$('#id-dokumen').val(o[0].ID_DOKUMEN);
@@ -230,6 +228,30 @@ function editDokumenJurnal(object,id){
 			//window.location = "/admin/edit_dokumen";
 	}
 	});
+}
+
+function deleteDokumenJurnal(object, id){
+	var $form = $('#form-tambah');
+	$.ajax({
+		url: '/admin/jurnal/delete/' + id,
+		dataType: 'json',
+		
+		beforeSend: function(){
+			
+		},
+		success: function(o){
+		//console.log(o); 
+			if (o.success==1){
+				alertify.success('Data Sudah Terhapus');
+				window.location = "/admin/jurnal";
+			}
+			else {
+				alertify.error('Data Gagal dihapus');
+			}
+		}
+	});
+	//}
+	return false;
 }
 
 //buku
@@ -260,6 +282,30 @@ function editDokumenBuku(object,id){
 
 }
 
+function deleteDokumenBuku(object, id){
+	var $form = $('#form-tambah');
+	$.ajax({
+		url: '/admin/buku/delete/' + id,
+		dataType: 'json',
+		
+		beforeSend: function(){
+			
+		},
+		success: function(o){
+		//console.log(o); 
+			if (o.success==1){
+				alertify.success('Data Sudah Terhapus');
+				window.location = "/admin/buku";
+			}
+			else {
+				alertify.error('Data Gagal dihapus');
+			}
+		}
+	});
+	//}
+	return false;
+}
+
 //Modul
 function tambahModul(){
 	$('#form-tambah').attr('action', '/admin/modul/add').show('blind', {} , 2500);
@@ -286,4 +332,28 @@ function editDokumenModul(object,id){
 		}
 	});
 
+}
+
+function deleteDokumenModul(object, id){
+	var $form = $('#form-tambah');
+	$.ajax({
+		url: '/admin/modul/delete/' + id,
+		dataType: 'json',
+		
+		beforeSend: function(){
+			
+		},
+		success: function(o){
+		//console.log(o); 
+			if (o.success==1){
+				alertify.success('Data Sudah Terhapus');
+				window.location = "/admin/modul";	
+			}
+			else {
+				alertify.error('Data Gagal dihapus');
+			}
+		}
+	});
+	//}
+	return false;
 }

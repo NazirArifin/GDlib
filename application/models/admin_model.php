@@ -288,6 +288,9 @@ class Admin_model extends CI_Model {
 		return true;
 	}
 	
+	public function deleteDokumenJurnal($id){
+		$this->db->delete('tb_dokumen', array('ID_DOKUMEN'=>$id));
+	}
 	
 // buku
 	public function insertBuku($namafile,$namafoto,$ekstensi)
@@ -446,6 +449,11 @@ class Admin_model extends CI_Model {
 		$this->db->update('tb_dokumen',$update);
 		return true;
 	}
+	
+	public function deleteDokumenBuku($id){
+		$this->db->delete('tb_dokumen', array('ID_DOKUMEN'=>$id));
+	}
+	
 // Modul
 	public function insertModul($namafile,$namafoto,$ekstensi)
 	{
@@ -601,5 +609,9 @@ class Admin_model extends CI_Model {
 		$this->db->where('ID_DOKUMEN',$id);
 		$this->db->update('tb_dokumen',$update);
 		return true;
+	}
+	
+	public function deleteDokumenModul($id){
+		$this->db->delete('tb_dokumen', array('ID_DOKUMEN'=>$id));
 	}
 }
