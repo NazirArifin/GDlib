@@ -8,12 +8,16 @@
 		<link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
 		<link rel="stylesheet" href="/third_party/bootstrap/css/elemento.css" />
 		<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
+		<link href='/third_party/rating/jquery.rating.css' type="text/css" rel="stylesheet"/>
 		<link rel="stylesheet" href="/css/style.css" />
 		<link rel="stylesheet" href="/css/main.css" />
 			
 		<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
 		<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
 		<script src="/third_party/bootstrap/bootstrap.min.js"></script>
+		<script src='/third_party/rating/jquery.MetaData.js' type="text/javascript" language="javascript"></script>
+		<script src='/third_party/rating/jquery.rating.js' type="text/javascript" language="javascript"></script>
+		
 		<style type="text/css">
 		#image {
 			float: left;
@@ -102,10 +106,15 @@
 			<div class="well span3">
 					<h4>Last Update</h4>
 			</div>
-			<div class="well span2">
-					<h4>Rating me:</h4>
-			</div>
 			<div class="well span3">
+					<h4>Rating me:</h4>
+					<input name="star1" type="radio" class="star"/>
+					<input name="star1" type="radio" class="star"/>
+					<input name="star1" type="radio" class="star"/>
+					<input name="star1" type="radio" class="star"/>
+					<input name="star1" type="radio" class="star"/>
+			</div>
+			<div class="well span2">
 					<h4>Pembaca:</h4>
 			</div>
             </article>
@@ -123,7 +132,7 @@
 </div>
 
 <script type="text/javascript">
-
+$('.star').tooltip();
 </script>
 </body>
 	
