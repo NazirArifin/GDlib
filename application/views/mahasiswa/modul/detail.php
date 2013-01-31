@@ -55,7 +55,7 @@
 		<div class="well span12"><br>
 	        <article class="post">
 				<div class="post-header">
-					<h2 class="post-title"><a href="#">Inilah Kisahku</a></h2>
+					<h2 class="post-title"><a href="#">Modul ini berisis tengtang Rudi</a></h2>
 					<div class="post-date">
 						<h4>1-Jan-13</h4>
 					</div>
@@ -127,7 +127,7 @@
 <!--jsliderated-->
 	<div id="jsrp_related">
 		<a href="#" id="jsrp_related-close"><img id="close_btn" src="/images/close_button.gif" alt="Close"></a>
-		<h3>Kamu sudah lihat ini?</h3>
+		<h3>Kamu punya modul ini?</h3>
 	<ul>
 		<li><a href="#" ><img src="/images/3.jpg" alt="australia" title="australia" width="70" height="50" border="0" class="jsrp_thumb" /></a><br> <a href="#" rel="bookmark" class="jsrp_title">Rudiec Christiano</a></li>
 		<li><a href="#" ><img src="/images/1.jpg" alt="united-kingdom" title="united-kingdom" width="70" height="50" border="0" class="jsrp_thumb" /></a><br> <a href="#" rel="bookmark" class="jsrp_title">Rudiec El Tofu</a></li>

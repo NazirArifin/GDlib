@@ -438,7 +438,8 @@ $(function(){
     </div>
    </div>
    <div class="Clear">
-    <pre class="code"><code class="js">$('.hover-star').rating({
+    <pre class="code"><code class="js">
+	$('.hover-star').rating({
   focus: function(value, link){
     var tip = $('#hover-test');
     tip[0].data = tip[0].data || tip.html();
@@ -448,7 +449,8 @@ $(function(){
     var tip = $('#hover-test');
     $('#hover-test').html(tip[0].data || '');
   }
-});</code></pre>
+});
+</code></pre>
    </div>
   </td>
   <td valign="top" width="5">&nbsp;</td>  <td valign="top" width="50">

@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-		<title>GDlib | Mahasiswa</title>
+		<title>Buku | Judul</title>
 		<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
 		<link rel="stylesheet" href="/third_party/bootstrap/css/elemento.css" />
@@ -55,7 +55,7 @@
 		<div class="well span12"><br>
 	        <article class="post">
 				<div class="post-header">
-					<h2 class="post-title"><a href="#">Inilah Kisahku</a></h2>
+					<h2 class="post-title"><a href="#">Inilah Bukuku</a></h2>
 					<div class="post-date">
 						<h4>1-Jan-13</h4>
 					</div>
@@ -127,11 +127,11 @@
 <!--jsliderated-->
 	<div id="jsrp_related">
 		<a href="#" id="jsrp_related-close"><img id="close_btn" src="/images/close_button.gif" alt="Close"></a>
-		<h3>Kamu sudah lihat ini?</h3>
+		<h3>Kamu sudah lihat buku ini?</h3>
 	<ul>
-		<li><a href="#" ><img src="/images/3.jpg" alt="australia" title="australia" width="70" height="50" border="0" class="jsrp_thumb" /></a><br> <a href="#" rel="bookmark" class="jsrp_title">Rudiec Christiano</a></li>
+		<li><a href="#" ><img src="/images/3.jpg" alt="australia" title="australia" width="70" height="50" border="0" class="jsrp_thumb" /></a><br> <a href="#" rel="bookmark" class="jsrp_title">Rudiec Potter</a></li>
 		<li><a href="#" ><img src="/images/1.jpg" alt="united-kingdom" title="united-kingdom" width="70" height="50" border="0" class="jsrp_thumb" /></a><br> <a href="#" rel="bookmark" class="jsrp_title">Rudiec El Tofu</a></li>
-		<li><a href="" ><img src="/images/2.jpg" alt="india" title="india" width="70" height="50" border="0" class="jsrp_thumb" /></a><br> <a href="#" rel="bookmark" class="jsrp_title">Rudiec Keren</a></li>
+		<li><a href="" ><img src="/images/2.jpg" alt="india" title="india" width="70" height="50" border="0" class="jsrp_thumb" /></a><br> <a href="#" rel="bookmark" class="jsrp_title">Rudiec Amazing</a></li>
 	</ul>
 </div>
   	<footer class="row-fluid footer">

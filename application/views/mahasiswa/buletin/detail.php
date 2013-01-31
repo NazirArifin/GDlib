@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-		<title>GDlib | Mahasiswa</title>
+		<title>Buletin | Mahasiswa</title>
 		<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
 		<link rel="stylesheet" href="/third_party/bootstrap/css/elemento.css" />
@@ -55,7 +55,7 @@
 		<div class="well span12"><br>
 	        <article class="post">
 				<div class="post-header">
-					<h2 class="post-title"><a href="#">Inilah Kisahku</a></h2>
+					<h2 class="post-title"><a href="#">Berita Hari ini</a></h2>
 					<div class="post-date">
 						<h4>1-Jan-13</h4>
 					</div>
@@ -94,7 +94,7 @@
                         <a href="#"><img src="/images/glyphicons/png/glyphicons_290_skull.png"></a>
                         <a href="#"><img src="/images/glyphicons/png/glyphicons_303_temple_islam.png"></a>
                     </div>
-                    <h4 class="name">Dohn Joe</h4>
+                    <h4 class="name">Rudiec Nuada</h4>
                     <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
 					</div>
 				</section>

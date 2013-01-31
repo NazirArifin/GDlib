@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
 		<title>GDlib | Dosen</title>
 			<link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
-			<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap.min.css" />
+			<link rel="stylesheet" href="/third_party/bootstrap/css/elemento.css" />
 			<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
 			<link rel="stylesheet" href="/third_party/alertify/alertify.core.css" />
 			<link rel="stylesheet" href="/third_party/alertify/alertify.default.css" />
@@ -28,18 +28,20 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="/"><img src="/images/gd.png" id="logo" /></a>
+				<a href="/"><img src="/images/logo-gd.png" id="logo-baru" /></a>
 				<ul class="nav pull-right nav-pills">
-					<li><a href="/dosen"><i class="icon-home"></i> Dashboard</a></li>
-					<li><a href="#"><i class="icon-user"></i> Profil</a></li>
+					<li><a href="/admin"><img src="/images/glyphicons/png/glyphicons_020_home.png" alt=""> Dashboard</a>
+					<li><a href="/userprofile"><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Profil</a>
 				  
 				</ul>
 			</div>
 		</div>
 	</div>
+
 	<br>
 	<br>
 	<br>
+<h1 class="three" style="text-align:center;">Jurnal Dosen</h1>
 <div class="container-fluid" id="container">
 	<div class="row-fluid" id="form">
 		<div class="well span3">
@@ -51,29 +53,29 @@
 				</ul>
 				<span>
 					<strong>Administrator</strong><br>
-					<a href="#Profil"> Dosen </a><br>
 					<a href="#Setting">Settings</a> | <a href="#">Keluar</a>
 				</span>
 			</div>
-			<div class="well condensed">
-				<ul class="nav nav-list">
-					<div class="alert alert-info">
-						<li class="nav-header">Dokumen</li>
-						<li><a href="/dosen/jurnal" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Jurnal</a></li>
+			<div class="well">
+				<div class="alert alert-info"><h4>Dokumen</h4></div>	
+				<hr>
+				<section class="blog-widget">
+					<ul class="nav nav-pills nav-stacked">
+					  <li><a href="/dosen/jurnal" >Jurnal</a></li>
 						<li class="divider"></li>
-						<li><a href="/dosen/buku" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Buku</a></li>
+						<li><a href="/dosen/buku"> Buku</a></li>
 						<li class="divider"></li>
-						<li><a href="/dosen/modul" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Modul</a></li>
+						<li><a href="/dosen/modul"> Modul</a></li>
 						<li class="divider"></li>
-						<li><a href="/dosen/buletin" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Buletin</a></li>
+						<li><a href="/dosen/buletin"> Buletin</a></li>
 						<li class="divider"></li>
-					</div>
-				</ul>
+					</ul>
+				</section>
 			</div>
 		</div>
 		<div class="well span9 pull-right">
 			<form class="form-horizontal hide" id="form-tambah" action="" method="POST">
-					<a href="#" class="btn btn-info btn-mini pull-right" onClick="return tutupJurnal()"><i class="icon-remove icon-white"></i></a>
+					<a href="#" class="btn btn-mini pull-right" onClick="return tutupJurnal()"><img src="/images/glyphicons/png/glyphicons_197_remove.png" alt=""></a>
 				<fieldset>
 					<legend>Tambah User Dosen</legend>
 				<div class="control-group">
@@ -106,8 +108,8 @@
 						</div>
 				</div>
 				<div class="form-actions btn-group">
-					<button href="#" class="btn btn-warning btn-mini" type="button" onClick="return cancel()"><i class="icon-remove icon-white"></i> Cancel</button>
-					<button  href="#" class="btn btn-success btn-mini" type="button" onClick="return simpanUSerDosen()"><i class="icon-ok icon-white" ></i> Simpan</button>
+					<button href="#" class="btn btn-warning btn-mini" type="button" onClick="return cancel()">Cancel</button>
+					<button  href="#" class="btn btn-success btn-mini" type="button" onClick="return simpanUSerDosen()">Simpan</button>
 				</div>
 				<hr>
 				</fieldset>
@@ -118,7 +120,7 @@
 						<form class="navbar-search pull-left">
 							<input type="text" class="input-medium search-query"/>
 						</form>
-						<button class="btn btn-info pull-right" id="tombol" onClick="return tambahJurnal()"><i class="icon-plus icon-white"></i></button>
+						<button class="btn pull-right" id="tombol" onClick="return tambahJurnal()"><img src="/images/glyphicons/png/glyphicons_190_circle_plus.png" alt=""></button>
 					</div>
 				</div>
 			<?php
@@ -137,9 +139,9 @@
 										<h3><?php echo $row->PENGARANG_DOKUMEN ?> </h3>
 										<h3><?php echo $row->PROLOG_DOKUMEN ?> </h3>
 										
-							<button class="btn btn-mini btn-warning" onClick="editJurnal(this, <?php echo $row->ID_DOKUMEN ?>)"><i class="icon-wrench icon-white"></i> Edit</button>
-							<button class="btn btn-mini btn-danger" ><i class="icon-trash icon-white"></i> Delete</button>
-							<button class="btn btn-mini btn-info" ><i class="icon-map-marker icon-white"></i> Detail</button>
+							<button class="btn btn-mini btn-warning" onClick="editJurnal(this, <?php echo $row->ID_DOKUMEN ?>)">Edit</button>
+							<button class="btn btn-mini btn-danger" >Delete</button>
+							<button class="btn btn-mini btn-info" >Detail</button>
 						</div>
 				</div>
 				<hr>
@@ -161,11 +163,12 @@
 		</div>
 	</div>
 </div>
-	<footer class="row-fluid">
-		<div class="span12">
+	<!--BAGIAN FOOTER-->
+  	<footer class="row-fluid footer">
+		<div class="well span12">
 			<hr>
-			<img src="/images/favicon.png" class="pull-left" />
-			<span>Created by: <a href="/humans.txt" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span>
+			<center><a href="#"><img src="/images/favicon.png" id="gd"></a><br>
+			<span>Created by: <a href="/humans.txt" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span></center>
 		</div>
 	</footer>
 	

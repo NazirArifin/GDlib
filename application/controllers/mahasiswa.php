@@ -32,21 +32,41 @@ class Mahasiswa extends CI_Controller {
 		}
 	}
 
-	public function buku()
+	public function buku($param = '', $extra = '')
 	{
-		$this->load->view('mahasiswa/buku/index',array('controller' => $this));
-		jsloc::show();
+		switch ($param) {
+			case 'detail':
+				$this->load->view('mahasiswa/buku/detail',array('controller' => $this));
+				jsloc::show();
+			break;
+			default:
+				$this->load->view('mahasiswa/buku/index',array('controller' => $this));
+				jsloc::show();
+		}
 	}
 	
-	public function modul()
+	public function modul($param = '', $extra = '')
 	{
-		$this->load->view('mahasiswa/modul/index',array('controller' => $this));
-		jsloc::show();
+		switch ($param) {
+			case 'detail':
+				$this->load->view('mahasiswa/modul/detail',array('controller' => $this));
+				jsloc::show();
+			break;
+			default:
+				$this->load->view('mahasiswa/modul/index',array('controller' => $this));
+				jsloc::show();
+		}
 	}
-	public function buletin()
+	public function buletin($param = '', $extra = '')
 	{
-		$this->load->view('mahasiswa/buletin/index',array('controller' => $this));
-		jsloc::show();
-	}
-	
+		switch ($param) {
+			case 'detail':
+				$this->load->view('mahasiswa/buletin/detail',array('controller' => $this));
+				jsloc::show();
+			break;
+			default:
+				$this->load->view('mahasiswa/buletin/index',array('controller' => $this));
+				jsloc::show();
+		}
+	}	
 }

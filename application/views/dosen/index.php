@@ -3,15 +3,21 @@
 <head>
 	<meta charset="utf-8">
 	<title>Dosen | Beranda</title>
-	<link href="/third_party/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="/third_party/bootstrap/css/elemento.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
 	<link href="/third_party/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
 	<link href="/third_party/alertify/alertify.core.css" rel="stylesheet" type="text/css">
 	<link href="/third_party/alertify/alertify.default.css" rel="stylesheet" type="text/css">
+	<link href="/static/css/main.css" rel="stylesheet" type="text/css">
 	<style type="text/css">
-		#logo {
-			height: 31px;
-			margin-top: 0px;
+		body{
+			background-image:url('/images/bg-1.jpg') ;
+		}
+		#logo-baru {
+			position:absolute;
+			height: 50px;
+			width:255px;
+			margin-top: 15px;
 		}
 		#image {
 			float: left;
@@ -38,21 +44,6 @@
 			-moz-border-radius: 5px;
 			border-radius: 5px;
 		}
-		.condensed {
-			padding: 5px;
-		}
-		.condensed li {
-			font-size: 12px;
-		}
-		footer {
-			font-size: 75%;
-			line-height: 1.2em;
-			margin-bottom: 15px;
-		}
-		footer img {
-			margin-right: 10px;
-			width: 27px;
-		}
 	</style>
 </head>
 <body>
@@ -64,18 +55,19 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="/"><img src="/images/gd.png" id="logo" /></a>
+				<a href="/"><img src="/images/logo-gd.png" id="logo-baru" /></a>
 				<ul class="nav pull-right nav-pills">
-					<li><a href="/dosen"><i class="icon-home"></i> Dashboard</a></li>
-					<li><a href="#"><i class="icon-user"></i> Profil</a></li>
+					<li><a href="/admin"><img src="/images/glyphicons/png/glyphicons_020_home.png" alt=""> Dashboard</a>
+					<li><a href="/dosen/profil"><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Profil</a>
 				  
 				</ul>
 			</div>
 		</div>
 </div>
-<br />
-<br />
-<br />
+<br>
+<br>
+<br>
+<br>
 <div class="container-fluid">
 	<div class="row-fluid">
 		<div class="span3">
@@ -87,27 +79,26 @@
 				</ul>
 				<span>
 					<strong>Administrator</strong><br>
-					<a href="#Profil"> Dosen </a><br>
 					<a href="#Setting">Settings</a> | <a href="#">Keluar</a>
 				</span>
 			</div>
-			<div class="well condensed">
-				<ul class="nav nav-list">
-					<div class="alert alert-info">
-						<li class="nav-header">Dokumen</li>
-						<li><a href="/dosen/jurnal" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Jurnal</a></li>
-						<li class="divider"></li>
-						<li><a href="/dosen/buku" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Buku</a></li>
-						<li class="divider"></li>
-						<li><a href="/dosen/modul" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Modul</a></li>
-						<li class="divider"></li>
-						<li><a href="/dosen/buletin" class="btn btn-block btn-info"><i class="icon-file icon-white"></i> Buletin</a></li>
-						<li class="divider"></li>
-					</div>
-				</ul>
+			<div class="well">
+				<div class="alert alert-info"><h4>Dokumen</h4></div>
+				<hr>
+				<section class="blog-widget">
+					<ul class="nav nav-pills nav-stacked">
+					  <li><a href="/dosen/jurnal">Jurnal</a></li>
+							<li class="divider"></li>
+							<li><a href="/dosen/buku"> Buku</a></li>
+							<li class="divider"></li>
+							<li><a href="/dosen/modul"> Modul</a></li>
+							<li class="divider"></li>
+							<li><a href="/dosen/buletin"> Buletin</a></li>
+					</ul>
+				</section>
 			</div>
 		</div>
-		<div class="span9">
+		<div class="well span9">
 			<div>
 				<ul class="breadcrumb">
 				<li><a href="/">Home</a> <span class="divider">/</span></li>
@@ -124,10 +115,12 @@
 						</ul>
 						<div class="tab-content">
 							<div class="tab-pane active" id="jurnal">
-								<form class="navbar-search pull-left">
-									<input type="text" class="search-query" placeholder="Search">
-								</form>
-								<button class="btn pull-right" type="button" onClick="tambahDokumen()"><i class="icon-plus"></i></button>
+							<div class="navbar navbar-inner">
+									<form class="navbar-search pull-left">
+										<input type="text" class="search-query" placeholder="Cari Dokumen" id="cari">
+									</form>
+									<button class="btn pull-right" type="button" onClick="tambahDokumen()"><img src="/images/glyphicons/png/glyphicons_190_circle_plus.png" alt=""></button>
+							</div>
 								<table class="table">
 									<thead>
 										<tr>
@@ -155,9 +148,9 @@
 											<td><?php echo $row->KATA_KUNCI_DOKUMEN?></td>
 											<td>
 												<div class="btn-group">
-													<button class="btn btn-danger btn-mini" onClick="deleteDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)" ><i class="icon-trash icon-white"></i> Hapus</button> 
-													<button class="btn btn-warning btn-mini" onClick="editDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)" ><i class="icon-edit icon-white"></i> Edit</button> 
-													<button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+													<button class="btn btn-danger btn-mini" onClick="deleteDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)" >Hapus</button> 
+													<button class="btn btn-warning btn-mini" onClick="editDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)" >Edit</button> 
+													<button class="btn btn-success btn-mini">Lihat</button>
 												</div>
 											</td>
 										</tr>
@@ -181,10 +174,13 @@
 								</div>
 							</div>
 							<div class="tab-pane" id="buku">
-								<form class="navbar-search pull-left">
-								<input type="text" class="search-query" placeholder="Search">
-								</form>
-								<button class="btn pull-right" type="button" onClick="tambahDokumen()"><i class="icon-plus"></i></button>
+								<div class="navbar navbar-inner">
+									<form class="navbar-search pull-left">
+										<input type="text" class="search-query" placeholder="Cari Dokumen" id="cari">
+									</form>
+									<button class="btn pull-right" type="button" onClick="tambahDokumen()"><img src="/images/glyphicons/png/glyphicons_190_circle_plus.png" alt=""></i></button>
+								</div>
+								
 								<table class="table">
 									<thead>
 										<tr>
@@ -213,9 +209,9 @@
 											<td><?php echo $row->KATA_KUNCI_DOKUMEN?></td>
 											<td>
 												<div class="btn-group">
-													<button class="btn btn-danger btn-mini" onClick="deleteDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)"><i class="icon-trash icon-white"></i> Hapus</button> 
-													<button class="btn btn-warning btn-mini" onClick="editDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)"><i class="icon-edit icon-white"></i> Edit</button> 
-													<button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+													<button class="btn btn-danger btn-mini" onClick="deleteDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)">Hapus</button> 
+													<button class="btn btn-warning btn-mini" onClick="editDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)"> Edit</button> 
+													<button class="btn btn-success btn-mini">Lihat</button>
 												</div>
 											</td>
 										</tr>
@@ -239,10 +235,12 @@
 								</div>
 							</div>
 							<div class="tab-pane" id="modul">
-								<form class="navbar-search pull-left">
-								<input type="text" class="search-query" placeholder="Search">
-								</form>
-								<button class="btn pull-right" type="button" onClick="tambahDokumen()"><i class="icon-plus"></i></button>
+								<div class="navbar navbar-inner">
+									<form class="navbar-search pull-left">
+										<input type="text" class="search-query" placeholder="Cari Dokumen" id="cari">
+									</form>
+									<button class="btn pull-right" type="button" onClick="tambahDokumen()"><img src="/images/glyphicons/png/glyphicons_190_circle_plus.png" alt=""></i></button>
+								</div>
 								<table class="table">
 									<thead>
 										<tr>
@@ -270,9 +268,9 @@
 											<td><?php echo $row->KATA_KUNCI_DOKUMEN?></td>
 											<td>
 												<div class="btn-group">
-													<button class="btn btn-danger btn-mini" onClick="deleteDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)"><i class="icon-trash icon-white"></i> Hapus</button> 
-													<button class="btn btn-warning btn-mini" onClick="editDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)"><i class="icon-edit icon-white"></i> Edit</button> 
-													<button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i> Lihat</button>
+													<button class="btn btn-danger btn-mini" onClick="deleteDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)">Hapus</button> 
+													<button class="btn btn-warning btn-mini" onClick="editDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)">Edit</button> 
+													<button class="btn btn-success btn-mini">Lihat</button>
 												</div>
 											</td>
 										</tr>
@@ -303,7 +301,7 @@
 			<div class="row-fluid hide" id="form-section">
 				<form class="form-horizontal" id="form-tambah" action="" method="POST" enctype="multipart/form-data">
 					<div class="well span12">
-						<a href="/dosen" class="btn btn-info btn-mini pull-right" onClick="return closeForm()"><i class="icon-remove icon-white"></i></a>
+						<a href="/dosen" class="btn btn-info btn-mini pull-right" onClick="return closeForm()"><img src="/images/glyphicons/png/glyphicons_197_remove.png" alt=""></a>
 						<input type="hidden" name="kategori_dokumen" id="kategori-dokumen" value="jurnal">
 							<input type="hidden" id="id-dokumen" name="id_dokumen" value="">
 						<legend id="form-legend">
@@ -355,8 +353,8 @@
 								</div>
 							</div>
 							<div class="form-actions">
-								<button class="btn btn-info btn-mini" type="button" onClick="return closeForm()"><i class="icon-remove icon-white"></i> Cancel</button>
-								<button class="btn btn-info btn-mini" type="submit" ><i class="icon-ok icon-white" ></i> Simpan</button>
+								<button class="btn btn-info btn-mini" type="button" onClick="return closeForm()"> Cancel</button>
+								<button class="btn btn-info btn-mini" type="submit" >Simpan</button>
 							</div>
 							<hr>
 						</fieldset>
@@ -365,11 +363,12 @@
 			</div>	
 		</div>
 	</div>
-	<footer class="row-fluid">
-		<div class="span12">
+	<!--BAGIAN FOOTER-->
+  	<footer class="row-fluid footer">
+		<div class="well span12">
 			<hr>
-			<img src="/images/favicon.png" class="pull-left" />
-			<span>Created by: <a href="/humans.txt" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span>
+			<center><a href="#"><img src="/images/favicon.png" id="gd"></a><br>
+			<span>Created by: <a href="/humans.txt" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span></center>
 		</div>
 	</footer>
 </div>
