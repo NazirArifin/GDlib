@@ -9,6 +9,12 @@
 	<link href="/third_party/alertify/alertify.core.css" rel="stylesheet" type="text/css">
 	<link href="/third_party/alertify/alertify.default.css" rel="stylesheet" type="text/css">
 	<link href="/static/css/main.css" rel="stylesheet" type="text/css">
+
+	<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
+	<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
+	<script src="/third_party/bootstrap/bootstrap.min.js"></script>
+	<script src="/third_party/alertify/alertify.min.js"></script>
+	<script src="/js/dosen.js"></script>
 	<style type="text/css">
 		body{
 			background-image:url('/images/bg-1.jpg') ;
@@ -119,7 +125,7 @@
 									<form class="navbar-search pull-left">
 										<input type="text" class="search-query" placeholder="Cari Dokumen" id="cari">
 									</form>
-									<button class="btn pull-right" type="button" onClick="tambahDokumen()"><img src="/images/glyphicons/png/glyphicons_190_circle_plus.png" alt=""></button>
+									<button class="btn pull-right" type="button" onClick="tambahDokumen()" id="buka1"><img src="/images/glyphicons/png/glyphicons_190_circle_plus.png" alt=""></button>
 							</div>
 								<table class="table">
 									<thead>
@@ -239,7 +245,7 @@
 									<form class="navbar-search pull-left">
 										<input type="text" class="search-query" placeholder="Cari Dokumen" id="cari">
 									</form>
-									<button class="btn pull-right" type="button" onClick="tambahDokumen()"><img src="/images/glyphicons/png/glyphicons_190_circle_plus.png" alt=""></i></button>
+									<button class="btn pull-right" type="button" onClick="tambahDokumen()" id="buka"><img src="/images/glyphicons/png/glyphicons_190_circle_plus.png" alt=""></i></button>
 								</div>
 								<table class="table">
 									<thead>
@@ -301,12 +307,11 @@
 			<div class="row-fluid hide" id="form-section">
 				<form class="form-horizontal" id="form-tambah" action="" method="POST" enctype="multipart/form-data">
 					<div class="well span12">
-						<a href="/dosen" class="btn btn-info btn-mini pull-right" onClick="return closeForm()"><img src="/images/glyphicons/png/glyphicons_197_remove.png" alt=""></a>
+					<h3>Tambah Dokumen</h3>
+						<a href="#" class="btn btn-mini pull-right" onClick="return closeForm()" id="tutup"><img src="/images/glyphicons/png/glyphicons_197_remove.png" alt=""></a>
 						<input type="hidden" name="kategori_dokumen" id="kategori-dokumen" value="jurnal">
 							<input type="hidden" id="id-dokumen" name="id_dokumen" value="">
-						<legend id="form-legend">
-							
-						</legend>	
+						<hr>	
 							
 						<fieldset>
 							<div class="control-group">
@@ -372,11 +377,11 @@
 		</div>
 	</footer>
 </div>
-	
-	<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
-	<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
-	<script src="/third_party/bootstrap/bootstrap.min.js"></script>
-	<script src="/third_party/alertify/alertify.min.js"></script>
-	<script src="/js/dosen.js"></script>
+<script type="text/javascript">
+$('#buka').attr('title', 'tambah dokumen').tooltip();
+$('#buka1').attr('title', 'tambah dokumen').tooltip();
+$('#tutup').attr('title', 'Tutup').tooltip();
+</script>
+
 </body>
 </html>

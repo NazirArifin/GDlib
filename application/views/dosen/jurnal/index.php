@@ -11,6 +11,12 @@
 			<link rel="stylesheet" href="/third_party/alertify/alertify.default.css" />
 			<link rel="stylesheet" href="/css/style.css" />
 			<link rel="stylesheet" href="/css/main.css" />
+			
+			<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
+			<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
+			<script src="/third_party/bootstrap/bootstrap.min.js"></script>
+			<script src="/third_party/alertify/alertify.min.js"></script>
+			<script src="/js/dosen.js"></script>
     <style type="text/css">
 	#logo {
 		height: 31px;
@@ -30,8 +36,8 @@
 				</button>
 				<a href="/"><img src="/images/logo-gd.png" id="logo-baru" /></a>
 				<ul class="nav pull-right nav-pills">
-					<li><a href="/admin"><img src="/images/glyphicons/png/glyphicons_020_home.png" alt=""> Dashboard</a>
-					<li><a href="/userprofile"><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Profil</a>
+					<li><a href="/dosen"><img src="/images/glyphicons/png/glyphicons_020_home.png" alt=""> Dashboard</a>
+					<li><a href="/dosen/profil"><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Profil</a>
 				  
 				</ul>
 			</div>
@@ -66,8 +72,6 @@
 						<li><a href="/dosen/buku"> Buku</a></li>
 						<li class="divider"></li>
 						<li><a href="/dosen/modul"> Modul</a></li>
-						<li class="divider"></li>
-						<li><a href="/dosen/buletin"> Buletin</a></li>
 						<li class="divider"></li>
 					</ul>
 				</section>
@@ -172,11 +176,7 @@
 		</div>
 	</footer>
 	
-			<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
-			<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
-			<script src="/third_party/bootstrap/bootstrap.min.js"></script>
-			<script src="/third_party/alertify/alertify.min.js"></script>
-			<script src="/js/dosen.js"></script>
+			
 <script type="text/javascript">
 	$('#tombol').attr('title', 'Tambah User').tooltip();
 </script>

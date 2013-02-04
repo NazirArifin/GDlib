@@ -33,7 +33,7 @@
 				</button>
 				<a href="/"><img src="/images/logo-gd.png" id="logo-baru" /></a>
 				<ul class="nav pull-right nav-pills">
-					<li><a href="/admin"><img src="/images/glyphicons/png/glyphicons_020_home.png" alt=""> Dashboard</a>
+					<li><a href="/mahasiswa"><img src="/images/glyphicons/png/glyphicons_020_home.png" alt=""> Dashboard</a>
 					<li><a href="/userprofile"><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Profil</a>
 				  
 				</ul>

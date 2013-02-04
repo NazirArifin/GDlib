@@ -147,18 +147,13 @@
 						<a href="#image" class="thumbnail"><img src="/<?php echo $row->FOTO_DOKUMEN ?>" alt=""/></a>
 					</div>
 					<div class="span8">
-								<h2><?php echo $row->PENGARANG_DOKUMEN ?> </h2>
+								<h2><?php echo $row->JUDUL_DOKUMEN ?> </h2>
+								<h4><?php echo $row->PENGARANG_DOKUMEN ?> </h4>
 								<h4><?php echo $row->TAHUN_PENERBITAN_DOKUMEN ?> </h4>
-								<?php
-								$file = $row->FILE_DOKUMEN;
-								$buka = fopen($file, "r");
-								$baca = fread($buka, 2096);
-								echo $baca;
-								?>
 						<div class="btn-group">
 							<button class="btn btn-mini btn-info" onClick="editDokumenJurnal(this, <?php echo $row->ID_DOKUMEN ?>)"><i class="icon-wrench icon-white"></i> Edit</button>
 							<button class="btn btn-mini btn-info" onClick="deleteDokumenJurnal(this, <?php echo $row->ID_DOKUMEN ?>)"><i class="icon-trash icon-white"></i> Delete</button>
-							<button class="btn btn-mini btn-info" onClick="detailDokumenJurnal(this, <?php echo $row->ID_DOKUMEN ?>)"><i class="icon-map-marker icon-white"></i> Detail</button>
+							<a href="/<?php echo $row->FILE_DOKUMEN ?>" target="_blank" class="btn btn-mini btn-info" onClick="detailDokumenJurnal(this, <?php echo $row->ID_DOKUMEN ?>)"><i class="icon-map-marker icon-white"></i> Lihat</a>
 						</div>
 					</div>
 				</div>
