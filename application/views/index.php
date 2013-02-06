@@ -82,7 +82,7 @@
 		<footer class="row-fluid">
 			<div class="span12 well">
 				<img src="/images/favicon.png" class="pull-left" />
-				<span>Created by: <a href="/humans.txt" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span>
+				<span>Created by: <a href="/creator" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span>
 			</div>
 		</footer>
 	</div>

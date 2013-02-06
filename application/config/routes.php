@@ -82,6 +82,7 @@ $route['mahasiswa/buletin'] = "mahasiswa/buletin";
 // ==================== error
 $route['404_override'] = '';
 
-
+// ==================== creator
+$route['creator'] = "creator";
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

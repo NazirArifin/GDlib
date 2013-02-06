@@ -18,7 +18,9 @@
 		width:255px;
 		margin-top: 15px;
 	}
-
+	.pp{
+	height:150px;
+	width:150px;}
 	</style>
 </head>
 <body>
@@ -44,8 +46,32 @@
 <br>
 <br>
 <div class="container">
-	<div class="well span10">	
-		<img src="/images/rud.jpg" alt="dosen" class="media">
+	<div class="well span11">
+		<div class="navbar">
+			<div class="navbar-inner">
+				<div class="container">
+					<div class="btn-group navbar pull-right">
+						<button class="btn btn-large"><img src="/images/glyphicons/png/glyphicons_410_facebook.png" alt=""></button>
+						<button class="btn btn-large"><img src="/images/glyphicons/png/glyphicons_411_twitter.png" alt=""></button>
+						<button class="btn btn-large"><img src="/images/glyphicons/png/glyphicons_382_google_plus.png" alt=""></button>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	<div class="span2">
+			<img src="/images/rud.jpg" alt="dosen" class="pp">
+		</div>	
+		<div class="span4">
+			<h2>Rudiec Nuada</h2>
+		<h4>Pakong, Pamekasan</h4>
+		<h4><a href="">http://rudiecnuada.blogspot.com</a></h4>
+		<hr>
+		<span>Rating Level</span>
+		<span>Login Terakhir</span>
+		<span>Postingan</span>
+		</div>
+		
 	</div>
 </div>	
 	<script type="text/javascript" src="/third_party/jquery/jquery-1.8.2.min.js"></script>
