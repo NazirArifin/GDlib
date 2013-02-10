@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
 	<meta charset="utf-8">
-	<title>Dosen | Profil</title>
+	<title>Mahasiswa | Profil</title>
 	<link href="/third_party/bootstrap/css/elemento.css" rel="stylesheet" type="text/css">
 	<link href="/third_party/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="/static/css/main.css" />
@@ -18,17 +18,24 @@
 		margin-top: 15px;
 	}
 	#header{
-		background:url('/images/headerdosen.jpg');
+		background:url('/images/header.jpg');
 		background-width:100%;
 	}
 	.pp{
-	margin-left:50px;
+	margin-left:35px;
 	height:150px;
 	width:150px;
+	/*VENDOR*/transform:rotate(4deg);
+	/*VENDOR*/transition:All 1s ease-in;
+	}
+	.pp:hover{
 	border-style:groove;
 	border-width:6px;
 	border-color:#ffffff;
 	border-radius:5px;
+	/*VENDOR*/ box-shadow:0px 0px 7px #000000;
+	/*VENDOR*/transform:rotate(0deg);
+	/*VENDOR*/transition:All 1s ease;
 	}
 	</style>
 </head>
@@ -43,8 +50,8 @@
 				</button>
 				<a href="/"><img src="/images/logo-gd.png" id="logo-baru" /></a>
 				<ul class="nav pull-right nav-pills">
-					<li><a href="/dosen"><img src="/images/glyphicons/png/glyphicons_020_home.png" alt=""> Dashboard</a>
-					<li><a href="/dosen/profil"><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Profil</a>
+					<li><a href="/mahasiswa"><img src="/images/glyphicons/png/glyphicons_020_home.png" alt=""> Dashboard</a>
+					<li><a href="/mahasiswa/mahasiswaprofil"><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Profil</a>
 				  
 				</ul>
 			</div>
@@ -71,36 +78,29 @@
 		<div class="well span8" id="stat">
 			<div class="navbar">
 				<div class="navbar-inner">
-				
 					<div class="container">
-						<h2>Aktivitas</h2>
+					<h2>History</h2>
 					</div>
-				</div>
+				</div>	
 			</div>
 			<hr>
-		<table class="table table-condensed">
-			<thead >
-				<tr class="alert alert-info">
-					<td>Rating Level</td>
-					<td>Login Terakhir</td>
-					<td>Postingan</td>
-				</tr>
-				<tr>
-					<td>5</td>
-					<td>12/07/1992</td>
-					<td>13</td>
-				</tr>
-			</thead>
-		</table>
-			
-
+			<table class="table table-condensed">
+				<thead >
+					<tr class="alert alert-info">
+						<td>Login Terakhir</td>
+						<td>Dokumen yg dibaca</td>
+					</tr>
+					<tr>
+						<td>12/07/1992</td>
+						<td>Judul Dokumen</td>
+					</tr>
+				</thead>
+			</table>
 		</div>
 		<div class="well span4">
 			<div class="navbar">
 				<div class="navbar-inner">
-					<div class="container">
-						<h3>Profil Detail</h3>
-					</div>
+					<div class="container"><h2>Profil Detail</h2></div>
 				</div>
 			</div>
 			<hr>
@@ -111,7 +111,7 @@
 					<img src="/images/glyphicons/png/glyphicons_057_history.png"> Tempat & tanggal lahir
 				  </a>
 				</div>
-				<div id="tetala" class="accordion-body collapse">
+				<div id="tetala" class="accordion-body collapse in">
 				  <div class="accordion-inner">
 					Pamekasan, 13/Mei/1992
 				  </div>
@@ -169,6 +169,7 @@
 		
 		</div>
 	</div>
+</div>
 </div>
 
  	<footer class="row-fluid footer">

@@ -22,7 +22,7 @@
 	height:150px;
 	
 	}
-
+	
 	</style>
 </head>
 <body>
@@ -48,12 +48,12 @@
 <br>
 <br>
 <div class="container">
-	<div class=" span11">
-		<div class="span10">
+	<div class="well span11">
+		<div class="span6" >
 		<h1>Project Manager</h1>
-			<ul class="thumbnails gallery">
+			<ul class="thumbnails gallery" >
 				<li class="thumbnail">
-					<img src="/images/rud.jpg" alt="" class="creator-img">
+					<img src="/images/rud.jpg" alt="" class="creator-img"  >
 					<div class="caption from-top">
 						<h4>Rudiec Nuada</h4>
 						<a href="creator/rudi"><img src="/images/glyphicons/png/glyphicons_343_thumbs_up.png" alt=""></a>

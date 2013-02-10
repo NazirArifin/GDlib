@@ -190,6 +190,9 @@
 			<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
 			<script src="/third_party/bootstrap/bootstrap.min.js"></script>
 			<script src="/third_party/alertify/alertify.min.js"></script>
+			<script src="/third_party/datatable/js/jquery.dataTables.js"></script>
+			<script src="/third_party/datatable/js/jquery.dataTables.min.js"></script>
+			<script src="/third_party/datatable/js/jquery.dataTables.js"></script>
 			<script src="/js/admin.js"></script>
 <script type="text/javascript">
 	$('#tombol').attr('title', 'Tambah Jurnal').tooltip();

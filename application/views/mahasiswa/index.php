@@ -53,7 +53,7 @@
 				<a href="/"><img src="/images/logo-gd.png" id="logo-baru" /></a>
 				<ul class="nav pull-right nav-pills">
 					<li><a href="/mahasiswa"><img src="/images/glyphicons/png/glyphicons_020_home.png" alt=""> Dashboard</a>
-					<li><a href="/userprofile"><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Profil</a>
+					<li><a href="/mahasiswa/profilmahasiswa"><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Profil</a>
 				  
 				</ul>
 			</div>
@@ -103,7 +103,7 @@
 			<div class="navbar navbar-inner">
 				<a class="brand">Dokumen</a>
 					<form class="navbar-search pull-right">
-						<input type="text" class="search-query" placeholder="Cari Dokumen" id="cari">
+						<input type="text" class="search-query" placeholder="Cari Dokumen" id="cari"  data-provide="typeahead" data-items="4" data-source='["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Dakota","North Carolina","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"]'>
 					</form>
 			</div>
 			<ul class="nav nav-tabs" id="tab-dok">
@@ -348,6 +348,13 @@ $('#tab-dok a').click(function (e) {
 $('.download-mahasiswa').attr('title', 'klik untuk mengunduh dokumen').tooltip();
 $('.btn-warning').attr('title', 'klik untuk membaca dokumen').tooltip();
 $('.baca-mahasiswa').attr('title', 'klik untuk melihat detail  dokumen').tooltip();
+
+	$(function(){
+          $('#cari').typeahead({
+             items:4,
+             source: ['Aaaa', 'Abbb', 'Accc', 'aku', 'kamu', 'dia' , 'mereka']
+          });
+     });
 </script>
 </body>
 	

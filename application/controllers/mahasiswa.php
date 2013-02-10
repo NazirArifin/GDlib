@@ -17,6 +17,12 @@ class Mahasiswa extends CI_Controller {
 		jsloc::show();
 		
 	}
+	public function profilmahasiswa()
+	{
+		$this->load->view('mahasiswa/profilmahasiswa',array('controller' => $this));
+		jsloc::show();
+		
+	}
 	
 	
 	public function jurnal($param = '', $extra = '')
