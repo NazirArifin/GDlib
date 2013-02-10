@@ -42,132 +42,107 @@
 				</ul>
 			</div>
 		</div>
-	</div>
-
-	<br>
-	<br>
-	<br>
-<h1 class="three" style="text-align:center;">Jurnal Dosen</h1>
-<div class="container-fluid" id="container">
-	<div class="row-fluid" id="form">
-		<div class="well span3">
-			<div class="member-box">
+</div>
+<br>
+<br>
+<br>
+<br>
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class=" well span3">
+			<div class="well">
 				<ul class="thumbnails">
 					<li class="span12">
-						<a href="#" class="thumbnail"><img src="/images/D_oS.png" alt=""></a>
+						<a href="#" class="thumbnail"><img src="/images/rud.jpg" alt=""></a>
 					</li>
 				</ul>
-				<span>
-					<strong>Administrator</strong><br>
-					<a href="#Setting">Settings</a> | <a href="#">Keluar</a>
+				<span class="label label-inverse">			
+				Username | 0955201554
 				</span>
 			</div>
+			<div class="sidebar-nav">
 			<div class="well">
-				<div class="alert alert-info"><h4>Dokumen</h4></div>	
+				<div class="alert alert-info"><h4>Dokumen</h4></div>
+					
 				<hr>
 				<section class="blog-widget">
 					<ul class="nav nav-pills nav-stacked">
-					  <li><a href="/dosen/jurnal" >Jurnal</a></li>
-						<li class="divider"></li>
-						<li><a href="/dosen/buku"> Buku</a></li>
-						<li class="divider"></li>
-						<li><a href="/dosen/modul"> Modul</a></li>
-						<li class="divider"></li>
+					  <li><a href="/dosen/jurnal">Jurnal</a></li>
+							<li class="divider"></li>
+							<li><a href="/dosen/buku"> Buku</a></li>
+							<li class="divider"></li>
+							<li><a href="/dosen/modul"> Modul</a></li>
+							<li class="divider"></li>
+							<li><a href="/dosen/buletin"> Buletin</a></li>
 					</ul>
 				</section>
 			</div>
-		</div>
-		<div class="well span9 pull-right">
-			<form class="form-horizontal hide" id="form-tambah" action="" method="POST">
-					<a href="#" class="btn btn-mini pull-right" onClick="return tutupJurnal()"><img src="/images/glyphicons/png/glyphicons_197_remove.png" alt=""></a>
-				<fieldset>
-					<legend>Tambah User Dosen</legend>
-				<div class="control-group">
-					<label class="control-label control-label-min" for="nama-user">Nama</label>
-						<div class="controls controls-min">
-							<div class="input-prepend">
-								<span class="add-on"><i class="icon-user"></i></span>
-									<input id="nama-user" name="nama_user" type="text" required="" placeholder="Your Name">
-									<input id="id-user" name="id_user" type="hidden" value="">
-							</div>
-						</div>
-				</div>
-				
-				<div class="control-group">
-					<label class="control-label control-label-min" for="no-induk-user">No. Induk Dosen</label>
-						<div class="controls controls-min">	
-							<div class="input-prepend">
-								<span class="add-on"><i class="icon-tags"></i></span>
-									<input name="no_induk_user" id="no-induk-user" type="text" required="" placeholder="No. Induk User">
-							</div>
-					</div>
-				</div>
-				<div class="control-group">
-					<label class="control-label control-label-min" for="id-facebook">ID Facebook</label>
-						<div class="controls controls-min">	
-							<div class="input-prepend">
-								<span class="add-on"><i class="icon-globe"></i></span>
-									<input name="id_facebook" id="id-facebook" type="text" required="" placeholder="ID Facebook" value="https://www.facebook.com/">
-							</div>
-						</div>
-				</div>
-				<div class="form-actions btn-group">
-					<button href="#" class="btn btn-warning btn-mini" type="button" onClick="return cancel()">Cancel</button>
-					<button  href="#" class="btn btn-success btn-mini" type="button" onClick="return simpanUSerDosen()">Simpan</button>
-				</div>
-				<hr>
-				</fieldset>
-			</form>
-			<div class="container-fluid" id="view">
-				<div class="row-fluid">
-					<div class="navbar navbar-inner">
-						<form class="navbar-search pull-left">
-							<input type="text" class="input-medium search-query"/>
-						</form>
-						<button class="btn pull-right" id="tombol" onClick="return tambahJurnal()"><img src="/images/glyphicons/png/glyphicons_190_circle_plus.png" alt=""></button>
-					</div>
-				</div>
-			<?php
-				$jurnal=$controller->dosen_model->tampilJurnal();
-					if ($jurnal==0):
-						echo '<div class="alert-info" style="text-align:center;">Jurnal Tidak Ada</div>';
-					else: 
-					foreach ($jurnal as $row):
-				?>
-				<div class="row-fluid data-user alert-success">
-						<div class="span4">
-							<a href="#image" class="thumbnail"><img src="/upload/jurnal/<?php echo $row->FOTO_DOKUMEN ?>" alt=""/></a>
-						</div>
-						<div class="span8 btn-group">
-										<h2><?php echo $row->JUDUL_DOKUMEN ?> </h2>
-										<h3><?php echo $row->PENGARANG_DOKUMEN ?> </h3>
-										<h3><?php echo $row->PROLOG_DOKUMEN ?> </h3>
-										
-							<button class="btn btn-mini btn-warning" onClick="editJurnal(this, <?php echo $row->ID_DOKUMEN ?>)">Edit</button>
-							<button class="btn btn-mini btn-danger" >Delete</button>
-							<button class="btn btn-mini btn-info" >Detail</button>
-						</div>
-				</div>
-				<hr>
-					<?php
-					endforeach;
-					endif;
-					?>
-				<div class="pagination row-fluid pagination-centered" id="paging">
-						<ul>
-							<li><a href="#">Prev</a></li>
-							<li class="active"><a href="#">1</a></li>
-							<li><a href="#">2</a></li>
-							<li><a href="#">3</a></li>
-							<li><a href="#">4</a></li>
-							<li><a href="#">Next</a></li>
-						</ul>
-				</div>
 			</div>
 		</div>
-	</div>
+<div class="well span9">
+	<div class="row-fluid">
+		<ul class="breadcrumb">
+			<li class="active"><a href="/dosen">Dosen</a> / Jurnal  </li>
+		</ul>   
+			<div class="navbar navbar-inner">
+				<a class="brand">Jurnal</a>
+					<form class="navbar-search pull-right">
+						<input type="text" class="search-query" placeholder="Cari Jurnal" id="cari">
+					</form>
+			</div>
+			<?php
+				$jurnal=$controller->dosen_model->tampilJurnal();
+				if ($jurnal==0):
+				else:
+					foreach($jurnal as $row):
+			?>	
+			<div class="well span5">
+				<a href="#Doc"><img src="/upload/jurnal/<?php echo $row->FOTO_DOKUMEN?>" class="thumbnail image-list"></a>
+				<h5><?php echo $row->JUDUL_DOKUMEN?> </h5>
+				<p><?php echo $row->PROLOG_DOKUMEN?><br />
+				<div class="btn-group">
+					<button class="btn btn-mini  download-dosen"><img src="/images/glyphicons/png/glyphicons_200_download.png" alt=""></button>
+					<button class="	btn btn-mini  baca-dosen"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>
+				</div>
+			</div>
+			<?php
+					endforeach; 
+				endif;	
+			?>	
+			<!--
+			<div class="well span5">
+				<ul class="thumbnails">
+				  <li class="thumbnail">
+					<img src="/images/2.jpg" class="image-list">
+					<a href="#" class="ribbon ribbon-left">New Item</a>
+				  </li>
+				</ul>
+				<h5>Buku</h5>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...</p><br />
+				<div class="btn-group">
+					<button class="btn btn-mini  download-dosen"><img src="/images/glyphicons/png/glyphicons_200_download.png" alt=""></button>
+					<button class="btn btn-mini  baca-dosen"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>
+				</div>
+			</div>
+			-->
+		<br>
+		
+		<div class="pagination pagination-centered">
+		<ul>
+			<li><a href="#">Prev</a></li>
+			<li class="active">
+			<a href="#">1</a>
+			</li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">Next</a></li>
+			</ul>
+		</div>
+		
+	</div>			
 </div>
-	<!--BAGIAN FOOTER-->
+	 <!--BAGIAN FOOTER-->
   	<footer class="row-fluid footer">
 		<div class="well span12">
 			<hr>
@@ -175,10 +150,15 @@
 			<span>Created by: <a href="/humans.txt" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span></center>
 		</div>
 	</footer>
-	
-			
+
 <script type="text/javascript">
-	$('#tombol').attr('title', 'Tambah User').tooltip();
+$('#tab-dok a').click(function (e) {
+	  e.preventDefault();
+	  $(this).tab('show');
+	})
+$('.download-dosen').attr('title', 'klik untuk mengunduh dokumen').tooltip();
+$('.btn-warning').attr('title', 'klik untuk membaca dokumen').tooltip();
+$('.baca-dosen').attr('title', 'klik untuk melihat detail  dokumen').tooltip();
 </script>
 </body>
 </html>

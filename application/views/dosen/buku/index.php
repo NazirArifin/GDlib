@@ -101,38 +101,31 @@
 			<li class="active"><a href="/dosen">Dosen</a> / Buku  </li>
 		</ul>   
 			<div class="navbar navbar-inner">
-				<a class="brand">Dokumen</a>
+				<a class="brand">Buku</a>
 					<form class="navbar-search pull-right">
-						<input type="text" class="search-query" placeholder="Cari Dokumen" id="cari">
+						<input type="text" class="search-query" placeholder="Cari Buku" id="cari">
 					</form>
 			</div>
+			<?php
+				$buku=$controller->dosen_model->tampilBuku();
+				if ($buku==0):
+				else:
+					foreach($buku as $row):
+			?>	
 			<div class="well span5">
-				<a href="#Doc"><img src="/images/2.jpg" class="thumbnail image-list"></a>
-				<h5>Buku </h5>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
+				<a href="#Doc"><img src="/upload/buku/<?php echo $row->FOTO_DOKUMEN?>" class="thumbnail image-list"></a>
+				<h5><?php echo $row->JUDUL_DOKUMEN?></h5>
+				<p><?php echo $row->PROLOG_DOKUMEN?><br />
 				<div class="btn-group">
 					<button class="btn btn-mini  download-dosen"><img src="/images/glyphicons/png/glyphicons_200_download.png" alt=""></button>
 					<button class="btn btn-mini  baca-dosen"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>
 				</div>
 			</div>
-			<div class="well span5">
-				<a href="#Doc"><img src="/images/2.jpg" class="thumbnail image-list"></a>
-				<h5>Buku</h5>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
-				<div class="btn-group">
-					<button class="btn btn-mini  download-dosen"><img src="/images/glyphicons/png/glyphicons_200_download.png" alt=""></button>
-					<button class="btn btn-mini  baca-dosen"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>
-				</div>
-			</div>
-			<div class="well span5">
-				<a href="#Doc"><img src="/images/2.jpg" class="thumbnail image-list"></a>
-				<h5>Buku</h5>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
-				<div class="btn-group">
-					<button class="btn btn-mini  download-dosen"><img src="/images/glyphicons/png/glyphicons_200_download.png" alt=""></button>
-					<button class="btn btn-mini  baca-dosen"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>
-				</div>
-			</div>
+			<?php
+					endforeach;
+				endif;	
+			?>
+			<!--
 			<div class="well span5">
 				<ul class="thumbnails">
 				  <li class="thumbnail">
@@ -147,6 +140,7 @@
 					<button class="btn btn-mini  baca-dosen"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>
 				</div>
 			</div>
+			-->
 		<br>
 		
 		<div class="pagination pagination-centered">
