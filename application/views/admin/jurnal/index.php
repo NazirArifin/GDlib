@@ -16,6 +16,20 @@
 		height: 31px;
 		margin-top: 2px;
 	}
+	#pagination { overflow: hidden; margin-bottom: 10px; text-align: center; }
+	#pagination a { display: inline-block; padding: 3px 5px; font-size: 14px; color: #333; border-radius: 3px; text-shadow: 0 0 1px #fff;  border: 1px solid #ccc;
+	
+	    background: #ffffff;
+	    background: -moz-linear-gradient(top,  #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+	    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#ededed));
+	    background: -webkit-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+	    background: -o-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+	    background: -ms-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+	    background: linear-gradient(to bottom,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+	    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 );
+	}
+	#pagination a:hover { border: 1px solid #333; }
+	#pagination a.current { color: #f00; }
     </style>
 	
     
@@ -174,6 +188,15 @@
 						<li><a href="#">Next</a></li>
 					</ul>
 				</div>
+				<table class="table">
+					<thead>
+						<th>ID Dokumen</th>
+						<th>Judul Dokumen</th>
+						<th>Kata Kunci Dokumen</th>
+					</thead>
+					<tbody></tbody>
+				</table>
+				<div id="pagination"></div>
 			</div>
 		</div>
 	</div>
@@ -190,10 +213,8 @@
 			<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
 			<script src="/third_party/bootstrap/bootstrap.min.js"></script>
 			<script src="/third_party/alertify/alertify.min.js"></script>
-			<script src="/third_party/datatable/js/jquery.dataTables.js"></script>
-			<script src="/third_party/datatable/js/jquery.dataTables.min.js"></script>
-			<script src="/third_party/datatable/js/jquery.dataTables.js"></script>
 			<script src="/js/admin.js"></script>
+			<script src="/js/paging.js"></script>
 <script type="text/javascript">
 	$('#tombol').attr('title', 'Tambah Jurnal').tooltip();
 </script>
