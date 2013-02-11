@@ -292,6 +292,16 @@ class Admin_model extends CI_Model {
 		$this->db->delete('tb_dokumen', array('ID_DOKUMEN'=>$id));
 	}
 	
+	public function pilihIdDownloadJurnal($id){
+		$this->db->select('FILE_DOKUMEN');
+		$query=$this->db->get_where('tb_dokumen',array('ID_DOKUMEN' => $id));
+		if($query->num_rows()==0){
+			return false;
+		} else {
+			return $query->result();
+		}
+	}
+	
 // buku
 	public function insertBuku($namafile,$namafoto,$ekstensi)
 	{

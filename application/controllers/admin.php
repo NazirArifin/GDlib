@@ -189,10 +189,17 @@ class Admin extends CI_Controller {
 					echo '{ "error": 0, "success": 1 }';
 				}
 				break;
-			case 'delete';
+			case 'delete':
 				$this->admin_model->deleteDokumenJurnal($extra);
 				echo '{ "error": 0, "success": 1 }';
 				return;
+			case 'download':
+				$this->load->helper('download');
+				$nama = $this->input->post('id_dokumen');
+				$a = $this->input->post('id_dokumen');
+				$data = file_get_contents($nama); // filenya
+				force_download($a,$data);
+				break;
 			default:
 			$this->load->view('admin/jurnal/index',array('controller' => $this));
 			jsloc::show();

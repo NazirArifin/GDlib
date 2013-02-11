@@ -41,7 +41,7 @@
 $route['default_controller'] = "welcome";
 
 $route['test'] = "test";
-$route['test/document'] = "test/pagination";
+$route['test/ajax'] = "test/ajax";
 
 // static
 
@@ -87,11 +87,5 @@ $route['404_override'] = '';
 
 // ==================== creator
 $route['creator'] = "creator";
-$route['creator/nazir'] = "creator/nazir";
-$route['creator/rudi'] = "creator/rudi";
-$route['creator/fajrul'] = "creator/fajrul";
-$route['creator/deki'] = "creator/deki";
-$route['creator/habib'] = "creator/habib";
-$route['creator/fawait'] = "creator/fawait";
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

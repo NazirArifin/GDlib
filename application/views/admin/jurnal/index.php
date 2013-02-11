@@ -168,6 +168,8 @@
 							<button class="btn btn-mini btn-info" onClick="editDokumenJurnal(this, <?php echo $row->ID_DOKUMEN ?>)"><i class="icon-wrench icon-white"></i> Edit</button>
 							<button class="btn btn-mini btn-info" onClick="deleteDokumenJurnal(this, <?php echo $row->ID_DOKUMEN ?>)"><i class="icon-trash icon-white"></i> Delete</button>
 							<a href="/<?php echo $row->FILE_DOKUMEN ?>" target="_blank" class="btn btn-mini btn-info" onClick="detailDokumenJurnal(this, <?php echo $row->ID_DOKUMEN ?>)"><i class="icon-map-marker icon-white"></i> Lihat</a>
+							<button class="btn btn-mini btn-info" onClick="downloadDokumenJurnal(this, <?php echo $row->ID_DOKUMEN ?>)"><i class="icon-download icon-white"></i> Download</button>
+							<a href="/admin/jurnal/download" class="btn btn-mini btn-info"><i class="icon-download icon-white"></i> Download</a>
 						</div>
 					</div>
 				</div>
@@ -237,6 +239,7 @@
 			<script src="/third_party/alertify/alertify.min.js"></script>
 			<script src="/js/admin.js"></script>
 			<script src="/js/paging.js"></script>
+			<script src="/js/download.js"></script>
 <script type="text/javascript">
 	$('#tombol').attr('title', 'Tambah Jurnal').tooltip();
 </script>
