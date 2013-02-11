@@ -41,7 +41,7 @@
 $route['default_controller'] = "welcome";
 
 $route['test'] = "test";
-$route['test/ajax'] = "test/ajax";
+$route['test/document'] = "test/pagination";
 
 // static
 
