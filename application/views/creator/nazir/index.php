@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
 	<meta charset="utf-8">
-	<title>Mahasiswa | Profil</title>
+	<title>Creator | Nazir</title>
 	<link href="/third_party/bootstrap/css/elemento.css" rel="stylesheet" type="text/css">
 	<link href="/third_party/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="/static/css/main.css" />
@@ -79,7 +79,6 @@
 				<ul class="nav nav-pills nav-tabs">
                   <li class="active"><a href="#about" data-toggle="tab">About</a></li>
                   <li><a href="#detail" data-toggle="tab">Profil Detail</a></li>
-                  <li><a href="#social" data-toggle="tab">Social Media</a></li>
                 </ul>
 			</div>
 		</div>
@@ -146,10 +145,6 @@
 								<td><a href="http://id.linkedin.com/in/rifdeweb">http://id.linkedin.com/in/rifdeweb</a></td>
 							</tr>
 						</table>
-                  </div>
-				  
-                  <div class="tab-pane" id="social">
-
                   </div>
                 </div>
               </div>

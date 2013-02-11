@@ -4,6 +4,9 @@ MAIN CSS
 body{
 	background-image:url('/images/bg-1.jpg') ;
 	}
+h1, h2, h3, h4, h5, h6, p{
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	}
 .image-admin{
 	height:100px;
 	width:100px;
