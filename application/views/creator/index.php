@@ -17,9 +17,9 @@
 		width:255px;
 		margin-top: 15px;
 	}
-	.creator-img{
-	width:150px;
-	height:150px;
+	.creator{
+	width:260px;
+	height:280px;
 	
 	}
 	
@@ -48,8 +48,69 @@
 <br>
 <br>
 <div class="container">
+	<div class="well span3">
+        <div class="about portrait">
+			<img src="/images/creator/nazir.jpg" class="creator">
+            <div class="social">
+            <a href="/creator/nazir"><img src="/images/glyphicons/png/glyphicons_352_nameplate.png"  class="iconic" data-placement="left"></a>
+            </div>
+			<h3 class="name">Project Manager</h3>
+			<h4 class="label label-inverse name">Nazir Arifin | 09552015xx</h4>
+        </div>
+    </div>
+	<div class="well span3">
+        <div class="about portrait">
+			<img src="/images/rud.jpg">
+            <div class="social">
+            <a href="#"><img src="/images/glyphicons/png/glyphicons_352_nameplate.png"  class="iconic" data-placement="left"></a>
+            </div>
+			<h3 class="name">Designer</h3>
+			<h4 class="label label-important name">Rudi Hartono | 0955201554</h4>
+        </div>
+    </div>
+	<div class="well span3">
+        <div class="about portrait">
+			<img src="/images/creator/fajrul.jpg" class="creator">
+            <div class="social">
+            <a href="#"><img src="/images/glyphicons/png/glyphicons_352_nameplate.png"  class="iconic" data-placement="left"></a>
+            </div>
+			<h3 class="name">Designer</h3>
+			<h4 class="label label-important name">Fajrul Iman A.A | 1155201xxx</h4>
+        </div>
+    </div>
+	<div class="well span3">
+        <div class="about portrait">
+			<img src="/images/creator/habib.jpg" class="creator">
+            <div class="social">
+            <a href="#"><img src="/images/glyphicons/png/glyphicons_352_nameplate.png"  class="iconic" data-placement="left"></a>
+            </div>
+			<h3 class="name">Programmer</h3>
+			<h4 class="label label-info name">Habibullah | 0955201556</h4>
+        </div>
+    </div>
+	<div class="well span3">
+        <div class="about portrait">
+			<img src="/images/creator/deki.jpg">
+            <div class="social">
+            <a href="#"><img src="/images/glyphicons/png/glyphicons_352_nameplate.png"  class="iconic" data-placement="left"></a>
+            </div>
+			<h3 class="name">Programmer</h3>
+			<h4 class="label label-info name">Deki Andi Irawan | 0955201588</h4>
+        </div>
+    </div>
+	<div class="well span3">
+        <div class="about portrait">
+			<img src="/images/creator/fawait.jpg" class="creator">
+            <div class="social">
+            <a href="#"><img src="/images/glyphicons/png/glyphicons_003_user.png" class="iconic" data-placement="left"></a>
+            </div>
+			<h3 class="name">Programmer</h3>
+			<h4 class="label label-info name">Fawait | 0955201607</h4>
+        </div>
+    </div>
+</div>
+<!--<div class="container">
 	<div class="well span11">
-		<div class="span6" >
 		<h1>Project Manager</h1>
 			<ul class="thumbnails gallery" >
 				<li class="thumbnail">
@@ -59,46 +120,36 @@
 						<a href="creator/rudi"><img src="/images/glyphicons/png/glyphicons_343_thumbs_up.png" alt=""></a>
 					</div>
 				</li>
-			</ul>
-		</div>
-		<div class="span10">
-		<h1>Designer</h1>
-			<ul class="thumbnails gallery">
 				<li class="thumbnail">
-					<img src="/images/rud.jpg" alt="" class="creator-img">
+					<img src="/images/rud.jpg" alt="" class="creator-img"  >
 					<div class="caption from-top">
 						<h4>Rudiec Nuada</h4>
 						<a href="creator/rudi"><img src="/images/glyphicons/png/glyphicons_343_thumbs_up.png" alt=""></a>
 					</div>
 				</li>
 				<li class="thumbnail">
-					<img src="/images/rud.jpg" alt="" class="creator-img">
-					<div class="caption from-top">
-						<h4>Rudiec Nuada</h4>
-						<a href="creator/rudi"><img src="/images/glyphicons/png/glyphicons_343_thumbs_up.png" alt=""></a>
-					</div>
-				</li>
-			</ul>
-		</div>
-		<div class="span10">
-		<h1>Programmer</h1>
-			<ul class="thumbnails gallery">
-				<li class="thumbnail">
-					<img src="/images/rud.jpg" alt="" class="creator-img">
+					<img src="/images/rud.jpg" alt="" class="creator-img"  >
 					<div class="caption from-top">
 						<h4>Rudiec Nuada</h4>
 						<a href="creator/rudi"><img src="/images/glyphicons/png/glyphicons_343_thumbs_up.png" alt=""></a>
 					</div>
 				</li>
 				<li class="thumbnail">
-					<img src="/images/rud.jpg" alt="" class="creator-img">
+					<img src="/images/rud.jpg" alt="" class="creator-img"  >
 					<div class="caption from-top">
 						<h4>Rudiec Nuada</h4>
 						<a href="creator/rudi"><img src="/images/glyphicons/png/glyphicons_343_thumbs_up.png" alt=""></a>
 					</div>
 				</li>
 				<li class="thumbnail">
-					<img src="/images/rud.jpg" alt="" class="creator-img">
+					<img src="/images/rud.jpg" alt="" class="creator-img"  >
+					<div class="caption from-top">
+						<h4>Rudiec Nuada</h4>
+						<a href="creator/rudi"><img src="/images/glyphicons/png/glyphicons_343_thumbs_up.png" alt=""></a>
+					</div>
+				</li>
+				<li class="thumbnail">
+					<img src="/images/rud.jpg" alt="" class="creator-img"  >
 					<div class="caption from-top">
 						<h4>Rudiec Nuada</h4>
 						<a href="creator/rudi"><img src="/images/glyphicons/png/glyphicons_343_thumbs_up.png" alt=""></a>
@@ -106,9 +157,19 @@
 				</li>
 			</ul>
 		</div>
-	</div>
-</div>	
-	<script type="text/javascript" src="/third_party/jquery/jquery-1.8.2.min.js"></script>
+</div>	-->
+	<footer class="row-fluid footer">
+		<div class="well span12">
+			<hr>
+			<center><a href="#"><img src="/images/favicon.png" id="gd"></a><br>
+			<span>Created by: <a href="/creator" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span></center>
+		</div>
+	</footer>
+	<script type="text/javascript" src="/third_party/jquery/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="/third_party/bootstrap/bootstrap.min.js"></script>
+	
+	<script type="text/javascript">
+	$('.iconic').attr('title','Lihat profil lengkapku').tooltip();
+	</script>
 </body>
 </html>

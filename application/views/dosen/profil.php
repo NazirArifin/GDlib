@@ -18,8 +18,8 @@
 		margin-top: 15px;
 	}
 	#header{
-		background:url('/images/headerdosen.jpg');
-		background-width:100%;
+		background:url('/images/header-dosen.jpg') no-repeat center center fixed;
+		/*VENDOR*/background-size: cover;
 	}
 	.pp{
 	margin-left:50px;

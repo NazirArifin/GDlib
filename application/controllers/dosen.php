@@ -6,7 +6,7 @@ class Dosen extends CI_Controller {
 		parent::__construct();
 		include(APPPATH . 'libraries/jsloc.php');
 		$this->load->model('dosen_model');
-		$this->load->helper();
+		$this->load->helper('download');
 		$this->load->database();
 		$this->load->library();
 	}
@@ -16,7 +16,12 @@ class Dosen extends CI_Controller {
 		$this->load->view('dosen/index',array('controller' => $this));
 		jsloc::show();
 	}
-	
+	public function download(){
+		$name = 'default.png';
+		$data = file_get_contents("uploads/default.png"); // letak file pada aplikasi kita
+ 
+		force_download($name,$data);
+	}
 	public function dokumen($param = '', $extra = '') {
 		switch ($param) {
 			case 'add':
@@ -103,7 +108,10 @@ class Dosen extends CI_Controller {
 				$this->dosen_model->deleteDokumen($extra);
 				echo '{ "error": 0, "success": 1 }';
 				return;
-				
+			case 'download';
+				$name = $this->input->post('file_dokumen');
+				$data = file_get_contents("upload/jurnal/$name"); // letak file pada aplikasi kita
+				force_download($name,$data);
 			default:
 			$this->load->view('dosen/index',array('controller' => $this));
 			jsloc::show();

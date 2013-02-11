@@ -10,6 +10,7 @@
 	<style type="text/css">
 	body{
 		background:url('/images/bg-1.jpg') ;
+
 		}
 	#logo-baru {
 		position:absolute;
@@ -18,8 +19,8 @@
 		margin-top: 15px;
 	}
 	#header{
-		background:url('/images/header.jpg');
-		background-width:100%;
+		background:url('/images/header-mahasiswa.jpg') no-repeat center center fixed;
+		/*VENDOR*/background-size: cover;
 	}
 	.pp{
 	margin-left:35px;
@@ -51,7 +52,7 @@
 				<a href="/"><img src="/images/logo-gd.png" id="logo-baru" /></a>
 				<ul class="nav pull-right nav-pills">
 					<li><a href="/mahasiswa"><img src="/images/glyphicons/png/glyphicons_020_home.png" alt=""> Dashboard</a>
-					<li><a href="/mahasiswa/mahasiswaprofil"><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Profil</a>
+					<li><a href="/mahasiswa/profilmahasiswa"><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Profil</a>
 				  
 				</ul>
 			</div>
@@ -176,7 +177,7 @@
 		<div class="well span12">
 			<hr>
 			<center><a href="#"><img src="/images/favicon.png" id="gd"></a><br>
-			<span>Created by: <a href="/humans.txt" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span></center>
+			<span>Created by: <a href="/creator" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span></center>
 		</div>
 	</footer>
 	<script type="text/javascript" src="/third_party/jquery/jquery-1.8.2.min.js"></script>

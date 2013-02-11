@@ -109,6 +109,7 @@
 			<?php
 				$buku=$controller->dosen_model->tampilBuku();
 				if ($buku==0):
+					echo '<div class="alert-info" style="text-align:center;">Data Buku Tidak Ada</div>';
 				else:
 					foreach($buku as $row):
 			?>	
@@ -163,7 +164,7 @@
 		<div class="well span12">
 			<hr>
 			<center><a href="#"><img src="/images/favicon.png" id="gd"></a><br>
-			<span>Created by: <a href="/humans.txt" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span></center>
+			<span>Created by: <a href="/creator" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span></center>
 		</div>
 	</footer>
 

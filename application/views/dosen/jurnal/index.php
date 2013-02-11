@@ -93,15 +93,17 @@
 			<?php
 				$jurnal=$controller->dosen_model->tampilJurnal();
 				if ($jurnal==0):
+					echo '<div class="alert-info" style="text-align:center;">Data Jurnal Tidak Ada</div>';
 				else:
 					foreach($jurnal as $row):
 			?>	
 			<div class="well span5">
+			<input name="file_dokumen" id="file-dokumen" value="jurnal">
 				<a href="#Doc"><img src="/upload/jurnal/<?php echo $row->FOTO_DOKUMEN?>" class="thumbnail image-list"></a>
 				<h5><?php echo $row->JUDUL_DOKUMEN?> </h5>
 				<p><?php echo $row->PROLOG_DOKUMEN?><br />
 				<div class="btn-group">
-					<button class="btn btn-mini  download-dosen"><img src="/images/glyphicons/png/glyphicons_200_download.png" alt=""></button>
+					<button class="btn btn-mini  download-dosen"><img src="/images/glyphicons/png/glyphicons_200_download.png"  onClick="download(this,<?php echo $row-> ID_DOKUMEN ?>)" alt=""></button>
 					<button class="	btn btn-mini  baca-dosen"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>
 				</div>
 			</div>
@@ -147,7 +149,7 @@
 		<div class="well span12">
 			<hr>
 			<center><a href="#"><img src="/images/favicon.png" id="gd"></a><br>
-			<span>Created by: <a href="/humans.txt" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span></center>
+			<span>Created by: <a href="/creator" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span></center>
 		</div>
 	</footer>
 

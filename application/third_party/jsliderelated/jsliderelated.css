@@ -2,7 +2,7 @@
 	
     display:none; /*position:fixed;*/
     background-color:#A7BFF2; border:2px solid #779CED;
-    bottom:0; right:-355px; /* left:0; */
+    bottom:0; right:-340px; /* left:0; */
     z-index: 10000;
     /*width:auto; set width of bar to width of entire window*/
     -moz-border-radius-topleft:10px;

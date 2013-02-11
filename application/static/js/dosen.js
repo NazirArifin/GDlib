@@ -53,6 +53,23 @@ function editDokumen(object,id){
 	});
 
 }
+function download(object,id){
+	//console.log('ha');
+	$('#form-legend').text($('#kategori-dokumen').val().toUpperCase());
+	var $form = $('#form-tambah');
+	$.ajax({
+		url: '/dosen/dokumen/data/' + id,
+		dataType: 'json',
+		beforeSend: function(){
+		},
+		success: function(o){
+			//console.log(o);
+			$('#form-tambah').attr('action', '/dosen/dokumen/download');
+			
+		}
+	});
+
+}
 
 function simpanDokumen(object){
 	console.log('ha');

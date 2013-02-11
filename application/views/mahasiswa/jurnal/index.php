@@ -33,7 +33,7 @@
 				<a href="/"><img src="/images/logo-gd.png" id="logo-baru" /></a>
 				<ul class="nav pull-right nav-pills">
 					<li><a href="/mahasiswa"><img src="/images/glyphicons/png/glyphicons_020_home.png" alt=""> Dashboard</a>
-					<li><a href="/userprofile"><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Profil</a>
+					<li><a href="/mahasiswa/profilmahasiswa"><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Profil</a>
 				  
 				</ul>
 			</div>
@@ -203,7 +203,7 @@
 		<div class="well span12">
 			<hr>
 			<center><a href="#"><img src="/images/favicon.png" id="gd"></a><br>
-			<span>Created by: <a href="/humans.txt" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span></center>
+			<span>Created by: <a href="/creator" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span></center>
 		</div>
 	</footer>
 </div>
