@@ -5,14 +5,14 @@ $('#pagination a').live('click', function() {
     var ipp = ($this.data('all')) ? 'All' : 30; // I am returning 30 results per page, change to what you want
 
     $.ajax({
-        url: '/admin_page/users/get_users?page=' + page + '&ipp=' + ipp,
-        dataType: 'json',
+        url: '/admin_page/get_users?page=' + page + '&ipp=' + ipp,
+        //dataType: 'json',
         success: function(response) {
-
+        console.log(response); return;
             for(var i=0; i<response.users.length; i++) {
                 var user = response.users[i];
                 var tr = '<tr>' +
-                            '<td>' + user.id_dokumen + '</td>' +
+                            '<td>' + user.ID_DOKUMEN + '</td>' +
                             '<td>' + user.judul_dokumen + '</td>' +
                             '<td>' + user.kata_kunci_dokumen + '</td>' +
                         '</tr>';

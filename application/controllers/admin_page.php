@@ -7,25 +7,26 @@ class Admin_page extends CI_Controller {
 		include(APPPATH . 'libraries/jsloc.php');
 		$this->load->database();
 		$this->load->helper();
-		$this->load->library();
+		$this->load->library('pagination');
 		$this->load->model('page_admin_dokumen');
 	}
-
-	public function get_users() {
-
-        // pagination
-        $this->load->library('pagination_ajax');
-        $pages = new paginator.class.2;
-        $num_rows = $this->page_admin_dokumen->user_stats(); // this is the COUNT(*) query that gets the total record count from the table you are querying
-        $pages->items_total = $num_rows[0];
-        $pages->mid_range = 10; // number of links you want to show in the pagination before the "..."
-        $pages->paginate();
-
-        $users = $this->page_admin_dokumen->get_users($pages->limit); // your query
-
-        echo json_encode(array(
-            'users' => $users,
-            'pagination' => $pages->display_pages()
-        ));
-
-    }
+	public function news($id=NULL)
+	{
+		$jml = $this->db->get('tb_dokumen');
+		//pengaturan pagination
+		$config['base_url'] = '/admin_page/news';
+		$config['total_rows'] = $jml->num_rows();
+		$config['per_page'] = '1';
+		$config['first_page'] = 'Awal';
+		$config['last_page'] = 'Akhir';
+		$config['next_page'] = '&laquo;';
+		$config['prev_page'] = '&raquo;';
+		//inisialisasi config
+		$this->pagination->initialize($config);
+		//buat pagination
+		$data['halaman'] = $this->pagination->create_links();
+		//tamplikan data
+		$data['query'] = $this->page_admin_dokumen->ambil_dokumen($config['per_page'], $id);
+		$this->load->view('admin/news/index', $data);
+	}
+}

@@ -190,13 +190,35 @@
 				</div>
 				<table class="table">
 					<thead>
+						<th>NO</th>
 						<th>ID Dokumen</th>
 						<th>Judul Dokumen</th>
 						<th>Kata Kunci Dokumen</th>
 					</thead>
-					<tbody></tbody>
+					<tbody>
+					<?php
+					if(empty($query)):
+					?>
+					    <tr><td colspan="4">Data tidak tersedia</td></tr>  
+					<?php
+					else:
+					    $no=1;
+					    foreach($query as $row):
+					?>
+					    <tr>
+						<td><?php echo $no ?></td>
+						<td><?php echo $row->ID_DOKUMEN ?></td>
+						<td><?php echo $row->JUDUL_DOKUMEN ?></td>
+						<td><?php echo $row->KATA_KUNCI_DOKUMEN ?></td>
+					    </tr>
+					    <?php
+					    $no++;
+					    endforeach;
+					endif;
+					?>
+					</tbody>
 				</table>
-				<div id="pagination"></div>
+				<div class="halaman">Halaman : <?php echo $halaman ?></div>
 			</div>
 		</div>
 	</div>

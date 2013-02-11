@@ -199,6 +199,26 @@ class Admin extends CI_Controller {
 		}
 	}
 	
+	public function page_dokumen($id=NULL)
+	{
+		$jml = $this->db->get('tb_dokumen');
+		//pengaturan pagination
+		$config['base_url'] = base_url().'admin/jurnal/index';
+		$config['total_rows'] = $jml->num_rows();
+		$config['per_page'] = '5';
+		$config['first_page'] = 'Awal';
+		$config['last_page'] = 'Akhir';
+		$config['next_page'] = '&laquo;';
+		$config['prev_page'] = '&raquo;';
+		//inisialisasi config
+		$this->pagination->initialize($config);
+		//buat pagination
+		$data['halaman'] = $this->pagination->create_links();
+		//tamplikan data
+		$data['query'] = $this->page_admin_dokumen->ambil_dokumen($config['per_page'], $id);
+		$this->load->view('admin/jurnal/index', $data);
+	}
+	
 	public function buku($param = '', $extra= '')
 	{
 		switch ($param) {
@@ -417,11 +437,11 @@ class Admin extends CI_Controller {
 		jsloc::show();
 	}
 	
-	public function news()
-	{
-		$this->load->view('admin/news/index');
-		jsloc::show();
-	}
+	//public function news()
+	//{
+	//	$this->load->view('admin/news/index');
+	//	jsloc::show();
+	//}
 	
 	public function edit_dokumen()
 	{

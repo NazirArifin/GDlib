@@ -9,11 +9,74 @@
 			<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
 			<link rel="stylesheet" href="/third_party/alertify/alertify.core.css" />
 			<link rel="stylesheet" href="/third_party/alertify/alertify.default.css" />
-			<link rel="stylesheet" href="/css/style.css" />
+			<link rel="stylesheet" href="/css/style.css"/>
+			<link rel="stylesheet" href="/css/paging.css"/>
      <style type="text/css">
 	#logo {
 		height: 31px;
 		margin-top: 2px;
+	}
+/*	.halaman
+	 {
+	 margin:10px;
+	 font-size:11px;
+	 }
+	.halaman a
+	 {
+	    padding:3px;
+	    background:#990000;
+	    -moz-border-radius:5px;
+	    -webkit-border-radius:5px;
+	    border:1px solid #FFA500;
+	    font-size:10px;
+	    font-weight:bold;
+	    color:#FFF;
+	    text-decoration:none;
+	}
+*/
+	div.paging {
+	padding     : 2px;
+	margin      : 2px;
+	text-align  : center;
+	font-family : Tahoma;
+	font-size   : 12px;
+	}
+	div.paging a {
+	    padding             : 2px 6px;
+	    margin-right        : 2px;
+	    border              : 1px solid #DEDFDE;
+	    text-decoration     : none;
+	    color               : #0061DE;
+	    background-position : bottom;
+	}
+	div.paging a:hover {
+	    background-color: #0063dc;
+	    border : 1px solid #fff;
+	    color  : #fff;
+	}
+	div.paging span.current {
+	    border : 1px solid #DEDFDE;
+	    padding      : 2px 6px;
+	    margin-right : 2px;
+	    font-weight  : bold;
+	    color        : #FF0084;
+	}
+	div.paging span.disabled {
+	    padding      : 2px 6px;
+	    margin-right : 2px;
+	    color        : #ADAAAD;
+	    font-weight  : bold;
+	}
+	div.paging span.prevnext {    
+	  font-weight : bold;
+	}
+	div.paging span.prevnext a {
+	     border : none;
+	}
+	div.paging span.prevnext a:hover {
+	    display: block;
+	    border : 1px solid #fff;
+	    color  : #fff;
 	}
     </style>
 	
@@ -76,18 +139,39 @@
 				</form>
 				<button class="btn btn-mini btn-info pull-right" id="tombol" onClick="return tambahModul()"><i class="icon-plus icon-white"></i></button>
 		</div>
-	<div class="pagination" align="center">
-		<ul>
-			<li><a href="#">Prev</a></li>
-			<li class="active">
-			<a href="#">1</a>
-			</li>
-			<li><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">Next</a></li>
-			</ul>
-		</div>
+				<div class="paging"><?php echo $halaman ?></div>
+				    <table class="table">
+					<thead>
+						<th>NO</th>
+						<th>ID Dokumen</th>
+						<th>Judul Dokumen</th>
+						<th>Kata Kunci Dokumen</th>
+					</thead>
+					<tbody>
+					<?php
+					if(empty($query)):
+					?>
+					    <tr><td colspan="4">Data tidak tersedia</td></tr>  
+					<?php
+					else:
+					    $no=1;
+					    foreach($query as $row):
+					?>
+					    <tr>
+						<td><?php echo $no ?></td>
+						<td><?php echo $row->ID_DOKUMEN ?></td>
+						<td><?php echo $row->JUDUL_DOKUMEN ?></td>
+						<td><?php echo $row->KATA_KUNCI_DOKUMEN ?></td>
+					    </tr>
+					    <?php
+					    $no++;
+					    endforeach;
+					endif;
+					?>
+					</tbody>
+				</table>
+				<div class="paging"><?php echo $halaman ?></div>
+	
     </div>
   </div>
 </div>
