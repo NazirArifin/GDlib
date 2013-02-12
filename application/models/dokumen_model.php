@@ -6,15 +6,15 @@ class Dokumen_model extends CI_Model{
 			$$val = $this->input->post($val);
 		
 		$query = $this->db->escape_like_str($query);
-		$where = "`JUDUL_DOKUMEN` LIKE '%{$query}%' OR `PENGARANG_DOKUMEN` LIKE '%{$query}%'";
+		$where = "`JUDUL_DOKUMEN` LIKE '%{$query}%' OR `PENGARANG_DOKUMEN` LIKE '%{$query}%'  OR `ID_KATEGORI_DOKUMEN` LIKE '1'";
 		
-		$query = $this->db->query("SELECT COUNT(`ID_DOKUMEN`) AS `HASIL` FROM `tb_dokumen` WHERE $where");
+		$query = $this->db->query("SELECT COUNT(`ID_DOKUMEN`) AS `HASIL` FROM `tb_dokumen` WHERE $where and ID_KATEGORI_DOKUMEN=1");
 		$total = $query->row()->HASIL;
 		$npage = ceil($total / $dataperpage);
 		
 		$start = $curpage * $dataperpage;
 		$end = $start + $dataperpage;
-		$query = $this->db->query("SELECT `ID_KATEGORI_DOKUMEN`, `JUDUL_DOKUMEN`, `PENGARANG_DOKUMEN`, `TAHUN_PENERBITAN_DOKUMEN` FROM `tb_dokumen` WHERE $where LIMIT $start, $end");
+		$query = $this->db->query("SELECT `ID_KATEGORI_DOKUMEN`, `JUDUL_DOKUMEN`, `PENGARANG_DOKUMEN`, `TAHUN_PENERBITAN_DOKUMEN` FROM `tb_dokumen` WHERE $where and ID_KATEGORI_DOKUMEN=1 LIMIT $start, $end");
 		$hasil = array(
 			'data' => array(),
 			'pagination' => '',

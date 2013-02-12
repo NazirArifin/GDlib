@@ -45,9 +45,10 @@ var Document = {
 		$.ajax({
 			url: Document.url,
 			type: 'POST',
-			dataType: 'json',
+			//dataType: 'json',
 			data: jQuery.param(Document.param),
 			success: function(d) {
+			console.log(d);return;
 				$('#pagination').html(d.pagination);
 				Document.param.numpage = d.numpage;
 				var t = '', dt = {};

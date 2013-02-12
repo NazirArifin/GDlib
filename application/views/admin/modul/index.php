@@ -129,9 +129,9 @@
 					<div class="navbar navbar-inner">
 						<form class="navbar-search pull-left">
 							  <input type="text" id="query" name="query" class="search-query" placeholder="Search">
-							  <button class="btn" onclick="return Document.search()"><i class="icon-search"></i></button>
 						</form>
-						<button class="btn btn-info pull-right" id="tombol" onClick="return tambahModul()"><i class="icon-plus icon-white"></i></button>
+						<button class="btn" id="tombol" onclick="return Document.search()"><i class="icon-search"></i></button>
+						<button class="btn btn-info pull-right" id="tomhbol" onClick="return tambahModul()"><i class="icon-plus icon-white"></i></button>
 					</div>
 				</div>
 				<!-- dari controller -->

@@ -38,6 +38,7 @@ var Document = {
 			dataType: 'json',
 			data: jQuery.param(Document.param),
 			success: function(d) {
+			//console.log(d);return;
 				$('#pagination').html(d.pagination);
 				Document.param.numpage = d.numpage;
 				var t = '', dt = {};
@@ -57,7 +58,3 @@ var Document = {
 $(document).ready(function() {
 	Document.search();
 });
-
-function kata(){
-	
-}
