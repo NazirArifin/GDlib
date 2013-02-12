@@ -99,7 +99,7 @@
 			?>	
 			<div class="well span5">
 			<input name="file_dokumen" id="file-dokumen" value="jurnal">
-				<a href="#Doc"><img src="/upload/jurnal/<?php echo $row->FOTO_DOKUMEN?>" class="thumbnail image-list"></a>
+				<a href="#Doc"><img src="/<?php echo $row->FOTO_DOKUMEN?>" class="thumbnail image-list"></a>
 				<h5><?php echo $row->JUDUL_DOKUMEN?> </h5>
 				<p><?php echo $row->PROLOG_DOKUMEN?><br />
 				<div class="btn-group">

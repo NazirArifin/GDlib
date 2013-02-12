@@ -16,6 +16,16 @@
 		height: 31px;
 		margin-top: 2px;
 	}
+	#screenshot{
+	position:absolute;
+	border:1px solid #ccc;
+	background:#333;
+	padding:5px;
+	display:none;
+	color:#fff;
+	height:150px;
+	width:200px;
+	}
     </style>
 	
     
@@ -128,80 +138,22 @@
 			<div class="container-fluid" id="view">
 				<div class="row-fluid">
 					<div class="navbar navbar-inner">
-						<form class="navbar-search pull-left">
-							  <input type="text" id="query" name="query" class="search-query" placeholder="Search">
-							  <button class="btn" onclick="return Document.search()"><i class="icon-search"></i></button>
+						<form class="navbar-form pull-left">
+							<input id="query" name="query" placeholder="Search" type="text">
+							<button class="btn" onclick="return Document.search()"><i class="icon-search"></i></button>
 						</form>
+						<input id="id-kategori-dokumen" name="id_kategori_dokumen" type="hidden" value="2">
 						<button class="btn btn-info pull-right" id="tombol" onClick="return tambahBuku()"><i class="icon-plus icon-white"></i></button>
 					</div>
 				</div>
-				<!-- dari controller -->
-				<?php
-					$dokumenBuku=$controller->admin_model->tampil_where_kategori_buku();
-					if ($dokumenBuku == 0):
-						echo '<div class="alert-info" style="text-align:center;">Dokumen Buku Tidak Ada</div>';
-					else :
-						foreach ($dokumenBuku as $row):
-				?>
-				<div class="row-fluid data-user alert-info">
-					<table class="table table-bordered table-condensed table-striped">
-							<thead>
-								<tr>
-									<th>ID</th>
-									<th>Judul</th>
-									<th>Pengarang</th>
-									<th>Tahun</th>
-								</tr>
-							</thead>
-							<tbody id="document-data">
-								<tr>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-							</tbody>
-						</table>
-						<hr>
-						<div class="pagination pagination-centered pagination-medium" id="pagination">
-							<ul>
-								<li><a href="">&laquo;</a></li>
-								<li><a href="">1</a></li>
-								<li><a href="">&raquo;</a></li>
-							</ul>
-						</div>
-				<!--	<div class="span4">
-						<a href="#image" class="thumbnail"><img src="/<?php echo $row->FOTO_DOKUMEN ?>" alt=""/></a>
+				<div class="row-fluid data-user">
+					<div class="container-fluid" id="document-data">
+						<!-- tempat output data -->
 					</div>
-					<div class="span8">
-								<h2><?php echo $row->PENGARANG_DOKUMEN ?> </h2>
-								<h4><?php echo $row->TAHUN_PENERBITAN_DOKUMEN ?> </h4>
-						<div class="btn-group">
-							<button class="btn btn-mini btn-info" onClick="editDokumenBuku(this, <?php echo $row->ID_DOKUMEN ?>)"><i class="icon-wrench icon-white"></i> Edit</button>
-							<button class="btn btn-mini btn-info" onClick="deleteDokumenBuku(this, <?php echo $row->ID_DOKUMEN ?>)"><i class="icon-trash icon-white"></i> Delete</button>
-							<button class="btn btn-mini btn-info" onClick="detailDokumenBuku(this, <?php echo $row->ID_DOKUMEN ?>)"><i class="icon-map-marker icon-white"></i> Detail</button>
-						</div>
+					<div class="pagination pagination-centered pagination-medium" id="pagination">
+						<!-- di sini loh paging nya -->
 					</div>
 				</div>
-				<hr>
-				<?php
-					endforeach;
-					endif;
-				?>
-				<div class="pagination" align="center">
-					<ul>
-						<li><a href="#">Prev</a></li>
-						<li class="active">
-						<a href="#">1</a>
-						</li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">Next</a></li>
-					</ul>
-				</div>
-				-->
-			</div>
 		</div>
   </div>
 </div>
@@ -218,6 +170,6 @@
 			<script src="/third_party/bootstrap/bootstrap.min.js"></script>
 			<script src="/third_party/alertify/alertify.min.js"></script>
 			<script src="/js/admin.js"></script>
-			<script src="/js/download.js"></script>
+			<script src="/js/paging.dokumen.js"></script>
 </body>
 </html>

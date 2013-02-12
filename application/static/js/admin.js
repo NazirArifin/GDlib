@@ -208,7 +208,7 @@ function tambahJurnal(){
 
 // edit jurnal
 
-function editDokumenJurnal(object,id){
+function editDokumen1(object,id){
 	var $form = $('#form-tambah');
 	$.ajax({
 		url: '/admin/jurnal/data/' + id,
@@ -230,7 +230,7 @@ function editDokumenJurnal(object,id){
 	});
 }
 
-function deleteDokumenJurnal(object, id){
+function deleteDokumen1(object, id){
 	var $form = $('#form-tambah');
 	$.ajax({
 		url: '/admin/jurnal/delete/' + id,
@@ -260,7 +260,7 @@ function tambahBuku(){
 	
 }
 
-function editDokumenBuku(object,id){
+function editDokumen2(object,id){
 	var $form = $('#form-tambah');
 	$.ajax({
 		url: '/admin/buku/data/' + id,
@@ -282,7 +282,7 @@ function editDokumenBuku(object,id){
 
 }
 
-function deleteDokumenBuku(object, id){
+function deleteDokumen2(object, id){
 	var $form = $('#form-tambah');
 	$.ajax({
 		url: '/admin/buku/delete/' + id,
@@ -312,7 +312,7 @@ function tambahModul(){
 	
 }
 
-function editDokumenModul(object,id){
+function editDokumen3(object,id){
 	var $form = $('#form-tambah');
 	$.ajax({
 		url: '/admin/modul/data/' + id,
@@ -334,7 +334,7 @@ function editDokumenModul(object,id){
 
 }
 
-function deleteDokumenModul(object, id){
+function deleteDokumen3(object, id){
 	var $form = $('#form-tambah');
 	$.ajax({
 		url: '/admin/modul/delete/' + id,
