@@ -1,5 +1,5 @@
 <?php
-class Test_model extends CI_Model{
+class Dokumen_model extends CI_Model{
 	public function search_document() {
 		$input = array('dataperpage', 'query', 'curpage');
 		foreach ($input as $val)
@@ -14,7 +14,7 @@ class Test_model extends CI_Model{
 		
 		$start = $curpage * $dataperpage;
 		$end = $start + $dataperpage;
-		$query = $this->db->query("SELECT `JUDUL_DOKUMEN`, `PENGARANG_DOKUMEN`, `TAHUN_PENERBITAN_DOKUMEN` FROM `tb_dokumen` WHERE $where LIMIT $start, $end");
+		$query = $this->db->query("SELECT `ID_KATEGORI_DOKUMEN`, `JUDUL_DOKUMEN`, `PENGARANG_DOKUMEN`, `TAHUN_PENERBITAN_DOKUMEN` FROM `tb_dokumen` WHERE $where LIMIT $start, $end");
 		$hasil = array(
 			'data' => array(),
 			'pagination' => '',
@@ -23,6 +23,7 @@ class Test_model extends CI_Model{
 		if ($query->num_rows() > 0) {
 			foreach ($query->result() as $row) {
 				$hasil['data'][] = array(
+					'id' => $row->ID_KATEGORI_DOKUMEN,
 					'judul' => $row->JUDUL_DOKUMEN,
 					'pengarang' => $row->PENGARANG_DOKUMEN,
 					'tahun' => $row->TAHUN_PENERBITAN_DOKUMEN

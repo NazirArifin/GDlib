@@ -129,7 +129,8 @@
 				<div class="row-fluid">
 					<div class="navbar navbar-inner">
 						<form class="navbar-search pull-left">
-							  <input type="text" class="search-query" placeholder="Search">
+							  <input type="text" id="query" name="query" class="search-query" placeholder="Search">
+							  <button class="btn" onclick="return Document.search()"><i class="icon-search"></i></button>
 						</form>
 						<button class="btn btn-info pull-right" id="tombol" onClick="return tambahBuku()"><i class="icon-plus icon-white"></i></button>
 					</div>
@@ -143,7 +144,33 @@
 						foreach ($dokumenBuku as $row):
 				?>
 				<div class="row-fluid data-user alert-info">
-					<div class="span4">
+					<table class="table table-bordered table-condensed table-striped">
+							<thead>
+								<tr>
+									<th>ID</th>
+									<th>Judul</th>
+									<th>Pengarang</th>
+									<th>Tahun</th>
+								</tr>
+							</thead>
+							<tbody id="document-data">
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+						<hr>
+						<div class="pagination pagination-centered pagination-medium" id="pagination">
+							<ul>
+								<li><a href="">&laquo;</a></li>
+								<li><a href="">1</a></li>
+								<li><a href="">&raquo;</a></li>
+							</ul>
+						</div>
+				<!--	<div class="span4">
 						<a href="#image" class="thumbnail"><img src="/<?php echo $row->FOTO_DOKUMEN ?>" alt=""/></a>
 					</div>
 					<div class="span8">
@@ -173,6 +200,7 @@
 						<li><a href="#">Next</a></li>
 					</ul>
 				</div>
+				-->
 			</div>
 		</div>
   </div>
@@ -190,5 +218,6 @@
 			<script src="/third_party/bootstrap/bootstrap.min.js"></script>
 			<script src="/third_party/alertify/alertify.min.js"></script>
 			<script src="/js/admin.js"></script>
+			<script src="/js/download.js"></script>
 </body>
 </html>

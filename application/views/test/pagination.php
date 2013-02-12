@@ -15,7 +15,7 @@ var Document = {
 		curpage: 0,
 		numpage: 0
 	},
-	url: '/test/document',
+	url: '/test/pagination',
 	search: function() {
 		this.param.query = $('#query').val();
 		this.param.curpage = 0;

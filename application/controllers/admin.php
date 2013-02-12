@@ -195,35 +195,17 @@ class Admin extends CI_Controller {
 				return;
 			case 'download':
 				$this->load->helper('download');
-				$nama = $this->input->post('id_dokumen');
-				$a = $this->input->post('id_dokumen');
-				$data = file_get_contents($nama); // filenya
-				force_download($a,$data);
+				
+				break;
+			case 'cari':
+				$this->load->database();
+				$this->load->model('dokumen_model');
+				$this->dokumen_model->search_document();
 				break;
 			default:
 			$this->load->view('admin/jurnal/index',array('controller' => $this));
 			jsloc::show();
 		}
-	}
-	
-	public function page_dokumen($id=NULL)
-	{
-		$jml = $this->db->get('tb_dokumen');
-		//pengaturan pagination
-		$config['base_url'] = base_url().'admin/jurnal/index';
-		$config['total_rows'] = $jml->num_rows();
-		$config['per_page'] = '5';
-		$config['first_page'] = 'Awal';
-		$config['last_page'] = 'Akhir';
-		$config['next_page'] = '&laquo;';
-		$config['prev_page'] = '&raquo;';
-		//inisialisasi config
-		$this->pagination->initialize($config);
-		//buat pagination
-		$data['halaman'] = $this->pagination->create_links();
-		//tamplikan data
-		$data['query'] = $this->page_admin_dokumen->ambil_dokumen($config['per_page'], $id);
-		$this->load->view('admin/jurnal/index', $data);
 	}
 	
 	public function buku($param = '', $extra= '')
@@ -326,6 +308,11 @@ class Admin extends CI_Controller {
 				$this->admin_model->deleteDokumenBuku($extra);
 				echo '{ "error": 0, "success": 1 }';
 				return;
+			case 'cari':
+				$this->load->database();
+				$this->load->model('dokumen_model');
+				$this->dokumen_model->search_document();
+				break;
 			default:
 			$this->load->view('admin/buku/index',array('controller' => $this));
 			jsloc::show();
@@ -432,6 +419,11 @@ class Admin extends CI_Controller {
 				$this->admin_model->deleteDokumenModul($extra);
 				echo '{ "error": 0, "success": 1 }';
 				return;
+			case 'cari':
+				$this->load->database();
+				$this->load->model('dokumen_model');
+				$this->dokumen_model->search_document();
+				break;
 			default:
 			$this->load->view('admin/modul/index',array('controller' => $this));
 			jsloc::show();
