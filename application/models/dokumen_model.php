@@ -1,20 +1,20 @@
 <?php
 class Dokumen_model extends CI_Model{
 	public function search_document() {
-		$input = array('dataperpage', 'query', 'curpage');
+		$input = array('dataperpage', 'query', 'curpage', 'kategori');
 		foreach ($input as $val)
 			$$val = $this->input->post($val);
 		
 		$query = $this->db->escape_like_str($query);
-		$where = "`JUDUL_DOKUMEN` LIKE '%{$query}%' OR `PENGARANG_DOKUMEN` LIKE '%{$query}%'  OR `ID_KATEGORI_DOKUMEN` LIKE '1'";
+		$where = "`JUDUL_DOKUMEN` LIKE '%{$query}%' OR `PENGARANG_DOKUMEN` LIKE '%{$query}%'";
 		
-		$query = $this->db->query("SELECT COUNT(`ID_DOKUMEN`) AS `HASIL` FROM `tb_dokumen` WHERE $where and ID_KATEGORI_DOKUMEN=1");
+		$query = $this->db->query("SELECT COUNT(`ID_DOKUMEN`) AS `HASIL` FROM `tb_dokumen` WHERE ($where) and ID_KATEGORI_DOKUMEN = '$kategori'");
 		$total = $query->row()->HASIL;
 		$npage = ceil($total / $dataperpage);
 		
 		$start = $curpage * $dataperpage;
 		$end = $start + $dataperpage;
-		$query = $this->db->query("SELECT `ID_KATEGORI_DOKUMEN`, `JUDUL_DOKUMEN`, `PENGARANG_DOKUMEN`, `TAHUN_PENERBITAN_DOKUMEN` FROM `tb_dokumen` WHERE $where and ID_KATEGORI_DOKUMEN=1 LIMIT $start, $end");
+		$query = $this->db->query("SELECT `ID_KATEGORI_DOKUMEN`, `JUDUL_DOKUMEN`, `PENGARANG_DOKUMEN`, `TAHUN_PENERBITAN_DOKUMEN` FROM `tb_dokumen` WHERE ($where) AND ID_KATEGORI_DOKUMEN = '$kategori' LIMIT $start, $end");
 		$hasil = array(
 			'data' => array(),
 			'pagination' => '',

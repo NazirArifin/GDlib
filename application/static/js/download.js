@@ -3,7 +3,8 @@ var Document = {
 		dataperpage: 4, // jumlah data per halaman
 		query: '',
 		curpage: 0,
-		numpage: 0
+		numpage: 0,
+		kategori: 1,
 	},
 	url: '/admin/jurnal/cari',
 	search: function() {
@@ -38,7 +39,7 @@ var Document = {
 			dataType: 'json',
 			data: jQuery.param(Document.param),
 			success: function(d) {
-			//console.log(d);return;
+				//console.log(d);return;
 				$('#pagination').html(d.pagination);
 				Document.param.numpage = d.numpage;
 				var t = '', dt = {};
