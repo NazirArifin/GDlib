@@ -19,7 +19,7 @@
 	}
 	.creator{
 	width:270px;
-	height:280px;
+	height:250px;
 	
 	}
 	

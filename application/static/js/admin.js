@@ -1,3 +1,31 @@
+$('a[data-toggle="tab"]').on('shown', function (e) {
+	var type = $(e.target).text().toLowerCase();
+	$('#nama-user').val(type);
+	if(type == 'dosen'){
+		$('#level-user').val('2');
+	}
+	else if(type == 'mahasiswa') {
+		$('#level-user').val('3');
+	}
+})
+
+$('a[data-toggle="tabi"]').on('shown', function (e) {
+	var type = $(e.target).text().toLowerCase();
+	$('#nama-kategori').val(type);
+	if(type == 'jurnal'){
+		$('#level-kategori').val('1');
+	}
+	else if(type == 'buku') {
+		$('#level-kategori').val('2');
+	}
+	else if(type == 'modul') {
+		$('#level-kategori').val('3');
+	}
+	else if(type == 'buletin') {
+		$('#level-kategori').val('4');
+	}
+})
+
 //admin dosen
 function tambahDosen(){
 	$('#form-tambah').attr('action', '/admin/dosen/add').show('blind', {} , 2500);
@@ -34,7 +62,7 @@ function dcancel(){
 	});
 }
 
-function editUserDosen(object, id){
+function editUser2(object, id){
 	//alert(id);
 	var $form = $('#form-tambah');
 	
@@ -71,7 +99,7 @@ function simpanUSerDosen(){
 			if (data.success==1){
 				$form.find('input').val('');
 				alertify.success('Data Sudah Tersimpan');
-				header('location:/admin/dosen');
+				window.location = "/admin/dosen";
 			}
 			else {
 				alertify.error('Data Gagal disimpan');
@@ -82,7 +110,7 @@ function simpanUSerDosen(){
 	return false;
 }
 
-function deleteUserDosen(object, id){
+function deleteUser2(object, id){
 //var konfirmasi = confirm("Apakah Anda yakin ingin menghapus Data ini ?");
 	//if (konfirmasi == true){
 	$('#form-tambah').attr('action', '/admin/dosen/delete');
@@ -121,7 +149,7 @@ function tambahMahasiswa(){
 	
 }
 
-function editUserMahasiswa(object, id){
+function editUser3(object, id){
 	var $form = $('#form-tambah');
 	
 	$.ajax({
@@ -156,7 +184,7 @@ function simpanUserMahasiswa(){
 			if (data.success==1){
 				$form.find('input').val('');
 				alertify.success('Data Sudah Tersimpan');
-				window.location = "/admin/dosen";
+				window.location = "/admin/mahasiswa";
 			}
 			else {
 				alertify.error('Data Gagal disimpan');
@@ -166,7 +194,7 @@ function simpanUserMahasiswa(){
 	return false;
 }
 
-function deleteUserMahasiswa(object, id){
+function deleteUser3(object, id){
 //var konfirmasi = confirm("Apakah Anda yakin ingin menghapus Data ini ?");
 	//if (konfirmasi == true){
 	$('#form-tambah').attr('action', '/admin/mahasiswa/delete');
@@ -186,7 +214,7 @@ function deleteUserMahasiswa(object, id){
 				$form.find('input').val('');
 				alertify.success('Data Sudah Terhapus');
 				$('#form-tambah').hide('blind', {} , 1500);
-				window.location = "/admin/dosen";
+				window.location = "/admin/mahasiswa";
 			}
 			else {
 				alertify.error('Data Gagal dihapus');

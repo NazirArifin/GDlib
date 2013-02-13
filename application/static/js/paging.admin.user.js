@@ -4,9 +4,9 @@ var Document = {
 		query: '',
 		curpage: 0,
 		numpage: 0,
-		kategori: this.param = $('#id-kategori-dokumen').val(),
+		level: this.param = $('#level-user').val(),
 	},
-	url: '/admin/dokumen',
+	url: '/admin/user',
 	search: function() {
 		this.param.query = $('#query').val();
 		this.param.curpage = 0;
@@ -45,13 +45,14 @@ var Document = {
 				var t = '', dt = {};
 				for (var i = 0; i < d.data.length; i++) {
 					dt = d.data[i];
-					t += '<div class="row-fluid data-user alert-success"><div class="span4"><a href="#image" class="thumbnail"><img src="/' + dt.foto +'" alt=""/></a></div>' + 
-						 '<div class="span8 btn-group"><h2>' + dt.judul + '</h2>' + 
-						 '<h4>' + dt.pengarang + '</h4>' + 
-						 '<h5>' + dt.tahun + '</h5>' +
-						 '<button class="btn btn-mini btn-warning" onClick="editDokumen'+ dt.id_k +'(this, ' + dt.id + ')"><i class="icon-wrench icon-white"></i> Edit</button>' +
-						 '<button class="btn btn-mini btn-danger" onClick="deleteDokumen'+ dt.id_k +'(this, ' + dt.id + ')"><i class="icon-trash icon-white"></i> Delete</button>' +
-						 '<a href="/' + dt.file + '" target="_blank" class="btn btn-mini btn-info" onClick="detailDokumen'+ dt.id_k +'(this, ' + dt.id + ')"><i class="icon-map-marker icon-white"></i> Lihat</a></div></div><hr>';
+					t += '<tr><td>' + dt.nama +'</td>' + 
+						 '<td>' + dt.induk + '</td>' + 
+						 '<td>' + dt.facebook + '</td>' +
+						 '<td><div class="btn-group">' +
+						 '<button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>' +
+						 '<button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>' +
+						 '<button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>'+
+						 '</div></td></tr>';
 				}
 				$('#document-data').html(t); // id dari tbody tabel data
 			}

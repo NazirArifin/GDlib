@@ -197,11 +197,6 @@ class Admin extends CI_Controller {
 				$this->load->helper('download');
 				
 				break;
-			case 'cari':
-				$this->load->database();
-				$this->load->model('dokumen_model');
-				$this->dokumen_model->search_document();
-				break;
 			default:
 			$this->load->view('admin/jurnal/index',array('controller' => $this));
 			jsloc::show();
@@ -308,11 +303,6 @@ class Admin extends CI_Controller {
 				$this->admin_model->deleteDokumenBuku($extra);
 				echo '{ "error": 0, "success": 1 }';
 				return;
-			case 'cari':
-				$this->load->database();
-				$this->load->model('dokumen_model');
-				$this->dokumen_model->search_document();
-				break;
 			default:
 			$this->load->view('admin/buku/index',array('controller' => $this));
 			jsloc::show();
@@ -419,11 +409,6 @@ class Admin extends CI_Controller {
 				$this->admin_model->deleteDokumenModul($extra);
 				echo '{ "error": 0, "success": 1 }';
 				return;
-			case 'cari':
-				$this->load->database();
-				$this->load->model('dokumen_model');
-				$this->dokumen_model->search_document();
-				break;
 			default:
 			$this->load->view('admin/modul/index',array('controller' => $this));
 			jsloc::show();
@@ -442,9 +427,17 @@ class Admin extends CI_Controller {
 	//	jsloc::show();
 	//}
 	
-	public function edit_dokumen()
+	public function dokumen()
 	{
-		$this->load->view('admin/edit_dokumen');
-		jsloc::show();
+		$this->load->database();
+		$this->load->model('dokumen_model');
+		$this->dokumen_model->search_document();
+	}
+	
+	public function user()
+	{
+		$this->load->database();
+		$this->load->model('user_model');
+		$this->user_model->search_user();
 	}
 }

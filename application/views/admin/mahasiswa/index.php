@@ -102,48 +102,21 @@
 			<div class="container-fluid" id="view">
 				<div class="row-fluid">
 					<div class="navbar navbar-inner">
-						<form class="navbar-search pull-left">
-						  <input type="text" class="search-query" placeholder="Cari mahasiswa">
+						<form class="navbar-form pull-left">
+							<input id="query" name="query" placeholder="Search" type="text">
+							<button class="btn" onclick="return Document.search()"><i class="icon-search"></i></button>
 						</form>
+						<input id="id-level-user" name="id_level_user" type="hidden" value="3">
 						<button class="btn btn-info pull-right" id="tombol" onClick="return tambahMahasiswa()"><i class="icon-plus icon-white"></i></button>
 					</div>
 				</div>
-				<?php
-					$mahasiswa=$controller->admin_model->tampil_where_level_mahasiswa();
-					if($mahasiswa==0):
-						echo '<div class="alert-info" style="text-align:center;">Data Mahasiswa Tidak Ada</div>';
-					else:
-						foreach($mahasiswa as $row):
-				?>
-				<div class="row-fluid data-user alert-success">
-					<div class="span4">
-						<a href="#image" class="thumbnail jurnal-image"><img src="/images/ogo.png" alt=""/></a>
+				<div class="row-fluid data-user">
+					<div class="container-fluid" id="document-data">
+						<!-- tempat output data -->
 					</div>
-					<div class="span8">
-								<h2><?php echo $row->NAMA_USER ?> </h2>
-								<h4><?php echo $row->NO_INDUK_USER ?> </h4>
-								<h5><?php echo $row->ID_FACEBOOK_USER ?> </h5>
-						<button class="btn btn-mini btn-info" onClick="editUserMahasiswa(this, <?php echo $row->ID_USER ?>)"><i class="icon-wrench icon-white"></i> Edit</button>
-						<button class="btn btn-mini btn-info" onClick="deleteUserMahasiswa(this, <?php echo $row->ID_USER ?>)"><i class="icon-trash icon-white"></i> Delete</button>
-						<button class="btn btn-mini btn-info" onClick="detailUserMahasiswa(this, <?php echo $row->ID_USER ?>)"><i class="icon-map-marker icon-white"></i> Detail</button>
+					<div class="pagination pagination-centered pagination-medium" id="pagination">
+						<!-- di sini loh paging nya -->
 					</div>
-				<hr>
-				</div>
-					<?php
-					endforeach;
-					endif;
-					?>
-				<div class="pagination" align="center">
-					<ul>
-						<li><a href="#">Prev</a></li>
-						<li class="active">
-						<a href="#">1</a>
-						</li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">Next</a></li>
-					</ul>
 				</div>
 			</div>
 		</div>
@@ -162,5 +135,6 @@
 			<script src="/third_party/bootstrap/bootstrap.min.js"></script>
 			<script src="/third_party/alertify/alertify.min.js"></script>
 			<script src="/js/admin.js"></script>
+			<script src="/js/paging.user.js"></script>
 </body>
 </html>

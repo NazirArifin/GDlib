@@ -4,9 +4,9 @@ var Document = {
 		query: '',
 		curpage: 0,
 		numpage: 0,
-		kategori: this.param = $('#id-kategori-dokumen').val(),
+		level: this.param = $('#id-level-user').val(),
 	},
-	url: '/admin/dokumen',
+	url: '/admin/user',
 	search: function() {
 		this.param.query = $('#query').val();
 		this.param.curpage = 0;
@@ -45,15 +45,15 @@ var Document = {
 				var t = '', dt = {};
 				for (var i = 0; i < d.data.length; i++) {
 					dt = d.data[i];
-					t += '<div class="row-fluid data-user alert-success"><div class="span4"><a href="#image" class="thumbnail"><img src="/' + dt.foto +'" alt=""/></a></div>' + 
-						 '<div class="span8 btn-group"><h2>' + dt.judul + '</h2>' + 
-						 '<h4>' + dt.pengarang + '</h4>' + 
-						 '<h5>' + dt.tahun + '</h5>' +
-						 '<button class="btn btn-mini btn-warning" onClick="editDokumen'+ dt.id_k +'(this, ' + dt.id + ')"><i class="icon-wrench icon-white"></i> Edit</button>' +
-						 '<button class="btn btn-mini btn-danger" onClick="deleteDokumen'+ dt.id_k +'(this, ' + dt.id + ')"><i class="icon-trash icon-white"></i> Delete</button>' +
-						 '<a href="/' + dt.file + '" target="_blank" class="btn btn-mini btn-info" onClick="detailDokumen'+ dt.id_k +'(this, ' + dt.id + ')"><i class="icon-map-marker icon-white"></i> Lihat</a></div></div><hr>';
+					t += '<div class="row-fluid data-user alert-success"><div class="span4"><a href="#image" class="thumbnail"><img src="/images/ct.jpg" alt=""/></a></div>' + 
+						 '<div class="span8 btn-group"><h2>' + dt.nama + '</h2>' + 
+						 '<h4>' + dt.induk + '</h4>' + 
+						 '<h5>' + dt.facebook + '</h5>' +
+						 '<button class="btn btn-mini btn-warning" onClick="editUser'+ dt.id_l +'(this, ' + dt.id + ')"><i class="icon-wrench icon-white"></i> Edit</button>' +
+						 '<button class="btn btn-mini btn-danger" onClick="deleteUser'+ dt.id_l +'(this, ' + dt.id + ')"><i class="icon-trash icon-white"></i> Delete</button>' +
+						 '<a href="#" class="btn btn-mini btn-info" onClick="detailUser'+ dt.id_l +'(this, ' + dt.id + ')"><i class="icon-map-marker icon-white"></i> Lihat</a></div></div><hr>';
 				}
-				$('#document-data').html(t); // id dari tbody tabel data
+				$('#document-data').html(t);
 			}
 		});
 	}

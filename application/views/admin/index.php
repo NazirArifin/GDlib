@@ -26,8 +26,6 @@
 	width:200px;
 	}
     </style>
-	
-    
 </head>
 <body>
 	<div class="navbar navbar-fixed-top">
@@ -41,8 +39,7 @@
 				<a href="/"><img src="/images/gd.png" id="logo" /></a>
 				<ul class="nav pull-right nav-pills">
 					<li><a href="/admin"><i class="icon-home"></i> Dashboard</a></li>
-					<li><a href="#"><i class="icon-user"></i> Profil</a></li>
-				  
+					<li><a href="#"><i class="icon-user"></i> Profil</a></li>  
 				</ul>
 			</div>
 		</div>
@@ -76,165 +73,114 @@
 					<li><a href="/admin/news" class="btn btn-block btn-warning"><i class="icon-warning-sign icon-white"></i> Berita</a></li>
 				</div>
 			</ul>
-        
-</div>
-    <div class="well span9 pull-right">
-     <!-- menu tab untuk member -->
-		<div class="">
-			<div class="navbar navbar-inner">
-				<a class="brand">Member</a>
-				<form class="navbar-search pull-right">
-					  <input type="text" class="search-query" placeholder="Cari Member">
-				</form>
-			</div>
+        </div>
+		<div class="well span9 pull-right">
+		<!-- menu tab untuk member -->
+			<div class="">
+				<div class="navbar navbar-inner">
+					<a class="brand">Member</a>
+						<form class="navbar-search pull-right">
+							<input type="text" class="search-query" placeholder="Cari Member">
+						</form>
+				</div>
 				 <?php
 					$userDosen=$controller->admin_model->tampil_where_level_dosen();
 					($userDosen == false ? $banyakDosen=0 : $banyakDosen = count($userDosen));
 					$userMahasiswa=$controller->admin_model->tampil_where_level_mahasiswa();
 					($userMahasiswa == false ? $banyakMahasiswa=0 : $banyakMahasiswa = count($userMahasiswa));
 				 ?>
-	 <ul class="nav nav-tabs" id="tab-member">
-	  <li class="active"><a href="#dosen" onClick="return tabAdminDosen()">Dosen <span class="badge badge-info"> <?php echo $banyakDosen ?> </span></a></li>
-	  <li><a href="#maha" onClick="return tabAdminMahasiswa()">Mahasiswa <span class="badge badge-info"> <?php echo $banyakMahasiswa ?> </span></a></li>
-	  
-	</ul>
-	 
-	<div class="tab-content">
-	<!--tab untuk dosen-->
-	  <div class="tab-pane active" id="dosen">
-		<table class="table table-striped">
-		  <thead>
-			<tr>
-			  <th>Nama</th>
-			  <th>No. Induk</th>
-			  <th>ID Facebook</th>
-			  <th>Aksi</th>
-			</tr>
-		  </thead>
-		  <tbody>
-		  <?php
-				$userDosen=$controller->admin_model->tampil_where_level_dosen();
-				if ($userDosen == 0):
-					echo '<tr><td colspan="4"><div class="alert-info" style="text-align:center;">Data Dosen Tidak Ada</div></td></tr>';
-				else :
-					foreach ($userDosen as $row):
-		  ?>
-			<tr>
-			  <td><a href="#" class="screenshot" rel="/images/ct.jpg"><?php echo $row->NAMA_USER ?></a></td>
-			  <td><?php echo $row->NO_INDUK_USER ?></td>
-			  <td><?php echo $row->ID_FACEBOOK_USER ?></td>
-			  <td>
-			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
-			  </div>
-			  </td>
-			</tr>
-			<?php
-				endforeach;
-			endif;
-			?>
-		  </tbody>
-		</table>
-		
-		<div class="pagination pagination-centered">
-			<ul>
-				<li><a href="#">Prev</a></li>
-				<li class="active">
-				<a href="#">1</a>
-				</li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">Next</a></li>
+					<ul class="nav nav-tabs" id="tab-member">
+						<li class="active"><a href="#dosen" data-toggle="tab">Dosen</li>
+						<li><a href="#maha" data-toggle="tab">Mahasiswa<!-- <span class="badge badge-info"> <?php echo $banyakMahasiswa ?></span>--></a></li>
+					</ul>
+					<!-- kuncinya -->
+					<input type="hidden" name="nama_user" id="nama-user" value="dosen">
+					<input type="hidden" id="level-user" name="level_user" value="2">
+					<input type="hidden" name="nama_kategori" id="nama-kategori" value="jurnal">
+					<input type="hidden" id="level-kategori" name="level_kategori" value="1">
+				<div class="tab-content">
+				<!--tab untuk dosen-->
+					<div class="tab-pane active" id="dosen">
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>Nama</th>
+									<th>No. Induk</th>
+									<th>ID Facebook</th>
+									<th>Aksi</th>
+								</tr>
+							</thead>
+							<tbody id="document-data">
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="pagination pagination-centered pagination-medium" id="pagination">
+							<ul>
+								<li><a href="">&laquo;</a></li>
+								<li><a href="">1</a></li>
+								<li><a href="">&raquo;</a></li>
+							</ul>
+						</div>		
+					</div>
+					<!--tab mahasiswa-->
+					<div class="tab-pane" id="maha">
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>Nama</th>
+									<th>No. Induk</th>
+									<th>ID Facebook</th>
+									<th>Aksi</th>
+								</tr>
+							</thead>
+							<tbody id="document-data">
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="pagination pagination-centered pagination-medium" id="pagination">
+							<ul>
+								<li><a href="">&laquo;</a></li>
+								<li><a href="">1</a></li>
+								<li><a href="">&raquo;</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div> 
+			<!--menu tab dokument-->
+			<div class="">
+				<div class="navbar navbar-inner">
+					<a class="brand">Dokumen</a>
+					<form class="navbar-search pull-right">
+						  <input type="text" class="search-query" placeholder="Cari Dokumen">
+					</form>
+				</div>
+					 <?php
+					/* jurnal */$jumlahJurnal=$controller->admin_model->tampil_where_kategori_jurnal();
+					/* jurnal */($jumlahJurnal == false ? $banyakJurnal=0 : $banyakJurnal = count($jumlahJurnal));
+					/* buku */	$jumlahBuku=$controller->admin_model->tampil_where_kategori_buku();
+					/* buku */	($jumlahBuku == false ? $banyakBuku=0 : $banyakBuku = count($jumlahBuku));
+					/* modul */	$jumlahModul=$controller->admin_model->tampil_where_kategori_modul();
+					/* modul */	($jumlahModul == false ? $banyakModul=0 : $banyakModul = count($jumlahModul));
+					 ?>
+				<ul class="nav nav-tabs" id="tab-dok">
+					<li class="active"><a href="#jurnal" data-toggle="tabi">Jurnal<!-- <span class="badge badge-info"> <?php echo $banyakJurnal ?> </span>--></a></li>
+					<li><a href="#buku" data-toggle="tabi">Buku<!-- <span class="badge badge-info"> <?php echo $banyakBuku ?> </span>--></a></li>
+					<li><a href="#modul" data-toggle="tabi">Modul<!-- <span class="badge badge-info"> <?php echo $banyakModul ?> </span>--></a></li>
+					<li><a href="#buletin" data-toggle="tabi">Buletin</a></li>
 				</ul>
-			</div>
-		
-		
-	  </div>
-	  <!--tab mahasiswa-->
-	  <div class="tab-pane" id="maha">
-	  <table class="table table-striped">
-		  <thead>
-			<tr>
-			  <th>Nama</th>
-			  <th>No. Induk</th>
-			  <th>ID Facebook</th>
-			  <th>Aksi</th>
-			</tr>
-		  </thead>
-		  <tbody>
-		  <?php
-				$userMahasiswa=$controller->admin_model->tampil_where_level_mahasiswa();
-				if ($userMahasiswa == 0):
-					echo '<tr><td colspan="4"><div class="alert-info" style="text-align:center;">Data Mahasiswa Tidak Ada</div></td></tr>';
-				else :
-					foreach ($userMahasiswa as $row):
-		  ?>
-			<tr>
-			  <td><a href="#" class="screenshot" rel="images/ct.jpg"><?php echo $row->NAMA_USER ?></a></td>
-			  <td><?php echo $row->NO_INDUK_USER ?></td>
-			  <td><?php echo $row->ID_FACEBOOK_USER ?></td>
-			  <td>
-			  <div class="btn-group">
-			  <button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>
-			  <button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>
-			  <button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
-			  </div>
-			  </td>
-			</tr>
-			<?php
-				endforeach;
-			endif;
-			?>
-		  </tbody>
-		</table>
-		
-		<div class="pagination pagination-centered">
-		<ul>
-			<li><a href="#">Prev</a></li>
-			<li class="active">
-			<a href="#">1</a>
-			</li>
-			<li><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">Next</a></li>
-			</ul>
-		</div>
-		
-	  </div>
-
-	</div>
-	</div> 
-	 <!--menu tab dokument-->
-	 <div class="">
-		<div class="navbar navbar-inner">
-			<a class="brand">Dokumen</a>
-				<form class="navbar-search pull-right">
-					  <input type="text" class="search-query" placeholder="Cari Dokumen">
-				</form>
-		</div>
-		 <?php
-		/* jurnal */	$jumlahJurnal=$controller->admin_model->tampil_where_kategori_jurnal();
-		/* jurnal */	($jumlahJurnal == false ? $banyakJurnal=0 : $banyakJurnal = count($jumlahJurnal));
-		/* buku */	$jumlahBuku=$controller->admin_model->tampil_where_kategori_buku();
-		/* buku */	($jumlahBuku == false ? $banyakBuku=0 : $banyakBuku = count($jumlahBuku));
-		/* modul */	$jumlahModul=$controller->admin_model->tampil_where_kategori_modul();
-		/* modul */	($jumlahModul == false ? $banyakModul=0 : $banyakModul = count($jumlahModul));
-		 ?>
-		<ul class="nav nav-tabs" id="tab-dok">
-			<li class="active"><a href="#jurnal">Jurnal <span class="badge badge-info"> <?php echo $banyakJurnal ?> </span></a></li>
-			<li><a href="#buku">Buku <span class="badge badge-info"> <?php echo $banyakBuku ?> </span></a></li>
-			<li><a href="#modul">Modul <span class="badge badge-info"> <?php echo $banyakModul ?> </span></a></li>
-			<li><a href="#buletin">Buletin</a></li>
-		</ul>
-	 
-	<div class="tab-content">
-	<!--tab untuk jurnal-->
-	  <div class="tab-pane active" id="jurnal">
-		<table class="table">
+				<div class="tab-content">
+				<!--tab untuk jurnal-->
+				<div class="tab-pane active" id="jurnal">
+					<table class="table">
 		  <thead>
 			<tr>
 			  <th>Judul</th>
@@ -519,6 +465,7 @@
 			<script src="/third_party/bootstrap/bootstrap.min.js"></script>
 			<script src="/third_party/jquery/tooltip/main-tooltip.js"></script>
 			<script src="/js/admin.js"></script>
+			<script src="/js/paging.admin.user.js"></script>
 <script type="text/javascript">
 	$('#tab-dok a').click(function (e) {
 	  e.preventDefault();
