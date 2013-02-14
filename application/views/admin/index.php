@@ -482,6 +482,12 @@
 	$('.label-important').attr('title', 'akun sudah tidak aktif').tooltip();
 	$('.label-success').attr('title', 'akun aktif').tooltip();
 	$('.label-warning').attr('title', 'akun ini tidak di kenal').tooltip();
+	
+	$('#tab-member a[data-toggle="tab"]').on('shown', function (e) {
+		e.target // activated tab
+		e.relatedTarget // previous tab
+		Document.search()
+	})
 </script>
 
 </body>
