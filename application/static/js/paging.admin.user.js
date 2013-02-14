@@ -33,6 +33,8 @@ var Document = {
 		return false;
 	},
 	loadData: function() {
+	var a = $('#nama-user').val();
+	alert(a);
 		$.ajax({
 			url: Document.url,
 			type: 'POST',
@@ -40,7 +42,7 @@ var Document = {
 			data: jQuery.param(Document.param),
 			success: function(d) {
 				//console.log(d);return;
-				$('#pagination').html(d.pagination);
+				$('#pagination-' + a).html(d.pagination);
 				Document.param.numpage = d.numpage;
 				var t = '', dt = {};
 				for (var i = 0; i < d.data.length; i++) {
@@ -54,7 +56,9 @@ var Document = {
 						 '<button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>'+
 						 '</div></td></tr>';
 				}
-				$('#document-data').html(t); // id dari tbody tabel data
+				$('#document-' + a).html(t); // id dari tbody tabel data
+			//	console.log($('#document-' + a));return;
+				console.log($('#pagination-' + a));return;
 			}
 		});
 	}

@@ -110,7 +110,7 @@
 									<th>Aksi</th>
 								</tr>
 							</thead>
-							<tbody id="document-data">
+							<tbody id="document-dosen">
 								<tr>
 									<td></td>
 									<td></td>
@@ -118,7 +118,7 @@
 								</tr>
 							</tbody>
 						</table>
-						<div class="pagination pagination-centered pagination-medium" id="pagination">
+						<div class="pagination pagination-centered pagination-medium" id="pagination-dosen">
 							<ul>
 								<li><a href="">&laquo;</a></li>
 								<li><a href="">1</a></li>
@@ -137,7 +137,7 @@
 									<th>Aksi</th>
 								</tr>
 							</thead>
-							<tbody id="document-data">
+							<tbody id="document-mahasiswa">
 								<tr>
 									<td></td>
 									<td></td>
@@ -145,7 +145,7 @@
 								</tr>
 							</tbody>
 						</table>
-						<div class="pagination pagination-centered pagination-medium" id="pagination">
+						<div class="pagination pagination-centered pagination-medium" id="pagination-mahasiswa">
 							<ul>
 								<li><a href="">&laquo;</a></li>
 								<li><a href="">1</a></li>

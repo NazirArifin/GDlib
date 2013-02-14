@@ -2,11 +2,12 @@
 <html lang="id">
 <head>
 	<meta charset="utf-8">
-	<title>Creator | Nazir</title>
+	<title>Creator | Fawait</title>
 	<link href="/third_party/bootstrap/css/elemento.css" rel="stylesheet" type="text/css">
 	<link href="/third_party/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="/static/css/main.css" />
 	<link rel="stylesheet" href="/static/css/style.css" />
+	<link rel="stylesheet" href="/third_party/css-social-buttons-master/css/zocial.css" />
 	<style type="text/css">
 	body{
 		background:url('/images/bg-1.jpg') ;
@@ -23,18 +24,15 @@
 		/*VENDOR*/background-size: cover;
 	}
 	.pp{
-	margin-left:35px;
+	margin:15px;
 	height:160px;
 	width:150px;
-	border-style:groove;
+	border-style:solid;
 	border-width:6px;
-	border-color:#ffffff;
-	border-radius:5px;
-	/*VENDOR*/transform:rotate(4deg);
-	/*VENDOR*/transition:All 1s ease-in;
-	/*VENDOR*/ box-shadow:0px 0px 7px #000000;
-
+	border-color:#000000;
+	/*VENDOR*/ box-shadow: inset 0px 0px 9px #ffffff;
 	}
+	
 	</style>
 </head>
 <body>
@@ -62,93 +60,89 @@
 <div class="container" >
 	<div class="well span11" id="header">
 		<div class="span5">
-				<img src="/images/creator/nazir.jpg" class="pp">
+				<img src="/images/creator/fawait.jpg" class="pp" data-placement="right">
 		</div>
 		<div class="span5">
-			<h2>Nazir Arifin</h2>
-			<h3>09552015xx</h3>
-			<h3>Pamekasan</h3>
+			<h2>Fawait</h2>
+			<h3>0955201607</h3>
+			<h3>Programmer</h3>
 		</div>
 	</div>
 </div>
-<div class="container">
+<div class="container well">
 	<div class="navbar">
 		<div class="navbar-inner">
 			<div class="container">
 			
 				<ul class="nav nav-pills nav-tabs">
-                  <li class="active"><a href="#about" data-toggle="tab">About</a></li>
-                  <li><a href="#detail" data-toggle="tab">Profil Detail</a></li>
+                  <li><a data-toggle="collapse" data-parent="#accordion2" href="#about">About</a></li>
+                  <li><a data-toggle="collapse" data-parent="#accordion2" href="#detail">Profil Detail</a></li>
+                  <li><a data-toggle="collapse" data-parent="#accordion2" href="#sosial">Sosial Media</a></li>
                 </ul>
 			</div>
 		</div>
 	</div>
-	 <div class="well tabbable">
-                <div class="tab-content">
-                  <div class="tab-pane active" id="about">
-						<h1>About</h1>
-						<hr>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi libero ipsum fuga tempore vitae deleniti non veritatis reprehenderit ipsa temporibus cupiditate id eaque assumenda voluptatem quasi totam corporis quisquam ipsam.</p>
-                  </div>
-                  <div class="tab-pane span6" id="detail">
-						<h1>Profil Detail</h1>
-						<hr>
-						<table class="table">
+
+	<div class="accordion" id="accordion2">
+		<div class="accordion-group">
+			<div id="about" class="accordion-body collapse in">
+				<div class="accordion-inner">
+					<h3>About Me</h3>
+					<hr>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium pariatur velit ducimus tempore nam! Neque quos debitis odit explicabo dolore voluptas nobis assumenda recusandae expedita atque harum repellendus vero dolores.</p>
+				</div>
+			</div>
+		</div>
+	  <div class="accordion-group">
+		<div id="detail" class="accordion-body collapse">
+		  <div class="accordion-inner">
+				<h3>Profil Detail</h3>
+				<table class="table">
 							<tr>
 								<td><img src="/images/glyphicons/png/glyphicons_034_old_man.png" alt=""> Nama Lengkap</td>
 								<td>:</td>
-								<td>M.Nazir Arifin</td>
+								<td>Fawait</td>
 							</tr>
 							<tr>
 								<td><img src="/images/glyphicons/png/glyphicons_263_bank.png" alt=""> Alamat</td>
 								<td>:</td>
-								<td>Planet Pluto, Sumenep</td>
+								<td>Pakong Pamekasan
 							</tr>
 							<tr>
 								<td><img src="/images/glyphicons/png/glyphicons_278_birthday_cake.png" alt=""> Tempat & Tgl Lahir</td>
 								<td>:</td>
-								<td>Monaco, 12/09/1996</td>
+								<td>Pamekasan, 13/05/1992</td>
 							</tr>
 							<tr>
 								<td><img src="/images/glyphicons/png/glyphicons_010_envelope.png" alt=""> E-mail</td>
 								<td>:</td>
-								<td>ceylon.rizan@gmail.com</td>
+								<td>rudiec.nuada@gmail.com</td>
 							</tr>
 							<tr>
 								<td><img src="/images/glyphicons/png/glyphicons_163_iphone.png" alt=""> Phone</td>
 								<td>:</td>
-								<td>+6281934936489</td>
-							</tr>
-							<tr>
-								<td><img src="/images/glyphicons/png/glyphicons_410_facebook.png" alt=""> Facebook</td>
-								<td>:</td>
-								<td><a href="https://www.facebook.com/nazzir.arifin">https://www.facebook.com/nazzir.arifin</a></td>
-							</tr>
-							<tr>
-								<td><img src="/images/glyphicons/png/glyphicons_411_twitter.png" alt=""> Twitter</td>
-								<td>:</td>
-								<td><a href="https://twitter.com/">https://twitter.com/nazzir.arifin</a></td>
-							</tr>
-							<tr>
-								<td><img src="/images/glyphicons/png/glyphicons_382_google_plus.png" alt=""> Google+</td>
-								<td>:</td>
-								<td><a href="https://plus.google.com/107344129806379926487">https://plus.google.com/107344129806379926487</a></td>
-							</tr>
-							<tr>
-								<td><img src="/images/glyphicons/png/glyphicons_385_blogger.png" alt=""> Blogger</td>
-								<td>:</td>
-								<td><a href="http://nazoftware.blogspot.com/">http://nazoftware.blogspot.com</a></td>
-							</tr>
-							<tr>
-								<td><img src="/images/glyphicons/png/glyphicons_397_linked_in.png" alt=""> Linked In</td>
-								<td>:</td>
-								<td><a href="http://id.linkedin.com/in/rifdeweb">http://id.linkedin.com/in/rifdeweb</a></td>
+								<td>+6287866171748</td>
 							</tr>
 						</table>
-                  </div>
-                </div>
-              </div>
-
+			
+			</div>
+		</div>
+	</div>
+	<div class="accordion-group">
+		<div id="sosial" class="accordion-body collapse">
+			<div class="accordion-inner">
+				<h3>Sosial Media</h3>
+				<a href="https://www.facebook.com/fawait" class='zocial facebook'>Faylee RC</a>
+				<a href="https://www.twitter.com/Rankclem" class='zocial twitter'>@Rankclem</a>
+				<a href="https://www.plus.google.com/faylee" class='zocial googleplus'>Faylee</a>
+				<a href="https://www.github.com/Fawait" class='zocial github'>Fawait</a>
+				<a href="https://www.facebook.com/nazzir.arifin" class='zocial linkedin'>Nazir Arifin</a>
+			</div>
+		</div>
+	</div>
+	  
+	</div>
+</div>
 </div>
  	<footer class="row-fluid footer">
 		<div class="well span12">
@@ -161,7 +155,12 @@
 	<script type="text/javascript" src="/third_party/bootstrap/bootstrap.min.js"></script>
 	
 <script type="text/javascript">
-
+$('.facebook').attr('title','Facebook').tooltip();
+$('.twitter').attr('title','Twitter ').tooltip();
+$('.googleplus').attr('title','Google+ ').tooltip();
+$('.github').attr('title','Github ').tooltip();
+$('.linkedin').attr('title','Linked in ').tooltip();
+$('.pp').attr('title','hai :D ').tooltip('');
 </script>
 </body>
 </html>

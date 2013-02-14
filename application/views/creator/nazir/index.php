@@ -24,10 +24,10 @@
 		/*VENDOR*/background-size: cover;
 	}
 	.pp{
-	margin-left:35px;
+	margin:15px;
 	height:160px;
 	width:150px;
-	border-style:groove;
+	border-style:solid;
 	border-width:6px;
 	border-color:#ffffff;
 	border-radius:5px;
@@ -63,52 +63,58 @@
 <div class="container" >
 	<div class="well span11" id="header">
 		<div class="span5">
-				<img src="/images/creator/nazir.jpg" class="pp">
+				<img src="/images/creator/nazir.jpg" class="pp" data-placement="right">
 		</div>
 		<div class="span5">
-			<h2>Nazir Arifin</h2>
+			<h2>Nazir</h2>
 			<h3>09552015xx</h3>
-			<h3>Pamekasan</h3>
+			<h3>Project Manager</h3>
 		</div>
 	</div>
 </div>
 <div class="container well">
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="container">
+			
+				<ul class="nav nav-pills nav-tabs">
+                  <li><a data-toggle="collapse" data-parent="#accordion2" href="#about">About</a></li>
+                  <li><a data-toggle="collapse" data-parent="#accordion2" href="#detail">Profil Detail</a></li>
+                  <li><a data-toggle="collapse" data-parent="#accordion2" href="#sosial">Sosial Media</a></li>
+                </ul>
+			</div>
+		</div>
+	</div>
+
 	<div class="accordion" id="accordion2">
+		<div class="accordion-group">
+			<div id="about" class="accordion-body collapse in">
+				<div class="accordion-inner">
+					<h3>About Me</h3>
+					<hr>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium pariatur velit ducimus tempore nam! Neque quos debitis odit explicabo dolore voluptas nobis assumenda recusandae expedita atque harum repellendus vero dolores.</p>
+				</div>
+			</div>
+		</div>
 	  <div class="accordion-group">
-		<div class="accordion-heading">
-		  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-			About
-		  </a>
-		</div>
-		<div id="collapseOne" class="accordion-body collapse in">
+		<div id="detail" class="accordion-body collapse">
 		  <div class="accordion-inner">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium pariatur velit ducimus tempore nam! Neque quos debitis odit explicabo dolore voluptas nobis assumenda recusandae expedita atque harum repellendus vero dolores.</p>
-		  </div>
-		</div>
-	  </div>
-	  <div class="accordion-group">
-		<div class="accordion-heading">
-		  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-			Detail
-		  </a>
-		</div>
-		<div id="collapseTwo" class="accordion-body collapse">
-		  <div class="accordion-inner">
-			<table class="table">
+				<h3>Profil Detail</h3>
+				<table class="table">
 							<tr>
 								<td><img src="/images/glyphicons/png/glyphicons_034_old_man.png" alt=""> Nama Lengkap</td>
 								<td>:</td>
-								<td>Rudi Hartono</td>
+								<td>M.Nazir Arifin</td>
 							</tr>
 							<tr>
 								<td><img src="/images/glyphicons/png/glyphicons_263_bank.png" alt=""> Alamat</td>
 								<td>:</td>
-								<td>Pakong Pamekasan
+								<td>Pluto Lovato
 							</tr>
 							<tr>
 								<td><img src="/images/glyphicons/png/glyphicons_278_birthday_cake.png" alt=""> Tempat & Tgl Lahir</td>
 								<td>:</td>
-								<td>Pamekasan, 13/05/1992</td>
+								<td>Berau 13/05/1992</td>
 							</tr>
 							<tr>
 								<td><img src="/images/glyphicons/png/glyphicons_010_envelope.png" alt=""> E-mail</td>
@@ -118,19 +124,26 @@
 							<tr>
 								<td><img src="/images/glyphicons/png/glyphicons_163_iphone.png" alt=""> Phone</td>
 								<td>:</td>
-								<td>+6285730727537</td>
+								<td>+6281934936489</td>
 							</tr>
 						</table>
-			<hr>
-			<h3>Sosial Media</h3>
-			<a href="https://www.facebook.com/nazzir.arifin" class='zocial facebook'>Nazir Arifin</a>
-			<a href="https://www.facebook.com/nazzir.arifin" class='zocial twitter'>Nazir Arifin</a>
-			<a href="https://www.facebook.com/nazzir.arifin" class='zocial googleplus'>Nazir Arifin</a>
-			<a href="https://www.facebook.com/nazzir.arifin" class='zocial github'>Nazir Arifin</a>
-			<a href="https://www.facebook.com/nazzir.arifin" class='zocial linkedin'>Nazir Arifin</a>
-		  </div>
+			
+			</div>
 		</div>
-	  </div>
+	</div>
+	<div class="accordion-group">
+		<div id="sosial" class="accordion-body collapse">
+			<div class="accordion-inner">
+				<h3>Sosial Media</h3>
+				<a href="https://www.facebook.com/nazzir.arifin" class='zocial facebook'>Nazir Arifin</a>
+				<a href="https://www.facebook.com/nazzir.arifin" class='zocial twitter'>Nazir Arifin</a>
+				<a href="https://www.facebook.com/nazzir.arifin" class='zocial googleplus'>Nazir Arifin</a>
+				<a href="https://www.facebook.com/nazzir.arifin" class='zocial github'>Nazir Arifin</a>
+				<a href="https://www.facebook.com/nazzir.arifin" class='zocial linkedin'>Nazir Arifin</a>
+			</div>
+		</div>
+	</div>
+	  
 	</div>
 </div>
 </div>
@@ -145,7 +158,12 @@
 	<script type="text/javascript" src="/third_party/bootstrap/bootstrap.min.js"></script>
 	
 <script type="text/javascript">
-
+$('.facebook').attr('title','Facebook').tooltip();
+$('.twitter').attr('title','Twitter ').tooltip();
+$('.googleplus').attr('title','Google+ ').tooltip();
+$('.github').attr('title','Github ').tooltip();
+$('.linkedin').attr('title','Linked in ').tooltip();
+$('.pp').attr('title','hai :D ').tooltip('');
 </script>
 </body>
 </html>

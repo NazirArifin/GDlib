@@ -5,8 +5,8 @@
 	<title>Creator</title>
 	<link href="/third_party/bootstrap/css/elemento.css" rel="stylesheet" type="text/css">
 	<link href="/third_party/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="/static/css/main.css" />
-	<link rel="stylesheet" href="/static/css/style.css" />
+	<link rel="stylesheet" href="/static/css/main.css">
+	<link rel="stylesheet" href="/static/css/style.css" >
 	<style type="text/css">
 	body{
 		background:url('/images/bg-1.jpg') ;
@@ -109,7 +109,7 @@
         <div class="about portrait">
 			<img src="/images/creator/fawait.jpg" class="creator">
             <div class="social">
-            <a href="/creator/fawait"><img src="/images/glyphicons/png/glyphicons_003_user.png" class="iconic" data-placement="left"></a>
+            <a href="/creator/fawait"><img src="/images/glyphicons/png/glyphicons_352_nameplate.png" class="iconic" data-placement="left"></a>
             </div>
 			<h3 class="name">Programmer</h3>
 			<h4 class="label label-info name">Fawait | 0955201607</h4>
