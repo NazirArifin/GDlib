@@ -65,5 +65,9 @@ var Document = {
 }
 
 $(document).ready(function() {
-	Document.search();
+	$('a[data-toggle="tab"]').on('shown', function (e) {
+		e.target // activated tab
+		e.relatedTarget // previous tab
+		Dokumen.search()
+	})
 });
