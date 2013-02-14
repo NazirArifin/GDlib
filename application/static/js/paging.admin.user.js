@@ -34,7 +34,7 @@ var Document = {
 	},
 	loadData: function() {
 	var a = $('#nama-user').val();
-	alert(a);
+	//alert(a);
 		$.ajax({
 			url: Document.url,
 			type: 'POST',
@@ -57,8 +57,6 @@ var Document = {
 						 '</div></td></tr>';
 				}
 				$('#document-' + a).html(t); // id dari tbody tabel data
-			//	console.log($('#document-' + a));return;
-				console.log($('#pagination-' + a));return;
 			}
 		});
 	}

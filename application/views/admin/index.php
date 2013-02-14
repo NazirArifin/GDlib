@@ -487,7 +487,9 @@
 		e.target // activated tab
 		e.relatedTarget // previous tab
 		Document.search()
-	})
+	});
+	// cari data dosen pertam kali
+	Document.search()
 </script>
 
 </body>
