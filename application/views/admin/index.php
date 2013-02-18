@@ -15,6 +15,9 @@
 	height: 31px;
 	margin-top: 2px;
 	}
+	.model {
+		font-family:Georgia, "Times New Roman", Times, serif;
+	}
 	#screenshot{
 	position:absolute;
 	border:1px solid #ccc;
@@ -80,12 +83,12 @@
 					<div class="navbar navbar-inner">
 						<a class="brand">Member</a>
 							<form class="navbar-form pull-right" id="form-dosen">
-								<input id="query-dosen" name="query_dosen" placeholder="Search Dosen" type="text">
-								<button class="btn" onclick="return Dosen.search()"><i class="icon-search"></i></button>
+								<input class="model" id="query-dosen" name="query_dosen" placeholder="Search Dosen" type="text">
+								<button class="btn" onClick="return Dosen.search()"><i class="icon-search"></i></button>
 							</form>
 							<form class="navbar-form pull-right hide" id="form-mahasiswa">
-								<input id="query-mahasiswa" name="query_mahasiswa" placeholder="Search Mahasiswa" type="text">
-								<button class="btn" onclick="return Mahasiswa.search()"><i class="icon-search"></i></button>
+								<input class="model" id="query-mahasiswa" name="query_mahasiswa" placeholder="Search Mahasiswa" type="text">
+								<button class="btn" onClick="return Mahasiswa.search()"><i class="icon-search"></i></button>
 							</form>
 					</div>
 						<ul class="nav nav-tabs" id="tab-member">
@@ -154,20 +157,20 @@
 					<div class="navbar navbar-inner">
 						<a class="brand">Dokumen</a>
 							<form class="navbar-form pull-right" id="form-jurnal">
-								<input id="query-jurnal" name="query_jurnal" placeholder="Search Jurnal" type="text">
-								<button class="btn" onclick="return Jurnal.search()"><i class="icon-search"></i></button>
+								<input class="model" id="query-jurnal" name="query_jurnal" placeholder="Search Jurnal" type="text">
+								<button class="btn" onClick="return Jurnal.search()"><i class="icon-search"></i></button>
 							</form>
 							<form class="navbar-form pull-right hide" id="form-buku">
-								<input id="query-buku" name="query_buku" placeholder="Search Buku" type="text">
-								<button class="btn" onclick="return Buku.search()"><i class="icon-search"></i></button>
+								<input class="model" id="query-buku" name="query_buku" placeholder="Search Buku" type="text">
+								<button class="btn" onClick="return Buku.search()"><i class="icon-search"></i></button>
 							</form>
 							<form class="navbar-form pull-right hide" id="form-modul">
-								<input id="query-modul" name="query_modul" placeholder="Search Modul" type="text">
-								<button class="btn" onclick="return Modul.search()"><i class="icon-search"></i></button>
+								<input class="model" id="query-modul" name="query_modul" placeholder="Search Modul" type="text">
+								<button class="btn" onClick="return Modul.search()"><i class="icon-search"></i></button>
 							</form>
 							<form class="navbar-form pull-right hide" id="form-buletin">
-								<input id="query-buletin" name="query_buletin" placeholder="Search Buletin" type="text">
-								<button class="btn" onclick="return Buletin.search()"><i class="icon-search"></i></button>
+								<input class="model" id="query-buletin" name="query_buletin" placeholder="Search Buletin" type="text">
+								<button class="btn" onClick="return Buletin.search()"><i class="icon-search"></i></button>
 							</form>
 					</div>
 						<ul class="nav nav-tabs" id="tab-dok">

@@ -226,7 +226,7 @@ function editDokumen1(object,id){
 			$('#tahun-penerbitan-jurnal').val(o[0].TAHUN_PENERBITAN_DOKUMEN);
 			$('#kata-kunci-jurnal').val(o[0].KATA_KUNCI_DOKUMEN);
 			//window.location = "/admin/edit_dokumen";
-	}
+		}
 	});
 }
 
@@ -308,8 +308,7 @@ function deleteDokumen2(object, id){
 
 //Modul
 function tambahModul(){
-	$('#form-tambah').attr('action', '/admin/modul/add').show('blind', {} , 2500);
-	
+	$('#form-tambah').attr('action', '/admin/modul/add').show('blind', {} , 2500);	
 }
 
 function editDokumen3(object,id){
@@ -356,4 +355,9 @@ function deleteDokumen3(object, id){
 	});
 	//}
 	return false;
+}
+
+//===== NEWS ========
+function tambahNews(){
+	$('#form-tambah').attr('action', '/admin/news/add').show('blind', {} , 2500);	
 }

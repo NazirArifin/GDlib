@@ -417,11 +417,52 @@ class Admin extends CI_Controller {
 		jsloc::show();
 	}
 	
-	//public function news()
-	//{
-	//	$this->load->view('admin/news/index');
-	//	jsloc::show();
-	//}
+	public function news($param = '', $extra = '')
+	{
+		switch($param){
+			case 'add':
+					//upload foto news
+					$this->load->library('upload');
+					$config['upload_path']='./upload/news';
+					$config['allowed_types']='jpg|jpeg|png';
+					$config['encrypt_name']=TRUE;
+					$this->upload->initialize($config);
+					if($this->upload->do_upload('gambar_news'))
+					{
+						$data=$this->upload->data();
+						$gambar['image_library'] = 'gd2';
+						$gambar['source_image'] = './upload/news/' . $data['file_name'];
+						$gambar['create_thumb'] = FALSE;
+						$gambar['maintain_ratio'] = TRUE;
+						$gambar['width'] = 50;
+						$gambar['height'] = 50;
+						$this->load->library('image_lib',$gambar);
+						$this->image_lib->resize();
+						$namafoto='./upload/news/' . $data['file_name'];
+					}
+					else
+					{
+						echo $this->upload->display_errors();
+					}
+					$this->admin_model->insertNews($namafoto);
+					header('location:/admin/news');
+			break;
+			case 'data':
+			break;
+			case 'update':
+			break;
+			case 'delete':
+			break;
+			case 'tampil':
+				$this->load->database();
+				$this->load->model('news_model');
+				$this->news_model->search_news();
+			break;
+			default:
+				$this->load->view('admin/news/index');
+				jsloc::show();
+		}
+	}
 	
 	public function dokumen($param = '')
 	{

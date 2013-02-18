@@ -614,4 +614,15 @@ class Admin_model extends CI_Model {
 	public function deleteDokumenModul($id){
 		$this->db->delete('tb_dokumen', array('ID_DOKUMEN'=>$id));
 	}
+	
+// ========= NEWS ============
+	public function insertNews($namafoto)
+	{
+		$insert=array(
+			'JUDUL_NEWS'=>$this->input->post('judul_news'),
+			'ISI_NEWS'=>$this->input->post('isi_news'),
+			'GAMBAR_NEWS'=>$namafoto,
+			'STATUS_NEWS'=>'1');
+		$this->db->insert('tb_news',$insert);
+	}
 }

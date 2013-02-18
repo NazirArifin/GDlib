@@ -1,6 +1,6 @@
 var Jurnal = {
 	param: {
-		dataperpage: 2, // jumlah data per halaman
+		dataperpage: 4, // jumlah data per halaman
 		query: '',
 		curpage: 0,
 		numpage: 0,
@@ -62,7 +62,7 @@ var Jurnal = {
 
 var Buku = {
 	param: {
-		dataperpage: 2, // jumlah data per halaman
+		dataperpage: 4, // jumlah data per halaman
 		query: '',
 		curpage: 0,
 		numpage: 0,
@@ -124,7 +124,7 @@ var Buku = {
 
 var Modul = {
 	param: {
-		dataperpage: 2, // jumlah data per halaman
+		dataperpage: 4, // jumlah data per halaman
 		query: '',
 		curpage: 0,
 		numpage: 0,

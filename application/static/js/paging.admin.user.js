@@ -1,6 +1,6 @@
 var Dosen = {
 	param: {
-		dataperpage: 2, // jumlah data per halaman
+		dataperpage: 4, // jumlah data per halaman
 		query: '',
 		curpage: 0,
 		numpage: 0,
@@ -62,7 +62,7 @@ var Dosen = {
 
 var Mahasiswa = {
 	param: {
-		dataperpage: 2, // jumlah data per halaman
+		dataperpage: 4, // jumlah data per halaman
 		query: '',
 		curpage: 0,
 		numpage: 0,
