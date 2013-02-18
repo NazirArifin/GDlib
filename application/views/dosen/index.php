@@ -371,8 +371,7 @@
 		</div>
 	</footer>
 </div>
-<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
-	<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
+	<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
 	<script src="/third_party/bootstrap/bootstrap.min.js"></script>
 	<script src="/third_party/alertify/alertify.min.js"></script>
 	<script src="/js/dosen.js"></script>

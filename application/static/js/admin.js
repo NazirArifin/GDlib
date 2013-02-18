@@ -1,31 +1,3 @@
-$('a[data-toggle="tab"]').on('shown', function (e) {
-	var type = $(e.target).text().toLowerCase();
-	$('#nama-user').val(type);
-	if(type == 'dosen'){
-		$('#level-user').val('2');
-	}
-	else if(type == 'mahasiswa') {
-		$('#level-user').val('3');
-	}
-})
-
-$('a[data-toggle="tabi"]').on('shown', function (e) {
-	var type = $(e.target).text().toLowerCase();
-	$('#nama-kategori').val(type);
-	if(type == 'jurnal'){
-		$('#level-kategori').val('1');
-	}
-	else if(type == 'buku') {
-		$('#level-kategori').val('2');
-	}
-	else if(type == 'modul') {
-		$('#level-kategori').val('3');
-	}
-	else if(type == 'buletin') {
-		$('#level-kategori').val('4');
-	}
-})
-
 //admin dosen
 function tambahDosen(){
 	$('#form-tambah').attr('action', '/admin/dosen/add').show('blind', {} , 2500);

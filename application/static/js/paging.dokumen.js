@@ -6,7 +6,7 @@ var Document = {
 		numpage: 0,
 		kategori: this.param = $('#id-kategori-dokumen').val(),
 	},
-	url: '/admin/dokumen',
+	url: '/admin/dokumen/dokumenAll',
 	search: function() {
 		this.param.query = $('#query').val();
 		this.param.curpage = 0;

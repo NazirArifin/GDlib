@@ -6,7 +6,7 @@ var Document = {
 		numpage: 0,
 		level: this.param = $('#id-level-user').val(),
 	},
-	url: '/admin/user',
+	url: '/admin/user/dosenMahasiswa',
 	search: function() {
 		this.param.query = $('#query').val();
 		this.param.curpage = 0;

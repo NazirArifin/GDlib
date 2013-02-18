@@ -193,10 +193,6 @@ class Admin extends CI_Controller {
 				$this->admin_model->deleteDokumenJurnal($extra);
 				echo '{ "error": 0, "success": 1 }';
 				return;
-			case 'download':
-				$this->load->helper('download');
-				
-				break;
 			default:
 			$this->load->view('admin/jurnal/index',array('controller' => $this));
 			jsloc::show();
@@ -427,17 +423,50 @@ class Admin extends CI_Controller {
 	//	jsloc::show();
 	//}
 	
-	public function dokumen()
+	public function dokumen($param = '')
 	{
-		$this->load->database();
-		$this->load->model('dokumen_model');
-		$this->dokumen_model->search_document();
+		switch($param){
+			case 'dokumenAll':
+				$this->load->database();
+				$this->load->model('dokumen_model');
+				$this->dokumen_model->search_document();
+			break;
+			case 'jurnal':
+				$this->load->database();
+				$this->load->model('dokumen_model');
+				$this->dokumen_model->search_document_jurnal();
+			break;
+			case 'buku':
+				$this->load->database();
+				$this->load->model('dokumen_model');
+				$this->dokumen_model->search_document_buku();
+			break;
+			case 'modul':
+				$this->load->database();
+				$this->load->model('dokumen_model');
+				$this->dokumen_model->search_document_modul();
+			break;
+		}
 	}
 	
-	public function user()
+	public function user($param = '')
 	{
-		$this->load->database();
-		$this->load->model('user_model');
-		$this->user_model->search_user();
+		switch($param){
+			case 'dosenMahasiswa':
+				$this->load->database();
+				$this->load->model('user_model');
+				$this->user_model->search_user();
+			break;
+			case 'dosen':
+				$this->load->database();
+				$this->load->model('user_model');
+				$this->user_model->search_user_dosen();
+			break;
+			case 'mahasiswa':
+				$this->load->database();
+				$this->load->model('user_model');
+				$this->user_model->search_user_mahasiswa();
+			break;
+		}
 	}
 }
