@@ -616,13 +616,72 @@ class Admin_model extends CI_Model {
 	}
 	
 // ========= NEWS ============
-	public function insertNews($namafoto)
+	public function insertNews($namafoto,$tanggal)
 	{
 		$insert=array(
 			'JUDUL_NEWS'=>$this->input->post('judul_news'),
 			'ISI_NEWS'=>$this->input->post('isi_news'),
 			'GAMBAR_NEWS'=>$namafoto,
-			'STATUS_NEWS'=>'1');
+			'STATUS_NEWS'=>'1',
+			'JAM_NEWS'=>$tanggal);
 		$this->db->insert('tb_news',$insert);
+	}
+	
+	public function pilihIdNews($id){
+		$this->db->select('ID_NEWS,JUDUL_NEWS,ISI_NEWS,GAMBAR_NEWS,STATUS_NEWS,JAM_NEWS');
+		$query=$this->db->get_where('tb_news',array('ID_NEWS' => $id));
+		if ($query->num_rows()==0){
+			return false;
+		}
+		else{
+			return $query->result();
+		}
+	}
+	
+	public function editNews($id){
+		$this->load->library('upload');
+		$config['upload_path']='./upload/news';
+		$config['allowed_types']='jpg|jpeg|png';
+		$config['encrypt_name']=TRUE;
+		$this->upload->initialize($config);
+		if($this->upload->do_upload('gambar_news'))
+		{
+			$data=$this->upload->data();
+			$gambar['image_library'] = 'gd2';
+			$gambar['source_image'] = './upload/news/' . $data['file_name'];
+			$gambar['create_thumb'] = FALSE;
+			$gambar['maintain_ratio'] = TRUE;
+			$gambar['width'] = 150;
+			$gambar['height'] = 150;
+			$this->load->library('image_lib',$gambar);
+			$this->image_lib->resize();
+			$namafoto='./upload/news/' . $data['file_name'];
+			
+			// ==== SET JAM UPLOAD =====
+			$waktu1 = "%d-%m-%Y %H:%i";
+			$time = time()+60*60*6;
+			$tanggal = mdate($waktu1, $time);
+			//$jam = mdate($waktu2, $time);
+		}
+		else
+		{
+			echo $this->upload->display_errors();
+		}
+		
+		$update=array(
+			'ID_NEWS'=>$this->input->post('id_news'),
+			'JUDUL_NEWS'=>$this->input->post('judul_news'),
+			'ISI_NEWS'=>$this->input->post('isi_news'),
+			'GAMBAR_NEWS'=>$namafoto,
+			'STATUS_NEWS'=>'1',
+			'JAM_NEWS'=>$tanggal);
+			
+		$this->db->where('ID_NEWS',$id);
+		$this->db->update('tb_news',$update);
+		return true;
+	}
+	
+	public function deleteNews($id){
+		$this->db->delete('tb_news', array('ID_NEWS'=>$id));
 	}
 }

@@ -1,6 +1,6 @@
 var News = {
 	param: {
-		dataperpage: 4, // jumlah data per halaman
+		dataperpage: 3, // jumlah data per halaman
 		query: '',
 		curpage: 0,
 		numpage: 0,
@@ -45,8 +45,8 @@ var News = {
 				var t = '', dt = {};
 				for (var i = 0; i < d.data.length; i++) {
 					dt = d.data[i];
-					t += '<div class="row-fluid data-user alert-success"><div class="span4"><a href="#image" class="thumbnail"><img src="/' + dt.gambar + '" alt=""/></a></div>' + 
-						 '<div class="span8 btn-group"><h2>' + dt.judulnews + '</h2>' + 
+					t += '<div class="row-fluid data-user alert-success"><div class="span4"><a href="#image" class="thumbnail"><img src="/' + dt.gambar + '" alt=""/></a></div>' +
+						 '<div class="span8 btn-group"><h5 class="pull-right"><img src="/images/glyphicons/png/glyphicons_057_history.png" alt="">  ' + dt.jam + '</h5><h2>' + dt.judulnews + '</h2>' + 
 						 '<h4>' + dt.isi + '</h4>' + 
 						 '<h5>' + dt.status + '</h5>' +
 						 '<button class="btn btn-mini btn-warning" onClick="editNews(this, ' + dt.idnews + ')"><i class="icon-wrench icon-white"></i> Edit</button>' +

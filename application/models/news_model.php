@@ -27,7 +27,8 @@ class News_model extends CI_Model{
 					'judulnews' => $row->JUDUL_NEWS,
 					'isi' => $row->ISI_NEWS,
 					'gambar' => $row->GAMBAR_NEWS,
-					'status' => $row->STATUS_NEWS
+					'status' => $row->STATUS_NEWS,
+					'jam' => $row->JAM_NEWS
 				);
 			}
 		}

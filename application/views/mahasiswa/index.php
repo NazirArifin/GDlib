@@ -38,6 +38,13 @@
 			width:255px;
 			margin-top: 15px;
 		}
+		.image-list{
+			width:100px;
+			height:100px;
+		}
+		::selection{
+			background-color:#cc00ff;
+			}
 
 	</style>
 </head>
@@ -125,8 +132,8 @@
 				foreach($jurnal as $row ):
 			?>
 			<div class="well span5">
-				<a href="#Doc"><img src="/upload/jurnal/<?php echo $row->FOTO_DOKUMEN ?>" class="thumbnail image-list"></a>
-				<h5><?php echo $row->JUDUL_DOKUMEN ?></h5>
+				<a href="#Doc"><img src="/<?php echo $row->FOTO_DOKUMEN ?>" class="thumbnail image-list"></a>
+				<h4><?php echo $row->JUDUL_DOKUMEN ?></h4>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
 				<div class="btn-group">
 					

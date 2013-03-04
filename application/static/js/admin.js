@@ -361,3 +361,47 @@ function deleteDokumen3(object, id){
 function tambahNews(){
 	$('#form-tambah').attr('action', '/admin/news/add').show('blind', {} , 2500);	
 }
+
+function editNews(obj, id){
+	var $form = $('#form-tambah');
+	$.ajax({
+		url: '/admin/news/data/' + id,
+		dataType: 'json',
+		beforeSend: function(){
+		},
+		success: function(o){
+			$('#form-tambah').attr('action', '/admin/news/update');
+			$('#form-tambah').show('blind', {} , 1500);
+			$('#id-news').val(o[0].ID_NEWS);
+			$('#judul-news').val(o[0].JUDUL_NEWS);
+			$('#isi-news').val(o[0].ISI_NEWS);
+		}
+	});
+}
+
+function deleteNews(object, id){
+	var $form = $('#form-tambah');
+	$.ajax({
+		url: '/admin/news/delete/' + id,
+		dataType: 'json',
+		
+		beforeSend: function(){
+			
+		},
+		success: function(o){
+		//console.log(o); 
+			if (o.success==1){
+				alertify.success('Data Sudah Terhapus');
+				window.location = "/admin/news";
+			}
+			else {
+				alertify.error('Data Gagal dihapus');
+			}
+		}
+	});
+	return false;
+}
+
+//$('.ah').mouseover(function(){
+//	$('#form-tambah').show();
+//});

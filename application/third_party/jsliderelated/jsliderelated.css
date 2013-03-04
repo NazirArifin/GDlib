@@ -2,15 +2,18 @@
 	
     display:none; /*position:fixed;*/
     background-color:#A7BFF2; border:2px solid #779CED;
-    bottom:0; right:-340px; /* left:0; */
+    bottom:20px; right:-350px; /* left:0; */
     z-index: 10000;
     /*width:auto; set width of bar to width of entire window*/
-    -moz-border-radius-topleft:10px;
-    -webkit-border-top-left-radius:10px;
-    border-top-left-radius:10px;
+	border-radius:2px;
 }
-#jsrp_related h3 { margin:0; padding:5px 5px 5px 10px; font-size:20px; font-weight:bold;
-        color:#F5F4F0; text-shadow: #6374AB 2px 2px 2px;
+#jsrp_related h3 { 
+margin:0; 
+padding:5px 5px 5px 10px; 
+font-size:20px; 
+font-weight:bold;
+color:#F5F4F0; 
+text-shadow:inset #6374AB 2px 2px 2px;
 }
 #jsrp_related ul { margin:0; padding:0; }
 #jsrp_related ul li { float:left; padding:10px; background-color:white; list-style:none; vertical-align:middle; min-height:50px; border:thin solid #E6E6E6; }

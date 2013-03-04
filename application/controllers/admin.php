@@ -434,24 +434,42 @@ class Admin extends CI_Controller {
 						$gambar['source_image'] = './upload/news/' . $data['file_name'];
 						$gambar['create_thumb'] = FALSE;
 						$gambar['maintain_ratio'] = TRUE;
-						$gambar['width'] = 50;
-						$gambar['height'] = 50;
+						$gambar['width'] = 150;
+						$gambar['height'] = 150;
 						$this->load->library('image_lib',$gambar);
 						$this->image_lib->resize();
 						$namafoto='./upload/news/' . $data['file_name'];
+						
+						// ==== SET JAM UPLOAD =====
+						$waktu1 = "%d-%m-%Y %H:%i";
+						$time = time()+60*60*6;
+						$tanggal = mdate($waktu1, $time);
+						$jam = mdate($waktu2, $time);
 					}
 					else
 					{
 						echo $this->upload->display_errors();
 					}
-					$this->admin_model->insertNews($namafoto);
+					$this->admin_model->insertNews($namafoto,$tanggal);
 					header('location:/admin/news');
 			break;
 			case 'data':
+				$pilih = $this->admin_model->pilihIdNews($extra);
+				echo json_encode($pilih);
+				return;
 			break;
 			case 'update':
+				$id = $this->input->post('id_news');
+				if ( ! empty($id)){
+					$this->admin_model->editNews($id);
+					echo '{ "error": 0, "success": 1 }';
+				}
+				header('location:/admin/news');
 			break;
 			case 'delete':
+				$this->admin_model->deleteNews($extra);
+				echo '{ "error": 0, "success": 1 }';
+				return;
 			break;
 			case 'tampil':
 				$this->load->database();

@@ -103,14 +103,14 @@
 				<div class="row-fluid">
 					<div class="navbar navbar-inner">
 						<form class="navbar-form pull-left">
-							<input id="query" name="query-news" placeholder="Search" type="text">
+							<input id="query-news" name="query_news" placeholder="Search" type="text">
 							<button class="btn" onclick="return News.search()"><i class="icon-search"></i></button>
 						</form>
 						<button class="btn btn-info pull-right" id="tombol" onClick="return tambahNews()"><i class="icon-plus icon-white"></i></button>
 					</div>
 				</div>
 				<div class="row-fluid data-user">
-					<div class="container-fluid" id="document-news">
+					<div class="container-fluid ah" id="document-news">
 						<!-- tempat output data -->
 					</div>
 					<div class="pagination pagination-centered pagination-medium" id="pagination-news">
@@ -129,7 +129,7 @@
 		</div>
 	</footer>
 	
-<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
+			<script src="/third_party/jquery/jquery-1.9.1.min.js"></script>
 			<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
 			<script src="/third_party/bootstrap/bootstrap.min.js"></script>
 			<script src="/third_party/alertify/alertify.min.js"></script>
