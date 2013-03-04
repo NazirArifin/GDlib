@@ -307,51 +307,33 @@
 				<!-- halaman News -->
 				<div class="">
 					<div class="navbar navbar-inner">
-						<a class="brand">Buletin</a>
-							<form class="navbar-search pull-right">
-								  <input type="text" class="search-query" placeholder="Cari Buletin">
-							</form>
+						<a class="brand">News</a>
+						<form class="navbar-form pull-right" id="form-news">
+							<input class="model" id="query-news" name="query_news" placeholder="Search News" type="text">
+							<button class="btn" onClick="return News.search()"><i class="icon-search"></i></button>
+						</form>
 					</div>
-					<table class="table">
-						<thead>
-							<tr>
-								<th>Foto</th>
-								<th>Judul</th>
-								<th>Cuplikan</th>
-								<th>Status</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><img src="/images/ogo.png" class="image-admin"></td>
-								<td>WTF</td>
-								<td>Lorem ipsum dolor sit amet</td>
-								<td><label class="label label-important"><i class="icon-off icon-white"></i></label></td>
-							</tr>
-							<tr>
-								<td><img src="/images/ogo.png" class="image-admin"></td>
-								<td>Accident</td>
-								<td>Lorem ipsum dolor sit amet</td>
-								<td><label class="label label-success"><i class="icon-play icon-white"></i></label></td>
-							</tr>
-							<tr>
-								<td><img src="/images/ogo.png" class="image-admin"></td>
-								<td>LOL</td>
-								<td>Lorem ipsum dolor sit amet</td>
-								<td><label class="label label-warning"><i class="icon-warning-sign icon-white"></i></label></td>
-							</tr>
-						</tbody>
-					</table>
-					<div class="pagination pagination-centered">
-						<ul>
-							<li><a href="#">Prev</a></li>
-							<li class="active"><a href="#">1</a></li>
-							<li><a href="#">2</a></li>
-							<li><a href="#">3</a></li>
-							<li><a href="#">4</a></li>
-							<li><a href="#">Next</a></li>
-						</ul>
-					</div>
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Foto</th>
+										<th>Judul</th>
+										<th>Content</th>
+										<th>Tanggal</th>
+										<th>Status</th>
+										<th>Aksi</th>
+									</tr>
+								</thead>
+								<tbody id="document-news">
+								</tbody>
+							</table>
+							<div class="pagination pagination-centered pagination-medium" id="pagination-news">
+								<ul>
+									<li><a href="">&laquo;</a></li>
+									<li><a href="">1</a></li>
+									<li><a href="">&raquo;</a></li>
+								</ul>
+							</div>
 				</div>
 			</div>
 		</div>
@@ -370,6 +352,7 @@
 			<script src="/js/admin.js"></script>
 			<script src="/js/paging.admin.user.js"></script>
 			<script src="/js/paging.admin.dokumen.js"></script>
+			<script src="/js/paging.admin.news.js"></script>
 	<script type="text/javascript">
 		$('#tab-dok a').click(function (e) {
 		  e.preventDefault();
