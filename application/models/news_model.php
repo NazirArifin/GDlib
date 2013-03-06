@@ -14,7 +14,7 @@ class News_model extends CI_Model{
 		
 		$start = $curpage * $dataperpage;
 		$end = $start + $dataperpage;
-		$query = $this->db->query("SELECT * FROM `tb_news` WHERE ($where) AND STATUS_NEWS = '$status' LIMIT $start, $end");
+		$query = $this->db->query("SELECT * FROM `tb_news` WHERE ($where) AND STATUS_NEWS = '$status' LIMIT $start, $dataperpage");
 		$hasil = array(
 			'data' => array(),
 			'pagination' => '',

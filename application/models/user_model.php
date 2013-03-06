@@ -14,7 +14,7 @@ class User_model extends CI_Model{
 		
 		$start = $curpage * $dataperpage;
 		$end = $start + $dataperpage;
-		$query = $this->db->query("SELECT * FROM `tb_user` WHERE ($where) AND ID_LEVEL_USER = '$level' LIMIT $start, $end");
+		$query = $this->db->query("SELECT * FROM `tb_user` WHERE ($where) AND ID_LEVEL_USER = '$level' LIMIT $start, $dataperpage");
 		$hasil = array(
 			'data' => array(),
 			'pagination' => '',
@@ -58,7 +58,7 @@ class User_model extends CI_Model{
 		
 		$start = $curpage * $dataperpage;
 		$end = $start + $dataperpage;
-		$query = $this->db->query("SELECT * FROM `tb_user` WHERE ($where) AND ID_LEVEL_USER = '$level' LIMIT $start, $end");
+		$query = $this->db->query("SELECT * FROM `tb_user` WHERE ($where) AND ID_LEVEL_USER = '$level' LIMIT $start, $dataperpage");
 		$hasil = array(
 			'data' => array(),
 			'pagination' => '',
@@ -102,7 +102,7 @@ class User_model extends CI_Model{
 		
 		$start = $curpage * $dataperpage;
 		$end = $start + $dataperpage;
-		$query = $this->db->query("SELECT * FROM `tb_user` WHERE ($where) AND ID_LEVEL_USER = '$level' LIMIT $start, $end");
+		$query = $this->db->query("SELECT * FROM `tb_user` WHERE ($where) AND ID_LEVEL_USER = '$level' LIMIT $start, $dataperpage");
 		$hasil = array(
 			'data' => array(),
 			'pagination' => '',

@@ -14,7 +14,7 @@ class Dokumen_model extends CI_Model{
 		
 		$start = $curpage * $dataperpage;
 		$end = $start + $dataperpage;
-		$query = $this->db->query("SELECT `ID_DOKUMEN`, `ID_KATEGORI_DOKUMEN`, `FILE_DOKUMEN`, `FOTO_DOKUMEN`, `JUDUL_DOKUMEN`, `PENGARANG_DOKUMEN`, `TAHUN_PENERBITAN_DOKUMEN` FROM `tb_dokumen` WHERE ($where) AND ID_KATEGORI_DOKUMEN = '$kategori' LIMIT $start, $end");
+		$query = $this->db->query("SELECT `ID_DOKUMEN`, `ID_KATEGORI_DOKUMEN`, `FILE_DOKUMEN`, `FOTO_DOKUMEN`, `JUDUL_DOKUMEN`, `PENGARANG_DOKUMEN`, `TAHUN_PENERBITAN_DOKUMEN` FROM `tb_dokumen` WHERE ($where) AND ID_KATEGORI_DOKUMEN = '$kategori' LIMIT $start, $dataperpage");
 		$hasil = array(
 			'data' => array(),
 			'pagination' => '',
@@ -59,7 +59,7 @@ class Dokumen_model extends CI_Model{
 		
 		$start = $curpage * $dataperpage;
 		$end = $start + $dataperpage;
-		$query = $this->db->query("SELECT `ID_DOKUMEN`, `ID_KATEGORI_DOKUMEN`, `FILE_DOKUMEN`, `FOTO_DOKUMEN`, `JUDUL_DOKUMEN`, `PENGARANG_DOKUMEN`, `TAHUN_PENERBITAN_DOKUMEN` FROM `tb_dokumen` WHERE ($where) AND ID_KATEGORI_DOKUMEN = '$kategori' LIMIT $start, $end");
+		$query = $this->db->query("SELECT `ID_DOKUMEN`, `ID_KATEGORI_DOKUMEN`, `FILE_DOKUMEN`, `FOTO_DOKUMEN`, `JUDUL_DOKUMEN`, `PENGARANG_DOKUMEN`, `TAHUN_PENERBITAN_DOKUMEN` FROM `tb_dokumen` WHERE ($where) AND ID_KATEGORI_DOKUMEN = '$kategori' LIMIT $start, $dataperpage");
 		$hasil = array(
 			'data' => array(),
 			'pagination' => '',
@@ -104,7 +104,7 @@ class Dokumen_model extends CI_Model{
 		
 		$start = $curpage * $dataperpage;
 		$end = $start + $dataperpage;
-		$query = $this->db->query("SELECT `ID_DOKUMEN`, `ID_KATEGORI_DOKUMEN`, `FILE_DOKUMEN`, `FOTO_DOKUMEN`, `JUDUL_DOKUMEN`, `PENGARANG_DOKUMEN`, `TAHUN_PENERBITAN_DOKUMEN` FROM `tb_dokumen` WHERE ($where) AND ID_KATEGORI_DOKUMEN = '$kategori' LIMIT $start, $end");
+		$query = $this->db->query("SELECT `ID_DOKUMEN`, `ID_KATEGORI_DOKUMEN`, `FILE_DOKUMEN`, `FOTO_DOKUMEN`, `JUDUL_DOKUMEN`, `PENGARANG_DOKUMEN`, `TAHUN_PENERBITAN_DOKUMEN` FROM `tb_dokumen` WHERE ($where) AND ID_KATEGORI_DOKUMEN = '$kategori' LIMIT $start, $dataperpage");
 		$hasil = array(
 			'data' => array(),
 			'pagination' => '',
@@ -149,7 +149,7 @@ class Dokumen_model extends CI_Model{
 		
 		$start = $curpage * $dataperpage;
 		$end = $start + $dataperpage;
-		$query = $this->db->query("SELECT `ID_DOKUMEN`, `ID_KATEGORI_DOKUMEN`, `FILE_DOKUMEN`, `FOTO_DOKUMEN`, `JUDUL_DOKUMEN`, `PENGARANG_DOKUMEN`, `TAHUN_PENERBITAN_DOKUMEN` FROM `tb_dokumen` WHERE ($where) AND ID_KATEGORI_DOKUMEN = '$kategori' LIMIT $start, $end");
+		$query = $this->db->query("SELECT `ID_DOKUMEN`, `ID_KATEGORI_DOKUMEN`, `FILE_DOKUMEN`, `FOTO_DOKUMEN`, `JUDUL_DOKUMEN`, `PENGARANG_DOKUMEN`, `TAHUN_PENERBITAN_DOKUMEN` FROM `tb_dokumen` WHERE ($where) AND ID_KATEGORI_DOKUMEN = '$kategori' LIMIT $start, $dataperpage");
 		$hasil = array(
 			'data' => array(),
 			'pagination' => '',

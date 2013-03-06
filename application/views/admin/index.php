@@ -252,58 +252,23 @@
 								<thead>
 									<tr>
 										<th>Judul</th>
-										<th>Taggal</th>
+										<th>Pengarang</th>
+										<th>Tahun Penerbitan</th>
+										<th>Aksi</th>
 									</tr>
 								</thead>
-								<tbody>
-									<tr>
-										<td>Buletin Siang</td>
-										<td>12/12/12</td>
-										<td>
-											<div class="btn-group">
-												<button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>
-												<button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>
-												<button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td>Buletin Siang</td>
-										<td>12/12/12</td>
-										<td>
-											<div class="btn-group">
-												<button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>
-												<button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>
-												<button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td>Buletin Siang</td>
-										<td>12/12/12</td>
-										<td>
-											<div class="btn-group">
-												<button class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i></button>
-												<button class="btn btn-warning btn-mini"><i class="icon-edit icon-white"></i></button>
-												<button class="btn btn-success btn-mini"><i class="icon-share-alt icon-white"></i></button>
-											</div>
-										</td>
-									</tr>
+								<tbody id="document-buletin">
 								</tbody>
 							</table>
-							<div class="pagination pagination-centered">
+							<div class="pagination pagination-centered pagination-medium" id="pagination-buletin">
 								<ul>
-									<li><a href="#">Prev</a></li>
-									<li class="active"><a href="#">1</a></li>
-									<li><a href="#">2</a></li>
-									<li><a href="#">3</a></li>
-									<li><a href="#">4</a></li>
-									<li><a href="#">Next</a></li>
+									<li><a href="">&laquo;</a></li>
+									<li><a href="">1</a></li>
+									<li><a href="">&raquo;</a></li>
 								</ul>
 							</div>
 						</div>
-					</div>
-				</div> 
+					</div> 
 				<!-- halaman News -->
 				<div class="">
 					<div class="navbar navbar-inner">
