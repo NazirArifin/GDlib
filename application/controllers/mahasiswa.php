@@ -20,7 +20,18 @@ class Mahasiswa extends CI_Controller {
 	public function profilmahasiswa($param = '', $extra = '')
 	{
 		switch($param){
+			case 'data':
+				$pilih = $this->mahasiswa_model->pilihIdProfil($extra);
+				echo json_encode($pilih);
+				return;
+			break;
 			case 'ubah':
+				$id = $this->input->post('id_profil');
+				if ( ! empty($id)){
+					$this->mahasiswa_model->updateProfil($id);
+					echo '{ "error": 0, "success": 1 }';
+				}
+				header('location:/mahasiswa/profilmahasiswa');
 			break;
 			default:
 			$this->load->view('mahasiswa/profilmahasiswa',array('profil' => $this));

@@ -5,8 +5,8 @@
 	<title>Mahasiswa | Profil</title>
 	<link href="/third_party/bootstrap/css/elemento.css" rel="stylesheet" type="text/css">
 	<link href="/third_party/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="/static/css/main.css" />
-	<link rel="stylesheet" href="/static/css/style.css" />
+	<link rel="stylesheet" href="/css/main.css" />
+	<link rel="stylesheet" href="/css/style.css" />
 	<style type="text/css">
 	body{
 		background:url('/images/bg-1.jpg') ;
@@ -72,10 +72,11 @@
 		?>
 	<div class="well span11" id="header">
 		<div class="span5" id="hov">
-			<img src="<?php echo $row->FOTO_PROFIL ?>" alt="dosen" class="pp"><br>
-			<button id="change" class="btn btn-inverse pull-left btn-mini" onClick="return ubahFotoProfil()">Change</button>
+			<img src="/<?php echo $row->FOTO_PROFIL ?>" alt="dosen" class="pp"><br>
+			<button id="change" class="btn btn-inverse pull-left btn-mini" onClick="return ubahFotoProfil(this, <?php echo $row->ID_PROFIL ?>)">Change</button>
 			<form id="form-change" class="hide" action="" method="POST" enctype="multipart/form-data">
 				<input type="file" name="change_foto" id="change-foto" required=""><br>
+				<input type="hidden" name="id_profil" id="id-profil" value="">
 				<button class="btn btn-info btn-mini" type="button" onClick="return cancelChange()">Cancel</button>
 				<button class="btn btn-info btn-mini" type="submit" value="upload">Simpan</button>
 			</form>
@@ -117,6 +118,7 @@
 					<div class="container"><h2>Profil Detail</h2></div>
 				</div>
 			</div>
+			<button class="btn btn-mini btn-info">Sunting Profil</button>
 			<hr>
 			<div class="accordion" id="accordion2">
 			  <div class="accordion-group">

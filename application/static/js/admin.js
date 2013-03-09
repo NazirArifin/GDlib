@@ -37,7 +37,6 @@ function dcancel(){
 function editUser2(object, id){
 	//alert(id);
 	var $form = $('#form-tambah');
-	
 	$.ajax({
 		url: '/admin/dosen/data/' + id,
 		dataType: 'json',
