@@ -63,14 +63,27 @@
 <br>
 <br>
 <div class="container" >
+		<?php
+			$profilMahasiswa=$profil->mahasiswa_model->tampil_profil_mahasiswa();
+			if ($profilMahasiswa == 0):
+					echo '<tr><td colspan="4"><div class="alert-info" style="text-align:center;">Data Mahasiswa Tidak Ada</div></td></tr>';
+				else :
+					foreach ($profilMahasiswa as $row):
+		?>
 	<div class="well span11" id="header">
-		<div class="span5">
-				<img src="/images/rud.jpg" alt="dosen" class="pp">
+		<div class="span5" id="hov">
+			<img src="<?php echo $row->FOTO_PROFIL ?>" alt="dosen" class="pp"><br>
+			<button id="change" class="btn btn-inverse pull-left btn-mini" onClick="return ubahFotoProfil()">Change</button>
+			<form id="form-change" class="hide" action="" method="POST" enctype="multipart/form-data">
+				<input type="file" name="change_foto" id="change-foto" required=""><br>
+				<button class="btn btn-info btn-mini" type="button" onClick="return cancelChange()">Cancel</button>
+				<button class="btn btn-info btn-mini" type="submit" value="upload">Simpan</button>
+			</form>
 		</div>
 		<div class="span5">
-			<h2>Rudi Hartono</h2>
-			<h3>0955201554</h3>
-			<h3>Pakong Pamekasan</h3>
+			<h2><?php echo $row->NAMA_PROFIL ?></h2>
+			<h3><?php echo $row->ID_USER ?></h3>
+			<h3><?php echo $row->ALAMAT_PROFIL ?></h3>
 		</div>
 	</div>
 </div>
@@ -114,7 +127,7 @@
 				</div>
 				<div id="tetala" class="accordion-body collapse in">
 				  <div class="accordion-inner">
-					Pamekasan, 13/Mei/1992
+					<?php echo $row->TEMPAT_LAHIR ?>, <?php echo $row->TGL_LAHIR ?>
 				  </div>
 				</div>
 			  </div>
@@ -126,7 +139,7 @@
 				</div>
 				<div id="gender" class="accordion-body collapse">
 				  <div class="accordion-inner">
-					Laki-Laki
+					<?php echo $row->JENIS_KELAMIN ?>
 				  </div>
 				</div>
 			  </div>
@@ -138,7 +151,7 @@
 				</div>
 				<div id="alamat" class="accordion-body collapse">
 				  <div class="accordion-inner">
-					Taman Hedona Regency Blok C4 no.7
+					<?php echo $row->ALAMAT_PROFIL ?>
 				  </div>
 				</div>
 			  </div>
@@ -150,7 +163,7 @@
 				</div>
 				<div id="email" class="accordion-body collapse">
 				  <div class="accordion-inner">
-					rudi@nyaroan.com
+					<?php echo $row->EMAIL_PROFIL ?>
 				  </div>
 				</div>
 			  </div>
@@ -162,7 +175,7 @@
 				</div>
 				<div id="phone" class="accordion-body collapse">
 				  <div class="accordion-inner">
-					+6285730727537
+					<?php echo $row->NO_HP_PROFIL ?>
 				  </div>
 				</div>
 			  </div>
@@ -171,6 +184,10 @@
 		</div>
 	</div>
 </div>
+<?php
+endforeach;
+endif;
+?>
 </div>
 
  	<footer class="row-fluid footer">
@@ -180,8 +197,10 @@
 			<span>Created by: <a href="/creator" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span></center>
 		</div>
 	</footer>
-	<script type="text/javascript" src="/third_party/jquery/jquery-1.8.2.min.js"></script>
+	<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
+	<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
 	<script type="text/javascript" src="/third_party/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/js/profil.js"></script>
 	
 <script type="text/javascript">
 $('#accordion2').accordion();

@@ -17,11 +17,15 @@ class Mahasiswa extends CI_Controller {
 		jsloc::show();
 		
 	}
-	public function profilmahasiswa()
+	public function profilmahasiswa($param = '', $extra = '')
 	{
-		$this->load->view('mahasiswa/profilmahasiswa',array('controller' => $this));
-		jsloc::show();
-		
+		switch($param){
+			case 'ubah':
+			break;
+			default:
+			$this->load->view('mahasiswa/profilmahasiswa',array('profil' => $this));
+			jsloc::show();
+		}
 	}
 	
 	
@@ -74,5 +78,10 @@ class Mahasiswa extends CI_Controller {
 				$this->load->view('mahasiswa/buletin/index',array('controller' => $this));
 				jsloc::show();
 		}
-	}	
+	}
+
+	public function profil()
+	{
+		
+	}
 }
