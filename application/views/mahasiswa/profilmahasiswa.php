@@ -199,16 +199,13 @@ endif;
 			<span>Created by: <a href="/creator" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span></center>
 		</div>
 	</footer>
-	<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
+	<script src="/third_party/jquery/jquery-1.9.1.min.js"></script>
 	<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
 	<script type="text/javascript" src="/third_party/bootstrap/bootstrap.min.js"></script>
 	<script type="text/javascript" src="/js/profil.js"></script>
 	
 <script type="text/javascript">
 $('#accordion2').accordion();
-$(function(){
-            $('.dosen').popover();
-    });
 </script>
 </body>
 </html>
