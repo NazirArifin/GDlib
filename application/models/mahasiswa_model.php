@@ -1,5 +1,4 @@
 <?php
-
 class Mahasiswa_model extends CI_Model {
 	public function __construct() {
 		parent::__construct();
@@ -49,15 +48,43 @@ class Mahasiswa_model extends CI_Model {
 		return true;
 	}
 	
-	public function tampilJurnal(){
-	$this->load->helper('download');
-		$query=$this->db->get_where('tb_dokumen', array('ID_KATEGORI_DOKUMEN'=>1));
+	public function tampilDokumenJurnal(){
+		$this->load->helper('download');
+		$query=$this->db->query("SELECT * FROM tb_dokumen WHERE ID_KATEGORI_DOKUMEN = 1 ORDER BY ID_DOKUMEN DESC LIMIT 0,4");
 		if($query->num_rows()==0){
 			return false;
 		} else {
 			return $query->result();
 		}
 	}
-
 	
+	public function tampilDokumenBuku(){
+		$this->load->helper('download');
+		$query=$this->db->query("SELECT * FROM tb_dokumen WHERE ID_KATEGORI_DOKUMEN = 2 ORDER BY ID_DOKUMEN DESC LIMIT 0,4");
+		if($query->num_rows()==0){
+			return false;
+		} else {
+			return $query->result();
+		}
+	}
+	
+	public function tampilDokumenModul(){
+		$this->load->helper('download');
+		$query=$this->db->query("SELECT * FROM tb_dokumen WHERE ID_KATEGORI_DOKUMEN = 3 ORDER BY ID_DOKUMEN DESC LIMIT 0,4");
+		if($query->num_rows()==0){
+			return false;
+		} else {
+			return $query->result();
+		}
+	}
+	
+	public function tampilDokumenBuletin(){
+		$this->load->helper('download');
+		$query=$this->db->query("SELECT * FROM tb_dokumen WHERE ID_KATEGORI_DOKUMEN = 4 ORDER BY ID_DOKUMEN DESC LIMIT 0,4");
+		if($query->num_rows()==0){
+			return false;
+		} else {
+			return $query->result();
+		}
+	}
 }

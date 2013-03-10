@@ -39,10 +39,14 @@ class Mahasiswa extends CI_Controller {
 		}
 	}
 	
-	
 	public function jurnal($param = '', $extra = '')
 	{
 		switch ($param) {
+			case 'jurnal':
+				$this->load->database();
+				$this->load->model('mahasiswa_paging_model');
+				$this->dokumen_model->search_document_jurnal();
+			break;
 			case 'detail':
 				$this->load->view('mahasiswa/jurnal/detail',array('controller' => $this));
 				jsloc::show();
@@ -56,6 +60,11 @@ class Mahasiswa extends CI_Controller {
 	public function buku($param = '', $extra = '')
 	{
 		switch ($param) {
+			case 'buku':
+				$this->load->database();
+				$this->load->model('mahasiswa_paging_model');
+				$this->dokumen_model->search_document_buku();
+			break;
 			case 'detail':
 				$this->load->view('mahasiswa/buku/detail',array('controller' => $this));
 				jsloc::show();
@@ -69,6 +78,11 @@ class Mahasiswa extends CI_Controller {
 	public function modul($param = '', $extra = '')
 	{
 		switch ($param) {
+			case 'modul':
+				$this->load->database();
+				$this->load->model('mahasiswa_paging_model');
+				$this->dokumen_model->search_document_modul();
+			break;
 			case 'detail':
 				$this->load->view('mahasiswa/modul/detail',array('controller' => $this));
 				jsloc::show();
