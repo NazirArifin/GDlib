@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
 		<link rel="stylesheet" href="/third_party/bootstrap/css/elemento.css" />
 		<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
+		<link rel="stylesheet" href="/third_party/awesome/css/font-awesome.css" />
 		<link href='/third_party/rating/jquery.rating.css' type="text/css" rel="stylesheet"/>
 		<link href='/third_party/jsliderelated/jsliderelated.css' type="text/css" rel="stylesheet"/>
 		<link rel="stylesheet" href="/css/style.css" />
@@ -29,7 +30,7 @@
 	</style>
 </head>
 <body>
-<div class="navbar navbar-fixed-top">
+	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
 				<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -39,13 +40,13 @@
 				</button>
 				<a href="/"><img src="/images/logo-gd.png" id="logo-baru" /></a>
 				<ul class="nav pull-right nav-pills">
-					<li><a href="/mahasiswa"><img src="/images/glyphicons/png/glyphicons_020_home.png" alt=""> Dashboard</a>
-					<li><a href="/mahasiswa/profilmahasiswa"><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Profil</a>
+					<li><a href="/mahasiswa"><i class="icon-dashboard icon-large"></i> Dashboard</a>
+					<li><a href="/mahasiswa/profilmahasiswa"><i class="icon-user icon-large"></i> Profil</a>
 				  
 				</ul>
 			</div>
 		</div>
-</div>
+	</div>
 <br>
 <br>
 <br>
@@ -129,11 +130,21 @@
 		<a href="#" id="jsrp_related-close"><img id="close_btn" src="/images/close_button.gif" alt="Close"></a>
 		<h3>Kamu sudah lihat ini?</h3>
 	<ul>
-		<li><a href="#" ><img src="/images/3.jpg" alt="australia" title="australia" width="70" height="50" border="0" class="jsrp_thumb" /></a><br> <a href="#" rel="bookmark" class="jsrp_title">Rudiec Christiano</a></li>
-		<li><a href="#" ><img src="/images/1.jpg" alt="united-kingdom" title="united-kingdom" width="70" height="50" border="0" class="jsrp_thumb" /></a><br> <a href="#" rel="bookmark" class="jsrp_title">Rudiec El Tofu</a></li>
-		<li><a href="" ><img src="/images/2.jpg" alt="india" title="india" width="70" height="50" border="0" class="jsrp_thumb" /></a><br> <a href="#" rel="bookmark" class="jsrp_title">Rudiec Keren</a></li>
+		<?php
+				$modul=$this->mahasiswa_model->tampilDokumenModul();
+				if($modul==0):
+				echo '<p>Nggak ada</p>';
+				else:
+				foreach($modul as $row ):
+		?>
+
+		<li><a href="#" ><img src="/<?php echo $row->FOTO_DOKUMEN ?>" width="70" height="50" border="0" class="jsrp_thumb" /></a><br> <a href="#" rel="bookmark" class="jsrp_title"><?php echo $row->JUDUL_DOKUMEN ?></a></li>
+		<?php 
+			endforeach;
+			endif;
+		?>
 	</ul>
-</div>
+	</div>
   	<footer class="row-fluid footer">
 		<div class="well span12">
 			<hr>

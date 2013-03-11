@@ -43,4 +43,13 @@ class News_model extends CI_Model{
 		
 		echo json_encode($hasil, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP);
 	}
+	
+	public function tampilNewsHome(){
+		$query=$this->db->query("SELECT * FROM tb_news ORDER BY ID_NEWS DESC LIMIT 0,4");
+		if($query->num_rows()==0){
+			return false;
+		} else {
+			return $query->result();
+		}
+	}
 }

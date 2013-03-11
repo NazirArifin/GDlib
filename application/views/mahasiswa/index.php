@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
 		<link rel="stylesheet" href="/third_party/bootstrap/css/elemento.css" />
 		<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
+		<link rel="stylesheet" href="/third_party/awesome/css/font-awesome.css" />
 		<link rel="stylesheet" href="/css/main.css" />
 		<link rel="stylesheet" href="/css/style.css" />
 			
@@ -34,8 +35,8 @@
 			}
 		#logo-baru {
 			position:absolute;
-			height: 50px;
-			width:255px;
+			height: 40px;
+			width:220px;
 			margin-top: 15px;
 		}
 		.image-list{
@@ -49,22 +50,23 @@
 	</style>
 </head>
 <body>
-<div class="navbar navbar-fixed-top">
-	<div class="navbar-inner">
-		<div class="container">
-			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			</button>
-			<a href="/"><img src="/images/logo-gd.png" id="logo-baru" /></a>
-			<ul class="nav pull-right nav-pills">
-				<li><a href="/mahasiswa"><img src="/images/glyphicons/png/glyphicons_020_home.png" alt=""> Dashboard</a></li>
-				<li><a href="/mahasiswa/profilmahasiswa"><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Profil</a></li>
-			</ul>
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="/"><img src="/images/logo-gd.png" id="logo-baru" /></a>
+				<ul class="nav pull-right nav-pills">
+					<li><a href="/mahasiswa"><i class="icon-dashboard icon-large"></i> Dashboard</a>
+					<li><a href="/mahasiswa/profilmahasiswa"><i class="icon-user icon-large"></i> Profil</a>
+				  
+				</ul>
+			</div>
 		</div>
 	</div>
-</div>
 <br>
 <br>
 <br>
@@ -130,8 +132,8 @@
 							<h4><?php echo $row->JUDUL_DOKUMEN ?></h4>
 							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...</p><br />
 							<div class="btn-group">
-								<button class="btn btn-mini  download-mahasiswa"><img src="/images/glyphicons/png/glyphicons_200_download.png" alt=""></button>
-								<button class="btn btn-mini  baca-mahasiswa"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>
+								<button class="btn btn-mini btn-primary download-mahasiswa"><i class="icon-download"></i> Download</button>
+								<button class="btn btn-mini btn-primary baca-mahasiswa"><i class="icon-play"></i> Baca</button>
 							</div>
 						</div>
 						<?php
@@ -153,8 +155,8 @@
 							<h4><?php echo $row->JUDUL_DOKUMEN ?></h4>
 							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...</p><br />
 							<div class="btn-group">
-								<button class="btn btn-mini  download-mahasiswa"><img src="/images/glyphicons/png/glyphicons_200_download.png" alt=""></button>
-								<button class="btn btn-mini  baca-mahasiswa"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>
+								<button class="btn btn-mini btn-primary download-mahasiswa"><i class="icon-download"></i> Download</button>
+								<button class="btn btn-mini btn-primary baca-mahasiswa"><i class="icon-play"></i> Baca</button>
 							</div>
 						</div>
 						<?php
@@ -176,8 +178,8 @@
 							<h4><?php echo $row->JUDUL_DOKUMEN ?></h4>
 							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...</p><br />
 							<div class="btn-group">
-								<button class="btn btn-mini  download-mahasiswa"><img src="/images/glyphicons/png/glyphicons_200_download.png" alt=""></button>
-								<button class="btn btn-mini  baca-mahasiswa"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>
+								<button class="btn btn-mini btn-primary download-mahasiswa"><i class="icon-download"></i> Download</button>
+								<button class="btn btn-mini btn-primary baca-mahasiswa"><i class="icon-play"></i> Baca</button>
 							</div>
 						</div>
 						<?php
@@ -199,8 +201,8 @@
 							<h4><?php echo $row->JUDUL_DOKUMEN ?></h4>
 							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...</p><br />
 							<div class="btn-group">
-								<button class="btn btn-mini  download-mahasiswa"><img src="/images/glyphicons/png/glyphicons_200_download.png" alt=""></button>
-								<button class="btn btn-mini  baca-mahasiswa"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>
+								<button class="btn btn-mini btn-primary download-mahasiswa"><i class="icon-download"></i> Download</button>
+								<button class="btn btn-mini btn-primary baca-mahasiswa"><i class="icon-play"></i> Baca</button>
 							</div>
 						</div>
 						<?php

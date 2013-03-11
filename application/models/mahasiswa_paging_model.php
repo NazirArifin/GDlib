@@ -19,7 +19,7 @@ class Mahasiswa_paging_model extends CI_Model {
 		
 		$start = $curpage * $dataperpage;
 		$end = $start + $dataperpage;
-		$query = $this->db->query("SELECT `ID_DOKUMEN`, `ID_KATEGORI_DOKUMEN`, `FILE_DOKUMEN`, `FOTO_DOKUMEN`, `JUDUL_DOKUMEN`, `PENGARANG_DOKUMEN`, `TAHUN_PENERBITAN_DOKUMEN` FROM `tb_dokumen` WHERE ($where) AND ID_KATEGORI_DOKUMEN = '$kategori' LIMIT $start, $dataperpage");
+		$query = $this->db->query("SELECT `ID_DOKUMEN`, `ID_KATEGORI_DOKUMEN`, `FILE_DOKUMEN`, `FOTO_DOKUMEN`, `JUDUL_DOKUMEN`, `PROLOG_DOKUMEN`, `PENGARANG_DOKUMEN`, `TAHUN_PENERBITAN_DOKUMEN` FROM `tb_dokumen` WHERE ($where) AND ID_KATEGORI_DOKUMEN = '$kategori' LIMIT $start, $dataperpage");
 		$hasil = array(
 			'data' => array(),
 			'pagination' => '',
@@ -32,6 +32,7 @@ class Mahasiswa_paging_model extends CI_Model {
 					'id_k' => $row->ID_KATEGORI_DOKUMEN,
 					'file' => $row->FILE_DOKUMEN,
 					'foto' => $row->FOTO_DOKUMEN,
+					'prolog' => $row->PROLOG_DOKUMEN,
 					'judul' => $row->JUDUL_DOKUMEN,
 					'pengarang' => $row->PENGARANG_DOKUMEN,
 					'tahun' => $row->TAHUN_PENERBITAN_DOKUMEN

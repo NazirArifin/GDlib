@@ -1,11 +1,10 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-
 class Mahasiswa extends CI_Controller {
-
 	public function __construct() {
 		parent::__construct();
 		include(APPPATH . 'libraries/jsloc.php');
 		$this->load->model('mahasiswa_model');
+		$this->load->model('mahasiswa_paging_model');
 		$this->load->helper();
 		$this->load->database();
 		$this->load->library();
@@ -45,7 +44,7 @@ class Mahasiswa extends CI_Controller {
 			case 'jurnal':
 				$this->load->database();
 				$this->load->model('mahasiswa_paging_model');
-				$this->dokumen_model->search_document_jurnal();
+				$this->mahasiswa_paging_model->search_document_jurnal();
 			break;
 			case 'detail':
 				$this->load->view('mahasiswa/jurnal/detail',array('controller' => $this));
@@ -63,7 +62,7 @@ class Mahasiswa extends CI_Controller {
 			case 'buku':
 				$this->load->database();
 				$this->load->model('mahasiswa_paging_model');
-				$this->dokumen_model->search_document_buku();
+				$this->mahasiswa_paging_model->search_document_buku();
 			break;
 			case 'detail':
 				$this->load->view('mahasiswa/buku/detail',array('controller' => $this));
@@ -81,7 +80,7 @@ class Mahasiswa extends CI_Controller {
 			case 'modul':
 				$this->load->database();
 				$this->load->model('mahasiswa_paging_model');
-				$this->dokumen_model->search_document_modul();
+				$this->mahasiswa_paging_model->search_document_modul();
 			break;
 			case 'detail':
 				$this->load->view('mahasiswa/modul/detail',array('controller' => $this));

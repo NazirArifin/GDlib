@@ -434,8 +434,8 @@ class Admin extends CI_Controller {
 						$gambar['source_image'] = './upload/news/' . $data['file_name'];
 						$gambar['create_thumb'] = FALSE;
 						$gambar['maintain_ratio'] = FALSE;
-						$gambar['width'] = 150;
-						$gambar['height'] = 150;
+						$gambar['width'] = 600;
+						$gambar['height'] = 300;
 						$this->load->library('image_lib',$gambar);
 						$this->image_lib->resize();
 						$namafoto='./upload/news/' . $data['file_name'];

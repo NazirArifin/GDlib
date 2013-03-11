@@ -7,7 +7,7 @@
 	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<title>GDLib :: G{edung}D Library</title>
 	
-	<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-no-icon.min.css" />
+	<link rel="stylesheet" href="/third_party/bootstrap/css/elemento.css" />
 	<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
 	<link rel="stylesheet" href="/third_party/awesome/css/font-awesome.css" />
 	
@@ -22,10 +22,10 @@
 					<li><a href="#"><i class="icon-dashboard icon-large"></i> Dashboard</a></li>
 					<li><a href="#" data-toggle="modal" data-target="#modal-info"><i class="icon-user icon-large"></i> Profil</a></li>
 				</ul>
-				<div class="input-append pull-right">
+				<!--<div class="input-append pull-right navbar">
 					<input class="input-medium" id="search-top" type="text" name="q" />
 					<button class="btn btn-medium" type="button"><i class="icon-search"></i></button>
-				</div>
+				</div>-->
 			</div>
 		</div>
 	</div>
@@ -34,18 +34,22 @@
 			<div class="span10 offset1">
 				<div class="row-fluid slider-frame">
 					<ul class="rslides" id="slider">
+						<?php
+							$home = $this->news_model->tampilNewsHome();
+							if($home==0):
+								echo '<p>Tidak Ada</p>';
+								else:
+							foreach($home as $row ):
+						?>
 						<li>
-							<img src="/upload/news/slider-1.jpg" alt="">
-							<p class="caption">Ini teks 1</p>
+							<img src="/<?php echo $row->GAMBAR_NEWS ?>" alt="">
+							<div class="carousel-caption"></div>
+							<p class="caption"><?php echo $row->ISI_NEWS ?></p>
 						</li>
-						<li>
-							<img src="/upload/news/slider-2.jpg" alt="">
-							<p class="caption">Ini teks 2</p>
-						</li>
-						<li>
-							<img src="/upload/news/slider-3.jpg" alt="">
-							<p class="caption">Ini teks 3</p>
-						</li>
+						<?php
+							endforeach;
+							endif;
+						?>
 					</ul>
 				</div>
 			</div>

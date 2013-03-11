@@ -5,6 +5,7 @@
 	<title>Mahasiswa | Profil</title>
 	<link href="/third_party/bootstrap/css/elemento.css" rel="stylesheet" type="text/css">
 	<link href="/third_party/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="/third_party/awesome/css/font-awesome.css" />
 	<link rel="stylesheet" href="/css/main.css" />
 	<link rel="stylesheet" href="/css/style.css" />
 	<style type="text/css">
@@ -41,7 +42,7 @@
 	</style>
 </head>
 <body>
-<div class="navbar navbar-fixed-top">
+	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
 				<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -51,13 +52,13 @@
 				</button>
 				<a href="/"><img src="/images/logo-gd.png" id="logo-baru" /></a>
 				<ul class="nav pull-right nav-pills">
-					<li><a href="/mahasiswa"><img src="/images/glyphicons/png/glyphicons_020_home.png" alt=""> Dashboard</a>
-					<li><a href="/mahasiswa/profilmahasiswa"><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Profil</a>
+					<li><a href="/mahasiswa"><i class="icon-dashboard icon-large"></i> Dashboard</a>
+					<li><a href="/mahasiswa/profilmahasiswa"><i class="icon-user icon-large"></i> Profil</a>
 				  
 				</ul>
 			</div>
 		</div>
-</div>
+	</div>
 <br>
 <br>
 <br>
@@ -114,17 +115,21 @@
 		</div>
 		<div class="well span4">
 			<div class="navbar">
-				<div class="navbar-inner">
-					<div class="container"><h2>Profil Detail</h2></div>
-				</div>
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="brand">Profil Detail</a>
+				<ul class="nav pull-right nav-pills">
+				<li><a href=""><i class="icon-cogs icon-large"></i></a></li>
+				</ul>
 			</div>
-			<button class="btn btn-mini btn-info">Sunting Profil</button>
+		</div>
+</div>
 			<hr>
 			<div class="accordion" id="accordion2">
 			  <div class="accordion-group">
 				<div class="accordion-heading">
 				  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#tetala">
-					<img src="/images/glyphicons/png/glyphicons_057_history.png"> Tempat & tanggal lahir
+					<i class="icon-calendar"></i> Tempat & tanggal lahir
 				  </a>
 				</div>
 				<div id="tetala" class="accordion-body collapse in">

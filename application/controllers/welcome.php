@@ -23,6 +23,7 @@ class Welcome extends CI_Controller {
 		
 		$this->load->database();
 		$this->load->model('front_model');
+		$this->load->model('news_model');
 		
 		// cari dokumen terbaru
 		$type = array('jurnal', 'buku', 'modul', 'bulletin');

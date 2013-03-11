@@ -7,6 +7,7 @@
 			<link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
 			<link rel="stylesheet" href="/third_party/bootstrap/css/elemento.css" />
 			<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
+			<link rel="stylesheet" href="/third_party/awesome/css/font-awesome.css" />
 			<link rel="stylesheet" href="/third_party/alertify/alertify.core.css" />
 			<link rel="stylesheet" href="/third_party/alertify/alertify.default.css" />
 			<link rel="stylesheet" href="/css/style.css" />
@@ -36,13 +37,13 @@
 				</button>
 				<a href="/"><img src="/images/logo-gd.png" id="logo-baru" /></a>
 				<ul class="nav pull-right nav-pills">
-					<li><a href="/dosen"><img src="/images/glyphicons/png/glyphicons_020_home.png" alt=""> Dashboard</a>
-					<li><a href="/dosen/profil"><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Profil</a>
+					<li><a href="/dosen"><i class="icon-dashboard icon-large"></i> Dashboard</a>
+					<li><a href="/dosen/profil"><i class="icon-user icon-large"></i> Profil</a>
 				  
 				</ul>
 			</div>
 		</div>
-</div>
+	</div>
 <br>
 <br>
 <br>

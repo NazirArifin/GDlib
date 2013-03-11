@@ -24,10 +24,9 @@ body {
 }
 
 #sliderFrame {
-	margin-top: 8px;
+	margin-top: 40px;
 	margin-bottom: 0;
 }
-
 div.mc-caption-bg, div.mc-caption-bg2 {
 	top: 240px;
 }
