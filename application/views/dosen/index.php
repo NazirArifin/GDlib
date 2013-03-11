@@ -303,7 +303,7 @@
 					<div class="well span12">
 						<a href="#" class="btn btn-mini pull-right" onClick="return closeForm()" id="tutup"><img src="/images/glyphicons/png/glyphicons_197_remove.png" alt=""></a>
 						<input type="hidden" name="kategori_dokumen" id="kategori-dokumen" value="jurnal">
-							<input type="hidden" id="id-dokumen" name="id_dokumen" value="">
+						<input type="hidden" id="id-dokumen" name="id_dokumen" value="">
 						
 						<legend id="form-legend">	
 						</legend>
@@ -372,6 +372,7 @@
 	</footer>
 </div>
 	<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
+	<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
 	<script src="/third_party/bootstrap/bootstrap.min.js"></script>
 	<script src="/third_party/alertify/alertify.min.js"></script>
 	<script src="/js/dosen.js"></script>

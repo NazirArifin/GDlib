@@ -6,7 +6,7 @@ class Dosen extends CI_Controller {
 		parent::__construct();
 		include(APPPATH . 'libraries/jsloc.php');
 		$this->load->model('dosen_model');
-		$this->load->helper('download');
+		$this->load->helper();
 		$this->load->database();
 		$this->load->library();
 	}
@@ -38,9 +38,9 @@ class Dosen extends CI_Controller {
 						//--unngah file
 						$data = $this->upload->data();
 						//simpan db	
-						$namafile =$data['file_name'];
+						$namafile ='./upload/' . $this->input->post('kategori_dokumen').'/'.$data['file_name'];
 						//tipe file
-						$ekstensi= $data['file_ext'];
+						$ekstensi=$data['file_ext'];
 								switch ($ekstensi){
 									case '.pdf':
 										$ekstensi='1';
@@ -83,7 +83,15 @@ class Dosen extends CI_Controller {
 					if($this->upload->do_upload('foto_dokumen'))
 					{
 						$data=$this->upload->data();
-						$namafoto= $data['file_name'];
+						$gambar['image_library'] = 'gd2';
+						$gambar['source_image'] = './upload/'. $this->input->post('kategori_dokumen').'/' . $data['file_name'];
+						$gambar['create_thumb'] = FALSE;
+						$gambar['maintain_ratio'] = FALSE;
+						$gambar['width'] = 150;
+						$gambar['height'] = 150;
+						$this->load->library('image_lib',$gambar);
+						$this->image_lib->resize();
+						$namafoto='./upload/'. $this->input->post('kategori_dokumen').'/' .$data['file_name'];
 						
 					}
 					else

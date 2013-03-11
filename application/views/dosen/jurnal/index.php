@@ -90,22 +90,21 @@
 						<input type="text" class="search-query" placeholder="Cari Jurnal" id="cari">
 					</form>
 			</div>
-			<?php
-				$jurnal=$controller->dosen_model->tampilJurnal();
-				if ($jurnal==0):
-					echo '<div class="alert-info" style="text-align:center;">Data Jurnal Tidak Ada</div>';
-				else:
-					foreach($jurnal as $row):
-			?>	
+					<?php
+						$jurnal=$controller->dosen_model->tampilJurnal();
+						if ($jurnal==0):
+							echo '<div class="alert-info" style="text-align:center;">Data Jurnal Tidak Ada</div>';
+						else:
+							foreach($jurnal as $row):
+					?>	
 			<div class="well span5">
-			<input name="file_dokumen" id="file-dokumen" value="jurnal">
 				<a href="#Doc"><img src="/<?php echo $row->FOTO_DOKUMEN?>" class="thumbnail image-list"></a>
-				<h5><?php echo $row->JUDUL_DOKUMEN?> </h5>
-				<p><?php echo $row->PROLOG_DOKUMEN?><br />
-				<div class="btn-group">
-					<button class="btn btn-mini  download-dosen"><img src="/images/glyphicons/png/glyphicons_200_download.png"  onClick="download(this,<?php echo $row-> ID_DOKUMEN ?>)" alt=""></button>
-					<button class="	btn btn-mini  baca-dosen"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>
-				</div>
+					<h5><?php echo $row->JUDUL_DOKUMEN?> </h5>
+					<p><?php echo $row->PROLOG_DOKUMEN?><br />
+					<div class="btn-group">
+						<button class="btn btn-mini  download-dosen"><img src="/images/glyphicons/png/glyphicons_200_download.png"  onClick="download(this,<?php echo $row-> ID_DOKUMEN ?>)" alt=""></button>
+						<button class="	btn btn-mini  baca-dosen"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>
+					</div>
 			</div>
 			<?php
 					endforeach; 

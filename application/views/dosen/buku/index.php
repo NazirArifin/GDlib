@@ -114,9 +114,9 @@
 					foreach($buku as $row):
 			?>	
 			<div class="well span5">
-				<a href="#Doc"><img src="/upload/buku/<?php echo $row->FOTO_DOKUMEN?>" class="thumbnail image-list"></a>
+				<a href="#Doc"><img src="/<?php echo $row->FOTO_DOKUMEN?>" class="thumbnail image-list"></a>
 				<h5><?php echo $row->JUDUL_DOKUMEN?></h5>
-				<p><?php echo $row->PROLOG_DOKUMEN?><br />
+				<p><?php echo $row->PROLOG_DOKUMEN?></br>
 				<div class="btn-group">
 					<button class="btn btn-mini  download-dosen"><img src="/images/glyphicons/png/glyphicons_200_download.png" alt=""></button>
 					<button class="btn btn-mini  baca-dosen"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>

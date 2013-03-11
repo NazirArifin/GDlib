@@ -5,7 +5,7 @@ class Dosen_model extends CI_Model {
 		parent::__construct();
 	}
 	public function tampilJurnal(){
-		$query=$this->db->get_where('tb_dokumen', array('ID_KATEGORI_DOKUMEN'=>1));
+		$query=$this->db->query("select * from tb_dokumen where id_kategori_dokumen=1 order by id_dokumen desc limit 0,4");
 		if($query->num_rows()==0){
 			return false;
 		} else {
@@ -14,7 +14,7 @@ class Dosen_model extends CI_Model {
 	}
 	
 	public function tampilBuku(){
-		$query=$this->db->get_where('tb_dokumen', array('ID_KATEGORI_DOKUMEN'=>2));
+		$query=$this->db->query("select * from tb_dokumen where id_kategori_dokumen=2 order by id_dokumen desc limit 0,4");
 		if($query->num_rows()==0){
 			return false;
 		} else {
@@ -23,7 +23,7 @@ class Dosen_model extends CI_Model {
 	}
 	
 	public function tampilModul(){
-		$query=$this->db->get_where('tb_dokumen', array('ID_KATEGORI_DOKUMEN'=>3));
+		$query=$this->db->query("select * from tb_dokumen where id_kategori_dokumen=3 order by id_dokumen desc limit 0,4");
 		if($query->num_rows()==0){
 			return false;
 		} else {
