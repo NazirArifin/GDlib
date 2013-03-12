@@ -16,34 +16,13 @@
 		}
 		#logo-baru {
 			position:absolute;
-			height: 50px;
-			width:255px;
+			height: 40px;
+			width:220px;
 			margin-top: 15px;
 		}
 		#image {
 			float: left;
 			margin: 0px 15px 10px 0px;
-		}
-		
-		.member-box {
-			background-color: #fbfbfb;
-			background-image: -moz-linear-gradient(top, #ffffff, #f5f5f5);
-			background-image: -ms-linear-gradient(top, #ffffff, #f5f5f5);
-			background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f5f5f5));
-			background-image: -webkit-linear-gradient(top, #ffffff, #f5f5f5);
-			background-image: -o-linear-gradient(top, #ffffff, #f5f5f5);
-			background-image: linear-gradient(top, #ffffff, #f5f5f5);
-			background-repeat: repeat-x;
-			border: 1px solid #ddd;
-			filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffff', endColorstr='#f5f5f5', GradientType=0);
-			  -webkit-box-shadow: inset 0 1px 0 #ffffff;
-				 -moz-box-shadow: inset 0 1px 0 #ffffff;
-					  box-shadow: inset 0 1px 0 #ffffff;
-			margin-bottom: 10px;
-			padding: 10px;
-			-webkit-border-radius: 5px;
-			-moz-border-radius: 5px;
-			border-radius: 5px;
 		}
 	</style>
 </head>
@@ -72,16 +51,13 @@
 <div class="container-fluid">
 	<div class="row-fluid">
 		<div class="span3">
-			<div class="member-box">
+			<div class="well">
 				<ul class="thumbnails">
 					<li class="span12">
-						<a href="#" class="thumbnail"><img src="/images/D_oS.png" alt=""></a>
+						<a href="#" class="thumbnail"><img src="/images/rud.jpg" alt=""></a>
 					</li>
 				</ul>
-				<span>
-					<strong>Administrator</strong><br>
-					<a href="#Setting">Settings</a> | <a href="#">Keluar</a>
-				</span>
+				<span class="label label-inverse">Username | 0955201554</span>
 			</div>
 			<div class="well">
 				<div class="alert alert-info"><h4>Dokumen</h4></div>
@@ -120,7 +96,7 @@
 									<form class="navbar-search pull-left">
 										<input type="text" class="search-query" placeholder="Cari Dokumen" id="cari">
 									</form>
-									<button class="btn pull-right" type="button" onClick="tambahDokumen()" id="buka1"><img src="/images/glyphicons/png/glyphicons_190_circle_plus.png" alt=""></button>
+									<button class="btn pull-right" type="button" onClick="tambahDokumen()" id="buka1"><i class="icon-plus-sign"></i></button>
 							</div>
 								<table class="table">
 									<thead>
@@ -179,7 +155,7 @@
 									<form class="navbar-search pull-left">
 										<input type="text" class="search-query" placeholder="Cari Dokumen" id="cari">
 									</form>
-									<button class="btn pull-right" type="button" onClick="tambahDokumen()"><img src="/images/glyphicons/png/glyphicons_190_circle_plus.png" alt=""></i></button>
+									<button class="btn pull-right" type="button" onClick="tambahDokumen()"><i class="icon-plus-sign"></i></button>
 								</div>
 								
 								<table class="table">
@@ -240,7 +216,7 @@
 									<form class="navbar-search pull-left">
 										<input type="text" class="search-query" placeholder="Cari Dokumen" id="cari">
 									</form>
-									<button class="btn pull-right" type="button" onClick="tambahDokumen()" id="buka"><img src="/images/glyphicons/png/glyphicons_190_circle_plus.png" alt=""></i></button>
+									<button class="btn pull-right" type="button" onClick="tambahDokumen()" id="buka"><i class="icon-plus-sign"></i></button>
 								</div>
 								<table class="table">
 									<thead>
@@ -302,7 +278,7 @@
 			<div class="row-fluid hide" id="form-section">
 				<form class="form-horizontal" id="form-tambah" action="" method="POST" enctype="multipart/form-data">
 					<div class="well span12">
-						<a href="#" class="btn btn-mini pull-right" onClick="return closeForm()" id="tutup"><img src="/images/glyphicons/png/glyphicons_197_remove.png" alt=""></a>
+						<a href="#" class="btn btn-inverse pull-right" onClick="return closeForm()" id="tutup"><i class="icon-remove-sign"></i></a>
 						<input type="hidden" name="kategori_dokumen" id="kategori-dokumen" value="jurnal">
 						<input type="hidden" id="id-dokumen" name="id_dokumen" value="">
 						

@@ -112,8 +112,8 @@
 				<h5>Buletin </h5>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
 				<div class="btn-group">
-					<button class="btn btn-mini  download-dosen"><img src="/images/glyphicons/png/glyphicons_200_download.png" alt=""></button>
-					<button class="btn btn-mini  baca-dosen"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>
+					<button class="btn btn-primary download-dosen"><i class="icon-download "></i> Download</button>
+					<button class="btn btn-primary baca-dosen"><i class="icon-file"></i> Baca</button>
 				</div>
 			</div>
 			<div class="well span5">
@@ -149,20 +149,20 @@
 				</div>
 			</div>
 		<br>
-		
-		<div class="pagination pagination-centered">
-		<ul>
-			<li><a href="#">Prev</a></li>
-			<li class="active">
-			<a href="#">1</a>
-			</li>
-			<li><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">Next</a></li>
-			</ul>
+		<div class="span12">
+			<div class="pagination pagination-centered">
+			<ul>
+				<li><a href="#">Prev</a></li>
+				<li class="active">
+				<a href="#">1</a>
+				</li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">Next</a></li>
+				</ul>
+			</div>
 		</div>
-		
 	</div>			
 </div>
 	 <!--BAGIAN FOOTER-->
@@ -179,9 +179,6 @@ $('#tab-dok a').click(function (e) {
 	  e.preventDefault();
 	  $(this).tab('show');
 	})
-$('.download-dosen').attr('title', 'klik untuk mengunduh dokumen').tooltip();
-$('.btn-warning').attr('title', 'klik untuk membaca dokumen').tooltip();
-$('.baca-dosen').attr('title', 'klik untuk melihat detail  dokumen').tooltip();
 </script>
 </body>
 	

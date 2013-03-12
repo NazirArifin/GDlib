@@ -80,10 +80,10 @@
 					</blockquote>
 					fermentum ac dui. Etiam eget magna diam. Suspendisse magna nibh, volutpat et ullamcorper ac, euismod sit amet nisi. Duis dapibus fringilla tellus, vel pharetra sapien sagittis nec.Aliquam metus neque, bibendum sit amet porta at, consequat et enim. In ut turpis non ipsum rhoncus porttitor vel ac nunc. Maecenas interdum dignissim lorem quis auctor. Donec sit amet nulla nisl, aliquam pretium ipsum. Pellentesque sodales ipsum et enim rutrum adipiscing. Quisque tincidunt mattis sapien, vel posuere neque sodales eu. Nullam egestas sem et sapien adipiscing viverra. Phasellus tempor mauris non massa lacinia nec eleifend orci sagittis.</p>
               </div>
-				   <ul class="post-meta">
-						<li><a href=""><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Dohn Joe</a></li>
-						<li><a href=""> <img src="/images/glyphicons/png/glyphicons_245_chat.png" alt=""> 2 Comments</a></li>
-				  </ul>
+					<ul class="post-meta">
+						<li><i class="icon-user icon-large"></i><a href=""> Rudiec Nuada</a></li>
+						<li><i class="icon-comment icon-large"></i><a href=""> 2 Comments</a></li>
+					</ul>
               <div class="clearfix"></div>
               
             <section class="blog-widget">

@@ -5,6 +5,7 @@
 	<title>Creator | Nazir</title>
 	<link href="/third_party/bootstrap/css/elemento.css" rel="stylesheet" type="text/css">
 	<link href="/third_party/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="/third_party/awesome/css/font-awesome.css" />
 	<link rel="stylesheet" href="/static/css/main.css" />
 	<link rel="stylesheet" href="/static/css/style.css" />
 	<link rel="stylesheet" href="/third_party/css-social-buttons-master/css/zocial.css" />
@@ -15,8 +16,8 @@
 		}
 	#logo-baru {
 		position:absolute;
-		height: 50px;
-		width:255px;
+		height: 40px;
+		width:220px;
 		margin-top: 15px;
 	}
 	#header{
@@ -39,7 +40,7 @@
 	</style>
 </head>
 <body>
-<div class="navbar navbar-fixed-top">
+	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
 				<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -49,13 +50,13 @@
 				</button>
 				<a href="/"><img src="/images/logo-gd.png" id="logo-baru" /></a>
 				<ul class="nav pull-right nav-pills">
-					<li><a href="/creator"><img src="/images/glyphicons/png/glyphicons_020_home.png" alt=""> Dashboard</a>
-					<li><a href="/mahasiswa/profilmahasiswa"><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Profil</a>
+					<li><a href="#"><i class="icon-dashboard icon-large"></i> Dashboard</a>
+					<li><a href="#"><i class="icon-user icon-large"></i> Profil</a>
 				  
 				</ul>
 			</div>
 		</div>
-</div>
+	</div>
 <br>
 <br>
 <br>
@@ -102,27 +103,27 @@
 				<h3>Profil Detail</h3>
 				<table class="table">
 							<tr>
-								<td><img src="/images/glyphicons/png/glyphicons_034_old_man.png" alt=""> Nama Lengkap</td>
+								<td><i class="icon-user icon-large"></i> Nama Lengkap</td>
 								<td>:</td>
 								<td>M.Nazir Arifin</td>
 							</tr>
 							<tr>
-								<td><img src="/images/glyphicons/png/glyphicons_263_bank.png" alt=""> Alamat</td>
+								<td><i class="icon-road icon-large"></i> Alamat</td>
 								<td>:</td>
 								<td>Pluto Lovato
 							</tr>
 							<tr>
-								<td><img src="/images/glyphicons/png/glyphicons_278_birthday_cake.png" alt=""> Tempat & Tgl Lahir</td>
+								<td><i class="icon-calendar icon-large"></i> Tempat & Tgl Lahir</td>
 								<td>:</td>
 								<td>Berau 13/05/1992</td>
 							</tr>
 							<tr>
-								<td><img src="/images/glyphicons/png/glyphicons_010_envelope.png" alt=""> E-mail</td>
+								<td><i class="icon-envelope icon-large"></i> E-mail</td>
 								<td>:</td>
 								<td>rudiec.nuada@gmail.com</td>
 							</tr>
 							<tr>
-								<td><img src="/images/glyphicons/png/glyphicons_163_iphone.png" alt=""> Phone</td>
+								<td><i class="icon-phone-sign icon-large"></i> Phone</td>
 								<td>:</td>
 								<td>+6281934936489</td>
 							</tr>

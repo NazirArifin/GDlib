@@ -102,10 +102,10 @@
 				<a href="#Doc"><img src="/<?php echo $row->FOTO_DOKUMEN?>" class="thumbnail image-list"></a>
 					<h5><?php echo $row->JUDUL_DOKUMEN?> </h5>
 					<p><?php echo $row->PROLOG_DOKUMEN?><br />
-					<div class="btn-group">
-						<button class="btn btn-mini  download-dosen"><img src="/images/glyphicons/png/glyphicons_200_download.png"  onClick="download(this,<?php echo $row-> ID_DOKUMEN ?>)" alt=""></button>
-						<button class="	btn btn-mini  baca-dosen"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>
-					</div>
+				<div class="btn-group">
+					<button class="btn btn-primary download-dosen"><i class="icon-download "></i> Download</button>
+					<button class="btn btn-primary baca-dosen"><i class="icon-file"></i> Baca</button>
+				</div>
 			</div>
 			<?php
 					endforeach; 
@@ -128,19 +128,21 @@
 			</div>
 			-->
 		<br>
-		
-		<div class="pagination pagination-centered">
-		<ul>
-			<li><a href="#">Prev</a></li>
-			<li class="active">
-			<a href="#">1</a>
-			</li>
-			<li><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">Next</a></li>
-			</ul>
+		<div class="span12">
+			<div class="pagination pagination-centered">
+				<ul>
+					<li><a href="#">Prev</a></li>
+					<li class="active">
+					<a href="#">1</a>
+					</li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">Next</a></li>
+				</ul>
+			</div>
 		</div>
+			
 		
 	</div>			
 </div>
@@ -158,9 +160,6 @@ $('#tab-dok a').click(function (e) {
 	  e.preventDefault();
 	  $(this).tab('show');
 	})
-$('.download-dosen').attr('title', 'klik untuk mengunduh dokumen').tooltip();
-$('.btn-warning').attr('title', 'klik untuk membaca dokumen').tooltip();
-$('.baca-dosen').attr('title', 'klik untuk melihat detail  dokumen').tooltip();
 </script>
 </body>
 </html>

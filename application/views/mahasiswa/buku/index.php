@@ -57,8 +57,9 @@
 			</ul>   
 			<div class="navbar navbar-inner">
 				<a class="brand">Buku</a>
-				<form class="navbar-search pull-right">
-				  <input type="text" class="search-query" placeholder="Cari Buku" id="cari">
+				<form class="navbar-form pull-right">
+					<input type="text" class="span2" id="cari">
+					<button type="submit" class="btn">Submit</button>
 				</form>
 			</div>
 		<br>
@@ -74,8 +75,8 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.. <a href="/mahasiswa/buku/detail">Read more ? </a></p>
               </div>
               <ul class="post-meta">
-                <li><a href=""><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Rudiec Nuada</a></li>
-                <li><a href=""> <img src="/images/glyphicons/png/glyphicons_245_chat.png" alt=""> 2 Comments</a></li>
+                <li><i class="icon-user icon-large"></i><a href=""> Rudiec Nuada</a></li>
+                <li><i class="icon-comment icon-large"></i><a href=""> 2 Comments</a></li>
               </ul>
             </article>
     

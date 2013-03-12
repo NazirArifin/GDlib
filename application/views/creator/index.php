@@ -5,6 +5,7 @@
 	<title>Creator</title>
 	<link href="/third_party/bootstrap/css/elemento.css" rel="stylesheet" type="text/css">
 	<link href="/third_party/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="/third_party/awesome/css/font-awesome.css" />
 	<link rel="stylesheet" href="/static/css/main.css">
 	<link rel="stylesheet" href="/static/css/style.css" >
 	<style type="text/css">
@@ -13,8 +14,8 @@
 		}
 	#logo-baru {
 		position:absolute;
-		height: 50px;
-		width:255px;
+		height: 40px;
+		width:220px;
 		margin-top: 15px;
 	}
 	.creator{
@@ -26,7 +27,7 @@
 	</style>
 </head>
 <body>
-<div class="navbar navbar-fixed-top">
+	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
 				<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -36,13 +37,13 @@
 				</button>
 				<a href="/"><img src="/images/logo-gd.png" id="logo-baru" /></a>
 				<ul class="nav pull-right nav-pills">
-					<li><a href="/dosen"><img src="/images/glyphicons/png/glyphicons_020_home.png" alt=""> Dashboard</a>
-					<li><a href="/dosen/profil"><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Profil</a>
+					<li><a href="#"><i class="icon-dashboard icon-large"></i> Dashboard</a>
+					<li><a href="#"><i class="icon-user icon-large"></i> Profil</a>
 				  
 				</ul>
 			</div>
 		</div>
-</div>
+	</div>
 <br>
 <br>
 <br>
