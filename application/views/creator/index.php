@@ -89,17 +89,18 @@
 						<a class="brand">Programmer</a>
 					</div>
 				</div>            
+				
 				<div class="about" >
-					<img src="/images/creator/habib.jpg" class="creator"/>
+					<img  src="/images/creator/fawait.jpg" class="creator"/>
 					<div class="social">
 						<a href="#"><img src="/images/icon/glyphicons_410_facebook.png"  /></a>
 						<a href="#"><img src="/images/icon/glyphicons_382_google_plus.png"  /></a>
 						<a href="#"><img src="/images/icon/glyphicons_411_twitter.png"  /></a>
 					</div>
-					<h4 class="name">Habib</h4>
-					<h4 class="name">0955201556</h4>
+					<h4 class="name">Fawait</h4>
+					<h4 class="name">0955201607</h4>
 					<h4 class="name">Keren</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolore blanditiis veritatis ut sit deserunt aliquid illo recusandae alias nam placeat sed libero possimus. Sapiente placeat temporibus aliquid amet soluta?<a href="/creator/habib">Read More...</a></p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolore blanditiis veritatis ut sit deserunt aliquid illo recusandae alias nam placeat sed libero possimus. Sapiente placeat temporibus aliquid amet soluta?<a href="/creator/fawait">Read more</a></p>
 				</div>
 				<hr>
 				<div class="about" >
@@ -116,16 +117,16 @@
 				</div>
 				<hr>
 				<div class="about" >
-					<img  src="/images/creator/fawait.jpg" class="creator"/>
+					<img src="/images/creator/habib.jpg" class="creator"/>
 					<div class="social">
 						<a href="#"><img src="/images/icon/glyphicons_410_facebook.png"  /></a>
 						<a href="#"><img src="/images/icon/glyphicons_382_google_plus.png"  /></a>
 						<a href="#"><img src="/images/icon/glyphicons_411_twitter.png"  /></a>
 					</div>
-					<h4 class="name">Fawait</h4>
-					<h4 class="name">0955201607</h4>
+					<h4 class="name">Habib</h4>
+					<h4 class="name">0955201556</h4>
 					<h4 class="name">Keren</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolore blanditiis veritatis ut sit deserunt aliquid illo recusandae alias nam placeat sed libero possimus. Sapiente placeat temporibus aliquid amet soluta?<a href="/creator/fawait">Read more</a></p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolore blanditiis veritatis ut sit deserunt aliquid illo recusandae alias nam placeat sed libero possimus. Sapiente placeat temporibus aliquid amet soluta?<a href="/creator/habib">Read More...</a></p>
 				</div>
 				<div class="navbar alert alert-info">
 					<div class="navbar-inner">
@@ -145,18 +146,6 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolore blanditiis veritatis ut sit deserunt aliquid illo recusandae alias nam placeat sed libero possimus. Sapiente placeat temporibus aliquid amet soluta?<a href="/creator/fajrul">Read more</a></p>
 				</div>
 				<hr>
-				<div class="about" >
-					<img  src="/images/rud.jpg" class="creator"/>
-					<div class="social">
-						<a href="#"><img src="/images/icon/glyphicons_410_facebook.png"  /></a>
-						<a href="#"><img src="/images/icon/glyphicons_382_google_plus.png"  /></a>
-						<a href="#"><img src="/images/icon/glyphicons_411_twitter.png"  /></a>
-					</div>
-					<h4 class="name">Rudi</h4>
-					<h4 class="name">0955201554</h4>
-					<h4 class="name">Keren</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolore blanditiis veritatis ut sit deserunt aliquid illo recusandae alias nam placeat sed libero possimus. Sapiente placeat temporibus aliquid amet soluta?<a href="/creator/rudi">keren</a></p>
-				</div>
 				
 			  
 	</div>
