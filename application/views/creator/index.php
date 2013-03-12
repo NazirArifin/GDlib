@@ -62,7 +62,7 @@
 
 <div class="container">
 	<div class="well span11">
-		<h1 class="three">About GDlib</h1>
+		<img src="/images/main-header.png" alt="">
 		<div class='testimonial'>
 			<p ><img src="/images/ogo.png" alt="Logo" id="about-logo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit ipsam vero assumenda odio dolor numquam neque suscipit soluta vel facilis. In culpa cupiditate ullam fuga rem voluptatibus soluta voluptate modi, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa aliquam aut commodi neque porro rem esse ex facilis quae perspiciatis quia asperiores delectus laudantium voluptatem quisquam molestias sit eaque a.
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit ipsam vero assumenda odio dolor numquam neque suscipit soluta vel facilis. In culpa cupiditate ullam fuga rem voluptatibus soluta voluptate modi, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa aliquam aut commodi neque porro rem esse ex facilis quae perspiciatis quia asperiores delectus laudantium voluptatem quisquam molestias sit eaque a.</p>
