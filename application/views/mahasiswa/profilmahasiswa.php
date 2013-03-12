@@ -32,6 +32,12 @@
 	border-width:6px;
 	border-color:#ffffff;
 	border-radius:5px;
+	transition : All 1s ease ;
+	}
+	.pp:hover{
+	transition : All 1s ease ;
+	box-shadow:0px 0px 10px #000000;
+	
 	}
 	</style>
 </head>
@@ -77,7 +83,7 @@
 						<button class="btn btn-info btn-mini" type="submit" value="upload">Simpan</button>
 				</form>
 				<div class="tongue-content">
-					<a href="#" class="btn btn-inverse" id="change" onClick="return ubahFotoProfil(this, <?php echo $row->ID_PROFIL ?>)"><i class="icon-edit"></i> Change</a>
+					<a href="#" class="btn btn-inverse btn-mini" id="change" onClick="return ubahFotoProfil(this, <?php echo $row->ID_PROFIL ?>)"><i class="icon-edit"></i> Ganti Foto Profil</a>
 				</div>
 			</div>
 			
@@ -119,7 +125,7 @@
 						<div class="container">
 							<a class="brand">Profil Detail</a>
 							<ul class="nav pull-right nav-pills">
-							<li><a href=""><i class="icon-cogs icon-large"></i></a></li>
+							<li><a href="#edit-profil" role="button" data-toggle="modal" id="edit"><i class="icon-cogs icon-large"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -195,6 +201,78 @@ endif;
 ?>
 </div>
 
+	<div id="edit-profil" class="modal message hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+            <h3>Edit Profil Mahasiswa</h3>
+        </div>
+        <div class="modal-body">
+            <div class="control-group">
+				<div class="controls">
+					<div class="input-prepend">
+						<span class="add-on"><i class="icon-user"></i></span>
+						<input class="span3" id="nama" type="text" placeholder="Nama Lengkap" >
+					</div>
+				</div>
+			</div>
+            <div class="control-group">
+				<div class="controls">
+					<div class="input-prepend">
+						<span class="add-on"><i class="icon-credit-card"></i></span>
+						<input class="span3" id="npm" type="text" placeholder="NPM">
+					</div>
+				</div>
+			</div>
+            <div class="control-group">
+				<div class="controls">
+					<div class="input-prepend">
+						<span class="add-on"><i class="icon-map-marker"></i></span>
+						<input class="span3" id="tetala" type="text" placeholder="Tempat Lahir">
+					</div>&nbsp;
+					<div class="input-prepend">
+						<input class="span3" id="tetala" type="text" placeholder="Tanggal Lahir">
+					</div>
+				</div>
+			</div>
+
+ 			<div class="control-group">			
+				<label class="control-label" for="gender">Jenis Kelamin</label>
+				<input type="radio" name="gender" id="Laki-laki"> &nbsp;<span class="label label-info">Laki-Laki</span>
+				<input type="radio" name="gender" id="Perempuan"> &nbsp;<span class="label label-important">Perempuan</span>
+				<input type="radio" name="gender" id="Maho"> &nbsp;<span class="label label-inverse">Maho</span>
+				<input type="radio" name="gender" id="Banci"> &nbsp;<span class="label label-warning">Banci</span>
+			</div>
+			<div class="control-group">
+				<div class="controls">
+					<div class="input-prepend">
+						<span class="add-on"><i class="icon-road"></i></span>
+						<input class="span3" id="mail" type="text" placeholder="Alamat">
+					</div>
+				</div>
+			</div>
+			<div class="control-group">
+				<div class="controls">
+					<div class="input-prepend">
+						<span class="add-on"><i class="icon-envelope"></i></span>
+						<input class="span3" id="mail" type="text" placeholder="Alamat email">
+					</div>
+				</div>
+			</div>
+			<div class="control-group">
+				<div class="controls">
+					<div class="input-prepend">
+						<span class="add-on"><i class="icon-phone"></i></span>
+						<input class="span3" id="mail" type="text" placeholder="Nomer Telepon/HP">
+					</div>
+				</div>
+			</div>
+			
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-danger" data-dismiss="modal">Tutup</button>
+            <button class="btn btn-primary">Simpan</button>
+        </div>
+    </div>
  	<footer class="row-fluid footer">
 		<div class="well span12">
 			<hr>
@@ -210,11 +288,8 @@ endif;
 	
 <script type="text/javascript">
 $('#accordion2').accordion();
-$('#tongue').tongue({
-	'tongue_content': '.tongue-content',
-	'start_speed'   : 500,
-	'end_speed'     : 400
-});
+$('#edit').attr('title','Edit Profil').tooltip();
+$('#tongue').tongue();
 </script>
 </body>
 </html>

@@ -9,17 +9,12 @@
 		<link rel="stylesheet" href="/third_party/bootstrap/css/elemento.min.css" />
 		<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
 		<link rel="stylesheet" href="/third_party/awesome/css/font-awesome.css" />
+		
 		<link href='/third_party/rating/jquery.rating.css' type="text/css" rel="stylesheet"/>
 		<link href='/third_party/jsliderelated/jsliderelated.css' type="text/css" rel="stylesheet"/>
+		
 		<link rel="stylesheet" href="/css/style.css" />
 		<link rel="stylesheet" href="/css/main.css" />
-			
-		<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
-		<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
-		<script src="/third_party/bootstrap/bootstrap.min.js"></script>
-		<script src='/third_party/rating/jquery.MetaData.js' type="text/javascript" ></script>
-		<script src='/third_party/rating/jquery.rating.js' type="text/javascript" ></script>
-		<script src='/third_party/jsliderelated/jsliderelatedpages.js' type="text/javascript"></script>
 		
 		<style type="text/css">
 		#image {
@@ -143,7 +138,12 @@
 		</div>
 	</footer>
 </div>
-
+		<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
+		<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
+		<script src="/third_party/bootstrap/bootstrap.min.js"></script>
+		<script src='/third_party/rating/jquery.MetaData.js' type="text/javascript" ></script>
+		<script src='/third_party/rating/jquery.rating.js' type="text/javascript" ></script>
+		<script src='/third_party/jsliderelated/jsliderelatedpages.js' type="text/javascript"></script>
 <script type="text/javascript">
 $('.hover-star').rating({
   focus: function(value, link){

@@ -31,6 +31,7 @@
 	border-color:#ffffff;
 	border-radius:5px;
 	}
+	
 	</style>
 </head>
 <body>
@@ -105,68 +106,66 @@
 				</div>
 			</div>
 			<hr>
-			<div class="accordion" id="accordion2">
 			  <div class="accordion-group">
 				<div class="accordion-heading">
 				  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#tetala">
-					<img src="/images/glyphicons/png/glyphicons_057_history.png"> Tempat & tanggal lahir
+					<i class="icon-calendar"></i> Tempat & tanggal lahir
 				  </a>
 				</div>
-				<div id="tetala" class="accordion-body collapse">
+				<div id="tetala" class="accordion-body collapse in">
 				  <div class="accordion-inner">
-					Pamekasan, 13/Mei/1992
+		
 				  </div>
 				</div>
 			  </div>
 			  <div class="accordion-group">
 				<div class="accordion-heading">
 				  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#gender">
-					<img src="/images/glyphicons/png/glyphicons_024_parents.png"> Jenis Kelamin
+					<i class="icon-user"></i> Jenis Kelamin
 				  </a>
 				</div>
 				<div id="gender" class="accordion-body collapse">
 				  <div class="accordion-inner">
-					Laki-Laki
+		
 				  </div>
 				</div>
 			  </div>
 			  <div class="accordion-group">
 				<div class="accordion-heading">
 				  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#alamat">
-					<img src="/images/glyphicons/png/glyphicons_026_road.png"> Alamat
+					<i class="icon-road"></i> Alamat
 				  </a>
 				</div>
 				<div id="alamat" class="accordion-body collapse">
 				  <div class="accordion-inner">
-					Taman Hedona Regency Blok C4 no.7
+				
 				  </div>
 				</div>
 			  </div>
 			  <div class="accordion-group">
 				<div class="accordion-heading">
 				  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#email">
-					<img src="/images/glyphicons/png/glyphicons_419_e-mail.png"> Email
+					<i class="icon-envelope-alt"></i> Email
 				  </a>
 				</div>
 				<div id="email" class="accordion-body collapse">
 				  <div class="accordion-inner">
-					rudi@nyaroan.com
+				
 				  </div>
 				</div>
 			  </div>
 			  <div class="accordion-group">
 				<div class="accordion-heading">
 				  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#phone">
-					<img src="/images/glyphicons/png/glyphicons_169_phone.png"> Nomer HP
+					<i class="icon-phone-sign"></i> Nomer HP
 				  </a>
 				</div>
 				<div id="phone" class="accordion-body collapse">
 				  <div class="accordion-inner">
-					+6285730727537
+		
 				  </div>
 				</div>
 			  </div>
-			</div>
 		
 		</div>
 	</div>

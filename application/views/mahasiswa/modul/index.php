@@ -57,7 +57,7 @@
 			<div class="navbar navbar-inner">
 				<a class="brand">Modul</a>
 				<form class="navbar-form pull-right">
-					<input type="text" class="span2" id="cari" placeholder="cari buletin disini...">
+					<input type="text" class="span2" id="cari" placeholder="cari modul disini...">
 					<button type="submit" class="btn"><i class="icon-search "></i></button>
 				</form>
 			</div>

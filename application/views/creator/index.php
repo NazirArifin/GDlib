@@ -82,7 +82,7 @@
 					<h4 class="name">Nazir Arifin</h4>
 					<h4 class="name">0955201xx</h4>
 					<h4 class="name">Keren</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolore blanditiis veritatis ut sit deserunt aliquid illo recusandae alias nam placeat sed libero possimus. Sapiente placeat temporibus aliquid amet soluta?</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolore blanditiis veritatis ut sit deserunt aliquid illo recusandae alias nam placeat sed libero possimus. Sapiente placeat temporibus aliquid amet soluta?<a href="/creator/nazir">Read More...</a></p>
 				</div>
 				<div class="navbar alert alert-info">
 					<div class="navbar-inner">
@@ -99,7 +99,7 @@
 					<h4 class="name">Habib</h4>
 					<h4 class="name">0955201556</h4>
 					<h4 class="name">Keren</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolore blanditiis veritatis ut sit deserunt aliquid illo recusandae alias nam placeat sed libero possimus. Sapiente placeat temporibus aliquid amet soluta?</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolore blanditiis veritatis ut sit deserunt aliquid illo recusandae alias nam placeat sed libero possimus. Sapiente placeat temporibus aliquid amet soluta?<a href="/creator/habib">Read More...</a></p>
 				</div>
 				<hr>
 				<div class="about" >
@@ -112,7 +112,7 @@
 					<h4 class="name">Deki</h4>
 					<h4 class="name">0955201588</h4>
 					<h4 class="name">Keren</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolore blanditiis veritatis ut sit deserunt aliquid illo recusandae alias nam placeat sed libero possimus. Sapiente placeat temporibus aliquid amet soluta?</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolore blanditiis veritatis ut sit deserunt aliquid illo recusandae alias nam placeat sed libero possimus. Sapiente placeat temporibus aliquid amet soluta?<a href="/creator/deki">Read More....</a></p>
 				</div>
 				<hr>
 				<div class="about" >
@@ -125,7 +125,7 @@
 					<h4 class="name">Fawait</h4>
 					<h4 class="name">0955201607</h4>
 					<h4 class="name">Keren</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolore blanditiis veritatis ut sit deserunt aliquid illo recusandae alias nam placeat sed libero possimus. Sapiente placeat temporibus aliquid amet soluta?</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolore blanditiis veritatis ut sit deserunt aliquid illo recusandae alias nam placeat sed libero possimus. Sapiente placeat temporibus aliquid amet soluta?<a href="/creator/fawait">Read more</a></p>
 				</div>
 				<div class="navbar alert alert-info">
 					<div class="navbar-inner">
@@ -142,7 +142,7 @@
 					<h4 class="name">Fajrul</h4>
 					<h4 class="name">0955201xx</h4>
 					<h4 class="name">Keren</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolore blanditiis veritatis ut sit deserunt aliquid illo recusandae alias nam placeat sed libero possimus. Sapiente placeat temporibus aliquid amet soluta?</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolore blanditiis veritatis ut sit deserunt aliquid illo recusandae alias nam placeat sed libero possimus. Sapiente placeat temporibus aliquid amet soluta?<a href="/creator/fajrul">Read more</a></p>
 				</div>
 				<hr>
 				<div class="about" >
@@ -155,7 +155,7 @@
 					<h4 class="name">Rudi</h4>
 					<h4 class="name">0955201554</h4>
 					<h4 class="name">Keren</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolore blanditiis veritatis ut sit deserunt aliquid illo recusandae alias nam placeat sed libero possimus. Sapiente placeat temporibus aliquid amet soluta?</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolore blanditiis veritatis ut sit deserunt aliquid illo recusandae alias nam placeat sed libero possimus. Sapiente placeat temporibus aliquid amet soluta?<a href="/creator/rudi">keren</a></p>
 				</div>
 				
 			  
@@ -173,6 +173,7 @@
 	
 	<script type="text/javascript">
 	$('.iconic').attr('title','Lihat profil lengkapku').tooltip();
+	$('.iconic').attr('title').tooltip();
 	</script>
 </body>
 </html>

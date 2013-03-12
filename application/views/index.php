@@ -94,7 +94,7 @@
 	<!-- modal info -->
 	<div id="modal-info" class="modal message hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
             <h3>Modal Heading</h3>
         </div>
         <div class="modal-body">
