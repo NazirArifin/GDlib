@@ -22,6 +22,14 @@
 	width:170px;
 	height:180px;
 	}
+	.three{
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	line-height: 1em;
+	text-align:center;
+	color: #41cafc;
+	font-weight:bold;
+	font-size: 120px;
+	text-shadow:0px 0px 0 rgb(41,178,228),1px 1px 0 rgb(26,163,213),2px 2px 0 rgb(12,149,199),3px 3px 0 rgb(-3,134,184),4px 4px 0 rgb(-17,120,170),5px 5px 0 rgb(-32,105,155), 6px 6px 0 rgb(-46,91,141),7px 7px 6px rgba(0,0,0,0.6),7px 7px 1px rgba(0,0,0,0.5),0px 0px 6px rgba(0,0,0,.2);}
 	#about-logo{
 	width:100px;
 	height:100px;
@@ -54,7 +62,7 @@
 
 <div class="container">
 	<div class="well span11">
-		<h1>About GDlib</h1>
+		<h1 class="three">About GDlib</h1>
 		<div class='testimonial'>
 			<p ><img src="/images/ogo.png" alt="Logo" id="about-logo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit ipsam vero assumenda odio dolor numquam neque suscipit soluta vel facilis. In culpa cupiditate ullam fuga rem voluptatibus soluta voluptate modi, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa aliquam aut commodi neque porro rem esse ex facilis quae perspiciatis quia asperiores delectus laudantium voluptatem quisquam molestias sit eaque a.
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit ipsam vero assumenda odio dolor numquam neque suscipit soluta vel facilis. In culpa cupiditate ullam fuga rem voluptatibus soluta voluptate modi, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa aliquam aut commodi neque porro rem esse ex facilis quae perspiciatis quia asperiores delectus laudantium voluptatem quisquam molestias sit eaque a.</p>
@@ -64,9 +72,8 @@
 			</p>
 		</div>
 		<hr>
-			<div class="page-header">
-				<h1>Team Creator</h1>
-            </div>
+			
+				<h1 class="three">Team Creator</h1>
 				<div class="navbar alert alert-info">
 					<div class="navbar-inner">
 						<a class="brand">Project Manager</a>
