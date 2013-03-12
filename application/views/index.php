@@ -7,7 +7,7 @@
 	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<title>GDLib :: G{edung}D Library</title>
 	
-	<link rel="stylesheet" href="/third_party/bootstrap/css/elemento.css" />
+	<link rel="stylesheet" href="/third_party/bootstrap/css/elemento.min.css" />
 	<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
 	<link rel="stylesheet" href="/third_party/awesome/css/font-awesome.css" />
 	

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Creator</title>
-	<link href="/third_party/bootstrap/css/elemento.css" rel="stylesheet" type="text/css">
+	<link href="/third_party/bootstrap/css/elemento.min.css" rel="stylesheet" type="text/css">
 	<link href="/third_party/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="/third_party/awesome/css/font-awesome.css" />
 	<link rel="stylesheet" href="/static/css/main.css">
@@ -19,11 +19,14 @@
 		margin-top: 15px;
 	}
 	.creator{
-	width:270px;
-	height:250px;
-	
+	width:170px;
+	height:180px;
 	}
-	
+	#about-logo{
+	width:100px;
+	height:100px;
+	float:left;
+	}
 	</style>
 </head>
 <body>
@@ -52,71 +55,111 @@
 <div class="container">
 	<div class="well span11">
 		<h1>About GDlib</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae consequuntur dolorem optio obcaecati in. Tempore deleniti quas ullam voluptatibus fugit labore recusandae eaque quae doloribus molestias dolores voluptate nihil provident!</p>
+		<div class='testimonial'>
+			<p ><img src="/images/ogo.png" alt="Logo" id="about-logo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit ipsam vero assumenda odio dolor numquam neque suscipit soluta vel facilis. In culpa cupiditate ullam fuga rem voluptatibus soluta voluptate modi, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa aliquam aut commodi neque porro rem esse ex facilis quae perspiciatis quia asperiores delectus laudantium voluptatem quisquam molestias sit eaque a.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit ipsam vero assumenda odio dolor numquam neque suscipit soluta vel facilis. In culpa cupiditate ullam fuga rem voluptatibus soluta voluptate modi, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa aliquam aut commodi neque porro rem esse ex facilis quae perspiciatis quia asperiores delectus laudantium voluptatem quisquam molestias sit eaque a.</p>
+			<p class='testimonial-footer pull-right'>
+				<img src=/images/ogo.png" width="40px" height="30px"/>
+				<b>John Doe</b> — designer
+			</p>
+		</div>
 		<hr>
-		<h1>Team Creator</h1>
-		<hr>
-	<div class=" span3">
-        <div class="about portrait">
-			<img src="/images/creator/nazir.jpg" class="creator">
-            <div class="social">
-            <a href="/creator/nazir"><img src="/images/glyphicons/png/glyphicons_352_nameplate.png"  class="iconic" data-placement="left"></a>
+			<div class="page-header">
+				<h1>Team Creator</h1>
             </div>
-			<h3 class="name">Project Manager</h3>
-			<h4 class="label label-inverse name">Nazir Arifin | 09552015xx</h4>
-        </div>
-    </div>
-	<div class=" span3">
-        <div class="about portrait">
-			<img src="/images/rud.jpg">
-            <div class="social">
-            <a href="/creator/rudi"><img src="/images/glyphicons/png/glyphicons_352_nameplate.png"  class="iconic" data-placement="left"></a>
-            </div>
-			<h3 class="name">Designer</h3>
-			<h4 class="label label-important name">Rudi Hartono | 0955201554</h4>
-        </div>
-    </div>
-	<div class=" span3">
-        <div class="about portrait">
-			<img src="/images/creator/fajrul.jpg" class="creator">
-            <div class="social">
-            <a href="/creator/fajrul"><img src="/images/glyphicons/png/glyphicons_352_nameplate.png"  class="iconic" data-placement="left"></a>
-            </div>
-			<h3 class="name">Designer</h3>
-			<h4 class="label label-important name">Fajrul Iman A.A | 1155201xxx</h4>
-        </div>
-    </div>
-	<div class=" span3">
-        <div class="about portrait">
-			<img src="/images/creator/habib.jpg" class="creator">
-            <div class="social">
-            <a href="/creator/habib"><img src="/images/glyphicons/png/glyphicons_352_nameplate.png"  class="iconic" data-placement="left"></a>
-            </div>
-			<h3 class="name">Programmer</h3>
-			<h4 class="label label-info name">Habibullah | 0955201556</h4>
-        </div>
-    </div>
-	<div class=" span3">
-        <div class="about portrait">
-			<img src="/images/creator/deki.jpg">
-            <div class="social">
-            <a href="/creator/deki"><img src="/images/glyphicons/png/glyphicons_352_nameplate.png"  class="iconic" data-placement="left"></a>
-            </div>
-			<h3 class="name">Programmer</h3>
-			<h4 class="label label-info name">Deki Andi Irawan | 0955201588</h4>
-        </div>
-    </div>
-	<div class=" span3">
-        <div class="about portrait">
-			<img src="/images/creator/fawait.jpg" class="creator">
-            <div class="social">
-            <a href="/creator/fawait"><img src="/images/glyphicons/png/glyphicons_352_nameplate.png" class="iconic" data-placement="left"></a>
-            </div>
-			<h3 class="name">Programmer</h3>
-			<h4 class="label label-info name">Fawait | 0955201607</h4>
-        </div>
-    </div>
-</div>
+				<div class="navbar alert alert-info">
+					<div class="navbar-inner">
+						<a class="brand">Project Manager</a>
+					</div>
+				</div>            
+				<div class="about" >
+					<img  src="/images/creator/nazir.jpg" class="creator"/>
+					<div class="social">
+						<a href="#"><img src="/images/icon/glyphicons_410_facebook.png"  /></a>
+						<a href="#"><img src="/images/icon/glyphicons_382_google_plus.png"  /></a>
+						<a href="#"><img src="/images/icon/glyphicons_411_twitter.png"  /></a>
+					</div>
+					<h4 class="name">Nazir Arifin</h4>
+					<h4 class="name">0955201xx</h4>
+					<h4 class="name">Keren</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolore blanditiis veritatis ut sit deserunt aliquid illo recusandae alias nam placeat sed libero possimus. Sapiente placeat temporibus aliquid amet soluta?</p>
+				</div>
+				<div class="navbar alert alert-info">
+					<div class="navbar-inner">
+						<a class="brand">Programmer</a>
+					</div>
+				</div>            
+				<div class="about" >
+					<img src="/images/creator/habib.jpg" class="creator"/>
+					<div class="social">
+						<a href="#"><img src="/images/icon/glyphicons_410_facebook.png"  /></a>
+						<a href="#"><img src="/images/icon/glyphicons_382_google_plus.png"  /></a>
+						<a href="#"><img src="/images/icon/glyphicons_411_twitter.png"  /></a>
+					</div>
+					<h4 class="name">Habib</h4>
+					<h4 class="name">0955201556</h4>
+					<h4 class="name">Keren</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolore blanditiis veritatis ut sit deserunt aliquid illo recusandae alias nam placeat sed libero possimus. Sapiente placeat temporibus aliquid amet soluta?</p>
+				</div>
+				<hr>
+				<div class="about" >
+					<img  src="/images/creator/deki.jpg" class="creator"/>
+					<div class="social">
+						<a href="#"><img src="/images/icon/glyphicons_410_facebook.png"  /></a>
+						<a href="#"><img src="/images/icon/glyphicons_382_google_plus.png"  /></a>
+						<a href="#"><img src="/images/icon/glyphicons_411_twitter.png"  /></a>
+					</div>
+					<h4 class="name">Deki</h4>
+					<h4 class="name">0955201588</h4>
+					<h4 class="name">Keren</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolore blanditiis veritatis ut sit deserunt aliquid illo recusandae alias nam placeat sed libero possimus. Sapiente placeat temporibus aliquid amet soluta?</p>
+				</div>
+				<hr>
+				<div class="about" >
+					<img  src="/images/creator/fawait.jpg" class="creator"/>
+					<div class="social">
+						<a href="#"><img src="/images/icon/glyphicons_410_facebook.png"  /></a>
+						<a href="#"><img src="/images/icon/glyphicons_382_google_plus.png"  /></a>
+						<a href="#"><img src="/images/icon/glyphicons_411_twitter.png"  /></a>
+					</div>
+					<h4 class="name">Fawait</h4>
+					<h4 class="name">0955201607</h4>
+					<h4 class="name">Keren</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolore blanditiis veritatis ut sit deserunt aliquid illo recusandae alias nam placeat sed libero possimus. Sapiente placeat temporibus aliquid amet soluta?</p>
+				</div>
+				<div class="navbar alert alert-info">
+					<div class="navbar-inner">
+						<a class="brand">Designer</a>
+					</div>
+				</div>            
+				<div class="about" >
+					<img  src="/images/creator/fajrul.jpg" class="creator"/>
+					<div class="social">
+						<a href="#"><img src="/images/icon/glyphicons_410_facebook.png"  /></a>
+						<a href="#"><img src="/images/icon/glyphicons_382_google_plus.png"  /></a>
+						<a href="#"><img src="/images/icon/glyphicons_411_twitter.png"  /></a>
+					</div>
+					<h4 class="name">Fajrul</h4>
+					<h4 class="name">0955201xx</h4>
+					<h4 class="name">Keren</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolore blanditiis veritatis ut sit deserunt aliquid illo recusandae alias nam placeat sed libero possimus. Sapiente placeat temporibus aliquid amet soluta?</p>
+				</div>
+				<hr>
+				<div class="about" >
+					<img  src="/images/rud.jpg" class="creator"/>
+					<div class="social">
+						<a href="#"><img src="/images/icon/glyphicons_410_facebook.png"  /></a>
+						<a href="#"><img src="/images/icon/glyphicons_382_google_plus.png"  /></a>
+						<a href="#"><img src="/images/icon/glyphicons_411_twitter.png"  /></a>
+					</div>
+					<h4 class="name">Rudi</h4>
+					<h4 class="name">0955201554</h4>
+					<h4 class="name">Keren</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolore blanditiis veritatis ut sit deserunt aliquid illo recusandae alias nam placeat sed libero possimus. Sapiente placeat temporibus aliquid amet soluta?</p>
+				</div>
+				
+			  
+	</div>
 </div>
 	<footer class="row-fluid footer">
 		<div class="well span12">

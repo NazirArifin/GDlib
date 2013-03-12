@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Dosen | Beranda</title>
-	<link href="/third_party/bootstrap/css/elemento.css" rel="stylesheet" type="text/css">
+	<link href="/third_party/bootstrap/css/elemento.min.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
 	<link href="/third_party/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="/third_party/awesome/css/font-awesome.css" />

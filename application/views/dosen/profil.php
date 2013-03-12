@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Dosen | Profil</title>
-	<link href="/third_party/bootstrap/css/elemento.css" rel="stylesheet" type="text/css">
+	<link href="/third_party/bootstrap/css/elemento.min.css" rel="stylesheet" type="text/css">
 	<link href="/third_party/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="/third_party/awesome/css/font-awesome.css" />
 	<link rel="stylesheet" href="/static/css/main.css" />

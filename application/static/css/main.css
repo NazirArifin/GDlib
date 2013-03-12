@@ -19,9 +19,21 @@ h1, h2, h3, h4, h5, h6, p{
 	height:50px;
 	width:50px;
 	}
+.tongue-content{
+	height: 40px;
+	width: 65%;
+	text-align: center;
+	padding-top: 5px;
+}
 
+#form-change{
+	height: 40px;
+	width: 65%;
+	text-align: center;
+
+}
 #cari{
-	width:100px;
+	width:150px;
 	transition:All 1s ease-in;
 	-webkit-transition:All 1s ease-in;
 	-moz-transition:All 1s ease-in;

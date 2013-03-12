@@ -6,7 +6,7 @@
 		<title>GDlib | Mahasiswa</title>
 		<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
-		<link rel="stylesheet" href="/third_party/bootstrap/css/elemento.css" />
+		<link rel="stylesheet" href="/third_party/bootstrap/css/elemento.min.css" />
 		<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
 		<link rel="stylesheet" href="/third_party/awesome/css/font-awesome.css" />
 		<link href='/third_party/rating/jquery.rating.css' type="text/css" rel="stylesheet"/>
