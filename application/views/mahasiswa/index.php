@@ -75,12 +75,23 @@
 	<div class="row-fluid">
 		<div class=" well span3">
 			<div class="well">
+						<?php
+							$profilMahasiswa=$controller->mahasiswa_model->tampil_profil_mahasiswa();
+							if ($profilMahasiswa == 0):
+									echo '<tr><td colspan="4"><div class="alert-info" style="text-align:center;">Tidak Ada Foto</div></td></tr>';
+								else :
+									foreach ($profilMahasiswa as $row):
+						?>
 				<ul class="thumbnails">
 					<li class="span12">
-						<a href="#" class="thumbnail"><img src="/images/rud.jpg" alt=""></a>
+						<a href="/mahasiswa/profilmahasiswa" class="thumbnail"><img src="/<?php echo $row->FOTO_PROFIL ?>" alt=""></a>
 					</li>
 				</ul>
-				<span class="label label-inverse">Username | 0955201554</span>
+				<span class="label label-inverse"><?php echo $row->NAMA_PROFIL ?> | 0955201..<?php echo $row->ID_USER ?></span>
+						<?php
+							endforeach;
+						endif;
+						?>
 			</div>
 			<div class="sidebar-nav">
 				<div class="well">
@@ -107,9 +118,6 @@
 				</ul>   
 				<div class="navbar navbar-inner">
 					<a class="brand">Dokumen</a>
-						<form class="navbar-search pull-right" method="post">
-							<input type="text" class="search-query" placeholder="Cari Dokumen">
-						</form>
 				</div>
 				<ul class="nav nav-tabs" id="tab-dok">
 					<li class="active"><a href="#jurnal">Jurnal</a></li>
@@ -214,6 +222,7 @@
 			</div>
 		</div>
 	</div>
+</div>
 	 <!--BAGIAN FOOTER-->
   	<footer class="row-fluid footer">
 		<div class="well span12">
@@ -222,7 +231,6 @@
 			<span>Created by: <a href="/creator" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span></center>
 		</div>
 	</footer>
-</div>
 			<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
 			<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
 			<script src="/third_party/bootstrap/bootstrap.min.js"></script>

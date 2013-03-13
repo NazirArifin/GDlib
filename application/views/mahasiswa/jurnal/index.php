@@ -65,7 +65,7 @@
 	<div class="row-fluid">
 		<div class="well span8">
 			<ul class="breadcrumb">
-				<li><a href="http://gdlib.com/mahasiswa">Mahasiswa</a> <span class="divider">/</span></li>
+				<li><a href="/mahasiswa">Mahasiswa</a> <span class="divider">/</span></li>
 				<li class="active">Jurnal</li>
 			</ul>   
 			<div class="navbar navbar-inner">
@@ -102,7 +102,7 @@
                 <div class="tab-content">
 					<!--TAB CONTENT YG PERTAMA-->
 					<div class="tab-pane active" id="tabpopuler">
-                      <div class="alert alert-info">
+                     <div class="alert alert-info">
 						<h2 class="media-heading">Populer</h2>
 					</div>
 						<div class='testimonial'>
@@ -133,8 +133,8 @@
                   </div><!--KONTENT PERTAMA-->
 				  <!--TAB CONTENT YG KEDUA-->
                   <div class="tab-pane" id="tabterbaru">
-						<div class="alert alert-info">
-							<h2 class="media-heading">Terbaru</h2>
+							<div class="alert alert-info">
+								<h2 class="media-heading">Terbaru</h2>
 							</div>
 									<?php
 										$jurnal=$this->mahasiswa_model->tampilDokumenJurnal();
@@ -175,9 +175,5 @@
 			<script src="/third_party/bootstrap/bootstrap.min.js"></script>
 			<script src="/third_party/jquery/tooltip/main-tooltip.js"></script>
 			<script src="/js/paging.mahasiswa.dokumen.js"></script>
-<script type="text/javascript">
-
-</script>
 </body>
-	
 </html>

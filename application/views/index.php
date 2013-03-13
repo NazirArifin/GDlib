@@ -58,25 +58,58 @@
 			<div class="span10 offset1">
 				<div class="row-fluid">
 					<div class="span3 boxes well">
-						<a href="#" class="btn btn-info btn-block btn-large"><i class="icon-newspaper"></i> JURNAL</a>
+						<a href="#" class="btn btn-info btn-block btn-large"><i class="icon-book"></i> JURNAL</a>
 						<ul class="unstyled">
-							<li><img src="/images/animal1.png" /> <a href="test" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="Popover on top" data-trigger="hover" class="doc-list">The markup is valid HTML5 and SEO optimzied</a></li>
-							<li><img src="/images/animal1.png" /> <a href="test" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="Popover on top" data-trigger="hover" class="doc-list">The jQuery Slideshow/thumbnail slider works nicely</a></li>
-							<li><img src="/images/animal1.png" /> <a href="test" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="Popover on top" data-trigger="hover" class="doc-list">This demo shows how the jQuery slideshow (or Thumbnail Slider if using the pure JavaScript)</a></li>
+							<?php
+								$homJurnal = $this->admin_model->tampilDokumenJurnal();
+								if($homJurnal==0):
+									echo '<p>Tidak Ada</p>';
+									else:
+								foreach($homJurnal as $row ):
+							?>
+							<li><i class="icon-fire"></i> <a href="#" rel="popover" data-placement="top" data-content="<?php echo $row->PROLOG_DOKUMEN ?>" data-original-title="Popover on top" data-trigger="hover" class="doc-list"> <?php echo $row->JUDUL_DOKUMEN ?></a></li>
+							<?php
+								endforeach;
+								endif;
+							?>
 						</ul>
 					</div>
 					<div class="span3 boxes well">
-						<a href="#" class="btn btn-warning btn-block btn-large"><i class="icon-book"></i> MODUL</a>
-						
-						
+						<a href="#" class="btn btn-warning btn-block btn-large"><i class="icon-book"></i> BUKU</a>
+						<ul class="unstyled">
+							<?php
+								$homBuku = $this->admin_model->tampilDokumenBuku();
+								if($homBuku==0):
+									echo '<p>Tidak Ada</p>';
+									else:
+								foreach($homBuku as $row ):
+							?>
+							<li><i class="icon-fire"></i> <a href="#" rel="popover" data-placement="top" data-content="<?php echo $row->PROLOG_DOKUMEN ?>" data-original-title="Popover on top" data-trigger="hover" class="doc-list"> <?php echo $row->JUDUL_DOKUMEN ?></a></li>
+							<?php
+								endforeach;
+								endif;
+							?>
+						</ul>
 					</div>
 					<div class="span3 boxes well">
-						<a href="#" class="btn btn-block btn-large"><i class="icon-book"></i> BUKU</a>
-						
-						
+						<a href="#" class="btn btn-block btn-large"><i class="icon-book"></i> MODUL</a>
+						<ul class="unstyled">
+							<?php
+								$homModul = $this->admin_model->tampilDokumenModul();
+								if($homModul==0):
+									echo '<p>Tidak Ada</p>';
+									else:
+								foreach($homModul as $row ):
+							?>
+							<li><i class="icon-fire"></i> <a href="#" rel="popover" data-placement="top" data-content="<?php echo $row->PROLOG_DOKUMEN ?>" data-original-title="Popover on top" data-trigger="hover" class="doc-list"> <?php echo $row->JUDUL_DOKUMEN ?></a></li>
+							<?php
+								endforeach;
+								endif;
+							?>
+						</ul>
 					</div>
 					<div class="span3 boxes well">
-						<a href="#" class="btn btn-success btn-block btn-large"><i class="icon-newspaper"></i> BULETIN</a>
+						<a href="#" class="btn btn-success btn-block btn-large"><i class="icon-book"></i> BULETIN</a>
 						
 						
 					</div>

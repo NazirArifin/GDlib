@@ -103,9 +103,4 @@ class Mahasiswa extends CI_Controller {
 				jsloc::show();
 		}
 	}
-
-	public function profil()
-	{
-		
-	}
 }
