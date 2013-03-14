@@ -14,7 +14,7 @@ class Test_model extends CI_Model{
 		
 		$start = $curpage * $dataperpage;
 		$end = $start + $dataperpage;
-		$query = $this->db->query("SELECT `JUDUL_DOKUMEN`, `PENGARANG_DOKUMEN`, `TAHUN_PENERBITAN_DOKUMEN` FROM `tb_dokumen` WHERE $where LIMIT $start, $end");
+		$query = $this->db->query("SELECT `JUDUL_DOKUMEN`, `PENGARANG_DOKUMEN`, `TAHUN_PENERBITAN_DOKUMEN` FROM `tb_dokumen` WHERE $where LIMIT $start, $dataperpage");
 		$hasil = array(
 			'data' => array(),
 			'pagination' => '',

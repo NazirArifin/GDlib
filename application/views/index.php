@@ -67,7 +67,7 @@
 									else:
 								foreach($homJurnal as $row ):
 							?>
-							<li><i class="icon-fire"></i> <a href="#" rel="popover" data-placement="top" data-content="<?php echo $row->PROLOG_DOKUMEN ?>" data-original-title="Popover on top" data-trigger="hover" class="doc-list"> <?php echo $row->JUDUL_DOKUMEN ?></a></li>
+							<li><i class="icon-book"></i> <a href="#" rel="popover" data-placement="top" data-content="<?php echo $row->PROLOG_DOKUMEN ?>" data-original-title="<?php echo $row->JUDUL_DOKUMEN ?>" data-trigger="hover" class="doc-list"> <?php echo $row->JUDUL_DOKUMEN ?></a></li>
 							<?php
 								endforeach;
 								endif;
@@ -84,7 +84,7 @@
 									else:
 								foreach($homBuku as $row ):
 							?>
-							<li><i class="icon-fire"></i> <a href="#" rel="popover" data-placement="top" data-content="<?php echo $row->PROLOG_DOKUMEN ?>" data-original-title="Popover on top" data-trigger="hover" class="doc-list"> <?php echo $row->JUDUL_DOKUMEN ?></a></li>
+							<li><i class="icon-book"></i> <a href="#" rel="popover" data-placement="top" data-content="<?php echo $row->PROLOG_DOKUMEN ?>" data-original-title="<?php echo $row->JUDUL_DOKUMEN ?>" data-trigger="hover" class="doc-list"> <?php echo $row->JUDUL_DOKUMEN ?></a></li>
 							<?php
 								endforeach;
 								endif;
@@ -101,7 +101,7 @@
 									else:
 								foreach($homModul as $row ):
 							?>
-							<li><i class="icon-fire"></i> <a href="#" rel="popover" data-placement="top" data-content="<?php echo $row->PROLOG_DOKUMEN ?>" data-original-title="Popover on top" data-trigger="hover" class="doc-list"> <?php echo $row->JUDUL_DOKUMEN ?></a></li>
+							<li><i class="icon-file"></i> <a href="#" rel="popover" data-placement="top" data-content="<?php echo $row->PROLOG_DOKUMEN ?>" data-original-title="<?php echo $row->JUDUL_DOKUMEN ?>" data-trigger="hover" class="doc-list"> <?php echo $row->JUDUL_DOKUMEN ?></a></li>
 							<?php
 								endforeach;
 								endif;

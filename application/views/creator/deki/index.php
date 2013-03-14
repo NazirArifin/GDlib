@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Creator | Deki</title>
-	<link href="/third_party/bootstrap/css/elemento.css" rel="stylesheet" type="text/css">
+	<link href="/third_party/bootstrap/css/elemento.min.css" rel="stylesheet" type="text/css">
 	<link href="/third_party/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="/third_party/awesome/css/font-awesome.css" />
 	<link rel="stylesheet" href="/static/css/main.css" />
@@ -73,7 +73,10 @@
 	<div class="navbar">
 		<div class="navbar-inner">
 			<div class="container">
-			
+				<ul class="breadcrumb">
+					<li><a href="/creator">Creator</a> <span class="divider">/</span></li>
+					<li class="active">Deki Andi Irawan</li>
+				</ul>   
 				<ul class="nav nav-pills nav-tabs">
                   <li><a data-toggle="collapse" data-parent="#accordion2" href="#about">About</a></li>
                   <li><a data-toggle="collapse" data-parent="#accordion2" href="#detail">Profil Detail</a></li>
@@ -132,7 +135,7 @@
 		<div id="sosial" class="accordion-body collapse">
 			<div class="accordion-inner">
 				<h3>Sosial Media</h3>
-				<a href="https://www.facebook.com/Dekidangersline" class='zocial facebook'>Nazir Arifin</a>
+				<a href="https://www.facebook.com/Dekidangersline" class='zocial facebook'>Deje Novear</a>
 				<a href="https://www.facebook.com/nazzir.arifin" class='zocial twitter'>Nazir Arifin</a>
 				<a href="https://www.facebook.com/nazzir.arifin" class='zocial googleplus'>Nazir Arifin</a>
 				<a href="https://www.facebook.com/nazzir.arifin" class='zocial github'>Nazir Arifin</a>

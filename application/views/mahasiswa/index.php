@@ -140,7 +140,10 @@
 							<h4><?php echo $row->JUDUL_DOKUMEN ?></h4>
 							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...</p><br />
 							<div class="btn-group">
-								<button class="btn btn-mini btn-primary download-mahasiswa"><i class="icon-download"></i> Download</button>
+								<form id="f" name="g" action="/mahasiswa/jurnal/download" method="post">
+								<input type="hidden" name="a" id="id-dokumenMahasiswa" value="">
+								</form>
+								<button class="btn btn-mini btn-primary download-mahasiswa" onClick="return downloadJurnalMahasiswa(this, <?php echo $row->ID_DOKUMEN ?>)"><i class="icon-download"></i> Download</button>
 								<button class="btn btn-mini btn-primary baca-mahasiswa"><i class="icon-play"></i> Baca</button>
 							</div>
 						</div>
@@ -163,7 +166,7 @@
 							<h4><?php echo $row->JUDUL_DOKUMEN ?></h4>
 							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...</p><br />
 							<div class="btn-group">
-								<button class="btn btn-mini btn-primary download-mahasiswa"><i class="icon-download"></i> Download</button>
+								<button class="btn btn-mini btn-primary download-mahasiswa" onClick="return downloadBukuMahasiswa(this, <?php echo $row->ID_DOKUMEN ?>)"><i class="icon-download"></i> Download</button>
 								<button class="btn btn-mini btn-primary baca-mahasiswa"><i class="icon-play"></i> Baca</button>
 							</div>
 						</div>
@@ -186,7 +189,7 @@
 							<h4><?php echo $row->JUDUL_DOKUMEN ?></h4>
 							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...</p><br />
 							<div class="btn-group">
-								<button class="btn btn-mini btn-primary download-mahasiswa"><i class="icon-download"></i> Download</button>
+								<button class="btn btn-mini btn-primary download-mahasiswa" onClick="return downloadModulMahasiswa(this, <?php echo $row->ID_DOKUMEN ?>)"><i class="icon-download"></i> Download</button>
 								<button class="btn btn-mini btn-primary baca-mahasiswa"><i class="icon-play"></i> Baca</button>
 							</div>
 						</div>
@@ -235,6 +238,7 @@
 			<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
 			<script src="/third_party/bootstrap/bootstrap.min.js"></script>
 			<script src="/third_party/jquery/tooltip/main-tooltip.js"></script>
+			<script src="/js/mahasiswa.js"></script>
 <script type="text/javascript">
 $('#tab-dok a').click(function (e) {
 	  e.preventDefault();

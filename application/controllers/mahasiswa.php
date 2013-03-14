@@ -50,6 +50,21 @@ class Mahasiswa extends CI_Controller {
 				$this->load->view('mahasiswa/jurnal/detail',array('controller' => $this));
 				jsloc::show();
 			break;
+			case 'data':
+				$pilih = $this->mahasiswa_model->pilihIdDokumen($extra);
+				echo json_encode($pilih);
+			break;
+			case 'download':
+				$this->load->helper('download');
+				//$id = $this->input->post('a');
+				//if ( ! empty($id)){
+				//	$this->mahasiswa_model->downloadFile($id);
+				//	echo '{ "error": 0, "success": 1 }';
+				//}
+				$pilih = $this->mahasiswa_model->downloadFile($extra);
+				//echo json_encode($pilih);
+				//return;
+			break;
 			default:
 				$this->load->view('mahasiswa/jurnal/index',array('controller' => $this));
 				jsloc::show();

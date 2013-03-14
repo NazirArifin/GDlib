@@ -47,7 +47,7 @@ class Mahasiswa_model extends CI_Model {
 		$this->db->update('tb_profil',$update);
 		return true;
 	}
-	
+	//halaman depan mahasiswa
 	public function tampilDokumenJurnal(){
 		$this->load->helper('download');
 		$query=$this->db->query("SELECT * FROM tb_dokumen WHERE ID_KATEGORI_DOKUMEN = 1 ORDER BY ID_DOKUMEN DESC LIMIT 0,4");
@@ -85,6 +85,43 @@ class Mahasiswa_model extends CI_Model {
 			return false;
 		} else {
 			return $query->result();
+		}
+	}
+	// sampai disini halaman depan mahasiswa
+	
+	
+	// DOWNLOAD FILE
+	
+	public function pilihIdDokumen($id){
+		$this->db->select('ID_DOKUMEN');
+		$query=$this->db->get_where('tb_dokumen',array('ID_DOKUMEN' => $id));
+		if($query->num_rows()==0){
+			return false;
+		} else {
+			return $query->result();
+		}
+	}
+	
+	public function downloadFile($id){
+	//$query = $this->db->query("SELECT COUNT(`ID_DOKUMEN`) AS `HASIL` FROM `tb_dokumen` WHERE ($where) and ID_KATEGORI_DOKUMEN = '$kategori'");
+		//$total = $query->row()->HASIL;
+		$this->load->helper('download');
+		$query=$this->db->query("SELECT FILE_DOKUMEN AS DATA FROM tb_dokumen WHERE ID_DOKUMEN = 25");
+		$file = $query->row()->DATA;
+		//$file = 'monkey.gif';
+		if (file_exists($file)) {
+			header('Content-Description: File Transfer');
+			header('Content-Type: application/octet-stream');
+			header('Content-Disposition: attachment; filename='.basename($file));
+			header('Content-Transfer-Encoding: binary');
+			header('Expires: 0');
+			header('Cache-Control: must-revalidate');
+			header('Pragma: public');
+			header('Content-Length: ' . filesize($file));
+			ob_clean();
+			flush();
+			readfile($file);
+			exit;
 		}
 	}
 }
