@@ -23,15 +23,21 @@
 		/*VENDOR*/background-size: cover;
 	}
 	.pp{
-	margin-left:50px;
+	margin-left:40px;
+	margin-top:10px;
 	height:150px;
 	width:150px;
-	border-style:groove;
+	border-style:solid;
 	border-width:6px;
 	border-color:#ffffff;
 	border-radius:5px;
+	transition : All 1s ease ;
 	}
+	.pp:hover{
+	transition : All 1s ease ;
+	box-shadow:0px 0px 10px #000000;
 	
+	}
 	</style>
 </head>
 <body>

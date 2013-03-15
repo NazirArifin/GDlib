@@ -34,6 +34,15 @@ class Mahasiswa_model extends CI_Model {
 		if($this->upload->do_upload('change_foto'))
 		{
 			$data=$this->upload->data();
+			//$namafoto='./upload/profil/mahasiswa/' . $data['file_name'];
+			$gambar['image_library'] = 'gd2';
+			$gambar['source_image'] = './upload/profil/mahasiswa/' . $data['file_name'];
+			$gambar['create_thumb'] = FALSE;
+			$gambar['maintain_ratio'] = FALSE;
+			$gambar['width'] = 600;
+			$gambar['height'] = 500;
+			$this->load->library('image_lib',$gambar);
+			$this->image_lib->resize();
 			$namafoto='./upload/profil/mahasiswa/' . $data['file_name'];
 		}
 		else

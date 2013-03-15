@@ -39,7 +39,10 @@
 			width:255px;
 			margin-top: 15px;
 		}
-
+		.image-list{
+			width:100px;
+			height:100px;
+		}
 	</style>
 </head>
 <body>
@@ -103,8 +106,9 @@
 		</ul>   
 			<div class="navbar navbar-inner">
 				<a class="brand">Buku</a>
-					<form class="navbar-search pull-right">
-						<input type="text" class="search-query" placeholder="Cari Buku" id="cari">
+					<form class="navbar-form pull-right" id="form-buku">
+						<input class="model" id="cari" name="query_buku" placeholder="Cari Buku" type="text">
+						<button class="btn" onClick="return Buku.search()"><i class="icon-search"></i></button>
 					</form>
 			</div>
 			<?php
@@ -119,8 +123,8 @@
 				<h5><?php echo $row->JUDUL_DOKUMEN?></h5>
 				<p><?php echo $row->PROLOG_DOKUMEN?></br>
 				<div class="btn-group">
-					<button class="btn btn-primary download-dosen"><i class="icon-download "></i> Download</button>
-					<button class="btn btn-primary baca-dosen"><i class="icon-file"></i> Baca</button>
+					<button class="btn btn-primary btn-mini download-dosen"><i class="icon-download "></i> Download</button>
+					<button class="btn btn-primary btn-mini baca-dosen"><i class="icon-file"></i> Baca</button>
 				</div>
 			</div>
 			<?php

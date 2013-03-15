@@ -4,7 +4,6 @@
 	<meta charset="utf-8">
 	<title>Dosen | Beranda</title>
 	<link href="/third_party/bootstrap/css/elemento.min.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
 	<link href="/third_party/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="/third_party/awesome/css/font-awesome.css" />
 	<link href="/third_party/alertify/alertify.core.css" rel="stylesheet" type="text/css">
@@ -23,6 +22,9 @@
 		#image {
 			float: left;
 			margin: 0px 15px 10px 0px;
+		}
+		.label-inverse{
+		align:center;
 		}
 	</style>
 </head>
@@ -44,23 +46,29 @@
 			</div>
 		</div>
 	</div>
-<br>
-<br>
-<br>
-<br>
+	<br>
+	<br>
+	<br>
+<div class="container">
+	<img src="/images/header/main-header.png" alt="dosen Header">
+</div>
 <div class="container-fluid">
 	<div class="row-fluid">
-		<div class="span3">
+		<div class=" well span3">
 			<div class="well">
 				<ul class="thumbnails">
 					<li class="span12">
 						<a href="#" class="thumbnail"><img src="/images/rud.jpg" alt=""></a>
 					</li>
 				</ul>
-				<span class="label label-inverse">Username | 0955201554</span>
+				<span class="label label-inverse">			
+				Username | 0955201554
+				</span>
 			</div>
+			<div class="sidebar-nav">
 			<div class="well">
 				<div class="alert alert-info"><h4>Dokumen</h4></div>
+					
 				<hr>
 				<section class="blog-widget">
 					<ul class="nav nav-pills nav-stacked">
@@ -74,12 +82,11 @@
 					</ul>
 				</section>
 			</div>
+			</div>
 		</div>
 		<div class="well span9">
 			<div>
 				<ul class="breadcrumb">
-				<li><a href="/">Home</a> <span class="divider">/</span></li>
-				<li><a href="#">Dosen</a> <span class="divider">/</span></li>
 				<li class="active">Data</li>
 				</ul>
 			</div>
@@ -94,7 +101,7 @@
 							<div class="tab-pane active" id="jurnal">
 							<div class="navbar navbar-inner">
 									<form class="navbar-search pull-left">
-										<input type="text" class="search-query" placeholder="Cari Dokumen" id="cari">
+										<input type="text" class="search-query" placeholder="Cari jurnal" id="cari">
 									</form>
 									<button class="btn pull-right" type="button" onClick="tambahDokumen()" id="buka1"><i class="icon-plus-sign"></i></button>
 							</div>
@@ -125,7 +132,7 @@
 											<td><?php echo $row->KATA_KUNCI_DOKUMEN?></td>
 											<td>
 												<div class="btn-group">
-													<button class="btn btn-danger btn-mini" onClick="deleteDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)" >Hapus</button> 
+													<button class="btn btn-inverse btn-mini" onClick="deleteDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)" >Hapus</button> 
 													<button class="btn btn-warning btn-mini" onClick="editDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)" >Edit</button> 
 													<button class="btn btn-success btn-mini">Lihat</button>
 												</div>
@@ -153,7 +160,7 @@
 							<div class="tab-pane" id="buku">
 								<div class="navbar navbar-inner">
 									<form class="navbar-search pull-left">
-										<input type="text" class="search-query" placeholder="Cari Dokumen" id="cari">
+										<input type="text" class="search-query" placeholder="Cari buku" id="cari">
 									</form>
 									<button class="btn pull-right" type="button" onClick="tambahDokumen()"><i class="icon-plus-sign"></i></button>
 								</div>
@@ -186,7 +193,7 @@
 											<td><?php echo $row->KATA_KUNCI_DOKUMEN?></td>
 											<td>
 												<div class="btn-group">
-													<button class="btn btn-danger btn-mini" onClick="deleteDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)">Hapus</button> 
+													<button class="btn btn-inverse btn-mini" onClick="deleteDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)">Hapus</button> 
 													<button class="btn btn-warning btn-mini" onClick="editDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)"> Edit</button> 
 													<button class="btn btn-success btn-mini">Lihat</button>
 												</div>
@@ -214,7 +221,7 @@
 							<div class="tab-pane" id="modul">
 								<div class="navbar navbar-inner">
 									<form class="navbar-search pull-left">
-										<input type="text" class="search-query" placeholder="Cari Dokumen" id="cari">
+										<input type="text" class="search-query" placeholder="Cari modul" id="cari">
 									</form>
 									<button class="btn pull-right" type="button" onClick="tambahDokumen()" id="buka"><i class="icon-plus-sign"></i></button>
 								</div>

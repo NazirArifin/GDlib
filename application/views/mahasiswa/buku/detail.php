@@ -91,9 +91,9 @@
                   <div class="about">
                     <img width="160" height="180" src="/images/rud.jpg" alt="200x180" style="width: 200px; height: 180px;">
                     <div class="social">
-                        <a href="#"><img src="/images/glyphicons/png/glyphicons_274_beer.png"></a>
-                        <a href="#"><img src="/images/glyphicons/png/glyphicons_290_skull.png"></a>
-                        <a href="#"><img src="/images/glyphicons/png/glyphicons_303_temple_islam.png"></a>
+                        <a href="#"><i class="icon-facebook"></i></a>
+                        <a href="#"><i class="icon-twitter"></i></a>
+                        <a href="#"><i class="icon-google-plus"></i></a>
                     </div>
                     <h4 class="name">Dohn Joe</h4>
                     <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
@@ -112,10 +112,10 @@
 			<div class="well span3">
 					<h4 id="hover-test">Rating me </h4>
 					<input class="hover-star" type="radio" name="test-3B-rating-1" value="1" title="Rudiec Baik"/>
-					 <input class="hover-star" type="radio" name="test-3B-rating-1" value="2" title="Rudiec Oke"/>
-					 <input class="hover-star" type="radio" name="test-3B-rating-1" value="3" title="Rudiec Cakep"/>
-					 <input class="hover-star" type="radio" name="test-3B-rating-1" value="4" title="Rudiec Ganteng"/>
-					 <input class="hover-star" type="radio" name="test-3B-rating-1" value="5" title="Rudiec Keren"/>
+					<input class="hover-star" type="radio" name="test-3B-rating-1" value="2" title="Rudiec Oke"/>
+					<input class="hover-star" type="radio" name="test-3B-rating-1" value="3" title="Rudiec Cakep"/>
+					<input class="hover-star" type="radio" name="test-3B-rating-1" value="4" title="Rudiec Ganteng"/>
+					<input class="hover-star" type="radio" name="test-3B-rating-1" value="5" title="Rudiec Keren"/>
 			</div>
 			<div class="well span2">
 					<h4>Pembaca:</h4>

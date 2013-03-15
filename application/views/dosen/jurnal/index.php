@@ -87,8 +87,9 @@
 		</ul>   
 			<div class="navbar navbar-inner">
 				<a class="brand">Jurnal</a>
-					<form class="navbar-search pull-right">
-						<input type="text" class="search-query" placeholder="Cari Jurnal" id="cari">
+					<form class="navbar-form pull-right" id="form-buku">
+						<input class="model" id="cari" name="query_buku" placeholder="Cari jurnal" type="text">
+						<button class="btn" onClick="return Buku.search()"><i class="icon-search"></i></button>
 					</form>
 			</div>
 					<?php
@@ -103,8 +104,8 @@
 					<h5><?php echo $row->JUDUL_DOKUMEN?> </h5>
 					<p><?php echo $row->PROLOG_DOKUMEN?><br />
 				<div class="btn-group">
-					<button class="btn btn-primary download-dosen"><i class="icon-download "></i> Download</button>
-					<button class="btn btn-primary baca-dosen"><i class="icon-file"></i> Baca</button>
+					<button class="btn btn-primary btn-mini download-dosen"><i class="icon-download "></i> Download</button>
+					<button class="btn btn-primary btn-mini baca-dosen"><i class="icon-file"></i> Baca</button>
 				</div>
 			</div>
 			<?php

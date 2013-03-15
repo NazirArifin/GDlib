@@ -39,6 +39,36 @@
 	box-shadow:0px 0px 10px #000000;
 	
 	}
+	/* Apply these styles only when #preview-pane has
+   been placed within the Jcrop widget */
+.jcrop-holder #preview-pane {
+  display: block;
+  position: absolute;
+  z-index: 2000;
+  top: 10px;
+  right: -280px;
+  padding: 6px;
+  border: 1px rgba(0,0,0,.4) solid;
+  background-color: white;
+
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+
+  -webkit-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* The Javascript code will set the aspect ratio of the crop
+   area based on the size of the thumbnail preview,
+   specified here */
+#preview-pane .preview-container {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+}
+	
 	</style>
 </head>
 <body>
@@ -273,6 +303,26 @@ endif;
             <button class="btn btn-primary">Simpan</button>
         </div>
     </div>
+	<!-- crop -->
+
+			<div class="jc-demo-box">
+				<img src="/images/ct.jpg" id="target" alt="[Jcrop Example]" />
+				<div id="preview-pane">
+					<div class="preview-container">
+						<img src="/images/ct.jpg" class="jcrolp-preview" alt="Preview" />
+					</div>
+				</div>
+				<!--<form action="crop2.php" method="post" onsubmit="return checkCoords();">
+					<input type="hidden" id="x" name="x" />
+					<input type="hidden" id="y" name="y" />
+					<input type="hidden" id="w" name="w" />
+					<input type="hidden" id="h" name="h" />
+					<input type="submit" value="Crop Image" class="btn btn-large btn-inverse" />
+				</form>-->
+
+			</div>
+	<!-- akhir crop -->
+	
  	<footer class="row-fluid footer">
 		<div class="well span12">
 			<hr>
@@ -281,10 +331,12 @@ endif;
 		</div>
 	</footer>
 	<script src="/third_party/jquery/jquery-1.9.1.min.js"></script>
-	<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
+	<!--<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
 	<script type="text/javascript" src="/third_party/bootstrap/bootstrap.min.js"></script>
 	<script type="text/javascript" src="/js/profil.js"></script>
-	<script type="text/javascript" src="/third_party/jquery-tongue/jquery.tongue.js"></script>
+	<script type="text/javascript" src="/third_party/jquery-tongue/jquery.tongue.js"></script>-->
+	<script type="text/javascript" src="/js/mahasiswa.crop.js"></script>
+	<script type="text/javascript" src="/third_party/jcrop/js/jquery.Jcrop.js"></script>
 	
 <script type="text/javascript">
 $('#accordion2').accordion();

@@ -71,7 +71,7 @@
 			<div class="navbar navbar-inner">
 				<a class="brand">Buku</a>
 				<form class="navbar-form pull-right" id="form-buku">
-					<input class="model" id="query-buku" name="query_buku" placeholder="Search Buku" type="text">
+					<input class="model" id="query-buku" name="query_buku" placeholder="Cari Buku" type="text">
 					<button class="btn" onClick="return Buku.search()"><i class="icon-search"></i></button>
 				</form>
 			</div>

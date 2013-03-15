@@ -46,7 +46,16 @@
 		::selection{
 			background-color:#cc00ff;
 			}
-
+		.pp{
+		margin-left:-6px;
+		height:150px;
+		width:150px;
+		border-style:solid;
+		border-width:6px;
+		border-color:gray;
+		border-radius:5px;
+		transition : All 1s ease ;
+		}
 	</style>
 </head>
 <body>
@@ -70,7 +79,7 @@
 <br>
 <br>
 <br>
-<br>
+<div class="container"><img src="/images/header/main-header.png" alt="mahasiwa-header"></div>
 <div class="container-fluid">
 	<div class="row-fluid">
 		<div class=" well span3">
@@ -84,7 +93,7 @@
 						?>
 				<ul class="thumbnails">
 					<li class="span12">
-						<a href="/mahasiswa/profilmahasiswa" class="thumbnail"><img src="/<?php echo $row->FOTO_PROFIL ?>" alt=""></a>
+						<a href="/mahasiswa/profilmahasiswa"><img src="/<?php echo $row->FOTO_PROFIL ?>" alt="" class="pp"></a>
 					</li>
 				</ul>
 				<span class="label label-inverse"><?php echo $row->NAMA_PROFIL ?> | 0955201..<?php echo $row->ID_USER ?></span>

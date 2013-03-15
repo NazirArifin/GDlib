@@ -39,7 +39,10 @@
 			width:255px;
 			margin-top: 15px;
 		}
-
+		.image-list{
+			width:100px;
+			height:100px;
+		}
 	</style>
 </head>
 <body>
@@ -103,8 +106,9 @@
 		</ul>   
 			<div class="navbar navbar-inner">
 				<a class="brand">Modul</a>
-					<form class="navbar-search pull-right">
-						<input type="text" class="search-query" placeholder="Cari Modul" id="cKari">
+					<form class="navbar-form pull-right" id="form-buku">
+						<input class="model" id="cari" name="query_buku" placeholder="Cari modul" type="text">
+						<button class="btn" onClick="return Buku.search()"><i class="icon-search"></i></button>
 					</form>
 			</div>
 			<?php

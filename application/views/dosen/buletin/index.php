@@ -5,7 +5,6 @@
     <meta charset="utf-8" />
 		<title>Dosen | Buletin</title>
 		<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
-		<link rel="stylesheet" href="/third_party/css/smoothness/jquery-ui-1.9.1.custom.min.css" />
 		<link rel="stylesheet" href="/third_party/bootstrap/css/elemento.min.css" />
 		<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
 		<link rel="stylesheet" href="/third_party/awesome/css/font-awesome.css" />
@@ -39,7 +38,10 @@
 			width:255px;
 			margin-top: 15px;
 		}
-
+		.image-list{
+			width:100px;
+			height:100px;
+		}
 	</style>
 </head>
 <body>
@@ -103,8 +105,9 @@
 		</ul>   
 			<div class="navbar navbar-inner">
 				<a class="brand">Buletin</a>
-					<form class="navbar-search pull-right">
-						<input type="text" class="search-query" placeholder="Cari Buletin" id="cari">
+					<form class="navbar-form pull-right" id="form-buku">
+						<input class="model" id="cari" name="query_buku" placeholder="Cari buletin" type="text">
+						<button class="btn" onClick="return Buku.search()"><i class="icon-search"></i></button>
 					</form>
 			</div>
 			<div class="well span5">
@@ -112,8 +115,8 @@
 				<h5>Buletin </h5>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
 				<div class="btn-group">
-					<button class="btn btn-primary download-dosen"><i class="icon-download "></i> Download</button>
-					<button class="btn btn-primary baca-dosen"><i class="icon-file"></i> Baca</button>
+					<button class="btn btn-primary btn-mini download-dosen"><i class="icon-download "></i> Download</button>
+					<button class="btn btn-primary btn-mini baca-dosen"><i class="icon-file"></i> Baca</button>
 				</div>
 			</div>
 			<div class="well span5">
@@ -121,8 +124,8 @@
 				<h5>Buletin</h5>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
 				<div class="btn-group">
-					<button class="btn btn-mini  download-dosen"><img src="/images/glyphicons/png/glyphicons_200_download.png" alt=""></button>
-					<button class="btn btn-mini  baca-dosen"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>
+					<button class="btn btn-mini  download-dosen"><i class="icon-download"></i> Download</button>
+					<button class="btn btn-mini  baca-dosen"><i class="icon-play"></i> Baca</button>
 				</div>
 			</div>
 			<div class="well span5">
@@ -130,8 +133,8 @@
 				<h5>Buletin</h5>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...<br />
 				<div class="btn-group">
-					<button class="btn btn-mini  download-dosen"><img src="/images/glyphicons/png/glyphicons_200_download.png" alt=""></button>
-					<button class="btn btn-mini  baca-dosen"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>
+					<button class="btn btn-mini  download-dosen"><i class="icon-download"></i> Download</button>
+					<button class="btn btn-mini  baca-dosen"><i class="icon-play"></i> Baca</button>
 				</div>
 			</div>
 			<div class="well span5">
@@ -144,8 +147,8 @@
 				<h5>Buletin</h5>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...</p><br />
 				<div class="btn-group">
-					<button class="btn btn-mini  download-dosen"><img src="/images/glyphicons/png/glyphicons_200_download.png" alt=""></button>
-					<button class="btn btn-mini  baca-dosen"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>
+					<button class="btn btn-mini  download-dosen"><i class="icon-download"></i> Download</button>
+					<button class="btn btn-mini  baca-dosen"><i class="icon-play"></i> Baca</button>
 				</div>
 			</div>
 		<br>
