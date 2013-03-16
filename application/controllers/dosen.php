@@ -163,5 +163,24 @@ class Dosen extends CI_Controller {
 		$this->load->view('dosen/profil',array('controller'=>$this));
 		jsloc::show();
 	}
-	
+	public function tampilDokumen($param = '')
+	{
+		switch($param){
+			case 'jurnal':
+				$this->load->database();
+				$this->load->model('dosen_paging_model');
+				$this->dosen_paging_model->search_document_jurnal();
+			break;
+			case 'buku':
+				$this->load->database();
+				$this->load->model('dosen_paging_model');
+				$this->dosen_paging_model->search_document_buku();
+			break;
+			case 'modul':
+				$this->load->database();
+				$this->load->model('dosen_paging_model');
+				$this->dosen_paging_model->search_document_modul();
+			break;
+		}
+	}
 }

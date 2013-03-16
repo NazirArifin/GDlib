@@ -99,68 +99,39 @@
 						</ul>
 						<div class="tab-content">
 							<div class="tab-pane active" id="jurnal">
-							<div class="navbar navbar-inner">
-									<form class="navbar-search pull-left">
-										<input type="text" class="search-query" placeholder="Cari jurnal" id="cari">
-									</form>
-									<button class="btn pull-right" type="button" onClick="tambahDokumen()" id="buka1"><i class="icon-plus-sign"></i></button>
-							</div>
-								<table class="table">
-									<thead>
-										<tr>
-											<th>JUDUL</th>
-											<th>PENGARANG</th>
-											<th>PPROLOG</th>
-											<th>TAHUN TERBIT</th>
-											<th>KATA KUNCI DOKUMEN</th>
-											<th>AKSI</th>
-										</tr>
-									</thead>
-									<tbody>
-									<?php
-											$jurnal=$controller->dosen_model->tampilJurnal();
-											if ($jurnal == 0):
-												echo '<tr><td colspan="6"><div class="alert-info" style="text-align:center;">Data Jurnal Tidak Ada</div></td></tr>';
-											else :
-												foreach ($jurnal as $row):
-									 ?>
-										<tr>
-											<td><?php echo $row->JUDUL_DOKUMEN?></td>
-											<td><?php echo $row->PENGARANG_DOKUMEN?></td>
-											<td><?php echo $row->PROLOG_DOKUMEN?></td>
-											<td><?php echo $row->TAHUN_PENERBITAN_DOKUMEN?></td>
-											<td><?php echo $row->KATA_KUNCI_DOKUMEN?></td>
-											<td>
-												<div class="btn-group">
-													<button class="btn btn-inverse btn-mini" onClick="deleteDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)" >Hapus</button> 
-													<button class="btn btn-warning btn-mini" onClick="editDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)" >Edit</button> 
-													<button class="btn btn-success btn-mini">Lihat</button>
-												</div>
-											</td>
-										</tr>
-										<?php
-											endforeach;
-										endif;
-										?>
-									</tbody>
-								</table>
-								<div class="pagination pagination-centered">
-									<ul>
-										<li><a href="#">Prev</a></li>
-										<li class="active">
-										<a href="#">1</a>
-										</li>
-										<li><a href="#">2</a></li>
-										<li><a href="#">3</a></li>
-										<li><a href="#">4</a></li>
-										<li><a href="#">Next</a></li>
-									</ul>
+								<div class="navbar navbar-inner">
+										<form class="navbar-form pull-left" id="form-jurnal">
+											<input class="model" id="cari-jurnal" name="query_jurnal" placeholder="Search Jurnal" type="text">
+											<button class="btn" onClick="return Jurnal.search()"><i class="icon-search"></i></button>
+										</form>
+										<button class="btn pull-right" type="button" onClick="tambahDokumen()" id="buka1"><i class="icon-plus-sign"></i></button>
 								</div>
-							</div>
+									<table class="table">
+										<thead>
+											<tr>
+												<th>JUDUL</th>
+												<th>PENGARANG</th>
+												<th>PPROLOG</th>
+												<th>TAHUN TERBIT</th>
+												<th>KATA KUNCI DOKUMEN</th>
+												<th>AKSI</th>
+											</tr>
+										</thead>
+										<tbody id="dosen-jurnal">
+										
+										</tbody>
+									</table>
+									<div class="pagination pagination-centered" id="pagination-jurnal">
+										<ul>
+											
+										</ul>
+									</div>
+								</div>
 							<div class="tab-pane" id="buku">
 								<div class="navbar navbar-inner">
-									<form class="navbar-search pull-left">
-										<input type="text" class="search-query" placeholder="Cari buku" id="cari">
+									<form class="navbar-pull-left" id="form-buku">
+											<input class="model" id="cari-buku" name="query_buku" placeholder="Search Buku" type="text">
+											<button class="btn" onClick="return Buku.search()"><i class="icon-search"></i></button>
 									</form>
 									<button class="btn pull-right" type="button" onClick="tambahDokumen()"><i class="icon-plus-sign"></i></button>
 								</div>
@@ -176,52 +147,19 @@
 											<th>AKSI</th>
 										</tr>
 									</thead>
-									<tbody>
-										<?php
-											$buku=$controller->dosen_model->tampilBuku();
-											if($buku==0):
-												echo '<tr><td colspan="6"><div class="alert-info" style="text-align:center;">Data Buku Tidak Ada</div></td></tr>';
-											else:
-												foreach($buku as $row):
-											
-										?>
-										<tr>
-											<td><?php echo $row->JUDUL_DOKUMEN?></td>
-											<td><?php echo $row->PENGARANG_DOKUMEN?></td>
-											<td><?php echo $row->PROLOG_DOKUMEN?></td>
-											<td><?php echo $row->TAHUN_PENERBITAN_DOKUMEN?></td>
-											<td><?php echo $row->KATA_KUNCI_DOKUMEN?></td>
-											<td>
-												<div class="btn-group">
-													<button class="btn btn-inverse btn-mini" onClick="deleteDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)">Hapus</button> 
-													<button class="btn btn-warning btn-mini" onClick="editDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)"> Edit</button> 
-													<button class="btn btn-success btn-mini">Lihat</button>
-												</div>
-											</td>
-										</tr>
-										<?
-												endforeach;
-											endif;
-										?>
+									<tbody id="dosen-buku">
+										
 									</tbody>
 								</table>
-								<div class="pagination pagination-centered">
-									<ul>
-										<li><a href="#">Prev</a></li>
-										<li class="active">
-										<a href="#">1</a>
-										</li>
-										<li><a href="#">2</a></li>
-										<li><a href="#">3</a></li>
-										<li><a href="#">4</a></li>
-										<li><a href="#">Next</a></li>
-									</ul>
+								<div class="pagination pagination-centered" id="pagination-buku">
+									
 								</div>
 							</div>
 							<div class="tab-pane" id="modul">
 								<div class="navbar navbar-inner">
-									<form class="navbar-search pull-left">
-										<input type="text" class="search-query" placeholder="Cari modul" id="cari">
+									<form class="navbar-form pull-left" id="form-modul">
+											<input class="model" id="cari-modul" name="query_modul" placeholder="Search Modul" type="text">
+											<button class="btn" onClick="return Modul.search()"><i class="icon-search"></i></button>
 									</form>
 									<button class="btn pull-right" type="button" onClick="tambahDokumen()" id="buka"><i class="icon-plus-sign"></i></button>
 								</div>
@@ -236,45 +174,11 @@
 											<th>AKSI</th>
 										</tr>
 									</thead>
-									<tbody>
-										<?php
-											$modul=$controller->dosen_model->tampilModul();
-											if($modul==0):
-												echo '<tr><td colspan="6"><div class="alert-info" style="text-align:center;">Data Modul Tidak Ada</div></td></tr>';
-											else:
-												foreach($modul as $row):
-										?>
-										<tr>
-											<td><?php echo $row->JUDUL_DOKUMEN?></td>
-											<td><?php echo $row->PENGARANG_DOKUMEN?></td>
-											<td><?php echo $row->PROLOG_DOKUMEN?></td>
-											<td><?php echo $row->TAHUN_PENERBITAN_DOKUMEN?></td>
-											<td><?php echo $row->KATA_KUNCI_DOKUMEN?></td>
-											<td>
-												<div class="btn-group">
-													<button class="btn btn-danger btn-mini" onClick="deleteDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)">Hapus</button> 
-													<button class="btn btn-warning btn-mini" onClick="editDokumen(this,<?php echo $row-> ID_DOKUMEN ?>)">Edit</button> 
-													<button class="btn btn-success btn-mini">Lihat</button>
-												</div>
-											</td>
-										</tr>
-										<?php
-												endforeach;
-											endif;
-										?>
+									<tbody id="dosen-modul">
 									</tbody>
 								</table>
-								<div class="pagination pagination-centered">
-									<ul>
-										<li><a href="#">Prev</a></li>
-										<li class="active">
-										<a href="#">1</a>
-										</li>
-										<li><a href="#">2</a></li>
-										<li><a href="#">3</a></li>
-										<li><a href="#">4</a></li>
-										<li><a href="#">Next</a></li>
-									</ul>
+								<div class="pagination pagination-centered" id="pagination-modul">
+									
 								</div>
 							</div>
 						</div>
@@ -360,6 +264,7 @@
 	<script src="/third_party/bootstrap/bootstrap.min.js"></script>
 	<script src="/third_party/alertify/alertify.min.js"></script>
 	<script src="/js/dosen.js"></script>
+	<script src="/js/paging.dosen.dokumen.js"></script>
 <script type="text/javascript">
 $('#buka').attr('title', 'tambah dokumen').tooltip();
 $('#buka1').attr('title', 'tambah dokumen').tooltip();
