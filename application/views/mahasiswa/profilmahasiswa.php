@@ -144,7 +144,7 @@
 						<div class="container">
 							<a class="brand">Profil Detail</a>
 							<ul class="nav pull-right nav-pills">
-							<li><a href="#edit-profil" role="button" data-toggle="modal" id="edit-profilUser"><i class="icon-cogs icon-large"></i></a></li>
+							<li><a href="#edit-profil" role="button" data-toggle="modal" id="edit-profilUser" onClick="return editProfilMahasiswa(this, <?php echo $row->ID_PROFIL ?>)"><i class="icon-cogs icon-large"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -221,6 +221,7 @@ endif;
 </div>
 
 	<div id="edit-profil" class="modal message hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<form id="form-profil" action="" method="">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
             <h3>Edit Profil Mahasiswa</h3>
@@ -230,41 +231,34 @@ endif;
 				<div class="controls">
 					<div class="input-prepend">
 						<span class="add-on"><i class="icon-user"></i></span>
-						<input class="span3" id="nama" type="text" placeholder="Nama Lengkap" >
-					</div>
-				</div>
-				<div class="controls">
-					<div class="input-prepend">
-						<span class="add-on"><i class="icon-credit-card"></i></span>
-						<input class="span3" id="npm" type="text" placeholder="NPM">
+						<input class="span3" name="nama" id="nama-mahasiswa" type="text" placeholder="Nama Lengkap" >
+						<input class="span3" id="profil-id" type="hidden" value="">
 					</div>
 				</div>
 				<div class="controls">
 					<div class="input-prepend">
 						<span class="add-on"><i class="icon-map-marker"></i></span>
-						<input class="span3" id="tetala" type="text" placeholder="Tempat Lahir">
+						<input class="span3" name="tempat" id="tempat-mahasiswa" type="text" placeholder="Tempat Lahir">
 					</div>
 				</div>
 				<div class="controls">
 					<div class="input-prepend">
 						<span class="add-on"><i class="icon-map-marker"></i></span>
-						<input class="span3" id="tetala" type="text" placeholder="Tanggal Lahir">
+						<input class="span3" name="tanggal" id="tanggal-mahasiswa" type="date" placeholder="Tanggal Lahir">
 					</div>
 				</div>
-				<input type="radio" name="gender" id="laki-laki"><label class="label label-inverse" for="laki-laki"> Laki-Laki</label>
-				<input type="radio" name="gender" id="perempuan"><label class="label label-inverse" for="perempuan"> Perempuan</label>
-				<input type="radio" name="gender" id="maho"><label class="label label-inverse" for="maho"> Maho</label>
-				<input type="radio" name="gender" id="banci"><label class="label label-inverse" for="banci"> Banci</label>
+				<input type="radio" name="gender" id="laki-laki" value="L"><label class="label label-inverse" for="laki-laki"> Laki-Laki</label>
+				<input type="radio" name="gender" id="perempuan" value="P"><label class="label label-inverse" for="perempuan"> Perempuan</label>
 				<div class="controls">
 					<div class="input-prepend">
 						<span class="add-on"><i class="icon-road"></i></span>
-						<input class="span3" id="mail" type="text" placeholder="Alamat">
+						<input class="span3" name="alamat" id="alamat-mahasiswa" type="text" placeholder="Alamat">
 					</div>
 				</div>
 				<div class="controls">
 					<div class="input-prepend">
 						<span class="add-on"><i class="icon-envelope"></i></span>
-						<input class="span3" id="mail" name="mail" type="text" placeholder="Alamat email">
+						<input class="span3" id="mail-mahasiswa" name="mail" type="text" placeholder="Alamat email">
 						<input type="radio" name="email" id="tampil-email"><label class="label label-warning" for="tampil-email"> Tampilkan</label>
 						<input type="radio" name="email" id="jangan-email"><label class="label label-warning" for="jangan-email"> Jangan Tampilkan</label>
 					</div>
@@ -278,12 +272,12 @@ endif;
 					</div>
 				</div>
 			</div>
-			
         </div>
         <div class="modal-footer">
             <button class="btn btn-danger" data-dismiss="modal">Tutup</button>
             <button class="btn btn-primary">Simpan</button>
         </div>
+		</form>
     </div>
 	<!--modal edit pp
 	<div id="edit-foto" class="modal message hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

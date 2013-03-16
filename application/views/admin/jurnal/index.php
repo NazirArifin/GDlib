@@ -120,7 +120,7 @@
 							<div class="control-group">
 								<label class="control-label control-label-min" for="foto-jurnal">Foto Jurnal</label>
 								<div class="controls controls-min">	
-									<input name="foto_jurnal" id="foto-jurnal" type="file" required="" >
+									<input name="foto_jurnal" id="foto-jurnal" type="file" required="">
 								</div>
 							</div>
 							<div class="control-group">

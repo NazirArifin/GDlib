@@ -27,15 +27,15 @@ class Mahasiswa extends CI_Controller {
 			case 'foto':
 				$id = $this->input->post('id_profil');
 				if ( ! empty($id)){
-					$this->mahasiswa_model->updateProfil($id);
+					$this->mahasiswa_model->updateFotoProfil($id);
 					echo '{ "error": 0, "success": 1 }';
 				}
 				header('location:/mahasiswa/profilmahasiswa');
 			break;
-			case '':
+			case 'data':
 				$id = $this->input->post('id_profil');
 				if ( ! empty($id)){
-					$this->mahasiswa_model->updateProfil($id);
+					$this->mahasiswa_model->updateFotoProfil($id);
 					echo '{ "error": 0, "success": 1 }';
 				}
 				header('location:/mahasiswa/profilmahasiswa');

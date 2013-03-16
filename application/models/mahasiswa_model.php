@@ -15,7 +15,7 @@ class Mahasiswa_model extends CI_Model {
 	}
 	
 	public function pilihIdProfil($id){
-		$this->db->select('ID_PROFIL,FOTO_PROFIL');
+		$this->db->select('*');
 		$query=$this->db->get_where('tb_profil',array('ID_PROFIL' => $id));
 		if ($query->num_rows()==0){
 			return false;
@@ -25,7 +25,7 @@ class Mahasiswa_model extends CI_Model {
 		}
 	}
 	
-	public function updateProfil($id){
+	public function updateFotoProfil($id){
 		$this->load->library('upload');
 		$config['upload_path']='./upload/profil/mahasiswa';
 		$config['allowed_types']='jpg|jpeg|png';
