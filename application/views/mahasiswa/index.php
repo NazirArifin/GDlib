@@ -149,11 +149,8 @@
 							<h4><?php echo $row->JUDUL_DOKUMEN ?></h4>
 							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...</p><br />
 							<div class="btn-group">
-								<form id="f" name="g" action="/mahasiswa/jurnal/download" method="post">
-								<input type="hidden" name="a" id="id-dokumenMahasiswa" value="">
-								</form>
-								<button class="btn btn-mini btn-primary download-mahasiswa" onClick="return downloadJurnalMahasiswa(this, <?php echo $row->ID_DOKUMEN ?>)"><i class="icon-download"></i> Download</button>
-								<button class="btn btn-mini btn-primary baca-mahasiswa"><i class="icon-play"></i> Baca</button>
+								<a href="/mahasiswa/jurnal/download/<?php echo $row->ID_DOKUMEN ?>" target="_blank" class="btn btn-mini btn-primary download-mahasiswa"><i class="icon-download"></i> Download</a>
+								<a href="/<?php echo $row->FILE_DOKUMEN ?>" target="_blank" class="btn btn-mini btn-primary baca-mahasiswa"><i class="icon-play"></i> Baca</a>
 							</div>
 						</div>
 						<?php
@@ -175,8 +172,8 @@
 							<h4><?php echo $row->JUDUL_DOKUMEN ?></h4>
 							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...</p><br />
 							<div class="btn-group">
-								<button class="btn btn-mini btn-primary download-mahasiswa" onClick="return downloadBukuMahasiswa(this, <?php echo $row->ID_DOKUMEN ?>)"><i class="icon-download"></i> Download</button>
-								<button class="btn btn-mini btn-primary baca-mahasiswa"><i class="icon-play"></i> Baca</button>
+								<a href="/mahasiswa/buku/download/<?php echo $row->ID_DOKUMEN ?>" target="_blank" class="btn btn-mini btn-primary download-mahasiswa"><i class="icon-download"></i> Download</a>
+								<a href="/<?php echo $row->FILE_DOKUMEN ?>" target="_blank" class="btn btn-mini btn-primary baca-mahasiswa"><i class="icon-play"></i> Baca</a>
 							</div>
 						</div>
 						<?php
@@ -198,8 +195,8 @@
 							<h4><?php echo $row->JUDUL_DOKUMEN ?></h4>
 							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...</p><br />
 							<div class="btn-group">
-								<button class="btn btn-mini btn-primary download-mahasiswa" onClick="return downloadModulMahasiswa(this, <?php echo $row->ID_DOKUMEN ?>)"><i class="icon-download"></i> Download</button>
-								<button class="btn btn-mini btn-primary baca-mahasiswa"><i class="icon-play"></i> Baca</button>
+								<a href="/mahasiswa/modul/download/<?php echo $row->ID_DOKUMEN ?>" target="_blank" class="btn btn-mini btn-primary download-mahasiswa"><i class="icon-download"></i> Download</a>
+								<a href="/<?php echo $row->FILE_DOKUMEN ?>" target="_blank" class="btn btn-mini btn-primary baca-mahasiswa"><i class="icon-play"></i> Baca</a>
 							</div>
 						</div>
 						<?php
@@ -221,8 +218,8 @@
 							<h4><?php echo $row->JUDUL_DOKUMEN ?></h4>
 							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...</p><br />
 							<div class="btn-group">
-								<button class="btn btn-mini btn-primary download-mahasiswa"><i class="icon-download"></i> Download</button>
-								<button class="btn btn-mini btn-primary baca-mahasiswa"><i class="icon-play"></i> Baca</button>
+								<a href="/mahasiswa/buletin/download/<?php echo $row->ID_DOKUMEN ?>" target="_blank" class="btn btn-mini btn-primary download-mahasiswa"><i class="icon-download"></i> Download</a>
+								<a href="/<?php echo $row->FILE_DOKUMEN ?>" target="_blank" class="btn btn-mini btn-primary baca-mahasiswa"><i class="icon-play"></i> Baca</a>
 							</div>
 						</div>
 						<?php

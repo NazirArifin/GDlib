@@ -45,7 +45,7 @@ var Jurnal = {
 				var t = '', dt = {};
 				for (var i = 0; i < d.data.length; i++) {
 					dt = d.data[i];
-					t += '<tr><td>' + dt.judul +'</td>' + 
+					t += '<tr class="success"><td>' + dt.judul +'</td>' + 
 						 '<td>' + dt.pengarang + '</td>' + 
 						 '<td>' + dt.tahun + '</td>' +
 						 '<td><div class="btn-group">' +
@@ -107,7 +107,7 @@ var Buku = {
 				var t = '', dt = {};
 				for (var i = 0; i < d.data.length; i++) {
 					dt = d.data[i];
-					t += '<tr><td>' + dt.judul +'</td>' + 
+					t += '<tr class="success"><td>' + dt.judul +'</td>' + 
 						 '<td>' + dt.pengarang + '</td>' + 
 						 '<td>' + dt.tahun + '</td>' +
 						 '<td><div class="btn-group">' +
@@ -169,7 +169,7 @@ var Modul = {
 				var t = '', dt = {};
 				for (var i = 0; i < d.data.length; i++) {
 					dt = d.data[i];
-					t += '<tr><td>' + dt.judul +'</td>' + 
+					t += '<tr class="success"><td>' + dt.judul +'</td>' + 
 						 '<td>' + dt.pengarang + '</td>' + 
 						 '<td>' + dt.tahun + '</td>' +
 						 '<td><div class="btn-group">' +

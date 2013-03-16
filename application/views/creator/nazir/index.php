@@ -68,7 +68,7 @@
 		</div>
 		<div class="span5">
 			<h2>Nazir</h2>
-			<h3>09552015xx</h3>
+			<h3>0955201579</h3>
 			<h3>Project Manager</h3>
 		</div>
 	</div>

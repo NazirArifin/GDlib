@@ -45,7 +45,7 @@ var Document = {
 				var t = '', dt = {};
 				for (var i = 0; i < d.data.length; i++) {
 					dt = d.data[i];
-					t += '<div class="row-fluid data-user alert-success"><div class="span4"><a href="#image" class="thumbnail"><img src="/images/ct.jpg" alt=""/></a></div>' + 
+					t += '<div class="row-fluid data-user alert-success"><div class="span4"><a href="#image"><img src="/images/ct.jpg" class="img-polaroid" alt=""/></a></div>' + 
 						 '<div class="span8 btn-group"><h2>' + dt.nama + '</h2>' + 
 						 '<h4>' + dt.induk + '</h4>' + 
 						 '<h5>' + dt.facebook + '</h5>' +

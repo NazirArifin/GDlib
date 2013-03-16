@@ -112,12 +112,9 @@ class Mahasiswa_model extends CI_Model {
 	}
 	
 	public function downloadFile($id){
-	//$query = $this->db->query("SELECT COUNT(`ID_DOKUMEN`) AS `HASIL` FROM `tb_dokumen` WHERE ($where) and ID_KATEGORI_DOKUMEN = '$kategori'");
-		//$total = $query->row()->HASIL;
 		$this->load->helper('download');
-		$query=$this->db->query("SELECT FILE_DOKUMEN AS DATA FROM tb_dokumen WHERE ID_DOKUMEN = 25");
+		$query=$this->db->query("SELECT FILE_DOKUMEN AS DATA FROM tb_dokumen WHERE ID_DOKUMEN = $id");
 		$file = $query->row()->DATA;
-		//$file = 'monkey.gif';
 		if (file_exists($file)) {
 			header('Content-Description: File Transfer');
 			header('Content-Type: application/octet-stream');

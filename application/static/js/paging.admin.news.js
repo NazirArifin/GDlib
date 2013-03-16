@@ -45,7 +45,7 @@ var News = {
 				var t = '', dt = {};
 				for (var i = 0; i < d.data.length; i++) {
 					dt = d.data[i];
-					t += '<tr><td><a href="#image" class="thumbnail"><img src="/' + dt.gambar + '" alt=""/></a></td>' + 
+					t += '<tr class="success"><td><a href="#image"><img src="/' + dt.gambar + '" class="img-polaroid" alt=""/></a></td>' + 
 						 '<td>' + dt.judulnews + '</td>' + 
 						 '<td>' + dt.isi + '</td>' +
 						 '<td>' + dt.jam + '</td>' +

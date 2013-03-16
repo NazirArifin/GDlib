@@ -45,7 +45,7 @@ var Dosen = {
 				var t = '', dt = {};
 				for (var i = 0; i < d.data.length; i++) {
 					dt = d.data[i];
-					t += '<tr><td>' + dt.nama +'</td>' + 
+					t += '<tr class="success"><td>' + dt.nama +'</td>' + 
 						 '<td>' + dt.induk + '</td>' + 
 						 '<td>' + dt.facebook + '</td>' +
 						 '<td><div class="btn-group">' +
@@ -107,7 +107,7 @@ var Mahasiswa = {
 				var t = '', dt = {};
 				for (var i = 0; i < d.data.length; i++) {
 					dt = d.data[i];
-					t += '<tr><td>' + dt.nama +'</td>' + 
+					t += '<tr class="success"><td>' + dt.nama +'</td>' + 
 						 '<td>' + dt.induk + '</td>' + 
 						 '<td>' + dt.facebook + '</td>' +
 						 '<td><div class="btn-group">' +

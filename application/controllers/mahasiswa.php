@@ -19,12 +19,20 @@ class Mahasiswa extends CI_Controller {
 	public function profilmahasiswa($param = '', $extra = '')
 	{
 		switch($param){
-			case 'data':
+			case 'ambil':
 				$pilih = $this->mahasiswa_model->pilihIdProfil($extra);
 				echo json_encode($pilih);
 				return;
 			break;
-			case 'ubah':
+			case 'foto':
+				$id = $this->input->post('id_profil');
+				if ( ! empty($id)){
+					$this->mahasiswa_model->updateProfil($id);
+					echo '{ "error": 0, "success": 1 }';
+				}
+				header('location:/mahasiswa/profilmahasiswa');
+			break;
+			case '':
 				$id = $this->input->post('id_profil');
 				if ( ! empty($id)){
 					$this->mahasiswa_model->updateProfil($id);
@@ -50,20 +58,11 @@ class Mahasiswa extends CI_Controller {
 				$this->load->view('mahasiswa/jurnal/detail',array('controller' => $this));
 				jsloc::show();
 			break;
-			case 'data':
-				$pilih = $this->mahasiswa_model->pilihIdDokumen($extra);
-				echo json_encode($pilih);
-			break;
 			case 'download':
 				$this->load->helper('download');
-				//$id = $this->input->post('a');
-				//if ( ! empty($id)){
-				//	$this->mahasiswa_model->downloadFile($id);
-				//	echo '{ "error": 0, "success": 1 }';
-				//}
 				$pilih = $this->mahasiswa_model->downloadFile($extra);
-				//echo json_encode($pilih);
-				//return;
+				echo json_encode($pilih);
+				return;
 			break;
 			default:
 				$this->load->view('mahasiswa/jurnal/index',array('controller' => $this));
@@ -83,6 +82,12 @@ class Mahasiswa extends CI_Controller {
 				$this->load->view('mahasiswa/buku/detail',array('controller' => $this));
 				jsloc::show();
 			break;
+			case 'download':
+				$this->load->helper('download');
+				$pilih = $this->mahasiswa_model->downloadFile($extra);
+				echo json_encode($pilih);
+				return;
+			break;
 			default:
 				$this->load->view('mahasiswa/buku/index',array('controller' => $this));
 				jsloc::show();
@@ -100,6 +105,12 @@ class Mahasiswa extends CI_Controller {
 			case 'detail':
 				$this->load->view('mahasiswa/modul/detail',array('controller' => $this));
 				jsloc::show();
+			break;
+			case 'download':
+				$this->load->helper('download');
+				$pilih = $this->mahasiswa_model->downloadFile($extra);
+				echo json_encode($pilih);
+				return;
 			break;
 			default:
 				$this->load->view('mahasiswa/modul/index',array('controller' => $this));
