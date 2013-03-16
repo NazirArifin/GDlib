@@ -136,10 +136,10 @@
 			<div class="accordion-inner">
 				<h3>Sosial Media</h3>
 				<a href="https://www.facebook.com/habib.line" class='zocial facebook'>Habieb Breakhouse GambalGambel</a>
-				<a href="https://www.twitter.com/nazzir.arifin" class='zocial twitter'>Nazir Arifin</a>
-				<a href="https://www.facebook.com/nazzir.arifin" class='zocial googleplus'>Nazir Arifin</a>
+				<a href="https://twitter.com/Habieb_SafaNa91" class='zocial twitter'> Habieb Gombal Gambel</a>
+				<a href="https://plus.google.com/u/0/106885116165848568341/" class='zocial googleplus'>Habib safana</a>
 				<a href="https://www.github.com/safana" class='zocial github'>Safana</a>
-				<a href="https://www.facebook.com/nazzir.arifin" class='zocial linkedin'>Nazir Arifin</a>
+				<a href="#" class='zocial linkedin'> LinkedIn</a>
 			</div>
 		</div>
 	</div>

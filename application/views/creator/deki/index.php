@@ -137,9 +137,9 @@
 				<h3>Sosial Media</h3>
 				<a href="https://www.facebook.com/Dekidangersline" class='zocial facebook'>Deje Novear</a>
 				<a href="https://www.facebook.com/nazzir.arifin" class='zocial twitter'>Nazir Arifin</a>
-				<a href="https://www.facebook.com/nazzir.arifin" class='zocial googleplus'>Nazir Arifin</a>
-				<a href="https://www.facebook.com/nazzir.arifin" class='zocial github'>Nazir Arifin</a>
-				<a href="https://www.facebook.com/nazzir.arifin" class='zocial linkedin'>Nazir Arifin</a>
+				<a href="https://plus.google.com/u/0/118208374107627196351" class='zocial googleplus'>Deki Andi Irawan</a>
+				<a href="https://github.com/Dekiirawan" class='zocial github'>Dekiirawan</a>
+				<a href="#" class='zocial linkedin'> Linked In</a>
 			</div>
 		</div>
 	</div>

@@ -137,9 +137,9 @@
 				<h3>Sosial Media</h3>
 				<a href="https://www.facebook.com/fajrul.imanalamini" class='zocial facebook'>Fajrul Iman Al-Amini</a>
 				<a href="https://www.facebook.com/nazzir.arifin" class='zocial twitter'>Nazir Arifin</a>
-				<a href="https://www.facebook.com/nazzir.arifin" class='zocial googleplus'>Nazir Arifin</a>
-				<a href="https://www.facebook.com/nazzir.arifin" class='zocial github'>Nazir Arifin</a>
-				<a href="https://www.facebook.com/nazzir.arifin" class='zocial linkedin'>Nazir Arifin</a>
+				<a href="https://plus.google.com/u/0/109372902546005226695" class='zocial googleplus'> Fajrul Iman Al-amini</a>
+				<a href="https://github.com/Fajrul" class='zocial github'>Fajrul</a>
+				<!--<a href="https://www.facebook.com/nazzir.arifin" class='zocial linkedin'>Nazir Arifin</a>-->
 			</div>
 		</div>
 	</div>

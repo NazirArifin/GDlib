@@ -137,9 +137,9 @@
 				<h3>Sosial Media</h3>
 				<a href="https://www.facebook.com/rudiecnuada" class='zocial facebook'>Rudiec Nuada</a>
 				<a href="https://www.twitter.com/rudiecnuada" class='zocial twitter'>@rudiecnuada</a>
-				<a href="https://www.facebook.com/nazzir.arifin" class='zocial googleplus'>Nazir Arifin</a>
-				<a href="https://www.github.com/rudiec" class='zocial github'>Nazir Arifin</a>
-				<a href="https://www.facebook.com/rudiecnuada" class='zocial linkedin'>Nazir Arifin</a>
+				<a href="https://plus.google.com/u/0/101084308123428808294" class='zocial googleplus'>Rudiec Nuada</a>
+				<a href="https://www.github.com/rudiec" class='zocial github'>Rudiec Nuada</a>
+				<a href="https://id.linkedin.com/in/rudiecnuada/" class='zocial linkedin'>Rudiec Nuada</a>
 			</div>
 		</div>
 	</div>

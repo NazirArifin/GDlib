@@ -140,10 +140,10 @@
 			<div class="accordion-inner">
 				<h3>Sosial Media</h3>
 				<a href="https://www.facebook.com/nazzir.arifin" class='zocial facebook'>Nazir Arifin</a>
-				<a href="https://www.facebook.com/nazzir.arifin" class='zocial twitter'>Nazir Arifin</a>
-				<a href="https://www.facebook.com/nazzir.arifin" class='zocial googleplus'>Nazir Arifin</a>
-				<a href="https://www.facebook.com/nazzir.arifin" class='zocial github'>Nazir Arifin</a>
-				<a href="https://www.facebook.com/nazzir.arifin" class='zocial linkedin'>Nazir Arifin</a>
+				<a href="https://www.twitter.com/NazirArifin" class='zocial twitter'>@NazirArifin</a>
+				<a href="https://plus.google.com/u/0/107344129806379926487" class='zocial googleplus'>Nazir Arifin</a>
+				<a href="https://github.com/NazirArifin" class='zocial github'>Nazir Arifin</a>
+				<a href="https://id.linkedin.com/in/rifdeweb" class='zocial linkedin'>Nazir Arifin</a>
 			</div>
 		</div>
 	</div>

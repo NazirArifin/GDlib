@@ -71,7 +71,7 @@
 			<div class="navbar navbar-inner">
 				<a class="brand">Jurnal</a>
 				<form class="navbar-form pull-right" id="form-jurnal">
-					<input class="model" id="query-jurnal" name="query_jurnal" placeholder="Search Jurnal" type="text">
+					<input class="model" id="query-jurnal" name="query_jurnal" placeholder="Search Jurnal" type="search">
 					<button class="btn" onClick="return Jurnal.search()"><i class="icon-search"></i></button>
 				</form>
 			</div>
@@ -88,79 +88,26 @@
 			</div>
 		</div>
 	
-    <div class="well span4">
-		<section class="blog-widget">
-              <div class="tabbable">
-				<!--NAVIGASI TAB-->
-                <ul class="nav nav-tabs">
-                  <li class="active"><a href="#tabpopuler" data-toggle="tab">Pos Populer</a></li>
-                  <li><a href="#tabterbaru" data-toggle="tab">Post Terbaru</a></li>
-                </ul>
-				<!--END NAVIGASI TAB-->
-				
-				<!--TAB CONTENT-->
-                <div class="tab-content">
-					<!--TAB CONTENT YG PERTAMA-->
-					<div class="tab-pane active" id="tabpopuler">
-                     <div class="alert alert-info">
-						<h2 class="media-heading">Populer</h2>
+		<div class="well span4">
+			<section class="blog-widget">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="container"><a class="brand">Post Populer</a></div>
 					</div>
-						<div class='testimonial'>
-							<h4>Judul</h4>
-							<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... </blockquote>
-							<p class='testimonial-footer'>
-								<img style="width:32px; height:32px;" src="/images/rud.jpg" >
-								<b>Rudiec Nuada</b> — designer
-							</p>
-						</div>
-						<hr>
-						<div class='testimonial'>
-							<h4>Judul</h4>
-							<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... </blockquote>
-							<p class='testimonial-footer'>
-								<img style="width:32px; height:32px;" src="/images/rud.jpg" >
-								<b>Rudiec Nuada</b> — designer
-							</p>
-						</div>
-						<div class='testimonial'>
-							<h4>Judul</h4>
-							<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... </blockquote>
-							<p class='testimonial-footer'>
-								<img style="width:32px; height:32px;" src="/images/rud.jpg" >
-								<b>Rudiec Nuada</b> — designer
-							</p>
-						</div>					
-                  </div><!--KONTENT PERTAMA-->
-				  <!--TAB CONTENT YG KEDUA-->
-                  <div class="tab-pane" id="tabterbaru">
-							<div class="alert alert-info">
-								<h2 class="media-heading">Terbaru</h2>
-							</div>
-									<?php
-										$jurnal=$this->mahasiswa_model->tampilDokumenJurnal();
-										if($jurnal==0):
-											echo '<p>Tidak Ada</p>';
-											else:
-										foreach($jurnal as $row ):
-									?>
-								<div class='testimonial'>
-									<h4><?php echo $row->JUDUL_DOKUMEN ?></h4>
-									<blockquote><?php echo $row->PROLOG_DOKUMEN ?> </blockquote>
-									<p class='testimonial-footer'>
-										<img style="width:32px; height:32px;" src="/<?php echo $row->FOTO_DOKUMEN ?>" >
-										<b><?php echo $row->PENGARANG_DOKUMEN ?></b> — designer
-									</p>
-								</div>
-									<?php
-										endforeach;
-										endif;
-									?>
-							</div>
-						</div>
-					</div>
-                </div>
-            </div>
-         </section>
+				</div>
+				<div class='testimonial'>
+					<h4>Judul</h4>
+					<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit.... </blockquote>
+					<p class='testimonial-footer'>
+					<img style="width:32px; height:32px;" src="/images/rud.jpg" >
+					<b>Rudiec Nuada</b> — designer
+					</p>
+				</div>
+			</section>
+		</div>
+	</div>
+</div>
+
 		 <!--BAGIAN FOOTER-->
   	<footer class="row-fluid footer">
 		<div class="well span12">

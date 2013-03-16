@@ -138,9 +138,9 @@
 				<h3>Sosial Media</h3>
 				<a href="https://www.facebook.com/fawait" class='zocial facebook'>Faylee RC</a>
 				<a href="https://www.twitter.com/Rankclem" class='zocial twitter'>@Rankclem</a>
-				<a href="https://www.plus.google.com/faylee" class='zocial googleplus'>Faylee</a>
+				<a href="https://plus.google.com/u/0/101895935203845519215" class='zocial googleplus'>Faylee RC</a>
 				<a href="https://www.github.com/Fawait" class='zocial github'>Fawait</a>
-				<a href="https://www.facebook.com/nazzir.arifin" class='zocial linkedin'>Nazir Arifin</a>
+				<!--<a href="https://www.facebook.com/nazzir.arifin" class='zocial linkedin'>Nazir Arifin</a>-->
 			</div>
 		</div>
 	</div>
