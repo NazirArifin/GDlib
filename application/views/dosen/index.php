@@ -129,7 +129,7 @@
 								</div>
 							<div class="tab-pane" id="buku">
 								<div class="navbar navbar-inner">
-									<form class="navbar-pull-left" id="form-buku">
+									<form class="navbar-form pull-left" id="form-buku">
 											<input class="model" id="cari-buku" name="query_buku" placeholder="Search Buku" type="text">
 											<button class="btn" onClick="return Buku.search()"><i class="icon-search"></i></button>
 									</form>
@@ -264,8 +264,9 @@
 	<script src="/third_party/bootstrap/bootstrap.min.js"></script>
 	<script src="/third_party/alertify/alertify.min.js"></script>
 	<script src="/js/dosen.js"></script>
-	<script src="/js/paging.dosen.dokumen.js"></script>
-<script type="text/javascript">
+	<script src="/js/paging.dosen.js"></script>
+
+	<script type="text/javascript">
 $('#buka').attr('title', 'tambah dokumen').tooltip();
 $('#buka1').attr('title', 'tambah dokumen').tooltip();
 $('#tutup').attr('title', 'Tutup').tooltip();

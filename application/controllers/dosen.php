@@ -169,8 +169,25 @@ class Dosen extends CI_Controller {
 			case 'jurnal':
 				$this->load->database();
 				$this->load->model('dosen_paging_model');
-				$this->dosen_paging_model->search_document_jurnal();
+				$this->dosen_paging_model->search_jurnal();
 			break;
+			case 'buku':
+				$this->load->database();
+				$this->load->model('dosen_paging_model');
+				$this->dosen_paging_model->search_buku();
+			break;
+			case 'modul':
+				$this->load->database();
+				$this->load->model('dosen_paging_model');
+				$this->dosen_paging_model->search_modul();
+			break;
+			
+			case 'dokumenjurnal':
+				$this->load->database();
+				$this->load->model('dosen_paging_model');
+				$this->dosen_paging_model->search_dokumen_jurnal();
+			break;
+			
 			case 'buku':
 				$this->load->database();
 				$this->load->model('dosen_paging_model');
@@ -181,6 +198,7 @@ class Dosen extends CI_Controller {
 				$this->load->model('dosen_paging_model');
 				$this->dosen_paging_model->search_document_modul();
 			break;
+			
 		}
 	}
 }

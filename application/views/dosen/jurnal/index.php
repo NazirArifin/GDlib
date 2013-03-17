@@ -13,11 +13,6 @@
 			<link rel="stylesheet" href="/css/style.css" />
 			<link rel="stylesheet" href="/css/main.css" />
 			
-			<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
-			<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
-			<script src="/third_party/bootstrap/bootstrap.min.js"></script>
-			<script src="/third_party/alertify/alertify.min.js"></script>
-			<script src="/js/dosen.js"></script>
     <style type="text/css">
 	#logo {
 		height: 31px;
@@ -87,64 +82,19 @@
 		</ul>   
 			<div class="navbar navbar-inner">
 				<a class="brand">Jurnal</a>
-					<form class="navbar-form pull-right" id="form-buku">
-						<input class="model" id="cari" name="query_buku" placeholder="Cari jurnal" type="text">
-						<button class="btn" onClick="return Buku.search()"><i class="icon-search"></i></button>
+					<form class="navbar-form pull-right" id="form-jurnal">
+						<input class="model"  placeholder="Cari jurnal" type="text" id="cari-jurnal">
+						<button class="btn" onClick="return Jurnal.search()"><i class="icon-search"></i></button>
 					</form>
 			</div>
-					<?php
-						$jurnal=$controller->dosen_model->tampilJurnal();
-						if ($jurnal==0):
-							echo '<div class="alert-info" style="text-align:center;">Data Jurnal Tidak Ada</div>';
-						else:
-							foreach($jurnal as $row):
-					?>	
-			<div class="well span5">
-				<a href="#Doc"><img src="/<?php echo $row->FOTO_DOKUMEN?>" class="thumbnail image-list"></a>
-					<h5><?php echo $row->JUDUL_DOKUMEN?> </h5>
-					<p><?php echo $row->PROLOG_DOKUMEN?><br />
-				<div class="btn-group">
-					<button class="btn btn-primary btn-mini download-dosen"><i class="icon-download "></i> Download</button>
-					<button class="btn btn-primary btn-mini baca-dosen"><i class="icon-file"></i> Baca</button>
-				</div>
-			</div>
-			<?php
-					endforeach; 
-				endif;	
-			?>	
-			<!--
-			<div class="well span5">
-				<ul class="thumbnails">
-				  <li class="thumbnail">
-					<img src="/images/2.jpg" class="image-list">
-					<a href="#" class="ribbon ribbon-left">New Item</a>
-				  </li>
-				</ul>
-				<h5>Buku</h5>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...</p><br />
-				<div class="btn-group">
-					<button class="btn btn-mini  download-dosen"><img src="/images/glyphicons/png/glyphicons_200_download.png" alt=""></button>
-					<button class="btn btn-mini  baca-dosen"><img src="/images/glyphicons/png/glyphicons_220_play_button.png" alt=""> </button>
-				</div>
-			</div>
-			-->
-		<br>
-		<div class="span12">
-			<div class="pagination pagination-centered">
-				<ul>
-					<li><a href="#">Prev</a></li>
-					<li class="active">
-					<a href="#">1</a>
-					</li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">Next</a></li>
-				</ul>
-			</div>
-		</div>
+			<div class="well span5" id="dokumen-jurnal">
 			
-		
+			</div>
+			<div class="pagination pagination-centered" id="pagination-jurnal">
+				<ul>
+				
+				</ul>
+			</div>
 	</div>			
 </div>
 	 <!--BAGIAN FOOTER-->
@@ -155,6 +105,12 @@
 			<span>Created by: <a href="/creator" rel="tooltip" title="view creators">Lab Crew++</a>. <br />Copyright &copy; 2012. All rights reserved</span></center>
 		</div>
 	</footer>
+	<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
+	<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
+	<script src="/third_party/bootstrap/bootstrap.min.js"></script>
+	<script src="/third_party/alertify/alertify.min.js"></script>
+	<script src="/js/dosen.js"></script>
+	<script src="/js/paging.dosen.dokumen.js"></script>
 
 <script type="text/javascript">
 $('#tab-dok a').click(function (e) {
