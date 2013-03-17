@@ -172,7 +172,7 @@
 				</div>
 				<div id="gender" class="accordion-body collapse">
 				  <div class="accordion-inner">
-					<?php echo $row->JENIS_KELAMIN ?>
+					<?php echo ($row->JENIS_KELAMIN == 'L' ? 'Laki-Laki' : 'Perempuan') ?>
 				  </div>
 				</div>
 			  </div>
@@ -254,12 +254,20 @@ endif;
 				</div>
 				<div class="controls">
 					<div class="input-prepend">
-						<span class="add-on"><i class="icon-map-marker"></i></span>
+						<span class="add-on"><i class="icon-calendar"></i></span>
 						<input class="span3" name="tanggal" id="tanggal-mahasiswa" type="date" placeholder="Tanggal Lahir">
 					</div>
 				</div>
-				<input type="radio" name="gender" id="laki-laki" value="L"><label class="label label-inverse" for="laki-laki"> Laki-Laki</label>
-				<input type="radio" name="gender" id="perempuan" value="P"><label class="label label-inverse" for="perempuan"> Perempuan</label>
+				<div class="controls">
+					<label for="">Jenis Kelamin</label>
+						<!--<button type="button" class="btn btn-primary" name="gender" id="laki-laki" value="L"data-placement="right">Laki-Laki</button>
+						<button type="button" class="btn btn-danger" name="gender" id="perempuan" value="P">Perempuan</button>-->
+						<input type="radio" name="gender" id="laki-laki" value="L"><label class="label label-inverse" for="laki-laki"> Laki-Laki</label>&nbsp;
+						<input type="radio" name="gender" id="perempuan" value="P"><label class="label label-important" for="perempuan"> Perempuan</label>
+					
+				</div><br>
+				
+				<!---->
 				<div class="controls">
 					<div class="input-prepend">
 						<span class="add-on"><i class="icon-road"></i></span>
@@ -286,35 +294,11 @@ endif;
         </div>
 		</form>
         <div class="modal-footer">
-            <button class="btn btn-danger" data-dismiss="modal">Tutup</button>
+            <button class="btn" data-dismiss="modal">Tutup</button>
             <button class="btn btn-primary" onClick="return simpanEditProfilMahasiswa()">Simpan</button>
         </div>
 		
     </div>
-	<!--modal edit pp
-	<div id="edit-foto" class="modal message hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-            <h3>Edit Profil Mahasiswa</h3>
-        </div>
-        <div class="modal-body">
-			<form id="form-change" class="hide" action="" method="POST" enctype="multipart/form-data">
-				<input class="btn" type="file" name="change_foto" id="change-foto" required="" style="width:220px;"><br>
-				<input type="hidden" name="id_profil" id="id-profil" value="">
-				<button class="btn btn-info btn-mini" type="button" onClick="return cancelChange()">Cancel</button>
-				<button class="btn btn-info btn-mini" type="submit" value="upload">Simpan</button>
-			</form>
-				<div class="tongue-content">
-					
-				</div>
-			
-        </div>
-        <div class="modal-footer">
-            <button class="btn btn-danger" data-dismiss="modal">Tutup</button>
-            <button class="btn btn-primary">Simpan</button>
-        </div>
-    </div>-->
-
  	<footer class="row-fluid footer">
 		<div class="well span12">
 			<hr>
@@ -330,7 +314,7 @@ endif;
 	
 <script type="text/javascript">
 $('#accordion2').accordion();
-$('#edit').attr('title','Edit Profil').tooltip();
+$('#edit-profilUser').attr('title','Edit Profil').tooltip();
 $('#change').attr('title','Ganti foto profil').tooltip();
 </script>
 </body>
