@@ -56,6 +56,31 @@ class Mahasiswa_model extends CI_Model {
 		$this->db->update('tb_profil',$update);
 		return true;
 	}
+	
+	public function updateDataProfil($id){
+		/*$nama = $this->input->post('nama_user');
+		$induk = $this->input->post('no_induk_user');
+		$facebook = $this->input->post('id_facebook');
+		
+		if (empty($induk)) return FALSE;
+		if (empty($facebook)) return FALSE;
+		if (strlen($nama) < 3) return FALSE;*/
+		$update=array(
+			'NAMA_PROFIL'=> $this->input->post('nama'),
+			'JENIS_KELAMIN'=> $this->input->post('gender'),
+			'TEMPAT_LAHIR'=> $this->input->post('tempat'),
+			'TGL_LAHIR'=> $this->input->post('tanggal'),
+			'ALAMAT_PROFIL'=> $this->input->post('alamat'),
+			'EMAIL_PROFIL'=> $this->input->post('mail'),
+			'TAMPIL_EMAIL_PROFIL'=> $this->input->post('email'),
+			'NO_HP_PROFIL'=> $this->input->post('no_hp'),
+			'TAMPIL_NO_HP_PROFIL'=> $this->input->post('hp'));
+			
+		$this->db->where('ID_PROFIL',$id);
+		$this->db->update('tb_profil',$update);
+		return true;
+	}
+	
 	//halaman depan mahasiswa
 	public function tampilDokumenJurnal(){
 		$this->load->helper('download');

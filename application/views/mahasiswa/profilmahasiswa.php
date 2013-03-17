@@ -6,6 +6,8 @@
 	<link href="/third_party/bootstrap/css/elemento.min.css" rel="stylesheet" type="text/css">
 	<link href="/third_party/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="/third_party/awesome/css/font-awesome.css" />
+	<link rel="stylesheet" href="/third_party/alertify/alertify.core.css" />
+	<link rel="stylesheet" href="/third_party/alertify/alertify.default.css" />
 	<link rel="stylesheet" href="/css/main.css" />
 	<link rel="stylesheet" href="/css/style.css" />
 	<style type="text/css">
@@ -186,6 +188,9 @@
 				  </div>
 				</div>
 			  </div>
+				<?php
+					if ($row->TAMPIL_EMAIL_PROFIL == 'Y'):
+				?>
 			  <div class="accordion-group">
 				<div class="accordion-heading">
 				  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#email">
@@ -198,6 +203,10 @@
 				  </div>
 				</div>
 			  </div>
+				<?php
+					endif;
+					if ($row->TAMPIL_NO_HP_PROFIL == 'Y'):
+				?>
 			  <div class="accordion-group">
 				<div class="accordion-heading">
 				  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#phone">
@@ -210,7 +219,9 @@
 				  </div>
 				</div>
 			  </div>
-		
+				<?php
+					endif;
+				?>
 		</div>
 	</div>
 </div>
@@ -221,7 +232,7 @@ endif;
 </div>
 
 	<div id="edit-profil" class="modal message hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<form id="form-profil" action="" method="">
+		<form id="form-profil" action="" method="post">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
             <h3>Edit Profil Mahasiswa</h3>
@@ -232,7 +243,7 @@ endif;
 					<div class="input-prepend">
 						<span class="add-on"><i class="icon-user"></i></span>
 						<input class="span3" name="nama" id="nama-mahasiswa" type="text" placeholder="Nama Lengkap" >
-						<input class="span3" id="profil-id" type="hidden" value="">
+						<input class="span3" name="profil_id" id="profil-id" type="hidden" value="">
 					</div>
 				</div>
 				<div class="controls">
@@ -259,25 +270,26 @@ endif;
 					<div class="input-prepend">
 						<span class="add-on"><i class="icon-envelope"></i></span>
 						<input class="span3" id="mail-mahasiswa" name="mail" type="text" placeholder="Alamat email">
-						<input type="radio" name="email" id="tampil-email"><label class="label label-warning" for="tampil-email"> Tampilkan</label>
-						<input type="radio" name="email" id="jangan-email"><label class="label label-warning" for="jangan-email"> Jangan Tampilkan</label>
+						<input type="radio" name="email" id="tampil-email" value="Y"><label class="label label-warning" for="tampil-email"> Tampilkan</label>
+						<input type="radio" name="email" id="jangan-email" value="T"><label class="label label-warning" for="jangan-email"> Jangan Tampilkan</label>
 					</div>
 				</div>
 				<div class="controls">
 					<div class="input-prepend">
 						<span class="add-on"><i class="icon-phone"></i></span>
 						<input class="span3" id="no-hp" name="no_hp" type="text" placeholder="Nomer Telepon/HP">
-						<input type="radio" name="hp" id="tampil-hp"><label class="label label-warning" for="tampil-hp"> Tampilkan</label>
-						<input type="radio" name="hp" id="jangan-hp"><label class="label label-warning" for="jangan-hp"> Jangan Tampilkan</label>
+						<input type="radio" name="hp" id="tampil-hp" value="Y"><label class="label label-warning" for="tampil-hp"> Tampilkan</label>
+						<input type="radio" name="hp" id="jangan-hp" value="T"><label class="label label-warning" for="jangan-hp"> Jangan Tampilkan</label>
 					</div>
 				</div>
 			</div>
         </div>
+		</form>
         <div class="modal-footer">
             <button class="btn btn-danger" data-dismiss="modal">Tutup</button>
-            <button class="btn btn-primary">Simpan</button>
+            <button class="btn btn-primary" onClick="return simpanEditProfilMahasiswa()">Simpan</button>
         </div>
-		</form>
+		
     </div>
 	<!--modal edit pp
 	<div id="edit-foto" class="modal message hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -312,8 +324,9 @@ endif;
 	</footer>
 	<script src="/third_party/jquery/jquery-1.9.1.min.js"></script>
 	<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
-	<script type="text/javascript" src="/third_party/bootstrap/bootstrap.min.js"></script>
-	<script type="text/javascript" src="/js/profil.js"></script>
+	<script src="/third_party/bootstrap/bootstrap.min.js"></script>
+	<script src="/third_party/alertify/alertify.min.js"></script>
+	<script src="/js/profil.js"></script>
 	
 <script type="text/javascript">
 $('#accordion2').accordion();

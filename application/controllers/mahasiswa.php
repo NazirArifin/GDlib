@@ -33,12 +33,16 @@ class Mahasiswa extends CI_Controller {
 				header('location:/mahasiswa/profilmahasiswa');
 			break;
 			case 'data':
-				$id = $this->input->post('id_profil');
+				$id = $this->input->post('profil_id');
 				if ( ! empty($id)){
-					$this->mahasiswa_model->updateFotoProfil($id);
-					echo '{ "error": 0, "success": 1 }';
-				}
-				header('location:/mahasiswa/profilmahasiswa');
+					$hasil = $this->mahasiswa_model->updateDataProfil($id);
+					$pesan = array(
+						'success' => ($hasil ? 1 : 0),
+						'error' => ($hasil ? 0 : 1)
+					);
+					echo json_encode($pesan);
+				} else
+					echo '{ "success": 0, "error": 1 }';
 			break;
 			default:
 			$this->load->view('mahasiswa/profilmahasiswa',array('profil' => $this));
