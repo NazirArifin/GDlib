@@ -45,13 +45,15 @@ var Jurnal = {
 				var t = '', dt = {};
 				for (var i = 0; i < d.data.length; i++) {
 					dt = d.data[i];
-					t += '<tr><td>' + dt.judul +'</td>' + 
-						 '<td>' + dt.prolog + '</td>' +
-						 '<td>' + dt.foto + '</td>' +
-						 '<div class="btn-group">'+
-						'<button class="btn btn-primary btn-mini download-dosen"><i class="icon-download "></i> Download</button>'+
-						'<button class="btn btn-primary btn-mini baca-dosen"><i class="icon-file"></i> Baca</button>'+
-						'</div></tr>';
+					t += '<div class="well span5">'+
+							'<a href="#Doc"><img src="/' + dt.foto + '" class="thumbnail image-list"></a>'+
+								'<h5>' + dt.judul + '</h5>'+
+								'<p>' + dt.prolog +'</br>'+
+								'<div class="btn-group">'+
+									'<a href="/dosen/"class="btn btn-primary btn-mini download-dosen"><i class="icon-download "></i> Download</button>'+
+									'<button class="btn btn-primary btn-mini baca-dosen"><i class="icon-file"></i> Baca</button>'+
+								'</div>'+
+						'</div>';
 				}
 				$('#dokumen-jurnal').html(t); // id dari tbody tabel data
 			}

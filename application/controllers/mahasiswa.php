@@ -113,8 +113,7 @@ class Mahasiswa extends CI_Controller {
 			case 'download':
 				$this->load->helper('download');
 				$pilih = $this->mahasiswa_model->downloadFile($extra);
-				echo json_encode($pilih);
-				return;
+				
 			break;
 			default:
 				$this->load->view('mahasiswa/modul/index',array('controller' => $this));

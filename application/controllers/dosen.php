@@ -16,12 +16,7 @@ class Dosen extends CI_Controller {
 		$this->load->view('dosen/index',array('controller' => $this));
 		jsloc::show();
 	}
-	public function download(){
-		$name = 'default.png';
-		$data = file_get_contents("uploads/default.png"); // letak file pada aplikasi kita
- 
-		force_download($name,$data);
-	}
+	
 	public function dokumen($param = '', $extra = '') {
 		switch ($param) {
 			case 'add':
@@ -112,39 +107,32 @@ class Dosen extends CI_Controller {
 					echo '{ "error": 0, "success": 1 }';
 				}
 				break;
-			case 'delete';
+			case 'delete':
 				$this->dosen_model->deleteDokumen($extra);
 				echo '{ "error": 0, "success": 1 }';
 				return;
-			case 'download';
-				$name = $this->input->post('file_dokumen');
-				$data = file_get_contents("upload/jurnal/$name"); // letak file pada aplikasi kita
-				force_download($name,$data);
 			default:
 			$this->load->view('dosen/index',array('controller' => $this));
 			jsloc::show();
 		}
-		
 		$this->load->view('dosen/index',array('controller' => $this));
 		jsloc::show();
 	}
 	
 	public function jurnal($param='',$ekstra=''){
-		switch ($param){
-			case 'data':
-			$pilih = $this->dosen_model->idDokumen($ekstra);
-				echo json_encode($pilih);
-				return;
-			default:
-			$this->load->view('dosen/jurnal/index',array('controller' => $this));
-			jsloc::show();	
+		switch($param){
+			case 'download':
+				$this->load->helper('download');
+				$pilih = $this->dosen_model->download($extra);
+				break;
+				
+			default:	
+			$this->load->view('dosen/jurnal/index',array('controller'=>$this));
+			jsloc::show();
 		}
 		
-		$this->load->view('dosen/jurnal/index',array('controller'=>$this));
-		jsloc::show();
 	}
 	public function buku($param='',$ekstra=''){
-
 		$this->load->view('dosen/buku/index',array('controller'=>$this));
 		jsloc::show();
 	}

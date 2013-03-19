@@ -4,32 +4,6 @@ class Dosen_model extends CI_Model {
 	public function __construct() {
 		parent::__construct();
 	}
-	public function tampilJurnal(){
-		$query=$this->db->query("select * from tb_dokumen where id_kategori_dokumen=1 order by id_dokumen desc limit 0,4");
-		if($query->num_rows()==0){
-			return false;
-		} else {
-			return $query->result();
-		}
-	}
-	
-	public function tampilBuku(){
-		$query=$this->db->query("select * from tb_dokumen where id_kategori_dokumen=2 order by id_dokumen desc limit 0,4");
-		if($query->num_rows()==0){
-			return false;
-		} else {
-			return $query->result();
-		}
-	}
-	
-	public function tampilModul(){
-		$query=$this->db->query("select * from tb_dokumen where id_kategori_dokumen=3 order by id_dokumen desc limit 0,4");
-		if($query->num_rows()==0){
-			return false;
-		} else {
-			return $query->result();
-		}
-	}
 	
 	public function insertDokumen($namafile,$namafoto,$ekstensi)
 	{
@@ -180,5 +154,34 @@ class Dosen_model extends CI_Model {
 	
 	public function deleteDokumen($id){
 		$this->db->delete('tb_dokumen', array('ID_DOKUMEN'=>$id));
+	}
+	public function pilihIdDokumen($id){
+		$this->db->select('ID_DOKUMEN');
+		$query=$this->db->get_where('tb_dokumen',array('ID_DOKUMEN' => $id));
+		if($query->num_rows()==0){
+			return false;
+		} else {
+			return $query->result();
+		}
+	}
+	
+	public function download($id){
+		$this->load->helper('download');
+		$query=$this->db->query("SELECT FILE_DOKUMEN AS FILE From tb_dokumen WHERE ID_DOKUMEN=$id");
+		$file=$query->row()->FILE;
+		if (file_exists($file)) {
+			header('Content-Description: File Transfer');
+			header('Content-Type: application/octet-stream');
+			header('Content-Disposition: attachment; filename='.basename($file));
+			header('Content-Transfer-Encoding: binary');
+			header('Expires: 0');
+			header('Cache-Control: must-revalidate');
+			header('Pragma: public');
+			header('Content-Length: ' . filesize($file));
+			ob_clean();
+			flush();
+			readfile($file);
+			exit;
+		}
 	}
 }
