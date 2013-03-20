@@ -145,7 +145,7 @@
 							foreach($jurnal as $row ):
 						?>
 						<div class="well span5">
-							<a href="#Doc"><img src="/<?php echo $row->FOTO_DOKUMEN ?>" class="thumbnail image-list"></a>
+							<a href="/<?php echo $row->FOTO_DOKUMEN ?>" target="_blank"><img src="/<?php echo $row->FOTO_DOKUMEN ?>" class="thumbnail image-list"></a>
 							<h4><?php echo $row->JUDUL_DOKUMEN ?></h4>
 							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...</p><br />
 							<div class="btn-group">
@@ -168,7 +168,7 @@
 							foreach($buku as $row ):
 						?>
 						<div class="well span5">
-							<a href="#Doc"><img src="/<?php echo $row->FOTO_DOKUMEN ?>" class="thumbnail image-list"></a>
+							<a href="/<?php echo $row->FOTO_DOKUMEN ?>" target="_blank"><img src="/<?php echo $row->FOTO_DOKUMEN ?>" class="thumbnail image-list"></a>
 							<h4><?php echo $row->JUDUL_DOKUMEN ?></h4>
 							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...</p><br />
 							<div class="btn-group">
@@ -191,7 +191,7 @@
 							foreach($modul as $row ):
 						?>
 						<div class="well span5">
-							<a href="#Doc"><img src="/<?php echo $row->FOTO_DOKUMEN ?>" class="thumbnail image-list"></a>
+							<a href="/<?php echo $row->FOTO_DOKUMEN ?>" target="_blank"><img src="/<?php echo $row->FOTO_DOKUMEN ?>" class="thumbnail image-list"></a>
 							<h4><?php echo $row->JUDUL_DOKUMEN ?></h4>
 							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...</p><br />
 							<div class="btn-group">
@@ -214,7 +214,7 @@
 							foreach($buletin as $row ):
 						?>
 						<div class="well span5">
-							<a href="#Doc"><img src="/<?php echo $row->FOTO_DOKUMEN ?>" class="thumbnail image-list"></a>
+							<a href="/<?php echo $row->FOTO_DOKUMEN ?>" target="_blank"><img src="/<?php echo $row->FOTO_DOKUMEN ?>" class="thumbnail image-list"></a>
 							<h4><?php echo $row->JUDUL_DOKUMEN ?></h4>
 							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...</p><br />
 							<div class="btn-group">
