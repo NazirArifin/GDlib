@@ -109,7 +109,7 @@
 						<button class="btn" onClick="return Modul.search()"><i class="icon-search"></i></button>
 					</form>
 			</div>
-			<div class="well span11" id="dokumen-modul">
+			<div class="row-fluid" id="dokumen-modul">
 			
 			</div>
 			<div class="pagination pagination-centered" id="paginatian-modul">

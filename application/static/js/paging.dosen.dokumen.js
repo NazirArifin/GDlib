@@ -39,13 +39,17 @@ var Jurnal = {
 			dataType: 'json',
 			data: jQuery.param(Jurnal.param),
 			success: function(d) {
+				var a = 0;
 				//console.log(d);return;
 				$('#pagination-jurnal').html(d.pagination);
 				Jurnal.param.numpage = d.numpage;
 				var t = '', dt = {};
 				for (var i = 0; i < d.data.length; i++) {
 					dt = d.data[i];
-					t += '<div class="well span5">'+
+						if(a%2==0){
+							t += '<div class="row-fluid">';
+						}
+					t += '<div class="well span6">'+
 							'<a href="#Doc"><img src="/' + dt.foto + '" class="thumbnail image-list"></a>'+
 								'<h5>' + dt.judul + '</h5>'+
 								'<p>' + dt.prolog +'</br>'+
@@ -54,6 +58,10 @@ var Jurnal = {
 								'<a href="/'+dt.file+'" target="_blank" class="btn btn-mini btn-primary baca-dosen"><i class="icon-play"></i> Baca</a>' +
 								'</div>'+
 						'</div>';
+						if(a%2!=0){
+							t += '</div>';
+						}
+						a++;
 				}
 				$('#dokumen-jurnal').html(t); // id dari tbody tabel data
 			}
@@ -105,13 +113,17 @@ var Buku = {
 			dataType: 'json',
 			data: jQuery.param(Buku.param),
 			success: function(d) {
+				var a = 0;
 				//console.log(d);return;
 				$('#pagination-buku').html(d.pagination);
 				Buku.param.numpage = d.numpage;
 				var t = '', dt = {};
 				for (var i = 0; i < d.data.length; i++) {
 					dt = d.data[i];
-					t += '<div class="well span5">'+
+						if(a%2==0){
+							t += '<div class="row-fluid">';
+						}
+					t += '<div class="well span6">'+
 							'<a href="#Doc"><img src="/' + dt.foto + '" class="thumbnail image-list"></a>'+
 								'<h5>' + dt.judul + '</h5>'+
 								'<p>' + dt.prolog +'</br>'+
@@ -120,6 +132,10 @@ var Buku = {
 								'<a href="/'+dt.file+'" target="_blank" class="btn btn-mini btn-primary baca-dosen"><i class="icon-play"></i> Baca</a>' +
 								'</div>'+
 						'</div>';
+						if(a%2!=0){
+							t += '</div>';
+						}
+						a++;
 				}
 				$('#dokumen-buku').html(t); // id dari tbody tabel data
 			}
@@ -171,13 +187,17 @@ var Modul = {
 			dataType: 'json',
 			data: jQuery.param(Modul.param),
 			success: function(d) {
+				var a = 0;
 				//console.log(d);return;
 				$('#pagination-modul').html(d.pagination);
 				Modul.param.numpage = d.numpage;
 				var t = '', dt = {};
 				for (var i = 0; i < d.data.length; i++) {
 					dt = d.data[i];
-				t += '<div class="well span5">'+
+						if(a%2==0){
+							t += '<div class="row-fluid">';
+						}
+				t += '<div class="well span6">'+
 							'<a href="#Doc"><img src="/' + dt.foto + '" class="thumbnail image-list"></a>'+
 								'<h5>' + dt.judul + '</h5>'+
 								'<p>' + dt.prolog +'</br>'+
@@ -186,6 +206,10 @@ var Modul = {
 								'<a href="/'+dt.file+'" target="_blank" class="btn btn-mini btn-primary baca-dosen"><i class="icon-play"></i> Baca</a>' +
 								'</div>'+
 						'</div>';
+						if(a%2!=0){
+							t += '</div>';
+						}
+						a++;
 				}
 				$('#dokumen-modul').html(t); // id dari tbody tabel data
 			}

@@ -107,7 +107,7 @@
 						<button class="btn" onClick="return Buku.search()"><i class="icon-search"></i></button>
 					</form>
 			</div>
-			<div class="well span12" id="dokumen-buku">
+			<div class="row-fluid" id="dokumen-buku">
 				
 			</div>
 			<div class="pagination pagination-centered" id="pagination-buku">
