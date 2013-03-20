@@ -51,9 +51,9 @@ var Jurnal = {
 						 '<td>' + dt.tahun + '</td>' +
 						 '<td>' + dt.katakunci + '</td>' +
 						 '<td><div class="btn-group">' +
-						 '<button class="btn btn-inverse btn-mini">Hapus</button>' +
-						 '<button class="btn btn-warning btn-mini">Edit</button>' +
-						 '<button class="btn btn-success btn-mini">Lihat</button>'+
+						 '<button class="btn btn-inverse btn-mini" onClick="return deleteDokumen(this, ' + dt.id + ')">Hapus</button>' +
+						 '<button class="btn btn-warning btn-mini" onClick="return editDokumen(this,'+dt.id+')">Edit</button>' +
+						 '<button class="btn btn-success btn-mini" >Lihat</button>'+
 						 '</div></td></tr>';
 				}
 				$('#dosen-jurnal').html(t); // id dari tbody tabel data

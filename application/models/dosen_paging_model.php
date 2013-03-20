@@ -186,4 +186,24 @@ Class Dosen_paging_model extends CI_Model{
 		
 		echo json_encode($hasil, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP);
 	}
+	
+	public function downloadku($id){
+		$this->load->helper('download');
+		$query=$this->db->query("SELECT FILE_DOKUMEN AS FILE From tb_dokumen WHERE ID_DOKUMEN=$id");
+		$file=$query->row()->FILE;
+		if (file_exists($file)) {
+			header('Content-Description: File Transfer');
+			header('Content-Type: application/octet-stream');
+			header('Content-Disposition: attachment; filename='.basename($file));
+			header('Content-Transfer-Encoding: binary');
+			header('Expires: 0');
+			header('Cache-Control: must-revalidate');
+			header('Pragma: public');
+			header('Content-Length: ' . filesize($file));
+			ob_clean();
+			flush();
+			readfile($file);
+			exit;
+		}
+	}
 }

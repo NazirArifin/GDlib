@@ -50,8 +50,8 @@ var Jurnal = {
 								'<h5>' + dt.judul + '</h5>'+
 								'<p>' + dt.prolog +'</br>'+
 								'<div class="btn-group">'+
-									'<a href="/dosen/"class="btn btn-primary btn-mini download-dosen"><i class="icon-download "></i> Download</button>'+
-									'<button class="btn btn-primary btn-mini baca-dosen"><i class="icon-file"></i> Baca</button>'+
+								'<a href="/dosen/jurnal/downloadnya/'+dt.id+'" target="_blank"class="btn btn-primary btn-mini download-dosen"><i class="icon-download "></i> Download</button>'+
+								'<a href="/'+dt.file+'" target="_blank" class="btn btn-mini btn-primary baca-dosen"><i class="icon-play"></i> Baca</a>' +
 								'</div>'+
 						'</div>';
 				}

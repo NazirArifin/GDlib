@@ -6,6 +6,7 @@ class Dosen extends CI_Controller {
 		parent::__construct();
 		include(APPPATH . 'libraries/jsloc.php');
 		$this->load->model('dosen_model');
+		$this->load->model('dosen_paging_model');
 		$this->load->helper();
 		$this->load->database();
 		$this->load->library();
@@ -121,9 +122,9 @@ class Dosen extends CI_Controller {
 	
 	public function jurnal($param='',$ekstra=''){
 		switch($param){
-			case 'download':
+			case 'downloadnya':
 				$this->load->helper('download');
-				$pilih = $this->dosen_model->download($extra);
+				$pilih = $this->dosen_paging_model->downloadku($ekstra);
 				break;
 				
 			default:	

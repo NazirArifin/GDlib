@@ -53,23 +53,6 @@ function editDokumen(object,id){
 	});
 
 }
-function download(object,id){
-	//console.log('ha');
-	$('#form-legend').text($('#kategori-dokumen').val().toUpperCase());
-	var $form = $('#form-tambah');
-	$.ajax({
-		url: '/dosen/dokumen/data/' + id,
-		dataType: 'json',
-		beforeSend: function(){
-		},
-		success: function(o){
-			//console.log(o);
-			$('#form-tambah').attr('action', '/dosen/dokumen/download');
-			
-		}
-	});
-
-}
 
 function simpanDokumen(object){
 	console.log('ha');
@@ -126,15 +109,4 @@ function deleteDokumen(object, id){
 	});
 	//}
 	return false;
-}
-
-
-function tambahJurnal(){
-		$('#view').hide('blind', {} , 500);
-		$('#form-tambah').show('blind', {} , 500);
-}
-function tutupJurnal (){
-	$('#form-tambah').hide('blind', {} , 500, function(){
-		$('#view').show('blind', {} , 500);
-	});
 }

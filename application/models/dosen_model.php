@@ -79,7 +79,7 @@ class Dosen_model extends CI_Model {
 						//--unngah file
 						$data = $this->upload->data();
 						//simpan db	
-						$namafile =$data['file_name'];
+						$namafile ='./upload/' . $this->input->post('kategori_dokumen').'/'.$data['file_name'];
 						//tipe file
 						$ekstensi= $data['file_ext'];
 								switch ($ekstensi){
@@ -124,8 +124,15 @@ class Dosen_model extends CI_Model {
 					if($this->upload->do_upload('foto_dokumen'))
 					{
 						$data=$this->upload->data();
-						$namafoto= $data['file_name'];
-						
+						$gambar['image_library'] = 'gd2';
+						$gambar['source_image'] = './upload/'. $this->input->post('kategori_dokumen').'/' . $data['file_name'];
+						$gambar['create_thumb'] = FALSE;
+						$gambar['maintain_ratio'] = FALSE;
+						$gambar['width'] = 150;
+						$gambar['height'] = 150;
+						$this->load->library('image_lib',$gambar);
+						$this->image_lib->resize();
+						$namafoto='./upload/'. $this->input->post('kategori_dokumen').'/' .$data['file_name'];
 					}
 					else
 					{
@@ -165,23 +172,5 @@ class Dosen_model extends CI_Model {
 		}
 	}
 	
-	public function download($id){
-		$this->load->helper('download');
-		$query=$this->db->query("SELECT FILE_DOKUMEN AS FILE From tb_dokumen WHERE ID_DOKUMEN=$id");
-		$file=$query->row()->FILE;
-		if (file_exists($file)) {
-			header('Content-Description: File Transfer');
-			header('Content-Type: application/octet-stream');
-			header('Content-Disposition: attachment; filename='.basename($file));
-			header('Content-Transfer-Encoding: binary');
-			header('Expires: 0');
-			header('Cache-Control: must-revalidate');
-			header('Pragma: public');
-			header('Content-Length: ' . filesize($file));
-			ob_clean();
-			flush();
-			readfile($file);
-			exit;
-		}
-	}
+	
 }
