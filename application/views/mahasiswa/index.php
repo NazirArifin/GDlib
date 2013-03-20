@@ -139,12 +139,16 @@
 					<div class="tab-pane active" id="jurnal">
 						<?php
 							$jurnal=$this->mahasiswa_model->tampilDokumenJurnal();
+								$d = 0;
 							if($jurnal==0):
 								echo '<p>Tidak Ada</p>';
 								else:
 							foreach($jurnal as $row ):
+								if($d%2==0){
+									echo '<div class="row-fluid">';
+								}
 						?>
-						<div class="well span5">
+						<div class="well span6">
 							<a href="/<?php echo $row->FOTO_DOKUMEN ?>" target="_blank"><img src="/<?php echo $row->FOTO_DOKUMEN ?>" class="thumbnail image-list"></a>
 							<h4><?php echo $row->JUDUL_DOKUMEN ?></h4>
 							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...</p><br />
@@ -154,6 +158,10 @@
 							</div>
 						</div>
 						<?php
+								if($d%2!=0){
+									echo '</div>';
+								}
+								$d++;
 							endforeach;
 						endif;
 						?>
@@ -162,21 +170,29 @@
 					<div class="tab-pane" id="buku">
 						<?php
 							$buku=$this->mahasiswa_model->tampilDokumenBuku();
+							$a = 0;
 							if($buku==0):
 								echo '<p>Nothing</p>';
 								else:
 							foreach($buku as $row ):
+								if($a%2==0){
+									echo '<div class="row-fluid">';
+								}
 						?>
-						<div class="well span5">
-							<a href="/<?php echo $row->FOTO_DOKUMEN ?>" target="_blank"><img src="/<?php echo $row->FOTO_DOKUMEN ?>" class="thumbnail image-list"></a>
-							<h4><?php echo $row->JUDUL_DOKUMEN ?></h4>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...</p><br />
-							<div class="btn-group">
-								<a href="/mahasiswa/buku/download/<?php echo $row->ID_DOKUMEN ?>" target="_blank" class="btn btn-mini btn-primary download-mahasiswa"><i class="icon-download"></i> Download</a>
-								<a href="/<?php echo $row->FILE_DOKUMEN ?>" target="_blank" class="btn btn-mini btn-primary baca-mahasiswa"><i class="icon-play"></i> Baca</a>
+							<div class="well span6">
+								<a href="/<?php echo $row->FOTO_DOKUMEN ?>" target="_blank"><img src="/<?php echo $row->FOTO_DOKUMEN ?>" class="thumbnail image-list"></a>
+								<h4><?php echo $row->JUDUL_DOKUMEN ?></h4>
+								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...</p><br />
+								<div class="btn-group">
+									<a href="/mahasiswa/buku/download/<?php echo $row->ID_DOKUMEN ?>" target="_blank" class="btn btn-mini btn-primary download-mahasiswa"><i class="icon-download"></i> Download</a>
+									<a href="/<?php echo $row->FILE_DOKUMEN ?>" target="_blank" class="btn btn-mini btn-primary baca-mahasiswa"><i class="icon-play"></i> Baca</a>
+								</div>
 							</div>
-						</div>
 						<?php
+								if($a%2!=0){
+									echo '</div>';
+								}
+								$a++;
 							endforeach;
 						endif;
 						?>
@@ -185,12 +201,16 @@
 					<div class="tab-pane" id="modul">
 						<?php
 							$modul=$this->mahasiswa_model->tampilDokumenModul();
+							$b = 0;
 							if($modul==0):
 								echo '<p>Nggak ada</p>';
 								else:
 							foreach($modul as $row ):
+								if($b%2==0){
+									echo '<div class="row-fluid">';
+								}
 						?>
-						<div class="well span5">
+						<div class="well span6">
 							<a href="/<?php echo $row->FOTO_DOKUMEN ?>" target="_blank"><img src="/<?php echo $row->FOTO_DOKUMEN ?>" class="thumbnail image-list"></a>
 							<h4><?php echo $row->JUDUL_DOKUMEN ?></h4>
 							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...</p><br />
@@ -200,6 +220,10 @@
 							</div>
 						</div>
 						<?php
+								if($b%2!=0){
+									echo '</div>';
+								}
+								$b++;
 							endforeach;
 						endif;
 						?>						
