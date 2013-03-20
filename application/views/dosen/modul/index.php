@@ -9,8 +9,8 @@
 		<link rel="stylesheet" href="/third_party/bootstrap/css/elemento.min.css" />
 		<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
 		<link rel="stylesheet" href="/third_party/awesome/css/font-awesome.css" />
-		<link rel="stylesheet" href="/static/css/main.css" />
-		<link rel="stylesheet" href="/static/css/style.css" />
+		<link rel="stylesheet" href="/css/main.css" />
+		<link rel="stylesheet" href="/css/style.css" />
 			
 		
 		<style type="text/css">
@@ -112,7 +112,7 @@
 			<div class="row-fluid" id="dokumen-modul">
 			
 			</div>
-			<div class="pagination pagination-centered" id="paginatian-modul">
+			<div class="pagination pagination-centered" id="pagination-modul">
 				<ul>
 				
 				</ul>

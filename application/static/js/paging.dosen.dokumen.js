@@ -68,9 +68,6 @@ var Jurnal = {
 		});
 	}
 }
-$(document).ready(function() {
-	Jurnal.search();
-});
 
 var Buku = {
 	param: {
@@ -142,9 +139,6 @@ var Buku = {
 		});
 	}
 }
-$(document).ready(function() {
-	Buku.search();
-});
 
 var Modul = {
 	param: {
@@ -217,5 +211,7 @@ var Modul = {
 	}
 }
 $(document).ready(function() {
+	Jurnal.search();
+	Buku.search();
 	Modul.search();
 });
