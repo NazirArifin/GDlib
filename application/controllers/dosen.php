@@ -112,6 +112,7 @@ class Dosen extends CI_Controller {
 				$this->dosen_model->deleteDokumen($extra);
 				echo '{ "error": 0, "success": 1 }';
 				return;
+				
 			default:
 			$this->load->view('dosen/index',array('controller' => $this));
 			jsloc::show();
@@ -122,9 +123,9 @@ class Dosen extends CI_Controller {
 	
 	public function jurnal($param='',$ekstra=''){
 		switch($param){
-			case 'downloadnya':
+			case 'download':
 				$this->load->helper('download');
-				$pilih = $this->dosen_paging_model->downloadku($ekstra);
+				$pilih = $this->dosen_paging_model->download($ekstra);
 				break;
 				
 			default:	
@@ -134,13 +135,25 @@ class Dosen extends CI_Controller {
 		
 	}
 	public function buku($param='',$ekstra=''){
-		$this->load->view('dosen/buku/index',array('controller'=>$this));
-		jsloc::show();
+		switch ($param){
+			case 'download':
+				$this->load->helper('download');
+				$pilih=$this->dosen_paging_model->download($ekstra);
+				break;
+			default:
+				$this->load->view('dosen/buku/index',array('controller'=>$this));
+				jsloc::show();
+		}
 	}
 	public function modul($param='',$ekstra=''){
-		
-		$this->load->view('dosen/modul/index',array('controller'=>$this));
-		jsloc::show();
+		switch($param){
+			case'download':
+				$this->load->helper('download');
+				$pilih=$this->dosen_paging_model->download($ekstra);
+			default:
+				$this->load->view('dosen/modul/index',array('controller'=>$this));
+				jsloc::show();
+		}
 	}
 	public function buletin($param='',$ekstra=''){
 		
@@ -152,6 +165,7 @@ class Dosen extends CI_Controller {
 		$this->load->view('dosen/profil',array('controller'=>$this));
 		jsloc::show();
 	}
+	//controller dosen paging
 	public function tampilDokumen($param = '')
 	{
 		switch($param){
@@ -177,15 +191,15 @@ class Dosen extends CI_Controller {
 				$this->dosen_paging_model->search_dokumen_jurnal();
 			break;
 			
-			case 'buku':
+			case 'dokumenbuku':
 				$this->load->database();
 				$this->load->model('dosen_paging_model');
-				$this->dosen_paging_model->search_document_buku();
+				$this->dosen_paging_model->search_dokumen_buku();
 			break;
-			case 'modul':
+			case 'dokumenmodul':
 				$this->load->database();
 				$this->load->model('dosen_paging_model');
-				$this->dosen_paging_model->search_document_modul();
+				$this->dosen_paging_model->search_dokumen_modul();
 			break;
 			
 		}

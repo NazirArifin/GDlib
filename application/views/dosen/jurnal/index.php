@@ -87,7 +87,7 @@
 						<button class="btn" onClick="return Jurnal.search()"><i class="icon-search"></i></button>
 					</form>
 			</div>
-			<div class="span12" id="dokumen-jurnal">
+			<div class="span11" id="dokumen-jurnal">
 			
 			</div>
 			<div class="pagination pagination-centered" id="pagination-jurnal">

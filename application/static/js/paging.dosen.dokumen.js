@@ -50,7 +50,7 @@ var Jurnal = {
 								'<h5>' + dt.judul + '</h5>'+
 								'<p>' + dt.prolog +'</br>'+
 								'<div class="btn-group">'+
-								'<a href="/dosen/jurnal/downloadnya/'+dt.id+'" target="_blank"class="btn btn-primary btn-mini download-dosen"><i class="icon-download "></i> Download</button>'+
+								'<a href="/dosen/jurnal/download/'+dt.id+'" target="_blank"class="btn btn-primary btn-mini download-dosen"><i class="icon-download "></i> Download</button>'+
 								'<a href="/'+dt.file+'" target="_blank" class="btn btn-mini btn-primary baca-dosen"><i class="icon-play"></i> Baca</a>' +
 								'</div>'+
 						'</div>';
@@ -72,7 +72,7 @@ var Buku = {
 		numpage: 0,
 		kategori: 2,
 	},
-	url: '/dosen/tampilDokumen/buku',
+	url: '/dosen/tampilDokumen/dokumenbuku',
 	search: function() {
 		this.param.query = $('#cari-buku').val();
 		this.param.curpage = 0;
@@ -111,18 +111,17 @@ var Buku = {
 				var t = '', dt = {};
 				for (var i = 0; i < d.data.length; i++) {
 					dt = d.data[i];
-					t += '<tr><td>' + dt.judul +'</td>' + 
-						 '<td>' + dt.pengarang + '</td>' + 
-						 '<td>' + dt.prolog + '</td>' +
-						 '<td>' + dt.tahun + '</td>' +
-						 '<td>' + dt.katakunci + '</td>' +
-						 '<td><div class="btn-group">' +
-						 '<button class="btn btn-inverse btn-mini">Hapus</button>' +
-						 '<button class="btn btn-warning btn-mini">Edit</button>' +
-						 '<button class="btn btn-success btn-mini">Lihat</button>'+
-						 '</div></td></tr>';
+					t += '<div class="well span5">'+
+							'<a href="#Doc"><img src="/' + dt.foto + '" class="thumbnail image-list"></a>'+
+								'<h5>' + dt.judul + '</h5>'+
+								'<p>' + dt.prolog +'</br>'+
+								'<div class="btn-group">'+
+								'<a href="/dosen/buku/download/'+dt.id+'" target="_blank"class="btn btn-primary btn-mini download-dosen"><i class="icon-download "></i> Download</button>'+
+								'<a href="/'+dt.file+'" target="_blank" class="btn btn-mini btn-primary baca-dosen"><i class="icon-play"></i> Baca</a>' +
+								'</div>'+
+						'</div>';
 				}
-				$('#dosen-buku').html(t); // id dari tbody tabel data
+				$('#dokumen-buku').html(t); // id dari tbody tabel data
 			}
 		});
 	}
@@ -139,7 +138,7 @@ var Modul = {
 		numpage: 0,
 		kategori: 3,
 	},
-	url: '/dosen/tampilDokumen/modul',
+	url: '/dosen/tampilDokumen/dokumenmodul',
 	search: function() {
 		this.param.query = $('#cari-modul').val();
 		this.param.curpage = 0;
@@ -178,18 +177,17 @@ var Modul = {
 				var t = '', dt = {};
 				for (var i = 0; i < d.data.length; i++) {
 					dt = d.data[i];
-					t += '<tr><td>' + dt.judul +'</td>' + 
-						 '<td>' + dt.pengarang + '</td>' + 
-						 '<td>' + dt.prolog + '</td>' +
-						 '<td>' + dt.tahun + '</td>' +
-						 '<td>' + dt.katakunci + '</td>' +
-						 '<td><div class="btn-group">' +
-						 '<button class="btn btn-inverse btn-mini">Hapus</button>' +
-						 '<button class="btn btn-warning btn-mini">Edit</button>' +
-						 '<button class="btn btn-success btn-mini">Lihat</button>'+
-						 '</div></td></tr>';
+				t += '<div class="well span5">'+
+							'<a href="#Doc"><img src="/' + dt.foto + '" class="thumbnail image-list"></a>'+
+								'<h5>' + dt.judul + '</h5>'+
+								'<p>' + dt.prolog +'</br>'+
+								'<div class="btn-group">'+
+								'<a href="/dosen/modul/download/'+dt.id+'" target="_blank"class="btn btn-primary btn-mini download-dosen"><i class="icon-download "></i> Download</button>'+
+								'<a href="/'+dt.file+'" target="_blank" class="btn btn-mini btn-primary baca-dosen"><i class="icon-play"></i> Baca</a>' +
+								'</div>'+
+						'</div>';
 				}
-				$('#dosen-modul').html(t); // id dari tbody tabel data
+				$('#dokumen-modul').html(t); // id dari tbody tabel data
 			}
 		});
 	}
