@@ -160,9 +160,9 @@ class Dosen extends CI_Controller {
 		$this->load->view('dosen/buletin/index',array('controller'=>$this));
 		jsloc::show();
 	}
-	public function profil($param='',$ekstra=''){
+	public function profildosen($param='',$ekstra=''){
 		
-		$this->load->view('dosen/profil',array('controller'=>$this));
+		$this->load->view('dosen/profildosen',array('controller'=>$this));
 		jsloc::show();
 	}
 	//controller dosen paging

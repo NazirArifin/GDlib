@@ -95,19 +95,6 @@
 					<button class="btn btn-danger btn-mini" id="ubah" type="submit" value="upload">Simpan</button>
 				</div>
 			</form>
-			<!--<div id="tongue">
-				<a title="Child" href="" ><img src="/<?php echo $row->FOTO_PROFIL ?>" alt="dosen" class="pp"></a>
-				<form id="form-change" class="hide" action="" method="POST" enctype="multipart/form-data">
-						<input class="btn" type="file" name="change_foto" id="change-foto" required="" style="width:220px;"><br>
-						<input type="hidden" name="id_profil" id="id-profil" value="">
-						<button class="btn btn-info btn-mini" type="button" onClick="return cancelChange()">Cancel</button>
-						<button class="btn btn-info btn-mini" type="submit" value="upload">Simpan</button>
-				</form>
-				<div class="tongue-content">
-					<a href="#" class="btn btn-inverse btn-mini" id="change" onClick="return ubahFotoProfil(this, <?php echo $row->ID_PROFIL ?>)"><i class="icon-edit"></i> Ganti Foto Profil</a>
-				</div>
-			</div>-->
-			
 		</div>
 		<div class="span5">
 			<h2><?php echo $row->NAMA_PROFIL ?></h2>
