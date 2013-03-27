@@ -26,10 +26,10 @@ h1, h2, h3, h4, h5, h6, p{
 
 
 .form-horizontal .control-label-min { 
-	width: 160px;
+	width: 80px;
 }
 .form-horizontal .controls-min {
-	margin-left: 190px; 
+	margin-left: 10px; 
 }
 
 .footer p {

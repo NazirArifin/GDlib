@@ -41,8 +41,10 @@ class Mahasiswa extends CI_Controller {
 						'error' => ($hasil ? 0 : 1)
 					);
 					echo json_encode($pesan);
-				} else
+				} else {
 					echo '{ "success": 0, "error": 1 }';
+				}
+				header('location:/mahasiswa/profilmahasiswa');
 			break;
 			default:
 			$this->load->view('mahasiswa/profilmahasiswa',array('profil' => $this));

@@ -160,10 +160,39 @@ class Dosen extends CI_Controller {
 		$this->load->view('dosen/buletin/index',array('controller'=>$this));
 		jsloc::show();
 	}
-	public function profildosen($param='',$ekstra=''){
-		
-		$this->load->view('dosen/profildosen',array('controller'=>$this));
-		jsloc::show();
+	
+	//profil dosen di sini
+	public function profildosen($param='',$ekstra=''){	
+		switch($param){
+			case 'ambil':
+				$pilih = $this->dosen_model->pilihIdProfil($extra);
+				echo json_encode($pilih);
+				return;
+			break;
+			case 'foto':
+				$id = $this->input->post('id_profil');
+				if ( ! empty($id)){
+					$this->dosen_model->updateFotoProfil($id);
+					echo '{ "error": 0, "success": 1 }';
+				}
+				header('location:/dosen/profildosen');
+			break;
+			case 'data':
+				$id = $this->input->post('profil_id');
+				if ( ! empty($id)){
+					$hasil = $this->dosen_model->updateDataProfil($id);
+					$pesan = array(
+						'success' => ($hasil ? 1 : 0),
+						'error' => ($hasil ? 0 : 1)
+					);
+					echo json_encode($pesan);
+				} else
+					echo '{ "success": 0, "error": 1 }';
+			break;
+			default:
+			$this->load->view('dosen/profildosen',array('profil' => $this));
+			jsloc::show();
+		}
 	}
 	//controller dosen paging
 	public function tampilDokumen($param = '')

@@ -58,13 +58,6 @@ class Mahasiswa_model extends CI_Model {
 	}
 	
 	public function updateDataProfil($id){
-		/*$nama = $this->input->post('nama_user');
-		$induk = $this->input->post('no_induk_user');
-		$facebook = $this->input->post('id_facebook');
-		
-		if (empty($induk)) return FALSE;
-		if (empty($facebook)) return FALSE;
-		if (strlen($nama) < 3) return FALSE;*/
 		$update=array(
 			'NAMA_PROFIL'=> $this->input->post('nama'),
 			'JENIS_KELAMIN'=> $this->input->post('gender'),

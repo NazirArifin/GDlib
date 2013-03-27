@@ -36,7 +36,9 @@
 	.pp:hover{
 	transition : All 1s ease ;
 	box-shadow:0px 0px 10px #000000;
-	
+	}
+	#change{
+	margin-top:70px;
 	}
 	</style>
 </head>
@@ -62,15 +64,37 @@
 <br>
 <br>
 <br>
-<div class="container" >
+<div class="container">
+		<?php
+			$profilDosen=$profil->dosen_model->tampil_profil_dosen();
+			if ($profilDosen == 0):
+					echo '<tr><td colspan="4"><div class="alert-info" style="text-align:center;">Data Dosen Tidak Ada</div></td></tr>';
+				else :
+					foreach ($profilDosen as $row):
+		?>
 	<div class="well span11" id="header">
-		<div class="span5">
-				<img src="/images/rud.jpg" alt="dosen" class="pp">
+		<div class="span5" id="hov">
+			<ul class="thumbnails gallery">
+			  <li class="thumbnail">
+				<img src="/<?php echo $row->FOTO_PROFIL ?>" / class="pp">
+				<div class="caption from-top">
+					<a href="#" class="btn btn-inverse btn-mini" id="change" onClick="return ubahFotoProfil(this, <?php echo $row->ID_PROFIL ?>)"><i class="icon-edit"></i></a>
+				</div>
+			  </li>
+			</ul>
+			<form id="form-change" class="hide" action="" method="POST" enctype="multipart/form-data">
+				<input class="btn" type="file" name="change_foto" id="change-foto" required="" style="width:140px;"><br>
+				<input type="hidden" name="id_profil" id="id-profil" value="">
+				<div class="btn-group">	
+					<button class="btn btn-success btn-mini" type="button" onClick="return cancelChange()">Cancel</button>
+					<button class="btn btn-danger btn-mini" id="ubah" type="submit" value="upload">Simpan</button>
+				</div>
+			</form>
 		</div>
 		<div class="span5">
-			<h2>Rudi Hartono</h2>
-			<h3>0955201554</h3>
-			<h3>Pakong Pamekasan</h3>
+			<h2><?php echo $row->NAMA_PROFIL ?></h2>
+			<h3><?php echo $row->ID_USER ?></h3>
+			<h3><?php echo $row->ALAMAT_PROFIL ?></h3>
 		</div>
 	</div>
 </div>
@@ -105,11 +129,14 @@
 		</div>
 		<div class="well span4">
 			<div class="navbar">
-				<div class="navbar-inner">
-					<div class="container">
-						<h3>Profil Detail</h3>
+					<div class="navbar-inner">
+						<div class="container">
+							<a class="brand">Profil Detail</a>
+							<ul class="nav pull-right nav-pills">
+							<li><a href="#edit-profil" role="button" data-toggle="modal" id="edit-profilUser" onClick="return editProfilDosen(this, <?php echo $row->ID_PROFIL ?>)"><i class="icon-cogs icon-large"></i></a></li>
+							</ul>
+						</div>
 					</div>
-				</div>
 			</div>
 			<hr>
 			  <div class="accordion-group">
@@ -120,7 +147,7 @@
 				</div>
 				<div id="tetala" class="accordion-body collapse in">
 				  <div class="accordion-inner">
-		
+						<?php echo $row->TEMPAT_LAHIR ?>, <?php echo $row->TGL_LAHIR ?>
 				  </div>
 				</div>
 			  </div>
@@ -132,7 +159,7 @@
 				</div>
 				<div id="gender" class="accordion-body collapse">
 				  <div class="accordion-inner">
-		
+						<?php echo ($row->JENIS_KELAMIN == 'L' ? 'Laki-Laki' : 'Perempuan') ?>
 				  </div>
 				</div>
 			  </div>
@@ -144,10 +171,13 @@
 				</div>
 				<div id="alamat" class="accordion-body collapse">
 				  <div class="accordion-inner">
-				
+						<?php echo $row->ALAMAT_PROFIL ?>
 				  </div>
 				</div>
 			  </div>
+				<?php
+					if ($row->TAMPIL_EMAIL_PROFIL == 'Y'):
+				?>
 			  <div class="accordion-group">
 				<div class="accordion-heading">
 				  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#email">
@@ -156,10 +186,14 @@
 				</div>
 				<div id="email" class="accordion-body collapse">
 				  <div class="accordion-inner">
-				
+						<?php echo $row->EMAIL_PROFIL ?>
 				  </div>
 				</div>
 			  </div>
+				<?php
+					endif;
+					if ($row->TAMPIL_NO_HP_PROFIL == 'Y'):
+				?>
 			  <div class="accordion-group">
 				<div class="accordion-heading">
 				  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#phone">
@@ -168,15 +202,20 @@
 				</div>
 				<div id="phone" class="accordion-body collapse">
 				  <div class="accordion-inner">
-		
+						<?php echo $row->NO_HP_PROFIL ?>
 				  </div>
 				</div>
 			  </div>
-		
+				<?php
+					endif;
+				?>
 		</div>
 	</div>
 </div>
-
+<?php
+endforeach;
+endif;
+?>
  	<footer class="row-fluid footer">
 		<div class="well span12">
 			<hr>

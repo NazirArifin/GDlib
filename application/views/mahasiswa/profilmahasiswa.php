@@ -41,7 +41,7 @@
 	box-shadow:0px 0px 10px #000000;
 	
 	}
-	#change{
+	#change-mahasiswa{
 	margin-top:70px;
 	}
 	</style>
@@ -77,22 +77,21 @@
 					foreach ($profilMahasiswa as $row):
 		?>
 	<div class="well span11" id="header">
-	
 		<div class="span5" id="hov">
 			<ul class="thumbnails gallery">
 			  <li class="thumbnail">
 				<img src="/<?php echo $row->FOTO_PROFIL ?>" / class="pp">
 				<div class="caption from-top">
-					<a href="#" class="btn btn-inverse btn-mini" id="change" onClick="return ubahFotoProfil(this, <?php echo $row->ID_PROFIL ?>)"><i class="icon-edit"></i>  </a>
+					<a href="#" class="btn btn-inverse btn-mini" id="change-mahasiswa" onClick="return ubahFotoProfilMahasiswa(this, <?php echo $row->ID_PROFIL ?>)"><i class="icon-edit"></i>  </a>
 				</div>
 			  </li>
 			</ul>
-			<form id="form-change" class="hide" action="" method="POST" enctype="multipart/form-data">
-				<input class="btn" type="file" name="change_foto" id="change-foto" required="" style="width:140px;"><br>
-				<input type="hidden" name="id_profil" id="id-profil" value="">
+			<form id="form-change-mahasiswa" class="hide" action="" method="POST" enctype="multipart/form-data">
+				<input class="btn" type="file" name="change_foto" id="change-foto-mahasiswa" required="" style="width:140px;"><br>
+				<input type="hidden" name="id_profil" id="id-profil-mahasiswa" value="">
 				<div class="btn-group">	
-					<button class="btn btn-success btn-mini" type="button" onClick="return cancelChange()">Cancel</button>
-					<button class="btn btn-danger btn-mini" id="ubah" type="submit" value="upload">Simpan</button>
+					<button class="btn btn-success btn-mini" type="button" onClick="return cancelChangeMahasiswa()">Cancel</button>
+					<button class="btn btn-danger btn-mini" id="ubah-mahasiswa" type="submit" value="upload">Simpan</button>
 				</div>
 			</form>
 		</div>
@@ -133,82 +132,143 @@
 						<div class="container">
 							<a class="brand">Profil Detail</a>
 							<ul class="nav pull-right nav-pills">
-							<li><a href="#edit-profil" role="button" data-toggle="modal" id="edit-profilUser" onClick="return editProfilMahasiswa(this, <?php echo $row->ID_PROFIL ?>)"><i class="icon-cogs icon-large"></i></a></li>
+							<li><a href="#edit-profil" id="edit-profilUser" onClick="return editProfilMahasiswa(this, <?php echo $row->ID_PROFIL ?>)"><i class="icon-cogs icon-large"></i></a></li>
 							</ul>
 						</div>
 					</div>
 			</div>
 			<hr>
-			  <div class="accordion-group">
-				<div class="accordion-heading">
-				  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#tetala">
-					<i class="icon-calendar"></i> Tempat & tanggal lahir
-				  </a>
+			<div id="tampilkan">
+				<div class="accordion-group">
+					<div class="accordion-heading">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#tetala">
+						<i class="icon-calendar"></i> Tempat & tanggal lahir</a>
+					</div>
+					<div id="tetala" class="accordion-body collapse in">
+						<div class="accordion-inner">
+							<?php echo $row->TEMPAT_LAHIR ?>, <?php echo $row->TGL_LAHIR ?>
+						</div>
+					</div>
 				</div>
-				<div id="tetala" class="accordion-body collapse in">
-				  <div class="accordion-inner">
-					<?php echo $row->TEMPAT_LAHIR ?>, <?php echo $row->TGL_LAHIR ?>
-				  </div>
+				<div class="accordion-group">
+					<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#gender">
+					<i class="icon-user"></i> Jenis Kelamin</a>
+					</div>
+					<div id="gender" class="accordion-body collapse">
+						<div class="accordion-inner">
+							<?php echo ($row->JENIS_KELAMIN == 'L' ? 'Laki-Laki' : 'Perempuan') ?>
+						</div>
+					</div>
 				</div>
-			  </div>
-			  <div class="accordion-group">
-				<div class="accordion-heading">
-				  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#gender">
-					<i class="icon-user"></i> Jenis Kelamin
-				  </a>
+				<div class="accordion-group">
+					<div class="accordion-heading">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#alamat">
+						<i class="icon-road"></i> Alamat</a>
+					</div>
+					<div id="alamat" class="accordion-body collapse">
+						<div class="accordion-inner">
+							<?php echo $row->ALAMAT_PROFIL ?>
+						</div>
+					</div>
 				</div>
-				<div id="gender" class="accordion-body collapse">
-				  <div class="accordion-inner">
-					<?php echo ($row->JENIS_KELAMIN == 'L' ? 'Laki-Laki' : 'Perempuan') ?>
-				  </div>
-				</div>
-			  </div>
-			  <div class="accordion-group">
-				<div class="accordion-heading">
-				  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#alamat">
-					<i class="icon-road"></i> Alamat
-				  </a>
-				</div>
-				<div id="alamat" class="accordion-body collapse">
-				  <div class="accordion-inner">
-					<?php echo $row->ALAMAT_PROFIL ?>
-				  </div>
-				</div>
-			  </div>
 				<?php
 					if ($row->TAMPIL_EMAIL_PROFIL == 'Y'):
 				?>
-			  <div class="accordion-group">
-				<div class="accordion-heading">
-				  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#email">
-					<i class="icon-envelope-alt"></i> Email
-				  </a>
+				<div class="accordion-group">
+					<div class="accordion-heading">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#email">
+						<i class="icon-envelope-alt"></i> Email</a>
+					</div>
+					<div id="email" class="accordion-body collapse">
+						<div class="accordion-inner">
+							<?php echo $row->EMAIL_PROFIL ?>
+						</div>
+					</div>
 				</div>
-				<div id="email" class="accordion-body collapse">
-				  <div class="accordion-inner">
-					<?php echo $row->EMAIL_PROFIL ?>
-				  </div>
-				</div>
-			  </div>
 				<?php
 					endif;
 					if ($row->TAMPIL_NO_HP_PROFIL == 'Y'):
 				?>
-			  <div class="accordion-group">
-				<div class="accordion-heading">
-				  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#phone">
-					<i class="icon-phone-sign"></i> Nomer HP
-				  </a>
+				<div class="accordion-group">
+					<div class="accordion-heading">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#phone">
+						<i class="icon-phone-sign"></i> Nomer HP</a>
+					</div>
+					<div id="phone" class="accordion-body collapse">
+						<div class="accordion-inner">
+							<?php echo $row->NO_HP_PROFIL ?>
+						</div>
+					</div>
 				</div>
-				<div id="phone" class="accordion-body collapse">
-				  <div class="accordion-inner">
-					<?php echo $row->NO_HP_PROFIL ?>
-				  </div>
-				</div>
-			  </div>
 				<?php
 					endif;
 				?>
+			</div>	
+				<!--gfksdgfksj-->
+				<form class="hide" id="form-profil-mahasiswa" action="" method="post">
+					<h3>Edit Profil Mahasiswa</h3>
+				<blockquote>
+					<div class="control-group">
+						<div class="controls">
+							<div class="input-prepend">
+								<span class="add-on"><i class="icon-user"></i></span>
+								<input name="nama" id="nama-mahasiswa" type="text" placeholder="Nama Lengkap" >
+								<input name="profil_id" id="profil-id-mahasiswa" type="hidden" value="">
+							</div>
+						</div>
+						<div class="controls">
+							<div class="input-prepend">
+								<span class="add-on"><i class="icon-map-marker"></i></span>
+								<input name="tempat" id="tempat-mahasiswa" type="text" placeholder="Tempat Lahir">
+							</div>
+						</div>
+						<div class="controls">
+							<div class="input-prepend">
+								<span class="add-on"><i class="icon-calendar"></i></span>
+								<input name="tanggal" id="tanggal-mahasiswa" type="date" placeholder="Tanggal Lahir">
+							</div>
+						</div>
+						<div class="controls">
+							<label for="">Jenis Kelamin</label>
+								<input type="radio" name="gender" id="laki-laki-mahasiswa" value="L"><label class="label label-inverse" for="laki-laki-mahasiswa"> Laki-Laki</label>&nbsp;
+								<input type="radio" name="gender" id="perempuan-mahasiswa" value="P"><label class="label label-important" for="perempuan-mahasiswa"> Perempuan</label>
+							
+						</div><br>
+						
+						<!---->
+						<div class="controls">
+							<div class="input-prepend">
+								<span class="add-on"><i class="icon-road"></i></span>
+								<textarea name="alamat" id="alamat-mahasiswa" placeholder="Alamat"></textarea>
+							</div>
+						</div>
+						<div class="controls">
+							<div class="input-prepend">
+								<span class="add-on"><i class="icon-envelope"></i></span>
+								<input id="mail-mahasiswa" name="mail" type="text" placeholder="Alamat email"><br>
+							</div>
+						</div>
+						<div class="controls">
+							<input type="radio" name="email" id="tampil-email-mahasiswa" value="Y"><label class="label label-warning" for="tampil-email-mahasiswa"> Tampilkan</label>
+							<input type="radio" name="email" id="jangan-email-mahasiswa" value="T"><label class="label label-warning" for="jangan-email-mahasiswa"> Jangan Tampilkan</label>
+						</div><br>
+						<div class="controls">
+							<div class="input-prepend">
+								<span class="add-on"><i class="icon-phone"></i></span>
+								<input id="no-hp" name="no_hp" type="text" placeholder="Nomer Telepon/HP"><br>
+							</div>
+						</div>
+						<div class="controls">
+							<input type="radio" name="hp" id="tampil-hp-mahasiswa" value="Y"><label class="label label-warning" for="tampil-hp-mahasiswa"> Tampilkan</label>
+							<input type="radio" name="hp" id="jangan-hp-mahasiswa" value="T"><label class="label label-warning" for="jangan-hp-mahasiswa"> Jangan Tampilkan</label>
+						</div>
+					</div>
+					<hr>
+					<button class="btn btn-primary pull-right" type="submit" onClick="return simpanEditProfilMahasiswa()">Simpan</button>
+					<button href="#" class="btn btn-inverse pull-right" onClick="return cancelEditProfilMahasiswa()">Batal</button>
+				</blockquote>
+				</form>
 		</div>
 	</div>
 </div>
@@ -217,75 +277,6 @@ endforeach;
 endif;
 ?>
 </div>
-
-	<div id="edit-profil" class="modal message hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<form id="form-profil" action="" method="post">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-            <h3>Edit Profil Mahasiswa</h3>
-        </div>
-        <div class="modal-body">
-            <div class="control-group">
-				<div class="controls">
-					<div class="input-prepend">
-						<span class="add-on"><i class="icon-user"></i></span>
-						<input class="span3" name="nama" id="nama-mahasiswa" type="text" placeholder="Nama Lengkap" >
-						<input class="span3" name="profil_id" id="profil-id" type="hidden" value="">
-					</div>
-				</div>
-				<div class="controls">
-					<div class="input-prepend">
-						<span class="add-on"><i class="icon-map-marker"></i></span>
-						<input class="span3" name="tempat" id="tempat-mahasiswa" type="text" placeholder="Tempat Lahir">
-					</div>
-				</div>
-				<div class="controls">
-					<div class="input-prepend">
-						<span class="add-on"><i class="icon-calendar"></i></span>
-						<input class="span3" name="tanggal" id="tanggal-mahasiswa" type="date" placeholder="Tanggal Lahir">
-					</div>
-				</div>
-				<div class="controls">
-					<label for="">Jenis Kelamin</label>
-						<!--<button type="button" class="btn btn-primary" name="gender" id="laki-laki" value="L"data-placement="right">Laki-Laki</button>
-						<button type="button" class="btn btn-danger" name="gender" id="perempuan" value="P">Perempuan</button>-->
-						<input type="radio" name="gender" id="laki-laki" value="L"><label class="label label-inverse" for="laki-laki"> Laki-Laki</label>&nbsp;
-						<input type="radio" name="gender" id="perempuan" value="P"><label class="label label-important" for="perempuan"> Perempuan</label>
-					
-				</div><br>
-				
-				<!---->
-				<div class="controls">
-					<div class="input-prepend">
-						<span class="add-on"><i class="icon-road"></i></span>
-						<input class="span3" name="alamat" id="alamat-mahasiswa" type="text" placeholder="Alamat">
-					</div>
-				</div>
-				<div class="controls">
-					<div class="input-prepend">
-						<span class="add-on"><i class="icon-envelope"></i></span>
-						<input class="span3" id="mail-mahasiswa" name="mail" type="text" placeholder="Alamat email">
-						<input type="radio" name="email" id="tampil-email" value="Y"><label class="label label-warning" for="tampil-email"> Tampilkan</label>
-						<input type="radio" name="email" id="jangan-email" value="T"><label class="label label-warning" for="jangan-email"> Jangan Tampilkan</label>
-					</div>
-				</div>
-				<div class="controls">
-					<div class="input-prepend">
-						<span class="add-on"><i class="icon-phone"></i></span>
-						<input class="span3" id="no-hp" name="no_hp" type="text" placeholder="Nomer Telepon/HP">
-						<input type="radio" name="hp" id="tampil-hp" value="Y"><label class="label label-warning" for="tampil-hp"> Tampilkan</label>
-						<input type="radio" name="hp" id="jangan-hp" value="T"><label class="label label-warning" for="jangan-hp"> Jangan Tampilkan</label>
-					</div>
-				</div>
-			</div>
-        </div>
-		</form>
-        <div class="modal-footer">
-            <button class="btn" data-dismiss="modal">Tutup</button>
-            <button class="btn btn-primary" onClick="return simpanEditProfilMahasiswa()">Simpan</button>
-        </div>
-		
-    </div>
  	<footer class="row-fluid footer">
 		<div class="well span12">
 			<hr>

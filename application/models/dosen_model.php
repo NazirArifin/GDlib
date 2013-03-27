@@ -171,6 +171,15 @@ class Dosen_model extends CI_Model {
 			return $query->result();
 		}
 	}
-	
-	
+
+
+		// profil dosen
+	public function tampil_profil_dosen() {
+		$query=$this->db->get_where('tb_profil', array('ID_USER'=>10));
+		if($query->num_rows()==0){
+			return false;
+		} else {
+			return $query->result();
+		}
+	}
 }
