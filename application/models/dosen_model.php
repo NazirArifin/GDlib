@@ -182,4 +182,63 @@ class Dosen_model extends CI_Model {
 			return $query->result();
 		}
 	}
+	
+	public function pilihIdProfil($id){
+		$this->db->select('*');
+		$query=$this->db->get_where('tb_profil',array('ID_PROFIL' => $id));
+		if ($query->num_rows()==0){
+			return false;
+		}
+		else{
+			return $query->result();
+		}
+	}
+	
+	public function updateFotoProfil($id){
+		$this->load->library('upload');
+		$config['upload_path']='./upload/profil/dosen';
+		$config['allowed_types']='jpg|jpeg|png';
+		$config['encrypt_name']=TRUE;
+		$this->upload->initialize($config);
+		if($this->upload->do_upload('change_foto'))
+		{
+			$data=$this->upload->data();
+			$gambar['image_library'] = 'gd2';
+			$gambar['source_image'] = './upload/profil/dosen/' . $data['file_name'];
+			$gambar['create_thumb'] = FALSE;
+			$gambar['maintain_ratio'] = FALSE;
+			$gambar['width'] = 600;
+			$gambar['height'] = 550;
+			$this->load->library('image_lib',$gambar);
+			$this->image_lib->resize();
+			$namafoto='./upload/profil/dosen/' . $data['file_name'];
+		}
+		else
+		{
+			echo $this->upload->display_errors();
+		}
+		$update=array(
+			'FOTO_PROFIL'=>$namafoto);
+			
+		$this->db->where('ID_PROFIL',$id);
+		$this->db->update('tb_profil',$update);
+		return true;
+	}
+	
+	public function updateDataProfil($id){
+		$update=array(
+			'NAMA_PROFIL'=> $this->input->post('nama'),
+			'JENIS_KELAMIN'=> $this->input->post('gender'),
+			'TEMPAT_LAHIR'=> $this->input->post('tempat'),
+			'TGL_LAHIR'=> $this->input->post('tanggal'),
+			'ALAMAT_PROFIL'=> $this->input->post('alamat'),
+			'EMAIL_PROFIL'=> $this->input->post('mail'),
+			'TAMPIL_EMAIL_PROFIL'=> $this->input->post('email'),
+			'NO_HP_PROFIL'=> $this->input->post('no_hp'),
+			'TAMPIL_NO_HP_PROFIL'=> $this->input->post('hp'));
+			
+		$this->db->where('ID_PROFIL',$id);
+		$this->db->update('tb_profil',$update);
+		return true;
+	}
 }

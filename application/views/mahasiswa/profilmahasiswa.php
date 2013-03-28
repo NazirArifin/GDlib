@@ -44,6 +44,9 @@
 	#change-mahasiswa{
 	margin-top:70px;
 	}
+	#tombol-ganti{
+	margin-left:40px;
+	}
 	</style>
 </head>
 <body>
@@ -89,7 +92,7 @@
 			<form id="form-change-mahasiswa" class="hide" action="" method="POST" enctype="multipart/form-data">
 				<input class="btn" type="file" name="change_foto" id="change-foto-mahasiswa" required="" style="width:140px;"><br>
 				<input type="hidden" name="id_profil" id="id-profil-mahasiswa" value="">
-				<div class="btn-group">	
+				<div class="btn-group" id="tombol-ganti">	
 					<button class="btn btn-success btn-mini" type="button" onClick="return cancelChangeMahasiswa()">Cancel</button>
 					<button class="btn btn-danger btn-mini" id="ubah-mahasiswa" type="submit" value="upload">Simpan</button>
 				</div>
@@ -132,7 +135,8 @@
 						<div class="container">
 							<a class="brand">Profil Detail</a>
 							<ul class="nav pull-right nav-pills">
-							<li><a href="#edit-profil" id="edit-profilUser" onClick="return editProfilMahasiswa(this, <?php echo $row->ID_PROFIL ?>)"><i class="icon-cogs icon-large"></i></a></li>
+							<li id="1"><a href="#edit-profil" id="edit-profilUser" onClick="return editProfilMahasiswa(this, <?php echo $row->ID_PROFIL ?>)"><i class="icon-cogs icon-large"></i></a></li>
+							<li class="hide" id="2"><a href="#" id="batal-edit-profilUser" onClick="return cancelEditProfilMahasiswa()"><i class="icon-remove icon-large"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -224,9 +228,9 @@
 							</div>
 						</div>
 						<div class="controls">
-							<div class="input-prepend">
+							<div class="input-prepend date">
 								<span class="add-on"><i class="icon-calendar"></i></span>
-								<input name="tanggal" id="tanggal-mahasiswa" type="date" placeholder="Tanggal Lahir">
+								<input name="tanggal" id="tanggal-mahasiswa" type="text" placeholder="Tanggal Lahir" data-date="01-01-2013" data-date-format="dd-mm-yyyy">
 							</div>
 						</div>
 						<div class="controls">
@@ -266,7 +270,7 @@
 					</div>
 					<hr>
 					<button class="btn btn-primary pull-right" type="submit" onClick="return simpanEditProfilMahasiswa()">Simpan</button>
-					<button href="#" class="btn btn-inverse pull-right" onClick="return cancelEditProfilMahasiswa()">Batal</button>
+					<!--<button href="#" class="btn btn-inverse pull-right" onClick="return cancelEditProfilMahasiswa()">Batal</button>-->
 				</blockquote>
 				</form>
 		</div>
@@ -292,8 +296,10 @@ endif;
 	
 <script type="text/javascript">
 $('#accordion2').accordion();
+$('#tanggal-mahasiswa').datepicker();
 $('#edit-profilUser').attr('title','Edit Profil').tooltip();
-$('#change').attr('title','Ganti foto profil').tooltip();
+$('#batal-edit-profilUser').attr('title','Batal Edit Profil').tooltip();
+$('#change-mahasiswa').attr('title','Ganti foto profil').tooltip();
 </script>
 </body>
 </html>

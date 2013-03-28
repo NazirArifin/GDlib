@@ -12,9 +12,10 @@ function ubahFotoProfilDosen(obj, id){
 				$('#ubah-dosen').attr('disabled','disabled');
 			});
 			$('#form-change-dosen').attr('action', '/dosen/profildosen/foto');				
-			$('#id-profil').val(o[0].ID_PROFIL);
+			$('#id-profil-dosen').val(o[0].ID_PROFIL);
 		}
 	});
+	return false;
 }
 
 function cancelChangeDosen(){
@@ -22,6 +23,7 @@ function cancelChangeDosen(){
 		$('#change-dosen').show('fade', {} , 500);
 		$('#change-foto-dosen').val('');
 	});
+	return false;
 }
 
 $('#change-foto-dosen').change(function(){
@@ -37,19 +39,26 @@ function editProfilDosen(obj, id){
 		},
 		success: function(o){
 		//console.log(o);
-			$('#form-profil-dosen').attr('action', '/dosen/profildosen/data');	
-			$('#profil-id-dosen').val(o[0].ID_PROFIL);
-			$('#nama-dosen').val(o[0].NAMA_PROFIL);
-			$('#tempat-dosen').val(o[0].TEMPAT_LAHIR);
-			$('#tanggal-dosen').val(o[0].TGL_LAHIR);
-			$('#alamat-dosen').val(o[0].ALAMAT_PROFIL);
-			$('#mail-dosen').val(o[0].EMAIL_PROFIL);
-			$('#no-hp-dosen').val(o[0].NO_HP_PROFIL);
-			(o[0].JENIS_KELAMIN == 'L' ? $('#laki-laki-dosen').attr('checked','checked') : $('#perempuan-dosen').attr('checked','checked'));
-			(o[0].TAMPIL_EMAIL_PROFIL == 'Y' ? $('#tampil-email-dosen').attr('checked','checked') : $('#jangan-email-dosen').attr('checked','checked'));
-			(o[0].TAMPIL_NO_HP_PROFIL == 'Y' ? $('#tampil-hp-dosen').attr('checked','checked') : $('#jangan-hp-dosen').attr('checked','checked'));
+			$('#tampilkan').hide('clip', {} , 800, function(){
+				$('#form-profil-dosen').show('clip', {}, 800);
+				$('#form-profil-dosen').attr('action', '/dosen/profildosen/data');	
+				$('#profil-id-dosen').val(o[0].ID_PROFIL);
+				$('#nama-dosen').val(o[0].NAMA_PROFIL);
+				$('#tempat-dosen').val(o[0].TEMPAT_LAHIR);
+				$('#tanggal-dosen').val(o[0].TGL_LAHIR);
+				$('#alamat-dosen').val(o[0].ALAMAT_PROFIL);
+				$('#mail-dosen').val(o[0].EMAIL_PROFIL);
+				$('#no-hp-dosen').val(o[0].NO_HP_PROFIL);
+				(o[0].JENIS_KELAMIN == 'L' ? $('#laki-laki-dosen').attr('checked','checked') : $('#perempuan-dosen').attr('checked','checked'));
+				(o[0].TAMPIL_EMAIL_PROFIL == 'Y' ? $('#tampil-email-dosen').attr('checked','checked') : $('#jangan-email-dosen').attr('checked','checked'));
+				(o[0].TAMPIL_NO_HP_PROFIL == 'Y' ? $('#tampil-hp-dosen').attr('checked','checked') : $('#jangan-hp-dosen').attr('checked','checked'));
+				$('#satu').hide('fade', {}, 200, function(){
+					$('#dua').show('fade', {}, 200);
+				});
+			});
 		}
 	});
+	return false;
 }
 
 function simpanEditProfilDosen(){
@@ -64,7 +73,6 @@ function simpanEditProfilDosen(){
 		},
 		success: function(o){
 		//console.log(o);
-		$('#edit-profil-dosen').modal('hide');
 			if (o.success==1){
 				alertify.success('Data Sudah Tersimpan');
 				window.location = "/dosen/profildosen";
@@ -74,6 +82,17 @@ function simpanEditProfilDosen(){
 			}
 		}
 	});
+	return false;
+}
+
+function cancelEditProfilDosen(){
+	$('#form-profil-dosen').hide('clip', {} , 800, function(){
+		$('#tampilkan').show('clip', {}, 800);
+		$('#dua').hide('fade', {}, 200, function(){
+			$('#satu').show('fade', {}, 200);
+		});
+	});
+	return false;
 }
 
 // mahasiswa
@@ -94,6 +113,7 @@ function ubahFotoProfilMahasiswa(obj, id){
 			$('#id-profil-mahasiswa').val(o[0].ID_PROFIL);
 		}
 	});
+	return false;
 }
 
 function cancelChangeMahasiswa(){
@@ -101,6 +121,7 @@ function cancelChangeMahasiswa(){
 		$('#change-mahasiswa').show('fade', {} , 500);
 		$('#change-foto-mahasiswa').val('');
 	});
+	return false;
 }
 
 $('#change-foto-mahasiswa').change(function(){
@@ -129,6 +150,9 @@ function editProfilMahasiswa(obj, id){
 				(o[0].JENIS_KELAMIN == 'L' ? $('#laki-laki-mahasiswa').attr('checked','checked') : $('#perempuan-mahasiswa').attr('checked','checked'));
 				(o[0].TAMPIL_EMAIL_PROFIL == 'Y' ? $('#tampil-email-mahasiswa').attr('checked','checked') : $('#jangan-email-mahasiswa').attr('checked','checked'));
 				(o[0].TAMPIL_NO_HP_PROFIL == 'Y' ? $('#tampil-hp-mahasiswa').attr('checked','checked') : $('#jangan-hp-mahasiswa').attr('checked','checked'));
+				$('#1').hide('fade', {}, 200, function(){
+					$('#2').show('fade', {}, 200);
+				});
 			});
 		}
 	});
@@ -156,11 +180,15 @@ function simpanEditProfilMahasiswa(){
 			}
 		}
 	});
+	return false;
 }
 
 function cancelEditProfilMahasiswa(){
 	$('#form-profil-mahasiswa').hide('clip', {} , 800, function(){
 		$('#tampilkan').show('clip', {}, 800);
+		$('#2').hide('fade', {}, 200, function(){
+			$('#1').show('fade', {}, 200);
+		});
 	});
 	return false;
 }

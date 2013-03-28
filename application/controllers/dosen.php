@@ -165,7 +165,7 @@ class Dosen extends CI_Controller {
 	public function profildosen($param='',$ekstra=''){	
 		switch($param){
 			case 'ambil':
-				$pilih = $this->dosen_model->pilihIdProfil($extra);
+				$pilih = $this->dosen_model->pilihIdProfil($ekstra);
 				echo json_encode($pilih);
 				return;
 			break;
