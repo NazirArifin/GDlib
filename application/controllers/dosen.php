@@ -9,13 +9,30 @@ class Dosen extends CI_Controller {
 		$this->load->model('dosen_paging_model');
 		$this->load->helper();
 		$this->load->database();
-		$this->load->library();
+		$this->load->library('form_validation');
 	}
 	
 	public function index()
 	{
-		$this->load->view('dosen/index',array('controller' => $this));
-		jsloc::show();
+		$this->form_validation->set_rules('judul_dokumen','judul_dokumen','required|max_lenght[10]|xss_clean');
+		if($this->input->post("submit"))
+		{
+			if($this->form_validation->run()==FALSE)
+			{
+				echo "data yang anda masukkan sudah valid";
+			}
+			else
+			{
+				$this->load->view('dosen/index',array('controller' => $this));
+				jsloc::show();  
+			}
+		}
+		else
+		{
+			$this->load->view('dosen/index',array('controller' => $this));
+			jsloc::show();
+		}
+		
 	}
 	
 	public function dokumen($param = '', $extra = '') {

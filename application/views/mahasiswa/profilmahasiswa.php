@@ -209,7 +209,7 @@
 					endif;
 				?>
 			</div>	
-				<!--gfksdgfksj-->
+				<!--edit profil-->
 				<form class="hide" id="form-profil-mahasiswa" action="" method="post">
 					<h3>Edit Profil Mahasiswa</h3>
 				<blockquote>
@@ -217,7 +217,7 @@
 						<div class="controls">
 							<div class="input-prepend">
 								<span class="add-on"><i class="icon-user"></i></span>
-								<input name="nama" id="nama-mahasiswa" type="text" placeholder="Nama Lengkap" >
+								<input name="nama" id="nama-mahasiswa" type="text" placeholder="Nama Lengkap"  >
 								<input name="profil_id" id="profil-id-mahasiswa" type="hidden" value="">
 							</div>
 						</div>
@@ -291,15 +291,17 @@ endif;
 	<script src="/third_party/jquery/jquery-1.9.1.min.js"></script>
 	<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
 	<script src="/third_party/bootstrap/bootstrap.min.js"></script>
+	<script src="/third_party/bootstrap/jqBootstrapValidation.js"></script>
 	<script src="/third_party/alertify/alertify.min.js"></script>
+	<script src="/third_party/datepicker/js/bootstrap-datepicker.js"></script>
 	<script src="/js/profil.js"></script>
 	
 <script type="text/javascript">
 $('#accordion2').accordion();
-$('#tanggal-mahasiswa').datepicker();
 $('#edit-profilUser').attr('title','Edit Profil').tooltip();
 $('#batal-edit-profilUser').attr('title','Batal Edit Profil').tooltip();
 $('#change-mahasiswa').attr('title','Ganti foto profil').tooltip();
+$('#tanggal-mahasiswa').datepicker();
 </script>
 </body>
 </html>

@@ -199,7 +199,7 @@
 							<div class="control-group">
 								<label class="control-label control-label-min" for="judul-dokumen">Judul Dokumen</label>
 								<div class="controls controls-min">
-									<input id="judul-dokumen" name="judul_dokumen" type="text" required="" placeholder="Judul Dokumen">
+									<input id="judul-dokumen" name="judul_dokumen" type="text" required="" value="<?php $this->form_validation->set_value('judul_dokumen');?>" placeholder="Judul Dokumen">
 								</div>
 							</div>
 							<div class="control-group">
