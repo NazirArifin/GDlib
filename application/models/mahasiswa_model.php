@@ -148,4 +148,21 @@ class Mahasiswa_model extends CI_Model {
 			exit;
 		}
 	}
+	
+	public function detailDokumen($id){
+		$select = $this->db->query("SELECT * FROM tb_dokumen WHERE ID_DOKUMEN = '$id'");
+		if($select->num_rows()==0){
+			return false;
+		} else {
+			foreach($select->result() as $row){
+				$hasil = array(
+					'id'=>$row->ID_DOKUMEN,
+					'judul'=>$row->JUDUL_DOKUMEN,
+					'pengarang'=>$row->PENGARANG_DOKUMEN,
+					'tahun'=>$row->TAHUN_PENERBITAN_DOKUMEN
+				);
+			}
+		}
+		echo json_encode($hasil, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP);
+	}
 }

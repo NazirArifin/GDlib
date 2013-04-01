@@ -76,6 +76,7 @@
 				</form>
 			</div>
 		<br>
+		<div id="aku"></div>
 			<article id="document-jurnal" class="post">
 			
 			</article>
@@ -122,5 +123,6 @@
 			<script src="/third_party/bootstrap/bootstrap.min.js"></script>
 			<script src="/third_party/jquery/tooltip/main-tooltip.js"></script>
 			<script src="/js/paging.mahasiswa.dokumen.js"></script>
+			<script src="/js/mahasiswa.js"></script>
 </body>
 </html>

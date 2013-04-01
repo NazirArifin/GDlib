@@ -268,7 +268,6 @@
 			<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
 			<script src="/third_party/bootstrap/bootstrap.min.js"></script>
 			<script src="/third_party/jquery/tooltip/main-tooltip.js"></script>
-			<script src="/js/mahasiswa.js"></script>
 <script type="text/javascript">
 $('#tab-dok a').click(function (e) {
 	  e.preventDefault();

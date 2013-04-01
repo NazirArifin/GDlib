@@ -22,8 +22,7 @@
 		margin-top: 15px;
 	}
 	#header{
-		background:url('/images/header-mahasiswa.jpg') no-repeat center center fixed;
-		/*VENDOR*/background-size: cover;
+		background:url('/images/bg.png');
 	}
 	.pp{
 	margin-left:40px;
@@ -32,15 +31,11 @@
 	width:150px;
 	border-style:solid;
 	border-width:6px;
+	border-top-width:0px;
 	border-color:#ffffff;
 	border-radius:5px;
-	transition : All 1s ease ;
 	}
-	.pp:hover{
-	transition : All 1s ease ;
-	box-shadow:0px 0px 10px #000000;
-	
-	}
+
 	#change-mahasiswa{
 	margin-top:70px;
 	}
@@ -217,7 +212,7 @@
 						<div class="controls">
 							<div class="input-prepend">
 								<span class="add-on"><i class="icon-user"></i></span>
-								<input name="nama" id="nama-mahasiswa" type="text" placeholder="Nama Lengkap"  >
+								<input name="nama" id="nama-mahasiswa" type="text" placeholder="Nama Lengkap" >
 								<input name="profil_id" id="profil-id-mahasiswa" type="hidden" value="">
 							</div>
 						</div>
@@ -269,7 +264,7 @@
 						</div>
 					</div>
 					<hr>
-					<button class="btn btn-primary pull-right" type="submit" onClick="return simpanEditProfilMahasiswa()">Simpan</button>
+					<button class="btn btn-primary btn-block" type="submit" onClick="return simpanEditProfilMahasiswa()">Simpan</button>
 					<!--<button href="#" class="btn btn-inverse pull-right" onClick="return cancelEditProfilMahasiswa()">Batal</button>-->
 				</blockquote>
 				</form>
@@ -291,7 +286,6 @@ endif;
 	<script src="/third_party/jquery/jquery-1.9.1.min.js"></script>
 	<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
 	<script src="/third_party/bootstrap/bootstrap.min.js"></script>
-	<script src="/third_party/bootstrap/jqBootstrapValidation.js"></script>
 	<script src="/third_party/alertify/alertify.min.js"></script>
 	<script src="/third_party/datepicker/js/bootstrap-datepicker.js"></script>
 	<script src="/js/profil.js"></script>

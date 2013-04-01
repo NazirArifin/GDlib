@@ -6,6 +6,8 @@
 	<link href="/third_party/bootstrap/css/elemento.min.css" rel="stylesheet" type="text/css">
 	<link href="/third_party/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="/third_party/awesome/css/font-awesome.css" />
+	<link rel="stylesheet" href="/third_party/alertify/alertify.core.css" />
+	<link rel="stylesheet" href="/third_party/alertify/alertify.default.css" />
 	<link rel="stylesheet" href="/css/main.css" />
 	<link rel="stylesheet" href="/css/style.css" />
 	<style type="text/css">
@@ -14,13 +16,12 @@
 		}
 	#logo-baru {
 		position:absolute;
-		height: 50px;
-		width:255px;
+		height: 40px;
+		width:220px;
 		margin-top: 15px;
 	}
 	#header{
-		background:url('/images/header-dosen.jpg') no-repeat center center fixed;
-		/*VENDOR*/background-size: cover;
+		background:url('/images/bg.png');
 	}
 	.pp{
 	margin-left:40px;
@@ -29,6 +30,7 @@
 	width:150px;
 	border-style:solid;
 	border-width:6px;
+	border-top-width:0px;
 	border-color:#ffffff;
 	border-radius:5px;
 	transition : All 1s ease ;
@@ -271,7 +273,7 @@
 						</div>
 					</div>
 					<hr>
-					<button class="btn btn-primary pull-right" type="submit" onClick="return simpanEditProfilDosen()">Simpan</button>
+					<button class="btn btn-primary btn-block" type="submit" onClick="return simpanEditProfilDosen()">Simpan</button>
 					<!--<button href="#" class="btn btn-inverse pull-right" onClick="return cancelEditProfilMahasiswa()">Batal</button>-->
 				</blockquote>
 				</form>

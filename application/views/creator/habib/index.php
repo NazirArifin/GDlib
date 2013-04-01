@@ -21,9 +21,8 @@
 		margin-top: 15px;
 	}
 	#header{
-		background:url('/images/header-creator.jpg') no-repeat center center fixed;
-		/*VENDOR*/background-size: cover;
-	}
+		background:url('/images/bg.png');
+		}
 	.pp{
 	margin:15px;
 	height:160px;

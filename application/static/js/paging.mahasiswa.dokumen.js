@@ -53,11 +53,11 @@ var Jurnal = {
 						 '</div>' +
 						 '<div class="post-entry clearfix">' +
 						 '<img class="media-object pull-left" style="width: 100px; height: 100px;" src="/' + dt.foto + '">' +
-						 '<p>' + dt.prolog + ' <a href="/mahasiswa/jurnal/detail">Read more ? </a></p>' +
+						 '<p>' + dt.prolog + ' <a href="#" onclick="return detailDokumen(this, ' + dt.id + ')">Read more ? </a></p>' +
 						 '</div>' +
 						 '<ul class="post-meta">' +
 						 '<li><i class="icon-user"></i><a href=""> ' + dt.pengarang + '</a></li>' +
-						 '<li><i class="icon-comment"></i><a href="">  2 Comments</a></li>' +
+						 '<li><i class="icon-comment"></i><a href=""> 2 Comments</a></li>' +
 						 '</ul><br><br><hr><br>';
 				}
 				$('#document-jurnal').html(t); // id dari tbody tabel data

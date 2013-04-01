@@ -1,5 +1,4 @@
 <!DOCTYPE html>
- 
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -9,17 +8,18 @@
 		<link rel="stylesheet" href="/third_party/bootstrap/css/elemento.min.css" />
 		<link rel="stylesheet" href="/third_party/bootstrap/css/bootstrap-responsive.min.css" />
 		<link rel="stylesheet" href="/third_party/awesome/css/font-awesome.css" />
-		<link href='/third_party/rating/jquery.rating.css' type="text/css" rel="stylesheet"/>
-		<link href='/third_party/jsliderelated/jsliderelated.css' type="text/css" rel="stylesheet"/>
+		<link href="/third_party/rating/jquery.rating.css" type="text/css" rel="stylesheet"/>
+		<link href="/third_party/jsliderelated/jsliderelated.css" type="text/css" rel="stylesheet"/>
 		<link rel="stylesheet" href="/css/style.css" />
 		<link rel="stylesheet" href="/css/main.css" />
 			
 		<script src="/third_party/jquery.ui/jquery-1.8.2.js"></script>
 		<script src="/third_party/jquery.ui/jquery-ui-1.9.1.custom.min.js"></script>
 		<script src="/third_party/bootstrap/bootstrap.min.js"></script>
-		<script src='/third_party/rating/jquery.MetaData.js' type="text/javascript" ></script>
-		<script src='/third_party/rating/jquery.rating.js' type="text/javascript" ></script>
-		<script src='/third_party/jsliderelated/jsliderelatedpages.js' type="text/javascript"></script>
+		<script src="/third_party/rating/jquery.MetaData.js" type="text/javascript" ></script>
+		<script src="/third_party/rating/jquery.rating.js" type="text/javascript" ></script>
+		<script src="/third_party/jsliderelated/jsliderelatedpages.js" type="text/javascript"></script>
+		<script src="/js/mahasiswa.js" type="text/javascript"></script>
 		
 		<style type="text/css">
 		#image {
@@ -56,12 +56,11 @@
 		<div class="well span12"><br>
 	        <article class="post">
 				<div class="post-header">
-					<h2 class="post-title"><a href="#">Inilah Kisahku</a></h2>
+					<h2 class="post-title"><a href="#">H</a></h2>
 					<div class="post-date">
 						<h4>1-Jan-13</h4>
 					</div>
 				</div>
-
 				<div class="post-entry pull-left">
 					<p>Sed non massa quis nisl tincidunt posuere sit amet vitae sem. Praesent sed convallis quam. Donec hendrerit neque sit amet tellus ornare et semper lorem lacinia. Suspendisse ac pellentesque odio. Nunc pharetra malesuada nisi ac condimentum. Curabitur porttitor pulvinar blandit. Praesent adipiscing odio id urna mollis hendrerit. Duis sit amet pharetra dolor.
 
@@ -81,8 +80,8 @@
 					fermentum ac dui. Etiam eget magna diam. Suspendisse magna nibh, volutpat et ullamcorper ac, euismod sit amet nisi. Duis dapibus fringilla tellus, vel pharetra sapien sagittis nec.Aliquam metus neque, bibendum sit amet porta at, consequat et enim. In ut turpis non ipsum rhoncus porttitor vel ac nunc. Maecenas interdum dignissim lorem quis auctor. Donec sit amet nulla nisl, aliquam pretium ipsum. Pellentesque sodales ipsum et enim rutrum adipiscing. Quisque tincidunt mattis sapien, vel posuere neque sodales eu. Nullam egestas sem et sapien adipiscing viverra. Phasellus tempor mauris non massa lacinia nec eleifend orci sagittis.</p>
               </div>
 				   <ul class="post-meta">
-						<li><a href=""><img src="/images/glyphicons/png/glyphicons_003_user.png" alt=""> Dohn Joe</a></li>
-						<li><a href=""> <img src="/images/glyphicons/png/glyphicons_245_chat.png" alt=""> 2 Comments</a></li>
+						<li><a href=""><img src="/images/icon/glyphicons_401_github.png" alt=""> Dohn Joe</a></li>
+						<li><a href=""> <img src="/images/icon/glyphicons_407_spotify.png" alt=""> 2 Comments</a></li>
 				  </ul>
               <div class="clearfix"></div>
               
@@ -91,9 +90,9 @@
                   <div class="about">
                     <img width="160" height="180" src="/images/rud.jpg" alt="200x180" style="width: 200px; height: 180px;">
                     <div class="social">
-                        <a href="#"><img src="/images/glyphicons/png/glyphicons_274_beer.png"></a>
-                        <a href="#"><img src="/images/glyphicons/png/glyphicons_290_skull.png"></a>
-                        <a href="#"><img src="/images/glyphicons/png/glyphicons_303_temple_islam.png"></a>
+                        <a href="#"><img src="/images/icon/glyphicons_410_facebook.png"></a>
+                        <a href="#"><img src="/images/icon/glyphicons_411_twitter.png"></a>
+                        <a href="#"><img src="/images/icon/glyphicons_385_blogger.png"></a>
                     </div>
                     <h4 class="name">Dohn Joe</h4>
                     <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>

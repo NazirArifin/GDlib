@@ -21,12 +21,11 @@
 		margin-top: 15px;
 	}
 	#header{
-		background:url('/images/header-creator.jpg') no-repeat center center fixed;
-		/*VENDOR*/background-size: cover;
+		background:url('/images/bg.png');
 	}
 	.pp{
 	margin:15px;
-	height:160px;
+	height:150px;
 	width:150px;
 	border-style:solid;
 	border-width:6px;
@@ -60,7 +59,7 @@
 <div class="container" >
 	<div class="well span11" id="header">
 		<div class="span5">
-				<img src="/images/rud.jpg" class="pp" data-placement="right">
+				<img src="/images/creator/rudi.jpg" class="pp" data-placement="right">
 		</div>
 		<div class="span5">
 			<h2>Rudi</h2>
