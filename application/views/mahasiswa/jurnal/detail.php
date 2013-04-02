@@ -57,6 +57,7 @@
 	        <article class="post">
 				<div class="post-header">
 					<h2 class="post-title"><a href="#">H</a></h2>
+					<div id="aku"></div>
 					<div class="post-date">
 						<h4>1-Jan-13</h4>
 					</div>

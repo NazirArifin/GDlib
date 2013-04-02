@@ -11,7 +11,7 @@ function detailDokumen(ob, id){
 			var t = '';
 			t += '<p>Halo</p>';
 			$('#aku').html(t);
-			//window.location = "/mahasiswa/jurnal/waw";
+			window.location = "/mahasiswa/jurnal/waw";
 		}
 	});
 	return false;

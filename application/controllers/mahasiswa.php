@@ -62,11 +62,7 @@ class Mahasiswa extends CI_Controller {
 				$this->load->database();
 				$this->load->model('mahasiswa_model');
 				$this->mahasiswa_model->detailDokumen($extra);
-				//var_dump($pilih);
-				//echo json_encode($pilih);
-				//return;
-				//$this->load->view('mahasiswa/jurnal/detail');
-				//header('location:/mahasiswa/jurnal/detail');
+				$this->load->view('mahasiswa/jurnal/detail');
 				jsloc::show();
 			break;
 			case 'waw':

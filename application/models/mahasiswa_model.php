@@ -163,6 +163,6 @@ class Mahasiswa_model extends CI_Model {
 				);
 			}
 		}
-		echo json_encode($hasil, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP);
+		//echo json_encode($hasil, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP);
 	}
 }

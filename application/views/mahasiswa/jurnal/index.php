@@ -76,7 +76,7 @@
 				</form>
 			</div>
 		<br>
-		<div id="aku"></div>
+		
 			<article id="document-jurnal" class="post">
 			
 			</article>
