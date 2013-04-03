@@ -154,14 +154,16 @@ class Mahasiswa_model extends CI_Model {
 		if($select->num_rows()==0){
 			return false;
 		} else {
-			foreach($select->result() as $row){
-				$hasil = array(
-					'id'=>$row->ID_DOKUMEN,
-					'judul'=>$row->JUDUL_DOKUMEN,
-					'pengarang'=>$row->PENGARANG_DOKUMEN,
-					'tahun'=>$row->TAHUN_PENERBITAN_DOKUMEN
-				);
-			}
+			$row = $select->row(); 
+			return array(
+				'id_k'=>$row->ID_DOKUMEN,
+				'judul'=>$row->JUDUL_DOKUMEN,
+				'prolog'=>$row->PROLOG_DOKUMEN,
+				'foto'=>$row->FOTO_DOKUMEN,
+				'pengarang'=>$row->PENGARANG_DOKUMEN,
+				'tahun'=>$row->TAHUN_PENERBITAN_DOKUMEN
+			);
+			//return $select->result();
 		}
 		//echo json_encode($hasil, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP);
 	}

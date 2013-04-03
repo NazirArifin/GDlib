@@ -61,8 +61,16 @@ class Mahasiswa extends CI_Controller {
 			case 'detail':
 				$this->load->database();
 				$this->load->model('mahasiswa_model');
-				$this->mahasiswa_model->detailDokumen($extra);
-				$this->load->view('mahasiswa/jurnal/detail');
+				$pilih = $this->mahasiswa_model->detailDokumen($extra);
+				//foreach($pilih as $row){
+				//$hasil = array(
+					//'id_k'=>$pilih['ID_DOKUMEN'];
+					//'judul'=>$pilih['JUDUL_DOKUMEN'];
+//					'pengarang'=>$row->PENGARANG_DOKUMEN,
+	//				'tahun'=>$row->TAHUN_PENERBITAN_DOKUMEN
+				//);
+				//}
+				$this->load->view('mahasiswa/jurnal/detail', $pilih);
 				jsloc::show();
 			break;
 			case 'waw':
