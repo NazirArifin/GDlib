@@ -97,7 +97,7 @@
 						<div class="controls controls-min">	
 							<div class="input-prepend">
 								<span class="add-on"><i class="icon-globe"></i></span>
-									<input name="id_facebook" id="id-facebook" type="text" required="" placeholder="ID Facebook" value="https://www.facebook.com/">
+									<input name="id_facebook" id="id-facebook" type="text" required="" placeholder="ID Facebook">
 							</div>
 						</div>
 				</div>

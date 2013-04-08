@@ -57,14 +57,27 @@ function editUser2(object, id){
 
 function simpanUSerDosen(){
 	var $form = $('#form-tambah'),
-		$npm = $('#no-induk-user');
+		$npm = $('#no-induk-user'),
+		$nama = $('#nama-user'),
+		$fb = $('#id-facebook');
 	
-	var npm = $npm.val();
-	if (npm.match(/[^A-Z]/)) {
-		alert('npm tidak valid');
+	var npm = $npm.val(),
+		nama = $nama.val(),
+		fb = $fb.val();
+	if (nama == '' || npm == '' || fb == ''){
+		alertify.log('Data Tidak Boleh Kosong');
 		return false;
 	}
-	
+	if (nama.match(/[^A-Z]/i)){
+		alertify.log('Nama tidak valid');
+		$nama.focus();
+		return false;
+	}
+	if (npm.match(/[^0-9]/)) {
+		alertify.error('npm tidak valid');
+		$npm.focus();
+		return false;
+	}
 	
 	$.ajax({
 		url: $form.attr('action'),
