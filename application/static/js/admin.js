@@ -56,7 +56,16 @@ function editUser2(object, id){
 }
 
 function simpanUSerDosen(){
-	var $form = $('#form-tambah');
+	var $form = $('#form-tambah'),
+		$npm = $('#no-induk-user');
+	
+	var npm = $npm.val();
+	if (npm.match(/[^A-Z]/)) {
+		alert('npm tidak valid');
+		return false;
+	}
+	
+	
 	$.ajax({
 		url: $form.attr('action'),
 		dataType: 'json',
