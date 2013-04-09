@@ -17,13 +17,8 @@ class Admin_model extends CI_Model {
 	public function insertUserDosen(){
 		
 		// validasi;
-		$nama = $this->input->post('nama_user');
-		$induk = $this->input->post('no_induk_user');
-		$facebook = $this->input->post('id_facebook');
-		
-		if (empty($induk)) return FALSE;
-		if (empty($facebook)) return FALSE;
-		if (strlen($nama) < 3) return FALSE;
+		$facebook = $this->input->post('id_facebook');	
+		if(filter_var($facebook, FILTER_VALIDATE_EMAIL) == FALSE)return FALSE;
 		
 		$insert = array(
 		'ID_LEVEL_USER'=>'2',
@@ -74,13 +69,8 @@ class Admin_model extends CI_Model {
 	
 		public function insertUserMahasiswa(){
 		// validasi;
-		$nama = $this->input->post('nama_user');
-		$induk = $this->input->post('no_induk_user');
-		$facebook = $this->input->post('id_facebook');
-		
-		if (empty($induk)) return FALSE;
-		if (empty($facebook)) return FALSE;
-		if (strlen($nama) < 3) return FALSE;
+		$facebook = $this->input->post('id_facebook');	
+		if(filter_var($facebook, FILTER_VALIDATE_EMAIL) == FALSE)return FALSE;
 		
 		$insert = array(
 		'ID_LEVEL_USER'=>'3',

@@ -21,9 +21,8 @@ class Admin extends CI_Controller {
 	{		
 		switch ($param) {
 			case 'add':
-				$nama = $this->input->post('nama_user');
-				if ( ! empty($nama)){
-					$hasil = $this->admin_model->insertUserDosen();
+				$hasil = $this->admin_model->insertUserDosen();
+				if($hasil !== FALSE){
 					$pesan = array(
 						'success' => ($hasil ? 1 : 0),
 						'error' => ($hasil ? 0 : 1)
@@ -45,11 +44,7 @@ class Admin extends CI_Controller {
 				break;
 			case 'delete':
 				$this->admin_model->deleteUserDosen($extra);
-				
-				// EDITED BY NAZIR
-				// $admin_model->deleteUserDosen seharusnya mereturn sesuatu jika ingin dimasukkan $hapus
 				echo '{ "error": 0, "success": 1 }';
-				//echo json_encode($hapus);
 				break;
 			default:
 				$this->load->view('admin/dosen/index', array('controller' => $this));
@@ -61,9 +56,8 @@ class Admin extends CI_Controller {
 	{
 		switch ($param) {
 			case 'add':
-				$nama = $this->input->post('nama_user');
-				if ( ! empty($nama)){
-					$hasil = $this->admin_model->insertUserMahasiswa();
+				$hasil = $this->admin_model->insertUserMahasiswa();
+				if($hasil !== FALSE){
 					$pesan = array(
 						'success' => ($hasil ? 1 : 0),
 						'error' => ($hasil ? 0 : 1)

@@ -1,9 +1,4 @@
 //admin dosen
-function tambahDosen(){
-	$('#form-tambah').attr('action', '/admin/dosen/add').show('blind', {} , 2500);
-	
-}
-
 function sclose(){
 	$('#nama-user').val('');
 	$('#no-induk-user').val('');
@@ -32,6 +27,10 @@ function dcancel(){
 	$('#form-tambah').hide('blind', {} , 1500, function(){
 		$('#view').show('blind', {} , 5500);
 	});
+}
+
+function tambahDosen(){
+	$('#form-tambah').attr('action', '/admin/dosen/add').show('blind', {} , 2500);
 }
 
 function editUser2(object, id){
@@ -69,12 +68,12 @@ function simpanUSerDosen(){
 		return false;
 	}
 	if (nama.match(/[^A-Z]/i)){
-		alertify.log('Nama tidak valid');
+		alertify.error('Nama tidak Valid');
 		$nama.focus();
 		return false;
 	}
 	if (npm.match(/[^0-9]/)) {
-		alertify.error('npm tidak valid');
+		alertify.error('NPM tidak Valid');
 		$npm.focus();
 		return false;
 	}
@@ -95,7 +94,7 @@ function simpanUSerDosen(){
 				window.location = "/admin/dosen";
 			}
 			else {
-				alertify.error('Data Gagal disimpan');
+				alertify.error('Data Gagal disimpan<br>Harap Periksa Kembali');
 			}
 		}
 	});
@@ -104,16 +103,12 @@ function simpanUSerDosen(){
 }
 
 function deleteUser2(object, id){
-//var konfirmasi = confirm("Apakah Anda yakin ingin menghapus Data ini ?");
-	//if (konfirmasi == true){
 	$('#form-tambah').attr('action', '/admin/dosen/delete');
 	var $form = $('#form-tambah');
 	
 	$.ajax({
 		url: '/admin/dosen/delete/' + id,
 		dataType: 'json',
-		//type: $form.attr('method'),
-		//data: $form.serialize(),
 		beforeSend: function(){
 			
 		},
@@ -139,7 +134,6 @@ function deleteUser2(object, id){
 //admin mahasiswa
 function tambahMahasiswa(){
 	$('#form-tambah').attr('action', '/admin/mahasiswa/add').show('blind', {} , 2500);
-	
 }
 
 function editUser3(object, id){
@@ -163,7 +157,29 @@ function editUser3(object, id){
 }
 
 function simpanUserMahasiswa(){
-	var $form = $('#form-tambah');
+	var $form = $('#form-tambah'),
+		$npm = $('#no-induk-user'),
+		$nama = $('#nama-user'),
+		$fb = $('#id-facebook');
+	
+	var npm = $npm.val(),
+		nama = $nama.val(),
+		fb = $fb.val();
+	if (nama == '' || npm == '' || fb == ''){
+		alertify.log('Data Tidak Boleh Kosong');
+		return false;
+	}
+	if (nama.match(/[^A-Z]/i)){
+		alertify.error('Nama tidak Valid');
+		$nama.focus();
+		return false;
+	}
+	if (npm.match(/[^0-9]/)) {
+		alertify.error('NPM tidak Valid');
+		$npm.focus();
+		return false;
+	}
+	
 	$.ajax({
 		url: $form.attr('action'),
 		dataType: 'json',
@@ -180,7 +196,7 @@ function simpanUserMahasiswa(){
 				window.location = "/admin/mahasiswa";
 			}
 			else {
-				alertify.error('Data Gagal disimpan');
+				alertify.error('Data Gagal disimpan<br>Harap Periksa Kembali');
 			}
 		}
 	});
@@ -188,16 +204,12 @@ function simpanUserMahasiswa(){
 }
 
 function deleteUser3(object, id){
-//var konfirmasi = confirm("Apakah Anda yakin ingin menghapus Data ini ?");
-	//if (konfirmasi == true){
 	$('#form-tambah').attr('action', '/admin/mahasiswa/delete');
 	var $form = $('#form-tambah');
 	
 	$.ajax({
 		url: '/admin/mahasiswa/delete/' + id,
 		dataType: 'json',
-		//type: $form.attr('method'),
-		//data: $form.serialize(),
 		beforeSend: function(){
 			
 		},
@@ -422,7 +434,3 @@ function deleteNews(object, id){
 	});
 	return false;
 }
-
-//$('.ah').mouseover(function(){
-//	$('#form-tambah').show();
-//});
