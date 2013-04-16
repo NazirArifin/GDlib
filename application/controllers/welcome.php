@@ -20,12 +20,10 @@ class Welcome extends CI_Controller {
 	{
 		include(APPPATH . 'libraries/jsloc.php');
 		$this->load->library('session');
-		
 		$this->load->database();
 		$this->load->model('front_model');
 		$this->load->model('news_model');
 		$this->load->model('admin_model');
-		
 		// cari dokumen terbaru
 		$type = array('jurnal', 'buku', 'modul', 'bulletin');
 		foreach ($type as $v)	
