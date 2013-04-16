@@ -26,6 +26,20 @@ class Welcome extends CI_Controller {
 		$this->load->model('news_model');
 		$this->load->model('admin_model');
 		
+		/*
+		// periksa $_GET
+		if (isset($_GET['user'])) {
+			// cari di dtabse
+			$data = $this->model->getUser();
+			// isi $data = array('id' => 1, 'nama' => 'test', 'level' => 'dosen');
+			$this->session->set_userdata($data);
+			
+			// sekarang di semua controller tambah $this->load->library('session');
+			if ( ! $session_id = $this->session->userdata('id')) 
+				// logout
+		} else die;
+		*/
+		
 		// cari dokumen terbaru
 		$type = array('jurnal', 'buku', 'modul', 'bulletin');
 		foreach ($type as $v)	
