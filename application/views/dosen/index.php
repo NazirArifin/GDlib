@@ -41,7 +41,7 @@
 				<ul class="nav pull-right nav-pills">
 					<li><a href="/dosen"><i class="icon-dashboard icon-large"></i> Dashboard</a>
 					<li><a href="/dosen/profildosen"><i class="icon-user icon-large"></i> Profil</a></li>
-					<li><a href="/welcome/logout"><i class="icon-user icon-large"></i> Logout</a></li>
+					<li><a href="/welcome/logout"><i class="icon-remove icon-large"></i> Logout</a></li>
 				  
 				</ul>
 			</div>
