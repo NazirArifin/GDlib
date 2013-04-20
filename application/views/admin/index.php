@@ -43,6 +43,7 @@
 				<ul class="nav pull-right nav-pills">
 					<li><a href="/admin"><i class="icon-home"></i> Dashboard</a></li>
 					<li><a href="#"><i class="icon-user"></i> Profil</a></li>  
+					<li><a href="/welcome/logout"><i class="icon-user icon-large"></i> Logout</a></li>
 				</ul>
 			</div>
 		</div>

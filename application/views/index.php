@@ -18,8 +18,9 @@
 			<div class="container">
 				<a href="/" id="logo" class="pull-left"><img src="/images/gd.png" /></a>
 				<ul class="nav pull-right nav-pills">
-					<li><a href="#"><i class="icon-dashboard icon-large"></i> Dashboard</a></li>
+					<li><a href="/<?php echo $siapa ?>"><i class="icon-dashboard icon-large"></i> Dashboard</a></li>
 					<li><a href="#" data-toggle="modal" data-target="#modal-info"><i class="icon-user icon-large"></i> Profil</a></li>
+					<li><a href="/welcome/logout"><i class="icon-user icon-large"></i> Logout</a></li>
 				</ul>
 				<!--<div class="input-append pull-right navbar">
 					<input class="input-medium" id="search-top" type="text" name="q" />
@@ -143,15 +144,15 @@
 	<script src="/third_party/jquery/jquery-plugins.js" type="text/javascript"></script>
 	<script src="/third_party/bootstrap/bootstrap.min.js" type="text/javascript"></script>
 	<script src="/third_party/js/responsiveslides.min.js" type="text/javascript"></script>
-	<script type="text/javascript">
-$('a[rel="popover"]').popover();
-$('a[rel="tooltip"]').tooltip();
-$('.doc-list').readmore({
-  substr_len: $('.doc-list').text().substr(0, 25).lastIndexOf(" ")
-}).textOverflow();
-$('#slider').responsiveSlides({
-	speed: 800,
-});
-	</script>
+<script type="text/javascript">
+	$('a[rel="popover"]').popover();
+	$('a[rel="tooltip"]').tooltip();
+	$('.doc-list').readmore({
+	  substr_len: $('.doc-list').text().substr(0, 25).lastIndexOf(" ")
+	}).textOverflow();
+	$('#slider').responsiveSlides({
+		speed: 800,
+	});
+</script>
 </body>
 </html>

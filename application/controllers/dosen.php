@@ -7,9 +7,32 @@ class Dosen extends CI_Controller {
 		include(APPPATH . 'libraries/jsloc.php');
 		$this->load->model('dosen_model');
 		$this->load->model('dosen_paging_model');
+		$this->load->model('login_user');
 		$this->load->helper();
 		$this->load->database();
 		$this->load->library('form_validation');
+		$this->load->library('session');
+			if ( ! $session_id = $this->session->userdata('nama')){
+				header("location:/login");
+			}
+			else {
+				$a = $this->session->userdata('nama');
+				$sesi = $this->login_user->loginku($a);
+				if($sesi['level'] != '2'){
+					switch($sesi['level']){
+						case '1':
+							$kirim = 'admin';
+						break;
+						case '2':
+							$kirim = 'dosen';
+						break;
+						case '3':
+							$kirim = 'mahasiswa';
+						break;
+					}
+				header("location:/$kirim");
+				}
+			}
 	}
 	
 	public function index()

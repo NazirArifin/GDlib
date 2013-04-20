@@ -8,7 +8,30 @@ class Admin extends CI_Controller {
 		$this->load->database();
 		$this->load->helper();
 		$this->load->model('admin_model');
+		$this->load->model('login_user');
 		$this->load->library();
+		$this->load->library('session');
+			if ( ! $this->session->userdata('nama')){ 
+				header("location:/login");
+			}
+			else {
+				$a = $this->session->userdata('nama');
+				$sesi = $this->login_user->loginku($a);
+				if($sesi['level'] != '1'){
+					switch($sesi['level']){
+						case '1':
+							$kirim = 'admin';
+						break;
+						case '2':
+							$kirim = 'dosen';
+						break;
+						case '3':
+							$kirim = 'mahasiswa';
+						break;
+					}
+				header("location:/$kirim");
+				}
+			}
 	}
 
 	public function index()

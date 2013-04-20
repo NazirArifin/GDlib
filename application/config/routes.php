@@ -42,7 +42,8 @@ $route['default_controller'] = "welcome";
 
 $route['test'] = "test";
 $route['test/ajax'] = "test/ajax";
-
+$route['login'] = "welcome/login";
+$route['waw'] = "welcome/home";
 // static
 
 $route['css/([a-z\.\-]+\.css)'] = "statics/css/$1";

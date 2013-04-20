@@ -18,7 +18,7 @@ class Admin_model extends CI_Model {
 		
 		// validasi;
 		$facebook = $this->input->post('id_facebook');	
-		if(filter_var($facebook, FILTER_VALIDATE_EMAIL) == FALSE)return FALSE;
+		if(filter_var($facebook, FILTER_VALIDATE_EMAIL) === FALSE)return FALSE;
 		
 		$insert = array(
 		'ID_LEVEL_USER'=>'2',
@@ -699,6 +699,19 @@ class Admin_model extends CI_Model {
 			return false;
 		} else {
 			return $query->result();
+		}
+	}
+	
+	public function sesi($session){
+		$query = $this->db->query("SELECT * FROM tb_user WHERE NAMA_USER = '$session'");
+		if($query->num_rows()==0){
+			return false;
+		} else {
+			$row = $query->row();
+			return array(
+				'nama' => $row->NAMA_USER,
+				'level' => $row->ID_LEVEL_USER
+			);
 		}
 	}
 }
