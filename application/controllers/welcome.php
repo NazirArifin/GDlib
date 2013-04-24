@@ -24,22 +24,12 @@ class Welcome extends CI_Controller {
 		$this->load->model('news_model');
 		$this->load->model('admin_model');	
 		$this->load->model('login_user');
-		$this->load->view('login');
-		jsloc::show();
-	}
-	
-	public function home(){
-		include(APPPATH . 'libraries/jsloc.php');
-		$this->load->model('front_model');
-		$this->load->model('news_model');
-		$this->load->model('admin_model');	
-		$this->load->model('login_user');
-		$this->load->database();
-		$nama = $this->input->post('nama');
-		//echo json_encode($nama);
-		$sesi = $this->login_user->loginku($nama);
-		if($sesi){
-			$data = array('nama' => $sesi['nama'], 'level' => $sesi['level']);
+		if ( ! $this->session->userdata('nama')){ 
+			header("location:/login");
+		}
+		else{
+			$user = $this->session->userdata('nama');
+			$sesi = $this->login_user->loginku($user);
 			switch($sesi['level']){
 			case '1':
 				$kirim = array('siapa' => 'admin');
@@ -51,9 +41,24 @@ class Welcome extends CI_Controller {
 				$kirim = array('siapa' => 'mahasiswa');
 			break;
 			}
-		$this->session->set_userdata($data);
-		$this->load->view('index', $kirim);
+		$this->load->view('index', $kirim);	
 		jsloc::show();
+		}
+	}
+	
+	public function home(){
+		include(APPPATH . 'libraries/jsloc.php');
+		$this->load->model('front_model');
+		$this->load->model('news_model');
+		$this->load->model('admin_model');	
+		$this->load->model('login_user');
+		$this->load->database();
+		$nama = $this->input->post('nama');
+		$sesi = $this->login_user->loginku($nama);
+		if($sesi){
+			$data = array('nama' => $sesi['nama'], 'level' => $sesi['level']);
+		$this->session->set_userdata($data);
+		header("location:/");
 		}
 		else {
 		$kirim = array('siapa' => '<div class="alert alert-error" style="text-align:center">Username Salah</div>');
@@ -68,6 +73,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('login');
 		jsloc::show();
 	}
+	
 	
 	public function logout(){
 		include(APPPATH . 'libraries/jsloc.php');
